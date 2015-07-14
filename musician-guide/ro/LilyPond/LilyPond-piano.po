@@ -1,0 +1,876 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:06-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Work on a Piano Score (Tutorial)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Scenario: At a used music store, you encounter a 60-year-old, hand-engraved "
+"copy of a Schubert \"Impromptu,\" but it's been badly damaged by a flood. "
+"The store's owner says that, if you can use the score, you can keep it for "
+"free. The score is barely legible, so you decide to prepare a copy with a "
+"computer notation program."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I'm using Schubert's \"Impromptu\" Op.90 (D.899) Nr.4, in A-flat major. "
+"Published by Edition Peters: 10463, edited by Walter Niemann. We'll be "
+"setting the \"A\" section (from the beginning to the \"Trio\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When following this tutorial, it is recommended that the reader follows "
+"along, creating their replica of this tutorial's PDF."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Files for the Tutorial"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You do not need the <application>LilyPond</application> input file to do the "
+"tutorial. You should use the input file if you encounter problems, and to "
+"compare your completion. You do need the PDF output file to do the tutorial."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle><application>LilyPond</application> Input File</citetitle> at "
+"<ulink url=\"http://docs.fedoraproject.org/en-US/Fedora/15/html/"
+"Musicians_Guide/files/LilyPond/Piano-source.ly\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>PDF Output File</citetitle> at <ulink url=\"http://docs."
+"fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/files/LilyPond/Piano-"
+"result.pdf\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Start the Score"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open Frescobaldi with a new document."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Start the \"Setup New Score\" tool, by clicking '<application>LilyPond</"
+"application> &gt; Setup New Score' in the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Fill in the following fields on the \"Titles and Headers\" tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Title: Impromptu"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Compuser: Schubert, Franz"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Opus: Opus 90/4"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Switch to the \"Parts\" tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "From the \"Available parts\" list, select \"Keyboard instruments\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select \"Piano\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"Add\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the right-hand side of the window, it's possible to add multiple voices "
+"from the start. We won't be using this feature, because most of the score is "
+"not polyphonic. It is especially convenient in fugues."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Switch to the \"Score settings\" tab, and adjust the following settings:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Key signature: As Major"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Time signature: 3/4"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Tempo indication: Allegretto"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Remove default tagline: checked"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Adjust other settings as desired - it is recommended to keep the default "
+"pitch name language."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adjust Frescobaldi's Output"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps are useful in establishing a consistent input style for "
+"<application>LilyPond</application>. The things suggested here are also "
+"useful for getting used to working with large scores, which can be a "
+"challenge in any text editor. Thankfully, careful (and consistent!) code "
+"organization goes a long way in helping you to quickly find your way around "
+"your files. Setting up files the right way to begin with makes this much "
+"easier in the end."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you first setup the score, Frescobaldi will have created many sections "
+"for you by default. The program avoids making too many stylistic choices for "
+"you, which allows you to create your own style. It also sets up the default "
+"sections in a logical way:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "version"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "header"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "widely-used settings like tempoMark and \"global\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "individual parts"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "score formatting"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The specific ordering will become more obvious to you as you get used to "
+"<application>LilyPond</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Here are some of the things that I do before inputting notes:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use section-dividers (like <code>%%%%%%%% NOTES %%%%%%%%</code> for "
+"individual parts) to demarcate sections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use different levels of dividers (like <code>%%%% RIGHT HAND %%%%</code> for "
+"the right hand) to show sub-sections"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add blank lines between large sections, to separate them more obviously"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Begin braces on new lines (as"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"\\header\n"
+"{\n"
+"  title = \"Impromptu\"\n"
+"  ...\n"
+"}\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "instead of on the same line (as"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"\\header {\n"
+"  title = \"Impromptu\"\n"
+"  ...\n"
+"}\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is simply a matter of personal taste, resulting from prior experience "
+"with C and C-like programming languages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Familiarize myself with the sections and commands created by Frescobaldi, "
+"getting a sense of what the section/command does (even if I don't understand "
+"what each specific command does). This makes it easier to sort out problems "
+"and customization down the road. Sometimes, when the setup is quite complex, "
+"I make comments about what seems to be going on."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At this point, I also added the \"Dynamics Context\" commands, as described "
+"below in the \"Piano Dynamics\" section"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Input Notes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Piano scores present some unique challenges with <application>LilyPond</"
+"application>, but they're easy to overcome with some careful thought. This "
+"tutorial will avoid step-by-step instructions on how to input particular "
+"notes, instead focussing on those unique piano challenges presented in this "
+"particular composition. The <application>LilyPond</application> \"Notation "
+"Reference\" provides a section dedicated to keyboard and piano music. Most "
+"of the situations described there are not present or discussed in this "
+"score, which gives this tutorial unique material."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Order of Input"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choosing the right order to input your scores can make things much easier to "
+"troubleshoot. Here are some suggestions:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Input music in small sections at a time. Two, four, or eight measures is "
+"usually a good size, but it depends on the size of the composition, the size "
+"of its sections, and the form of the music. It doesn't make sense to input a "
+"passage of 9 whole-notes in stages of two measures, but two measures may be "
+"too long for passages composed primarily of 128th-notes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Input one staff at a time, then check its accuracy using Frescobaldi's "
+"preview function (press the \"LilyPond\" button on the toolbar)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Input the pitch and rhythms first, then slurs, articulations, ties, and "
+"fingerings. It's easier to correct errors with pitch and rhythm (and "
+"register!) before the extra markings are added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To help make sixteenth-note passages easier to read, you can use double- or "
+"triple-spaces to separate beats. Such passages often feature repeated "
+"patterns; before copy-and-pasting, make sure that the pattern repetition is "
+"truly exact!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you progress to a new four-measure section (or two- or six-, etc.), "
+"input the less difficult staff first (if there is one). This way, you will "
+"have a better visual reference when verifying the more difficult part. It's "
+"easier to see differences if your score looks closer to the original."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The same idea applies for multi-measure polyphonic passages in the same "
+"staff: input the easier part first, so you have a visual reference."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To help ensure that you don't get lost, write measure numbers in the source "
+"file every five measures or so. See the example source file to see how this "
+"is done. Even if you don't want to have measure numbers in the final score, "
+"it can be helpful to include them during inputting and error-checking."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Save the dynamics and pedal markings for last! Sometimes, they can help you "
+"to keep your place in the score while double-checking that it's correct, but "
+"I don't usually put them in with the rest of the notes, for reasons "
+"described below in the \"Piano Dynamics\" section."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Most importantly, remember that these are just suggestions! The order in "
+"which you do things should change depending on what suits you best. "
+"Different kinds of scores will require different strategies."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Chords"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are two ways to input chords, but one will be used much more often."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This style of chord notation is more common: <literal>&lt;as ces&gt;4-_</"
+"literal> Notice how only the pitches are notated inside the <literal>&lt; "
+"&gt;</literal> brackets, and everything else attached to the end. There is "
+"one exception to this: fingering should be indicated on the pitch associated "
+"with that finger: <literal>&lt;as-1 ces-3&gt;4-_</literal> Not only does "
+"this help you to sort out what was probably intended, but it allows "
+"<application>LilyPond</application> to stack the fingering in the right "
+"order. When using \"relative\" entry mode, it is the lowest note of the "
+"chord that is taken into consideration when placing the next note."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This style of chord notation is less common: <literal>&lt;&lt;as4-&gt; "
+"ces&gt;&gt;</literal> Notice how everything must be notated inside the "
+"<literal>&lt;&lt; &gt;&gt;</literal> brackets. This can make it more "
+"difficult to read the chord in the source file, but it also allows much "
+"greater flexibility: only some chord members can have ties; certain chord "
+"members can last for longer than others; certain chord members can \"break "
+"out\" into or out of polyphonic passages. This notation is rarely "
+"<emphasis>needed</emphasis>, but you may be inclined to over-use it if you "
+"are trying to exactly copy the look of a hand-engraved score. Like the "
+"\"times\" command for tuplets, this is one of <application>LilyPond</"
+"application>'s deceptively powerful techniques. When using \"relative\" "
+"entry mode, it is the last note of the chord that is taken into "
+"consideration when placing the next note."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Fingering"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>LilyPond</application> allows you to indicate fingering by "
+"attaching the digit number to a note as an articulation mark: <code>a16-5</"
+"code> will show a \"5\" as a fingering mark. As with all other articulation "
+"marks indicated in this way, you can use <literal>^</literal> or <literal>_</"
+"literal> to instruct <application>LilyPond</application> to put the mark "
+"above or below the note, respectively. It is usually better to let "
+"<application>LilyPond</application> decide for itself by using a <literal>-</"
+"literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When entering chords, it is recommended that you enter the fingering with "
+"the note to which it is attached, like <literal>&lt;as-1 ces-4&gt;4-_</"
+"literal>. It is possible to enter this as <literal>&lt;as ces&gt;4-1-4-&gt;</"
+"literal>, but this not only looks confusing, it may confuse "
+"<application>LilyPond</application> as to which digit is intended for which "
+"note."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Because the extra digits look like they indicate note-lengths, it is "
+"recommended to mark them consistently. For this same reason, it is also "
+"recommended that fingering marks be added to source files only after the "
+"pitch and rhythm have been double-checked. The source file included with "
+"this tutorial puts fingering marks after any other articulation and length "
+"marking."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Cautionary Accidentals"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Musical Definition: This score makes some use of <firstterm>cautionary "
+"accidentals</firstterm>. These are accidentals which don't change the "
+"pitches to be played, but rather are used as a precaution against forgetting "
+"that they are there. This usually happens when an accidental in the written "
+"key signature is changed for a significant number of measures, and then "
+"suddenly changes back. The cautionary accidental would be applied when the "
+"standard key signature returns, to remind the musician of the key signature."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>LilyPond</application> Notation: These are notated in "
+"<application>LilyPond</application> with an exclamation mark placed before "
+"the note-value: <code>ces!16</code>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Change the Style of Crescendo"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sometimes the composer or editor prefers to use the words "
+"<foreignphrase>crescendo</foreignphrase> or its abbreviation, "
+"<foreignphrase>cresc.</foreignphrase>, instead of the <literal>\\&lt;</"
+"literal> style of crescendo. In <application>LilyPond</application> these "
+"are handled by the same source-file notation (<literal>\\&lt;</literal> to "
+"start and <code>\\!</code> to end explicitly). However, if you want to use "
+"text and a \"spanner\" (dotted or dashed line, for example) instead of the "
+"&lt; sign, you need to tell <application>LilyPond</application>. This can be "
+"accomplished with the following command: <code>\\crescTextCresc</code>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After changing to this style of <foreignphrase>crescendo</foreignphrase>, "
+"you can revert to the standard &lt; style with the following command: "
+"<literal>\\crescHairpin</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <literal>\\dimTextDim</literal> and <literal>\\dimHairpin</literal> "
+"commands do the same for a <foreignphrase>diminuendo</foreignphrase>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Polyphonic Sections of Homophonic Music"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sometimes, especially in piano music, a passage of some measures will "
+"require polyphonic (multi-Voice) notation in <application>LilyPond</"
+"application>, even though most of the music does not. In this case, you "
+"would use the following format: <literal> &lt;&lt; { % upper voice notes go "
+"here } \\\\ { % lower voice notes go here } &gt;&gt; </literal> This is used "
+"a few times in both hands in the example score file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When writing these sections in \"relative\" entry mode, it is a good idea to "
+"use the \"octave-check\" mechanism, at least at the beginning of the lower "
+"voice. This is because, when judging the relative starting pitch of the "
+"first note of the lower voice, <application>LilyPond</application> judges "
+"from the last note of the upper voice - <emphasis>not</emphasis> the last "
+"note before the polyphonic section began."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Octave-Change Spanners (\"8ve\" Signs, \"Ottava Brackets\")"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Musical Definition: In order to most conveniently notate over large ranges, "
+"composers and editors sometimes use text spanners to indicate that a passage "
+"should be played one or two octaves higher or lower than written. This "
+"allows the notes to stay mostly within the staff lines, thereby decreasing "
+"the number of ledger lines required."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>LilyPond</application> Notation: The <code>\\ottava</code> "
+"command is used to notate all five states of transposition:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"15va (play two octaves higher than written) is engaged with <code>\\ottava "
+"#2</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"8va (play one octave higher than written) is engaged with <code>\\ottava #1</"
+"code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<foreignphrase>loco</foreignphrase> (play in the octave written) is engaged "
+"with <code>\\ottava #0</code>, which also cancels another sign."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"8vb (play one octave lower than written) is engaged with <code>\\ottava #-1</"
+"code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"15vb (play two octaves lower than written) is engaged with <code>\\ottava #-"
+"2</code>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Troubleshoot Errors"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It can be difficult to troubleshoot inputting errors, especially when you "
+"find them days or weeks after originally inputting that section of a score. "
+"The best way to fix errors is to input scores in a way that doesn't allow "
+"them in the first place. As they say, \"an ounce of prevention is worth a "
+"pound of cure,\" which means \"if you input your <application>LilyPond</"
+"application> files carefully, then you will encounter fewer problems.\" Such "
+"practices as proper spacing, and regular use of the octave- and bar-check "
+"features will deal with many common problems."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"However, when searching for an error in your score, Frescobaldi does offer "
+"some features to help you find it:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have written something in the text-input window that is obviously "
+"incorrect, then Frescobaldi will sometimes catch your mistake and underline "
+"and highlight the erroneous code in red. This is most useful for catching "
+"typographical errors (\"typos\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If <application>LilyPond</application> encounters a processing error, it "
+"will show up in the \"<application>LilyPond</application> Log\" window below "
+"the text-input window. You can click on the blue, underlined text to move "
+"the text-selection caret to the error."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you can see an error in the PDF preview, but you can't find it in the "
+"source file, you can click on the problematic note or object in the PDF "
+"preview, and Frescobaldi will automatically move the text-selection caret to "
+"that object."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Format the Score (Piano Dynamics)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Keyboard instruments use a unique notation when it comes to dynamics. Most "
+"instruments use only one staff per player, so the dynamics are, by "
+"convention, notated underneath that staff. Keyboard instruments usually use "
+"two staves (organs and complex piano music may use three). Because the "
+"dynamics are usually meant to apply to both staves, they are usually notated "
+"between the two staves. This is similar to notation beneath the upper staff, "
+"but in truth, piano dynamics tend to be placed in the middle between the "
+"staves - entering the dynamics as belonging to the upper staff, in "
+"<application>LilyPond</application>, will not produce that effect."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There is a way to notate dynamics between two staves in "
+"<application>LilyPond</application>, and it involves a little bit of thought "
+"to get it right. It also requires the addition of a significant number of "
+"commands, and the creation of a new context."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This process looks difficult, and may seem daunting. It's not necessary to "
+"understand all of the commands in the \"PianoDynamics\" Context in order to "
+"use the context, so there is no need to worry!"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Prepare the \"PianoDynamics\" Context"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is probably easier to add these commands before inputting most of the "
+"score, but there is no reason why this context cannot be added to any score "
+"at any time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Follow these steps to create a \"PianoDynamics\" Context:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Between the left and right staves of the PianoStaff, add \"<code>\\new "
+"PianoDynamics = \"dynamics\" \\dynamics</code>\". For the Schubert score, "
+"this looks like:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"\n"
+"ew PianoStaff \\with\n"
+" {\n"
+"   instrumentName = \"Piano\"\n"
+" }\n"
+"&lt;&lt;\n"
+" \n"
+"ew Staff = \"right\" \\right\n"
+" \n"
+"ew PianoDynamics = \"dynamics\" \\dynamics\n"
+" \n"
+"ew Staff = \"left\" { \\clef bass \\left }\n"
+"&gt;&gt;\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To the layout section, add the following:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"% Everything below here is for the piano dynamics.\n"
+"% Define \"PianoDynamics\" context.\n"
+"\\context\n"
+"{\n"
+"	\\type \"Engraver_group\"\n"
+"	\n"
+"ame PianoDynamics\n"
+"	\\alias Voice\n"
+"	\\consists \"Output_property_engraver\"\n"
+"	\\consists \"Script_engraver\"\n"
+"	\\consists \"New_dynamic_engraver\"\n"
+"	\\consists \"Dynamic_align_engraver\"\n"
+"	\\consists \"Text_engraver\"\n"
+"	\\consists \"Skip_event_swallow_translator\"\n"
+"	\\consists \"Axis_group_engraver\"\n"
+"\n"
+"	\\override DynamicLineSpanner #'Y-offset = #0\n"
+"	\\override TextScript #'font-size = #2\n"
+"	\\override TextScript #'font-shape = #'italic\n"
+"	\\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)\n"
+"}\n"
+"\n"
+"% Modify \"PianoStaff\" context to accept Dynamics context.\n"
+"\\context\n"
+"{\n"
+"	\\PianoStaff\n"
+"	\\accepts PianoDynamics\n"
+"}\n"
+"% End of PianoDynamics code.\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This creates a \"PianoDynamics\" context, and modifies the \"PianoStaff\" "
+"context so that it will accept a \"PianoDynamics\" context."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Before the \"\\score\" section, add a section called \"dynamics,\" like this:"
+""
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"dynamics =\n"
+"{\n"
+"  % Dynamics go here.\n"
+"\n"
+"}\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This is where you will input the dynamics."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Input Dynamics"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now you can input the dynamic markings. These are inputted with a special "
+"note called a \"spacer,\" that uses the letter \"s\" rather than a note name."
+" You can also use rests (both partial- and multi-measure, r and R), but "
+"dynamic markings cannot be assigned to them."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, if you want a <foreignphrase>piano</foreignphrase> marking on "
+"the first beat, and a <foreignphrase>diminuendo</foreignphrase> from the "
+"third to the fourth beat, you could write this: <code>s4\\p r s\\&gt; s\\!</"
+"code>, or this: <code>s2\\p s4\\&gt; s\\!</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"That's all there is to it! Think of the dynamics part as an invisible, pitch-"
+"free line between the two staves, for the sole purpose of dynamics (and "
+"other expression markings)."
+msgstr ""
+

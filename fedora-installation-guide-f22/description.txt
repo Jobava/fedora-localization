@@ -1,0 +1,2 @@
+https://git.fedorahosted.org/cgit/docs/install-guide.git/
+https://git.fedorahosted.org/git/docs/install-guide.git

@@ -1,0 +1,173 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Translation Quick Start Guide\n"
+"POT-Creation-Date: 2010-11-02T23:38:14\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Translating Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Current Fedora Documentation material is now maintained in the Fedora Hosted "
+"system as <command>git</command> repositories. This includes the latest "
+"versions of the common documentation build tools. You do not need to install "
+"<command>git</command> to translate these materials. Instead, use Transifex, "
+"as described in previous sections, to translate these documentation "
+"materials."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Understanding the Multiple Files Structure"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Unlike software, a guide has multiple <filename class=\"extension\">po</"
+"filename> files structure. Each file corresponds to each chapter in that "
+"guide. The file name usually consists of the chapter name. This structure is "
+"very useful as more than one translator can work on certain guide same time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Like software, go to your language page and select a target release."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Fedora's Transifex screen for Japanese language is used as an example. "
+"The page lists all projects of particular release software packages and "
+"documentation along with stats and options."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Any entry begins with <guilabel>Docs</guilabel> indicates documentation. To "
+"access multiple files structure, click the file icon in <guibutton>Option</"
+"guibutton>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Fedora's Transifex screen for Japanese language is used as an example. "
+"The page lists multiple files for Japanse release-notes along with stats and "
+"options."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the down-arrow icon to download the target <filename class="
+"\"extension\">po</filename> file and use the up-arrow icon to submit. "
+"Alternatively using the pencil icon allows you to edit the file online. "
+"Please notice that the up-arrow icon for submission and the pencil icon for "
+"online edit appears only if the user is logged in."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating docbook-locales File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are creating the first-ever translation for a locale, you must first "
+"translate docbook-locales file used in all documents for your locale. The "
+"docbook-locales files are located in the Fedora Hosted repository. Visit "
+"Transifex at <ulink url=\"https://translate.fedoraproject.org/projects/p/"
+"docbook-locales/c/master/\" />, and add your new <filename class="
+"\"extension\">po</filename> file by following the instruction described "
+"above."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Next, the request of locale addition needs to be made. File a bug in "
+"Bugzilla against Product <guilabel>Fedora Documentation</guilabel> with "
+"Component <guilabel>docs-requests</guilabel> and Summary "
+"<guilabel>[<replaceable>ja</replaceable>]: New language support request</"
+"guilabel>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You may leave the details blank, or name the guide name(s) which you like to "
+"translate."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Attach Files if Necessary"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have any problems submitting <filename class=\"extension\">po</"
+"filename> files using above instructions, you can attach it to the bug."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "What to Translate"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The most important documentation for each release of Fedora are the "
+"following:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<guilabel>Docs :: docbook-locales</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<guilabel>Docs :: Release Notes</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<guilabel>Docs :: About Fedora</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<guilabel>Docs :: Readme</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<guilabel>Docs :: Readme Burning ISOs</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<guilabel>Docs :: Readme Live Image</guilabel>"
+msgstr ""
+

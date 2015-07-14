@@ -1,0 +1,123 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Java"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "OpenJDK 8"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"OpenJDK8 is now the default Java Runtime in Fedora, replacing OpenJDK7. A "
+"full list of the features added in OpenJDK8 is available upstream at <ulink "
+"url=\"http://openjdk.java.net/projects/jdk8/features/\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Java Customizations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"User customizations made to <package>java-1.7.0-openjdk</"
+"package>(specifically, to files under <filename class=\"directory\"> /usr/"
+"lib/jvm/java-1.7.0*/*</filename>) will not be carried across to "
+"<package>java-1.8.0-openjdk</package>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "More efficient package dependencies"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The way that Java dependencies are handled has changed in Fedora 21. "
+"Packages that do not interact with the X server or audio subsystem now "
+"depend on a new OpenJDK headless subpackage. This means installation size "
+"reduction on servers, a change that aims for efficiency."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Additionally, documentation for Java packages is now optional, saving even "
+"more space on your server. Look for the <literal>-doc</literal>subpackage "
+"for Java packages to install the accompanying documentation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you need access to API documentation of Java libraries without javadoc "
+"subpackages, try using upstream web pages which should be accessible at "
+"homepage URL of the project in question. You can query for the URL of "
+"installed package with <command>rpm -qi <replaceable>package</replaceable>| "
+"grep '^URL'</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Java packaging guidelines now also require to convert most Java packages to "
+"have <literal>Requires: java-headless</literal>when appropriate. Detailed "
+"information about the packaging effort can be found at <ulink url=\"https://"
+"fedoraproject.org/wiki/Packaging:Java#BuildRequires_and_Requires\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Improved Ivy Packaging"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The way of packaging Java software that uses Apache Ivy to manage build "
+"dependencies has been improved in a similar way to the Maven packaging "
+"updates in previous Fedora releases. In particular, the following "
+"improvements have been implemented:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "automatic resolution of Ivy artifacts,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "integration with system Maven repository,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "automatic installation of Ivy artifact metadata,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "auto requires."
+msgstr ""
+

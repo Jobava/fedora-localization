@@ -1,0 +1,128 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Fedora Products"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Fedora.next</primary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more than ten years, the Fedora Project has provided a distribution at "
+"the leading edge of the open source ecosystem. Fedora's releases have "
+"offered the latest technologies, integrating new and exciting upstream "
+"developments into a vast and diverse set of packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Users have built powerful desktops, reliable servers, and more recently, "
+"versatile cloud instances from the high quality packages in the Fedora "
+"repository. Fedora's strong commitment to upstream integrity gives "
+"developers a place to showcase their work, and benefit from Fedora's active "
+"testing and development volunteers."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In those ten years, much has changed. The <literal>Fedora.next</literal> "
+"initiative represents a considered strategy for maintaining the quality of "
+"the distribution and Fedora's position in introducing new technologies, "
+"while also providing a more consistent target for developers."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The result of this initiative is three distinct Fedora flagship flavors. "
+"Fedora Cloud for scalable infrastructure, Fedora Server for organizational "
+"infrastructure, and Fedora Workstation for the developer and desktop user."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora Spins, such as live media featuring alternative desktop environments, "
+"will continue to be produced."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora also offers images and support for an ever-increasing number of ARM "
+"devices, both large and small."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "fedora-release Packages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The named Fedora flavors are identified in part by a set of packages with "
+"configuration details and dependencies specific to that flavor. For example, "
+"the presence of <package>fedora-release-server</package> identifies a system "
+"as Fedora Server, and ensures that core features like <application>Cockpit</"
+"application> are present."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Update or installation operations may involve the <package>fedora-release</"
+"package> packages, sometimes inadvertently due to the way depenencies are "
+"resolved. Environment groups are most succeptible to related conflicts, such "
+"as installing extra desktops on Fedora Workstation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you encounter package conflicts, add <command>--exclude fedora-"
+"release\\*</command> to your yum or dnf command. The <ulink url=\"https://"
+"fedoraproject.org/wiki/Common_F21_bugs#Installation_of_.27environment_groups."
+"27_fails_due_to_conflicts_between_fedora-release_packages\">F21 Common Bugs</"
+"ulink> page describes this in detail."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The netinstall and DVD ISOs"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Fedora netinstall ISO, an installation image that allows you to select "
+"and download packages at install time, is now available as the Fedora Server "
+"netinstall."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The DVD installation image is not produced for Fedora 21."
+msgstr ""
+

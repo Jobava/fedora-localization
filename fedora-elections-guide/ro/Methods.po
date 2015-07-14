@@ -1,0 +1,219 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Elections Guide\n"
+"POT-Creation-Date: 2011-02-22T01:12:36\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Range Voting"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora Project currently implements a single voting method which is used for "
+"all elections and public polling."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Concepts of Range Voting"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Range voting works on the principal of allowing voters to rate as many or as "
+"few candidates as they want on a sliding scale."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This method is designed to give voters the option of splitting their vote "
+"and showing their level of preference of a subset of candidates over another."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once voting ends, votes are tallied using the summing method (addition of "
+"all votes) to generate a final score for a candidate."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An example of range voting is available in the next section, <xref linkend="
+"\"sect-Fedora_Elections_Guide-Range_Voting-Range_Voting_Example\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Range Voting Example"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To accurately demostrate the concepts of Range Voting in action, it is "
+"necessary to use a fictional election where 7 candidates are standing "
+"(Candidates A to G). If three eligible voters were to choose their level of "
+"perference as explained in <xref linkend=\"sect-Fedora_Elections_Guide-"
+"Range_Voting-Concepts_of_Range_Voting\" /> a data table such as <xref "
+"linkend=\"tabl-Fedora_Elections_Guide-Range_Voting_Example-"
+"Simple_Example_Ballot\" /> can be formed to display the data and demonstrate "
+"how a winner would be defined."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Simple Example Ballot"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Candidate A"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Candidate B"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Candidate C"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Candidate D"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Candidate E"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Candidate F"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Candidate G"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Totals"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "14"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "12"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "15"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "7"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "13"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "6"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "8"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Voter A"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "0"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "3"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "4"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Voter B"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "2"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "5"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Voter C"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this example, Candidate C would be declared the winner with a total vote "
+"of 15 as opposed to Candidate A's 14 votes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Zero votes have not altered the result due to the summing method been used "
+"and can be intrepreted as the voter having no preference or abstaining."
+msgstr ""
+

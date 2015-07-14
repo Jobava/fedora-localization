@@ -1,0 +1,1084 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:06-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "<application>LilyPond</application> Basics"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The syntax of <application>LilyPond</application> files offers the most "
+"flexibility through the most diverse musical conditions. Over time, you will "
+"realize that features which seem too complex at first are really a very "
+"powerful and simple way to solve complex problems that commercial programs "
+"cannot."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Letters Are Pitches"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"One letter signifies a note in a <application>LilyPond</application> source "
+"file. Use other letters, numbers, and symbols to change the duration, "
+"articulation, and other properties."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We recommend the default way to indicate a \"sharp\" or \"flat\" note: add "
+"\"is\" to sharp a note, or add \"es\" to flat a note. This command means \"b-"
+"flat, b, b-sharp\": <code>bes b bis</code>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Show a double-sharp or double-flat with \"isis\" or \"eses.\" This command "
+"means \"b-double-flat, b, b-double-sharp\": <code>beses b bisis</code>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Is\" and \"es\" are the Dutch names for \"sharp\" and \"flat.\" "
+"<application>LilyPond</application> can read English names: <code>bflat b "
+"bsharp</code>. We recommend you use Dutch names because they are faster."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Pitch can be entered either absolutely, or relative to the preceding notes. "
+"Usually (for music without frequent large leaps) it is more convenient to "
+"use the \"relative\" mode. The symbols <literal>,</literal> and <literal>'</"
+"literal> (comma and apostrophe) are used to indicate register."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When entering absolute pitches, the register is indicated mostly as in the "
+"Helmholtz system (see <citetitle>Helmholtz Pitch Notation (Wikipedia)</"
+"citetitle> at <ulink url=\"http://en.wikipedia.org/wiki/"
+"Helmholtz_pitch_notation\" />: octaves begin on the pitch \"C,\" and end "
+"eleven tones higher on the pitch \"B.\" The octave below \"middle C\" "
+"(octave 3 in scientific pitch notation - see <citetitle>Scientific Pitch "
+"Notation (Wikipedia)</citetitle> at <ulink url=\"http://en.wikipedia.org/"
+"wiki/Scientific_pitch_notation Scientific Pitch Notation\" />) has no commas "
+"or apostrophes. The octave starting on \"middle C\" (octave 4) has one "
+"apostrophe; the octave above that (octave 5) has two apostrophes, and so on. "
+"Octave 2 (starting two octaves below \"middle C\") has one comma, the octave "
+"below that has two commas, and so on. It is usually not necessary to "
+"understand how to use this in <application>LilyPond</application>, or to be "
+"able to use it quickly, because most scores will use \"relative mode.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When entering pitches relative to the previous one, the register is still "
+"indicated with commas or apostrophes, but usually none are needed. When "
+"using this input mode, the octave of each note is guessed based on the "
+"octave of the previous note. Think of it this way: the next note will always "
+"be placed so it produces the smaller interval. For example, after a C, an E "
+"could be placed as a major third, a minor sixth, a major tenth, a minor "
+"thirteenth, and so on. In relative mode, <application>LilyPond</application> "
+"will always choose the \"major third\" option. If you wanted "
+"<application>LilyPond</application> to notate the E so that it's a minor "
+"sixth, you would tell <application>LilyPond</application> with a comma "
+"appended: <code>c e,</code> so that <application>LilyPond</application> "
+"knows what you want. It's the same case if you were to input <code>c aes</"
+"code> (meaning \"C then A-flat\"): the A-flat will be notated so that it is "
+"a major third from the C; if you wanted <application>LilyPond</application> "
+"to notate it so that the A-flat is a minor sixth higher than the C, you "
+"would need to append an apostrophe: <code>c aes'</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The only possible ambiguity with this method is with a tritone. "
+"<application>LilyPond</application> solves this by not recognizing "
+"\"tritones,\" per se, and thinking of them as \"augmented fourth\" or "
+"\"diminished fifth.\" Unless instructed otherwise (with a comma or "
+"apostrophe), <application>LilyPond</application> will always notate the "
+"interval as an augmented fourth."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You must always indicate a sharp or flat, even if it is already in a key "
+"signature. This ultimately helps to reduce the number of errors."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Letters used to indicate pitch are always in lower-case."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Numbers Are Durations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A number appended to a letter is understood by <application>LilyPond</"
+"application> to indicate that particular note's note-value. A whole note is "
+"indicated with a 1, and all other durations are indicated with a number "
+"representing the fraction of a whole note that they occupy: half notes are 2 "
+"(like \"1/2 note\"); quarter notes are 4 (like \"1/4 note\"); eighth notes "
+"are 8 (like \"1/8 note\") and so on."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add a \"dot\" to a note (thereby increasing its length by one half), you "
+"simply include a period after the number. For example, <literal>e4.</"
+"literal> means \"dotted quarter note on E.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add a \"tie\" from one note to the next (thereby continuing its duration "
+"across a measure-line), add a tilde ( <literal>~</literal> ) after the pitch "
+"and duration."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After indicating a duration, it is assumed that all subsequent notes have "
+"the same duration, until indicated otherwise."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Articulations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Many different symbols are used to tell <application>LilyPond</application> "
+"to add articulation signs to a note. They are all appended after the pitch "
+"and (if included) duration, and many have a position indicator, too."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A full list of articulation markings is available in the "
+"<application>LilyPond</application> manual, and <application>Frescobaldi</"
+"application> remembers most of them for you (they are stored in the left-"
+"side panel)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These are some of the most common articulation marks, which use a position "
+"indicator unless specified otherwise:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>(</literal> to begin a slur (no position indicator)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>)</literal> to end a slur (no position indicator)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<literal>~</literal> to begin a tie (which needs no end; no position "
+"indicator)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>.</literal> for a \"staccato\" mark"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>&gt;</literal> for an \"accent\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>-</literal> for a \"tenuto\" mark"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>^</literal> for a \"marcato\" mark"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>_</literal> for a \"portato\" mark (dot and line)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "There are three position indicators:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<literal>-</literal> which means to put the articulation mark wherever "
+"<application>LilyPond</application> thinks it makes sense"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<literal>_</literal> which means to put the articulation mark "
+"<emphasis>below</emphasis> the note-head"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<literal>^</literal> which means to put the articulation mark "
+"<emphasis>above</emphasis> the note-head"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These position indicators will sometimes result in notes like: <code>g4--</"
+"code>, <code>g4__</code>, and <code>g4^^</code>, but although this may look "
+"incorrect, it is perfectly acceptable."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Simultaneity"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Simply put, anything enclosed inside <literal>&lt;&lt;</literal> and "
+"<literal>&gt;&gt;</literal> is considered by <application>LilyPond</"
+"application> to happen simultaneously. This can be used in any context (and "
+"any Context - see above/below). It is possible to tell "
+"<application>LilyPond</application> that you want two notes to happen at the "
+"same time in the same voice (yielding a chord), at the same time on the same "
+"staff (yielding polyphony), and so on. Moreover, any score with multiple "
+"staves will use <literal>&lt;&lt;</literal> and <literal>&gt;&gt;</literal> "
+"to tell <application>LilyPond</application> that the parts should begin at "
+"the same time, and creative use of <literal>&lt;&lt;</literal> and "
+"<literal>&gt;&gt;</literal> is one of the keys to advanced notation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is not important to understand simultaneity at first. By observing how "
+"<application>Frescobaldi</application> creates scores for you, and how "
+"examples on the internet take advantage of these symbols, you will "
+"eventually understand how to use them."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Chords"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Making use of the <literal>&lt;&lt;</literal> and <literal>&gt;&gt;</"
+"literal> idea to indicate simultaneity, if a note has multiple pitches "
+"indicated between <literal>&gt;</literal> and <literal>&lt;</literal> then "
+"<application>LilyPond</application> assumes that they are in a chord "
+"together. Notating a single chord with single <literal>&lt; &gt;</literal> "
+"brackets has two advantages: firstly, it is easier to see that they are a "
+"chord and not something more complex; secondly, it allows you to enter "
+"information more clearly."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Consider the following examples, which should produce equivalent output: "
+"<code>&lt;&lt;g'4-&gt;-5 b d&gt;&gt;</code> and <code>&lt;g' b d&gt;4-&gt;-"
+"5</code> With the first example, it is more difficult to see the chord "
+"notes, the duration, and what the <literal>5</literal> means. With the "
+"second example, it is easy to see that the chord notes are a <literal>G</"
+"literal>, a <literal>B</literal>, and a <literal>D</literal>, that they have "
+"quarter-note duration, and that the <literal>5</literal> is actually a "
+"fingering indication."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There is another advantage to using <literal>&lt;</literal> and "
+"<literal>&gt;</literal> for notation of simple chords: they preserve logical "
+"continuity in \"relative\" mode. The following note will always be notated "
+"as relative to the lowest note in the chord, regardless of how many octaves "
+"the chord covers. This is not true with <literal>&lt;&lt;</literal> and "
+"<literal>&gt;&gt;</literal>, where where following notes will be notated as "
+"relative to the last note between the <literal>&lt;&lt;</literal> and "
+"<literal>&gt;&gt;</literal>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Commands"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are a wide variety of commands available in <application>LilyPond</"
+"application>, some of them quite simple, and other quite complex. They all "
+"begin with a backslash, followed by the name of the command, and subsequent "
+"\"arguments\" that give the command further information about what you want "
+"it to do. Just like using a letter to indicate a note, commands are simply "
+"another way for you to tell <application>LilyPond</application> how you want "
+"your score to be rendered."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, <code>\\time 2/4</code> and <code>\\clef bass</code> are two "
+"commands that you are likely to use quite often. They happen to do precisely "
+"what it seems like they should: <literal>\\time</literal> changes the time "
+"signature and metre, and <literal>\\clef</literal> changes the clef. they "
+"belong to differen contexts (<literal>\\time</literal> applies for the whole "
+"Score, but <literal>\\clef</literal> for only one Staff)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It can take some time to remember even these basic commands and the way you "
+"should format their input, and this is where <application>Frescobaldi</"
+"application>'s built-in documentation viewer can help out. All of the "
+"official <application>LilyPond</application> documentation is made available "
+"in <application>Frescobaldi</application>, which makes it easy for you to "
+"view the documentation and make changes to your score in the same window of "
+"the same application."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Customization"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is rarely necessary to customize the output in a way that is very "
+"specific, and not allowed for in the standard <application>LilyPond</"
+"application> syntax. As a beginner, this can happen quite often when you are "
+"trying to exactly emulate the look of a pre-existing score. Remember that "
+"<application>LilyPond</application> provides a content-focussed way to "
+"express music, and that it will usually produce meaningful output without "
+"advanced interference. If in doubt about whether a customization is really "
+"necessary, ask yourself this: will it change the music that is played from "
+"the score?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you really must customize some setting, then keep in mind these two "
+"points:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Tinkering with <application>LilyPond</application> can become as complex as "
+"you want."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Ultimately all tinkering takes the form of commands."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Searching the internet for <application>LilyPond</application> tips and "
+"tricks can be a life-saver, but it can also lead to needlessly complex "
+"solutions. Sometimes this is the result of poor solutions being posted on "
+"the internet, but more often it is the result of the ongoing development of "
+"<application>LilyPond</application>, which makes better solutions available "
+"regularly. For this reason, it is recommended to search the official "
+"<application>LilyPond</application> documentation first, then the "
+"\"<application>LilyPond</application> Snippet Repository\" (LSR - link "
+"here), and then Google."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Contexts"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Another aspect of <application>LilyPond</application> that often confuses "
+"beginners is the idea of contexts. It is an essential concept for modifying "
+"default behaviour. Like everything in <application>LilyPond</application>, "
+"it makes perfect sense: \"context\" means \"context.\" The three primary "
+"contexts are \"Voice,\" \"Staff,\" and \"Score.\" Everything that happens in "
+"a score happens in a context - it's just that simple - everything happens in "
+"a context! Everything that happens in a score happens in Score context, "
+"everything that happens on a staff happens in a Staff context, and "
+"everything that happens in a voice happens in a Voice context."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To help clear things up a little, here are three examples:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Where does the title of a composition belong?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Does it belong on the score? Yes, so it belongs in the Score context."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Does it belong on a staff? No, so it doesn't belong in a Staff context."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Does it belong in a voice? No, since it would have to be on a staff to be in "
+"a voice."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The composition's title doesn't belong on a staff or in a voice, but it does "
+"belong on the score, so we say that it happens in the Score context."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Where does a clef belong?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Does it belong on the score? Yes, because it is a part of notation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Does it belong on a staff? Yes, because it wouldn't make sense to have a "
+"clef off a staff."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Does it belong in a voice? No, because it's not related to a specific "
+"\"line\" or voice."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Clefs usually belong on the staff, at the beginning of every line, so we say "
+"that they happen in a Staff context."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Where does a note-head belong?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Does it belong on a staff? Yes - even if it's on a ledger line, note-heads "
+"are meaningless unless they're on a staff."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Does it belong in a voice? Yes, because one particular musical line is "
+"indicated primarily with note-heads."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note-heads belong to a particular voice, so we say they happen in a Voice "
+"context."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To help further clarify, consider the following:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As in the real world, objects in <application>LilyPond</application> can "
+"potentially happen in any context..."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "(like a doorknob on a door)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "(like a bus driver sitting in a bus' drivers' seat)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "(like a person buying groceries at a supermarket)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "(like a flat-sign next to a note-head)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "... some contexts are unusual, but make sense..."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"(like a doorknob on a wall, if the wall is designed to look like a door)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"(like a bus driver sitting in a passenger seat, if they are going to the "
+"garage)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"(like a person buying groceries from a corner store, if the supermarkets are "
+"closed)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"(like a flat sign in a paragraph of text, if that paragraph describes what "
+"flat signs do)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "... and some contexts do not make sense, but can still happen..."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "(like a doorknob on a television)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "(like a bus driver serving patrons at a restaurant)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "(like a person buying groceries at a governmental office)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"(like a flat sign in the top corner of a score, where the page number should "
+"be)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>LilyPond</application> designers wisely decided that they "
+"could not think of all possible uses for their software, so "
+"<application>LilyPond</application> allows most engravers to be used in most "
+"contexts. Furthermore, a context can happen within an other context, which "
+"makes sense - a <literal>Voice</literal> context only makes sense if it "
+"appears on a <literal>Staff</literal>, and a <literal>Staff</literal> only "
+"makes sense if it appears in a <literal>Score</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"So, when trying to sort out the context in which something should apply, ask "
+"yourself exactly that: \"In what context does this apply?\" Beams and flags "
+"happen in one voice, accidentals apply to a whole staff, and tempo markings "
+"apply to the whole score. Although it may take some careful thought to get "
+"used to the idea, contexts ultimately make perfect sense."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Source Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Source files are the text files prepared with instructions telling "
+"<application>LilyPond</application> the content of the score you want it to "
+"create. They are so called because these files are the \"source\" of what "
+"you wish to create. As with programming languages, the text inside these "
+"files is often referred to as \"source code.\" It sounds scary to think that "
+"you must edit code in order to use <application>LilyPond</application>, but "
+"\"code\" just means that it isn't normal English (or insert-language-here)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The particular formatting (the placement of tabs, spaces, and newlines) is "
+"not determined by <application>LilyPond</application>, but by individual "
+"users. This can be a headache when you encounter somebody else's formatting, "
+"but it is one of the keys to the application's flexibility. This guide uses "
+"a very specific style of formatting, but it should be understood that this "
+"is simply the style of one user, affected by their experiences, and the "
+"tasks they usually perform in <application>LilyPond</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You will eventually develop your own style, better-suited to the kinds of "
+"tasks that you accomplish. When you do this, there is only one rule to keep "
+"in mind: be consistent within source files. When source files are programmed "
+"in a consistent way, it means that anybody who wants to use those files "
+"(like yourself, in the future) will easily be able to determine how they are "
+"organized."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Organizing Source Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>LilyPond</application> files are constructed as a series of "
+"commands. For better or worse, the <application>LilyPond</application> "
+"interpreter allows a great deal of flexibility when it comes to source file "
+"setup. This can lead to confusion about where things should be done, "
+"especially when using automated score-setup tools like "
+"<application>Frescobaldi</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The generic structure of a <application>LilyPond</application> source file "
+"is this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"\\version <replaceable>version_number</replaceable>\n"
+"\n"
+"\\header { <replaceable>things like title, composer, and so on</replaceable> "
+"}\n"
+"\n"
+"\\score\n"
+"{\n"
+"	\n"
+"ew Staff\n"
+"	{\n"
+"		<replaceable>notes go here</replaceable>\n"
+"	}\n"
+"\n"
+"	\\layout\n"
+"	{\n"
+"	}\n"
+"\n"
+"	<replaceable>and so on</replaceable>\n"
+"}\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Confusion arises here: for maximum flexibility, <application>LilyPond</"
+"application> allows source files to create its own commands. On hearing "
+"this, you may think, \"Okay that's it - I don't need advanced commands or "
+"any of this stuff, so I'm packing it in and just using Finale!\" There's no "
+"need to do that just yet - commands are easy! Think of commands - whether "
+"you wrote them or they were included with <application>LilyPond</"
+"application> - as a means of text-substition."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "It works like this:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You \"define\" (create) a command with the form "
+"<code><replaceable>commandName</replaceable> = { <replaceable>lots of "
+"commands</replaceable> }</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can then use the command anywhere below that, as many times as you want, "
+"by writing <code>\\commandName</code> in your source file. When "
+"<application>LilyPond</application> processes that portion of text, it will "
+"instead see whatever you wrote in the definition."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "It's as easy as 1-2!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Frescobaldi</application> (along with most "
+"<application>LilyPond</application> users) take advantage of this "
+"functionality to provide well-organized, easy-to-use source files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Here is a good template source file, that might be created for you by "
+"<application>Frescobaldi</application>:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"\\version \"2.12.2\"\n"
+"\n"
+"\\header\n"
+"{\n"
+"	title = \"Empty Example\"\n"
+"}\n"
+"\n"
+"violin = \\relative c''\n"
+"{\n"
+"	\\key c \\major\n"
+"	\\time 4/4\n"
+"	% Music follows here.\n"
+"\n"
+"	<replaceable>Put your music here</replaceable>\n"
+"}\n"
+"\n"
+"\\score\n"
+"{\n"
+"	\n"
+"ew Staff \\with\n"
+"		{\n"
+"			instrumentName = \"Violin\"\n"
+"		}\n"
+"		\\violin\n"
+"	\\layout { }\n"
+"}\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This example uses many built-in commands (like <literal>\\relative</literal> "
+"and <literal>\\key</literal>), and it defines the <literal>violin</literal> "
+"command. <application>Frescobaldi</application> places a <literal>% Music "
+"follows here.</literal> comment where you should input your notes. Notice "
+"that your notes belong in the <literal>violin</literal> section. This means "
+"that you write part of the <literal>violin</literal> command."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Frescobaldi</application> separates the violin's notes from the "
+"<literal>\\score</literal> section so that the source file is easier to read."
+" You can fix errors more easily in well-organized source files. If you "
+"complete the following tutorials, you will learn three strategies to "
+"organize sources files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <literal>\\layout</literal> section is empty in this example. Like the "
+"<literal>\\score</literal> section, <literal>\\layout</literal> is a command."
+" The <literal>\\layout</literal> command tells LilyPond to output a musical "
+"score. Advanced users sometimes remove the <literal>\\layout</literal> "
+"command, but most source files use it."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "How to Avoid Errors"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>LilyPond</application> syntax has two built-in symbols for "
+"helping to avoid musical errors. The octave-check symbol ensures that your "
+"notes are in the octave you intend. The bar-check symbols ensures that your "
+"barlines are where you intend."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Octave-Check Symbol"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The octave-check symbol compares a relative pitch with its absolute pitch "
+"equivalent. <application>LilyPond</application> prints a warning if the "
+"pitches do not match, then continues with the absolute pitch. You should "
+"correct the relative pitch when <application>LilyPond</application> prints a "
+"warning."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The octave-check symbols is <literal>=</literal>. The symbol appears after "
+"the note, and is followed by a comma (<literal>,</literal>), apostrophe "
+"(<literal>'</literal>), or neither, depending on the intended relative "
+"octave of the pitch."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Here is an example use of the octave-check symbol: <code>c'='''</code>. In "
+"this example, the absolute pitch is <code>c'''</code>, which "
+"<application>LilyPond</application> knows because of the <code>c</code> at "
+"the left, and the <code>'''</code> after the <code>=</code> symbol."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"How does this example work: <code>c'=4</code> ? There is a <code>4</code> "
+"after the <code>=</code> symbol instead of a comma or apostrophe. The "
+"absolute pitch is <code>c</code>, which <application>LilyPond</application> "
+"knows because of the <code>c</code> to the left of the <code>=</code> "
+"symbol, and because there is no comma or apostrophe to the right of the "
+"<code>=</code> symbol. <application>LilyPond</application> understands the "
+"<code>4</code> as \"quarter note.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You should use the octave-check symbol when you need it. New users use the "
+"octave-check symbol more frequently than experienced users."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Bar-Check Symbol"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The bar-check symbol tests whether a measure line is printed at that point "
+"in the music. <application>LilyPond</application> prints a warning if the "
+"bar-check symbol does not line up with a measure line in the score. "
+"<application>LilyPond</application> continues to process the music, and does "
+"not automatically change any durations."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The bar-check symbol is the pipe character, <literal>|</literal>. We "
+"recommend that you put a bar-check symbol at the end of every measure, and "
+"that you input only one measure on every line. If you follow this "
+"recommendation, you will make fewer mistakes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This example is correct, so <application>LilyPond</application> will not "
+"print a warning:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"\\time 4/4\n"
+"c4 c c c |\n"
+"c4 c c c |\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are four quarter notes between each bar-check symbol, which is the "
+"right number of beats in the indicated metre."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This example is incorrect, so <application>LilyPond</application> will print "
+"a warning."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"\\time 4/4\n"
+"c4 c2 c4 |\n"
+"c4 c2 c |\n"
+"c4 c2 c4 |\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This example shows three measures of the same pattern: <literal>c4 c2 c4</"
+"literal>. The second measure is missing the last quarter-note symbol (a "
+"<literal>4</literal>), so <application>LilyPond</application> outputs one "
+"quarter note followed by two half notes. The second measure is five beats, "
+"so the bar-check symbol does not coincide with the measure line after the "
+"fourth beat. <application>LilyPond</application> prints a warning when it "
+"reaches the bar-check symbol at the end of the second measure."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Consider this example."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"\\time 4/4\n"
+"c2 c c c |\n"
+"c4 c c c |\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The first bar has four half-notes, which is twice as many beats as are "
+"allowed in one measure. A bar-check symbol only triggers a warning if it is "
+"placed where there is no bar line. Therefore, <application>LilyPond</"
+"application> will not print a warning for this example, even though only two "
+"of the three bar lines has a bar-line check symbol."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"One mistake in a file will sometimes cause <application>LilyPond</"
+"application> to print multiple warnings. A bar-check symbol does not force "
+"<application>LilyPond</application> to insert a bar line. "
+"<application>LilyPond</application> continues to insert notes with the "
+"duration shown in the file. Look at the following example, and the "
+"<application>LilyPond</application> output."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"Interpreting music...\n"
+"example.ly:3:10: warning: barcheck failed at: 1/4\n"
+"  c4 c2 c\n"
+"	  |\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The mistake in the second measure causes a warning at the bar-check symbol. "
+"<application>LilyPond</application> does not modify note durations, so the "
+"half note at the end of the second measure occupies the fourth beat of the "
+"second measure <emphasis>and</emphasis> the first beat of the third measure. "
+"The third measure is correct, with four beats, but the bar-check symbol "
+"causes a warning to be printed because <application>LilyPond</application> "
+"expects a bar line before the last quarter note, not after it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can avoid confusion if you fix the first warning, then reprocess the "
+"file before you fix other warnings. One mistake may cause many warnings."
+msgstr ""
+

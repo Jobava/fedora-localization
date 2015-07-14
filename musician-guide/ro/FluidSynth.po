@@ -1,0 +1,1108 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:05-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "FluidSynth"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>FluidSynth</application> is a software-based MIDI synthesizer. "
+"<application>FluidSynth</application> accepts MIDI input from programs like "
+"Qtractor and Rosegarden, and uses SoundFont technology to create audio "
+"signals. This makes <application>FluidSynth</application> a very flexible "
+"tool; it can be used even on low-power computers, doesn't require "
+"specialized hardware, and can take advantage of a wide selection of high-"
+"quality MIDI instruments. When used with the <application>Qsynth</"
+"application> graphical interface, <application>FluidSynth</application> "
+"becomes even more powerful: users can easily control basic effects like "
+"chorus and reverb, and they can start multiple <application>FluidSynth</"
+"application> synthesizers, each with their own settings and MIDI instrument "
+"assignments. Finally, because <application>Qsynth</application> was created "
+"and is maintained by the same developers as Qtractor and QjackCtl, it "
+"provides a familiar interface, and integrates well with these other "
+"applications."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "SoundFont Technology and MIDI"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"SoundFont technology was developed in the early 1990s, and comprises a file "
+"format and certain hardware technologies designed to allow the creation of "
+"MIDI instruments that sound like acoustic instruments. It would be virtually "
+"impossible to make an electronically-synthesized instrument sound identical "
+"to an acoustic counterpart, but SoundFont technology enables the gap to "
+"narrow considerably. Heard in the right context, most people would not "
+"notice that music was recorded by a SoundFont-capable MIDI synthesizer, but "
+"results can vary widely."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"What <application>FluidSynth</application> enables users to do is eliminate "
+"the hardware component of using SoundFonts, so that any computer becomes "
+"capable of synthesizing from SoundFont files, which are often simply "
+"referred to as \"a SoundFont.\" As fonts change the look of text characters, "
+"SoundFonts change the sound of MIDI notes - the overall meaning is the same "
+"when conveyed by any font (or SoundFont), but the particular nuance is "
+"changed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"&O_S; offers a few SoundFonts in the default repositories. By default, "
+"<application>FluidSynth</application> installs the FluidR3 General MIDI "
+"(\"GM\") SoundFont, which contains a wide array of conventional (and some "
+"non-conventional) \"patches.\" To see the other options that are available, "
+"use PackageKit, Apper, or yum to search for \"soundfont\"."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "How to Get a SoundFont"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There is a large selection of SoundFonts available for free on the internet, "
+"and some are also available for purchase, including a few very high quality "
+"SoundFonts. The following three websites have links to SoundFont resources, "
+"and some SoundFonts available for paid or free download. No guarantee is "
+"made of the quality of the material provided, or of the quality and security "
+"of the websites."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>S. Christian Collins' \"General User\" SoundFont</citetitle>, "
+"available from <ulink url=\"http://www.schristiancollins.com/generaluser."
+"php\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>HammerSound SoundFont Library</citetitle>, available at <ulink "
+"url=\"http://www.hammersound.net/cgi-bin/soundlink.pl\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>homemusician.net SoundFont Library</citetitle>, available at "
+"<ulink url=\"http://soundfonts.homemusician.net/\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Synth Zone</citetitle>, available at <ulink url=\"http://www."
+"synthzone.com/soundfont.htm\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See <xref linkend=\"sect-Musicians_Guide-FluidSynth-Req_and_Inst-"
+"Install_SoundFont_Files\" /> below for instructions to install a SoundFont."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "MIDI Instruments, Banks, Programs, and Patches"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A \"MIDI instrument\" is the synthesizer itself. If the synthesizer uses "
+"SoundFonts, then the SoundFont also constitutes part of the instrument. Each "
+"instrument can be thought of as a library, which stores books."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each instrument offers at least one, but possibly several \"banks,\" which "
+"store programs. If a MIDI instrument is a library, then a bank is like a "
+"particular shelf. You must first select a shelf before choosing a book."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each bank offers between one and one hundred and twenty seven \"programs,\" "
+"(also called \"patches\") which are the sounds themselves. If a MIDI "
+"instrument is a library and a bank is a shelf, then a program is a book. "
+"Programs need not necessarily be related, but banks with a large number of "
+"programs (like the \"General MIDI\" bank) usually follow some sort of order. "
+"It is the program alone which determines the sound of the synthesized audio; "
+"the bank and instrument simply limit the possible choices of program."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "MIDI Channels"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A MIDI synthesizer will accept input on multiple channels. Although each "
+"\"instance\" of the synthesizer can only have one MIDI instrument assigned "
+"to it, each channel can be assigned a program independently. This allows the "
+"synthesis of a virtual instrumental ensemble."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The General MIDI (\"GM\") standard, used partially by the default FluidR3 "
+"SoundFont and by <application>FluidSynth</application> itself, further "
+"specifies that there will be 16 channels, and that channel 10 will be used "
+"for (mostly unpitched) percussion instruments. Any program change message "
+"sent to channel 10 will be ignored, and although <application>FluidSynth</"
+"application> can be configured to use a non-percussion program on channel "
+"10, this use is discouraged."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For cases where <application>FluidSynth</application> does not adhere to the "
+"General MIDI standard, it is adding functionality, rather than removing it."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Requirements and Installation"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Software Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>FluidSynth</application> requires the "
+"<systemitem><application>JACK</application> Audio Connection Kit</"
+"systemitem>. If you have not already installed the <application>JACK</"
+"application> packages, we recommend that you do so <emphasis>before</"
+"emphasis> you install <application>FluidSynth</application>. See <xref "
+"linkend=\"sect-Musicians_Guide-Install_and_Configure_JACK\" /> for "
+"instructions."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Install <application>FluidSynth</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are two ways to install <application>FluidSynth</application>. The "
+"first, to install <application>FluidSynth</application> with "
+"<application>Qsynth</application>, allows <application>FluidSynth</"
+"application> to be used with the <application>Qsynth</application> graphical "
+"interface. It also installs a default SoundFont, which can be used by any "
+"SoundFont-aware application (like <application>timidity++</application>). "
+"This installation method does not - by default - allow "
+"<application>FluidSynth</application> to be used from a terminal, although "
+"this ability can be easily added later. This is the installation method "
+"recommended for most users."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The second way to install <application>FluidSynth</application> is without "
+"the <application>Qsynth</application> graphical interface. This method "
+"allows <application>FluidSynth</application> to be run from a terminal, and "
+"does not install a default SoundFont. This installation is recommended only "
+"for advanced users."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Install with <application>Qsynth</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We recommend this installation method for most users. Follow these "
+"instructions to install everything you need for <application>FluidSynth</"
+"application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>PackageKit</application> or <application>Apper</"
+"application> to install the <package>qsynth</package> package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Review and approve the proposed installation. If you did not previously "
+"install the <package>fluid-soundfont-gm</package> packge, "
+"<application>PackageKit</application> will install it now. The "
+"<package>fluid-soundfont-gm</package> package is approximately 142&nbsp;MB."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you wish to use <application>FluidSynth</application> from a terminal "
+"emulator, without the <application>Qsynth</application> graphical interface, "
+"you can enable this capability by installing the <package>fluidsynth</"
+"package> package. You do not need <package>fluidsynth</package> if you will "
+"use the <application>Qsynth</application> graphical interface. If you are "
+"unsure whether you want the <package>fluidsynth</package> package, you can "
+"safely install it, even if you never use it. It only uses a small amount of "
+"hard drive space."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Install without <application>Qsynth</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We only recommend this installation method for advanced users. Follow these "
+"instructions to install <application>FluidSynth</application> without a "
+"graphical interface or SoundFont file. You must install a SoundFont file "
+"before you can use <application>FluidSynth</application> (see <xref linkend="
+"\"sect-Musicians_Guide-FluidSynth-Req_and_Inst-Install_SoundFont_Files\" />)."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>PackageKit</application> or <application>Apper</"
+"application> to install the <package>fluidsynth</package> package."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Install SoundFont Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Qsynth</application> automatically installs a SoundFont for use "
+"with <application>FluidSynth</application>, but if you did not install "
+"<application>Qsynth</application>, or if you want to add additional "
+"SoundFont files with additional programs, you will need to install them "
+"separately. The &O_S; package repositories offer a small selection of "
+"SoundFont files, which you can find by searching for \"soundfont\" with "
+"<application>PackageKit</application>, <application>Apper</application>, or "
+"<application>yum</application>. These files will automatically be installed "
+"correctly. If you wish to install additional SoundFont files, it is "
+"recommended that you install them in the same location&mdash;and with the "
+"same security settings&mdash;as the ones available from the &O_S; "
+"repositories. If you do this, then you enable all users of the computer "
+"system to access the files, you will not \"lose\" them if you forget where "
+"they are stored, and you help to minimize the potential security risk of "
+"using software downloaded from the internet."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following steps move a SoundFont file called <filename>myFont.sf2</"
+"filename> to the default folder (<filename>/usr/share/soundfonts</"
+"filename>), and correctly set the security settings. Note that you will need "
+"the system administrator's password (belonging to the \"root\" account) to "
+"complete this operation. If you do not have this password, it is best to ask "
+"the system administrator to install the files for you. Alternately, you may "
+"simply use the SoundFont file from your a sub-folder in your home folder."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Start a shell or terminal and navigate to the folder where the SoundFont "
+"file is currently stored."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Run <command>su -c 'cp <replaceable>myFont.sf2</replaceable> /usr/share/"
+"soundfonts'</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Modify the command as necessary to copy your SoundFont file, rather than "
+"<filename>myFont.sf2</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You will be asked for the password to the <literal>root</literal> account."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Run <command>cd /usr/share/soundfonts</command> to change to the directory "
+"of the SoundFont"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Run <command>su -c 'chmod 644 <replaceable>myFont.sf2</replaceable>'</"
+"command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Modify the command as necessary to refer to your SoundFont file, rather than "
+"<filename>myFont.sf2</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This will set the file-system permissions to \"read-write\" for the owner "
+"(the \"root\" user, in this case), and \"read-only\" for all other users. "
+"This way, only the system administrator should be able to change the file, "
+"but all users will be able to use it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Run <command>ll <replaceable>myFont.sf2</replaceable></command> to verify "
+"that the permissions were set correctly."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The output should resemble this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "-rw-r--r--. 1 root root 9 2010-06-23 02:28 myFont.sf2"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "but with a different date, time, and filename."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Highly-observant users may notice that the SELinux context of the new file "
+"is different from that of any &O_S;-installed SoundFont file. As long as the "
+"type is <literal>usr_t</literal>, which it should be by default, then there "
+"is no practical difference (no difference in enforcement) between this and a "
+"&O_S;-installed SoundFont file. If you don't know what this means, or if you "
+"hadn't noticed it, then it means that this additional SoundFont file should "
+"not create a new potential security problem."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Use <application>FluidSynth</application> in a Terminal Emulator"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is not the recommended way to use <application>FluidSynth</"
+"application>, because the <application>Qsynth</application> graphical "
+"interface is much easier to use. <application>Qsynth</application> "
+"automatically configures most of <application>FluidSynth</application>'s "
+"settings by default, allowing you to avoid focus on how you want to use "
+"<application>FluidSynth</application>, rather than on how to use "
+"<application>FluidSynth</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to use <application>FluidSynth</application> in a terminal, you "
+"can use the <command>fluidsynth</command> command. The default sample-rate "
+"is 44.1 kHz, so if you want to use <application>JACK</application> at a "
+"different sample rate, you need to use the <command>-r</command> flag, like "
+"this: <command>fluidsynth -r 48000</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you start <application>FluidSynth</application> from a terminal, it "
+"will normally start a shell of its own. How to use this shell is beyond the "
+"scope of the Musicians' Guide, but you can get basic help by running the "
+"\"help\" command from the <application>FluidSynth</application> command line."
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure <application>Qsynth</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you quit <application>Qsynth</application>, all settings are preserved, "
+"and re-used when <application>Qsynth</application> is re-started. This "
+"includes settings for additional instances of <application>Qsynth</"
+"application> (described below), which are also re-created when "
+"<application>Qsynth</application> is re-started."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Start <application>FluidSynth</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Start <application>Qsynth</application> from the Applications menu, or the K "
+"Menu"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>FluidSynth</application> engine will be started "
+"automatically."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The row of buttons at the right of the <application>Qsynth</application> "
+"window control <application>Qsynth</application>. The other settings control "
+"<application>FluidSynth</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use the \"Messages\" button to display a window containing "
+"<application>FluidSynth</application>'s output. If <application>FluidSynth</"
+"application> doesn't work as expected, you can use this window to view any "
+"error message that might have been produced."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure the SoundFont"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The default \"FluidR3\" SoundFont, installed with <application>Qsynth</"
+"application>, is automatically configured."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To configure an additional Soundfount:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click on the 'Open' button, and navigate to the path of the SoundFont you "
+"wish to add. This should be <filename>/usr/share/soundfonts</filename>, if "
+"installed to the standard location specified in <xref linkend=\"sect-"
+"Musicians_Guide-FluidSynth-Req_and_Inst-Install_SoundFont_Files\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the additional SoundFont, then click the 'Open' button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To change the SoundFont ID (SFID), use the 'Up' and 'Down' buttons to change "
+"the position of the SoundFonts, as desired. This does not directly change "
+"the function of <application>FluidSynth</application> - any SoundFont should "
+"work with any SoundFont ID number."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure <application>JACK</application> Output"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is possible to configure <application>FluidSynth</application> to output "
+"synthesized audio either to <application>JACK</application> or to ALSA. The "
+"default, and recommended, method is to output synthesized audio to "
+"<application>JACK</application>. This allows the greatest control over audio "
+"quality, and the greatest flexibility in terms of routing and multiplexing "
+"(for definition see <xref linkend=\"sect-Musicians_Guide-Vocabulary-"
+"Routing_and_Multiplexing\" />), which allows you to simultaneously record "
+"the synthesized audio signal and listen to it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are having problems, you may wish to confirm that "
+"<application>Qsynth</application> is configured correctly to use "
+"<application>JACK</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open <application>Qsynth</application>'s \"Setup\" window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the 'Audio' tab, and ensure that \"Audio Driver\" is set to \"jack\"."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You should also ensure that the other settings are correct - especially that "
+"the \"sample rate\" is set to the same sample rate as <application>JACK</"
+"application> (through <application>QjackCtl</application>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The default settings for most things should work. If you changed a default "
+"setting, they are these:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Buffer Size: 1024"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Buffer Count: 2"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Audio Channels: 1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Audio Groups: 1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Polyphony: 256"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are having problems with audio cut-outs, you may wish to increase the "
+"buffer settings. The size should be increased in multiples of 1024, and the "
+"buffer count should not be increased much. The default setting or one "
+"\"Audio Channel\" provides stereo output, and each additional channel "
+"produces another set of stereo outputs. Increasing the \"polyphony\" setting "
+"will allow a higher number of simultaneous notes (\"MIDI events,\" really), "
+"which will be useful in exteremely complex situations."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure MIDI Input"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>FluidSynth</application> generates sound as instructed by a "
+"connected (software- or hardware-based) MIDI device. Verify the following "
+"settings so <application>FluidSynth</application> connects to the devices "
+"you want."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open the <application>Qsynth</application> \"Setup\" window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The \"Enable MIDI Input\" check-box must be checked."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Choose the correct \"MIDI Driver\" setting:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the \"alsa_seq\" setting if you want to connect <application>FluidSynth</"
+"application> with a source on the \"ALSA\" tab of the <application>QjackCtl</"
+"application> \"Connect\" window. Use this setting for "
+"<application>Rosegarden</application> and <application>Qtractor</"
+"application> in most cases."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the \"jack\" setting if you want to connect <application>FluidSynth</"
+"application> with a sources on the \"MIDI\" tab of the "
+"<application>QjackCtl</application> \"Connect\" window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to change the number of MIDI input channels in "
+"<application>FluidSynth</application>, refer to <xref linkend=\"sect-"
+"Musicians_Guide-FluidSynth-Changing_Number_of_Input_Channels\" /> below."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "View all <application>FluidSynth</application> Settings"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open the \"Setup\" window"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the \"Settings\" tab"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Scroll through the list to the setting you wish to see."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The settings in this tab are not editable in this tab."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Assign Programs to Channels with <application>Qsynth</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The best way to do this is through your MIDI sequencer, like "
+"<application>Qtractor</application> or <application>Rosegarden</application>."
+" If you are using an application which doesn't allow you to send program-"
+"change messages, or if you need to configure programs for another reason, "
+"you can follow these instructions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the main <application>Qsynth</application> window, click \"Channels\" to "
+"open the \"Channels\" window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "In the Channels window, each channel will, by default, look like"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "1   -   -   -"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To assign a program to a channel, click on the row of the channel that you "
+"want to assign."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the bank and program number that you want, using the name, SFID, and "
+"Soundfont columns to guide you."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Repeat this process for all of the channels that you wish to assign."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are not going to use a channel, there is no harm in assigning it a "
+"program anyway. However, assigning a program to a channel that you will not "
+"use can lead to confusion, especially if you later forget that you intended "
+"to not use that channel."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Remember that channel 10 is reserved for percussion instruments, and should "
+"not be changed from a General MIDI percussion program."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Change the Number of MIDI Input Channels"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can increase the number of MIDI input channels offered by "
+"<application>FluidSynth</application>. Although <application>QSynth</"
+"application> will let you set any number between 1 and 256, channels will be "
+"added and removed only in sets of 16. <application>Qsynth</application> will "
+"automatically create the lowest number of channels that will allow as many "
+"channels as you need. Each set of 16 channels will be indicated in "
+"<application>JACK</application> with an additional MIDI input device. The "
+"name of the device indicates which channels are listening: channels 1 "
+"through 16 listen to the device ending in 0; channels 17 through 32 listen "
+"to the device ending in 1; channels 33 through 58 listen to the device "
+"ending in 2; and so on."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To change the number of MIDI input channels, follow these instructions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The \"Enable MIDI Input\" setting must be enabled."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Input the number of channels that you wish to use, between 1 and 256."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Save and Reuse Channel Assignments"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"QSynth allows you to save multiple sets of program assignments, which you "
+"can restore later. This means that you will not have to re-configure all of "
+"the channels every time you want to change them."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To save the settings for later:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that <application>Qsynth</application> is correctly configured, and "
+"working with the program assignments as desired."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In <application>Qsynth</application>'s \"Channels\" window, erase the "
+"contents of the \"Preset Name\" text field, and replace it with whatever "
+"name you would like."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"Save\" to preserve the settings under that name."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To restore settings from earlier:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open <application>Qsynth</application>'s \"Channels\" window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Search through the \"Preset Name\" drop-down box to find the name of the "
+"preset that you wish to restore."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select it, and verify that the correct channel assignments were restored."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Use Reverb and Chorus with <application>Qsynth</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"While \"reverb\" (meaning \"reverberation\") and \"chorus\" effects are not "
+"part of the General MIDI standard, they are offered by most MIDI "
+"synthesizers. <application>FluidSynth</application> is no exception, and the "
+"<application>Qsynth</application> interface provides a convenient and easy "
+"way to adjust settings of the reverb and chorus effect-generators. "
+"Experimentation is the only way to know whether you have chosen the right "
+"settings, and they will probably change depending on the music you are "
+"working on, and even during a piece. Most MIDI sequencers and players "
+"(including Qtractor and Rosegarden) allow you to send MIDI messages changing "
+"the reverb and chorus settings while a session is playing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The reverb and chorus effects can be turned off temporarily if you do not "
+"plan to use them. To do this in <application>Qsynth</application>, uncheck "
+"the \"Active\" check-box underneath the respective effect generator's "
+"settings dials."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>reverb</firstterm> effect generator creates artificial "
+"reverberation (like an \"echo,\" but more complex), which occurs naturally "
+"in almost all performing environments. The effect generator works by "
+"creating a virtual room, and pretending that the user is listening within it."
+" These are the settings offered by <application>Qsynth</application>:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Room: Adjusts the size of the virtual room. Settings higher than 100 can "
+"cause a situation that escalates in volume to dangerously high levels, even "
+"with the lowest possible \"level\" settings. This is an interesting effect, "
+"but caution is advised so that listener do not incur accidental hearing "
+"damage. Remember also that the reverb effect can accumulate as time goes on, "
+"so it may even take many minutes for the volume level to build to a "
+"dangerously high level, depending on the settings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Damp: Adjusts the amount of \"sound damping\" in the virtual room, affecting "
+"not only the time it takes for the sound to die, but the frequencies which "
+"are most affected. The greater the damping, the shorter the higher "
+"frequencies last."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Width: Adjusts the perceived \"width\" of the stereo image of the virtual "
+"room, and also has a large effect on the volume level."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Level: Adjusts the volume level of the reverberation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All of the settings interact in ways that make it difficult to describe any "
+"sort of recommended settings. Users are strongly encouraged to experiment "
+"with the various settings to find ones that suit their needs. A wide variety "
+"of listening environments can be simulated, and the settings required do not "
+"always reflect the most logical choice - it is possible to emulate a concert "
+"hall with a relatively small \"room\" setting, for example. Effective use of "
+"the reverb effect can greatly enhance the MIDI listening experience."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>chorus</firstterm> effect generator creates the impression "
+"that more than one real-world instrument is playing each MIDI line. The "
+"effect generator works by slightly responding to each MIDI note several "
+"times, with slightly inaccuracies in pitch and time in each response. "
+"Although it may seem overly negative to say so, humans intuitively recognize "
+"that this inaccuracy is part of real-world, acoustic music, so the chorus "
+"effect helps to add a realistic sound to some performances. These are the "
+"settings offered by <application>Qsynth</application>:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"N: Adjusts the number of effect \"stages,\" which allows you to control the "
+"approximate number of discrete instruments perceived."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Level: Adjusts the volume level of the effect."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Speed: Adjusts the speed of the chorus, and so the range of time over which "
+"the notes are spread."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Depth: Adjusts the perceived \"depth\" of the stereo image."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"Multiple <application>FluidSynth</application> Instances with "
+"<application>Qsynth</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Rarely will you need more than one instance of <application>FluidSynth</"
+"application>, because QSynth/<application>FluidSynth</application> together "
+"offer up to 256 independent input channels, and the ability to control the "
+"reverb and chorus effects independently by channel. The most common use of "
+"multiple <application>FluidSynth</application> instances is if you want to "
+"use multiple MIDI instruments. In other words, if you want to use multiple "
+"SoundFonts at the same time, you will need to use one instance of "
+"<application>FluidSynth</application> for each SoundFont."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Thankfully, <application>Qsynth</application> allows us to do this almost "
+"effortlessly! Each \"instance\" of <application>FluidSynth</application> is "
+"created and controlled by, in effect, running the <application>FluidSynth</"
+"application> synthesis application multiple times. The reality is that, "
+"since <application>Qsynth</application> controls the "
+"<application>FluidSynth</application> engine directly, it simply starts the "
+"synthesis engine directly, creating multiple instance of that engine. This "
+"is much more efficient than actually running <application>Qsynth</"
+"application> multiple time, or even than running <application>FluidSynth</"
+"application> directly from a terminal. Each such instance is represented in "
+"<application>Qsynth</application> by a \"tab,\" displayed at the bottom of "
+"the <application>Qsynth</application> window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create an additional instance of <application>FluidSynth</application>:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Press the green \"+\" button in the bottom-left corner of "
+"<application>Qsynth</application>'s main window"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Adjust the settings as desired, by using the Setup window that pops up."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Press \"OK\" to start the additional instance."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To close an additional instance, use the red \"X\" near the lower-right "
+"corner."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each instance of the <application>FluidSynth</application> engine has its "
+"own settings in the \"Setup\" window. <application>Qsynth</application> "
+"supports a theoretically unlimited number of <application>FluidSynth</"
+"application> instances, but your computer's memory will probably not allow "
+"many more than ten, depending on the SoundFonts used."
+msgstr ""
+

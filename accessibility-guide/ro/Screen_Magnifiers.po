@@ -1,0 +1,61 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-12-23 12:29+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Screen Magnifiers"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Screen magnifiers are just what they sound like, programs that considerably "
+"magnify portions of the computer screen so it can be more easily read."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "KMagnifier"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In KDE, <application>KMagnifier</application>, or KMag, magnifies the area "
+"around the cursor or a user-defined area. You can also save a magnified "
+"portion of the screen to disk. Additional information can be found at <ulink "
+"url=\"http://kmag.sourceforge.net/\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installing KMagnifier"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora, <application>KMagnifier</application> is packaged in the "
+"<package>kdeaccessibility</package> package. This package also contains "
+"<application>kmousetool</application>, <application>kmouth</application>, "
+"and <application>ktts</application>, all of which are discussed in other "
+"areas of this guide. To install <package>kdeaccessibility</package> you can "
+"either select <menuchoice><guilabel>System &gt; Administration &gt; Add/"
+"Remove Software</guilabel></menuchoice> and then type in kdeaccessibility in "
+"the screen that pops up or in a terminal window type <command>su -c \"yum "
+"install kdeaccessibility\"</command>."
+msgstr ""
+

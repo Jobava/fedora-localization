@@ -1,0 +1,39 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Overview"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As always, Fedora continues to develop (<ulink url=\"http://www."
+"fedoraproject.org/wiki/Red_Hat_contributions\">Red Hat contributions</"
+"ulink>) and integrate the latest free and open source software. The "
+"following sections provide a brief overview of major changes from the last "
+"release of Fedora."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more details about the features that are included in Fedora &PRODVER; "
+"refer to the individual wiki pages that detail feature goals and progress: "
+"&CHANGEURL;"
+msgstr ""
+

@@ -1,0 +1,98 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "GCC Tools"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Boost 1.55.0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"library\">boost</systemitem> has been upgraded to "
+"version 1.55.0. This update brings a large number of bug fixes and "
+"enhancements, one new library (Predef), and a slight change in requirements "
+"as support for very old versions of several compilers has been removed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For a full list of changes, see the <ulink url=\"http://www.boost.org/users/"
+"history/version_1_55_0.html\">Boost 1.55.0 Release Notes</ulink>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "GCC 4.9.x"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The GNU Compiler Collection (GCC) has been upgraded to version 4.9.x, and "
+"all Fedora packages have been rebuilt with this new version of GCC."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The update provides a large number of bug fixes and enhancements. The "
+"notable newly supported features and changes are listed below:"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "ISO C11 support is largely complete."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Partial support for C++14."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "C++11 support for regular expressions."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "The OpenMP 4.0 standard."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "the Undefined Behavior Sanitizer (UBSAN)."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "The Cilk Plus extension."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For detailed information about all changes, see the <ulink url=\"https://gcc."
+"gnu.org/gcc-4.9/changes.html\">GCC 4.9 Release Notes</ulink>."
+msgstr ""
+

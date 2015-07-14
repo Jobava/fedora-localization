@@ -1,0 +1,794 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Introduction to Fedora Networking"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "How this Book is Structured"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All new material in this book has been written and arranged in such a way as "
+"to clearly separate introductory material, such as explanations of concepts "
+"and use cases, from configuration tasks. The authors hope that you can "
+"quickly find configuration instructions you need, while still providing some "
+"relevant explanations and conceptual material to help you understand and "
+"decide on the appropriate tasks relevant to your needs. Where material has "
+"been reused from the <ulink url=\"https://access.redhat.com/site/"
+"documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/index."
+"html\"><citetitle pubwork=\"book\">Red&nbsp;Hat Enterprise&nbsp;Linux&nbsp;6 "
+"Deployment Guide</citetitle></ulink>, it has been reviewed and changed, "
+"where possible, to fit this idea of separating concepts from tasks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The material is grouped according to the goal rather than the method. "
+"Instructions on how to achieve a specific task using different methods are "
+"grouped together. This is intended to make it easier for you to find the "
+"information on how to achieve a particular task or goal, and at the same "
+"time allow you to quickly see the different methods available."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In each chapter, the configuration methods will be presented in the "
+"following order: A graphical user interface (GUI) method, such as the use of "
+"<application>nm-connection-editor</application> or <application>control-"
+"network</application> to direct <systemitem class="
+"\"service\">NetworkManager</systemitem>, then <application>NetworkManager</"
+"application>'s command-line tool <application>nmcli</application>, and then "
+"finally methods using the command line and configuration files. The command "
+"line can be used to issue commands and to compose or edit configuration "
+"files, therefore the use of the <application>ip</application> commands and "
+"configuration files will be documented together."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Introduction to NetworkManager"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As of Fedora 20, the default networking service is provided by <systemitem "
+"class=\"service\">NetworkManager</systemitem>, which is a dynamic network "
+"control and configuration daemon that attempts to keep network devices and "
+"connections up and active when they are available. The traditional "
+"<filename>ifcfg</filename> type configuration files are still supported. See "
+"<xref linkend=\"sec-NetworkManager_and_the_Network_Scripts\" /> for more "
+"information."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "A Summary of Networking Tools and Applications"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Application or Tool"
+msgstr ""
+
+# translation auto-copied from project networking-guide, version f21, document pot/Consistent_Network_Device_Naming
+#. Tag: entry
+#, no-c-format
+msgid "Description"
+msgstr "Descriere"
+
+#. Tag: entry
+#, no-c-format
+msgid "<application>NetworkManager</application>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "The default networking daemon"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "<application>nmtui</application>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"A simple curses-based text user interface (TUI) for "
+"<application>NetworkManager</application>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "<application>nmcli</application>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"A command-line tool provided to allow users and scripts to interact with "
+"<application>NetworkManager</application>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "<application>control-center</application>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "A graphical user interface tool provided by the GNOME Shell"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "<application>nm-connection-editor</application>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"A GTK+ 3 application available for certain tasks not yet handled by "
+"<application>control-center</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"service\">NetworkManager</systemitem> can be used with "
+"the following types of connections: Ethernet, VLANs, Bridges, Bonds, Teams, "
+"Wi-Fi, mobile broadband (such as cellular 3G), and IP-over-InfiniBand. For "
+"these connection types, <systemitem class=\"service\">NetworkManager</"
+"systemitem> can configure network aliases, <systemitem class="
+"\"protocol\">IP</systemitem> addresses, static routes, <systemitem class="
+"\"protocol\">DNS</systemitem> information, and VPN connections, as well as "
+"many connection-specific parameters. Finally, <systemitem class="
+"\"service\">NetworkManager</systemitem> provides an API via D-Bus which "
+"allows applications to query and control network configuration and state."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installing NetworkManager"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>NetworkManager</application> is installed by default on "
+"&MAJOROS;. If necessary, to ensure that it is, run the following command as "
+"the <systemitem class=\"username\">root</systemitem> user:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]# <command>yum install NetworkManager</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For information on user privileges and gaining privileges, see the "
+"<citetitle pubwork=\"book\">&MAJOROSVER; System Administrator's Guide</"
+"citetitle>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The NetworkManager Daemon"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>NetworkManager</application> daemon runs with root "
+"privileges and is, by default, configured to start up at boot time. You can "
+"determine whether the <application>NetworkManager</application> daemon is "
+"running by entering this command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$ <command>systemctl status NetworkManager</command>\n"
+"NetworkManager.service - Network Manager\n"
+"   Loaded: loaded (/lib/systemd/system/NetworkManager.service; enabled)\n"
+"   Active: active (running) since Fri, 08 Mar 2013 12:50:04 +0100; 3 days "
+"ago"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <command>systemctl status</command> command will report "
+"<application>NetworkManager</application> as <computeroutput>Active: "
+"inactive (dead)</computeroutput> if the <application>NetworkManager</"
+"application> service is not running. To start it for the current session run "
+"the following command as the root user:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]# <command>systemctl start NetworkManager</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Run the <command>systemctl enable</command> command to ensure that "
+"<application>NetworkManager</application> starts up every time the system "
+"boots:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]# <command>systemctl enable NetworkManager</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information on starting, stopping and managing services, see the "
+"<citetitle pubwork=\"book\">&MAJOROSVER; System Administrator's Guide</"
+"citetitle>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Interacting with NetworkManager"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Users do not interact with the <application>NetworkManager</application> "
+"system service directly. Instead, users perform network configuration tasks "
+"via graphical and command-line user interface tools. The following tools are "
+"available in Fedora:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A graphical user interface tool called <application>control-center</"
+"application>, provided by GNOME, is available for desktop users. It "
+"incorporates a <application>Network</application> settings tool. It start "
+"it, press the <keycap>Super</keycap> key to enter the Activities Overview, "
+"type <command>control network</command> and then press <keycap>Enter</"
+"keycap>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A command-line tool, <application>nmcli</application>, is provided to allow "
+"users and scripts to interact with <application>NetworkManager</application>."
+" Note that <application>nmcli</application> can be used on GUI-less systems "
+"like servers to control all aspects of <application>NetworkManager</"
+"application>. It is on an equal footing with the GUI tools."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The GNOME Shell also provides a network icon in its Notification Area "
+"representing network connection states as reported by "
+"<application>NetworkManager</application>. The icon has multiple states that "
+"serve as visual indicators for the type of connection you are currently "
+"using."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A graphical user interface tool called <application>control-center</"
+"application>, provided by the GNOME Shell, is available for desktop users. "
+"It incorporates a <application>Network</application> settings tool. To start "
+"it, press the <keycap>Super</keycap> key to enter the Activities Overview, "
+"type <command>control network</command> and then press <keycap>Enter</"
+"keycap>. The <keycap>Super</keycap> key appears in a variety of guises, "
+"depending on the keyboard and other hardware, but often as either the "
+"Windows or Command key, and typically to the left of the Spacebar."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A graphical user interface tool, <application>nm-connection-editor</"
+"application>, is available for certain tasks not yet handled by "
+"<application>control-center</application>. To start it, press the "
+"<keycap>Super</keycap> key to enter the Activities Overview, type "
+"<command>network connections</command> or <command>nm-connection-editor</"
+"command> and then press <keycap>Enter</keycap>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Network Configuration Using the Command Line Interface (CLI)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The commands for the <application>ip</application> utility, sometimes "
+"referred to as <package>iproute2</package> after the upstream package name, "
+"are documented in the <filename>man ip(8)</filename> page. The package name "
+"in Fedora is <package>iproute</package>. If necessary, you can check that "
+"the <application>ip</application> utility is installed by checking its "
+"version number as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>ip -V</command>\n"
+"ip utility, iproute2-ss130716"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>ip</application> commands can be used to add and remove "
+"addresses and routes to interfaces in parallel with "
+"<application>NetworkManager</application>, which will preserve them and "
+"recognize them in <application>nmcli</application>, <application>nmtui</"
+"application>, <application>control-center</application>, and the D-Bus API."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that <application>ip</application> commands given on the command line "
+"will not persist after a system restart."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Examples of using the command line and configuration files for each task are "
+"included after explaining the use of one of the graphical user interfaces to "
+"<application>NetworkManager</application>, namely, <application>control-"
+"center</application> and <application>nm-connection-editor</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Network Configuration Using NetworkManager's CLI (nmcli)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>NetworkManager</application> command-line tool, "
+"<application>nmcli</application>, provides a command line way to configure "
+"networking by controlling <application>NetworkManager</application>. It is "
+"installed, along with <application>NetworkManager</application>, by default. "
+"If required, for details on how to verify that <application>NetworkManager</"
+"application> is running, see <xref linkend=\"sec-The_NetworkManager_Daemon\" "
+"/>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Examples of using the <application>nmcli</application> tool for each task "
+"will be included where possible, after explaining the use of graphical user "
+"interfaces and other command line methods. See <xref linkend=\"sec-"
+"Using_the_NetworkManager_Command_Line_Tool_nmcli\" /> for an introduction to "
+"<application>nmcli</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "NetworkManager and the Network Scripts"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In previous Red&nbsp;Hat Enterprise&nbsp;Linux releases, the default way to "
+"configure networking was using <firstterm>network scripts</firstterm>. The "
+"term <firstterm>network scripts</firstterm> is commonly used for the script "
+"<filename class=\"directory\">/etc/init.d/network</filename> and any other "
+"installed scripts it calls. The user supplied files are typically viewed as "
+"configuration, but can also be interpreted as an amendment to the scripts."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Although <application>NetworkManager</application> provides the default "
+"networking service, Red&nbsp;Hat developers have worked hard to ensure that "
+"scripts and <application>NetworkManager</application> cooperate with each "
+"other. Administrators who are used to the scripts can certainly continue to "
+"use them. We expect both systems to be able to run in parallel and work well "
+"together. It is expected that most user shell scripts from previous releases "
+"will still work. Red&nbsp;Hat recommends that you test them first."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid "Running Network Script"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Run the script <emphasis role=\"bold\">only</emphasis> with the "
+"<application>systemctl</application> utility which will clear any existing "
+"environment variables and ensure clean execution. The command takes the "
+"following form: <synopsis><command>systemctl "
+"<option>start|stop|restart|status</option> network</command></synopsis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">Do not run</emphasis> any service by calling "
+"<command>/etc/init.d/<replaceable>servicename</replaceable> "
+"<option>start|stop|restart|status</option></command> directly."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that in Red&nbsp;Hat Enterprise&nbsp;Linux&nbsp;7, "
+"<application>NetworkManager</application> is started first, and <filename>/"
+"etc/init.d/network</filename> checks with <application>NetworkManager</"
+"application> to avoid tampering with <application>NetworkManager</"
+"application>'s connections. <application>NetworkManager</application> is "
+"intended to be the primary application using sysconfig configuration files "
+"and <filename>/etc/init.d/network</filename> is intended to be secondary, "
+"playing a fallback role."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <filename>/etc/init.d/network</filename> script is not event-driven, it "
+"runs either:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"manually (by one of the <command>systemctl</command> commands "
+"<command><option>start|stop|restart</option> network</command>),"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"on boot and shutdown if the network service is enabled (as a result of the "
+"command <command>systemctl enable network</command>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is a manual process and does not react to events that happen after boot. "
+"Users can also call the scripts <filename>ifup</filename> and "
+"<filename>ifdown</filename> manually."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid "Custom Commands and the Network Scripts"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Custom commands in the scripts <filename>/sbin/ifup-local</filename>, "
+"<filename>ifdown-pre-local</filename>, and <filename>ifdown-local</filename> "
+"are only executed when those devices are controlled by the <systemitem class="
+"\"daemon\">/etc/init.d/network</systemitem> service. If you modified the "
+"initscripts themselves (for example, <filename>/etc/sysconfig/network-"
+"scripts/ifup-eth</filename>) then those changes would be overwritten by an "
+"<package>initscripts</package> package update. Therefore it is recommend "
+"that you avoid modifying the initscripts directly and make use of the "
+"<filename>/sbin/if*local</filename> scripts, so that your custom changes "
+"will survive package updates. The initscripts just check for the presence of "
+"the relevant <filename>/sbin/if*local</filename> and run them if they exit. "
+"The initscripts do not place anything in the <filename>/sbin/if*local</"
+"filename> scripts, nor does the <package>initscripts</package> RPM (or any "
+"package) own or modify those files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are ways to perform custom tasks when network connections go up and "
+"down, both with the old network scripts and with "
+"<application>NetworkManager</application>. When <application>NetworkManager</"
+"application> is enabled, the <filename>ifup</filename> and <filename>ifdown</"
+"filename> script will ask <application>NetworkManager</application> whether "
+"<application>NetworkManager</application> manages the interface in question, "
+"which is found from the <quote>DEVICE=</quote> line in the <filename>ifcfg</"
+"filename> file. If <application>NetworkManager</application> does manage "
+"that device, and the device is not already connected, then <filename>ifup</"
+"filename> will ask <application>NetworkManager</application> to start the "
+"connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the device is managed by <application>NetworkManager</application> and it "
+"<emphasis role=\"bold\">is</emphasis> already connected, nothing is done."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the device is not managed by <application>NetworkManager</application>, "
+"then the scripts will start the connection using the older, non-"
+"<application>NetworkManager</application> mechanisms that they have used "
+"since the time before <application>NetworkManager</application> existed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are calling \"<filename>ifdown</filename>\" and the device is managed "
+"by <application>NetworkManager</application>, then <filename>ifdown</"
+"filename> will ask <application>NetworkManager</application> to terminate "
+"the connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The scripts dynamically check <application>NetworkManager</application>, so "
+"if <application>NetworkManager</application> is not running, the scripts "
+"will fall back to the old, pre-<application>NetworkManager</application> "
+"script-based mechanisms."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Network Configuration Using sysconfig Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <filename class=\"directory\">/etc/sysconfig/</filename> directory is a "
+"location for configuration files and scripts. Most network configuration "
+"information is stored there, with the exception of VPN, mobile broadband and "
+"PPPoE configuration, which are stored in <filename class=\"directory\">/etc/"
+"NetworkManager/</filename> subdirectories. Interface specific information "
+"for example, is stored in <filename>ifcfg</filename> files in the <filename "
+"class=\"directory\">/etc/sysconfig/network-scripts/</filename> directory."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The file <filename>/etc/sysconfig/network</filename> is for global settings. "
+"Information for VPNs, mobile broadband and PPPoE connections is stored in "
+"<filename class=\"directory\">/etc/NetworkManager/system-connections/</"
+"filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora, when you edit an <filename>ifcfg</filename> file, "
+"<application>NetworkManager</application> is not automatically aware of the "
+"change and has to be prompted to notice the change. If you use one of the "
+"tools to update <application>NetworkManager</application> profile settings, "
+"then <application>NetworkManager</application> does not implement those "
+"changes until you reconnect using that profile. For example, if "
+"configuration files have been changed using an editor, "
+"<application>NetworkManager</application> must be told to read the "
+"configuration files again. To do that, issue the following command as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>nmcli connection reload</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The above command reads all connection profiles. Alternatively, to reload "
+"only one changed file, <filename>ifcfg-<replaceable>ifname</replaceable></"
+"filename>, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>nmcli con load /etc/sysconfig/network-scripts/ifcfg-"
+"<replaceable>ifname</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The command accepts multiple file names. These commands require <systemitem "
+"class=\"username\">root</systemitem> privileges. For more information on "
+"user privileges and gaining privileges, see the <citetitle pubwork="
+"\"book\">&MAJOROSVER; System Administrator's Guide</citetitle> and the "
+"<filename>su(1)</filename> and <filename>sudo(8)</filename> man pages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Changes made using tools such as <application>nmcli</application> do not "
+"require a reload but do require the associated interface to be put down and "
+"then up again. That can be done by using commands in the following format: "
+"<synopsis>nmcli dev disconnect <replaceable>interface-name</replaceable></"
+"synopsis> Followed by: <synopsis>nmcli con up <replaceable>interface-name</"
+"replaceable></synopsis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>NetworkManager</application> does not trigger any of the "
+"network scripts, though the network scripts will try to trigger "
+"<application>NetworkManager</application> if it is running when "
+"<filename>ifup</filename> commands are used. See <xref linkend=\"sec-"
+"NetworkManager_and_the_Network_Scripts\" /> for an explanation of the "
+"network scripts."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <filename>ifup</filename> script is a generic script which does a few "
+"things and then calls interface-specific scripts like <filename>ifup-ethX</"
+"filename>, <filename>ifup-wireless</filename>, <filename>ifup-ppp</"
+"filename>, and so on. When a user runs <command>ifup eth0</command> "
+"manually, the following occurs:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>ifup</filename> looks for a file called <filename>/etc/sysconfig/"
+"network-scripts/ifcfg-eth0</filename>;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"if the <filename>ifcfg</filename> file exists, <filename>ifup</filename> "
+"looks for the <option>TYPE</option> key in that file to determine which type-"
+"specific script to call;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>ifup</filename> calls <filename>ifup-wireless</filename> or "
+"<filename>ifup-eth</filename> or <filename>ifup-XXX</filename> based on "
+"<option>TYPE</option>;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "the type-specific scripts do type-specific setup;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"and then the type-specific scripts let common functions perform <systemitem "
+"class=\"protocol\">IP</systemitem>-related tasks like <systemitem class="
+"\"protocol\">DHCP</systemitem> or static setup."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On bootup, <filename>/etc/init.d/network</filename> reads through all the "
+"<filename>ifcfg</filename> files and for each one that has <command>ONBOOT="
+"yes</command>, it checks whether <application>NetworkManager</application> "
+"is already starting the DEVICE from that <filename>ifcfg</filename> file. If "
+"<application>NetworkManager</application> is starting that device or has "
+"already started it, nothing more is done for that file, and the next "
+"<command>ONBOOT=yes</command> file is checked. If "
+"<application>NetworkManager</application> is not yet starting that device, "
+"the initscripts will continue with their traditional behavior and call "
+"<filename>ifup</filename> for that <filename>ifcfg</filename> file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The end result is that any <filename>ifcfg</filename> file that has "
+"<command>ONBOOT=yes</command> is expected to be started on system bootup, "
+"either by <application>NetworkManager</application> or by the initscripts. "
+"This ensures that some legacy network types which "
+"<application>NetworkManager</application> does not handle (such as ISDN or "
+"analog dialup modems) as well as any new application not yet supported by "
+"<application>NetworkManager</application> are still correctly started by the "
+"initscripts even though <application>NetworkManager</application> is unable "
+"to handle them."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is recommended not to store backup <filename>ifcfg</filename> files in "
+"the same location as the live ones. The script literally does <command>ifcfg-"
+"*</command> with an exclude only for these extensions: <filename>.old</"
+"filename>, <filename>.orig</filename>, <filename>.rpmnew</filename>, "
+"<filename>.rpmorig</filename>, and <filename>.rpmsave</filename>. The best "
+"way is not to store backup files anywhere within the <filename class="
+"\"directory\">/etc/</filename> directory."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Additional Resources"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following sources of information provide additional resources regarding "
+"networking for Fedora."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installed Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>man(1)</filename> man page — Describes man pages and how to find "
+"them."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>NetworkManager(8)</filename> man page — Describes the network "
+"management daemon."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>NetworkManager.conf(5)</filename> man page — Describes the "
+"<systemitem class=\"daemon\">NetworkManager</systemitem> configuration file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>/usr/share/doc/initscripts-<replaceable>version</replaceable>/"
+"sysconfig.txt</filename> — Describes configuration files and their "
+"directives."
+msgstr ""
+

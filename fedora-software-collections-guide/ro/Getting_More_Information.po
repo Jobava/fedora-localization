@@ -1,0 +1,88 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Software Collections Guide\n"
+"POT-Creation-Date: 2014-03-23 20:52+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Getting More Information"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information on &DSCL; packaging and Fedora, refer to the resources "
+"listed below."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installed Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">scl</emphasis>(1) &ndash; The manual page for the "
+"<application>scl</application> tool for enabling &DSCL;s and running "
+"programs in &DSCL;'s environment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">scl --help</emphasis> &ndash; General usage "
+"information for the <application>scl</application> tool for enabling &DSCL;s "
+"and running programs in &DSCL;'s environment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">rpmbuild</emphasis>(8) &ndash; The manual page for "
+"the <application>rpmbuild</application> utility for building both binary and "
+"source packages."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Accessing Online Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following is a brief list of documents that are directly or indirectly "
+"relevant to this book:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"http://docs.fedoraproject.org/en-US/Fedora/20/html/"
+"Installation_Guide/index.html\">Fedora 20 Installation Guide</ulink> &ndash; "
+"The <citetitle pubwork=\"book\">Installation Guide</citetitle> for Fedora 20 "
+"provides more details on getting, installing, and updating the system."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"http://docs.fedoraproject.org/en-US/Fedora/18/html/"
+"System_Administrators_Guide/index.html\">Fedora 18 System Administrator's "
+"Guide</ulink> &ndash; The <citetitle pubwork=\"book\">System Administrator's "
+"Guide</citetitle> for Fedora 18 documents relevant information regarding the "
+"deployment, configuration, and administration of Fedora."
+msgstr ""
+

@@ -1,0 +1,4 @@
+Fedora's installer
+
+http://fedoraproject.org/wiki/Anaconda
+https://github.com/rhinstaller/anaconda.git

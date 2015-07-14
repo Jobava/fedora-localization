@@ -1,0 +1,4 @@
+The site at http://whatcanidoforfedora.org 
+
+http://whatcanidoforfedora.org/
+https://github.com/fedora-infra/asknot-ng

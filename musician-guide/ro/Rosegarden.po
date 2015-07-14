@@ -1,0 +1,905 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:06-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Rosegarden"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Requirements and Installation"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Knowledge Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Rosegarden's user interface is similar to other DAWs. We recommend that you "
+"read <xref linkend=\"sect-Musicians_Guide-DAW_User_Interface\" /> if you "
+"have not used a DAW before."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Software Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Rosegarden</application> uses the <application>JACK Audio "
+"Connection Kit</application>. You should install <application>JACK</"
+"application> before installing <application>Rosegarden</application>. See "
+"<xref linkend=\"sect-Musicians_Guide-Install_and_Configure_JACK\" /> for "
+"instructions to install <application>JACK</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Hardware Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You need an audio interface to use <application>Rosegarden</application>. If "
+"you will record audio with <application>Rosegarden</application>, you must "
+"have at least one microphone connected to your audio interface. You do not "
+"need a microphone to record audio signals from other <application>JACK</"
+"application>-aware programs like <application>FluidSynth</application> and "
+"<application>SuperCollider</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Other Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You need a MIDI synthesizer to use <application>Rosegarden</application> as "
+"a MIDI sequencer. You can use hardware-based and software-based synthesizers "
+"with <application>Rosegarden</application>. We recommend using the software-"
+"based <application>FluidSynth</application> MIDI synthesizer. See <xref "
+"linkend=\"chap-Musicians_Guide-FluidSynth\" /> for information about "
+"<application>FluidSynth</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>PackageKit</application> or <application>Apper</"
+"application> to install the <package>rosegarden4</package> packge. "
+"<application>PackageKit</application> automatically installs other required "
+"software."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuration"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"Setup <application>JACK</application> and <application>FluidSynth</"
+"application> (<application>Qsynth</application>)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Follow these instructions to setup <application>JACK</application> and "
+"<application>Qsynth</application>. Then follow the instructions in <xref "
+"linkend=\"sect-Musicians_Guide-Rosegarden-Configuration-Rosegarden\" /> to "
+"connect <application>Rosegarden</application> with <application>JACK</"
+"application> and <application>Qsynth</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Start <application>QjackCtl</application> to control <application>JACK</"
+"application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Start <application>Qsynth</application> to control <application>FluidSynth</"
+"application>. <application>FluidSynth</application> starts automatically."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Start <application>Rosegarden</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Configure <application>Qsynth</application> to use the \"alsa_seq\" MIDI "
+"driver. Refer to <xref linkend=\"sect-Musicians_Guide-FluidSynth-Configuring-"
+"MIDI_Input\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You may want to disconnect all <application>JACK</application> connections "
+"except the connections you will use with <application>Rosegarden</"
+"application>. Use the <application>QjackCtl</application> \"Connect\" window "
+"to make these connections:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "On the \"Audio\" tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Qsynth</application> output ports connect to the \"system\" "
+"input ports. If you only use MIDI in <application>Rossegarden</application>, "
+"and you do not use audio in <application>Rosegarden</application>, you do "
+"not need further connections on the \"Audio\" tab."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you use audio in <application>Rosegarden</application>, ensure the "
+"\"master out\" ports connect to the \"system\" input ports."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you use audio in <application>Rosegarden</application>, ensure the "
+"\"record monitor\" ports connect to the \"system\" input ports."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you use audio in <application>Rosegarden</application>, ensure the input "
+"ports connect to the \"system\" outputput ports. Note that "
+"<application>Rosegarden</application> can record from two independent "
+"sources (\"1\" and \"2\"), with two channels (\"L\" for left and \"R\" for "
+"right) from each, to produce a stereo recording."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "On the \"MIDI\" tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Nothing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "On the \"ALSA\" tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Connect the <application>Rosegarden</application> output ports to the "
+"\"FLUID synth\" input ports:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "1:sync out (sends MIDI control messages)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"2:external controller (for the first set of MIDI instruments in the session)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"3:out 2 - General MIDI Device (for the second set of MIDI instruments in the "
+"session)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want <application>Rosegarden</application> to accept commands from "
+"other MIDI devices, connect these <application>Rosegarden</application> "
+"input ports to the other devices' output ports:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "0:record in"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "2:external controller"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We recommend that you disconnect all ports unless you need to connect them. "
+"If you have an extra connection, you may accidentally send a signal, and "
+"produce undesirable results."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Setup <application>Rosegarden</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Follow the instructions in <xref linkend=\"sect-Musicians_Guide-Rosegarden-"
+"Configuration-JACK_and_Qsynth\" /> to setup <application>JACK</application> "
+"and <application>Qsynth</application>. Then follow these instructions to "
+"connect <application>Rosegarden</application> with <application>JACK</"
+"application> and <application>Qsynth</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</"
+"guimenuitem></menuchoice> from the <application>Rosegarden</application> "
+"menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Setup \"General\" as desired:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the \"Behaviour\" tab. Select \"Use <application>JACK</application> "
+"Transport\" if you want <application>Rosegarden</application> to follow "
+"instructions from the transport shown in <application>QjackCtl</application>."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the \"External Applications\" tab. If you are not using <application>KDE</"
+"application> then we recommend that you change these applications to match "
+"what is installed on your computer."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Setup \"MIDI\" as desired. For the \"MIDI Sync\" tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose \"Send MIDI Clock, Start and Stop\" if <application>Rosegarden</"
+"application> controls all other MIDI devices."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose \"Accept Start, Stop and Continue\" if <application>Rosegarden</"
+"application> accepts control signals from other MIDI devices."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Choose \"Off\" if you do not understand which option to choose."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Setup \"Audio\" as desired:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The preview scale changes the way <application>Rosegarden</application> "
+"looks, but not how the audio sounds."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If <application>Rosegarden</application> performs slowly on your computer, "
+"reduce quality from 32-bit to 16-bit. We do not recommend using 16-bit "
+"quality unless you need it, because you will have lower-quality audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose a different external editor if you do not want to use the default "
+"choice (<application>Audacity</application>)."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "<application>Rosegarden</application> and LilyPond"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Rosegarden</application> and LilyPond can be used together, "
+"which can greatly enhace your productivity. LilyPond will output a MIDI-"
+"format representation of your score if you include a \"midi\" section in the "
+"\"score\" section. It should look something like this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"\\score\n"
+"{\n"
+"   ...\n"
+"   \\midi { }\n"
+"}\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This MIDI file can then be imported into <application>Rosegarden</"
+"application> by selecting from the menu 'File &gt; Import &gt; Import MIDI "
+"File'. Unfortunately, this will erase the current session, so it can be done "
+"only once."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is also possible to export MIDI tracks to LilyPond format, which can then "
+"be edited further or simply turned into a score. To do this, from the menu "
+"select 'File &gt; Export &gt; Export LilyPond File'. After you select a "
+"location to save the file, <application>Rosegarden</application> allows you "
+"to control some score settings while exporting. After exporting a LilyPond "
+"file, you should inspect it with Frescobaldi before relying on it to be "
+"correct - computers sometimes make mistakes!"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Write a Song in <application>Rosegarden</application> (Tutorial)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Rosegarden</application> notation editor may accidentally "
+"leave some notes playing longer than it should. Press the <guibutton>panic</"
+"guibutton> button in <application>Qsynth</application> to fix this. Other "
+"synthesizers should also have a <guibutton>panic</guibutton> button."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Start the Score with a Bass Line"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Start <application>QjackCtl</application>, then <application>Qsynth</"
+"application>, then <application>Rosegarden</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For this tutorial, we'll be using the default \"Fluid R3\" SoundFont, but "
+"you can use any General MIDI SoundFont."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Setup <application>Rosegarden</application> in <application>JACK</"
+"application> for MIDI use only."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"From the <application>Rosegarden</application> menu, select "
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></"
+"menuchoice>. Click the \"MIDI\" tab, then the 'General' tab, then select "
+"\"Send all MIDI controllers at start of each playback\". This will ensure "
+"that the MIDI synthesizer (<application>FluidSynth</application> for this "
+"tutorial) uses the right patches."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Create a new segment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the \"Draw\" tool on the toolbar (it looks like a red pencil), or "
+"press 'F3' on the keyboard."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the first track, click-and-drag to select the area over the first two "
+"bars."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you release the mouse, there should be a rectangle that says, "
+"\"Acoustic Grand Piano,\" or something similar."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Double-click on the rectangle to open the default MIDI segment editor. It "
+"should be the notation editor."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Change the clef. Click on the bass clef on the toolbar at the left side of "
+"the editor window. Then click on the existing clef to replace it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Switch to the note-inputting tools as required. They're located next to the "
+"clef tools, in the toolbar at the left of the notation editor window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Input three quarter-notes on c, two eighth notes on c and g, two quarter-"
+"notes on e-flat, and four eighth notes on d, f, d, and g."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You'll probably make a few mistakes. The easiest way to fix a mistake is to "
+"erase the note/s and re-input the correct note/s. You can use the eraser "
+"tool for this. It's located on the top toolbar of the score editing window, "
+"to the left of the capital \"T,\" and to the right of the red pencil. It "
+"looks like a red and white rectangle, which represents a standard white "
+"eraser."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to your creation by clicking on the 'play' button in the transport "
+"window. The playhead won't stop until you stop it, even though the visible "
+"playhead (the vertical line) will stop."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Close the notation editor - you don't need to click the 'save' button, "
+"because <application>Rosegarden</application> will automatically keep your "
+"changes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You should save the file, though."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the \"Select and Edit\" tool, which looks like a mouse cursor on the "
+"toolbar. You can also select that tool by pressing 'F2' on the keyboard."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the segment you just created by clicking on it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create a copy of it by holding the 'Ctrl' key on the keyboard, as you click-"
+"and-drag the segment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Place the copy in the same track, immediately after the first segment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Create a few more copies like this."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the transport to move the playhead to the start (click the button that "
+"looks like a vertical bar with a single-direction arrowhead pointing towards "
+"it)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Name the newly-created track by double-clicking on its name. A window will "
+"pop up, allowing you to rename the track. If you don't know what to call it, "
+"try \"Bass line.\""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add a Percussion Track"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the second track, and rename it to \"Percussion\" (or something else, "
+"if you prefer)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the \"Instrument Parameters\" portion of the toolbox on the left side of "
+"the editor window, check the \"Percussion\" check-box. If you do not see the "
+"\"Instrument Parameters\" panel, select <menuchoice><guimenu>View</"
+"guimenu><guimenuitem>Show Special Parameters</guimenuitem></menuchoice> from "
+"the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select <guibutton>Play</guibutton> on the transport for just a second, then "
+"stop it. <application>Rosegarden</application> synchronizes the re-"
+"assignment with <application>FluidSynth</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Press <keycombo><keycap>F3</keycap></keycombo> on the keyboard, or click on "
+"the \"Draw\" tool that looks like a pencil."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create a one-measure segment in the second track, then right-click on the "
+"segment, and select <menuchoice><guimenuitem>Open in Percussion Matrix "
+"Editor</guimenuitem></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The percussion matrix editor is like the matrix editor, but each pitch is "
+"labeled with the instrument it triggers."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Experiment with the different instruments and pitches to find a pattern of "
+"four quarter notes that you want to repeat in each measure."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "When you finish with your pattern, close the editor."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the newly-created percussion segment, then choose "
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></"
+"menuchoice> from the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Move the transport playhead to the end of the first measure. First move it "
+"to the beginning, then press the \"fast forward\" button to advance it to "
+"the end of the first measure."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Confirm that the second track is still selected."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></"
+"menuchoice> a few times, so the percussion track fills up the same space as "
+"the bassline."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Spice up the Percussion"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Four quarter notes is not a very long percussion accompaniment, so let's "
+"make it more interesting."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open the first percussion segment in the standard notation editor by double-"
+"clicking it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "From the menu select 'Edit &gt; Select Whole Staff'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then from the menu select 'Adjust &gt; Notes &gt; Eighth Note'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This compressed the notes, which isn't what you wanted. Undo the change with "
+"'Edit &gt; Undo'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Again make sure that the whole staff is selected."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"From the menu select 'Adjust &gt; Notes &gt; Eighth Note (Without Duration "
+"Change)'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now there are eighth-note rests between the original rhythm. You can add off-"
+"beat accents as you wish, in the space where the rests are. You can switch "
+"to the percussion matrix editor, or stick with the notation editor - it can "
+"be fun guessing which pitch represents which instrument."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now that you've made a change, you'll have to delete all the copies and re-"
+"copy them. We'll use a better solution instead, but you'll still have to "
+"start by deleting all of the copies of the segment. Remember to keep the "
+"first one!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After removing all but the first segment, from the \"Segment Parameters\" "
+"box in the left toolbox, check the \"Repeat\" checkbox."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now the segment repeats forever. This can be useful, but eventually you'll "
+"want to stop the song. When you want to change the repeats into copies, from "
+"the menu select 'Segment &gt; Turn Repeats Into Copies'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Adjust the first track so that it's repeated, too."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add a Melody"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Rename the third track to \"Melody,\" or something like that."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Change the track's program."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Look at the \"Instrument Parameters\" box in the \"Special Parameters\" "
+"toolbox on the left side of the main editing window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Make sure that you have the \"Melody\" track selected."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the \"General MIDI\" bank, which is probably already selected."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For the program, select whatever you prefer. I decided to use program 51, "
+"called \"Synth Strings 1.\" It reminds me of music from the 1980s."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After setting the program, press 'play' on the transport toolbar, and let it "
+"go for just a second. This will allow <application>Rosegarden</application> "
+"to send the program-change message to FluidSynth. It isn't strictly "
+"necessary, and it would have been done later anyway, but doing it now helps "
+"to avoid confusion later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the \"Select and Edit\" tool to create a segment in the \"Melody\" "
+"track, of four measures long."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Edit the segment in the default editor by double-clicking on it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create four measures of a melody. It doesn't have to be complicated, or even "
+"interesting."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Close the notation editor, and listen to the the three tracks. Don't forget "
+"to reset the playhead to the beginning of the session!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It sounds a bit silly to have the melody enter at the very beginning, so add "
+"an introduction. With the \"Select and Edit\" tool (press 'F2' on the "
+"keyboard to engage it), click-and-drag the melody segment to a few bars or "
+"beats later. Note that, even if you move it to start on beat 2, 3, or 4, the "
+"view in the notation editor will always start the segment on beat 1."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Possible Ways to Continue"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You're on your way to a full MIDI composition. All you need is some "
+"inspiration to continue, and some willingness to experiment with more "
+"advanced features and tools. If you don't know how to continue, try these "
+"suggestions. Remember: you're just starting out, so your first song doesn't "
+"have to be interesting or particularly good. Once you learn how to use MIDI "
+"composition tools, you'll naturally learn how to create better music with "
+"them!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Make a simple ternary form (ABA): you've already created the first part "
+"(called \"A\"); so make a transition and a second, different part (called "
+"\"B\"), then another transition and repeat the first part. It doesn't need "
+"to be long, but it can be."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Make a \"variations\" form: repeat the part that you've already created "
+"several times, but make it slightly different every time. Try several "
+"different ways of modifying it: add another melody to go along with the one "
+"you have; add extra notes to the existing melody; change the percussion "
+"track; write a new bassline; expand the melody so it takes twice as long; "
+"combinations of these. Making a variation of an existing section is a common "
+"way of making it take more time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Make an expanded version of the existing material, by following your "
+"intuition to add more music."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Instead of adding a different melody of a repeating bassline and percussion "
+"segment, try repeating the melody over and over, creating a new bassline and "
+"percussion segments."
+msgstr ""
+

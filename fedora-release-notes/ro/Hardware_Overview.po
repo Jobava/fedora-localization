@@ -1,0 +1,220 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Hardware Overview"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora &PRODVER; provides software to suit a wide variety of applications. "
+"The storage, memory and processing requirements vary depending on usage. For "
+"example, a high traffic database server requires much more memory and "
+"storage than a business desktop, which in turn has higher requirements than "
+"a single-purpose virtual machine."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "PPC 32bit discontinued"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Support for 32 bit PowerPC systems has been fully discontinued with Fedora "
+"21."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Minimum System Configuration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The figures below are a recommended minimum for the default installation. "
+"Your requirements may differ, and most applications will benefit from more "
+"than the minimum resources."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "1GHz or faster processor"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "1GB System Memory"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "10GB unallocated drive space"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Low memory installations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora &PRODVER; can be installed and used on systems with limited resources "
+"for some applications. Text, vnc, or kickstart installations are advised "
+"over graphical installation for systems with very low memory. Larger package "
+"sets require more memory during installation, so users with less than 768MB "
+"of system memory may have better results preforming a minimal install and "
+"adding to it afterward."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Display resolution"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Graphical Installation requires 800x600 resolution or higher"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Graphical installation of Fedora &PRODVER; requires a minimum screen "
+"resolution of 800x600. Owners of devices with lower resolution, such as some "
+"netbooks, should use text or VNC installation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once installed, Fedora will support these lower resolution devices. The "
+"minimum resolution requirement applies only to graphical installation."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Graphics Hardware"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Minimum Hardware for Accelerated Desktops"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora &PRODVER; supports most display adapters. Modern, feature-rich "
+"desktop environments like <productname>GNOME3</productname> and "
+"<productname>KDE Plasma Workspaces</productname> use video devices to "
+"provide 3D-accelerated desktops. Older graphics hardware may <emphasis>not "
+"support</emphasis> acceleration:"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Intel prior to GMA9xx"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "NVIDIA prior to NV30 (GeForce FX5xxx series)"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Radeon prior to R300 (Radeon 9500)"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "CPU Accelerated Graphics"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Systems with older or no graphics acceleration devices can have accelerated "
+"desktop environments using <productname>LLVMpipe</productname> technology, "
+"which uses the CPU to render graphics. <productname>LLVMpipe</productname> "
+"requires a processor with <function>SSE2</function> extensions. The "
+"extensions supported by your processor are listed in the <function>flags:</"
+"function> section of <filename>/proc/cpuinfo</filename>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Choosing a Desktop Environment for your hardware"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora &PRODVER; Workstation's default desktop environment, "
+"<productname>GNOME3</productname>, functions best with hardware acceleration."
+" Alternative desktops, such as those featured in <xref linkend=\"Products-"
+"Spins\" />, are recommended for users with older graphics hardware or those "
+"seeing insufficient performance with <productname>LLVMpipe</productname>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Desktop environments can also be added to an existing installation and "
+"selected at login. To list the available desktops, use the <command>yum "
+"grouplist</command> command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"        <command>yum grouplist -v hidden | grep desktop</command>\n"
+"      "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Install the desired group:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"        <command>yum groupinstall \"KDE Plasma Workspaces\"</command>\n"
+"      "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Or, use the short group name to install:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"        <command>yum install @mate-desktop-environment</command>\n"
+"      "
+msgstr ""
+

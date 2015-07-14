@@ -1,0 +1,128 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Fedora Server"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Fedora Server Roles"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A Featured Server role is an installable component of Fedora Server that "
+"provides a well-integrated service on top of the Fedora Server platform. "
+"These prepared roles simplify deployment and management of a service "
+"compared to setting up an upstream server from scratch; their use is "
+"recommended but optional; existing users of upstream servers based on Fedora "
+"RPMs will not be impeded."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Framework for Server Role Deployment"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A new D-Bus service is available, exposing available server roles, and "
+"making it possible to deploy, configure and manage them. Appropriate "
+"functionality will also be exposed as a command-line utility."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"https://fedoraproject.org/wiki/Changes/"
+"FrameworkForServerRoleDeployment\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Domain Controller Server Role"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora Server can deploy a domain controller powered by FreeIPA. The role "
+"greatly simplifies configuration of a primary domain controller."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When combined with SSSD, complex tasks such as single-sign-on and "
+"authenticated access to network resources is easily accomplished."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Cockpit Management Console"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Cockpit Management Console</application> (the "
+"<package>cockpit</package> package) is now available by default in &PRODUCT; "
+"Server. This tool provides a powerful, easy to use, web-based graphical "
+"interface for managing multiple Linux servers. Features include:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<systemitem>systemd</systemitem> service management"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Journal log viewer"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Storage configuration including LVM"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Docker</application> container management"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Basic network configuration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Adding and removing local users"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Any user known to the server can log in to the <application>Cockpit</"
+"application> console by opening <systemitem class=\"ipaddress\">http://"
+"<replaceable>server-ip-address</replaceable>:9090</systemitem>."
+msgstr ""
+

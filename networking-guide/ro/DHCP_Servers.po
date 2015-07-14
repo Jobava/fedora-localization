@@ -1,0 +1,1481 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "DHCP Servers"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Dynamic Host Configuration Protocol</primary> <see>DHCP</see>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Dynamic Host Configuration Protocol (<acronym>DHCP</acronym>) is a network "
+"protocol that automatically assigns TCP/IP information to client machines. "
+"Each <systemitem class=\"protocol\">DHCP</systemitem> client connects to the "
+"centrally located <systemitem class=\"protocol\">DHCP</systemitem> server, "
+"which returns the network configuration (including the <systemitem class="
+"\"protocol\">IP</systemitem> address, gateway, and <systemitem class="
+"\"protocol\">DNS</systemitem> servers) of that client."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Why Use DHCP?"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>reasons for using</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"protocol\">DHCP</systemitem> is useful for automatic "
+"configuration of client network interfaces. When configuring the client "
+"system, you can choose <systemitem class=\"protocol\">DHCP</systemitem> "
+"instead of specifying an <systemitem class=\"protocol\">IP</systemitem> "
+"address, netmask, gateway, or <systemitem class=\"protocol\">DNS</"
+"systemitem> servers. The client retrieves this information from the "
+"<systemitem class=\"protocol\">DHCP</systemitem> server. <systemitem class="
+"\"protocol\">DHCP</systemitem> is also useful if you want to change the "
+"<systemitem class=\"protocol\">IP</systemitem> addresses of a large number "
+"of systems. Instead of reconfiguring all the systems, you can just edit one "
+"configuration file on the server for the new set of <systemitem class="
+"\"protocol\">IP</systemitem> addresses. If the <systemitem class="
+"\"protocol\">DNS</systemitem> servers for an organization changes, the "
+"changes happen on the <systemitem class=\"protocol\">DHCP</systemitem> "
+"server, not on the <systemitem class=\"protocol\">DHCP</systemitem> clients. "
+"When you restart the network or reboot the clients, the changes go into "
+"effect."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If an organization has a functional <systemitem class=\"protocol\">DHCP</"
+"systemitem> server correctly connected to a network, laptops and other "
+"mobile computer users can move these devices from office to office."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that administrators of <systemitem class=\"protocol\">DNS</systemitem> "
+"and <systemitem class=\"protocol\">DHCP</systemitem> servers, as well as any "
+"provisioning applications, should agree on the host name format used in an "
+"organization. See <xref linkend=\"sec-Recommended_Naming_Practices\" /> for "
+"more information on the format of host names."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring a DHCP Server"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>server configuration</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <package>dhcp</package> package contains an <firstterm>Internet Systems "
+"Consortium</firstterm> (<acronym>ISC</acronym>) <systemitem class="
+"\"protocol\">DHCP</systemitem> server. Install the package as <systemitem "
+"class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>yum install dhcp</command>\n"
+"    "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Installing the <package>dhcp</package> package creates a file, <filename>/"
+"etc/dhcp/dhcpd.conf</filename>, which is merely an empty configuration file. "
+"As <systemitem class=\"username\">root</systemitem>, issue the following "
+"command:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>cat /etc/dhcp/dhcpd.conf</command>\n"
+"#\n"
+"# DHCP Server Configuration file.\n"
+"#   see /usr/share/doc/dhcp/dhcpd.conf.example\n"
+"#   see dhcpd.conf(5) man page\n"
+"#"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The example configuration file can be found at <filename>/usr/share/doc/dhcp/"
+"dhcpd.conf.example</filename>. You should use this file to help you "
+"configure <filename>/etc/dhcp/dhcpd.conf</filename>, which is explained in "
+"detail below."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"protocol\">DHCP</systemitem> also uses the file "
+"<filename>/var/lib/dhcpd/dhcpd.leases</filename> to store the client lease "
+"database. Refer to <xref linkend=\"lease-database\" /> for more information."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuration File"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>dhcpd.conf</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>dhcpd.conf</primary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The first step in configuring a <systemitem class=\"protocol\">DHCP</"
+"systemitem> server is to create the configuration file that stores the "
+"network information for the clients. Use this file to declare options for "
+"client systems."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The configuration file can contain extra tabs or blank lines for easier "
+"formatting. Keywords are case-insensitive and lines beginning with a hash "
+"sign (<literal>#</literal>) are considered comments."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "There are two types of statements in the configuration file:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Parameters — State how to perform a task, whether to perform a task, or what "
+"network configuration options to send to the client."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Declarations — Describe the topology of the network, describe the clients, "
+"provide addresses for the clients, or apply a group of parameters to a group "
+"of declarations."
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>options</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The parameters that start with the keyword option are referred to as "
+"<firstterm>options</firstterm>. These options control <systemitem class="
+"\"protocol\">DHCP</systemitem> options; whereas, parameters configure values "
+"that are not optional or control how the <systemitem class="
+"\"protocol\">DHCP</systemitem> server behaves."
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>global parameters</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Parameters (including options) declared before a section enclosed in curly "
+"brackets (<literal>{ }</literal>) are considered global parameters. Global "
+"parameters apply to all the sections below it."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Restart the DHCP Daemon for the Changes to Take Effect"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the configuration file is changed, the changes do not take effect until "
+"the <systemitem class=\"protocol\">DHCP</systemitem> daemon is restarted "
+"with the command <command>systemctl restart dhcpd</command>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Use the omshell Command"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Instead of changing a <systemitem class=\"protocol\">DHCP</systemitem> "
+"configuration file and restarting the service each time, using the "
+"<command>omshell</command> command provides an interactive way to connect "
+"to, query, and change the configuration of a <systemitem class="
+"\"protocol\">DHCP</systemitem> server. By using <command>omshell</command>, "
+"all changes can be made while the server is running. For more information on "
+"<command>omshell</command>, see the <command>omshell</command> man page."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In <xref linkend=\"subnet\" />, the <command>routers</command>, "
+"<command>subnet-mask</command>, <command>domain-search</command>, "
+"<command>domain-name-servers</command>, and <command>time-offset</command> "
+"options are used for any <command>host</command> statements declared below "
+"it."
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>subnet</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For every subnet which will be served, and for every subnet to which the "
+"<systemitem class=\"protocol\">DHCP</systemitem> server is connected, there "
+"must be one <command>subnet</command> declaration, which tells the "
+"<systemitem class=\"protocol\">DHCP</systemitem> daemon how to recognize "
+"that an address is on that subnet. A <command>subnet</command> declaration "
+"is required for each subnet even if no addresses will be dynamically "
+"allocated to that subnet."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this example, there are global options for every <systemitem class="
+"\"protocol\">DHCP</systemitem> client in the subnet and a <command>range</"
+"command> declared. Clients are assigned an <systemitem class="
+"\"protocol\">IP</systemitem> address within the <command>range</command>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Subnet Declaration"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"subnet 192.168.1.0 netmask 255.255.255.0 {\n"
+"        option routers                  192.168.1.254;\n"
+"        option subnet-mask              255.255.255.0;\n"
+"        option domain-search              \"example.com\";\n"
+"        option domain-name-servers       192.168.1.1;\n"
+"        option time-offset              -18000;     # Eastern Standard Time\n"
+"	range 192.168.1.10 192.168.1.100;\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure a <systemitem class=\"protocol\">DHCP</systemitem> server that "
+"leases a dynamic <systemitem class=\"protocol\">IP</systemitem> address to a "
+"system within a subnet, modify the example values from <xref linkend="
+"\"dynamic-ip\" />. It declares a default lease time, maximum lease time, and "
+"network configuration values for the clients. This example assigns "
+"<systemitem class=\"protocol\">IP</systemitem> addresses in the "
+"<command>range</command> <systemitem class=\"ipaddress\">192.168.1.10</"
+"systemitem> and <systemitem class=\"ipaddress\">192.168.1.100</systemitem> "
+"to client systems."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Range Parameter"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"default-lease-time 600;\n"
+"max-lease-time 7200;\n"
+"option subnet-mask 255.255.255.0;\n"
+"option broadcast-address 192.168.1.255;\n"
+"option routers 192.168.1.254;\n"
+"option domain-name-servers 192.168.1.1, 192.168.1.2;\n"
+"option domain-search \"example.com\";\n"
+"subnet 192.168.1.0 netmask 255.255.255.0 {\n"
+"   range 192.168.1.10 192.168.1.100;\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To assign an <systemitem class=\"protocol\">IP</systemitem> address to a "
+"client based on the MAC address of the network interface card, use the "
+"<command>hardware ethernet</command> parameter within a <command>host</"
+"command> declaration. As demonstrated in <xref linkend=\"static-ip\" />, the "
+"<command>host apex</command> declaration specifies that the network "
+"interface card with the MAC address <systemitem class=\"etheraddress\">00:A0:"
+"78:8E:9E:AA</systemitem> always receives the <systemitem class="
+"\"protocol\">IP</systemitem> address <systemitem class=\"ipaddress\">192.168."
+"1.4</systemitem>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that you can also use the optional parameter <option>host-name</option> "
+"to assign a host name to the client."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Static IP Address Using DHCP"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"host apex {\n"
+"   option host-name \"apex.example.com\";\n"
+"   hardware ethernet 00:A0:78:8E:9E:AA;\n"
+"   fixed-address 192.168.1.4;\n"
+"}"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>DHCP</primary> <secondary><command>shared-network</command></"
+"secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All subnets that share the same physical network should be declared within a "
+"<command>shared-network</command> declaration as shown in <xref linkend="
+"\"shared-network\" />. Parameters within the <command>shared-network</"
+"command>, but outside the enclosed subnet declarations, are considered to be "
+"global parameters. The name assigned to <command>shared-network</command> "
+"must be a descriptive title for the network, such as using the title "
+"<quote>test-lab</quote> to describe all the subnets in a test lab "
+"environment."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Shared-network Declaration"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"shared-network name {\n"
+"    option domain-search              \"test.redhat.com\";\n"
+"    option domain-name-servers      ns1.redhat.com, ns2.redhat.com;\n"
+"    option routers                  192.168.0.254;\n"
+"    #more parameters for EXAMPLE shared-network\n"
+"    subnet 192.168.1.0 netmask 255.255.252.0 {\n"
+"        #parameters for subnet\n"
+"        range 192.168.1.1 192.168.1.254;\n"
+"    }\n"
+"    subnet 192.168.2.0 netmask 255.255.252.0 {\n"
+"        #parameters for subnet\n"
+"        range 192.168.2.1 192.168.2.254;\n"
+"    }\n"
+"}"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>group</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As demonstrated in <xref linkend=\"group\" />, the <command>group</command> "
+"declaration is used to apply global parameters to a group of declarations. "
+"For example, shared networks, subnets, and hosts can be grouped."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Group Declaration"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"group {\n"
+"   option routers                  192.168.1.254;\n"
+"   option subnet-mask              255.255.255.0;\n"
+"   option domain-search              \"example.com\";\n"
+"   option domain-name-servers       192.168.1.1;\n"
+"   option time-offset              -18000;     # Eastern Standard Time\n"
+"   host apex {\n"
+"      option host-name \"apex.example.com\";\n"
+"      hardware ethernet 00:A0:78:8E:9E:AA;\n"
+"      fixed-address 192.168.1.4;\n"
+"   }\n"
+"   host raleigh {\n"
+"      option host-name \"raleigh.example.com\";\n"
+"      hardware ethernet 00:A1:DD:74:C3:F2;\n"
+"      fixed-address 192.168.1.6;\n"
+"   }\n"
+"}"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using the Example Configuration File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use the provided example configuration file as a starting point and "
+"add custom configuration options to it. To copy this file to the proper "
+"location, use the following command as <systemitem class=\"username\">root</"
+"systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>cp /usr/share/doc/dhcp-<replaceable>version_number</"
+"replaceable>/dhcpd.conf.example /etc/dhcp/dhcpd.conf</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"... where <replaceable>version_number</replaceable> is the <systemitem class="
+"\"protocol\">DHCP</systemitem> version number."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For a complete list of option statements and what they do, see the "
+"<filename>dhcp-options(5)</filename> man page."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Lease Database"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the <systemitem class=\"protocol\">DHCP</systemitem> server, the file "
+"<filename>/var/lib/dhcpd/dhcpd.leases</filename> stores the <systemitem "
+"class=\"protocol\">DHCP</systemitem> client lease database. Do not change "
+"this file. <systemitem class=\"protocol\">DHCP</systemitem> lease "
+"information for each recently assigned <systemitem class=\"protocol\">IP</"
+"systemitem> address is automatically stored in the lease database. The "
+"information includes the length of the lease, to whom the <systemitem class="
+"\"protocol\">IP</systemitem> address has been assigned, the start and end "
+"dates for the lease, and the MAC address of the network interface card that "
+"was used to retrieve the lease."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All times in the lease database are in Coordinated Universal Time (UTC), not "
+"local time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The lease database is recreated from time to time so that it is not too "
+"large. First, all known leases are saved in a temporary lease database. The "
+"<filename>dhcpd.leases</filename> file is renamed <filename>dhcpd.leases~</"
+"filename> and the temporary lease database is written to <filename>dhcpd."
+"leases</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <systemitem class=\"protocol\">DHCP</systemitem> daemon could be killed "
+"or the system could crash after the lease database has been renamed to the "
+"backup file but before the new file has been written. If this happens, the "
+"<filename>dhcpd.leases</filename> file does not exist, but it is required to "
+"start the service. Do not create a new lease file. If you do, all old leases "
+"are lost which causes many problems. The correct solution is to rename the "
+"<filename>dhcpd.leases~</filename> backup file to <filename>dhcpd.leases</"
+"filename> and then start the daemon."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Starting and Stopping the Server"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>starting the server</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>stopping the server</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>DHCP</primary> <secondary><filename>dhcpd.leases</filename></"
+"secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>dhcpd.leases</primary>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Starting the DHCP Server for the First Time"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When the <systemitem class=\"protocol\">DHCP</systemitem> server is started "
+"for the first time, it fails unless the <filename>dhcpd.leases</filename> "
+"file exists. You can use the command <command>touch /var/lib/dhcpd/dhcpd."
+"leases</command> to create the file if it does not exist. If the same server "
+"is also running BIND as a <systemitem class=\"protocol\">DNS</systemitem> "
+"server, this step is not necessary, as starting the <command>named</command> "
+"service automatically checks for a <filename>dhcpd.leases</filename> file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Do not create a new lease file on a system that was previously running. If "
+"you do, all old leases are lost which causes many problems. The correct "
+"solution is to rename the <filename>dhcpd.leases~</filename> backup file to "
+"<filename>dhcpd.leases</filename> and then start the daemon."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To start the <systemitem class=\"protocol\">DHCP</systemitem> service, use "
+"the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>systemctl start dhcpd.service</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To stop the <systemitem class=\"protocol\">DHCP</systemitem> server, type:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>systemctl stop dhcpd.service</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"By default, the <systemitem class=\"protocol\">DHCP</systemitem> service "
+"does not start at boot time. To configure the daemon to start automatically "
+"at boot time, run:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>systemctl enable dhcpd.service</command>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary> <filename>/etc/sysconfig/dhcpd</filename> </primary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>command-line options</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If more than one network interface is attached to the system, but the "
+"<systemitem class=\"protocol\">DHCP</systemitem> server should only listen "
+"for <systemitem class=\"protocol\">DHCP</systemitem> requests on one of the "
+"interfaces, configure the <systemitem class=\"protocol\">DHCP</systemitem> "
+"server to listen only on that device. The <systemitem class="
+"\"protocol\">DHCP</systemitem> daemon will only listen on interfaces for "
+"which it finds a subnet declaration in the <filename>/etc/dhcp/dhcpd.conf</"
+"filename> file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is useful for a firewall machine with two network cards. One network "
+"card can be configured as a <systemitem class=\"protocol\">DHCP</systemitem> "
+"client to retrieve an <systemitem class=\"protocol\">IP</systemitem> address "
+"to the Internet. The other network card can be used as a <systemitem class="
+"\"protocol\">DHCP</systemitem> server for the internal network behind the "
+"firewall. Specifying only the network card connected to the internal network "
+"makes the system more secure because users can not connect to the daemon via "
+"the Internet."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To specify command-line options, copy and then edit the <filename>dhcpd."
+"service</filename> file as the <systemitem class=\"username\">root</"
+"systemitem> user. For example, as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>cp /usr/lib/systemd/system/dhcpd.service /etc/systemd/"
+"system/</command>\n"
+"~]#&nbsp;<command>vi /etc/systemd/system/dhcpd.service</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the line under section [Service]: <synopsis>ExecStart=/usr/sbin/dhcpd -"
+"f -cf /etc/dhcp/dhcpd.conf -user dhcpd -group dhcpd --no-pid "
+"<replaceable>your_interface_name(s)</replaceable></synopsis> Then, as the "
+"<systemitem class=\"username\">root</systemitem> user, restart the service:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>systemctl --system daemon-reload</command>\n"
+"~]#&nbsp;<command>systemctl restart dhcpd</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Command line options can be appended to <command>ExecStart=/usr/sbin/dhcpd</"
+"command> in the <filename>/etc/systemd/system/dhcpd.service</filename> unit "
+"file under section [Service]. They include:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>-p <replaceable>portnum</replaceable></command> — Specifies the UDP "
+"port number on which <command>dhcpd</command> should listen. The default is "
+"port 67. The <systemitem class=\"protocol\">DHCP</systemitem> server "
+"transmits responses to the <systemitem class=\"protocol\">DHCP</systemitem> "
+"clients at a port number one greater than the UDP port specified. For "
+"example, if the default port 67 is used, the server listens on port 67 for "
+"requests and responds to the client on port 68. If a port is specified here "
+"and the <systemitem class=\"protocol\">DHCP</systemitem> relay agent is "
+"used, the same port on which the <systemitem class=\"protocol\">DHCP</"
+"systemitem> relay agent should listen must be specified. See <xref linkend="
+"\"dhcp-relay-agent\" /> for details."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>-f</command> — Runs the daemon as a foreground process. This is "
+"mostly used for debugging."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>-d</command> — Logs the <systemitem class=\"protocol\">DHCP</"
+"systemitem> server daemon to the standard error descriptor. This is mostly "
+"used for debugging. If this is not specified, the log is written to "
+"<filename>/var/log/messages</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>-cf <replaceable>filename</replaceable> </command> — Specifies the "
+"location of the configuration file. The default location is <filename>/etc/"
+"dhcp/dhcpd.conf</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>-lf <replaceable>filename</replaceable> </command> — Specifies the "
+"location of the lease database file. If a lease database file already "
+"exists, it is very important that the same file be used every time the "
+"<systemitem class=\"protocol\">DHCP</systemitem> server is started. It is "
+"strongly recommended that this option only be used for debugging purposes on "
+"non-production machines. The default location is <filename>/var/lib/dhcpd/"
+"dhcpd.leases</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>-q</command> — Do not print the entire copyright message when "
+"starting the daemon."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "DHCP Relay Agent"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>Relay Agent</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>dhcrelay</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>dhcrelay</primary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The DHCP Relay Agent (<application>dhcrelay</application>) enables the relay "
+"of <systemitem class=\"protocol\">DHCP</systemitem> and <systemitem class="
+"\"protocol\">BOOTP</systemitem> requests from a subnet with no <systemitem "
+"class=\"protocol\">DHCP</systemitem> server on it to one or more <systemitem "
+"class=\"protocol\">DHCP</systemitem> servers on other subnets."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When a <systemitem class=\"protocol\">DHCP</systemitem> client requests "
+"information, the DHCP Relay Agent forwards the request to the list of "
+"<systemitem class=\"protocol\">DHCP</systemitem> servers specified when the "
+"DHCP Relay Agent is started. When a <systemitem class=\"protocol\">DHCP</"
+"systemitem> server returns a reply, the reply is broadcast or unicast on the "
+"network that sent the original request."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The DHCP Relay Agent for <systemitem class=\"protocol\">IPv4</systemitem>, "
+"<application>dhcrelay</application>, listens for <systemitem class="
+"\"protocol\">DHCPv4</systemitem> and <systemitem class=\"protocol\">BOOTP</"
+"systemitem> requests on all interfaces unless the interfaces are specified "
+"in <filename>/etc/sysconfig/dhcrelay</filename> with the "
+"<computeroutput>INTERFACES</computeroutput> directive. See <xref linkend="
+"\"sec-Configure_dhcrelay_as_a_DHCPv6_relay_agent\" />. The DHCP Relay Agent "
+"for <systemitem class=\"protocol\">IPv6</systemitem>, "
+"<application>dhcrelay6</application>, does not have this default behavior "
+"and interfaces to listen for <systemitem class=\"protocol\">DHCPv6</"
+"systemitem> requests must be specified. See <xref linkend=\"sec-"
+"Configure_dhcrelay_as_a_DHCPv6_relay_agent\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>dhcrelay</application> can either be run as a <systemitem class="
+"\"protocol\">DHCPv4</systemitem> and <systemitem class=\"protocol\">BOOTP</"
+"systemitem> relay agent (by default) or as a <systemitem class="
+"\"protocol\">DHCPv6</systemitem> relay agent (with <option>-6</option> "
+"argument). To see the usage message, issue the command <command>dhcrelay -h</"
+"command>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure dhcrelay as a DHCPv4 and BOOTP relay agent"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To run <application>dhcrelay</application> in <systemitem class="
+"\"protocol\">DHCPv4</systemitem> and <systemitem class=\"protocol\">BOOTP</"
+"systemitem> mode specify the servers to which the requests should be "
+"forwarded to. Copy and then edit the <filename>dhcrelay.service</filename> "
+"file as the <systemitem class=\"username\">root</systemitem> user:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>cp /lib/systemd/system/dhcrelay.service /etc/systemd/"
+"system/</command>\n"
+"~]#&nbsp;<command>vi /etc/systemd/system/dhcrelay.service</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the <option>ExecStart</option> option under section [Service] and add "
+"one or more server <systemitem class=\"protocol\">IPv4</systemitem> "
+"addresses to the end of the line, for example: <synopsis>ExecStart=/usr/sbin/"
+"dhcrelay -d --no-pid 192.168.1.1</synopsis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you also want to specify interfaces where the DHCP Relay Agent listens "
+"for <systemitem class=\"protocol\">DHCP</systemitem> requests, add them to "
+"the <option>ExecStart</option> option with <option>-i</option> argument "
+"(otherwise it will listen on all interfaces), for example: "
+"<synopsis>ExecStart=/usr/sbin/dhcrelay -d --no-pid 192.168.1.1 -i em1</"
+"synopsis> For other options see the <filename>dhcrelay(8)</filename> man "
+"page."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To activate the changes made, as the <systemitem class=\"username\">root</"
+"systemitem> user, restart the service:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>systemctl --system daemon-reload</command>\n"
+"~]#&nbsp;<command>systemctl restart dhcrelay</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure dhcrelay as a DHCPv6 relay agent"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To run <application>dhcrelay</application> in <systemitem class="
+"\"protocol\">DHCPv6</systemitem> mode add the <option>-6</option> argument "
+"and specify the <quote>lower interface</quote> (on which queries will be "
+"received from clients or from other relay agents) and the <quote>upper "
+"interface</quote> (to which queries from clients and other relay agents "
+"should be forwarded). Copy <filename>dhcrelay.service</filename> to "
+"<filename>dhcrelay6.service</filename> and edit it as the <systemitem class="
+"\"username\">root</systemitem> user:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>cp /lib/systemd/system/dhcrelay.service /etc/systemd/"
+"system/dhcrelay6.service</command>\n"
+"~]#&nbsp;<command>vi /etc/systemd/system/dhcrelay6.service</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the <option>ExecStart</option> option under section [Service] add "
+"<option>-6</option> argument and add the <quote>lower interface</quote> and "
+"<quote>upper interface</quote> interface, for example: <synopsis>ExecStart=/"
+"usr/sbin/dhcrelay -d --no-pid -6 -l em1 -u em2</synopsis> For other options "
+"see the <filename>dhcrelay(8)</filename> man page."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>systemctl --system daemon-reload</command>\n"
+"~]#&nbsp;<command>systemctl restart dhcrelay6</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring a Multihomed DHCP Server"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>Multihomed DHCP</primary> <secondary>server configuration</"
+"secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A multihomed <systemitem class=\"protocol\">DHCP</systemitem> server serves "
+"multiple networks, that is, multiple subnets. The examples in these sections "
+"detail how to configure a <systemitem class=\"protocol\">DHCP</systemitem> "
+"server to serve multiple networks, select which network interfaces to listen "
+"on, and how to define network settings for systems that move networks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Before making any changes, back up the existing <filename>/etc/dhcp/dhcpd."
+"conf</filename> file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <systemitem class=\"protocol\">DHCP</systemitem> daemon will only listen "
+"on interfaces for which it finds a subnet declaration in the <filename>/etc/"
+"dhcp/dhcpd.conf</filename> file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following is a basic <filename>/etc/dhcp/dhcpd.conf</filename> file, for "
+"a server that has two network interfaces, <interface>eth0</interface> in a "
+"<systemitem class=\"ipaddress\">10.0.0.0/24</systemitem> network, and "
+"<interface>eth1</interface> in a <systemitem class=\"ipaddress\">172.16.0.0/"
+"24</systemitem> network. Multiple <computeroutput>subnet</computeroutput> "
+"declarations allow you to define different settings for multiple networks:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"default-lease-time <replaceable>600</replaceable>;\n"
+"max-lease-time <replaceable>7200</replaceable>;\n"
+"subnet 10.0.0.0 netmask 255.255.255.0 {\n"
+"	option subnet-mask 255.255.255.0;\n"
+"	option routers 10.0.0.1;\n"
+"	range 10.0.0.5 10.0.0.15;\n"
+"}\n"
+"subnet 172.16.0.0 netmask 255.255.255.0 {\n"
+"	option subnet-mask 255.255.255.0;\n"
+"	option routers 172.16.0.1;\n"
+"	range 172.16.0.5 172.16.0.15;\n"
+"}"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<computeroutput>subnet <replaceable>10.0.0.0</replaceable> netmask "
+"<replaceable>255.255.255.0</replaceable>;</computeroutput>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A <computeroutput>subnet</computeroutput> declaration is required for every "
+"network your <systemitem class=\"protocol\">DHCP</systemitem> server is "
+"serving. Multiple subnets require multiple <computeroutput>subnet</"
+"computeroutput> declarations. If the <systemitem class=\"protocol\">DHCP</"
+"systemitem> server does not have a network interface in a range of a "
+"<computeroutput>subnet</computeroutput> declaration, the <systemitem class="
+"\"protocol\">DHCP</systemitem> server does not serve that network."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If there is only one <computeroutput>subnet</computeroutput> declaration, "
+"and no network interfaces are in the range of that subnet, the <systemitem "
+"class=\"protocol\">DHCP</systemitem> daemon fails to start, and an error "
+"such as the following is logged to <filename>/var/log/messages</filename>:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"dhcpd: No subnet declaration for eth0 (0.0.0.0).\n"
+"dhcpd: ** Ignoring requests on eth0.  If this is not what\n"
+"dhcpd:    you want, please write a subnet declaration\n"
+"dhcpd:    in your dhcpd.conf file for the network segment\n"
+"dhcpd:    to which interface eth1 is attached. **\n"
+"dhcpd:\n"
+"dhcpd:\n"
+"dhcpd: Not configured to listen on any interfaces!"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<computeroutput>option subnet-mask <replaceable>255.255.255.0</"
+"replaceable>;</computeroutput>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <computeroutput>option subnet-mask</computeroutput> option defines a "
+"subnet mask, and overrides the <computeroutput>netmask</computeroutput> "
+"value in the <computeroutput>subnet</computeroutput> declaration. In simple "
+"cases, the subnet and netmask values are the same."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<computeroutput>option routers <replaceable>10.0.0.1</replaceable>;</"
+"computeroutput>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <computeroutput>option routers</computeroutput> option defines the "
+"default gateway for the subnet. This is required for systems to reach "
+"internal networks on a different subnet, as well as external networks."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<computeroutput>range <replaceable>10.0.0.5</replaceable> <replaceable>10.0."
+"0.15</replaceable>;</computeroutput>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <computeroutput>range</computeroutput> option specifies the pool of "
+"available <systemitem class=\"protocol\">IP</systemitem> addresses. Systems "
+"are assigned an address from the range of specified <systemitem class="
+"\"protocol\">IP</systemitem> addresses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For further information, see the <filename>dhcpd.conf(5)</filename> man page."
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Host Configuration"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>Multihomed DHCP</primary> <secondary>host configuration</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Before making any changes, back up the existing <filename>/etc/sysconfig/"
+"dhcpd</filename> and <filename>/etc/dhcp/dhcpd.conf</filename> files."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring a Single System for Multiple Networks"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following <filename>/etc/dhcp/dhcpd.conf</filename> example creates two "
+"subnets, and configures an <systemitem class=\"protocol\">IP</systemitem> "
+"address for the same system, depending on which network it connects to:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"default-lease-time <replaceable>600</replaceable>;\n"
+"max-lease-time <replaceable>7200</replaceable>;\n"
+"subnet 10.0.0.0 netmask 255.255.255.0 {\n"
+"	option subnet-mask 255.255.255.0;\n"
+"	option routers 10.0.0.1;\n"
+"	range 10.0.0.5 10.0.0.15;\n"
+"}\n"
+"subnet 172.16.0.0 netmask 255.255.255.0 {\n"
+"	option subnet-mask 255.255.255.0;\n"
+"	option routers 172.16.0.1;\n"
+"	range 172.16.0.5 172.16.0.15;\n"
+"}\n"
+"host example0 {\n"
+"	hardware ethernet 00:1A:6B:6A:2E:0B;\n"
+"	fixed-address 10.0.0.20;\n"
+"}\n"
+"host example1 {\n"
+"	hardware ethernet 00:1A:6B:6A:2E:0B;\n"
+"	fixed-address 172.16.0.20;\n"
+"}"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<computeroutput>host <replaceable>example0</replaceable> </computeroutput>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <computeroutput>host</computeroutput> declaration defines specific "
+"parameters for a single system, such as an <systemitem class="
+"\"protocol\">IP</systemitem> address. To configure specific parameters for "
+"multiple hosts, use multiple <computeroutput>host</computeroutput> "
+"declarations."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Most <systemitem class=\"protocol\">DHCP</systemitem> clients ignore the "
+"name in <computeroutput>host</computeroutput> declarations, and as such, "
+"this name can be anything, as long as it is unique to other "
+"<computeroutput>host</computeroutput> declarations. To configure the same "
+"system for multiple networks, use a different name for each "
+"<computeroutput>host</computeroutput> declaration, otherwise the <systemitem "
+"class=\"protocol\">DHCP</systemitem> daemon fails to start. Systems are "
+"identified by the <computeroutput>hardware ethernet</computeroutput> option, "
+"not the name in the <computeroutput>host</computeroutput> declaration."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<computeroutput>hardware ethernet <replaceable>00:1A:6B:6A:2E:0B</"
+"replaceable>;</computeroutput>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <computeroutput>hardware ethernet</computeroutput> option identifies the "
+"system. To find this address, run the <command>ip link</command> command."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<computeroutput>fixed-address <replaceable>10.0.0.20</replaceable>;</"
+"computeroutput>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <computeroutput>fixed-address</computeroutput> option assigns a valid "
+"<systemitem class=\"protocol\">IP</systemitem> address to the system "
+"specified by the <computeroutput>hardware ethernet</computeroutput> option. "
+"This address must be outside the <systemitem class=\"protocol\">IP</"
+"systemitem> address pool specified with the <computeroutput>range</"
+"computeroutput> option."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If <computeroutput>option</computeroutput> statements do not end with a "
+"semicolon, the <systemitem class=\"protocol\">DHCP</systemitem> daemon fails "
+"to start, and an error such as the following is logged to <filename>/var/log/"
+"messages</filename>:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"/etc/dhcp/dhcpd.conf line 20: semicolon expected.\n"
+"dhcpd: }\n"
+"dhcpd: ^\n"
+"dhcpd: /etc/dhcp/dhcpd.conf line 38: unexpected end of file\n"
+"dhcpd:\n"
+"dhcpd: ^\n"
+"dhcpd: Configuration file errors encountered -- exiting"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring Systems with Multiple Network Interfaces"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following <computeroutput>host</computeroutput> declarations configure a "
+"single system, which has multiple network interfaces, so that each interface "
+"receives the same <systemitem class=\"protocol\">IP</systemitem> address. "
+"This configuration will not work if both network interfaces are connected to "
+"the same network at the same time:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"host interface0 {\n"
+"	hardware ethernet 00:1a:6b:6a:2e:0b;\n"
+"	fixed-address 10.0.0.18;\n"
+"}\n"
+"host interface1 {\n"
+"	hardware ethernet 00:1A:6B:6A:27:3A;\n"
+"	fixed-address 10.0.0.18;\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For this example, <computeroutput>interface0</computeroutput> is the first "
+"network interface, and <computeroutput>interface1</computeroutput> is the "
+"second interface. The different <computeroutput>hardware ethernet</"
+"computeroutput> options identify each interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If such a system connects to another network, add more <computeroutput>host</"
+"computeroutput> declarations, remembering to:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"assign a valid <computeroutput>fixed-address</computeroutput> for the "
+"network the host is connecting to."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"make the name in the <computeroutput>host</computeroutput> declaration "
+"unique."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When a name given in a <computeroutput>host</computeroutput> declaration is "
+"not unique, the <systemitem class=\"protocol\">DHCP</systemitem> daemon "
+"fails to start, and an error such as the following is logged to <filename>/"
+"var/log/messages</filename>:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"dhcpd: /etc/dhcp/dhcpd.conf line 31: host interface0: already exists\n"
+"dhcpd: }\n"
+"dhcpd: ^\n"
+"dhcpd: Configuration file errors encountered -- exiting"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This error was caused by having multiple <computeroutput>host interface0</"
+"computeroutput> declarations defined in <filename>/etc/dhcp/dhcpd.conf</"
+"filename>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "DHCP for IPv6 (DHCPv6)"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>DHCPv6</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>dhcpd6.conf</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The ISC <systemitem class=\"protocol\">DHCP</systemitem> includes support "
+"for <systemitem class=\"protocol\">IPv6</systemitem> (<systemitem class="
+"\"protocol\">DHCPv6</systemitem>) since the 4.x release with a <systemitem "
+"class=\"protocol\">DHCPv6</systemitem> server, client, and relay agent "
+"functionality. The agents support both <systemitem class=\"protocol\">IPv4</"
+"systemitem> and <systemitem class=\"protocol\">IPv6</systemitem>, however "
+"the agents can only manage one protocol at a time; for dual support they "
+"must be started separately for <systemitem class=\"protocol\">IPv4</"
+"systemitem> and <systemitem class=\"protocol\">IPv6</systemitem>. For "
+"example, configure both <systemitem class=\"protocol\">DHCPv4</systemitem> "
+"and <systemitem class=\"protocol\">DHCPv6</systemitem> by editing their "
+"respective configuration files <filename>/etc/dhcp/dhcpd.conf</filename> and "
+"<filename>/etc/dhcp/dhcpd6.conf</filename> and then issue the following "
+"commands:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>systemctl start dhcpd</command>\n"
+"~]#&nbsp;<command>systemctl start dhcpd6</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <systemitem class=\"protocol\">DHCPv6</systemitem> server configuration "
+"file can be found at <filename>/etc/dhcp/dhcpd6.conf</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The example server configuration file can be found at <filename>/usr/share/"
+"doc/dhcp/dhcpd6.conf.example</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A simple <systemitem class=\"protocol\">DHCPv6</systemitem> server "
+"configuration file can look like this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"subnet6 2001:db8:0:1::/64 {\n"
+"        range6 2001:db8:0:1::129 2001:db8:0:1::254;\n"
+"        option dhcp6.name-servers fec0:0:0:1::1;\n"
+"        option dhcp6.domain-search \"domain.example\";\n"
+"}"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Additional Resources"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>DHCP</primary> <secondary>additional resources</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For additional information, see <citetitle>The DHCP Handbook; Ralph Droms "
+"and Ted Lemon; 2003</citetitle> or the following resources."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installed Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>dhcpd(8)</filename> man page — Describes how the <systemitem class="
+"\"protocol\">DHCP</systemitem> daemon works."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>dhcpd.conf(5)</filename> man page — Explains how to configure the "
+"<systemitem class=\"protocol\">DHCP</systemitem> configuration file; "
+"includes some examples."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>dhcpd.leases(5)</filename> man page — Describes a persistent "
+"database of leases."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>dhcp-options(5)</filename> man page — Explains the syntax for "
+"declaring <systemitem class=\"protocol\">DHCP</systemitem> options in "
+"<filename>dhcpd.conf</filename>; includes some examples."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>dhcrelay(8)</filename> man page — Explains the <systemitem class="
+"\"protocol\">DHCP</systemitem> Relay Agent and its configuration options."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>/usr/share/doc/dhcp/</filename> — Contains example configuration "
+"files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>/usr/share/doc/dhcp-common/</filename> — Contains README files, "
+"and release notes for current versions of the <systemitem class="
+"\"protocol\">DHCP</systemitem> service."
+msgstr ""
+

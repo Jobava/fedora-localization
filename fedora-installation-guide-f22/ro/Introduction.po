@@ -1,0 +1,106 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-06-04 12:55+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+msgid "Introduction"
+msgstr ""
+
+msgid ""
+"This guide covers installation of Fedora, a Linux distribution built on free "
+"and open source software. This manual helps you install Fedora on desktops, "
+"laptops, and servers. The installation system is easy to use even if you "
+"lack previous knowledge of Linux or computer networks. If you select default "
+"options, Fedora provides a complete desktop operating system, including "
+"productivity applications, Internet utilities, and desktop tools."
+msgstr ""
+
+msgid ""
+"This document details the full range of installation options, including "
+"those that apply only in limited or unusual circumstances. Understanding of "
+"all topics described in this document is not necessary to successfully "
+"perform the installation in most cases."
+msgstr ""
+
+# translation auto-copied from project Fedora Installation Guide, version f21, document Introduction
+#, fuzzy
+msgid "Background"
+msgstr "Fond"
+
+# translation auto-copied from project Fedora Websites, version fedoracommunity.org, document po/fedoracommunity.org
+#, fuzzy
+msgid "About Fedora"
+msgstr "Despre Fedora"
+
+msgid ""
+"To find out more about &PRODUCT;, visit the <ulink url=\"http://"
+"fedoraproject.org/\">&PRODUCT; Project Website</ulink>. Other documentation "
+"describing additional topics related to &PRODUCT; is available at <ulink url="
+"\"http://docs.fedoraproject.org/\">&PRODUCT; Documentation</ulink>. Also see "
+"the <ulink url=\"https://fedoraproject.org/wiki/"
+"Fedora_Project_Wiki\">&PRODUCT; Project Wiki</ulink>."
+msgstr ""
+
+msgid "Getting Additional Help"
+msgstr ""
+
+msgid ""
+"If you encounter any problems which are not described in documentation, you "
+"might get help from members of the community - developers, users, and others."
+" There are many ways to get help: the Ask Fedora website, mailing lists, "
+"forums, or IRC. For a summary of available resources, see the <ulink url="
+"\"https://fedoraproject.org/wiki/"
+"Communicating_and_getting_help\">Communicating and Getting Help</ulink> page "
+"on the &PRODUCT; wiki."
+msgstr ""
+
+msgid "About This Document"
+msgstr ""
+
+msgid "Goals"
+msgstr ""
+
+msgid "This guide helps a reader:"
+msgstr ""
+
+msgid "Understand how to locate the &PRODUCT; distribution online"
+msgstr ""
+
+msgid "Create configuration data that allows a computer to boot &PRODUCT;"
+msgstr ""
+
+msgid "Understand and interact with the &PRODUCT; installation program"
+msgstr ""
+
+msgid "Complete basic post-installation configuration of a &PRODUCT; system"
+msgstr ""
+
+msgid ""
+"This guide does not cover <emphasis>use</emphasis> of &PRODUCT;. To learn "
+"how to use an installed &PRODUCT; system, see the other manuals available at "
+"<ulink url=\"http://docs.fedoraproject.org/\">Fedora Documentation</ulink>."
+msgstr ""
+
+msgid "Target Audience"
+msgstr ""
+
+msgid ""
+"This guide is intended for &PRODUCT; users of all levels of experience. "
+"However, it describes the installation process and its many options in far "
+"greater detail than most users are likely to require. You do not need to "
+"read and understand this entire document to install &PRODUCT; on a computer. "
+"This document is most likely to help experienced users perform advanced and "
+"unusual installations."
+msgstr ""
+

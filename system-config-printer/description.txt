@@ -1,0 +1,4 @@
+A printer administration tool
+
+https://fedorahosted.org/system-config-printer/
+https://git.fedorahosted.org/git/system-config-printer.git

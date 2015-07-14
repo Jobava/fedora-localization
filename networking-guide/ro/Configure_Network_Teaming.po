@@ -1,0 +1,2881 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Network Teaming"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Understanding Network Teaming"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The combining or aggregating together of network links in order to provide a "
+"logical link with higher throughput, or to provide redundancy, is known by "
+"many names such as <quote>channel bonding</quote>, <quote>Ethernet bonding</"
+"quote>, <quote>port trunking</quote>, <quote>channel teaming</quote>, "
+"<quote>NIC teaming</quote>, <quote>link aggregation</quote>, and so on. This "
+"concept as originally implemented in the Linux kernel is widely referred to "
+"as <quote>bonding</quote>. The term Network Teaming has been chosen to refer "
+"to this new implementation of the concept. The existing bonding driver is "
+"unaffected, Network Teaming is offered as an alternative and does not "
+"replace bonding in Fedora."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Network Teaming, or Team, is designed to implement the concept in a "
+"different way by providing a small kernel driver to implement the fast "
+"handling of packet flows, and various user-space applications to do "
+"everything else in user space. The driver has an <firstterm>Application "
+"Programming Interface</firstterm> (<acronym>API</acronym>), referred to as "
+"<quote>Team Netlink API</quote>, which implements Netlink communications. "
+"User-space applications can use this API to communicate with the driver. A "
+"library, referred to as <quote>lib</quote>, has been provided to do user "
+"space wrapping of Team Netlink communications and RT Netlink messages. An "
+"application daemon, <systemitem class=\"daemon\">teamd</systemitem>, which "
+"uses Libteam lib is also provided. One instance of <systemitem class="
+"\"daemon\">teamd</systemitem> can control one instance of the Team driver. "
+"The daemon implements the load-balancing and active-backup logic, such as "
+"round-robin, by using additional code referred to as <quote>runners</quote>. "
+"By separating the code in this way, the Network Teaming implementation "
+"presents an easily extensible and scalable solution for load-balancing and "
+"redundancy requirements. For example, custom runners can be relatively "
+"easily written to implement new logic via <systemitem class="
+"\"daemon\">teamd</systemitem>, and even <systemitem class=\"daemon\">teamd</"
+"systemitem> is optional, users can write their own application to use "
+"<application>libteam</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A tool to control a running instance of <systemitem class=\"daemon\">teamd</"
+"systemitem> using D-bus is provided by <application>teamdctl</application>. "
+"It provides a D-Bus wrapper around the <systemitem class=\"daemon\">teamd</"
+"systemitem> D-Bus API. By default, <systemitem class=\"daemon\">teamd</"
+"systemitem> listens and communicates using Unix Domain Sockets but still "
+"monitors D-Bus. This is to ensure that <systemitem class=\"daemon\">teamd</"
+"systemitem> can be used in environments where D-Bus is not present or not "
+"yet loaded. For example, when booting over <systemitem class="
+"\"daemon\">teamd</systemitem> links D-Bus would not yet be loaded. The "
+"<application>teamdctl</application> tool can be used during run time to read "
+"the configuration, the state of link-watchers, check and change the state of "
+"ports, add and remove ports, and to change ports between active and backup "
+"states."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Team Netlink API communicates with user-space applications using Netlink "
+"messages. The user-space library <application>libteam</application> does not "
+"directly interact with the API, but uses <application>libnl</application> or "
+"<application>teamnl</application> to interact with the driver API."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To sum up, the instances of Team driver, running in the kernel, do not get "
+"configured or controlled directly. All configuration is done with the aid of "
+"user space applications, such as the <application>teamd</application> "
+"application. The application then directs the kernel driver part accordingly."
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Comparison of Network Teaming to Bonding"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "A Comparison of Features in Bonding and Team"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Feature"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Bonding"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Team"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "broadcast Tx policy"
+msgstr ""
+
+# translation auto-copied from project system-config-printer, version master, document system-config-printer
+#. Tag: entry
+#, no-c-format
+msgid "Yes"
+msgstr "Da"
+
+#. Tag: entry
+#, no-c-format
+msgid "round-robin Tx policy"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "active-backup Tx policy"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "LACP (802.3ad) support"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Yes (passive only)"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Hash-based Tx policy"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "User can set hash function"
+msgstr ""
+
+# translation auto-copied from project system-config-printer, version master, document system-config-printer
+#. Tag: entry
+#, no-c-format
+msgid "No"
+msgstr "Nu"
+
+#. Tag: entry
+#, no-c-format
+msgid "Tx load-balancing support (TLB)"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "LACP hash port select"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "load-balancing for LACP support"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Ethtool link monitoring"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "ARP link monitoring"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "NS/NA (IPv6) link monitoring"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "ports up/down delays"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"port priorities and stickiness (<quote>primary</quote> option enhancement)"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "separate per-port link monitoring setup"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "multiple link monitoring setup"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Limited"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "lockless Tx/Rx path"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "No (rwlock)"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Yes (RCU)"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "VLAN support"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "user-space runtime control"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Full"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Logic in user-space"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Extensibility"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Hard"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Easy"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Modular design"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Performance overhead"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Low"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Very Low"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "D-Bus interface"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "multiple device stacking"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "zero config using LLDP"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "(in planning)"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "NetworkManager support"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Understanding the Default Behavior of Master and Slave Interfaces"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When controlling teamed port interfaces using the <systemitem class="
+"\"daemon\">NetworkManager</systemitem> daemon, and especially when fault "
+"finding, keep the following in mind:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Starting the master interface does not automatically start the port "
+"interfaces."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Starting a port interface always starts the master interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Stopping the master interface also stops the port interfaces."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A master without ports can start static <systemitem class=\"protocol\">IP</"
+"systemitem> connections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A master without ports waits for ports when starting <systemitem class="
+"\"protocol\">DHCP</systemitem> connections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A master with a <systemitem class=\"protocol\">DHCP</systemitem> connection "
+"waiting for ports completes when a port with a carrier is added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A master with a <systemitem class=\"protocol\">DHCP</systemitem> connection "
+"waiting for ports continues waiting when a port without a carrier is added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The use of direct cable connections without network switches is not "
+"supported for teaming. The failover mechanisms described here will not work "
+"as expected without the presence of network switches."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Understanding the Network Teaming Daemon and the \"Runners\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Team daemon, <systemitem class=\"daemon\">teamd</systemitem>, uses "
+"<application>libteam</application> to control one instance of the team "
+"driver. This instance of the team driver adds instances of a hardware device "
+"driver to form a <quote>team</quote> of network links. The team driver "
+"presents a network interface, <interface>team0</interface> for example, to "
+"the other parts of the kernel. The interfaces created by instances of the "
+"team driver are given names such as <interface>team0</interface>, "
+"<interface>team1</interface>, and so forth in the documentation. This is for "
+"ease of understanding and other names can be used. The logic common to all "
+"methods of teaming is implemented by <systemitem class=\"daemon\">teamd</"
+"systemitem>; those functions that are unique to the different load sharing "
+"and backup methods, such as round-robin, are implemented by separate units "
+"of code referred to as <quote>runners</quote>. Because words such as "
+"<quote>module</quote> and <quote>mode</quote> already have specific meanings "
+"in relation to the kernel, the word <quote>runner</quote> was chosen to "
+"refer to these units of code. The user specifies the runner in the JSON "
+"format configuration file and the code is then compiled into an instance of "
+"<systemitem class=\"daemon\">teamd</systemitem> when the instance is created."
+" A runner is not a plug-in because the code for a runner is compiled into an "
+"instance of <systemitem class=\"daemon\">teamd</systemitem> as it is being "
+"created. Code could be created as a plug-in for <systemitem class="
+"\"daemon\">teamd</systemitem> should the need arise."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The following runners are available at time of writing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "broadcast (data is transmitted over all ports)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "round-robin (data is transmitted over all ports in turn)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"active-backup (one port or link is used while others are kept as a backup)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"loadbalance (with active Tx load balancing and BPF-based Tx port selectors)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "lacp (implements the 802.3ad Link Aggregation Control Protocol)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "In addition, the following link-watchers are available:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>ethtool</application> (Libteam lib uses <application>ethtool</"
+"application> to watch for link state changes). This is the default if no "
+"other link-watcher is specified in the configuration file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>arp_ping</application> (The <application>arp_ping</application> "
+"utility is used to monitor the presence of a far-end hardware address using "
+"ARP packets.)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>nsna_ping</application> (Neighbor Advertisements and Neighbor "
+"Solicitation from the <systemitem class=\"protocol\">IPv6</systemitem> "
+"Neighbor Discovery protocol are used to monitor the presence of a neighbor's "
+"interface)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are no restrictions in the code to prevent a particular link-watcher "
+"from being used with a particular runner, however when using the "
+"<application>lacp</application> runner, <application>ethtool</application> "
+"is the only recommended link-watcher."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Install the Network Teaming Daemon"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The networking teaming daemon, <systemitem class=\"daemon\">teamd</"
+"systemitem>, is not installed by default. To install <systemitem class="
+"\"daemon\">teamd</systemitem>, issue the following command as <systemitem "
+"class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>yum install teamd</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Converting a Bond to a Team"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is possible to convert existing bonding configuration files to team "
+"configuration files using the <application>bond2team</application> tool. It "
+"can convert bond configuration files in <filename>ifcfg</filename> format to "
+"team configuration files in either <filename>ifcfg</filename> or JSON format."
+" Note that firewall rules, alias interfaces, and anything that might be tied "
+"to the original interface name can break after the renaming because the tool "
+"will only change the <filename>ifcfg</filename> file, nothing else."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To see some examples of the command format, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>bond2team --examples</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"New files will be created in a directory whose name starts with <filename "
+"class=\"directory\">/tmp/bond2team.XXXXXX/</filename>, where XXXXXX is a "
+"random string. After creating the new configuration files, move the old "
+"bonding files to a backup folder and then move the new files to the "
+"<filename class=\"directory\">/etc/sysconfig/network-scripts/</filename> "
+"directory."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Convert a Bond to a Team"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To convert a current <literal>bond0</literal> configuration to team "
+"<literal>ifcfg</literal>, issue a command as <systemitem class="
+"\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>/usr/bin/bond2team --master bond0</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that this will retain the name <literal>bond0</literal>. To use a new "
+"name to save the configuration, use the <option>--rename</option> as follows:"
+""
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>/usr/bin/bond2team --master bond0 --rename team0</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"add the <option>--json</option> option to output JSON format files instead "
+"of <literal>ifcfg</literal> files. See the <filename>teamd.conf(5)</"
+"filename> man page for examples of JSON format."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Convert a Bond to a Team and Specify the File Path"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To convert a current <literal>bond0</literal> configuration to team "
+"<literal>ifcfg</literal>, and to manually specify the path to the "
+"<literal>ifcfg</literal> file, issue a command as <systemitem class="
+"\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>/usr/bin/bond2team --master bond0 --configdir "
+"<replaceable>/path/to/ifcfg-file</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"add the <option>--json</option> option to output JSON format files instead "
+"of <literal>ifcfg</literal> files."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Create a Team Configuration Using Bond2team"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is also possible to create a team configuration by supplying the "
+"<application>bond2team</application> tool with a list of bonding parameters. "
+"For example:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>/usr/bin/bond2team --bonding_opts \"mode=1 miimon=500\"</"
+"command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Ports can also be supplied on the command line as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>/usr/bin/bond2team --bonding_opts \"mode=1 miimon=500 "
+"primary=eth1 \\</command>\n"
+"  <command>primary_reselect-0\" --port eth1 --port eth2 --port eth3 --port "
+"eth4</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See the <filename>bond2team(1)</filename> man page for further details. For "
+"an explanation of bonding parameters, see <xref linkend=\"sec-"
+"Using_Channel_Bonding\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Selecting Interfaces to Use as Ports for a Network Team"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To view the available interfaces, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>ip link show</command>\n"
+"1: lo:  &lt;LOOPBACK,UP,LOWER_UP &gt; mtu 65536 qdisc noqueue state UNKNOWN "
+"mode DEFAULT\n"
+"    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n"
+"2: em1:  &lt;BROADCAST,MULTICAST,UP,LOWER_UP &gt; mtu 1500 qdisc pfifo_fast "
+"state UP mode DEFAULT qlen 1000\n"
+"    link/ether 52:54:00:6a:02:8a brd ff:ff:ff:ff:ff:ff\n"
+"3: em2:  &lt;BROADCAST,MULTICAST,UP,LOWER_UP &gt; mtu 1500 qdisc pfifo_fast "
+"state UP mode DEFAULT qlen 1000\n"
+"link/ether 52:54:00:9b:6d:2a brd ff:ff:ff:ff:ff:ff"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"From the available interfaces, determine which are suitable for adding to "
+"your network team and then proceed to <xref linkend=\"sec-"
+"Selecting_Network_Team_Configuration_Methods\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Team developers prefer the term <quote>port</quote> rather than "
+"<quote>slave</quote>, however <application>NetworkManager</application> uses "
+"the term <quote>team-slave</quote> to refer to interfaces that make up a "
+"team."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Selecting Network Team Configuration Methods"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">To configure a network team using a graphical user "
+"interface</emphasis>, see <xref linkend=\"sec-"
+"Creating_a_Network_Team_Using_a_GUI\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">To create a network team using the Team daemon</"
+"emphasis>, <systemitem class=\"daemon\">teamd</systemitem>, proceed to <xref "
+"linkend=\"sec-Creating_a_Network_Team_Using_teamd\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">To create a network team using configuration files</"
+"emphasis>, proceed to <xref linkend=\"sec-"
+"Creating_a_Network_Team_Using_ifcfg_Files\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">To create a network team using the command-line "
+"tool</emphasis>, <application>nmcli</application>, proceed to <xref linkend="
+"\"sec-Configure_Network_Teaming_Using_nmcli\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a Network Team Using a GUI"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Establishing a Team Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use the GNOME <application>control-center</application> utility to "
+"direct <application>NetworkManager</application> to create a team from two "
+"or more Wired or InfiniBand connections. It is not necessary to create the "
+"connections to be teamed first. They can be configured as part of the "
+"process to configure the team. You must have the MAC addresses of the "
+"interfaces available in order to complete the configuration process."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adding a New Team Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can configure a team connection by opening the <guilabel>Network</"
+"guilabel> window, clicking the plus symbol, and selecting <guilabel>Team</"
+"guilabel> from the list."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Press the <keycap>Super</keycap> key to enter the Activities Overview, type "
+"<command>control network</command> and then press <keycap>Enter</keycap>. "
+"The <application>Network</application> settings tool appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the plus symbol to open the selection list. Select <guilabel>Team</"
+"guilabel>. The <guilabel>Editing Team Connection <replaceable>1</"
+"replaceable></guilabel> window appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the <guilabel>Team</guilabel> tab, click <guibutton>Add</guibutton> and "
+"select the type of interface you want to use with the team connection. Click "
+"the <guibutton>Create</guibutton> button. Note that the dialog to select the "
+"port type only comes up when you create the first port; after that, it will "
+"automatically use that same type for all further ports."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <guilabel>Editing team0 port 1</guilabel> window appears. Fill in the "
+"MAC address of the first interface to be added to the team."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If custom port settings are to be applied, click on the <guilabel>Team Port</"
+"guilabel> tab and enter a JSON configuration string or import it from a file."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click the <guibutton>Save</guibutton> button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The name of the teamed port appears in the <guilabel>Teamed connections</"
+"guilabel> window. Click the <guibutton>Add</guibutton> button to add further "
+"port connections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Review and confirm the settings and then click the <guilabel>Save</guilabel> "
+"button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the team-specific settings by referring to <xref linkend=\"sec-"
+"Configuring_the_Team_Tab\" /> below."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Editing an Existing Team Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Follow these steps to edit an existing bond connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the connection you want to edit and click the <guilabel>Options</"
+"guilabel> button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the <guilabel>General</guilabel> tab."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Configure the connection name, auto-connect behavior, and availability "
+"settings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Five settings in the <guilabel>Editing</guilabel> dialog are common to all "
+"connection types, see the <guilabel>General</guilabel> tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Connection name</guilabel> — Enter a descriptive name for your "
+"network connection. This name will be used to list this connection in the "
+"menu of the <guilabel>Network</guilabel> window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Automatically connect to this network when it is available</"
+"guilabel> — Select this box if you want <application>NetworkManager</"
+"application> to auto-connect to this connection when it is available. See "
+"<xref linkend=\"sec-Connecting_to_a_Network_Automatically\" /> for more "
+"information."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>All users may connect to this network</guilabel> — Select this box "
+"to create a connection available to all users on the system. Changing this "
+"setting may require root privileges. See <xref linkend=\"sec-System-"
+"wide_and_Private_Connection_Profiles\" /> for details."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Automatically connect to VPN when using this connection</guilabel> "
+"— Select this box if you want <application>NetworkManager</application> to "
+"auto-connect to a VPN connection when it is available. Select the VPN from "
+"the drop-down menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Firewall Zone</guilabel> — Select the firewall zone from the drop-"
+"down menu."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid ""
+"Saving Your New (or Modified) Connection and Making Further Configurations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once you have finished editing your team connection, click the "
+"<guibutton>Save</guibutton> button to save your customized configuration. If "
+"the profile was in use while being edited, power cycle the connection to "
+"make <application>NetworkManager</application> apply the changes. If the "
+"profile is OFF, set it to ON. See <xref linkend=\"sec-"
+"Connecting_to_a_Network_Using_a_GUI\" /> for information on using your new "
+"or altered connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can further configure an existing connection by selecting it in the "
+"<guilabel>Network</guilabel> window and clicking <guilabel>Options</"
+"guilabel> to return to the <guilabel>Editing</guilabel> dialog."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then, to configure:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"protocol\">IPv4</systemitem> settings for the "
+"connection, click the <guilabel>IPv4 Settings</guilabel> tab and proceed to "
+"<xref linkend=\"sec-Configuring_IPv4_Settings\" />; or,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"IPv6 settings for the connection, click the <guilabel>IPv6 Settings</"
+"guilabel> tab and proceed to <xref linkend=\"sec-Configuring_IPv6_Settings\" "
+"/>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring the Team Tab"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have already added a new team connection you can enter a custom JSON "
+"configuration string in the text box or import a configuration file. Click "
+"<guilabel>Save</guilabel> to apply the JSON configuration to the team "
+"interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For examples of JSON strings, see <xref linkend=\"sec-"
+"Configure_teamd_Runners\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See <xref linkend=\"procedure-Adding_a_New_Team_Connection\" /> for "
+"instructions on how to add a new team."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure a Network Team Using the Command Line"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a Network Team Using teamd"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a network team, a JSON format configuration file is required for "
+"the virtual interface that will serve as the interface to the team of ports "
+"or links. A quick way is to copy the example configuration files and then "
+"edit them using an editor running with <systemitem class=\"username\">root</"
+"systemitem> privileges. To list the available example configurations, enter "
+"the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>ls /usr/share/doc/teamd-*/example_configs/</command>\n"
+"activebackup_arp_ping_1.conf  activebackup_multi_lw_1.conf   loadbalance_2."
+"conf\n"
+"activebackup_arp_ping_2.conf  activebackup_nsna_ping_1.conf  loadbalance_3."
+"conf\n"
+"activebackup_ethtool_1.conf   broadcast.conf                 random.conf\n"
+"activebackup_ethtool_2.conf   lacp_1.conf                    roundrobin_2."
+"conf\n"
+"activebackup_ethtool_3.conf   loadbalance_1.conf             roundrobin.conf"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view one of the included files, such as <filename>activebackup_ethtool_1."
+"conf</filename>, enter the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>cat /usr/share/doc/teamd-*/example_configs/"
+"activebackup_ethtool_1.conf</command>\n"
+"{\n"
+"	\"device\":	\"team0\",\n"
+"	\"runner\":	{\"name\": \"activebackup\"},\n"
+"	\"link_watch\":	{\"name\": \"ethtool\"},\n"
+"	\"ports\":	{\n"
+"		\"eth1\": {\n"
+"			\"prio\": -10,\n"
+"			\"sticky\": true\n"
+"		},\n"
+"		\"eth2\": {\n"
+"			\"prio\": 100\n"
+"		}\n"
+"	}\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create a working configurations directory to store <systemitem class="
+"\"daemon\">teamd</systemitem> configuration files. For example, as normal "
+"user, enter a command with the following format:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>mkdir ~/<replaceable>teamd_working_configs</replaceable></"
+"command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Copy the file you have chosen to your working directory and edit it as "
+"necessary. As an example, you could use a command with the following format:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>cp /usr/share/doc/teamd-*/example_configs/"
+"activebackup_ethtool_1.conf \\ ~/<replaceable>teamd_working_configs</"
+"replaceable>/activebackup_ethtool_1.conf</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To edit the file to suit your environment, for example to change the "
+"interfaces to be used as ports for the network team, open the file for "
+"editing as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>vi ~/<replaceable>teamd_working_configs</replaceable>/"
+"activebackup_ethtool_1.conf</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Make any necessary changes and save the file. See the <filename>vi(1)</"
+"filename> man page for help on using the <application>vi</application> "
+"editor or use your preferred editor."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that it is essential that the interfaces to be used as ports within the "
+"team must not be active, that is to say, they must be <quote>down</quote>, "
+"when adding them into a team device. To check their status, issue the "
+"following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>ip link show</command>\n"
+"1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN "
+"mode DEFAULT\n"
+"    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n"
+"2: em1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast "
+"state UP mode DEFAULT qlen 1000\n"
+"    link/ether 52:54:00:d5:f7:d4 brd ff:ff:ff:ff:ff:ff\n"
+"3: em2: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast "
+"state UP mode DEFAULT qlen 1000\n"
+"  link/ether 52:54:00:d8:04:70 brd ff:ff:ff:ff:ff:ff"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this example we see that both the interfaces we plan to use are "
+"<quote>UP</quote>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To take down an interface, issue a command as <systemitem class="
+"\"username\">root</systemitem> in the following format:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>ip link set down em1</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Repeat for each interface as necessary."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a team interface based on the configuration file, as <systemitem "
+"class=\"username\">root</systemitem> user, change to the working "
+"configurations directory (<replaceable>teamd_working_configs</replaceable> "
+"in this example):"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>cd /home/<replaceable>user</"
+"replaceable><replaceable>teamd_working_configs</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then issue a command in the following format:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>teamd -g -f activebackup_ethtool_1.conf -d</command>\n"
+"Using team device \"team0\".\n"
+"Using PID file \"/var/run/teamd/team0.pid\"\n"
+"Using config file \"/home/<replaceable>user</replaceable>/"
+"teamd_working_configs/activebackup_ethtool_1.conf\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>-g</option> option is for debug messages, <option>-f</option> "
+"option is to specify the configuration file to load, and the <option>-d</"
+"option> option is to make the process run as a daemon after startup. See the "
+"<filename>teamd(8)</filename> man page for other options."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To check the status of the team, issue the following command as <systemitem "
+"class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>teamdctl team0 state</command>\n"
+"setup:\n"
+"  runner: activebackup\n"
+"ports:\n"
+"  em1\n"
+"    link watches:\n"
+"      link summary: up\n"
+"      instance[link_watch_0]:\n"
+"        name: ethtool\n"
+"        link: up\n"
+"  em2\n"
+"    link watches:\n"
+"      link summary: up\n"
+"      instance[link_watch_0]:\n"
+"        name: ethtool\n"
+"        link: up\n"
+"runner:\n"
+"  active port: em1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To apply an address to the network team interface, <interface>team0</"
+"interface>, issue a command as <systemitem class=\"username\">root</"
+"systemitem> in the following format:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>ip addr add 192.168.23.2/24 dev team0</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To check the IP address of a team interface, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>ip addr show team0</command>\n"
+"4: team0:  &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue "
+"state UP \n"
+"    link/ether 16:38:57:60:20:6f brd ff:ff:ff:ff:ff:ff\n"
+"    inet 192.168.23.2/24 scope global team0\n"
+"       valid_lft forever preferred_lft forever\n"
+"    inet6 2620:52:0:221d:1438:57ff:fe60:206f/64 scope global dynamic \n"
+"       valid_lft 2591880sec preferred_lft 604680sec\n"
+"    inet6 fe80::1438:57ff:fe60:206f/64 scope link \n"
+"       valid_lft forever preferred_lft forever"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To activate the team interface, or to bring it <quote>up</quote>, issue a "
+"command as <systemitem class=\"username\">root</systemitem> in the following "
+"format:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>ip link set dev team0 up</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To temporarily deactivate the team interface, or to take it <quote>down</"
+"quote>, issue a command as <systemitem class=\"username\">root</systemitem> "
+"in the following format:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>ip link set dev team0 down</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To terminate, or kill, an instance of the team daemon, as <systemitem class="
+"\"username\">root</systemitem> user, issue a command in the following format:"
+""
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamd -t team0 -k</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>-k</option> option is to specify that the instance of the daemon "
+"associated with the device <interface>team0</interface> is to be killed. See "
+"the <filename>teamd(8)</filename> man page for other options."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For help on command-line options for <systemitem class=\"daemon\">teamd</"
+"systemitem>, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>teamd -h</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "In addition, see the <filename>teamd(8)</filename> man page."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a Network Team Using ifcfg Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a networking team using <literal>ifcfg</literal> files, create a "
+"file in the <filename class=\"directory\">/etc/sysconfig/network-scripts/</"
+"filename> directory as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"DEVICE=team0\n"
+"DEVICETYPE=Team\n"
+"ONBOOT=yes\n"
+"BOOTPROTO=none\n"
+"IPADDR=192.168.11.1\n"
+"PREFIX=24\n"
+"TEAM_CONFIG='{\"runner\": {\"name\": \"activebackup\"}, \"link_watch\": "
+"{\"name\": \"ethtool\"}}'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This creates the interface to the team, in other words, this is the master."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a port to be a member of <interface>team0</interface>, create one "
+"or more files in the <filename class=\"directory\">/etc/sysconfig/network-"
+"scripts/</filename> directory as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"DEVICE=eth1\n"
+"HWADDR=D4:85:64:01:46:9E\n"
+"DEVICETYPE=TeamPort\n"
+"ONBOOT=yes\n"
+"TEAM_MASTER=team0\n"
+"TEAM_PORT_CONFIG='{\"prio\": 100}'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add additional port interfaces similar to the above as required, changing "
+"the DEVICE and HWADDR field to match the ports (the network devices) being "
+"added. If port priority is not specified by <literal>prio</literal> it "
+"defaults to <literal>0</literal>; it accepts negative and positive values in "
+"the range <literal>-32,767</literal> to <literal>+32,767</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifying the hardware or MAC address using the <command>HWADDR</command> "
+"directive will influence the device naming procedure. This is explained in "
+"<xref linkend=\"ch-Consistent_Network_Device_Naming\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To bring up the network team, issue the following command as <systemitem "
+"class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>ifup team0</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To view the network team, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>ip link show</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add a Port to a Network Team Using iputils"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add a port <interface>em1</interface> to a network team <interface>team0</"
+"interface>, using the <application>ip</application> utility, issue the "
+"following commands as <systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>ip link set dev em1 down</command>\n"
+"~]#&nbsp;<command>ip link set dev em1 master team0</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add additional ports as required. Team driver will bring ports up "
+"automatically."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Listing the ports of a Team Using teamnl"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view or list the ports in a network team, using the <application>teamnl</"
+"application> utility, issue the following command as <systemitem class="
+"\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>teamnl team0 ports</command>\n"
+"em2: up 100 fullduplex\n"
+"em1: up 100 fullduplex"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring Options of a Team Using teamnl"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view or list all currently available options, using the "
+"<application>teamnl</application> utility, issue the following command as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamnl team0 options</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure a team to use active backup mode, issue the following command "
+"as <systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamnl team0 setoption mode activebackup</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add an Address to a Network Team Using iputils"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add an address to a team <interface>team0</interface>, using the "
+"<application>ip</application> utility, issue the following command as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>ip addr add 192.168.252.2/24 dev team0</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Bring up an Interface to a Network Team Using iputils"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To activate or <quote>bring up</quote> an interface to a network team, "
+"<interface>team0</interface>, using the <application>ip</application> "
+"utility, issue the following command as <systemitem class=\"username\">root</"
+"systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>ip link set team0 up</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Viewing the Active Port Options of a Team Using teamnl"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view or list the <option>activeport</option> option in a network team, "
+"using the <application>teamnl</application> utility, issue the following "
+"command as <systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamnl team0 getoption activeport</command>\n"
+"0"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Setting the Active Port Options of a Team Using teamnl"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To set the <option>activeport</option> option in a network team, using the "
+"<application>teamnl</application> utility, issue the following command as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamnl team0 setoption activeport 5</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To check the change in team port options, issue the following command as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamnl team0 getoption activeport</command>\n"
+"5"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Controlling teamd with teamdctl"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to query a running instance of <systemitem class=\"daemon\">teamd</"
+"systemitem> for statistics or configuration information, or to make changes, "
+"the control tool <application>teamdctl</application> is used."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view the current team state of a team <interface>team0</interface>, enter "
+"the following command as <systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamdctl team0 state view</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For a more verbose output:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamdctl team0 state view -v</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For a complete state dump in JSON format (useful for machine processing) of "
+"<interface>team0</interface>, use the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamdctl team0 state dump</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For a configuration dump in JSON format of <interface>team0</interface>, use "
+"the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamdctl team0 config dump</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view the configuration of a port <interface>em1</interface>, that is part "
+"of a team <interface>team0</interface>, enter the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamdctl team0 port config dump em1</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add a Port to a Network Team"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add a port <interface>em1</interface> to a network team <interface>team0</"
+"interface>, issue the following command as <systemitem class="
+"\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamdctl team0 port add em1</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Remove a Port From a Network Team"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To remove an interface <interface>em1</interface> from a network team "
+"<interface>team0</interface>, issue the following command as <systemitem "
+"class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>teamdctl team0 port remove em1</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Apply a Configuration to a Port in a Network Team"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To apply a JSON format configuration to a port <interface>em1</interface> in "
+"a network team <interface>team0</interface>, issue a command as <systemitem "
+"class=\"username\">root</systemitem> in the following format:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>teamdctl team0 port config update em1 <replaceable>JSON-"
+"config-string</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Where <replaceable>JSON-config-string</replaceable> is the configuration as "
+"a string of text in JSON format. This will update the configuration of the "
+"port using the JSON format string supplied. An example of a valid JSON "
+"string for configuring a port would be the following:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "\n"
+"{\n"
+"  \"prio\": -10,\n"
+"  \"sticky\": true\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use single quotes around the JSON configuration string and omit the line "
+"breaks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that the old configuration will be overwritten and that any options "
+"omitted will be reset to the default values. See the <filename>teamdctl(8)</"
+"filename> man page for more team daemon control tool command examples."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "View the Configuration of a Port in a Network Team"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To copy the configuration of a port <interface>em1</interface> in a network "
+"team <interface>team0</interface>, issue the following command as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This will dump the JSON format configuration of the port to standard output."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure teamd Runners"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Runners are units of code which are compiled into the Team daemon when an "
+"instance of the daemon is created. For an introduction to the <systemitem "
+"class=\"daemon\">teamd</systemitem> runners, see <xref linkend=\"sec-"
+"Understanding_the_Network_Teaming_Daemon_and_the_Runners\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure the broadcast Runner"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure the broadcast runner, using an editor as <systemitem class="
+"\"username\">root</systemitem>, add the following to the team JSON format "
+"configuration file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+" \"device\": \"team0\",\n"
+" \"runner\": {\"name\": \"broadcast\"},\n"
+" \"ports\": {\"em1\": {}, \"em2\": {}}\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Please see the <filename>teamd.conf(5)</filename> man page for more "
+"information."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure the random Runner"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The random runner behaves similarly to the roundrobin runner."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure the random runner, using an editor as <systemitem class="
+"\"username\">root</systemitem>, add the following to the team JSON format "
+"configuration file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+" \"device\": \"team0\",\n"
+" \"runner\": {\"name\": \"random\"},\n"
+" \"ports\": {\"em1\": {}, \"em2\": {}}\n"
+"}"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure the roundrobin Runner"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure the roundrobin runner, using an editor as <systemitem class="
+"\"username\">root</systemitem>, add the following to the team JSON format "
+"configuration file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+" \"device\": \"team0\",\n"
+" \"runner\": {\"name\": \"roundrobin\"},\n"
+" \"ports\": {\"em1\": {}, \"em2\": {}}\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "A very basic configuration for roundrobin."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure the activebackup Runner"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The active backup runner can use all of the link-watchers to determine the "
+"status of links in a team. Any one of the following examples can be added to "
+"the team JSON format configuration file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   \"device\": \"team0\",\n"
+"   \"runner\": {\n"
+"      \"name\": \"activebackup\"\n"
+"   },\n"
+"   \"link_watch\": {\n"
+"      \"name\": \"ethtool\"\n"
+"   },\n"
+"   \"ports\": {\n"
+"      \"em1\": {\n"
+"         \"prio\": -10,\n"
+"         \"sticky\": true\n"
+"      },\n"
+"      \"em2\": {\n"
+"         \"prio\": 100\n"
+"      }\n"
+"   }\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This example configuration uses the active-backup runner with "
+"<application>ethtool</application> as the link watcher. Port <interface>em2</"
+"interface> has higher priority. The sticky flag ensures that if "
+"<interface>em1</interface> becomes active, it stays active as long as the "
+"link remains up."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   \"device\": \"team0\",\n"
+"   \"runner\": {\n"
+"      \"name\": \"activebackup\"\n"
+"   },\n"
+"   \"link_watch\": {\n"
+"      \"name\": \"ethtool\"\n"
+"   },\n"
+"   \"ports\": {\n"
+"      \"em1\": {\n"
+"         \"prio\": -10,\n"
+"         \"sticky\": true,\n"
+"         \"queue_id\": 4\n"
+"      },\n"
+"      \"em2\": {\n"
+"         \"prio\": 100\n"
+"      }\n"
+"   }\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This example configuration adds a queue ID of <literal>4</literal>. It uses "
+"active-backup runner with <application>ethtool</application> as the link "
+"watcher. Port <interface>em2</interface> has higher priority. But the sticky "
+"flag ensures that if <interface>em1</interface> becomes active, it will stay "
+"active as long as the link remains up."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure the activebackup runner using <application>ethtool</"
+"application> as the link watcher and applying a delay, using an editor as "
+"<systemitem class=\"username\">root</systemitem>, add the following to the "
+"team JSON format configuration file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   \"device\": \"team0\",\n"
+"   \"runner\": {\n"
+"      \"name\": \"activebackup\"\n"
+"   },\n"
+"   \"link_watch\": {\n"
+"      \"name\": \"ethtool\",\n"
+"      \"delay_up\": 2500,\n"
+"      \"delay_down\": 1000\n"
+"   },\n"
+"   \"ports\": {\n"
+"      \"em1\": {\n"
+"         \"prio\": -10,\n"
+"         \"sticky\": true\n"
+"      },\n"
+"      \"em2\": {\n"
+"         \"prio\": 100\n"
+"      }\n"
+"   }\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This example configuration uses the active-backup runner with "
+"<application>ethtool</application> as the link watcher. Port <interface>em2</"
+"interface> has higher priority. But the sticky flag ensures that if "
+"<interface>em1</interface> becomes active, it stays active while the link "
+"remains up. Link changes are not propagated to the runner immediately, but "
+"delays are applied."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure the loadbalance Runner"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This runner can be used for two types of load balancing, active and passive. "
+"In active mode, constant re-balancing of traffic is done by using statistics "
+"of recent traffic to share out traffic as evenly as possible. In static "
+"mode, streams of traffic are distributed randomly across the available links."
+" This has a speed advantage due to lower processing overhead. In high volume "
+"traffic applications this is often preferred as traffic usually consists of "
+"multiple stream which will be distributed randomly between the available "
+"links, in his way load sharing is accomplished without intervention by "
+"<systemitem class=\"daemon\">teamd</systemitem>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure the loadbalance runner for passive transmit (Tx) load "
+"balancing, using an editor as <systemitem class=\"username\">root</"
+"systemitem>, add the following to the team JSON format configuration file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+" \"device\": \"team0\",\n"
+" \"runner\": {\n"
+"   \"name\": \"loadbalance\",\n"
+"   \"tx_hash\": [\"eth\", \"ipv4\", \"ipv6\"]\n"
+" },\n"
+" \"ports\": {\"em1\": {}, \"em2\": {}}\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Configuration for hash-based passive transmit (Tx) load balancing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure the loadbalance runner for active transmit (Tx) load balancing, "
+"using an editor as <systemitem class=\"username\">root</systemitem>, add the "
+"following to the team JSON format configuration file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   \"device\": \"team0\",\n"
+"   \"runner\": {\n"
+"     \"name\": \"loadbalance\",\n"
+"     \"tx_hash\": [\"eth\", \"ipv4\", \"ipv6\"],\n"
+"     \"tx_balancer\": {\n"
+"       \"name\": \"basic\"\n"
+"     }\n"
+"   },\n"
+"   \"ports\": {\"em1\": {}, \"em2\": {}}\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Configuration for active transmit (Tx) load balancing using basic load "
+"balancer."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure the LACP (802.3ad) Runner"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure the LACP runner using <application>ethtool</application> as a "
+"link watcher, using an editor as <systemitem class=\"username\">root</"
+"systemitem>, add the following to the team JSON format configuration file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   \"device\": \"team0\",\n"
+"   \"runner\": {\n"
+"       \"name\": \"lacp\",\n"
+"       \"active\": true,\n"
+"       \"fast_rate\": true,\n"
+"       \"tx_hash\": [\"eth\", \"ipv4\", \"ipv6\"]\n"
+"   },\n"
+"     \"link_watch\": {\"name\": \"ethtool\"},\n"
+"     \"ports\": {\"em1\": {}, \"em2\": {}}\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Configuration for connection to a <firstterm>link aggregation control "
+"protocol</firstterm> (<acronym>LACP</acronym>) capable counterpart. The LACP "
+"runner should use <application>ethtool</application> to monitor the status "
+"of a link. It does not make sense to use any other link monitoring method "
+"besides the <application>ethtool</application> because, for example in the "
+"case of <application>arp_ping</application>, the link would never come up. "
+"The reason is that the link has to be established first and only after that "
+"can packets, ARP included, go through. Using <application>ethtool</"
+"application> prevents this because it monitors each link layer individually."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Active load balancing is possible with this runner in the same way as it is "
+"done for the loadbalance runner. To enable active transmit (Tx) load "
+"balancing, add the following section:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "\"tx_balancer\": {\n"
+"       \"name\": \"basic\"\n"
+"}"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Monitoring of the Link State"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following methods of link state monitoring are available. To implement "
+"one of the methods, add the JSON format string to the team JSON format "
+"configuration file using an editor running with <systemitem class="
+"\"username\">root</systemitem> privileges."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Ethtool for link-state Monitoring"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add or edit an existing delay, in milliseconds, between the link coming "
+"up and the runner being notified about it, add or edit a section as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "\n"
+"\"link_watch\": {\n"
+"       \"name\": \"ethtool\",\n"
+"       \"delay_up\": 2500\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add or edit an existing delay, in milliseconds, between the link going "
+"down and the runner being notified about it, add or edit a section as "
+"follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "\n"
+"\"link_watch\": {\n"
+"       \"name\": \"ethtool\",\n"
+"       \"delay_down\": 1000\n"
+"}"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure ARP Ping for Link-state Monitoring"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The team daemon <systemitem class=\"daemon\">teamd</systemitem> sends an ARP "
+"REQUEST to an address at the remote end of the link in order to determine if "
+"the link is up. The method used is the same as the <application>arping</"
+"application> utility but it does not use that utility."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Prepare a file containing the new configuration in JSON format similar to "
+"the following example:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"       \"device\": \"team0\",\n"
+"       \"runner\": {\"name\": \"activebackup\"},\n"
+"       \"link_watch\":{\n"
+"           \"name\": \"arp_ping\",\n"
+"           \"interval\": 100,\n"
+"           \"missed_max\": 30,\n"
+"           \"source_host\": \"192.168.23.2\",\n"
+"           \"target_host\": \"192.168.23.1\"\n"
+"       },\n"
+"         \"ports\": {\n"
+"             \"em1\": {\n"
+"               \"prio\": -10,\n"
+"               \"sticky\": true\n"
+"             },\n"
+"             \"em2\": {\n"
+"               \"prio\": 100\n"
+"             }\n"
+"         }\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This configuration uses <application>arp_ping</application> as the link "
+"watcher. The <option>missed_max</option> option is a limit value of the "
+"maximum allowed number of missed replies (ARP replies for example). It "
+"should be chosen in conjunction with the <option>interval</option> option in "
+"order to determine the total time before a link is reported as down."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To load a new configuration for a team port <interface>em2</interface>, from "
+"a file containing a JSON configuration, issue the following command as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;port config update em2 <replaceable>JSON-config-file</replaceable>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure IPv6 NA/NS for Link-state Monitoring"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"  \"device\": \"team0\",\n"
+"    \"runner\": {\"name\": \"activebackup\"},\n"
+"    \"link_watch\": {\n"
+"    \"name\": \"nsna_ping\",\n"
+"    \"interval\": 200,\n"
+"    \"missed_max\": 15,\n"
+"    \"target_host\": \"fe80::210:18ff:feaa:bbcc\"\n"
+"    },\n"
+"      \"ports\": {\n"
+"        \"em1\": {\n"
+"          \"prio\": -10,\n"
+"          \"sticky\": true\n"
+"        },\n"
+"        \"em2\": {\n"
+"          \"prio\": 100\n"
+"        }\n"
+"      }\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure the interval between sending NS/NA packets, add or edit a "
+"section as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "\n"
+"\"link_watch\": {\n"
+"    \"name\": \"nsna_ping\",\n"
+"    \"interval\": 200\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Value is positive number in milliseconds. It should be chosen in conjunction "
+"with the <option>missed_max</option> option in order to determine the total "
+"time before a link is reported as down."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure the maximum number of missed NS/NA reply packets to allow "
+"before reporting the link as down, add or edit a section as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "\n"
+"\"link_watch\": {\n"
+"    \"name\": \"nsna_ping\",\n"
+"    \"missed_max\": 15\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Maximum number of missed NS/NA reply packets. If this number is exceeded, "
+"the link is reported as down. The <option>missed_max</option> option is a "
+"limit value of the maximum allowed number of missed replies (ARP replies for "
+"example). It should be chosen in conjunction with the <option>interval</"
+"option> option in order to determine the total time before a link is "
+"reported as down."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure the host name that is resolved to the <systemitem class="
+"\"protocol\">IPv6</systemitem> address target address for the NS/NA packets, "
+"add or edit a section as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"\"link_watch\": {\n"
+"    \"name\": \"nsna_ping\",\n"
+"    \"target_host\": \"MyStorage\"\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <quote>target_host</quote> option contains the host name to be converted "
+"to an <systemitem class=\"protocol\">IPv6</systemitem> address which will be "
+"used as the target address for the NS/NA packets. An <systemitem class="
+"\"protocol\">IPv6</systemitem> address can be used in place of a host name."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Port Selection Override"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The physical port which transmits a frame is normally selected by the kernel "
+"part of the team driver, and is not relevant to the user or system "
+"administrator. The output port is selected using the policies of the "
+"selected team mode (<systemitem class=\"daemon\">teamd</systemitem> runner). "
+"On occasion however, it is helpful to direct certain classes of outgoing "
+"traffic to certain physical interfaces to implement slightly more complex "
+"policies. By default the team driver is multiqueue aware and 16 queues are "
+"created when the driver initializes (see <ulink url=\"https://www.kernel.org/"
+"doc/Documentation/networking/multiqueue.txt\">https://www.kernel.org/doc/"
+"Documentation/networking/multiqueue.txt</ulink> for details). If more or "
+"less queues are desired, the Netlink attribute <command>tx_queues</command> "
+"can be used to change this value during the team driver instance creation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The queue ID for a port can be set by the port configuration option "
+"<option>queue_id</option> as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "\n"
+"{\n"
+"  \"queue_id\": 3\n"
+"}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These queue ID's can be used in conjunction with the <application>tc</"
+"application> utility to configure a multiqueue queue discipline and filters "
+"to bias certain traffic to be transmitted on certain port devices. For "
+"example, if using the above configuration and wanting to force all traffic "
+"bound to <systemitem class=\"ipaddress\">192.168.1.100</systemitem> to use "
+"<interface>eth1</interface> in the team as its output device, issue commands "
+"as <systemitem class=\"username\">root</systemitem> in the following format:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>tc qdisc add dev team0 handle 1 root multiq</command>\n"
+"~]#&nbsp;<command>tc filter add dev team0 protocol ip parent 1: prio 1 u32 "
+"match ip dst \\</command>\n"
+"<command> 192.168.1.100 action skbedit queue_mapping 3</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This mechanism of overriding runner selection logic in order to bind traffic "
+"to a specific port can be used with all runners."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure BPF-based Tx Port Selectors"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The loadbalance and LACP runners uses hashes of packets to sort network "
+"traffic flow. The hash computation mechanism is based on the "
+"<firstterm>Berkeley Packet Filter</firstterm> (<acronym>BPF</acronym>) code. "
+"The BPF code is used to generate a hash rather than make a policy decision "
+"for outgoing packets. The hash length is 8 bits giving 256 variants. This "
+"means many different <firstterm>socket buffers</firstterm> (<acronym>SKB</"
+"acronym>) can have the same hash and therefore pass traffic over the same "
+"link. The use of a short hash is a quick way to sort traffic into different "
+"streams for the purposes of load balancing across multiple links. In static "
+"mode, the hash is only used to decide out of which port the traffic should "
+"be sent. In active mode, the runner will continually reassign hashes to "
+"different ports in an attempt to reach a perfect balance."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following fragment types or strings can be used for packet Tx hash "
+"computation:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>eth</option> &mdash; Uses source and destination MAC addresses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<option>vlan</option> &mdash; Uses VLAN ID."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>ipv4</option> &mdash; Uses source and destination <systemitem class="
+"\"protocol\">IPv4</systemitem> addresses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>ipv6</option> &mdash; Uses source and destination <systemitem class="
+"\"protocol\">IPv6</systemitem> addresses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>ip</option> &mdash; Uses source and destination <systemitem class="
+"\"protocol\">IPv4</systemitem> and <systemitem class=\"protocol\">IPv6</"
+"systemitem> addresses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>l3</option> &mdash; Uses source and destination <systemitem class="
+"\"protocol\">IPv4</systemitem> and <systemitem class=\"protocol\">IPv6</"
+"systemitem> addresses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>tcp</option> &mdash; Uses source and destination <systemitem class="
+"\"protocol\">TCP</systemitem> ports."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>udp</option> &mdash; Uses source and destination <systemitem class="
+"\"protocol\">UDP</systemitem> ports."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>sctp</option> &mdash; Uses source and destination <systemitem class="
+"\"protocol\">SCTP</systemitem> ports."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>l4</option> &mdash; Uses source and destination <systemitem class="
+"\"protocol\">TCP</systemitem> and <systemitem class=\"protocol\">UDP</"
+"systemitem> and <systemitem class=\"protocol\">SCTP</systemitem> ports."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These strings can be used by adding a line in the following format to the "
+"load balance runner: <synopsis>\"tx_hash\": [\"eth\", \"ipv4\", \"ipv6\"]</"
+"synopsis> See <xref linkend=\"sec-Configure_the_loadbalance_Runner\" /> for "
+"an example."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Network Teaming Using nmcli"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view the devices available on the system, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli connection show</command>\n"
+"NAME  UUID                                  TYPE            DEVICE\n"
+"eth1  0e8185a1-f0fd-4802-99fb-bedbb31c689b  802-3-ethernet  --\n"
+"eth0  dfe1f57b-419d-4d1c-aaf5-245deab82487  802-3-ethernet  --"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a new team interface, with name <replaceable>team-ServerA</"
+"replaceable>, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli connection add type team ifname <replaceable>team-"
+"ServerA</replaceable></command>\n"
+"Connection 'team-ServerA' (b954c62f-5fdd-4339-97b0-40efac734c50) "
+"successfully added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>NetworkManager</application> will set its internal parameter "
+"<option>connection.autoconnect</option> to <literal>yes</literal> and as no "
+"<systemitem class=\"protocol\">IP</systemitem> address was given "
+"<option>ipv4.method</option> will be set to <literal>auto</literal>. "
+"<application>NetworkManager</application> will also write a configuration "
+"file to <filename>/etc/sysconfig/network-scripts/ifcfg-team-ServerA</"
+"filename> where the corresponding ONBOOT will be set to <literal>yes</"
+"literal> and BOOTPROTO will be set to <literal>dhcp</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that manual changes to the ifcfg file will not be noticed by "
+"<application>NetworkManger</application> until the interface is next brought "
+"up. See <xref linkend=\"sec-Network_Configuration_Using_sysconfig_Files\" /> "
+"for more information on using configuration files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To view the other values assigned, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con show <replaceable>team-ServerA</replaceable></"
+"command>\n"
+"connection.id:                          team-ServerA\n"
+"connection.uuid:                        b954c62f-5fdd-4339-97b0-40efac734c50\n"
+"connection.interface-name:              ServerA\n"
+"connection.type:                        team\n"
+"connection.autoconnect:                 yes\n"
+msgstr ""
+
+#. Tag: lineannotation
+#, no-c-format
+msgid "…"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "\n"
+"ipv4.method:                            auto\n"
+msgstr ""
+
+#. Tag: lineannotation
+#, no-c-format
+msgid "[output truncated]"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As no JSON configuration file was specified the default values apply. See "
+"the <filename>teamd.conf(5)</filename> man page for more information on the "
+"team JSON parameters and their default values. Notice that the name was "
+"derived from the interface name by prepending the type. Alternatively, "
+"specify a name with the <option>con-name</option> option as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli connection add type team con-name "
+"<replaceable>Team0</replaceable> ifname <replaceable>ServerB</replaceable></"
+"command>\n"
+"Connection 'Team0' (5f7160a1-09f6-4204-8ff0-6d96a91218a7) successfully added."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view the team interfaces just configured, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con show</command>\n"
+"NAME                UUID                                  TYPE            "
+"DEVICE\n"
+"team-ServerA        b954c62f-5fdd-4339-97b0-40efac734c50  team            "
+"ServerA\n"
+"eth1                0e8185a1-f0fd-4802-99fb-bedbb31c689b  802-3-ethernet  -- "
+"  \n"
+"eth0                dfe1f57b-419d-4d1c-aaf5-245deab82487  802-3-ethernet  --\n"
+"Team0               5f7160a1-09f6-4204-8ff0-6d96a91218a7  team            "
+"ServerB"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To change the name assigned to a team, issue a command in the following "
+"format: <synopsis><command>nmcli con mod <replaceable>old-team-name</"
+"replaceable> connection.id <replaceable>new-team-name</replaceable></"
+"command></synopsis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To load a team configuration file for a team that already exists, issue a "
+"command in the following format: <synopsis><command>nmcli connection modify "
+"<replaceable>team-name</replaceable> team.config <replaceable>JSON-config</"
+"replaceable></command></synopsis> You can specify the team configuration "
+"either as a JSON string or provide a file name containing the configuration. "
+"The file name can include the path. In both cases, what is stored in the "
+"<parameter>team.config</parameter> property is the JSON string. In the case "
+"of a JSON string, use single quotes around the string and paste the entire "
+"string to the command line."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To review the <literal>team.config</literal> property, enter a command in "
+"the following format: <synopsis><command>nmcli con show <replaceable>team-"
+"name</replaceable> | grep team.config</command></synopsis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add an interface <replaceable>eth0</replaceable> to <literal>Team0</"
+"literal>, with the name <replaceable>Team0-port1</replaceable>, issue a "
+"command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type team-slave con-name <replaceable>Team0-"
+"port1</replaceable> ifname <replaceable>eth0</replaceable> master "
+"<replaceable>Team0</replaceable></command>\n"
+"Connection 'Team0-port1' (ccd87704-c866-459e-8fe7-01b06cf1cffc) successfully "
+"added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Similarly, to add another interface, <replaceable>eth1</replaceable>, with "
+"the name <replaceable>Team0-port2</replaceable>, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type team-slave con-name <replaceable>Team0-"
+"port2</replaceable> ifname <replaceable>eth1</replaceable> master "
+"<replaceable>Team0</replaceable></command>\n"
+"Connection 'Team0-port2' (a89ccff8-8202-411e-8ca6-2953b7db52dd) successfully "
+"added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At time of writing, <application>nmcli</application> only supports Ethernet "
+"ports."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to bring up a team, the ports must be brought up first as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli connection up <replaceable>Team0-port1</"
+"replaceable></command>\n"
+"Connection successfully activated (D-Bus active path: /org/freedesktop/"
+"NetworkManager/ActiveConnection/2)"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli connection up <replaceable>Team0-port2</"
+"replaceable></command>\n"
+"Connection successfully activated (D-Bus active path: /org/freedesktop/"
+"NetworkManager/ActiveConnection/3)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can verify that the team interface was brought up by the activation of "
+"the ports, as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>ip link</command>\n"
+"3:  Team0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue "
+"state UP mode DEFAULT\n"
+"    link/ether 52:54:00:76:6f:f0 brd ff:ff:ff:ff:ff:f"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Alternatively, issue a command to bring up the team as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli connection up <replaceable>Team0</replaceable></"
+"command>\n"
+"Connection successfully activated (D-Bus active path: /org/freedesktop/"
+"NetworkManager/ActiveConnection/4)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See <xref linkend=\"sec-Using_the_NetworkManager_Command_Line_Tool_nmcli\" /"
+"> for an introduction to <application>nmcli</application>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Additional Resources"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following sources of information provide additional resources regarding "
+"network teaming."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installed Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>teamd(8)</filename> man page — Describes the <systemitem class="
+"\"daemon\">teamd</systemitem> service."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>teamdctl(8)</filename> man page — Describes the <systemitem class="
+"\"daemon\">teamd</systemitem> control tool."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>teamd.conf(5)</filename> man page — Describes the <systemitem "
+"class=\"daemon\">teamd</systemitem> configuration file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>teamnl(8)</filename> man page — Describes the <systemitem class="
+"\"daemon\">teamd</systemitem> Netlink library."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>bond2team(1)</filename> man page — Describes a tool to convert "
+"bonding options to team."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Online Documentation"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<ulink url=\"http://www.libteam.org\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The upstream project."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<ulink url=\"http://www.w3schools.com/json/json_syntax.asp\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "An explanation of JSON syntax."
+msgstr ""
+

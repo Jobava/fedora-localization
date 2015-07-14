@@ -1,0 +1,938 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Consistent Network Device Naming"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"&MAJOROSVER; provides methods for consistent and predictable network device "
+"naming for network interfaces. These features change the name of network "
+"interfaces on a system in order to make locating and differentiating the "
+"interfaces easier."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Traditionally, network interfaces in Linux are enumerated as "
+"<interfacename>eth[0123…]</interfacename>, but these names do not "
+"necessarily correspond to actual labels on the chassis. Modern server "
+"platforms with multiple network adapters can encounter non-deterministic and "
+"counter-intuitive naming of these interfaces. This affects both network "
+"adapters embedded on the motherboard (<firstterm>Lan-on-Motherboard</"
+"firstterm>, or <firstterm><acronym>LOM</acronym></firstterm>) and add-in "
+"(single and multiport) adapters."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In &MAJOROSVER;, <application>udev</application> supports a number of "
+"different naming schemes. The default is to assign fixed names based on "
+"firmware, topology, and location information. This has the advantage that "
+"the names are fully automatic, fully predictable, that they stay fixed even "
+"if hardware is added or removed (no re-enumeration takes place), and that "
+"broken hardware can be replaced seamlessly. The disadvantage is that they "
+"are sometimes harder to read than the <interface>eth0</interface> or "
+"<interface>wlan0</interface> names traditionally used. For example: "
+"<interface>enp5s0</interface>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Naming Schemes Hierarchy"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"By default, <systemitem class=\"daemon\">systemd</systemitem> will name "
+"interfaces using the following policy to apply the supported naming schemes:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">Scheme 1:</emphasis> Names incorporating Firmware or "
+"BIOS provided index numbers for on-board devices (example: <literal>eno1</"
+"literal>), are applied if that information from the firmware or BIOS is "
+"applicable and available, else falling back to scheme 2."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">Scheme 2:</emphasis> Names incorporating Firmware or "
+"BIOS provided PCI Express hotplug slot index numbers (example: "
+"<literal>ens1</literal>) are applied if that information from the firmware "
+"or BIOS is applicable and available, else falling back to scheme 3."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">Scheme 3:</emphasis> Names incorporating physical "
+"location of the connector of the hardware (example: <literal>enp2s0</"
+"literal>), are applied if applicable, else falling directly back to scheme 5 "
+"in all other cases."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">Scheme 4:</emphasis> Names incorporating interface's "
+"MAC address (example: <literal>enx78e7d1ea46da</literal>), is not used by "
+"default, but is available if the user chooses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">Scheme 5:</emphasis> The traditional unpredictable "
+"kernel naming scheme, is used if all other methods fail (example: "
+"<literal>eth0</literal>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This policy, the procedure outlined above, is the default. If the system has "
+"<application>biosdevname</application> enabled, it will be used. Note that "
+"enabling <application>biosdevname</application> requires passing "
+"<command>biosdevname=1</command> as a command-line parameter except in the "
+"case of a Dell system, where <application>biosdevname</application> will be "
+"used by default as long as it is installed. If the user has added "
+"<application>udev</application> rules which change the name of the kernel "
+"devices, those rules will take precedence."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Understanding the Device Renaming Procedure"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The device name procedure in detail is as follows:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A rule in <filename>/usr/lib/udev/rules.d/60-net.rules</filename> instructs "
+"the <application>udev</application> helper utility, <application>/lib/udev/"
+"rename_device</application>, to look into all <filename>/etc/sysconfig/"
+"network-scripts/ifcfg-<replaceable>suffix</replaceable></filename> files. If "
+"it finds an <filename>ifcfg</filename> file with a <command>HWADDR</command> "
+"entry matching the MAC address of an interface it renames the interface to "
+"the name given in the <filename>ifcfg</filename> file by the "
+"<command>DEVICE</command> directive."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A rule in <filename>/usr/lib/udev/rules.d/71-biosdevname.rules</filename> "
+"instructs <application>biosdevname</application> to rename the interface "
+"according to its naming policy, provided that it was not renamed in a "
+"previous step, <application>biosdevname</application> is installed, and "
+"<command>biosdevname=0</command> was not given as a kernel command on the "
+"boot command line."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A rule in <filename>/lib/udev/rules.d/75-net-description.rules</filename> "
+"instructs <application>udev</application> to fill in the internal "
+"<application>udev</application> device property values ID_NET_NAME_ONBOARD, "
+"ID_NET_NAME_SLOT, ID_NET_NAME_PATH, ID_NET_NAME_MAC by examining the network "
+"interface device. Note, that some device properties might be undefined."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A rule in <filename>/usr/lib/udev/rules.d/80-net-name-slot.rules</filename> "
+"instructs <application>udev</application> to rename the interface, provided "
+"that it was not renamed in step 1 or 2, and the kernel parameter "
+"<command>net.ifnames=0</command> was not given, according to the following "
+"priority: ID_NET_NAME_ONBOARD, ID_NET_NAME_SLOT, ID_NET_NAME_PATH. It falls "
+"through to the next in the list, if one is unset. If none of these are set, "
+"then the interface will not be renamed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Steps 3 and 4 are implementing the naming schemes 1, 2, 3, and optionally 4, "
+"described in <xref linkend=\"sec-Naming_Schemes_Hierarchy\" />. Step 2 is "
+"explained in more detail in <xref linkend=\"sec-"
+"Consistent_Network_Device_Naming_Using_biosdevname\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Understanding the Predictable Network Interface Device Names"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The names have two character prefixes based on the type of interface:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>en</literal> for Ethernet,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>wl</literal> for wireless LAN (WLAN),"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>ww</literal> for wireless wide area network (WWAN)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The names have the following types:"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Device Name Types"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Format"
+msgstr ""
+
+# translation auto-copied from project system-config-printer, version master, document system-config-printer
+#. Tag: entry
+#, no-c-format
+msgid "Description"
+msgstr "Descriere"
+
+#. Tag: entry
+#, no-c-format
+msgid "o&lt;<replaceable>index</replaceable>&gt;"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "on-board device index number"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"s&lt;<replaceable>slot&gt;</replaceable>[f&lt;<replaceable>function&gt;</"
+"replaceable>][d&lt;<replaceable>dev_id</replaceable>&gt;]"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "hotplug slot index number"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "x&lt;<replaceable>MAC</replaceable>&gt;"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "MAC address"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"p&lt;<replaceable>bus</replaceable>&gt;s&lt;<replaceable>slot</"
+"replaceable>&gt;[f&lt;<replaceable>function</"
+"replaceable>&gt;][d&lt;<replaceable>dev_id</replaceable>&gt;]"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "PCI geographical location"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"p&lt;<replaceable>bus</replaceable>&gt;s&lt;<replaceable>slot</"
+"replaceable>&gt;[f&lt;<replaceable>function</"
+"replaceable>&gt;][u&lt;<replaceable>port</replaceable>&gt;][.."
+"][c&lt;<replaceable>config</replaceable>&gt;][i&lt;<replaceable>interface</"
+"replaceable>&gt;]"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "USB port number chain"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All multi-function PCI devices will carry the [f&lt;<replaceable>function</"
+"replaceable>&gt;] number in the device name, including the function 0 device."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For USB devices the full chain of port numbers of hubs is composed. If the "
+"name gets longer than the maximum number of 15 characters, the name is not "
+"exported."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The USB configuration descriptors == 1 and USB interface descriptors == 0 "
+"values are suppressed (configuration == 1 and interface == 0 are the default "
+"values if only one USB configuration or interface exists)."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Naming Scheme for Network Devices Available for Linux on System z"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the bus-ID to create predictable device names for network interfaces in "
+"Linux on System z instances. The bus-ID identifies a device in the s390 "
+"channel subsystem. A bus ID identifies the device within the scope of a "
+"Linux instance. For a CCW device, the bus ID is the device's device number "
+"with a leading <literal>0.n</literal>, where <literal>n</literal> is the "
+"subchannel set ID. For example, <literal>0.1.0ab1</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Network interfaces of device type Ethernet are named as follows: "
+"<synopsis>enccw<replaceable>0</replaceable>.<replaceable>0</replaceable>."
+"<replaceable>1234</replaceable></synopsis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"CTC network devices of device type SLIP are named as follows: "
+"<synopsis>slccw<replaceable>0</replaceable>.<replaceable>0</replaceable>."
+"<replaceable>1234</replaceable></synopsis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the <command>znetconf -c</command> command or the <command>lscss -a</"
+"command> command to display available network devices and their bus-IDs."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Device Name Types for Linux on System z"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "enccw<replaceable>bus-ID</replaceable>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "device type Ethernet"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "slccw<replaceable>bus-ID</replaceable>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "CTC network devices of device type SLIP"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Naming Scheme for VLAN Interfaces"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Traditionally, VLAN interface names in the format: <replaceable>interface-"
+"name</replaceable>.<replaceable>VLAN-ID</replaceable> are used. The "
+"<literal>VLAN-ID</literal> ranges from <literal>0</literal> to "
+"<literal>4096</literal>, which is a maximum of four characters and the total "
+"interface name has a limit of 15 characters. The maximum interface name "
+"length is defined by the kernel headers and is a global limit, affecting all "
+"applications."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora, four naming conventions for VLAN interface names are supported:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "VLAN plus VLAN ID"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The word <literal>vlan</literal> plus the VLAN ID. For example: vlan0005"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "VLAN plus VLAN ID without padding"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The word <literal>vlan</literal> plus the VLAN ID with out padding by means "
+"of an additional two zeros. For example: vlan5"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Device name plus VLAN ID"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The name of the parent interface plus the VLAN ID. For example: eth0.0005"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Device name plus VLAN ID without padding"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The name of the parent interface plus the VLAN ID with out padding by means "
+"of an additional two zeros. For example: eth0.05"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Consistent Network Device Naming Using biosdevname"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This feature, implemented via the <application>biosdevname</application> "
+"<application>udev</application> helper utility, will change the name of all "
+"embedded network interfaces, PCI card network interfaces, and virtual "
+"function network interfaces from the existing <interfacename>eth[0123…]</"
+"interfacename> to the new naming convention as shown in <xref linkend=\"tabl-"
+"Consistent_Network_Device_Naming_biosdevname\" />. Note that unless the "
+"system is a Dell system, or <application>biosdevname</application> is "
+"explicitly enabled as described in <xref linkend=\"sec-"
+"Consistent_Network_Device_Naming-Enabling_and_Disabling\" />, the "
+"<systemitem class=\"daemon\">systemd</systemitem> naming scheme will take "
+"precedence."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The biosdevname Naming Convention"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Device"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Old Name"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "New Name"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Embedded network interface (LOM)"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "<interfacename>eth[0123…]</interfacename>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"<interfacename>em[1234…]</interfacename><footnote><para>New enumeration "
+"starts at <literal>1</literal>.</para></footnote>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "PCI card network interface"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"<interfacename>p&lt;<replaceable>slot</"
+"replaceable>&gt;p&lt;<replaceable>ethernet port</replaceable>&gt;</"
+"interfacename><footnote><para>For example: <interfacename>p3p4</"
+"interfacename></para></footnote>"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Virtual function"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"<interfacename>p&lt;<replaceable>slot</"
+"replaceable>&gt;p&lt;<replaceable>ethernet port</"
+"replaceable>&gt;_&lt;<replaceable>virtual interface</replaceable>&gt;</"
+"interfacename><footnote><para>For example: <interfacename>p3p4_1</"
+"interfacename></para></footnote>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "System Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>biosdevname</application> program uses information from the "
+"system's BIOS, specifically the <emphasis>type 9</emphasis> (System Slot) "
+"and <emphasis>type 41</emphasis> (Onboard Devices Extended Information) "
+"fields contained within the SMBIOS. If the system's BIOS does not have "
+"SMBIOS version 2.6 or higher and this data, the new naming convention will "
+"not be used. Most older hardware does not support this feature because of a "
+"lack of BIOSes with the correct SMBIOS version and field information. For "
+"BIOS or SMBIOS version information, contact your hardware vendor."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For this feature to take effect, the <package>biosdevname</package> package "
+"must also be installed. To install it, issue the following command as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>yum install biosdevname</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Enabling and Disabling the Feature"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To disable this feature, pass the following option on the boot command line, "
+"both during and after installation:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<option>biosdevname=0</option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To enable this feature, pass the following option on the boot command line, "
+"both during and after installation:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<option>biosdevname=1</option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Unless the system meets the minimum requirements, this option will be "
+"ignored and the system will use the <systemitem class=\"daemon\">systemd</"
+"systemitem> naming scheme as described in the beginning of the chapter."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the <option>biosdevname</option> install option is specified, it must "
+"remain as a boot option for the lifetime of the system."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Notes for Administrators"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Many system customization files can include network interface names, and "
+"thus will require updates if moving a system from the old convention to the "
+"new convention. If you use the new naming convention, you will also need to "
+"update network interface names in areas such as custom "
+"<application>iptables</application> rules, scripts altering <systemitem "
+"class=\"daemon\">irqbalance</systemitem>, and other similar configuration "
+"files. Also, enabling this change for installation will require modification "
+"to existing <application>kickstart</application> files that use device names "
+"via the <option>ksdevice</option> parameter; these <application>kickstart</"
+"application> files will need to be updated to use the network device's MAC "
+"address or the network device's new name."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The maximum interface name length is defined by the kernel headers and is a "
+"global limit, affecting all applications."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Controlling the Selection of Network Device Names"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Device naming can be controlled in the following manner:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "By identifying the network interface device"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Setting the MAC address in an <filename>ifcfg</filename> file using the "
+"<command>HWADDR</command> directive enables it to be identified by "
+"<application>udev</application>. The name will be taken from the string "
+"given by the <command>DEVICE</command> directive, which by convention is the "
+"same as the <filename>ifcfg</filename> suffix. For example, <filename>ifcfg</"
+"filename>-<replaceable>eth0</replaceable>."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "By turning on or off <application>biosdevname</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The name provided by <application>biosdevname</application> will be used (if "
+"<application>biosdevname</application> can determine one)."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"By turning on or off the <systemitem class=\"daemon\">systemd-udev</"
+"systemitem> naming scheme"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The name provided by <systemitem class=\"daemon\">systemd-udev</systemitem> "
+"will be used (if <systemitem class=\"daemon\">systemd-udev</systemitem> can "
+"determine one)."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Disabling Consistent Network Device Naming"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To disable consistent network device naming, choose from one of the "
+"following:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Disable the assignment of fixed names, so that the unpredictable kernel "
+"names are used again, by masking <application>udev</application>'s rule file "
+"for the default policy. This <quote>masking</quote> can be done by making a "
+"symbolic link to <filename>/dev/null</filename>. As <systemitem class="
+"\"username\">root</systemitem>, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>ln -s /dev/null /etc/udev/rules.d/80-net-name-slot.rules</"
+"command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create your own manual naming scheme, for example by naming your interfaces "
+"<quote>internet0</quote>, <quote>dmz0</quote> or <quote>lan0</quote>. To do "
+"that create your own <application>udev</application> rules file and set the "
+"NAME property for the devices. Make sure to order it before the default "
+"policy file, for example by naming it <filename>/etc/udev/rules.d/70-my-net-"
+"names.rules</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Alter the default policy file to pick a different naming scheme, for example "
+"to name all interfaces after their MAC address by default. As <systemitem "
+"class=\"username\">root</systemitem> copy the default policy file as follows:"
+""
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>cp /usr/lib/udev/rules.d/80-net-name-slot.rules /etc/udev/"
+"rules.d/80-net-name-slot.rules</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the file in the <filename class=\"directory\">/etc/udev/rules.d/</"
+"filename> directory and change the lines as necessary."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add the following line to the <filename>/etc/default/grub</filename> file: "
+"<synopsis>net.ifnames=0</synopsis> or pass it to the kernel at boot time "
+"using the GRUB2 command-line interface. For more information about GRUB2 see "
+"<citetitle pubwork=\"book\">&MAJOROSVER; System Administrator's Guide</"
+"citetitle>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Troubleshooting Network Device Naming"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Predictable interface names will be assigned for each interface, if "
+"applicable, as per the procedure described in <xref linkend=\"sec-"
+"Understanding_the_Device_Renaming_Procedure\" />. To view the list of "
+"possible names <application>udev</application> will use, issue a command in "
+"the following form as <systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>udevadm info /sys/class/net/<replaceable>ifname</"
+"replaceable>  | grep ID_NET_NAME</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"where <replaceable>ifname</replaceable> is one of the interfaces listed by "
+"the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>ls /sys/class/net/</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"One of the possible names will be applied by <application>udev</application> "
+"according to the rules as described in <xref linkend=\"sec-"
+"Understanding_the_Device_Renaming_Procedure\" />, and summarized here:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>/usr/lib/udev/rules.d/60-net.rules</filename> - from initscripts,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>/usr/lib/udev/rules.d/71-biosdevname.rules</filename> - from "
+"<application>biosdevname</application>,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>/usr/lib/udev/rules.d/80-net-name-slot.rules</filename> - from "
+"<systemitem class=\"daemon\">systemd</systemitem>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"From the above list of rule files it can be seen that if interface naming is "
+"done via initscripts or <application>biosdevname</application> it always "
+"takes precedence over <application>udev</application> native naming. However "
+"if initscripts renaming is not taking place and <application>biosdevname</"
+"application> is disabled, then to alter the interface names copy the "
+"<filename>80-net-name-slot.rules</filename> from <filename class="
+"\"directory\">/usr/</filename> to <filename class=\"directory\">/etc/</"
+"filename> and edit the file appropriately. In other words, comment out or "
+"arrange schemes to be used in a certain order."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"Some interfaces have names from the kernel namespace (eth[0,1,2...]) while "
+"others are successfully renamed by udev"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Mixed up schemes most likely means that either for some hardware there is no "
+"usable information provided by the kernel to <application>udev</"
+"application>, thus it could not figure out any names, or the information "
+"provided to <application>udev</application> is not suitable, for example non-"
+"unique device IDs. The latter is more common and the solution is to use a "
+"custom naming scheme in ifcfg files or alter which <application>udev</"
+"application> scheme is in use by editing 80-net-name-slot.rules."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"In /var/log/messages or the systemd journal, renaming is seen to be done "
+"twice for each interface"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Systems with the naming scheme encoded in ifcfg files but which do not have "
+"a regenerated <systemitem class=\"filesystem\">initrd</systemitem> image are "
+"likely to encounter this issue. The interface name is initially assigned "
+"(via <application>biosdevname</application> or <application>udev</"
+"application> or dracut parameters on the kernel command line) during early-"
+"boot while still in <systemitem class=\"filesystem\">initrd</systemitem>. "
+"Then after switching to real <systemitem class=\"filesystem\">rootfs</"
+"systemitem>, renaming is done a second time and a new interface name is "
+"determined by the <filename>/usr/lib/udev/rename_device</filename> binary "
+"spawned by <application>udev</application> because of processing 60-net."
+"rules. You can safely ignore such messages."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using naming scheme in ifcfg files with ethX names does not work"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use of interface names from kernel namespace is discouraged. To get "
+"predictable and stable interface names please use some other prefix than "
+"\"eth\"."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Additional Resources"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following sources of information provide additional resources regarding "
+"Network Teaming."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installed Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>udev(7)</filename> man page — Describes the Linux dynamic device "
+"management daemon, <systemitem class=\"daemon\">udevd</systemitem>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>systemd(1)</filename> man page — Describes <systemitem class="
+"\"daemon\">systemd</systemitem> system and service manager."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>biosdevname(1)</filename> man page — Describes the utility for "
+"obtaining the BIOS-given name of a device."
+msgstr ""
+

@@ -1,0 +1,56 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Packager's Guide\n"
+"POT-Creation-Date: 2012-08-10T16:17:20\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Getting More Information"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information on RPM packaging, refer to the resources listed below."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid "Installed Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">rpm</emphasis>(8) &ndash; The manual page for the "
+"<application>rpm</application> utility for building, installing, querying, "
+"verifying, updating, and erasing individual RPM packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">rpmbuild</emphasis>(8) &ndash; The manual page for "
+"the <application>rpmbuild</application> utility for building both binary and "
+"source RPM packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">rpmlint</emphasis>(1) &ndash; The manual page for "
+"the <application>rpmlint</application> utility for checking common errors in "
+"RPM packages."
+msgstr ""
+

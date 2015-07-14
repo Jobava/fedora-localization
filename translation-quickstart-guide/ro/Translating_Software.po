@@ -1,0 +1,405 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Translation Quick Start Guide\n"
+"POT-Creation-Date: 2010-11-02T23:38:14\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Translating Software"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The translatable part of a software package is available in one or more "
+"<filename class=\"extension\">po</filename> files. These files may be "
+"maintained in any of a number of version control systems (VCSs) depending on "
+"the project, such as CVS, Subversion, Mercurial, and git. They may be hosted "
+"on either <systemitem class=\"domainname\">fedorahosted.org</systemitem> or "
+"other systems."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This chapter explains how to translate the projects hosted on <systemitem "
+"class=\"domainname\">fedorahosted.org</systemitem>. Translators work on "
+"interface to obtaining and committing <filename class=\"extension\">po</"
+"filename> files. Before you start, you must first prepare the directories "
+"which hold your <filename class=\"extension\">po</filename> files."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Prepare the Directory for Download"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To find which projects are translatable, visit the project list at <ulink "
+"url=\"https://translate.fedoraproject.org/projects/\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Before you download any files, prepare the directory to hold files. The "
+"described structure below is an example only, and your structure can be "
+"formed differently."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>mkdir -p ~/myproject/</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Obtaining and Translating Projects"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now that you have prepared a directory structure, you can download a file to "
+"translate. You may need to communicate with other translators in your "
+"language team to avoid conflict. If you are not sure, please contact your "
+"language coordinator. Also locking a file will avoid conflict."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Visit your language page such as <ulink url=\"https://translate."
+"fedoraproject.org/languages/l/ja/\" />, and select a target release. The "
+"interface will redirect you to a page for that release, such as <ulink url="
+"\"https://translate.fedoraproject.org/languages/l/ja/collection/c/fedora/r/"
+"fedora-15/\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Scroll down the page to find the table of all projects available for that "
+"release. Use the down-arrow icon labeled <guibutton>Download po/ja.po</"
+"guibutton> in the option area of each project to download the <filename "
+"class=\"extension\">po</filename> file as the name of your choice to the "
+"directory you created in the previous section (e.g. <filename class="
+"\"extension\">abrt.po</filename>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now the file is ready for translation. Translate the <filename class="
+"\"extension\">po</filename> file into your language with a <filename class="
+"\"extension\">po</filename> editor of your choice such as "
+"<application>Lokalize</application> or <application>gtranslator</"
+"application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Check the integrity of your file before commit."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>msgfmt -cvo /dev/null abrt.po</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If any error message appears, correct it before commit."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Committing Projects"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once you finish translation work, commit the file using the same interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Go back to your language page such as <ulink url=\"https://translate."
+"fedoraproject.org/languages/l/ja/\" />, and select a target release. The "
+"interface will redirect you to a page for that release, such as <ulink url="
+"\"https://translate.fedoraproject.org/languages/l/ja/collection/c/fedora/r/"
+"fedora-15/\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Login"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At the top of the page, select <guilabel>Sign in</guilabel> to visit the "
+"<guilabel>Sign in</guilabel> page, if not logged in yet. Authenticate with "
+"your Fedora Account System user name and password."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Submit"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the up-arrow icon labeled <guibutton>Send a translation for po/ja.po</"
+"guibutton> in the option area of each project, and click the browse button "
+"to locate your translated file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the <guibutton>Send</guibutton> button to commit your translated file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Interface displays the message <guilabel>File submitted successfully</"
+"guilabel>. If you receive an error or some other message, please post it to "
+"the Fedora Localization Project mailing list so it can be addressed."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adding New <filename class=\"extension\">po</filename> File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Go to your language page such as <ulink url=\"https://translate."
+"fedoraproject.org/languages/l/ja/\" />, and select a target release. The "
+"interface will redirect you to a page for that release, such as <ulink url="
+"\"https://translate.fedoraproject.org/languages/l/ja/collection/c/fedora/r/"
+"fedora-15/\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Fedora's Transifex screen for Vietnamese language is used as an example. "
+"The page lists all projects of particular release software packages and "
+"documentation along with stats and options."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Scroll down to the bottom, the section called <guilabel>Untranslated "
+"Components</guilabel> can be found if any of particular project(s) has been "
+"untranslated and no <filename class=\"extension\">po</filename> file created "
+"ever for this language."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Fedora's Transifex screen for Vietnamese language is used as an example. "
+"The screenshot displays the part of <guilabel>Untranslated Components</"
+"guilabel>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add new <filename class=\"extension\">po</filename>, click the component "
+"to add in <guilabel>Untranslated Components</guilabel> section. It brings up "
+"the page of that project's component."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"ABRT project master page, showing <guilabel>Translation Files</guilabel> "
+"section where <filename class=\"extension\">pot</filename> file is available."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Under <guilabel>Translation Files</guilabel> section, there is the source "
+"file. Using down-arrow icon to download the <filename class="
+"\"extension\">pot</filename> file. Change the <filename class="
+"\"extension\">pot</filename> file to <filename class=\"extension\">po</"
+"filename> file for your language translation."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<command>mv ~/myproject/abrt.pot abrt.po</command>\n"
+"<command>lokalize abrt.po</command>\n"
+"<command>msgfmt -cvo /dev/null abrt.po</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once you finish the translation, click on the <guilabel>Add a new "
+"translation</guilabel> button at that project's component page, expanding "
+"<guilabel>Add a translation file</guilabel> pane."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"ABRT project master page, showing <guilabel>Add a translation file</"
+"guilabel> pane."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Browse</guibutton> button of <guilabel>Local file: *</"
+"guilabel> to locate your translated <filename class=\"extension\">po</"
+"filename> file. In the field of <guilabel>or enter it here:</guilabel>, type "
+"your new file name comforming with the structure instructed (e.g. po/vi.po). "
+"Enter the approriate message, and then click <guibutton>Send</guibutton> "
+"button to submit."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Proofreading Translations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Since Fedora 12, the composed live image has been available to download for "
+"reviewing and correcting software translation in user interface. This live "
+"image is composed around a week before Fedora Software Translation Deadline "
+"and made available by deadline date. This image should include all latest "
+"translation submitted at this point."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To proofread your translation as part of the software, follow these steps:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Change directory to the package you want to proofread. For example,"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<command>cd ~/myproject/<replaceable>system-config-printer/</replaceable></"
+"command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Convert the <filename class=\"extension\">po</filename> file to a <filename "
+"class=\"extension\">mo</filename> file using <command>msgfmt</command> with "
+"<option>-o</option> option:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<command>msgfmt -o system-config-printer.mo <replaceable>ja</replaceable>."
+"po</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As a root user, overwrite the existing <filename class=\"extension\">mo</"
+"filename> file in <filename>/usr/share/locale/<replaceable>lang</"
+"replaceable>/LC_MESSAGES/</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "First, back up the existing file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>su -</command>"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<command>cp /usr/share/locale/<replaceable>ja</replaceable>/LC_MESSAGES/"
+"<replaceable>system-config-printer</replaceable>.mo <replaceable>system-"
+"config-printer</replaceable>.mo-backup</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Now move the file converted for proofreading."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<command>mv <replaceable>system-config-printer</replaceable>.mo /usr/share/"
+"locale/<replaceable>ja</replaceable>/LC_MESSAGES/</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Exit root user."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>exit</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Proofread the package with the translated strings as part of the application:"
+""
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<command>LANG=<replaceable>ja_JP.UTF-8</replaceable> <replaceable>system-"
+"config-printer</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The application related to the translated package runs with the translated "
+"strings."
+msgstr ""
+

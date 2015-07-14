@@ -1,0 +1,128 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Internationalization"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Input Methods"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>ibus-libzhuyin</package> is a new Zhuyin input method available as "
+"a preview for Traditional Chinese input. Try out the <guimenuitem>New "
+"Zhuyin</guimenuitem> IME that promises faster input of Traditional Chinese "
+"characters."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<systemitem class=\"library\">ibus</systemitem> has two new subcommands:"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "<command>read-config</command> shows the current settings values."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"<command>reset-config</command> resets the user ibus configuration settings "
+"to the default ones (for troubleshooting, etc) but not ibus engines "
+"configurations. It can be used for cleaning up the ibus settings for "
+"troubleshooting, or after switching language, to load the pre-defined ibus "
+"engines for the language."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to use a different Input Method framework to ibus on GNOME, "
+"follow <ulink url=\"https://fedoraproject.org/wiki/I18N/"
+"InputMethods#How_to_use_non-ibus_input_methods_on_GNOME\">these steps</"
+"ulink>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Fonts"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<literal>Adobe Source Han Sans Fonts</literal>, from the <package>adobe-"
+"source-han-sans-cn-fonts</package> and <package>adobe-source-han-sans-twhk-"
+"fonts</package> packages, are new default fonts for Chinese."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you prefer to use the old Fedora 20 default Chinese fonts, or encounter "
+"problems, you can use the following commands to revert to Fedora 20 Chinese "
+"fonts:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"        <prompt>#</prompt> <command>yum install cjkuni-uming-fonts cjkuni-"
+"ukai-fonts wqy-zenhei-fonts</command>\n"
+"        <prompt>#</prompt> <command>yum remove adobe-source-han-sans-cn-"
+"fonts adobe-source-han-sans-twhk-fonts</command>\n"
+"      "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <literal>Lohit Oriya</literal> font (<package>lohit-oriya-fonts</"
+"package>) has been renamed to <literal>Lohit Odia</literal> (<package>lohit-"
+"odia-fonts</package>) as per the Odisha State government's guidelines."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <literal>Lohit Punjabi</literal> font (<package>lohit-punjabi-fonts</"
+"package>) has been renamed to <literal>Lohit Gurmukhi</literal> "
+"(<package>lohit-gurmukhi-fonts</package>) to avoid confusion between the "
+"Arabic and Gurmukhi scripts."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>ekmukta-fonts</package> is a new Unicode-compliant Devanagari font "
+"with a mono-linear typeface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>google-noto-fonts</package> has 44 new families. To list these "
+"subpackages and find the fonts available for your language, use the command "
+"<command>yum list google-noto-\\*</command>"
+msgstr ""
+

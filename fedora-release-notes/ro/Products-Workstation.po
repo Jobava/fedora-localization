@@ -1,0 +1,98 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Fedora Workstation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Fedora Workstation product provides an easy to use, powerful environment "
+"for developers to both work and play. Desktop users can enjoy the familiar "
+"GNOME Desktop Environment, with support for devices and applications used "
+"every day. Developers will appreciate how Workstation is configured for "
+"their needs, and provides useful tools like <application>DevAssistant</"
+"application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "GNOME powered"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora Workstation developers have provided many enhancements to streamline "
+"and improve the GNOME Desktop Environment. Read more about changes to GNOME "
+"in Fedora &PRODVER; in <xref linkend=\"desktop-GNOME\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Captive Portal Detection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora Workstation, by default, enables a captive portal detection that "
+"requests known content from a trusted Fedora server. If the request is "
+"redirected, a window automatically appears for you to interact with the "
+"portal's login webpage."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To disable this feature, remove <filename>/etc/NetworkManager/conf.d/20-"
+"connectivity-fedora.conf</filename>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Developer oriented firewall"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Developers often run test servers that run on high numbered ports, and "
+"interconnectivity with many modern consumer devices also requires these "
+"ports. The firewall in Fedora Workstation, <systemitem class="
+"\"daemon\">firewalld</systemitem>, is configured to allow these things."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ports numbered under 1024, with the exceptions of <systemitem class="
+"\"daemon\">sshd</systemitem> and clients for <application>samba</"
+"application> and <application>DHCPv6</application>, are blocked to prevent "
+"access to system services. Ports above 1024, used for user-initiated "
+"applications, are open by default."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Refer to <ulink url=\"https://fedoraproject.org/wiki/FirewallD\" /> for "
+"details on customizing the firewall configuration, or install the "
+"<package>firewall-config</package> package for a graphical tool."
+msgstr ""
+

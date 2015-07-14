@@ -1,0 +1,35 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Translation Quick Start Guide\n"
+"POT-Creation-Date: 2010-11-02T23:38:14\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Introduction"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This guide is a fast, simple, step-by-step set of instructions for "
+"translating Fedora Project software and documents."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"More information can be found in FAQ, <ulink url=\"https://fedoraproject.org/"
+"wiki/L10N_FAQ\" />."
+msgstr ""
+

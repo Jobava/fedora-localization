@@ -1,0 +1,4233 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-11-19 07:47-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Ardour"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> is a feature-rich application designed for "
+"multi-track recording situations."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Requirements and Installation"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Knowledge Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Ardour</application> user interface is similar to other "
+"DAWs. We recommend that you read <xref linkend=\"sect-Musicians_Guide-"
+"DAW_User_Interface\" /> if you have not used a DAW before."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Software Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> uses the <systemitem>JACK Audio Connection "
+"Kit</systemitem>. You should install <systemitem>JACK</systemitem> before "
+"installing <application>Ardour</application>. Follow the instructions in "
+"<xref linkend=\"sect-Musicians_Guide-Install_and_Configure_JACK\" /> to "
+"install <systemitem>JACK</systemitem>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Hardware Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You need an audio interface to use <application>Ardour</application>. If you "
+"will record audio with <application>Ardour</application>, you must have at "
+"least one microphone connected to your audio interface. You do not need a "
+"microphone to record audio signals from other <systemitem>JACK</systemitem>-"
+"aware programs like <application>FluidSynth</application> and "
+"<application>SuperCollider</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>PackageKit</application> or <application>Apper</"
+"application> to install the <package>ardour</package> package. Other "
+"required software is installed automatically."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Recording a Session"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Recording a session usually happens all at once, but sometimes recording can "
+"happen over several days or even weeks. Mixing and mastering happen after a "
+"session has been recorded. Remember that <systemitem>JACK</systemitem> must "
+"have the same sample rate and sample format settings each time you open a "
+"session."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Running <application>Ardour</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> uses the <systemitem>JACK</systemitem> "
+"sound server. Use <application>QjackCtl</application> to start "
+"<systemitem>JACK</systemitem> before <application>Ardour</application>, or "
+"<application>Ardour</application> starts <systemitem>JACK</systemitem> for "
+"you."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> asks you to choose a location to save your "
+"new session. <application>Ardour</application> automatically creates a "
+"directory to store the session's files. You can also open an existing "
+"session."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Interface"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section explains some of the graphical interface components that are "
+"unique to <application>Ardour</application>. Components that are consistent "
+"through most DAWs are explained in <xref linkend=\"sect-Musicians_Guide-"
+"DAW_Interface_Vocabulary\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Ardour interface"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The <firstterm>editor mixer</firstterm>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The <firstterm>session sidebar</firstterm>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The main toolbar"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ardour_interface_overview\" /> illustrates three graphical "
+"interface components specific to the Ardour interface: the <firstterm>editor "
+"mixer</firstterm>, the <firstterm>session sidebar</firstterm>, and the main "
+"toolbar."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Ardour editor mixer"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The fader"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The fader control"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The fader level meter"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The panner"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The output connection button"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ardour_interface_editor_mixer\" /> shows the editor mixer, "
+"located at the left of the main <application>Ardour</application> window. "
+"The editor mixer shows only one mixer strip at a time. It shows the fader "
+"and its controls, in the middle of the mixer strip, the panner and its "
+"controls, at the bottom of the mixer strip, and the <guibutton>Comments</"
+"guibutton> and outgoing connections buttons."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Ardour session sidebar"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The tab strip"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The region list"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ardour_interface_session_sidebar\" /> shows the session "
+"sidebar, located at the right the main <application>Ardour</application> "
+"window. In this image, the <guilabel>Regions</guilabel> tab is selected, so "
+"the sidebar shows a list of regions currently in the session. You can see "
+"blue ones which were directly imported, white ones which were created from "
+"blue regions, and the arrows to the left of some blue regions, indicating "
+"that there are white-coloured sub-regions associated with those blue regions."
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The main Ardour toolbar"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Tool selection buttons"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The <guibutton>select/edit object</guibutton> button"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The <guibutton>select/edit range</guibutton> button"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The snap mode"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The grid mode"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The edit point"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ardour_interface_toolbar\" /> shows the main toolbar, "
+"located underneath the transport controls, and above the timeline and its "
+"rulers. In the middle of the toolbar are three unlabeled, but highly useful "
+"multiple-choice menus: the <guimenu>snap mode</guimenu> menu (currently set "
+"to <literal>No Grid</literal>); the <guimenu>grid mode</guimenu> menu "
+"(currently set to <literal>Bars</literal>); and then <guimenu>edit point</"
+"guimenu> menu (currently set to <literal>Mouse</literal>). To the left of "
+"these menus are the tool-selection buttons, the most important of which are "
+"the two left-most buttons: <guibutton>select/edit object</guibutton>, and "
+"<guibutton>select/edit range</guibutton>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Setting up the Timeline"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At the top of the main <application>Ardour</application> window, to the "
+"right of the transport's toolbar, are two relatively large clocks. If you do "
+"not need both clocks, you can turn off one of them. Right-click the clocks "
+"to choose what you want them to display:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guimenuitem>Bars:Beats</guimenuitem> displays the number of bars and beats"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guimenuitem>Minutes:Seconds</guimenuitem> displays the time since beginning "
+"of track"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guimenuitem>Timecode</guimenuitem> displays frames-per-second timecode "
+"(usually for work with films)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<guimenuitem>Samples</guimenuitem> displays the samples since start"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Refer to <xref linkend=\"sect-Musicians_Guide-Vocabulary-Time\" /> for more "
+"information about time measurement."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <guimenu>snap mode</guimenu> menu is located between the timeline and "
+"the clocks. This menu controls where regions may move. You need to change "
+"these as you work with a session, depending on the current activity. The "
+"left menu contains:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<guimenuitem>No Grid</guimenuitem>: regions can move freely"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guimenuitem>Grid</guimenuitem>: regions must start on the nearest grid "
+"point"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guimenuitem>Magnetic</guimenuitem> regions can move freely, but when they "
+"are near a grid point, they automatically snap to it"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The middle menu controls where to place the grid lines: by SMPTE timecode, "
+"by clock time, by beats and bars, or by regions."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Ardour nudge pane"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ardour_interface_nudge_pane\" /> shows the nudge pane, part "
+"of the transport. The nudge tool moves a selected region or regions forward "
+"or back in the session by a specific amount. The <guibutton>&lt;</guibutton> "
+"button moves regions back in the session. The <guibutton>&gt;</guibutton> "
+"button moves regions forward in the session. If no regions are selected, the "
+"nudge tool moves the transport head. The display to the right of the "
+"<guibutton>&gt;</guibutton> button tells you how far a selected region would "
+"move. In this case, the nudge tool moves regions by 5 seconds."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The timeline contains many <firstterm>rulers</firstterm> that show different "
+"time-marking scales. The timeline is located at the top of the canvas area, "
+"below the toolbars. Use the context menu (<keycombo><mousebutton>right-"
+"click</mousebutton></keycombo>) to select which rulers you want to display. "
+"The rulers you should choose depends on the clock settings and the snap mode."
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Connecting Audio Sources to <application>Ardour</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The name of the track onto which you want to record should be the name of "
+"the input in <systemitem>JACK</systemitem>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Setting up the Busses and Tracks"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Refer to <xref linkend=\"sect-Musicians_Guide-Vocabulary-Bus\" /> for a "
+"general discussion of busses. By default, everything that you export from "
+"<application>Ardour</application> is sent to a master bus. Busses do not "
+"contain regions but function as a batch collecting zone, where you can "
+"subject the whole project to a particular filter or volume adjustment."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add a track for recording"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <menuchoice><guimenu>Track</guimenu><guimenuitem>Add Track/Bus</"
+"guimenuitem></menuchoice>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "ensure that <guilabel>Tracks</guilabel> is selected"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "set the number (probably <literal>1</literal>)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"select the number of input channels (probably <literal>Stereo</literal>, "
+"meaning 2)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "select the mode:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<literal>Normal</literal>: creates a new Region for each recording take"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<literal>Tape</literal>: destructively records over whatever is already "
+"recorded (like a tape)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click <guibutton>Add</guibutton> to create the track"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Rename tracks, to identify them"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the existing track name in the label to the far left of the track area"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Type over the existing name"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "press <keycap>Enter</keycap>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adjusting Recording Level (Volume)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is important to properly set the level of the inputs betfore recording."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The nature of audio equipment is such that it can only perceive sound "
+"pressures (perceived as volume) within a certain range. If a sound is too "
+"quiet, it will not be perceived, and if it is too loud, it will not be "
+"perceived accurately. Furthermore, and this is most important when thinking "
+"about your own ears — if a sound is far too loud, it may permanently damage "
+"the audio instrument."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The nature of digital audio is such that there is a distinct number of "
+"volume levels at which something can be recorded. If a sound is either below "
+"or above that range, then it will not be correctly recorded. When such an "
+"improperly-recorded sound is played back, whether too quite or too loud, "
+"humans will usually perceive it as \"nothing but noise.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When <application>Ardour</application> records silence, it behaves no "
+"differently from when there is no input at all. When <application>Ardour</"
+"application> calculates that a portion of audio is too loud and therefore "
+"distorted, it outlines the wave-form representation in red, as shown in "
+"<xref linkend=\"ardour_red_peaks\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Audio that is too loud"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are three simple strategies that can be used to change the input level "
+"of an audio signal:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Move the microphone closer or farther from the source"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Route the microphone through a mixer before it reaches the audio interface"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Route the audio through a bus in <application>Ardour</application> before it "
+"gets recorded"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Here are the advantages and disadvantages of each approach:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are some circumstances where it is either impractical, impossible, or "
+"not advisable to move the microphone or route it through a hardware mixer. "
+"In these cases, you can use a bus in <application>Ardour</application> to "
+"modify the volume of the input signal before it is recorded."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Track</guimenu><guimenuitem>Add Track/Bus</"
+"guimenuitem></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select \"busses\" in the window that pops up."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose the number of busses that you wish to add. You need one for every "
+"track that you are recording, and of which you want to adjust the volume. It "
+"is also possible to record at several different volumes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Set the number of channels that youw ant int he bus."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once you have the new bus, change its name by doing whatever. I suggest "
+"naming it something that makes it obvious you are using the bus for "
+"recording, rather than exporting, like \"REC-Bus.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> automatically sets up busses to be used "
+"with audio being outputted. Furthermore, the volume/level control only works "
+"on audio beign outputted from a track or bus. This is why you cannot use the "
+"track's volume/level control to adjust the input volume for that track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>QjackCtl</application> to reconnect like this (for help, "
+"refer to <xref linkend=\"sect-Musicians_Guide-Ardour-Recording-"
+"Routing_Audio\" />):"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Disconnect all of the connections to/from the bus you want to use for "
+"recording (\"recording bus\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that nothing is connected to the input of the track onto which you "
+"want to record (\"recording track\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Connect the microphone (the input source) to the recording bus' input"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Connect the input bus' output to the recording track's input."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that the recording track's output is connected to the \"master\" "
+"input (this is the master output bus, which should be present in all "
+"projects, and through which all output audio should be routed)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Remember: only one track-to-be-recorded can be routed through a bus for this "
+"purpose, because a bus can only output one stream of audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Here is an algorithm to test whether your tracks are set at a good recording "
+"volume. This should be done before arming any tracks for recording. "
+"Unfortunately, you can never know that you have chosen the best input level "
+"until after a region is recorded. It takes both instinct and experience to "
+"be able to choose good input levels reliably."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Set up all microphones as required."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Set up connections in <systemitem>JACK</systemitem> as required."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Set up any recording busses as required (see above)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the audio tracks being recorded, set the \"metering point\" to \"input\" "
+"(here's how to do that)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ask the performers to demonstrate the loudest passages they will be doing in "
+"the session. Adjust the input level so that the maximum level falls between -"
+"3&nbsp;dB and -6&nbsp;dB (by looking here). You can reset the maximum-level-"
+"seer by clicking on it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ask the performers to demonstrate the quietest passages they will be "
+"performing in the session. Adjust the input level so that this does not fall "
+"below -40&nbsp;dB; it should probably be between -30&nbsp;dB and -20&nbsp;dB."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ask the performers to demonstrate an average passage from what they will be "
+"performing in the session. This is usually less important than the previous "
+"two checks, but if most of the performance will be quieter, it may be worth "
+"risking a higher input level in order to capture more detail. Nevertheless, "
+"a \"moderate\" volume level should result in and input level reading of -"
+"20&nbsp;dB to -10&nbsp;dB."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you are more experience both with the kind of group you are recording, "
+"and the software and equipment being used to do it, you may not need to do "
+"these level-checks every time. It's better to be safe than sorry, however, "
+"because once a musical moment has passed, it is impossible to re-create."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Recording a Region"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As you progressively record a session, you will create at least one region. "
+"Warning about audio being put out the \"audition\" output by default (use "
+"headphones)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Ensure that the inputs, timeline, and tracks are properly set up."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"if there is nothing to the left of the editor window, press Ctrl+E or 'View "
+"&gt; Show Editor Mixer'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the track you're recording onto"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"set the metering point to \"input\" and verify that it's working correctly "
+"and connected to the right thing (say what this does, and why you want to do "
+"it now)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "See \"Adjusting Recording Volume\" below, and do it now"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Arm the track for recording: either press \"Record\" in the track's mixer in "
+"the left, or press the small red record button on the track itself"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "the buttons will remain lighted to show that the tracks are armed"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"arm <application>Ardour</application> for recording by select the big red "
+"record button on the transport"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "start the transport in in the normal way (big play button)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"when you're done recording, stop the transport with the big stop button"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "each time you start and stop the transport, a new \"region\" is produced"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"each time you stop the transport, <application>Ardour</application> \"un-"
+"arms\" itself, but any tracks that you selected are still armed"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you've finished recording a region, use the \"Regions\" box-thing on "
+"the right of the interface to rename the region:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Find the region that you just recorded (by default they are named like "
+"\"Audio 1-1\" which is the name of the recording track followed by a hyphen, "
+"then a number in ascending sequeuence representing the \"take\"). Select it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click on the title, and a box should surround it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Change the name to what you want."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Press enter to finish editing the name."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Recording More"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After you have recorded one region, you will probably not have everything "
+"that you want. There are many ways to continue recording, depending on what "
+"still remains to be recorded."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "To Continue the Same Session"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is what you'll want to do if, for example, you were recording a session "
+"and decided to take a ten-minute break. It will work for any situation where "
+"you want to continue a session that already started recording."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"move the transport to somewhere after what you've already capture. You can "
+"do this either by using the forward/reverse and play/stop buttons on the "
+"transport, or by finding the point in the timeline where you want the "
+"transport to be, and then left-clicking somewhere in the time-line."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Verify that the connections and levels are still set correctly."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Verify that the recording tracks are still armed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Arm the transport."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Start the transport when ready to record."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "To Capture an Additional Part of Something That Is already Recorded"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A technique often used for studio recordings is to separately record parts "
+"that would normally be played together, and which will later be made to "
+"sound together (see the \"Prepearing a Session\" section, below). For "
+"example, consider a recording where one trumpeter wants to record both parts "
+"of a solo written for two trumpets. The orchestra could be brought into the "
+"studio, and would play the entire solo piece without any trumpet solo. "
+"<application>Ardour</application> will record this on one track. Then, the "
+"trumpet soloist goes to the studio, and uses <application>Ardour</"
+"application> to simultaneously listen to the previously-recorded orchestra "
+"track while playing one of the solo trumpet parts, which is recorded onto "
+"another track. The next day, the trumpeter returns to the studio, and uses "
+"<application>Ardour</application> to listen to the previously-recorded "
+"orchestra track and previously-recorded solo trumpet part while playing the "
+"other solo trumpet part, which is recorded onto a third track. The recording "
+"engineer uses Audacity's mixing and editing features to make it sound as "
+"though the trumpeter played both solo parts at the same time, while the "
+"orchestra was there."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Coordinating the timing of musicians across tracks recorded separately is "
+"difficult. A \"click track\" is a track with a consistent clicking noise at "
+"the desired tempo. Click tracks are played through headphones to the "
+"musicians being recorded, or to a musician who leads the others. Click "
+"tracks are not included in the final mix."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To do this:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Record the first part. The order in which to record parts is up to the "
+"recording engineer (that means you). It will probably be easier to record "
+"whoever plays the most, or whoever plays the most rhythmically consistent "
+"part, before the others."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Add the track/s onto which you will next record."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Set up the connections for the new track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Do a level check to ensuer that the new track is neither too loud nor soft."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Set the transport to the beginning of the passage where you want to begin "
+"recording the next track. You do not need to set up the start of the track "
+"very precisely, since you can change that later. You will need to make sure "
+"that the next player has enough time after the transport is started to hear "
+"where they are supposed to enter, and at what tempo."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You will need to set up some way for the performers (or somebody conducting/"
+"leading them) to hear the already-recorded material. It is probably best to "
+"do this with headphones."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Arm the tracks that you want to record. Make sure that already-recorded "
+"tracks are no longer armed, especially if they are in \"tape mode.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "When you are ready to record, start the transport rolling."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "To Capture a Better Recording of Something That Is already Recorded"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have already recorded all or most of a session, you can re-record "
+"*part* of the session in order to \"fix up\" any issues. "
+"<application>Ardour</application> allows you to record onto the pre-existing "
+"tracks, keeping the first take, putting the newly-recorded region over it. "
+"Later, you will get to choose the exact points at which the outputted "
+"recording is to switch between regions/takes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Record the session."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that you have the connections and levels set as they were during the "
+"first time you recorded the regions over which you're recording now."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You will need to set the transport location. Choose a place that is before "
+"the segment which you want to replace. The performers should probably also "
+"start playing before the section to be replaced, so you will need to start "
+"well enough in advance that they can pick up the tempo, get in the groove, "
+"and then start playing *all before* the part that needs replacement."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click in the time-line to move the transport."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Ensure that the correct tracks are armed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Start the transport and record the revised section of music."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At some point, you will have recorded everything that you need, and you will "
+"want to progress to mixing and editing."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Routing Audio and Managing <systemitem>JACK</systemitem> Connections"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> automatically saves the state of "
+"<systemitem>JACK</systemitem> connections when it saves a session."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> offers the following output ports, "
+"assuming a stereo (two-channel) setup:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"two channels per track, called \"track_name/out 1\" and \"track_name/out 2\"."
+" These will usually be connected to the master bus, or to a sub-mixing bus, "
+"when you are using one."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"two channels per bus, called \"bus_name/out 1\" and \"bus_name/out 2\". "
+"These will usually be connected to the master bus, unless you are using two "
+"levels of sub-mixing busses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"two channels for the auditioner, called \"auditioner/out 1\", which "
+"represents the channels used to audition a region; when you want to import "
+"it, for example, or in the \"Regions\" box on the right-side, when you "
+"select one and right-click and choose \"Audition\". These should not be "
+"connected to the master bus, but to an output device that you want to use "
+"when auditioning regions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"two channels for the click-track, called \"click/out 1\", which represents "
+"the channels used to play the click-track when recording. These should not "
+"be connected to the master bus, but to an output device that you want to use "
+"for the click-track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"two channels for the master bus, called \"master/out 1\", which represents "
+"the output used by the master output bus. These should be connected to an "
+"output device that you wish to use for listening to the session when the "
+"transport is moving."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> offers the following input ports, for a "
+"stereo (two-channel) setup:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"two channels per track, called \"track_name/in 1\" and \"track_name/in 2\". "
+"These should both be connected to the same input device. If you are using a "
+"recording bus, then these should be connected to that bus."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"two channels per bus, called \"bus_name/in 1\" and \"bus_name/in 2\". These "
+"should be connected to whatever channels you want to be mixed into them. If "
+"you are using it as a recording bus, then these should be connected to the "
+"same input device."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"two channels for the master bus, called \"master/in 1\", which represents "
+"the input used for the master bus. These should be connected to all of the "
+"tracks. If you are using sub-bus mixing, then all of the tracks should "
+"connect to the master bus' input either directly or through a sub-bus."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In most setups, <application>Ardour</application> automatically sets the "
+"channel connections correctly. There are ways to change the connections from "
+"within <application>Ardour</application>, but they offer limited flexibility."
+" For this reason, it is recommended that users use <application>QjackCtl</"
+"application> to monitor connections, since through <application>QjackCtl</"
+"application> it is also possible to monitor and change many other features "
+"of <systemitem>JACK</systemitem>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Learning to make the right connections is a valuable trick for people using "
+"<application>Ardour</application>. The fact that <application>Ardour</"
+"application> uses <systemitem>JACK</systemitem> for both its internal and "
+"external connections allows tricks such as the earlier-mentioned recording "
+"bus (which adjusts the input level of a source), flipping the left and right "
+"audio channels, and creating a multi-channel audio output by combining many "
+"input channels. Undoubtedly, other tricks exist."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Importing Existing Audio"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you record audio, <application>Ardour</application> automatically save "
+"it to disk and adds a representation of that file in the program as a "
+"\"region.\" You can also use pre-existing audio files as regions, which can "
+"then be added to any track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To import an existing audio file:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Whip out the \"regions\" part of the panel on the right-hand side of the "
+"interface"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Right-click anywhere in the box"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select \"Import to Region List\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The \"Add existing audio\" window will be opeend"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You can use three different tabs to select an audio file to add:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Browse Files\" (does this) (covered here)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Search Tags\" (does this)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Search Freesound\" (does this)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Using \"Browse Files,\" navigate to a sound that you want to add. Although "
+"certain other file formats are supported (like FLAC), it is probably best to "
+"add WAV or AIFF files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Certain information about the audio file will be displayed on the right-hand "
+"side of the window. This portion of the window also allows you to "
+"\"audition\" the file before importing it (that is, you can hear it by using "
+"the \"Play\" and \"Stop\" buttons in the window, without affecting your "
+"current project."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the file that you selected has a sample-rate that is not the same as that "
+"of the current project, then the sample-rate will be highlighted in red. You "
+"can choose to import it anyway, in which case <application>Ardour</"
+"application> warns you again. If you import a file in a different sample "
+"rate than that of the current project, it will be played back in the "
+"project's sample rate. This will result in incorrect speed and pitch."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are a number of other options, displayed along the bottom of the "
+"window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You can choose to add files:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"as new tracks,\" which puts each file in its own track, set to normal "
+"mode, then adds it to the region list"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"as new tape tracks,\" which puts each file in its own track, set to tape "
+"mode, then adds it to the region list"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"to region list,\" which puts each file in the region list, but does not "
+"automatically put it in any tracks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that when you choose to automatically create new tracks, "
+"<application>Ardour</application> adds the region to the new track, with the "
+"region starting at the current location of the transport."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The other options in this list are self-explanatory. It is usually best to "
+"convert using the best quality, since quality can always be reduced later "
+"(which saves space)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you chose not to automatically create tracks, then you will need to add "
+"the imported regions into a track before they will be played in your session."
+" You can do this easily by selecting the region from the \"Regions\" box on "
+"the right, and dragging it to a track."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Files for the Tutorial"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These tutorial files represent the material required to create a finished "
+"version of a song called \"Here Is How,\" written by Esther Wheaton. The "
+"song was released as part of her first album, \"Not Legendary,\" and raw "
+"audio source files were later released with the Creative Commons Attribution-"
+"NonCommercial-ShareAlike licence, available on the Internet at <ulink url="
+"\"http://creativecommons.org/licenses/by-nc-sa/3.0/\" />. For more "
+"information on the artist, please refer to her <citetitle>Esther Wheaton's "
+"MySpace Page</citetitle>, available at <ulink url=\"http://www.myspace.com/"
+"estherwheaton\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The tutorial files are an <application>Ardour</application> project folder, "
+"and the audio files themselves. Follow these steps to set up the tutorial."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Download the <application>Ardour</application> project folder from <ulink "
+"url=\"http://docs.fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/"
+"files/Ardour/FMG-HereIsHow.tar.lzma\" />. Uncompress the file in a directory "
+"where you have at least 1&nbsp;GiB of free disk space."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Download all of the audio files from <ulink url=\"http://soundcloud.com/"
+"fedoraproject/sets/fmg-ardour-tutorial\" />. Put the files in the <filename "
+"class=\"directory\">Interchange/FMG-HereIsHow/audiofiles</filename> "
+"subdirectory of the <application>Ardour</application> project folder from "
+"the previous step."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Editing a Song (Tutorial)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section covers the basics of preparing \"Here Is How.\" The focus is on "
+"trimming the regions and placing them in the right position on the timeline. "
+"Since the goal is to replicate the form of the original song, there is "
+"little room for artistic freedom."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To get the most out of this section, you should use the tutorial files "
+"provided above. By following the instructions with the tutorial file, you "
+"will be able to use real editing, mixing, and mastering techniques to create "
+"a real song. Instructions to get the tutorial files are available in <xref "
+"linkend=\"sect-Musicians_Guide-Ardour-Tutorial_Files\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add Tracks and Busses"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The program used to record these tracks was configured to record onto a "
+"separate track for the left and right channels, so <application>Ardour</"
+"application> will also have to be configured this way. It requires more "
+"setup, more memory, and more processing power, but it offers greater control "
+"over the stereo image and level balancing. We will use one track for vocals, "
+"clarinet, and strings, and two tracks for the marimba. This needs to be "
+"doubled to handle the stereo audio, so a total of ten tracks are needed. It "
+"might still be useful to manipulate the stereo tracks together, so we're "
+"going to combine them with five busses. This gives us the option of "
+"modifying both stereo channels or just one - you'll see how it works as the "
+"tutorial progresses. All of these actions take place within "
+"<application>Ardour</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There is already a master bus, named \"master\". All audio being outputted "
+"should be fed through this bus."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Create five new busses:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "From the menu, select 'Track &gt; Add Track/Bus'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Adjust the options to add five stereo busses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click 'Add'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Five busses should appear in the canvas area, named \"Bus 1\" through \"Bus "
+"5\", underneath the master bus."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Change the busses' names:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At the left-most side of the canvas area, each bus has a space with "
+"controls, including a box with the bus' name."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To rename a bus, use the mouse to left-click inside the box with the bus' "
+"name."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The box will turn into a text-editing box. Erase the contents, and write the "
+"new name."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you have entered the new name, press \"Enter\" on the keyboard to set "
+"it in <application>Ardour</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The box will no longer be a text-editing box."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Bus-marimba1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Bus-marimba2"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Bus-voice"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Bus-strings"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Bus-clarinet"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Create ten new tracks:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Adjust the options to add 10 normal mode mono tracks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ten tracks should appear in the canvas area, named \"Audio 1\" through "
+"\"Audio 10\", underneath the busses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Change the tracks' names in the same way as you changed the busses' names. "
+"Remembering that each track here will hold only the left or right audio "
+"channel, each one should be pre- or post-fixed with a \"0\" or \"L\" for the "
+"left channel, or a \"1\" or \"R\" for the right channel. They should be "
+"called something like:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "marimba1-L"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "marimba1-R"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "marimba2-L"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "marimba2-R"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "voice-L"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "voice-R"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "strings-L"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "strings-R"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "clarinet-L"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "clarinet-R"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Finally, we'll re-arrange the order of the tracks and busses. This isn't "
+"strictly necessary, and you can user whichever order you think makes the "
+"most sense. You might choose, for example, to put the marimba at the bottom, "
+"since it will be playing through most of the song."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Find the session sidebar, to the right of the canvas area."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are five tabs to choose: Regions, Tracks/Busses, Snapshots, Edit "
+"Groups, and Chunks. Select 'Tracks/Busses'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All of the tracks and busses are shown in a list, along with a check-box "
+"that will show or hide that track or bus in the canvas area. Now you can see "
+"why it's a good idea to keep the word \"bus\" in the names of the busses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To change the ordering of tracks and busses, use the mouse to click and drag "
+"the name of the track or bus that you want to move."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you start dragging a track or bus, a line will appear in the list, "
+"marking where the track or bus would go. It can be helpful to move the track "
+"or bus that you are dragging to the side a bit, so that you can see the list "
+"itself."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The interface makes it seem like you can move a track or bus on top of "
+"another track or bus. This is not the case. If it looks like a track or bus "
+"is going to be put on top of another track or bus, it will actually be "
+"placed into the list just above that track or bus."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For editing, it is helpful to have each bus next to the tracks it will "
+"control. This can always be changed later."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Connect the Tracks and Busses"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Although we have created a system of busses in our mind, we still have not "
+"told <application>Ardour</application> about it. You can use "
+"<application>QjackCtl</application> to confirm this: all of the additional "
+"tracks and busses are connected to output audio to the master bus. Worse "
+"still, the additional busses have no input signal at all. There are two "
+"approaches to letting <application>Ardour</application> know how we want to "
+"connect the tracks and busses. They will both be demonstrated, and you will "
+"be left to fill in the rest."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"One way to connect tracks and busses is more suitable for small-scale "
+"connection changes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the \"marimba1-L\" track by clicking in the track's control area, "
+"underneath the controls."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The editor mixer to the left of the canvas area should display the track's "
+"name near the top, and the track's colour (probably green in this case)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you can't see the editor mixer, open it by using the menu. Click 'View "
+"&gt; Show Editor Mixer' so that it is checked. You can also press 'Shift + "
+"E' on the keyboard to toggle its display."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After confirming that the editor mixer is showing the control for the "
+"\"marimba1-L\" track, look at the button on the bottom of the editor mixer, "
+"above 'Comments'. It should say \"master\", which means its output is "
+"connected to the master bus. This is not what we want, so click the "
+"\"master\" button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you click the 'master' button, a menu pops up, allowing you to choose a "
+"different output. We want to connect the track to the \"Bus-marimba1\" bus, "
+"which isn't in the list, so choose 'Edit' from the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The connection window that appears looks confusing, but it isn't. Here's how "
+"it works:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The left side, labeled \"Outputs,\" contains two output channels, \"out 1\" "
+"and \"out 2,\" along with a list of everything to which those outputs are "
+"connected."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The 'Add' button adds an output channel. We're outputting the signal to a "
+"stereo bus, so two is enough."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The 'Remove' button removes an output channel."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The 'Disconnect All' button removes all of the track's output connections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Clicking a connection in this list will remove it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The right side, labeled \"Available connections,\" contains a list of all of "
+"the inputs offered by <systemitem>JACK</systemitem>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each <systemitem>JACK</systemitem>-aware application has a tab with its "
+"connections listed underneath."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Clicking a connection in this list will add it to the last-selected output "
+"channel."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click the 'Disconnect All' button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click in the empty \"out 1\" list."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"From the \"Available connections\" list, click on the \"Bus-marimba1/in 1\" "
+"connection. It will be added to the \"out 1\" list."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Then click on the \"Bus-marimba1/in 2\" connection. It will be added to the "
+"\"out 2\" list."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The appearance of the connection lists will change to indicate that you've "
+"added a pair of connections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click 'Close' to enable the connection change."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that the \"master\" button now says something like \"Bus-ma,\" because "
+"the track's output connection has changed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The other way to change connections is much faster for large-scale changes "
+"like the ones required here."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Window</guimenu> <guimenuitem>Track/Bus "
+"Inspector</guimenuitem></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"Track/Bus Inspector\" window will appear. It has a list of the tracks "
+"and busses on the left side, and four tabs of information on the right side."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"Inputs\" and \"Outputs\" tabs allow you to view and configure the "
+"input and output connections of the selected track or bus. The two "
+"\"Redirects\" tabs allow you to configure plug-in settings, which are not "
+"discussed in this tutorial."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the \"Bus-marimba1\" bus from the list."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You should recognize the \"Input\" and \"Output\" tabs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Verify that the \"marimba1-L\" track is connected to this bus' input, and "
+"that the bus' output is connected to the \"master\" bus' inputs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Add both outputs of the \"marimba1-R\" track to the bus' input list."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Check the outputs of the \"marimba1-R\" track. This isn't quite what we "
+"wanted, so remove the master bus connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Adjust the remaining tracks so that they are connected as described in the "
+"table below."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Verify the connections by viewing the busses' \"Input\" tabs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Verify that only the five busses are connected to the master bus' inputs."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Connections in Ardour"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add Regions to Tracks"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next step is to add the regions into the tracks. It would be faster if "
+"we also cropped the regions at this point, but there are many reasons that "
+"it can be helpful to have longer regions, or rests (nearly silent space) "
+"within a region, so we'll keep them in tact for now."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the session sidebar (to the right of the canvas area), select the "
+"\"Regions\" tab. This list contains all of the regions in the session. Each "
+"region is listed once, regardless of how many times it appears in the "
+"timeline, or if it's even used at all."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add a region to the canvas area, simply click on the region's name, and "
+"drag it onto a track. The cursor will change as you do this, so that the "
+"vertical line of the cursor shows the point where the region will begin in "
+"the timeline."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Adding regions is just that easy!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You guessed it though - there's more to it than that, and it mostly has to "
+"do with the setup of this particular file. You will notice that the region "
+"list has many similarly-named regions, and that most of the names correspond "
+"to particular tracks and a bus. The files are named so that you know what's "
+"on them. They are given a number so that you know the sequence in which "
+"they're to be added (\"Marimba_1\" regions before \"Marimba_2\"), and a "
+"letter \"L\" or \"R\" at the end to signify whether the region is the left "
+"or the right channel. Furthermore, the regions that start with \"ens-\" "
+"belong on the \"voice\" tracks (\"ens\" is short for \"ensemble,\" meaning "
+"that those regions contain a small vocal ensemble, whereas the \"Voice... \" "
+"regions contain just one singer). The \"Here_Is_How\" regions belong before "
+"the \"Create_the_Inconceivable\" regions. Remember: there is no technical "
+"reason that the regions are named as they are. The names are there to help "
+"you edit and mix the song. We don't need to use the \"marimba2\" tracks or "
+"bus yet, so just add all of the \"Marimba_\" regions to the \"marimba1\" "
+"tracks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As you add the regions, you will learn a lot about manipulating regions in "
+"<application>Ardour</application>. Here are some tips to help:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the mouse's scrollwheel (if you have one) to scroll vertically, seeing "
+"all the tracks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Hold down the 'Ctrl' button on the keyboard and use the mouse's scrollwheel "
+"to adjust the amount of time visible in the canvas window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Hold down the 'Alt' button on the keyboard and use the mouse's scrollwheel "
+"to scroll horizontally, moving along the timeline."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After placing a region, you can move it around anywhere in the canvas area. "
+"You'll need to use the \"Select/Move Objects\" tool: click the pointing hand "
+"icon in the toolbar underneath the transport controls."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are moving a region, be sure to click and drag from the large area "
+"above the coloured bar. If you click in the coloured bar at the bottom of "
+"the region, you will reduce the region's size."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you're just adding tracks like this, it's not important that they are "
+"synchronized perfectly. But you can use the \"magnetic\" snapping feature to "
+"automatically align the beginning of tracks to the second. As you slowly "
+"drag a region, when the start nears a second (indicated by vertical lines "
+"through the canvas area), the region will seem to \"stick\" to the second. "
+"Later, you may want to turn off this feature."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Since we're just adding the regions imprecisely for now, put them into the "
+"appropriate track as tightly as possible, without overlapping."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Cut the Regions Down to Size"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now it's appropriate to cut some of the regions down in size. We're going to "
+"do this by removing some of the nearly-silent space before and after the "
+"material that was intended to be recorded. There are a few special cases, so "
+"first there will be specific instructions on how to do this to a region, and "
+"then general instructions for each region."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Let's start with the clarinet:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"First, set the clarinet bus to \"solo\" mode by pressing the 's' button on "
+"the bus' control space. This will allow us to hear only the clarinet bus."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the first clarinet region by pressing \"Home\" on the keyboard to "
+"set the transport's playhead to the beginning, then pressing the space key "
+"to start the transport."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There is approximately 20 seconds of near-silence before the clarinet starts "
+"to play. If you listen carefully, you can hear the room, and somebody "
+"counting measure numbers."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the channels aren't synchronized, you'll need to adjust their placement "
+"in the timeline. Use the yellow clock that appears when you drag regions - "
+"it's set to the same units as the secondary clock, and shows you the time of "
+"the beginning of the file. It's important to get it synchronized before the "
+"next step!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose either the \"L\" or \"R\" region. If you're using edit groups, it "
+"doesn't matter which you choose, because <application>Ardour</application> "
+"will realize that the regions in both tracks are \"group equivalent\" (that "
+"is, they're basically the same, so they probably belong together)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the mouse to click in the coloured bar of the region, close to where the "
+"clarinet starts."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> will automatically move the start of the "
+"region in <emphasis>both tracks</emphasis>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Move the playhead by clicking in the rulers at the point where you want the "
+"playhead to be, so that you can listen to the regions to ensure that you "
+"didn't cut out any of the useful audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to adjust the beginning of the region, carefully move the mouse "
+"cursor to the start of the region, in the coloured bar. The cursor should "
+"turn into a double-ended left-and-right arrow. If you happened to "
+"accidentally remove some of the useful clarinet sound, you'll notice that "
+"it's still there. In fact, the beauty of trimming regions in this way is "
+"that it's \"non-destructive,\" meaning that the entire original region is "
+"still there!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Notice that when you made the first adjustment, <application>Ardour</"
+"application> put an arrow beside the region name in the region list of the "
+"session sidebar. If you click on the arrow, you will see that there is "
+"another copy of the same region underneath, but it's white. "
+"<application>Ardour</application> wants you to know that the white-coloured "
+"region is a modification of the blue-coloured region. If you drag the white-"
+"coloured region into the canvas area, you'll notice that it starts at the "
+"same time as the region you just modified. It can also be dragged out to the "
+"full size of the original region, which would create another modified "
+"version of the original. While it seems like <application>Ardour</"
+"application> stores multiple copies of the region, it actually just stores "
+"one copy, and the information required to make it seem like there are many."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Adjust the end of the region so that there isn't too much silence after the "
+"clarinet. Be extra careful with this, so that you don't cut out any of the "
+"clarinet, which gets very quiet at the end of the region. There isn't much "
+"to cut off! Note that you cannot click in the coloured bar when adjusting "
+"the end of a region, so you'll have to click-and-drag."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Here are the instructions to edit the rest of the regions. As you trim the "
+"regions, you may find it helpful to move them all towards the start of the "
+"session. Remember to change the bus that's in \"solo mode\" when you move to "
+"different tracks, or else you won't be able to hear the tracks you're trying "
+"to edit You may also notice that some of these regions contain identical or "
+"nearly-identical music, which we'll deal with later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Clarinet"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Clarinet_2:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Starts with sound, but it's not useful, so cut it out, along with the "
+"silence after it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "End has a good chunk of silence to cut out."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Clarinet_3, Clarinet_4: the silence at the beginning and end can be removed, "
+"but leave the silence in the middle."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Strings:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Strings_1: Starts with grumbling noise, which was not intended to be "
+"captured. You can keep it or discard as you please - Esther decided to keep "
+"it in, and so will I."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Strings_2, 3, 4: Silence at the beginning, but only a little at the end. You "
+"can cut out the talking, or deal with it later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Voice:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Voice_1, 2, 3, 4: Simply remove the silence from beginning and end, leaving "
+"the mistakes, which we'll take care of later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"ens-Here_Is_How-1, 2, 3: It's too difficult for now to trim all of the extra "
+"noise, so just get most of it. The breating and shuffling can be removed "
+"later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"ens-Create_the_Inconceivable: For now, keep both of the attempts. Later, "
+"we'll choose which one we prefer."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Marimba:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Marimba_1: Don't trim the beginning of this region; we'll use it to time the "
+"start of the session. You can trim the silence at the end, but be sure that "
+"you don't clip it while the sound of the marimba is still ringing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Marimba_2, 3, 4, 5, 6, 7: Trim the silence around these as desired, still "
+"being careful not to clip the marimba while it's still ringing. This may "
+"require cautious listening at high volume settings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now that we have roughly trimmed the silence surrounding the portions of "
+"audio that we really want, we'll have an easier time putting them in the "
+"right order."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Compare Multiple Recordings of the Same Thing"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Part of the power of recording with a DAW is that the same material can be "
+"capture multiple times. Mixing and matching like this allows us to seek the "
+"\"perfect\" performance of a piece of music. A few of the regions in this "
+"file are multiple takes of the same material. There are a few occasions "
+"where we can definitively say that one is better than the other, and there "
+"are a few occasions where it depends on your personal taste. This section "
+"covers techniques that can be used to further cut up the audio, in this case "
+"with the end goal of comparing and choosing preferred sections. Not all "
+"choices will be made yet."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Clarinet_1 and Clarinet_2 Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the Clarinet_1 and Clarinet_2 regions. They're the same musical "
+"material, and they're nearly identical, so it's too early to decide which "
+"one to use. But, let's label them so that we know they're the same."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the \"Clarinet_1--L\" region from the region list in the session "
+"toolbar by left-clicking on the triangle to the left of the blue name, so "
+"the white name appears, and left-clicking once on the white name. Remember "
+"that the white region was created when you trimmed the empty area out of the "
+"original (blue) region."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then click again on the white name, and a text box will appear."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Change the textbox so it says \"Clarinet_1A--L\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Press 'Enter' on the keyboard to set the name."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Rename the following regions as shown:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Clarinet_1--R\" becomes \"Clarinet_1A--R\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Clarinet_2--L\" becomes \"Clarinet_1B--L\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Clarinet_2--R\" becomes \"Clarinet_1B--R\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Since Clarinet_1 and Clarinet_2 represent the same musical material, we've "
+"renamed them to show it. Now, they're both Clarinet_1, with two versions, "
+"\"A\" and \"B.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There will be some naming inconsistencies at this point: the blue-coloured "
+"regions still have their original names, and the canvas area doesn't have "
+"any region called \"Clarinet_2\"! If this bothers you, you can rename the "
+"other regions to suit."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Clarinet_3 and Clarinet_4 Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the Clarinet_3 and Clarinet_4 regions. Clarinet_4 starts with the "
+"same material that's in Clarinet_3, and ends with the same material that's "
+"in Clarinet_1A and Clarinet_1B. First rename the \"Clarinet_3\" regions to "
+"\"Clarinet_3A,\" and the \"Clarinet_4\" regions to \"Clarinet_3B.\" Then, "
+"we'll extract the Clarinet_1-like portion from the Clarinet_3B regions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Under the transport toolbar, select the \"Select/Move Ranges\" tool, which "
+"looks like a double-ended left-to-right arrow with vertical lines at the "
+"sides."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The cursor will change to look like a text-editing \"I\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Scroll to the end of the \"Clarinet_3B\" regions, so you can see the part "
+"the sounds like the \"Clarinet_1\" regions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click and drag the mouse over the \"Clarinet_1\"-like region in one of the "
+"tracks, to select them."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Because of the edit group, <application>Ardour</application> will "
+"automatically select the same area of both tracks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We have to be sure to select all of the \"Clarinet_1\"-like material, so "
+"after you've selected a range, right-click on the range, and select 'Play "
+"Range' from the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to adjust the selected range, use the darker squares at the top "
+"corners of the range-selection box. When you put the cursor over one of "
+"these boxes, it will change into a double-ended, left-to-right arrow."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now create a new region from the range. Right-click on the selected range, "
+"and select 'Bounce range to region list' from the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The range will appear as independent regions in the region list, called "
+"something like \"clarinet-L-0-bounce-1\". This isn't very helpful, so rename "
+"the regions to \"Clarinet_1C--L\" and \"Clarinet_1C--R\". Notice that the "
+"new regions are coloured white."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We no longer need the range tool, so select the \"Select/Move Objects\" "
+"tool, which is the hand-shaped icon just to the left of the range tool, "
+"underneath the transport toolbar."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The selected range will no longer be selected. Trim the end of the "
+"\"Clarinet_3B\" regions down to size, past the material that we just bounced "
+"to the region list, and past the near-silence before it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now move the \"Clarinet_3\" regions back, to make room for the newly-created "
+"\"Clarinet_1C\" regions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Drag the new \"Clarinet_1C\" regions onto the canvas after the other "
+"\"Clarinet_1\" regions, and adjust the spacing of the other regions, if you "
+"wish."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Strings_1 Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These regions start with the grumbling noise that was accidentally recorded. "
+"If you decided to leave it in, you could bounce the grumbling to the region "
+"list, so it can be controlled independently of the strings that follow."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The new regions are probably called something like \"strings-L-0-bounce-1\". "
+"Because I know that the sound is chairs being moved across the floor in a "
+"room upstairs from the recording studio, I'm going to call the regions "
+"\"Chairs--L\" and \"Chairs--R\"."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then remove the noise of the chairs from the Strings_1 regions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Since the marimba2 tracks aren't yet being used, we can put the Chairs "
+"regions there - at least for now - just to remember that we have them."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the Strings_1 region. You'll notice that the noise of the chairs "
+"continues throughout the region. We can remove it later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You wouldn't know this without carefully listening to the song, or having "
+"the sheet music for \"Here Is How,\" so I'll tell you: the musicians make a "
+"mistake near the end of this region, which is why the violinist says, "
+"\"sorry,\" just after that."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We'll need to remove the error, so adjust the end of the track to make it "
+"about six seconds earlier. In the canvas view, you want to put the end of "
+"the region just before the second-last \"blob.\""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Strings Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These four regions are all tied together, and the material overlaps between "
+"them."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Strings_2 covers most of the same material as Strings_1, and goes for a bit "
+"longer. It doesn't have the noise of the chairs, but there is a playing "
+"mistake after about the first minute and 20 seconds (1:20), so we can't use "
+"the end."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Trim the last 32 seconds or so."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Rename this region to \"Strings_1B\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Rename the \"Strings_1\" regions to \"Strings_1A,\" to match with 1B"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "We'll decide which of these regions to use later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Strings_3 is also the same material, so rename it to \"Strings_1C.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Strings_4 starts with the place where Strings_1A went wrong, and goes on "
+"from there. Let's keep it as it is, for now."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Voice Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These regions contain some overlap, but it is relative simple to sort out."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Voice_1 contains two chunks of audio. The first one is good, but the singer "
+"had a problem making the second one clear, so we're not going to use it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Voice_2 contains the second chunk of audio that was recorded poorly in "
+"Voice_1. She also has a bit of a problem in Voice_2. Let's fix this up now."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Trim the Voice_1 regions to remove the second chunk of audio, and the near-"
+"silence that precedes it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"One way to deal with the Voice_2 region is simply to cut off the first part "
+"of the region, which contains the words \"I have your flax-\" and some near-"
+"silence."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The second time the singer sings, \"I have your flax-,\" it sounds a bit "
+"rushed, so I'm going to combine the first \"I have your flax-\" with the "
+"following \"golden tails to ... \""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the \"Select/Move Ranges\" tool to select the first time the singer says "
+"\"I have your flax-,\" being careful to capture all of the word \"flax,\" "
+"but none of the near-silence that follows."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the loop function of the transport to ensure you've got the right range "
+"selected:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select a range, then right-click on the range and select 'loop range'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to make an adjustment, stop the transport, and adjust the range "
+"as desired."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To listen again, right-click on the range and select 'loop range'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You may need to zoom in so that you can adjust the range with sufficient "
+"detail. Hold the 'Ctrl' key on the keyboard, and use the scrollwheel to zoom "
+"in."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you're done with the looping function, remove the looping markers from "
+"the timeline. They look like green triangles with the word \"Loop\" written "
+"beside. Move the cursor over a triangle, so that it changes colour. Then "
+"press the 'Delete' button on the keyboard."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you are happy with the range that you've selected, right-click on the "
+"range and choose 'Consolidate range' from the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> will create a region from the range that "
+"you selected, leaving it in-place. It will also divide the space in the "
+"region before and after the new region, leaving you with many smaller "
+"regions, all conveniently collected in the session toolbar's Regions list, "
+"under the blue-coloured \"Voice_2--L\" and \"Voice_2--R\" regions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Trim the rest of the original Voice_2 region, so that it starts with "
+"\"golden,\" and does not contain any of the previous word (\"flax-\"). You "
+"don't need to use the range tool, but you can if you wish."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Then, push the two regions together, so that it sounds like \"I have your "
+"flax-golden tails to... \""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This isn't going to sound perfect, but you might prefer it to simply "
+"trimming the beginning off the Voice_2 region."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It's important to remember to move both regions together. If they are "
+"accidentally separated, then you can easily enough move them back into place."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Voice_3 contains two chunks of audio. We'll leave it alone for now."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Voice_4 contains the same two chunks of audio as Voice_3, but goes on to "
+"include more. We can't yet determine whether to use Voice_3 or Voice_4 for "
+"those two chunks, so we're going to leave them in both regions."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "ens-Here_Is_How Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "ens-Here_Is_How-1 contains two chunks of similar audio, both correct."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"ens-Here_Is_How-2 contains two chunks of similar audio. It's different from "
+"ens-Here_Is_How-1, but the second of these chunks has incorrect pitches, but "
+"the timing between the two chunks is correct."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"* ens-Here_Is_How-3 contains the second chunk of audio from ens-Here_Is_How-"
+"2, with the correct pitches. Since we want to maintain the correct timing "
+"from ens-Here_Is_How-2, simply drag ens-Here_Is_How-3 over top of ens-"
+"Here_Is_How-2. Align the regions so that the wave-form shape of -3 is as "
+"close to covering that of -2 as possible. These regions will also have to be "
+"carefully moved together."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "ens-Create_the_Inconceivable Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "There are two takes of the same material in this region."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to them both, and decide which you prefer - it's up to your "
+"preference. Remember, you can also reverse your choice later, because "
+"<application>Ardour</application> will not delete the material that you "
+"remove by trimming the region."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the range tool to select the range which includes the take that you "
+"prefer."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the transport's looping mechanism, if you wish, to be sure that you "
+"selected the right range."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Right-click on the range, then choose 'Crop region to range,' which will "
+"automatically trim the region for you."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Marimba Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The marimba regions do not need adjustment."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Arrange Regions into the Right Places"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We're going to start by arranging the marimba, since it plays a relatively "
+"consistent rhythm throughout most of the song. It is a good idea to start "
+"with something like this, so that the following tracks and regions can be "
+"related to it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All of the times here are given in minutes and seconds. The tutorial file is "
+"configured to use this unit by default, but if you have changed it, you will "
+"need to keep that in mind. Also, I have not cropped or trimmed the "
+"\"Marimba_1\" region, and it is located in the \"marimba1\" track, starting "
+"at 00:00:00.000. If you have modified that region, I suggest restoring it to "
+"the original size."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Start with the Marimba Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you have made sure that the \"Marimba_1\" regions are not cropped or "
+"trimmed, and that they start at 00:00:00.000, we can lock it in place."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Right-click on the regions, and navigate to the 'Selected regions' menu, "
+"then click 'Lock' from that menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Notice that <application>Ardour</application> puts &gt; and &lt; around the "
+"name of the region, in the canvas area."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Also notice that you can no longer move the region with the \"Select/Move "
+"Objects\" tool."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now place a marker to show the exact moment when it starts: six seconds into "
+"the session."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Zoom in appropriately so that you can see where the six-second mark on the "
+"ruler should go (but you needn't see it yet). Hold the 'Ctrl' button on the "
+"keyboard, and use the mouse's scrollwheel to zoom in, or press the '=' "
+"button on the keyboard to zoom in and the '-' button to zoom out."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Move the cursor to near the six-second mark (again, not important to be "
+"precise yet), and right-click in the \"Location Markers\" row. Select 'New "
+"location marker' from the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click-and-drag the yellow-green arrow that appears, so that the yellow clock "
+"shows 00:00:06.000, indicating six seconds precisely. Release the mouse."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Move the cursor over the marker, so it changes colours from yellow-green to "
+"red-tan (coral). Right-click and select 'Lock' from the menu, so that the "
+"marker will not be accidentally moved."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Again, right-click while the cursor is over the marker. Select 'Rename' from "
+"the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A small window will appear. Write the name of the maker, \"marimba-start,\" "
+"and click 'Rename' to set the new name."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Since we will be adjusting the placement of regions in the timeline very "
+"precisely, we will need to use different \"Snap/Grid Mode.\" Each setting is "
+"useful for a different kind of task."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We can change the mode using the toolbar just above the canvas area. The pop-"
+"down menu probably says \"Magnetic,\" indicating that it's in \"Magnetic "
+"Snapping Mode,\" but it might also say \"No Grid\" or \"Grid.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"No Grid: This mode gives the user full control over where they will place a "
+"region. It is useful for doing highly-precise alignment, as we're about to "
+"do."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Grid: This mode only allows the user to place regions where they will start "
+"on a grid-line. Unless you changed it, your grid is set to two seconds, so "
+"you can only start regions in two-second intervals - <application>Ardour</"
+"application> will not allow you to place a region so that it starts on an "
+"odd-numbered second, or anywhere in between."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Magnetic: This mode allows the user to place a region wherever they like, "
+"but when the start of the region is near a grid-line (an even-numbered "
+"second, in this session), the start of the region will automatically "
+"\"snap\" to that point. It behaves as if the start of regions were "
+"magnetically attracted to the grid lines."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Adjust the snap/grid mode to \"No Grid.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Move the \"Marimba_2\" regions so that they are in the \"marimba2\" tracks, "
+"so that the sound in \"Marimba_2\" starts at about 15 seconds (00:00:15.000) "
+"on the timeline. You'll have to move the grinding of the chairs out of the "
+"way, if you decided to keep it. Move it to the \"strings\" tracks, before "
+"the \"Strings\" regions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that both the \"marimba1\" and \"marimba2\" busses are on solo mode, "
+"so you will be able to hear them both."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now here's the difficult part: you'll have to align the two tracks, so that "
+"they start together."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The sound in the \"Marimba_2\" regions should start at the same time as the "
+"second pattern in the \"Marimba_1\" tracks, which is at about 15 seconds on "
+"the timeline."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You'll need to zoom in - it helps to be able to see the wave-form shapes of "
+"the regions. More importantly, zooming in allows you to adjust the placement "
+"of the regions with greater precision."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You may want to select a range, and use the loop mode of the transport. This "
+"will allow you to hear the start of the regions again and again, ensuring "
+"that they are aligned."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you feel like you've got it close, but not quite together, then try "
+"moving it far away, listening, then adjusting it closer again."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once you have aligned the first few seconds of this pattern, it will "
+"eventually become unsynchronized, which is okay. The beginning will be the "
+"most noticable part; when the listeners become accustomed to the sound of "
+"the two marimba tracks together, they will stop paying close attention. "
+"Furthermore, they are likely to be focussing on the words by the time the "
+"marimba tracks become unsynchronized."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Remember to lock the \"Marimba_2\" region!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the rest of the regions together. The end of the regions, at about "
+"00:02:20.000, should be aligned, if you aligned the start correctly. The "
+"higher and lower marimbas will alternate."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Move the \"Marimba_3\" regions so they start at approximately 00:03:20.000, "
+"with \"Marmiba_3\" in the \"marimba1\" tracks. We will find a final "
+"alignment later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Move the \"Marimba_4\" regions so they start at approximately the same time "
+"as the \"Marimba_3\" regions, but in the \"marimba2\" tracks. We will find a "
+"final alignment later."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Continue with the Voice Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Throughout this section, you will need to move un-placed regions out of the "
+"way, farter down the session, so that they don't interfere with the "
+"alignment process. Remember to lock the regions once you put them in place. "
+"They can be unlocked and re-aligned later, if you choose. Finally, it will "
+"help if you place a marker (like the \"marimba-start\" marker that we placed "
+"earlier) where each region will start. When you place a marker, you can "
+"click on it, and move the blue place-marker line. This will help you to "
+"align the start of sound in a region to the place where you want it to be."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Enable \"solo\" mode on the \"voice\" bus, so that you can hear it as well "
+"as the marimba busses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Slide the \"Voice_1\" regions so that the singer starts at about the same "
+"time as the higher marimba."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Slide the \"Voice_2\" regions so that the singer starts at about <literal>00:"
+"00:48.00</literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Slide the \"ens-Here_Is_How-1\" regions so that they start singing at about "
+"<literal>00:01:33.300</literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Slide the \"ens-Here_Is_How-2\" (and the adjoined \"ens-Here_Is_How-3\") "
+"regions so that they start singing at about <literal>00:02:11.500</literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After playing closer attention to \"Voice_3\" and \"Voice_4,\" you realize "
+"that the singer misses a word (\"plan <emphasis>in</emphasis> you spider's "
+"ear\") in \"Voice_4.\" Because \"Voice_3\" doesn't contain the second part "
+"of \"Voice_4,\" we'll need to trim the \"Voice_4\" region, and use both."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The singer should start singing in \"Voice_3\" at about <literal>00:02:24."
+"500</literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The signer should start singing \"and here is how\" in \"Voice_4\" at about "
+"<literal>00:02:43.000</literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Slide the \"ens-Create_the_Inconceivable\" regions so that they start "
+"singing at about <literal>00:02:59.000</literal>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Align the Marimba at the End"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now that we have roughly placed all the singers' regions, we can figure out "
+"where to put the concluding marimba passage."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the \"ens-Create_the_Inconceivable\" regions. We're going to start "
+"the marimba's ending regions somewhere after the highest singer has said "
+"\"if you know what I mean,\" but before she stops singing the word \"mean.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It's up to you exactly where to re-start the marimba. Pick a place, and move "
+"the two \"Marimba_3\" region to that place in the \"marimba1\" bus, and the "
+"\"Marimba_4\" region in the \"marimba2\" bus."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You may need to set up a range and use the transport's looping function to "
+"get the alignment exact."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This particular entry is going to be difficult, because the low marimba "
+"enters quietly and blooms into sounding, while the higher marimba has a hard "
+"attack that dies. This means that, if you start both marimba tracks at the "
+"same time, the listener will perceive the lower track as starting after the "
+"higher track. If you don't believe me, try it out!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To solve this problem, the original editor (Esther) had the upper marimba "
+"start a bit later than the lower marimba."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you were to listen to the session so far, you would notice that the "
+"marimba is way too loud compared to the singers, and that everything sounds "
+"very narrow. This is because we're only arranging regions, and we haven't "
+"done any of the mixing yet!"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Align the Strings Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Slide the \"Strings_1A\" regions so that they start playing at about 00:00:"
+"28.00, which should leave plenty of room for the sound of the chairs, if you "
+"decided to keep it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"Strings_4\" region begins in the same way that the \"Strings_1A\" "
+"regions end. Listen to both, and choose which you prefer, then use the "
+"position of the sounds in the \"Strings_1A\" region to guide your trimming "
+"and alignment of the \"Strings_4\" region."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The other two strings regions contain the same musical material as the "
+"\"Strings_1A\" region. We can't decide between them yet, so move them both "
+"past the end of the concluding marimba regions, so they won't be heard."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Align the Clarinet Regions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As with the Strings regions, we will simply pick a suitable clarinet region, "
+"and move it into place, leaving the choice between multiples until later. "
+"When you're moving regions a long distance like this, it helps to zoom out "
+"for a bit."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Slide the \"Clarinet_1A\" region so that the sound begins just after 00:01:"
+"06.200"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Slide the \"Clarinet_3A\" region so that the sound begins just after 00:01:"
+"35.000"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Listen"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Before moving on to the mixing stage, listen to the whole song, to make sure "
+"that the ordering makes sense. When you're listening, remember that the "
+"volume levels and balances will sound off, and that the whole session will "
+"sound very \"centred\" in the stereo image."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Mixing a Song (Tutorial)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next stage is called \"mixing,\" and it primarily involves two tasks: "
+"setting volume levels, and adjusting the stereo pan settings. We'll use "
+"automation to store our fader and panning adjustments, and see how handy it "
+"can be to have left and right channels recorded on separate tracks, combined "
+"with sub-master busses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In terms of producing a recording of a live musical performance, it is the "
+"mixing stage where the audio engineer (in this case, you) has the most "
+"creative influence. Careful adjustment and tuning of the tracks will greatly "
+"affect the listeners' experience."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Finally, it should be noted that, moreso than in the editing stage, the "
+"mixing stage should <emphasis>not</emphasis> be understood as progressing in "
+"a linear manner. This means you should not be following the tutorial from "
+"start to finish, but jumping between sections are desired. You should set up "
+"the tracks for stereo output first, and then read through all the sections "
+"and follow their advice as you wish, but sometimes returning to previous "
+"activities to re-tune those settings. When one setting is changed, it tends "
+"to have an effect on other settings, so if you set the level of a track "
+"once, then change its panning, you should check that the levels you set are "
+"still desirable - they'll probably need some tweaking, however minor it may "
+"be."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Setting the Session for Stereo Output and Disabling Edit Groups"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Part of the reason that the session sounds so bad is that all of the audio "
+"has been routed through both the left and right channels equally, making it "
+"a \"mono\" recording, even though we have the material of a \"stereo\" "
+"recording. This could easily have been done sooner, but it wouldn't have "
+"made much of a difference until now. Whereas mixing was focussed on getting "
+"the regions assembled so that they are like the song, mixing is about fine-"
+"tuning the regions and tracks so that they make the song sound great."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Disabling the edit groups is also a good idea, because leaving them enabled "
+"actually <emphasis>reduces</emphasis> functionality in this stage of "
+"production. With edit groups enabled, any change that we make to one of the "
+"tracks will automatically be made to the other track, too. We want to be "
+"able to adjust the tracks independently; for cases where both tracks need "
+"the same adjustment, we will use the sub-master bus to which they're "
+"attached."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps will disable the edit groups, and re-configure this session's "
+"tracks for stereo output."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We need to adjust tracks independently, so the edit groups must temporarily "
+"be disabled."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Flip to the \"Edit Groups\" tab of the session sidebar."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Uncheck the \"Active\" button for all the groups. If you want to re-enable "
+"an edit group later, simply re-check the \"Active\" button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open the mixer window by selecting from the menu 'Window &gt; Show Mixer'. "
+"If you have a multiple-monitor setup, it can be very useful to keep the "
+"mixer window on a separate monitor from the main editor window. If you don't "
+"have a multiple-monitor setup, you can keep the mixer window on a separate "
+"virtual desktop. Of course, these are both optional steps."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Near the bottom of each track's mixer, above the buttons, is a small black "
+"rectangle with three grey triangles and a green vertical line. Each of the "
+"busses have two of these rectangles. This controls the panner, which adjusts "
+"a track's left/right position in the stereo image."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can adjust the panner by click-and-dragging in the panner display. You "
+"don't need to click on the green line, but the line will show you the "
+"approximate placement of the track in the stereo image."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each \"left\" track, ending with a capital \"L,\" should have the green line "
+"set all the way to the left."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each \"right\" track, ending with a capital \"R,\" should have the green "
+"line set all the way to the right."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each bus is probably already set correctly. The bus' upper window represents "
+"the left channel, and the green line should be all the way left. The bus' "
+"lower window represents the right channel, and the green line should be all "
+"the way right."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The mixer control located above the panner is called the \"fader,\" and it "
+"allows you to adjust a track's level."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Set Initial Levels"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As with editing, the point here is to get the levels set into the right "
+"general area, so they work for most of the track. When you start using an "
+"automation track later, the levels can be fine-tuned, and changed within the "
+"session. Here is one possible procedure to use for an initial level "
+"adjustment:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open the mixer window with the menu, by choosing 'Window &gt; Mixer'. As "
+"mentioned earlier, it can be convenient to put the mixer window on another "
+"monitor or virtual desktop."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Set all of the faders to 0 dB. They are probably already set to this level, "
+"unless you changed them earlier."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Take the quietest track, when set to 0 dB, as the limiting factor on how "
+"loud the other tracks should be. Since it's generally safer to avoid "
+"amplifying audio signals, if we use the quietest track as the \"base-line,\" "
+"then we'll have to adjust the level of the other tracks <emphasis>down</"
+"emphasis> to suit. In this case, the voice tracks are the quietest."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At this point, it's best to stick with adjusting the busses' faders. If you "
+"adjust the faders on the tracks, this will affect the panning, and could "
+"lead to confusing problems later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Play through the session, and adjust the faders of the busses so that all of "
+"the tracks can be heard equally well. Remember that you're just aiming for "
+"<emphasis>most</emphasis> of the session to be balanced at this point; a "
+"single fader setting is unlikely to be acceptable for the entire session."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You can adjust the fader setting in two ways:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click-and-drag the vertical, dotted control strip to the left of the level "
+"meter (which lights up as a track is playing)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the indicator box as a text field: click in the box, erase the number "
+"that it shows, and write in a new number. Press 'enter' on the keyboard to "
+"set the new value."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You might wish to change the order of tracks and busses in the canvas area, "
+"which will change the order in the mixer window. Putting all of the busses "
+"together makes it easier to see them."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You could also choose to not display the tracks, again allowing you to focus "
+"on the busses that you will be changing. Do temporarily hide a track or bus "
+"in the mixer window, use the toolbox on the left side of the mixer window. "
+"Un-check the \"Show\" box for each of the tracks or busses that you want to "
+"temporarily hide."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"maximum level\" indicator on the fader tool might help you to judge "
+"how loud each track is. This indicator is located above the meter, "
+"underneath the \"Solo\" button. The indicator displays the highest level "
+"produced by the track since the indicator's last reset. You can reset the "
+"indicator by clicking on it."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Set Initial Panning"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Setting up the initial panning takes quite a bit more thought than setting "
+"the initial levels. Different music will have different requirements, but "
+"the main purpose of adjusting the panning for this sort of recorded acoustic "
+"music is to ensure that each performer has a unique and unchanging position "
+"in the stereo image. When humans are listening to music, they implicitly "
+"ascribe a \"location\" to the sound - where their brain thinks it should be "
+"coming from. When listening to recorded music, we understand that the sound "
+"is actually coming from speakers or a set of headphones, and that the "
+"performers are not actually there. Even so, it can be difficult, tiring, and "
+"unpleasant to listen to music where the imagined position of a performer or "
+"sound is constantly changing - just as it's difficult and tiring to listen "
+"to music which is has poorly balanced levels."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As if it weren't already difficult enough, the stereo image is created in "
+"our minds as a complex combination of many factors: quieter sounds and later "
+"sounds seem to be farther away than louder and earlier sounds. Although the "
+"DAW's panner can only put the signal somewhere in a straight line between "
+"\"all the way left\" and \"all the way right,\" our brains process sound as "
+"existing in a three-dimensional world. A master audio engineer will be able "
+"to control these factors with relative ease, but for us it's going to "
+"involve much more trial and error."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A particular obstacle with this session is that the regions with the soloist "
+"put her in a different imagined position than the regions where the soloist "
+"is singing with other singers. Because these happen in the same tracks, "
+"we'll use automated panner and fader tracks to help solve this problem. "
+"Listen for yourself: start at about 00:02:40.000, and pay attention to where "
+"the soloist seems to be standing in the \"Voice_4\" regions and the \"ens-"
+"Create_the_Inconceivable\" regions. It seems to me like she moves from "
+"nearby on the right to a farther distance just to the left; somehow without "
+"bumping into the other people in the vocal ensemble, or the strings, which "
+"also seem to be in the way! You might argue that most listeners would not "
+"pick this up, and that's probably the case. Even so, I would counter that "
+"the drastic change of level and panning would be passively detected by those "
+"same people, even if they only consciously perceive it as being \"not quite "
+"right.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Here's one way to start:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the session as needed, and see if you can place the location of "
+"the instruments/singers throughout most of the session. You'll need to "
+"remember this, so consider writing it down, or drawing a map."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now, draw a map of where you think everything should be. Especially in non-"
+"standard ensembles like this, there is no pre-defined seating or standing "
+"arrangement. Some tracks will need very little adjustment, but others may "
+"need extensive adjustment. In general, the less tweaking required, the "
+"better the session will sound - so if something seems like a track already "
+"has a consistent location, and it doesn't conflict with other tracks, then "
+"it's probably better to leave it alone."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Here's what I hear. It may be different from what you hear, especially if "
+"you happened to do your initial level-setting differently:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Both of the marimba tracks are consistent throughout. The \"marimba1\" "
+"tracks seem to be about 5 metres in front of me, of to the left a bit. The "
+"\"marimba2\" tracks seem to be about the same distance away, but almost "
+"directly to my right."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All of the strings regions seem to be consistent, with the violin placed "
+"just left-of-centre, and the 'cello just right-of-centre. They seem to be a "
+"bit closer than the marimbas."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The clarinet seems to be on the opposite side of the higher marimba; about 5 "
+"metres away, half-way between in front and to the left."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The vocal ensemble seems to be standing in the same place as the strings, "
+"but extending a bit more to the right."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The solo vocalist seems to be standing in the same place as the male singers "
+"in the vocal ensemble."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Here's how I plan to fix it; directions are given assuming the listener is "
+"looking north:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Establish two rows of performers, surrounding the listener in a semi-circle."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The strings will be in the closer row, to the north-west. This requires "
+"moving them to the left a bit."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The vocal soloist will be in the closer row, just east of north (the middle)."
+" This requires moving her to the left <emphasis>just</emphasis> a little bit."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The vocal ensemble will be in the closer row, spread from north to north-"
+"east, allowing the soloist to remain in the same place. This will mostly "
+"require fader adjustment, to make the ensemble seem closer."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The lower marimba will be in the outer row, to the north-west. This may not "
+"require any adjustment, but perhaps a slight move to the left."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The higher marimba will be in the outer row, to the north-east. This "
+"requires a slight move to the left."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The clarinet will be in the outer row, to the north. This will require "
+"significant adjustment to the right."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I chose that particular layout because it requires relatively minimal "
+"adjustment, and it makes a certain amount of sense in terms of traditional "
+"instrumental ensemble seating patterns. Also, the notes played by the "
+"clarinet in this song seem suitable to appear as if from far away, and the "
+"passages are played with good expression, so I think it will be relatively "
+"easy for me to acheive that effect. The most important consideration was the "
+"placement of the vocal ensemble and the solo vocalist within it. Although "
+"the solo vocalist sings the highest part in the ensemble (\"soprano\"), the "
+"stereo recording seems to indicate that she was not standing at the left-"
+"most position in the ensemble (I also know this because I was present during "
+"the recording). This adds an extra difficulty, in that the fader and panner "
+"settings for the whole voice track must be based on the moment in the \"ens-"
+"Create_the_Inconceivable\" region where the second-highest singer (\"alto\") "
+"sings just after the highest singer, who is the soloist."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Make rought adjustments to most of the tracks, to place them in "
+"approximately the right space in the stereo image. You may wish to adjust an "
+"individual track's panner setting, in addition to the busses' panner "
+"settings; they will have a slightly different effect. For the marimba "
+"tracks, you may wish to fine-tune things now, adjusting the fader settings. "
+"Because these tracks are so consistent, they will require relatively little "
+"automation, and therefore will benefit more from a more thorough initial set-"
+"up procedure. Remember that it's better to be turning down the fader than "
+"turning it up!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "It's probably easier to avoid working with the voice tracks for now."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Make Further Adjustments with an Automation Track"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"So far, we've been crudely adjusting the fader and panner settings manually. "
+"This won't work if you want to change the settings while a session is "
+"playing; you would have to change all of the settings by yourself, every "
+"time you play the session. This quickly becomes complicated - not to mention "
+"difficult to remember. \"Automation\" allows effects (like the panner and "
+"fader) to be moved automatically during session playback. An automation "
+"track is simply a track that contains no audio, but rather instructions to "
+"adjust a particular effect. Automation tracks usually resemble audio tracks, "
+"but they hold lines and points, to show the settings changes. Automation "
+"tracks can, in effect, be \"recorded,\" but we're going to use a more basic "
+"editing method. Automation tracks can be assigned to busses and tracks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Here's how to create an automation track, and fill it in. We're going to "
+"adjust the fader on the lower marimba, so that it is louder in the "
+"introduction, and becomes quieter as the higher marimba and solo vocalist "
+"join in."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the canvas area, click the 'a' button on the \"Bus-marimba1\" bus' "
+"control box, to open the \"automation\" menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click 'Fader' in the automation menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An automation track, which controls the fader, will appear underneath the "
+"bus."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you click in the automation track, a point will appear. Each point "
+"represents an absolute setting for the control. After the point appears, if "
+"you click-and-drag it, the yellow numbers by the cursor will tell you the "
+"fader's setting at that point."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If there are two or more points in the automation track, lines will appear "
+"to connect them. The fader will be moved gradually between absolute "
+"settings, as shown by the line connecting the points."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you make a mistake and want to start over, you can press the 'clear' "
+"button on the automation track's control box. Unfortunately, you can't "
+"remove a single point. This isn't really necessary anyway; if you "
+"accidentally add too many points, simply use the extra one to keep a setting "
+"constant."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add one point to the beginning of the automation track, with a setting of 0."
+"0&nbsp;dB"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Add one point at about 00:00:15.000, with a setting of 0.0&nbsp;dB"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add one point at about 00:00:16.500 (where the singer starts), with a "
+"setting of -10.0&nbsp;dB, or whatever you set earlier."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now you've set up an automation plan, but the fader is still in \"Manual\" "
+"mode, so the automation track will have no effect. Change the automation "
+"track's setting by clicking on the mode button in the track's control box. "
+"The button currently says \"Manual.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"From the menu, select \"Play,\" which will cause the automation settings to "
+"be played. In \"Manual\" mode, you have to adjust all settings manually. In "
+"\"Write\" mode, changes that you make as the session plays will be recorded "
+"into the automation track, over-writing previous settings. In \"Touch\" "
+"mode, changes that you make as the session plays will be incorporated into "
+"the pre-existing automation settings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Finally, listen to confirm that you like the automated panner change. If you "
+"don't, you can always adjust it now or later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now - here's the difficult part! Use automation to change the fader and "
+"panner settings throughout the session. In particular, ensure that the voice "
+"tracks are consistent."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Other Things You Might Want to Do"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The mixing stage involves a lot of minor (and major) tweaking. Here are some "
+"things that you might want to do, which aren't adjusting the fader and "
+"panner settings:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Re-align tracks to ensure that they're synchronized."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Find a meaningful way to incorporate the region with the sound of the chairs."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Compare the currently-unused clarinet regions with the in-use ones. Try "
+"different combinations of the regions, and remove the unused regions from "
+"the session."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Compare the currently-unused strings regions with the in-use ones. These "
+"regions are much longer than the clarinet regions, so you might even want to "
+"pick and choose ranges of regions to switch back and forth."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Have a friend--or at least somebody else--listen to the mix you're preparing."
+" Get their opinion on difficulties that you may be having, or use them as a "
+"more generic listener."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the mix on different kinds of reproduction equipment (speakers and "
+"amplifiers). The same audio signals will sound different when played on "
+"different equipment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you have finished mixing the song, you must listen to it. You should "
+"listen to it with as many different devices as possible: headphones, "
+"speakers, home theater systems, and so on. You should also ask your friends "
+"and colleagues to listen to your work. Other people hear things differently "
+"from you, and will give you different feedback."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Mastering a Session"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To be a true master at mastering sessions requires years of experience and "
+"careful optimization for the target format. Knowing just the right "
+"equalization and filtering settings to apply is an art in itself, worth a "
+"full user guide. This section is concerned with getting the audio out of a "
+"session, to a useful format."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Ways to Export Audio"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are three ways to export audio from an <application>Ardour</"
+"application> session:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "by region,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "by range, or"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "by session."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To export a region:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Ensure the region is placed in the canvas area."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Right-click on the region."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the region-name's menu, then 'Export'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Continue with the Export window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To export all audio in a range on the timeline:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the range with the \"Select/Move Ranges\" tool. Regardless of which "
+"track you select, all tracks can be exported."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Right-click on the range."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select 'Export' from the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To export all audio in a session:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"From the menu, select 'Session &gt; Export &gt; Export &gt; Export session "
+"to audiofile', or on the keyboard, press 'Ctrl + Alt + e'"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using the Export Window"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Regardless of which export method you choose, the \"Export\" window is "
+"similar. When you export a region, you do not get to choose which tracks to "
+"export (by definition you are only exporting that region's track)."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Choose Which Tracks to Export"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"By default, <application>Ardour</application> will export all audio in the "
+"range or session being exported. What it actually exports is all audio "
+"routed through the master output bus. You can see the list of tracks to "
+"export on the right side of the \"Export\" window. If you click the "
+"'Specific Tracks' button, you will be able to choose from a list of all the "
+"tracks and busses in a session. Choosing specific tracks only makes sense if "
+"you do not want to export the master bus' output, so you should probably de-"
+"select that first."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Choose the Export Format"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> offers quite a variety of output formats, "
+"and knowing which to choose can be baffling. Not all options are available "
+"with all file types. &OPERATING_SYSTEM; does not support MP3 files by "
+"default, for legal reasons. For more information, refer to <citetitle>MP3 "
+"(Fedora Project Wiki)</citetitle> <ulink url=\"http://fedoraproject.org/wiki/"
+"Multimedia/MP3\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The tutorial's regions have 24-bit samples, recorded at a 48 kHz rate. "
+"Exporting any part of the session with a higher sample format or sample rate "
+"is likely to result in decreased audio quality."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Recommended File Types:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"WAV: An uncompressed format designed by Microsoft. Recommended only if "
+"further audio manipulation is intended. Carries only audio data, so "
+"information like title, artist, and composer will be lost. Playable with "
+"almost any device."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"AIFF: An uncompressed format designed by Apple. Recommended only if further "
+"audio manipulation is intended. Carries only audio data, so information like "
+"title, artist, and composer will be lost. Playable with almost any DAW and "
+"some audio players."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"FLAC: An open-source compressed format. A \"lossless\" format, meaning no "
+"audio information is lost during compression and decompression. Audio "
+"quality is equal to WAV or AIFF formats. Capable of carrying metadata, so "
+"information like title, artist, and composer will be preserved. Widely "
+"supported in Linux by default. For other popular operating systems, refer to "
+"<citetitle>Download Extras (FLAC Website)</citetitle> at <ulink url=\"http://"
+"flac.sourceforge.net/download.html#extras\" /> for a list of applications "
+"and programs capable of playing FLAC files. This is usually the best choice "
+"for distributing high-quality audio to listeners."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ogg/Vorbis: An open-source compressed format. A \"lossy\" format, meaning "
+"some audio information is lost during compression and decompression. Audio "
+"quality is less than WAV or AIFF formats, but usually better than MP3. "
+"Capable of carrying metadata, so information like title, artist, and "
+"composer will be preserved. Widely supported in Linux by default. For other "
+"popular operating systems, following the instructions on the "
+"<citetitle>Vorbis Website</citetitle> <ulink url=\"http://www.vorbis.com/\" /"
+">. This is a good choice for distributing good-quality audio to listeners."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A higher setting for the sample format (explained in <xref linkend=\"sect-"
+"Musicians_Guide-Sample_Format\" />) allows a greater amount of audio "
+"information to be stored per sample. 32&nbsp;bit support is virtually non-"
+"existant, but and you will probably not need to use this format in the near "
+"future. The \"float\" format stores samples in a different internal format, "
+"and you will need it only rarely."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are exporting audio for high-end equipment, or for further "
+"processing, choose the 24-bit format. Otherwise, choose the 16-bit format, "
+"which is the sample format of audio CDs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Sample endianness\" is a difficult concept to understand, and it has no "
+"effect on the resulting audio - just how it is stored.. Unless you are using "
+"a rare PowerPC computer, choose the \"Little-endian (Intel)\" option."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A higher sample rate (explained in <xref linkend=\"sect-Musicians_Guide-"
+"Sample_Rate\" /> allows a greater amount of audio information to be stored, "
+"but increases the size of audio files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Convesion quality\" and \"dither type\" are not available options for the "
+"file formats offered in &OPERATING_SYSTEM;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"CD Marker File Type\" allows you to export a CUE- or TOC-format list "
+"of CD tracks in the exported file. This is most useful when exporting a "
+"whole session, which contains a whole CD, that would be subsequently burned "
+"to disc."
+msgstr ""
+

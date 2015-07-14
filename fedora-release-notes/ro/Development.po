@@ -1,0 +1,500 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Development"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "KDE Frameworks 5"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora 21 includes a new set of libraries for developers of C++ and Qt "
+"applications, KDE Frameworks&nbsp;5, the successor to KDE Platform&nbsp;4. "
+"KDE&nbsp;Frameworks&nbsp;5 are based on Qt&nbsp;5 and provide developers "
+"with access to a broad variety of technologies and tools developed by the "
+"KDE Community, without having to depend on the entire KDE platform."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Most of the frameworks are based on the <application>kdelibs</application> "
+"module, which has been divided according to functionalities provided. "
+"Dependencies have been packaged into individual libraries. This allows "
+"developers and projects outside the KDE ecosystem to use these technologies "
+"and benefit from the work of the KDE Community."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is possible to install KDE Frameworks 5 alongside KDE Platform&nbsp;4 "
+"packages."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "OpenCL"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This Fedora release includes basic support for the OpenCL standard, which "
+"provides sufficient environment for the development of the OpenCL enabled "
+"software."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To enable OpenCL development, the Mesa's OpenCL state-tracker, the Portable "
+"Computing Language (pocl), and several other OpenCL packages have been added "
+"to the official Fedora repositories. The pocl language can be used on CPUs, "
+"and Mesa can be used on R600 AMD/ATI GPUs."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Python 3.4"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With this release, <systemitem class=\"library\">Python 3</systemitem> has "
+"been upgraded to version 3.4, which provides various bug fixes, enhancements "
+"and security improvements over the previous version. For example, several "
+"new library modules and features have been added and multiple library "
+"modules have been significantly improved."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Read the <ulink url=\"http://legacy.python.org/dev/peps/pep-0429/#features-"
+"for-3-4\">Python 3.4 Release Schedule</ulink> and <ulink url=\"https://docs."
+"python.org/dev/whatsnew/3.4.html\">What’s New In Python 3.4</ulink> for "
+"details."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Python 2 is still default"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"While the majority of Python packages are available for both Python and "
+"Python3, the <emphasis>default</emphasis> implementation of Python in Fedora "
+"is Python 2.7"
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid "The rewheel module"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For version 3.4, Python upstream has decided to implement changes summarized "
+"in the <ulink url=\"http://legacy.python.org/dev/peps/pep-0453/\">PEP 453</"
+"ulink> document. In short, these mean:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"bundling archives with the <systemitem>setuptools</systemitem> and "
+"<systemitem>pip</systemitem> utilities in Python distribution"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"providing the <systemitem>ensurepip</systemitem> module that is able to "
+"install these archives either on a system or in the <systemitem>virtualenv</"
+"systemitem> environment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Due to Fedora strict non-bundling policies, <systemitem>setuptools</"
+"systemitem> and <systemitem>pip</systemitem> are unbundled. To match the "
+"upstream functionality, the following approach has been implemented:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <package>python3</package> package now depends on the <package>python3-"
+"setuptools</package> and <package>python3-pip</package>. This means that "
+"users do not have to use the <systemitem>ensurepip</systemitem> to install "
+"<systemitem>setuptools</systemitem> and <systemitem>pip</systemitem> "
+"utilities separately as they are by default installed altogether with "
+"<package>python3</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To install the <systemitem>setuptools</systemitem> and <systemitem>pip</"
+"systemitem> utilities in the <systemitem>virtualenv</systemitem> environment "
+"from the system packages, a mechanism called <systemitem>rewheel</"
+"systemitem> has been implemented to Fedora 21. When a new "
+"<systemitem>virtualenv</systemitem> is being created, <systemitem>rewheel</"
+"systemitem> takes the system <package>python3-setuptools</package> and "
+"<package>python3-pip</package> packages, recreates their archives and "
+"installs them in the new <systemitem>virtualenv</systemitem> so that the "
+"upstream functionality is preserved."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"One more advantage is provided by the <systemitem>rewheel</systemitem> "
+"approach. When there is a bug, for example a security issue, in either "
+"<package>python3-setuptools</package> or <package>python3-pip</package>, "
+"Fedora maintainers of these packages fix the bug and users get the fixed "
+"packages. Therefore, <systemitem>virtualenvs</systemitem> created after "
+"updating to fixed <package>python3-setuptools</package> or <package>python3-"
+"pip</package> will have already fixed version. With pure upstream Python, "
+"this approach is not possible, users will have to wait for upstream to "
+"release new Python version with these fixes incorporated. This means that "
+"the <systemitem>rewheel</systemitem> patch makes the <package>python3</"
+"package> package fulfill Fedora's high packaging standards and also helps to "
+"make <systemitem>virtualenvs</systemitem> more secure."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See the <ulink url=\"https://github.com/fedora-python/rewheel\">Rewheel</"
+"ulink> page on GitHub for additional information about <systemitem>rewheel</"
+"systemitem>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "RPM 4.12"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The RPM package manager has been updated to version 4.12, which brings "
+"Fedora in line with the latest upstream version."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This update brings a number of improvements, including:"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Ability to package files larger than 4 GB."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Support for weak dependencies."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "API users will be able to access file data more cleanly."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Payload data is now accessible over the API."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"A new tool, <command>rpm2archive</command>, will allow converting rpm "
+"packages to tar files instead of the outdated <command>cpio</command> format."
+" The new tool will work with files larger than 4 GB, while <command>cpio</"
+"command> and <command>rpm2cpio</command> do not."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "No weak deps in Fedora packages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"While the the underlying RPM libraries offer support for optional "
+"dependencies, soft requirements, and other weak dependencies, the packages "
+"in Fedora repositories are not yet leveraging this feature."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See the <ulink url=\"http://rpm.org/wiki/Releases/4.12.0\">RPM 4.12 Release "
+"Notes</ulink> for a full list of changes."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "No new features for older RPM installations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Using some of the new features will break forward compatibility. Packages "
+"using these features cannot be built or installed on older Fedora versions. "
+"Backward compatibility is expected to be maintained."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Ruby 2.1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"library\">Ruby 2.1</systemitem> is the latest stable "
+"version of Ruby, and brings major increases in speed, memory efficiency, and "
+"reliability."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The update brings a soname bump. Therefore, Ruby packages which use binary "
+"extensions should be rebuilt - and this has been done for packages in the "
+"Fedora repositories. Nevertheless, since upstream payed great attention to "
+"source compatibility, no changes to your code should be needed. "
+"Additionally, RubyGems with binary extensions need to be updated to conform "
+"to the recent package guidelines to ensure compatibility with the new "
+"RubyGems release."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Also note that starting with this release, Ruby is adopting <ulink url="
+"\"https://www.ruby-lang.org/en/news/2013/12/21/ruby-version-policy-changes-"
+"with-2-1-0/\">semantic versioning</ulink>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can find a full list of changes in Ruby 2.1 in the <ulink url=\"https://"
+"github.com/ruby/ruby/blob/v2_1_0/NEWS\">changelog</ulink>. Full "
+"documentation is available at the <ulink url=\"http://www.ruby-doc.org/"
+"\">Ruby documentation page</ulink>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "TCL/TK 8.6"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora 21, TCL/TK has been upgraded to version 8.6.1, which includes "
+"numerous bug fixes and enhancements. Some of the notable features are "
+"described here."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For the full list of changes, see the <ulink url=\"http://www.tcl.tk/"
+"software/tcltk/8.6.html\">TCL/TK Release Notes</ulink>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "TCL 8.6"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Changes in TCL 8.6"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<emphasis>IPv6 Support</emphasis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Support for IPv6 networking for both client and server sockets."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<emphasis>Support for SQL Database</emphasis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The bundled tdbc package, which contains the Tcl DataBase Connectivity "
+"interface, now enables writing SQL database-powered scripts decoupled from "
+"any particular database engine. The bundled sqlite3 and tdbc::sqlite3 "
+"packages supply a powerful and popular SQL database engine that is ready to "
+"use."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<emphasis>Support for Object Oriented Programming</emphasis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The commands of the TclOO package are now part of the TCL language itself. "
+"This gives TCL a built-in fully dynamic, class-based object system and also "
+"includes advanced features such as meta-classes, filters, and mixins."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A new version 4 of the popular package Itcl (also known as \"incr TCL\") is "
+"also included, now built on a TclOO foundation, granting support for some "
+"traditional Object Oriented TCL programming out of the box as well."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<emphasis>Support for multi-thread operations</emphasis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A thread-enabled default build, a bundled Thread package, and a new command "
+"interp cancel enable multi-threaded programming tasks on TCL 8.6."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "TK 8.6"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Changes in TK 8.6"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<emphasis>PNG Image Support</emphasis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Photo images now supports read/write in the PNG format, with the ability to "
+"set the alpha channel."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<emphasis>Angled Text</emphasis>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The new -angle $degrees to $canvas create text option rotates the displayed "
+"text."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Improved Scala Ecosystem"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora now features significantly improved support for the Scala ecosystem "
+"with the inclusion of <package>sbt</package> version 0.13.1 and several "
+"other key Scala infrastructure packages. These packages include:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>akka</package>, a toolkit for developing actor-based systems"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>json4s</package>, a unified interface to JSON parsers and "
+"generators"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>sbinary</package>, a typed Scala interface for reading and writing "
+"binary formats"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>scala-stm</package>, a software transactional memory implementation "
+"for Scala"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>scalacheck</package>, a property-based testing framework for Scala"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>scalaz</package>, a set of extensions to the Scala standard library "
+"to facilitate functional programming"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With these packages available, Fedora has become an excellent environment "
+"for developing and distributing Scala projects."
+msgstr ""
+

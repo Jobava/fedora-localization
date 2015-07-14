@@ -1,0 +1,2 @@
+https://git.fedorahosted.org/cgit/docs/elections-guide.git/
+https://git.fedorahosted.org/cgit/docs/elections-guide.git/

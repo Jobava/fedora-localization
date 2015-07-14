@@ -1,0 +1,66 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Translation Quick Start Guide\n"
+"POT-Creation-Date: 2010-11-02T23:38:14\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Translating Websites"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora Websites are also translatable via Transifex. You can find all "
+"projects related to Fedora websites in the <literal>Fedora Websites</"
+"literal> collection, <ulink url=\"https://translate.fedoraproject.org/"
+"collections/c/fedora/r/websites/\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Download, translate, and commit website projects the same way as for "
+"software projects — refer to <xref linkend=\"sect-"
+"Translation_Quick_Start_Guide-Translating_Software\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adding New <filename class=\"extension\">po</filename> Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add new <filename class=\"extension\">po</filename> files the same as for "
+"software projects. If you are creating the first-ever translation for a "
+"locale, you must notify the Fedora Websites team to add the new language to "
+"the website. Post the request to the <literal>trans</literal> mailing list, "
+"so that the Websites team can add the language to the <systemitem>Apache</"
+"systemitem> configuration for the site."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Proofreading"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Generally the Websites team provides test sites that you can use to "
+"proofread your work."
+msgstr ""
+

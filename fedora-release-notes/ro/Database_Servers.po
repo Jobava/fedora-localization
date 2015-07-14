@@ -1,0 +1,118 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Database Servers"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Apache Accumulo"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Apache Accumulo sorted, distributed key/value store is a robust, "
+"scalable, high performance data storage and retrieval system. Apache "
+"Accumulo is based on Google's BigTable design and is built on top of Apache "
+"Hadoop, Zookeeper, and Thrift. Apache Accumulo features a few novel "
+"improvements on the BigTable design in the form of cell-based access control "
+"and a server-side programming mechanism that can modify key/value pairs at "
+"various points in the data management process."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Please note that Accumulo's optional monitor service is not provided in the "
+"initial F21 release. It will be made available as soon as all its "
+"dependencies are in place."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For more information see <ulink url=\"https://accumulo.apache.org\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Apache HBase"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Apache HBase is used when you need random, real-time read/write access to "
+"your Big Data. Apache HBase hosts very large tables -- billions of rows X "
+"millions of columns -- atop clusters of commodity hardware. Apache HBase is "
+"a distributed, versioned, non-relational database modeled after Google's "
+"Bigtable: A Distributed Storage System for Structured Data by Chang et al. "
+"Just as Bigtable leverages the distributed data storage provided by the "
+"Google File System, Apache HBase provides Bigtable-like capabilities on top "
+"of Hadoop and HDFS."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For more information see <ulink url=\"http://hbase.apache.org/\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Apache Hive"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Apache Hive data warehouse software facilitates querying and managing "
+"large data sets residing in distributed storage. Hive provides a mechanism "
+"to project structure onto this data and query the data using a SQL-like "
+"language called HiveQL. At the same time this language also allows "
+"traditional map/reduce programmers to plug in their custom mappers and "
+"reducers when it is inconvenient or inefficient to express this logic in "
+"HiveQL."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For more information see <ulink url=\"http://hive.apache.org/\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "MariaDB 10.0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora 21, MariaDB have been updated to the upstream version 10.0, which "
+"provides various bug fixes and enhancements. Among others, the support for "
+"parallel and multi-source replication has been added as well as the support "
+"for global transaction IDs. In addition, several new storage engines have "
+"been implemented."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For the list of all changes, visit the MariaDB Knowledge Base at <ulink url="
+"\"https://mariadb.com/kb/en/mariadb/what-is-mariadb-100/\" />."
+msgstr ""
+

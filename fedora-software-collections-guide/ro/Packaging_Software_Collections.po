@@ -1,0 +1,1460 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Software Collections Guide\n"
+"POT-Creation-Date: 2014-03-23 20:52+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Packaging &DSCL;s"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This chapter introduces you to packaging &DSCL;s."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating Your Own &DSCL;s"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In general, you can use one of the following two approaches to deploy an "
+"application that depends on an existing &DSCL;:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"install all required Software Collections and packages manually and then "
+"deploy your application, or"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "create a new Software Collection for your application."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "When creating a new &DSCL; for your application:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Create a &DSCL; metapackage"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each &DSCL; includes a metapackage, which installs a minimal subset of "
+"essential packages. See <xref linkend=\"sect-Meta_Package\" /> for more "
+"information on creating metapackages."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Consider specifying the location of the &DSCL; root directory"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You are advised to specify the location of the &DSCL; root directory by "
+"setting the <code>%_scl_prefix</code> macro in the &DSCL; spec file. For "
+"more information, see <xref linkend=\"sect-"
+"The_Software_Collection_Root_Directory\" />."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Consider prefixing the name of your &DSCL; packages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You are advised to prefix the name of your &DSCL; packages with the vendor "
+"and &DSCL;'s name. For more information, see <xref linkend=\"sect-"
+"The_Software_Collections_Prefix\" />."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"Specify all &DSCL;s and other packages required by your application as "
+"dependencies"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that all &DSCL;s and other packages required by your application are "
+"specified as dependencies of your &DSCL;. For more information, see <xref "
+"linkend=\"sect-Using_a_Software_Collection_in_Your_Application\" />."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Convert existing conventional packages or create new &DSCL; packages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that all macros in your &DSCL; package spec files use conditionals. "
+"See <xref linkend=\"sect-Converting_a_Conventional_Spec_File\" /> for more "
+"information on how to convert an existing package spec file."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Build your &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After you create the &DSCL; metapackage and convert or create packages for "
+"your &DSCL;, you can build the &DSCL; with the <application>rpmbuild</"
+"application> utility. For more information, see <xref linkend=\"sect-"
+"Building_a_Software_Collection_Locally\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The File System Hierarchy"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The root directory of &DSCL;s is normally located in the <filename>/&OPT;/</"
+"filename> directory to avoid possible conflicts between &DSCL;s and the base "
+"system installation. The use of the <filename>/&OPT;/</filename> directory "
+"is recommended by the Filesystem Hierarchy Standard (FHS)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Below is an example of the file system hierarchy layout with two &DSCL;s, "
+"<replaceable>software_collection_1</replaceable> and "
+"<replaceable>software_collection_2</replaceable>:"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The &DSCL; File System Hierarchy"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As you can see above, each of the &DSCL;s directories contains the &DSCL; "
+"root directory, and one or more &DSCL; scriptlets. For more information on "
+"the &DSCL; scriptlets, refer to <xref linkend=\"sect-"
+"Software_Collection_Scriptlets\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The &DSCL; Root Directory"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can change the location of the root directory by setting the "
+"<code>%_scl_prefix</code> macro in the spec file, as in the following "
+"example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%global _scl_prefix /opt/<replaceable>provider</replaceable>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"where <replaceable>provider</replaceable> is the provider (vendor) name "
+"registered, where applicable, with the Linux Foundation and the subordinated "
+"Linux Assigned Names and Numbers Authority (LANANA), in conformance with the "
+"Filesystem Hierarchy Standard."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each organization or project that builds and distributes &DSCL;s should use "
+"its own provider name, which conforms to the Filesystem Hierarchy Standard "
+"(FHS) and avoids possible conflicts between &DSCL;s and the base system "
+"installation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You are advised to make the file system hierarchy conform to the following "
+"layout:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"/opt/<replaceable>provider</replaceable>/<replaceable>prefix-application-"
+"version</replaceable>/"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information on the Filesystem Hierarchy Standard, see <ulink url="
+"\"http://www.pathname.com/fhs/\">http://www.pathname.com/fhs/</ulink>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information on the Linux Assigned Names and Numbers Authority, see "
+"<ulink url=\"http://www.lanana.org/\">http://www.lanana.org/</ulink>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The &DSCL; Prefix"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When naming your &DSCL;, you are advised to prefix the name of your &DSCL; "
+"as described below in order to avoid possible name conflicts with the system "
+"versions of the packages that are part of your &DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The &DSCL; prefix consists of two parts:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"the <replaceable>provider</replaceable> part, which defines the provider "
+"name, and"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "the name of the &DSCL; itself."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These two parts of the &DSCL; prefix are separated by an underscore "
+"(<literal>_</literal>), as in the following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "myorganization_ruby193"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this example, <replaceable>myorganization</replaceable> is the provider "
+"name, and <replaceable>ruby193</replaceable> is the name of the &DSCL;."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Package Names"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The &DSCL; package name consists of two parts:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"the <replaceable>prefix</replaceable> part, discussed in <xref linkend="
+"\"sect-The_Software_Collections_Prefix\" />, and"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"the name and version number of the application that is a part of the &DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These two parts of the &DSCL; package name are separated by a dash "
+"(<literal>-</literal>), as in the following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "myorganization_ruby193-foreman-1.1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this example, <replaceable>myorganization_ruby193</replaceable> is the "
+"prefix, and <replaceable>foreman-1.1</replaceable> is the name and version "
+"number of the application."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Scriptlets"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The &DSCL; scriptlets are simple shell scripts that change the current "
+"system environment so that the group of packages in the &DSCL; is preferred "
+"over the corresponding group of conventional packages installed on the "
+"system."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To utilize the &DSCL; scriptlets, use the <application>scl</application> "
+"tool that is part of the <package>scl-utils</package> package. For more "
+"information on <application>scl</application>, refer to <xref linkend=\"sect-"
+"Enabling_the_Software_Collection\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A single &DSCL; can include multiple &DSCL; scriptlets. These scriptlets are "
+"located in the <filename>/&OPT;/&RH;/software_collection/</filename> "
+"directory in your &DSCL; package. If you only need to distribute a single "
+"scriptlet in your &DSCL;, it is highly recommended that you use "
+"<filename>enable</filename> as the name for that scriptlet. When the user "
+"runs a command in the &DSCL; environment by executing <command>scl enable "
+"<replaceable>software_collection</replaceable> <replaceable>command</"
+"replaceable></command>, the <filename>/&OPT;/&RH;/software_collection/"
+"enable</filename> scriptlet is then used to update search paths, and so on."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that &DSCL; scriptlets can only set the system environment in a "
+"subshell that is created by running the <command>scl enable</command> "
+"command. The subshell is only active for the time the command is being "
+"performed."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Package Layout"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each &DSCL;'s layout consists of the metapackage, which installs a subset of "
+"other packages, and a number of the &DSCL;'s packages, which are installed "
+"within the &DSCL; namespace."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Metapackage"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each &DSCL; includes a metapackage, which installs a minimal subset of "
+"essential packages. For example, the essential packages can provide the Perl "
+"language interpreter, but no Perl extension modules. The metapackage "
+"contains a basic file system hierarchy and delivers a number of the &DSCL;'s "
+"scriptlets."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The purpose of the metapackage is to make sure that all essential packages "
+"in the &DSCL; are properly installed and that it is possible to enable the "
+"&DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The metapackage produces the following packages that are also part of the "
+"&DSCL;:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "The main package: %scl"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The main package in the &DSCL; contains dependencies of the base packages, "
+"which are included in the &DSCL;. The main package does not contain any "
+"files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, if the name of the &DSCL; is <literal>myorganization_ruby193</"
+"literal>, then the main package macro is expanded to:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "The runtime subpackage: <replaceable>name</replaceable>-runtime"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The runtime subpackage in the &DSCL; owns the &DSCL;'s file system and "
+"delivers the &DSCL;'s scriptlets."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, if the name of the &DSCL; is <literal>myorganization_ruby193</"
+"literal>, then the runtime subpackage macro is expanded to:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "myorganization_ruby193-runtime"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "The build subpackage: <replaceable>name</replaceable>-build"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The build subpackage in the &DSCL; delivers the &DSCL;'s build configuration."
+" The build subpackage is optional and can be excluded from the &DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, if the name of the &DSCL; is <literal>myorganization_ruby193</"
+"literal>, then the build subpackage macro is expanded to:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "myorganization_ruby193-build"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a Metapackage"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "When creating a new metapackage:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You are advised to add <code language=\"RPM Spec\">Requires: scl-utils-"
+"build</code> to the <package>build</package> subpackage."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add any macros you need to use to the <filename>macros.%{scl}-config</"
+"filename> file in the <package>build</package> subpackage."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You are not required to use conditionals for &DSCL;-specific macros in the "
+"metapackage."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Consider specifying all packages in your &DSCL; that are essential for the "
+"&DSCL; run time as dependencies of the metapackage. That way you can ensure "
+"that the packages are installed with the &DSCL; metapackage."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Include any path redefinition that the packages in your &DSCL; may require "
+"in the <filename>enable</filename> scriptlet."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, to run &DSCL; binary files, add <code language=\"RPM "
+"Spec\">PATH=%{_bindir}\\${PATH:+:\\${PATH}}</code> to the <filename>enable</"
+"filename> scriptlet."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Always make sure that the metapackage contains the <command>%setup</command> "
+"macro in the <code>%prep</code> section, otherwise building the &DSCL; will "
+"fail. If you do not need to use a particular option with the <code>%setup</"
+"code> macro, add the <code language=\"RPM Spec\">%setup -c -T</code> command "
+"to the <code>%prep</code> section."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is because the <command>%setup</command> macro defines and creates the "
+"<code language=\"RPM Spec\">%buildsubdir</code> directory, which is normally "
+"used for storing temporary files at build time. If you do not define "
+"<command>%setup</command> in your &DSCL; packages, files in the <code "
+"language=\"RPM Spec\">%buildsubdir</code> directory will be overwritten, "
+"causing the build to fail."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid "Example of the Metapackage"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To get an idea of what a typical &DSCL; metapackage looks like, see the "
+"following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%global scl software_collection\n"
+"%scl_package %scl\n"
+"%global _scl_prefix /opt/myorganization\n"
+"\n"
+"Summary: Package that installs %scl\n"
+"Name: %scl_name\n"
+"Version: 1\n"
+"Release: 1%{?dist}\n"
+"License: GPLv2+\n"
+"Requires: %{scl_prefix}less\n"
+"BuildRequires: scl-utils-build\n"
+"\n"
+"%description\n"
+"This is the main package for %scl Software Collection.\n"
+"\n"
+"%package runtime\n"
+"Summary: Package that handles %scl Software Collection.\n"
+"Requires: scl-utils\n"
+"\n"
+"%description runtime\n"
+"Package shipping essential scripts to work with %scl Software Collection.\n"
+"\n"
+"%package build\n"
+"Summary: Package shipping basic build configuration\n"
+"Requires: scl-utils-build\n"
+"\n"
+"%description build\n"
+"Package shipping essential configuration macros to build %scl Software "
+"Collection.\n"
+"\n"
+"%prep\n"
+"%setup -c -T\n"
+"\n"
+"%install\n"
+"rm -rf %{buildroot}\n"
+"mkdir -p %{buildroot}%{_scl_scripts}/root\n"
+"cat &gt;&gt; %{buildroot}%{_scl_scripts}/enable &lt;&lt; EOF\n"
+"export PATH=%{_bindir}\\${PATH:+:\\${PATH}}\n"
+"EOF\n"
+"%scl_install\n"
+"\n"
+"%files\n"
+"\n"
+"%files runtime -f filesystem\n"
+"%scl_files\n"
+"\n"
+"%files build\n"
+"%{_root_sysconfdir}/rpm/macros.%{scl}-config\n"
+"\n"
+"%changelog\n"
+"* Fri Aug 30 2013 John Doe &lt;jdoe@example.com&gt; 1-1\n"
+"- Initial package"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Macros"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The &DSCL; packaging macro <code>scl</code> defines where to relocate the "
+"&DSCL;'s file structure. The relocated file structure is a file system used "
+"exclusively by the &DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <code>%scl_package</code> macro defines files ownership for the &DSCL;'s "
+"metapackage and provides additional packaging macros to use in the &DSCL; "
+"environment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To be able to build a conventional package and a &DSCL; package with a "
+"single spec file, prefix the &DSCL; macros with <code>%{?scl:"
+"<replaceable>macro</replaceable>}</code>, as in the following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%{?scl:Requires:%scl_runtime}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the example above, the <code>%scl_runtime</code> macro is the value of "
+"the <code>Requires</code> tag. Both the macro and the tag use the "
+"<code>%{?scl:</code> prefix."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Macros Specific to a &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The table below shows a list of all macros specific to a particular &DSCL;. "
+"All the macros have default values that you will not need to change in most "
+"cases."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Specific Macros"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Example value"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%scl_name</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "name of the &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>software_collection_1</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%scl_prefix</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "name of the &DSCL; with a dash appended at the end"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>software_collection_1-</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%pkg_name</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "name of the original package"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>perl</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_scl_prefix</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "root of the &DSCL; (not package's root)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/&OPT;/&RH;/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_scl_scripts</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "location of &DSCL;'s scriptlets"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/&OPT;/&RH;/software_collection_1/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_scl_root</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "installation root (install-root) of the package"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/&OPT;/&RH;/software_collection_1/root/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%scl_require_package software_collection_1 package_2</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "depend on a particular package from a specific &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>software_collection_1-package_2</code>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Macros Not Specific to a &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The table below shows a list of macros that are not specific to a particular "
+"&DSCL;. Because these macros are not relocated and do not point to the "
+"&DSCL; file system, they allow you to point to the system root file system. "
+"These macros use <code>_root</code> as a prefix."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All the macros have default values that you will not need to change in most "
+"cases."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Non-Specific Macros"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Relocated"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_prefix</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_prefix</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "no"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_exec_prefix</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_exec_prefix</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_bindir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_bindir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/bin/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_sbindir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_sbindir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/sbin/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_datadir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_datadir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/share/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_sysconfdir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_sysconfdir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/etc/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_libexecdir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_libexecdir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/libexec/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_sharedstatedir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_sharedstatedir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/com/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_localstatedir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_localstatedir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/var/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_includedir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_includedir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/include/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_infodir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_infodir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/share/info/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_mandir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_mandir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/share/man/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>%_root_initddir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "&DSCL;'s <code>%_initddir</code> macro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/etc/rc.d/init.d/</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "%<code>_root_libdir</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"&DSCL;'s <code>%_libdir</code> macro, this macro does not work if &DSCL;'s "
+"metapackage is platform-independent"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<code>/usr/lib/</code>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Converting a Conventional Spec File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following steps show how to convert a conventional spec file into a "
+"&DSCL; spec file so that the &DSCL; spec file that you can use in both the "
+"conventional package and the &DSCL;."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Converting a conventional spec file into a &DSCL; spec file"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add the <code>%scl_package</code> macro to the spec file. Place the macro in "
+"front of the spec file preamble as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%{?scl:%scl_package <replaceable>package_name</replaceable>}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You are advised to define the <varname>%pkg_name</varname> macro in the spec "
+"file in case the package is not built for the &DSCL;:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%{!?scl:%global pkg_name %{name}}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Consequently, you can use the <varname>%pkg_name</varname> macro to define "
+"the original name of the package wherever it is needed in the spec file that "
+"you can then use for building both the conventional package and the &DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Change the <code>Name</code> tag in the spec file preamble as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Name: %{?scl_prefix}<replaceable>package_name</replaceable>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are building or linking with other &DSCL; packages, then prefix the "
+"names of those &DSCL; packages in the <code>Requires</code> and "
+"<code>BuildRequires</code> tags with <code language=\"RPM "
+"Spec\">%{?scl_prefix}</code> as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Requires: %{?scl_prefix}ifconfig"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When depending on the system versions of packages, you should avoid using "
+"versioned <code>Requires</code> or <code>BuildRequires</code>. If you need "
+"to depend on a package that could be updated by the system, consider "
+"including that package in your &DSCL;, or remember to rebuild your &DSCL; "
+"when the system package updates."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To check that all essential &DSCL;'s packages are dependencies of the main "
+"metapackage, add the following macro after the <code>BuildRequires</code> or "
+"<code>Requires</code> tags in the spec file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%{?scl:Requires: %scl_runtime}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Prefix the <code language=\"RPM Spec\">Obsoletes</code>, <code language="
+"\"RPM Spec\">Conflicts</code> and <code language=\"RPM "
+"Spec\">BuildConflicts</code> tags with <code language=\"RPM "
+"Spec\">%{?scl_prefix}</code>. This is to ensure that the &DSCL; can be used "
+"to deploy new packages to older systems without having the packages "
+"specified, for example, by <code language=\"RPM Spec\">Obsolete</code> "
+"removed from the base system installation. For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Obsoletes: %{?scl_prefix}lesspipe &lt; 1.0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Prefix the <code language=\"RPM Spec\">Provides</code> tag with <code "
+"language=\"RPM Spec\">%{?scl_prefix}</code>, as in the following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Provides: %{?scl_prefix}more"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For any subpackages that define their name with the <option>-n</option> "
+"option, prefix their name with <code language=\"RPM Spec\">%{?scl_prefix}</"
+"code>, as in the following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%package -n %{?scl_prefix}more"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add or edit the <code>%setup</code> macro in the <code>%prep</code> section "
+"of the spec file so that the macro can deal with a different package name in "
+"the &DSCL; environment:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%setup -q -n %{pkg_name}-%{version}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that the <code>%setup</code> macro is required and that you must always "
+"use the macro with the <option>-n</option> option to successfully build your "
+"&DSCL;."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid "Example of the Converted Spec File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To see what the diff file comparing a conventional spec file with a "
+"converted spec file looks like, see the following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"--- a/less.spec\n"
+"+++ b/less.spec\n"
+"@@ -1,10 +1,13 @@\n"
+"+%{?scl:%scl_package less}\n"
+"+%{!?scl:%global pkg_name %{name}}\n"
+"+\n"
+" Summary: A text file browser similar to more, but better\n"
+"-Name: less\n"
+"+Name: %{?scl_prefix}less\n"
+" Version: 444\n"
+" Release: 7%{?dist}\n"
+" License: GPLv3+\n"
+" Group: Applications/Text\n"
+"-Source: http://www.greenwoodsoftware.com/less/%{name}-%{version}.tar.gz\n"
+"+Source: http://www.greenwoodsoftware.com/less/%{pkg_name}-%{version}.tar.gz\n"
+" Source1: lesspipe.sh\n"
+" Source2: less.sh\n"
+" Source3: less.csh\n"
+"@@ -19,6 +22,7 @@ URL: http://www.greenwoodsoftware.com/less/\n"
+" Requires: groff\n"
+" BuildRequires: ncurses-devel\n"
+" BuildRequires: autoconf automake libtool\n"
+"-Obsoletes: lesspipe &lt; 1.0\n"
+"+Obsoletes: %{?scl_prefix}lesspipe &lt; 1.0\n"
+"+%{?scl:Requires: %scl_runtime}\n"
+" \n"
+" %description\n"
+" The less utility is a text file browser that resembles more, but has\n"
+"@@ -31,7 +35,7 @@ You should install less because it is a basic utility for "
+"viewing text\n"
+" files, and you'll use it frequently.\n"
+" \n"
+" %prep\n"
+"-%setup -q\n"
+"+%setup -q -n %{pkg_name}-%{version}\n"
+" %patch1 -p1 -b .Foption\n"
+" %patch2 -p1 -b .search\n"
+" %patch4 -p1 -b .time\n"
+"@@ -51,16 +55,16 @@ make CC=\"gcc $RPM_OPT_FLAGS -D_GNU_SOURCE -"
+"D_LARGEFILE_SOURCE -D_LARGEFILE64_SOU\n"
+" %install\n"
+" rm -rf $RPM_BUILD_ROOT\n"
+" make DESTDIR=$RPM_BUILD_ROOT install\n"
+"-mkdir -p $RPM_BUILD_ROOT/etc/profile.d\n"
+"+mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/profile.d\n"
+" install -p -c -m 755 %{SOURCE1} $RPM_BUILD_ROOT/%{_bindir}\n"
+"-install -p -c -m 644 %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d\n"
+"-install -p -c -m 644 %{SOURCE3} $RPM_BUILD_ROOT/etc/profile.d\n"
+"-ls -la $RPM_BUILD_ROOT/etc/profile.d\n"
+"+install -p -c -m 644 %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/profile.d\n"
+"+install -p -c -m 644 %{SOURCE3} $RPM_BUILD_ROOT%{_sysconfdir}/profile.d\n"
+"+ls -la $RPM_BUILD_ROOT%{_sysconfdir}/profile.d\n"
+" \n"
+" %files\n"
+" %defattr(-,root,root,-)\n"
+" %doc LICENSE\n"
+"-/etc/profile.d/*\n"
+"+%{_sysconfdir}/profile.d/*\n"
+" %{_bindir}/*\n"
+" %{_mandir}/man1/*"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Uninstalling All &DSCL; Directories"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Keep in mind that the <command>yum remove</command> command does not "
+"uninstall directories provided by those &DSCL; packages and subpackages that "
+"are removed after the &DSCL; <package>runtime</package> subpackage is "
+"removed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To ensure that all directories are uninstalled, make those packages and "
+"subpackages depend on the <package>runtime</package> subpackage. To do so, "
+"add the following line to the spec file of each of those packages and "
+"subpackages:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%{?scl:Requires: %{scl}-runtime}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Adding the above line ensures that all directories provided by those "
+"packages and subpackages are removed correctly as long as the "
+"<package>runtime</package> subpackage does not depend on any of those "
+"packages and subpackages."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Making a &DSCL; Depend on Another &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To make one &DSCL; depend on a package from another &DSCL;, you need to "
+"adjust the <code>BuildRequires</code> and <code>Requires</code> tags in the "
+"dependent &DSCL;'s spec file so that these tags properly define the "
+"dependency."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, to define dependencies on two &DSCL;s named "
+"<application>software_collection_1</application> and "
+"<application>software_collection_2</application>, add the following three "
+"lines to your application's spec file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"BuildRequires: scl-utils-build\n"
+"Requires: %scl_require <replaceable>software_collection_1</replaceable>\n"
+"Requires: %scl_require <replaceable>software_collection_2</replaceable>\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that the spec file also contains the <code>%scl_package</code> macro "
+"in front of the spec file preamble, for example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%{?scl:%scl_package <replaceable>less</replaceable>}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that the <code>%scl_package</code> macro must be included in every spec "
+"file of your &DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can also use the <code>%scl_require_package</code> macro to define "
+"dependencies on a particular package from a specific &DSCL;, as in the "
+"following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"BuildRequires: scl-utils-build\n"
+"Requires: %scl_require_package <replaceable>software_collection_1</"
+"replaceable> <replaceable>package_name</replaceable>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Building a &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To build a &DSCL; on your system, run the following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The difference between the command shown above and the standard command to "
+"build conventional packages (<command>rpmbuild -ba <replaceable>package</"
+"replaceable>.spec</command>) is that you have to append the <option>--"
+"define</option> option to the <command>rpmbuild</command> command when "
+"building a &DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>--define</option> option defines the <code>scl</code> macro, "
+"which uses the &DSCL; configured in the &DSCL; spec file "
+"(<filename><replaceable>package</replaceable>.spec</filename>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Alternatively, to be able to use the standard command <command>rpmbuild -ba "
+"<replaceable>package</replaceable>.spec</command> to build the &DSCL;, "
+"specify the following in the <filename>package.spec</filename> file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "BuildRequires: <replaceable>software_collection</replaceable>-build"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"where <replaceable>software_collection</replaceable> is the name of the "
+"&DSCL;."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Rebuilding a &DSCL; without build Subpackages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you wish to rebuild a &DSCL; that is distributed without build "
+"subpackages (<package>software_collection-build</package>) and you do not "
+"want or cannot use the <command>rpmbuild -ba <replaceable>package</"
+"replaceable>.spec --define 'scl <replaceable>name</replaceable>'</command> "
+"command to build the &DSCL;, you can have the build subpackages created by "
+"rebuilding the &DSCL; metapackage. Note that you need to have the "
+"<package>scl-utils-build</package> package installed on your system, "
+"otherwise rebuilding the &DSCL; metapackage with the <command>rpmbuild</"
+"command> command will fail."
+msgstr ""
+

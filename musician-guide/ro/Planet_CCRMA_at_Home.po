@@ -1,0 +1,416 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:05-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Planet CCRMA at Home"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "About Planet CCRMA at Home"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As stated on the project's home page, it is the goal of Planet CCRMA at Home "
+"to provide packages which will transform a &OPERATING_SYSTEM;-based computer "
+"into an audio workstation. What this means is that, while the &O_S; Project "
+"does an excellent job of providing a general-purpose operating system, a "
+"general purpose operating system is insufficient for audio work of the "
+"highest quality. The contributors to Planet CCRMA at Home provide software "
+"packages which can tune your system specifically for audio work."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Users of GNU Solfege and LilyPond should not concern themselves with Planet "
+"CCRMA at Home, unless they also user other audio software. Neither Solfege "
+"nor LilyPond would benefit from a computer optimzed for audio production."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"CCRMA stands for \"Center for Computer Research in Music and Acoustics,\" "
+"which is the name of an academic research initiative and music computing "
+"facility at Stanford University, located in Stanford, California. Its "
+"initiatives help scholars to understand the effects and possibilities of "
+"computers and technology in various musical contexts. They offer academic "
+"courses, hold workshops and concerts, and try to incorporate the work of "
+"many highly-specialized fields."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Planet CCRMA at Home website suggests that they provide most of the "
+"software used on the computers in CCRMA's computing facilities. Much of this "
+"software is highly advanced and complex, and not intended for everyday use. "
+"More adventurous users are encouraged to explore Planet CCRMA's website, and "
+"investigate the software for themselves."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Deciding Whether to Use Planet CCRMA at Home"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Exclusive Software"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The only useful reason to install an additional repository is if you intend "
+"to install and use its software. The only software application covered in "
+"this guide, which is available exclusively from the Planet CCRMA at Home "
+"repository, is \"SuperCollider\". The Planet CCRMA repository also offers "
+"many other audio-related software applications, many of which are available "
+"from the default &OPERATING_SYSTEM; repositories."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Most of the audio software currently available in the default &O_S; "
+"repositories was initially available in &O_S; from the Planet CCRMA at Home "
+"repository. Sometimes, an updated version of an application is available "
+"from the Planet CCRMA repository before it is available from the &O_S; "
+"Updates repository. If you need the newer software version, then you should "
+"install the Planet CCRMA repository."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is also a potential security weakness, for users who install the Planet "
+"CCRMA repository, but do not install any of its software. When \"yum\" finds "
+"a newer version of an installed application, it will be installed, "
+"regardless of the repository. This may happen to you without you noticing, "
+"so that you begin using Planet CCRMA software without knowing it."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Security and Stability"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The biggest reason that you should avoid installing the Planet CCRMA at Home "
+"repository unless you <emphasis>need</emphasis> its software is security. "
+"There are two main security issues with using the Planet CCRMA repositories:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Planet CCRMA is intended for specialized audio workstations. The software is "
+"packaged in such a way that creates potential (and unknown) security threats "
+"caused by the optimizations necessary to prepare a computer system for use "
+"in audio work. Furthermore, these optimizations may reveal software bugs "
+"present in non-Planet CCRMA software, and allow them to do more damage than "
+"on a non-optimized system. Finally, a computer system's \"stability\" (its "
+"ability to run without trouble) may be compromised by audio optimizations. "
+"Regular desktop applications may perform less well on audio-optimized "
+"systems, if the optimization process unintentionally un-optimized some other "
+"process."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"CCRMA is not a large, Linux-focussed organization. It is an academic "
+"organization, and its primary intention with the Planet CCRMA at Home "
+"repository is to allow anybody with a computer to do the same kind of work "
+"that they do. The Fedora Project is a relatively large organization, backed "
+"by one of the world's largest commercial Linux providers, which is focussed "
+"on creating a stable and secure operating system for daily use. Furthermore, "
+"thousands of people around the world are working for the Fedora Project or "
+"its corporate sponsor, and it is their responsibility to proactively solve "
+"problems. CCRMA has the same responsibility, but they do not have the "
+"dedicated resources of the Fedora Project, it would be naive(???) to think "
+"that they would be capable of providing the same level of support."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "A Possible \"Best Practices\" Solution"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All &OPERATING_SYSTEM; users should be grateful to the people working at "
+"CCRMA, who help to provide the Planet CCRMA at Home repository. Their work "
+"has been instrumental in allowing &O_S; to provide the amount of high-"
+"quality audio software that it does. Furthermore, the availability of many "
+"of CCRMA's highly-specialized software applications through the Planet CCRMA "
+"at Home repository is an invaluable resource to audio and music enthusiasts."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the other hand, &O_S; users cannot expect that Planet CCRMA software is "
+"going to meet the same standards as &O_S; software. While the Fedora "
+"Project's primary goal is to provide Linux software, CCRMA's main goal is to "
+"advance the state of knowledge of computer-based music and audio research "
+"and art."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Where do these two goals meet?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to use your computer for both day-to-day desktop tasks and high-"
+"quality audio production, one good solution is to \"dual-boot\" your "
+"computer. This involves installing &OPERATING_SYSTEM; twice on the same "
+"physical computer, but it will allow you to keep an entirely separate "
+"operating system environment for the Planet CCRMA at Home software. Not only "
+"will this allow you to safely and securely run Planet CCRMA applications in "
+"their most-optimized state, but you can help to further optimize your system "
+"by turning off and even removing some system services that you do not need "
+"for audio work. For example, a GNOME or KDE user might choose to install "
+"only \"Openbox\" for their audio-optimized installation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Alternatively, there is the possibility of going half-way: installing only "
+"some Planet CCRMA applications, but not the fully-optimized kernel and "
+"system components. This would be more suitable for a computer used most "
+"often for typical day-to-day operations (email, word processing, web "
+"browsing, etc.) If you wanted to use SuperCollider, but did not require "
+"other audio software, for example, then this might be the best solution for "
+"you."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ultimately, it is your responsibility to ensure that your computer and its "
+"data is kept safely and securely. You will need to find the best solution "
+"for your own work patterns and desires."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Use Software from Planet CCRMA at Home"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Planet CCRMA at Home\" is a project at Stanford University, not stored on "
+"the Fedora servers. You must tell <command>yum</command> (the command-line "
+"tool used by <application>PackageKit</application> and <application>Apper</"
+"application>) that you want to use Planet CCRMA at Home. After you install "
+"the \"Planet CCRMA at Home\" repository, you can install Planet CCRMA "
+"software the same way as Fedora software."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Install the \"Planet CCRMA at Home\" Software Repository"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Follow this procedure to install the \"Planet CCRMA at Home\" repository, "
+"intended only for Fedora-based computers."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use this procedure for any version of Fedora on both x86 (32-bit) "
+"and x86-64 (64-bit) installations. <command>Yum</command> automatically "
+"installs the correct packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Update your computer with <application>PackageKit</application>, "
+"<application>Apper</application>, or <command>yum</command>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Run the following command in a terminal window:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<command>su -c 'yum localinstall http://ccrma.stanford.edu/planetccrma/"
+"mirror/fedora/linux/\\</command>\n"
+"<command>planetccrma/16/i386/planetccrma-repo-1.1-3.fc16.ccrma.noarch.rpm</"
+"command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Update your computer again."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Some packages are available from &O_S; and Planet CCRMA. Your computer "
+"automatically installs the package with the highest version number."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Set Repository Priorities"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This is optional, and we recommend it for advanced users."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"By default, <command>yum</command> installs the package with the highest "
+"version number, regardless of the repository. You can change <command>yum</"
+"command> to install packages from a specific repository, even when another "
+"repository has a higher version number."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Think about your repository priorities carefully. You may accidentally cause "
+"<command>yum</command> to not install security updates and accidentally "
+"leave your computer vulnerable to attack."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to prevent one or a few packages from being updated, see <xref "
+"linkend=\"sect-Musicians_Guide-CCRMA_Preventing_Package_Updates\" /> for "
+"more appropriate instructions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Install the <package>yum-plugin-priorities</package> package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use a text editor or the <application>cat</application> or "
+"<application>less</application> command to verify that <filename>/etc/yum/"
+"pluginconf.d/priorities.conf</filename> exists, and contains the following "
+"text: <code>enabled = 1</code>. If you want to stop using the plugin, you "
+"can edit this file so it contains <code>enabled = 0</code>. This does not "
+"affect the priorities set in the repository configuration files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can set priorities for some or all repositories. To add a priority to a "
+"repository, edit its respective file in the <filename>/etc/yum.repos.d/"
+"<replaceable>*</replaceable></filename> directory, adding a line like: "
+"<literal>priority = <replaceable>N</replaceable></literal> where <literal>N</"
+"literal> is a number between <literal>1</literal> and <literal>99</literal>, "
+"inclusive. A priority of <literal>1</literal> is the highest setting, and "
+"<literal>99</literal> is the lowest. You will need to set priorities of at "
+"least two repositories before this becomes useful."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Prevent a Package from Being Updated"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"By default, <command>yum</command> installs the latest version of packages. "
+"You can change <command>yum</command> to not update certain packages, even "
+"when a newer version is available."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Avoid using this plugin unless absolutely necessary. You may cause "
+"<command>yum</command> to not install an important security update, and "
+"leave your computer vulnerable to attack."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want <command>yum</command> to install packages from a specific "
+"repository, even when they are available from another repository, see <xref "
+"linkend=\"sect-Musicians_Guide-CCRMA_Repository_Priorities\" /> for more "
+"appropriate instructions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Install the <package>yum-plugin-versionlock</package> package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use a text editor or the <command>cat</command> or <command>less</command> "
+"command to verify that <filename>/etc/yum/pluginconf.d/versionlock.conf</"
+"filename> exists, and contains the following text: <code>enabled = 1</code> "
+"If you want to stop using the plugin, you can edit this file so it contains "
+"<code>enabled = 0</code>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add the list of packages which you do not want to update to <filename>/etc/"
+"yum/pluginconf.d/versionlock.list</filename>. Each package should go on its "
+"own line. For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"jack-audio-connect-kit-1.9.4\n"
+"qjackctl-0.3.6\n"
+msgstr ""
+

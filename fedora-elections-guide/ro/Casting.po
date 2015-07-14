@@ -1,0 +1,209 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Elections Guide\n"
+"POT-Creation-Date: 2011-02-22T01:12:36\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Using the Elections Software"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Election Information"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Election information is generally distributed to the Fedora Community and "
+"eligible voters in announcements on Mailing Lists, IRC Channels and on the "
+"Fedora Project Wiki."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"However in addition it is possible to find a list of scheduled (past and "
+"present) elections at <ulink url=\"https://admin.fedoraproject.org/voting/\" "
+"/>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To access information such as the candidate list for an election, click on "
+"the <guilabel>More Information</guilabel> link next to the appropriate "
+"election."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Voting Eligibility"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Voting eligibility is defined uniquely for each election and refer to groups "
+"configured in the Fedora Account System at <ulink url=\"https://admin."
+"fedoraproject.org/accounts/\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To be able to vote you must be a member of at least one group listed, or "
+"match the special eligibility criteria defined in <xref linkend=\"tabl-"
+"Fedora_Elections_Guide-Voting_Eligibility-Special_Eligibility_Groups\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Special Eligibility Groups"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Condition"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Information"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Any User"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "You must have an active account in the Fedora Account System"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Any Group"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"You must be a member of at least one group in the Fedora Account System"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Any non-CLA Group"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid ""
+"You must be a member of at least one group (excluding CLA groups) in the "
+"Fedora Account System in addition to having a signed CLA"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "cla_done"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "You must have a valid Contributor License Agreement"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Casting a Ballot"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To cast a ballot in an election that you are eligible to vote in:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Go to the Election Information page for the election that you wish to vote "
+"in (refer to <xref linkend=\"sect-Fedora_Elections_Guide-"
+"Using_the_Elections_Software-Election_Information\" />)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click on <guilabel>Vote Now!</guilabel> underneath the list of candidates"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Availability of Extra Information"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When extra information such as nomination information or policy statements "
+"is available for a candidate, a <guilabel>[more]</guilabel> link will appear "
+"next to their name. It is recommended to read this information before "
+"casting a vote."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select a score for each candidate from the drop-down menu appropriate to "
+"your level to preference. Information on range voting is available in <xref "
+"linkend=\"sect-Fedora_Elections_Guide-Range_Voting-"
+"Concepts_of_Range_Voting\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click on the <guilabel>Submit</guilabel> button at the bottom of the ballot."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Remember to Verify Your Ballot"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At this stage your vote is not officially entered into the election "
+"database, you must check and confirm your ballot first."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Verify that information shown on the ballot is correct, and click on "
+"<guilabel>Confirm</guilabel> otherwise click <guilabel>Go Back</guilabel> to "
+"alter your ballot."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once your ballot is cast, you will be redirected to the Elections "
+"application welcome page with a confirmation message."
+msgstr ""
+

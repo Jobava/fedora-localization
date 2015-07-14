@@ -1,0 +1,901 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Packager's Guide\n"
+"POT-Creation-Date: 2012-11-20T13:36:31\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Creating and Building Packages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This chapter shows you how to convert a source archive into an RPM package."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Preparing a Build Environment"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section shows how to prepare an environment for building RPM packages "
+"on your system."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a Non-Root Buildroot"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps show how to create a non-root buildroot environment. This non-"
+"root environment is used to build packages as a normal user, without the "
+"need of becoming the root user. Because some of the software source archives "
+"can contain code in a makefile or script that can possibly damage your "
+"system, it is highly recommended to build packages as a user that does not "
+"have full access to the system."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a non-root buildroot"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As root, install the <package>rpmdevtools</package> package with the "
+"following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As a normal user, run the following command to create the <filename class="
+"\"directory\">~/rpmbuild/</filename> directory where packages are built:"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a Basic Spec File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section shows how to write a basic spec file for your RPM package."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating an Example Spec File for eject"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps show an example of creating a package from the source code "
+"archive of the <application>eject</application> utility. The "
+"<application>eject</application> utility is a simple software that ejects "
+"removable media using software control so it is an ideal candidate for "
+"creating a basic spec file."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating an example package: eject"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In a shell prompt, go into the buildroot and create a new spec file for your "
+"package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a spec file template with the <command>rpmdev-newspec</command> "
+"command, run the following commands:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This creates a new spec file called <filename>eject.spec</filename> in the "
+"<filename class=\"directory\">~/rpmbuild/SPECS</filename> directory."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To specify a spec file template for a particular type of packages, refer to "
+"the contents of the <filename class=\"directory\">/etc/rpmdevtools/</"
+"filename> directory, which includes spec file templates called "
+"<filename>spectemplate-<replaceable>type</replaceable>.spec</filename>. For "
+"example, to create a new spec file for a Python module, run the following "
+"commands:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information on creating a new spec file with <command>rpmdev-"
+"newspec</command>, run the <command>rpmdev-newspec --help</command> command."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Alternatively, you can use the <application>vim</application> editor to "
+"create a spec file template for you. Change to the buildroot and run "
+"<application>vim</application> with the name of the spec file you want to "
+"create:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open the spec file in a text editor. The spec file should be similar to the "
+"following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"Name:           eject\n"
+"Version:        \n"
+"Release:        1%{?dist}\n"
+"Summary:        \n"
+"\n"
+"Group:          \n"
+"License:        \n"
+"URL:            \n"
+"Source0:        \n"
+"BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -"
+"n)\n"
+"\n"
+"BuildRequires:  \n"
+"Requires:       \n"
+"\n"
+"%description\n"
+"\n"
+"\n"
+"%prep\n"
+"%setup -q\n"
+"\n"
+"\n"
+"%build\n"
+"%configure\n"
+"make %{?_smp_mflags}\n"
+"\n"
+"\n"
+"%install\n"
+"rm -rf $RPM_BUILD_ROOT\n"
+"make install DESTDIR=$RPM_BUILD_ROOT\n"
+"\n"
+"\n"
+"%clean\n"
+"rm -rf $RPM_BUILD_ROOT\n"
+"\n"
+"\n"
+"%files\n"
+"%defattr(-,root,root,-)\n"
+"%doc\n"
+"\n"
+"\n"
+"\n"
+"%changelog"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Group and BuildRoot tags are deprecated"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Although the <code>Group</code> and <code>BuildRoot</code> tags are included "
+"in the spec file templates, <application>RPM</application> in &MAJOROSVER; "
+"does not require the presence of these tags in the spec file and ignores "
+"them."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The %clean and %defattr directives are deprecated"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Although the <code>%clean</code> and <code>%defattr</code> directives are "
+"included in the spec file templates, <application>RPM</application> in "
+"&MAJOROSVER; does not require the presence of these directives in the spec "
+"file and ignores them."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the <code>Release</code> tag to set the release value of the package. "
+"For example, set the value to <code>1%{?dist}</code> if you are creating the "
+"initial release of the package:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Release:        1%{?dist}\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <code>{?dist}</code> tag is used to mark the distribution revision of a "
+"package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Fill in the version and add a summary of the software:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"Version:        2.1.5\n"
+"Release:        1%{?dist}\n"
+"Summary:        A program that ejects removable media using software "
+"control\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For the <code>License</code> tag, fill in the appropriate license for the "
+"software. In this case, <application>eject</application> uses the GNU "
+"General Public License v2.0 or later. The short name for this license is "
+"GPLv2+:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "License: GPLv2+\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"From the <application>eject</application> project website, get the URL of "
+"the website and fill it in the <code>URL</code> tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "URL:            http://www.pobox.com/~tranter\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the <code>Source</code> tag, fill in the URL of the source archive for "
+"the package:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"Source0: http://www.ibiblio.org/pub/Linux/utils/disk-management/%{name}-"
+"%{version}.tar.gz\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the <code>BuildRequires</code> tag with requirements that are needed to "
+"build the package. <code>BuildRequires</code> can contain either a list of "
+"required packages or files. For example, the <package>eject</package> "
+"package requires the <package>gettext</package> and <package>libtool</"
+"package> packages:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "BuildRequires: gettext\n"
+"BuildRequires: libtool\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is recommended to add a list of requirements that this package depends on "
+"to the <code>Requires</code> tag. <code>Requires</code> can contain either a "
+"list of required packages or files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In many cases, however, <application>rpmbuild</application> is able to "
+"detect the dependencies automatically for you so that you do not need to add "
+"them manually. For example, the <application>eject</application> package "
+"does not need any explicit requirements in the <code>Requires</code> tag, so "
+"do not include the tag in the spec file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add a description for the package. The lines of text in <code>%description</"
+"code> should be at most 79 characters long:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%description\n"
+"The eject program allows the user to eject removable media (typically\n"
+"CD-ROMs, floppy disks or Iomega Jaz or Zip disks) using software\n"
+"control. Eject can also control some multi-disk CD changers and even\n"
+"some devices' auto-eject features.\n"
+"\n"
+"Install eject if you'd like to eject removable media using software\n"
+"control.\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add the <code>%check</code> section between the sections <code>%build</code> "
+"and <code>%install</code> in the spec file. The <code>%check</code> section "
+"typically contains the <command>make test</command> or <command>make check</"
+"command> command that runs any self-tests distributed with the software:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%check\n"
+"make check\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the <code>%install</code> section by adding the following installation "
+"instructions that are specific to <package>eject</package> the to the spec "
+"file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"install -m 755 -d $RPM_BUILD_ROOT/%{_sbindir}\n"
+"ln -s ../bin/eject $RPM_BUILD_ROOT/%{_sbindir}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This calls the <application>install</application> program and creates a "
+"symbolic link, which is necessary to properly build and install the "
+"<package>eject</package> package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Because the <application>eject</application> utility includes translation "
+"files, you need to define a macro called <code>%find_lang</code>, which will "
+"locate all of the translation files that belong to the package, and put this "
+"list in a file called <filename>%{name}.lang</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To define the <code>%find_lang</code> macro, add the following to the "
+"<code>%install</code> section:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%find_lang %{name}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To include the <filename>%{name}.lang</filename> file with a list of "
+"translation files, add the file name with the <option>-f</option> option to "
+"<code>%files</code>:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%files -f %{name}.lang"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add the list of documentation files that are included in <application>eject</"
+"application> to the <code>%doc</code> directive:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%doc README TODO COPYING ChangeLog\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit <code>%changelog</code> to describe the last change you have made to "
+"the package. Fill it in with the date, your name and email address, the "
+"version and release of the package, and a short description of what has "
+"changed in the package in the following format:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"* <replaceable>date</replaceable> <replaceable>Packager's Name</replaceable> "
+"<replaceable>&lt;packager's_email&gt;</replaceable> <replaceable>version</"
+"replaceable>-<replaceable>revision</replaceable>\n"
+"- <replaceable>Summary of changes</replaceable>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To get the changelog entry in the required format, you can use the "
+"<application>rpmdev-bumpspec</application> utility. Run the following "
+"command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Because this is the first release of the package, run the <command>rpmdev-"
+"bumpspec</command> command with the following options:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This will produce a changelog entry in the spec file similar to the "
+"following:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%changelog\n"
+"* Wed Oct 20 2011 John Doe &lt;jdoe@example.com&gt; 2.1.5-0.1\n"
+"- Initial RPM release\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Now the spec file should look like in the following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"Name: eject\n"
+"Version: 2.1.5\n"
+"Release: 1%{?dist}\n"
+"Summary: A program that ejects removable media using software control\n"
+"\n"
+"License: GPLv2+\n"
+"URL: http://www.pobox.com/~tranter\n"
+"Source0: http://www.ibiblio.org/pub/Linux/utils/disk-management/%{name}-"
+"%{version}.tar.gz\n"
+"\n"
+"BuildRequires: gettext\n"
+"BuildRequires: libtool\n"
+"\n"
+"%description\n"
+"The eject program allows the user to eject removable media (typically\n"
+"CD-ROMs, floppy disks or Iomega Jaz or Zip disks) using software\n"
+"control. Eject can also control some multi-disk CD changers and even\n"
+"some devices' auto-eject features.\n"
+"\n"
+"Install eject if you'd like to eject removable media using software\n"
+"control.\n"
+"\n"
+"%prep\n"
+"%setup -q -n\n"
+"\n"
+"%build\n"
+"%configure\n"
+"make %{?_smp_mflags}\n"
+"\n"
+"%check\n"
+"make check\n"
+"\n"
+"%install\n"
+"rm -rf $RPM_BUILD_ROOT\n"
+"make install DESTDIR=$RPM_BUILD_ROOT\n"
+"\n"
+"install -m 755 -d $RPM_BUILD_ROOT/%{_sbindir}\n"
+"ln -s ../bin/eject $RPM_BUILD_ROOT/%{_sbindir}\n"
+"\n"
+"%find_lang %{name}\n"
+"\n"
+"%files -f %{name}.lang\n"
+"%doc README TODO COPYING ChangeLog\n"
+"%{_bindir}/*\n"
+"%{_sbindir}/*\n"
+"%{_mandir}/man1/*\n"
+"\n"
+"%changelog\n"
+"* Wed Oct 20 2011 John Doe &lt;jdoe@example.com&gt; 0.8.18.1-0.1\n"
+"- Initial RPM release\n"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Building a Package"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section shows how to build your RPM package with the <command>rpmbuild</"
+"command> command."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Run rpmbuild as a non-root user"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is highly recommended to always run the <command>rpmbuild</command> "
+"command as a non-root, normal, user. If you build a package as the root "
+"user, possible mistakes in the spec file, for example in the <code>%install</"
+"code> section, can cause damage to your system."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Building an Example Package: eject"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps show an example of building a package with a previously created "
+"spec file of the <application>eject</application> utility. For installation, "
+"<application>eject</application> only requires a minimum set of package "
+"dependencies. This makes it a good project to examine for package building."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Before starting with the package building process itself, make sure that you "
+"have created a non-root buildroot on your system."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Building an example package: eject"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Download the source code archive for <application>eject</application> and "
+"place it in the <filename class=\"directory\">~/rpmbuild/SOURCES/</filename> "
+"directory."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Obtain the spec file for <application>eject</application> and place it in "
+"the <filename class=\"directory\">~/rpmbuild/SPECS/</filename> directory."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In a shell prompt, change to the <filename class=\"directory\">~/rpmbuild/"
+"SPECS/</filename> directory and run the <command>rpmbuild</command> command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you end up with an error message similar to the following one, it means "
+"that you have not installed the package dependencies required by the "
+"<package>eject</package> package:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"error: Failed build dependencies:\n"
+"libtool is needed by eject-2.1.5-0.1.x86_64"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use <package>yum</package> to install the needed files or packages. "
+"Run the following command to install the required <package>libtool</package> "
+"package:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In case you have received a build error related to the <code>%install</code> "
+"section, you may want to skip earlier stages of the build process with the "
+"<option>--short-circuit</option> option and restart the build process at the "
+"<code>%install</code> stage:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once you get a clean build, the last line of the <command>rpmbuild</command> "
+"output will be as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "+ exit 0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After a successful build with the <command>rpmbuild -ba eject.spec</command> "
+"command, the binary package will be placed in a subdirectory of the "
+"<filename class=\"directory\">~/rpmbuild/RPMS/</filename> directory and the "
+"source package will be placed in <filename>~/rpmbuild/SRPMS/</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you just want to create a source package (<filename>.src.rpm</filename>), "
+"run the following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This will create the source package in the <filename class=\"directory\">~/"
+"rpmbuild/SRPMS/</filename> directory, or recreate it if it has been "
+"previously created."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Testing a Package"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section shows how to use the <application>rpmlint</application> utility "
+"to test an RPM package. <application>rpmlint</application> can be used to "
+"test spec files, binary packages, and source packages. It is highly "
+"recommended to run <application>rpmlint</application> every time you make "
+"changes to the package."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Testing a Spec File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps show how to test a spec file of a package with the "
+"<application>rpmlint</application> utility."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Testing a spec file with rpmlint"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have not previously installed the <package>rpmlint</package> package, "
+"install it now with the following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To test a spec file with <application>rpmlint</application>, run the "
+"following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"By checking the spec file for correctness with the above command, "
+"<application>rpmlint</application> is able to catch many errors that can be "
+"often found in new or significantly changed spec files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the error messages reported with the above command are not clear enough, "
+"use the <option>-i</option> option, which provides more information on each "
+"error:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Refer to the <ulink url=\"http://fedoraproject.org/wiki/Packaging/"
+"Guidelines#Use_rpmlint\">Fedora Packaging Guidelines</ulink> for information "
+"on what <application>rpmlint</application> errors can be typically ignored."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Testing a Spec File, Binary, and Source Package"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps show how to test a spec file, a binary package, and a source "
+"package with the <application>rpmlint</application> utility."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Testing a spec file, binary, and source package with rpmlint"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Change to the <filename class=\"directory\">~/rpmbuild/SPECS/</filename> "
+"directory in the buildroot environment and run the following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After running the command, <application>rpmlint</application> will build "
+"binary packages with debugging information."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Change to the <filename class=\"directory\">~/rpmbuild/RPMS/"
+"<replaceable>architecture</replaceable>/</filename> directory to locate the "
+"binary packages that were built with <application>rpmlint</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To check the files and their permissions included in the binary packages, "
+"use the <command>rpmls</command> command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the included files and their permissions are correct, proceed with "
+"running the following command as root to install the included files:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After a successful installation, you can test the installed files on your "
+"system."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After you have finished testing of the installed files, run the following "
+"command to uninstall the previously installed packages:"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Testing a Package with Mock"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps show how to test a package with the help of <application>Mock</"
+"application>. <application>Mock</application> creates chroots and builds "
+"packages in them. Its only task is to reliably populate a chroot and attempt "
+"to build a package in that chroot. Use <application>Mock</application> to "
+"test that you have accurate definitions of the build dependencies in your "
+"spec file."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Testing a package with Mock"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As root, run the following command to add your normal user that you intend "
+"to use with <application>Mock</application> to the <systemitem>mock</"
+"systemitem> group:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Create a source package with the following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"where <replaceable>package.spec</replaceable> is the name of the spec file "
+"for your package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To test a package locally with <application>Mock</application>, run the "
+"following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"where <replaceable>config_name</replaceable> is the name of the "
+"configuration name. The configuration file name contains the name of the "
+"used system architecture and operating system (for example &MAJOROSVER;). "
+"Refer to the <filename class=\"directory\">/etc/mock/</filename> directory "
+"for a list of available configuration files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, to test the <package>~/rpmbuild/SRPMS/eject-2.1.5-0.1.&PKGOS;."
+"src.rpm</package> package for the AMD64 (x86_64) architecture on "
+"&MAJOROSVER;, run the following command:"
+msgstr ""
+

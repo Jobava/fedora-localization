@@ -1,0 +1,1027 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:06-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Work on an Orchestral Score (Tutorial)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Scenario: You volunteer at a community orchestra, and the conductor decides "
+"to play a Haydn symphony. The orchestra does not own any Haydn symphonies, "
+"so the conductor asks you if you can help to find a full score and parts. "
+"You find a book with the conductor's score, but no parts. You decide to "
+"input the score in LilyPond, which will allow you to easily create the "
+"missing parts."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This tutorial uses the first movement of Joseph Haydn's \"Sinfonia No. 92: "
+"Oxford.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When following this tutorial, it is recommended that the reader follows "
+"along, creating their replica of this tutorial's PDF."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Files for the Tutorial"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You do not need the <application>LilyPond</application> input file to do the "
+"tutorial. You do need the PDF output file to do the tutorial. Use the input "
+"file if you encounter problems, or to check your result."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>LilyPond Input File</citetitle> at <ulink url=\"http://docs."
+"fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/files/LilyPond/"
+"Orchestra-source.ly\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>PDF Output File</citetitle> at <ulink url=\"http://docs."
+"fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/files/LilyPond/"
+"Orchestra-result.pdf\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Start the Score"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "'LilyPond &gt; Setup New Score'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Titles and Headers\" Tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Dedication: Comte d'Ogny and Prince Oettingen-Wallerstein"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Title: Sinfonia No. 92"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Subtitle: \"Oxford\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Composer: Haydn, Joseph"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "all the rest are blank"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Parts\" Tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Flute, 2 of Oboe, Bassoon"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Horn in F, Trumpet in C"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Timpani"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Violin, Violin, Viola, Cello, Contrabass"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Score settings\" Tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Key signature: G Major"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Time signature: 3/4"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Tempo indication: Adagio"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"other settings as desired; I recommend not remocing bar numbers, and "
+"removing the default tagline"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click \"Try\" to see if it works. The instrument names will not be the same "
+"as the PDF score. This will be fixed later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"OK\" to generate the score."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adjust Frescobaldi's Output"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps are useful in establishing a consistent input style for LilyPond."
+" The things suggested here are also useful for getting used to working with "
+"large scores, which can be a challenge in any text editor. Thankfully, "
+"careful (and consistent!) code organization goes a long way in helping you "
+"to quickly find your way around your files. Setting up files the right way "
+"to begin with makes this much easier in the end."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you first setup the score, Frescobaldi will have created many sections "
+"for you by default. The program avoids making too many stylistic choices for "
+"you, which allows you to create your own style. It also sets up the default "
+"sections in a logical way:"
+msgstr ""
+
+#. Tag: literallayout
+#, no-c-format
+msgid ""
+"version\n"
+"			header\n"
+"			widely-used settings like tempoMark and \"global\"\n"
+"			individual parts\n"
+"			score formatting\n"
+"			"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The specific ordering will become more obvious to you as you get used to "
+"LilyPond."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Here are some of the things that I do before inputting notes:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use section-dividers (like <code>%%%%%%%% NOTES %%%%%%%%</code> for "
+"individual parts) to demarcate sections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use different levels of dividers (like <code>%%%% OBOE %%%%</code> for the "
+"oboe) to show sub-sections"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add blank lines between large sections, to separate them more obviously"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Begin braces on new lines, like"
+msgstr ""
+
+#. Tag: literallayout
+#, no-c-format
+msgid "\\header\n"
+"			{\n"
+"			  title = \"Symphony\"\n"
+"			  ...\n"
+"			}\n"
+"			"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "instead of on the same line, like"
+msgstr ""
+
+#. Tag: literallayout
+#, no-c-format
+msgid "\\header {\n"
+"			  title = \"Symphony\"\n"
+"			  ...\n"
+"			}\n"
+"			"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is simply a matter of personal taste, resulting from prior experience "
+"with C and C-like programming languages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Familiarize myself with the sections and commands created by Frescobaldi, "
+"getting a sense of what the section/command does (even if I don't understand "
+"what each specific command does). This makes it easier to sort out problems "
+"and customization down the road. Sometimes, when the setup is quite complex, "
+"I make comments about what seems to be going on."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Change the instrument names to replicate what my score indicates. You don't "
+"necessarily need to do this, so long as the people using your score will "
+"understand what the instruments are. Since my goal is to replicate this "
+"Dover edition score, I will change the names."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the \"PARTS\" section, each xPart section has an \"instrumentName = "
+"\"something\"\" field."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "We'll be changing those to the following Italian names:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Flute --&gt; Flauto"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Oboe I --&gt; I Oboe"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Oboe II --&gt; II Oboe"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Bassoon --&gt; 2 Fagotti"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Horn in F --&gt; 2 Corni in Sol (NB: these would have been \"natural "
+"horns\")"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Trumpet in C --&gt; 2 Clarini in Do (NB: a clarino is a kind of trumpet)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Violin I --&gt; Violino I"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Violin II --&gt; Violino II"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Cello --&gt; Violoncello obligato"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Contrabass --&gt; Basso"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now we have to change the horns' transposition to match the name. This is "
+"because Frescobaldi added a \"Horn in F\" part, which is the most common "
+"horn transposition. However, Haydn's score uses horns in G (or \"Sol\" in "
+"Italian)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Scroll up to the \"hornF\" section under the NOTES marker. Change the line "
+"<code>\\transposition f</code> to <code>\\transposition g</code>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As it turns out, transposition can be a little more complicated than that. "
+"We'll deal with that when we get there."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Input Notes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This tutorial offers step-by-step instructions representing one way to input "
+"the score. Only the part before \"Allegretto\" will be inputted. The full "
+"first movement is included in the PDF file, so you can input it yourself."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Start with the Easy Part"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The best way to get started on large scores is to just start with something "
+"easy. Nothing can be easier than doing nothing, so let's first input the "
+"multi-measure rests in the wind sections and timpani."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Count the number of measures of rests. In this case, all of the winds and "
+"the timpani have thirteen or more measures of rests before their first "
+"entrance."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Let's put in those thirteen measures first."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the NOTES section, find the flute section, and put in <code>R2.*13 |</"
+"code>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <literal>R</literal> symbol means \"full-bar rest\" (or \"full-measure "
+"rest\"). LilyPond draws full-bar rests differently than rests than rests "
+"that simply take up the length of a whole bar."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <literal>|</literal> symbol is a bar-check symbol. See <xref linkend="
+"\"sect-Musicians_Guide-LilyPond-Syntax-Avoiding_Errors-Bar_Check_Symbol\" /> "
+"for more information."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Copy and past that into the rest of the winds and the timpani."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The timpani and trumpet/clarini parts have six further full measures of "
+"rest, before the measure with a fermata. The fermata can't be included in "
+"the multi-measure rest, so we'll treat it separately. Add <code>R2.*6 |</"
+"code> to the timpani and trumpets parts."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The horns, bassoons, and second oboe have one further measure of rests, so "
+"add <code>R2. |</code> to those parts. Full-measure rests should always have "
+"a capital letter R. This tells LilyPond to properly center the rest in the "
+"bar."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Continue with the Wind and Timpani Parts"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now we need to start adding notes. We'll start with the parts that have only "
+"rests:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The trumpets and timpani have no notes in the slow introduction, so all they "
+"need is the three-beat measure with a fermata on the third beat."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Rests are notated as though they were a pitch called \"r\". That is to say, "
+"if you want to input a rest, then you input the pitch r. This three-quarter-"
+"rest measure will be notated as <code>r4 r r |</code>. Put this into the "
+"trumpets and timpani parts. Remember: it's always a good idea to indicate "
+"the duration at the beginning of a measure, but it's not necessary to "
+"indicate a repeated duration."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Frescobaldi allows you to insert common musical signs with the \"Quick "
+"Insert\" tab on the left of the screen. It may be hidden; to show it, click "
+"\"Quick Insert\" on the left-most edge of the Frescobaldi window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We need a regular fermata on the third quarter rest of this measure. So, "
+"place the text-input caret just after the third quarter rest, and click the "
+"fermata symbol in the \"Quick Insert\" toolbar-thing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You should end up with <code>r4 r r\\fermata |</code>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"While the word for a fermata symbol is easy to remember, other symbols have "
+"less-obvious LilyPond notations, so the \"Quick Insert\" toolbar-thing is "
+"very handy."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Copy this measure to the other part."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The next easiest part is the bassoons:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We've already input the bassoons' full-measure rests, so we can start with "
+"the first measure in which they play. It should be notated as <code>r8 d g "
+"bes d bes |</code>. Input this, and preview the score to see what happens."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Success! When first starting an instrument, it's important to check that the "
+"notes begin in the right register. If they don't, it can be adjusted easily "
+"by changing the pitch indication that follows the <code>\\relative</code> "
+"declaration. In this case, the bassoon happened to be in the right register "
+"for us by default."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next measure is <code>g8 cis cis4 r |</code>. Remember to indicate "
+"\"cis\" twice. Put it in and check that it's correct."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is, but we're still missing some formatting. Use the \"Quick Insert\" "
+"toolbar-thing to add staccato markings to the first measure. You can add a "
+"staccato to the eighth-rest, but this doesn't make sense, so you shouldn't."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Slurs begin at ( and end at ). Add a slur from the g to c-sharp."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Preview the score to make sure that you entered these articulations "
+"correctly. Your code should be:"
+msgstr ""
+
+#. Tag: literallayout
+#, no-c-format
+msgid "r8 d-. g-. bes-. d-. bes-. |\n"
+"				  g8( cis) cis4 r |"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now to add the \"forte\" marking. You can add text (or any object, for that "
+"matter) onto a note (or rest, etc.) with one of these three symbols:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "^ meaning \"put this above the object\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "- meaning \"put this above or below, as you think is best\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "_ meaning \"put this below the object\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As you saw earlier, Frescobaldi attached our staccato markings with the \"as "
+"you think best\" symbol, which is almost always the right choice for "
+"articulations. By convention, dynamic markings always go below the staff to "
+"which they apply, so we won't want to give LilyPond so much freedom, this "
+"time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The easiest way to add (unformatted) text to a note is to simply attach it "
+"in quotation marks. For the \"forte\" marking, put this on the eighth-rest: "
+"<code>r8_\"f\" <replaceable>and so on</replaceable></code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you preview this, you'll notice that the result is thoroughly "
+"underwhelming. It looks quite unlike a \"forte\" marking, and people reading "
+"the score would probably be confused, if just momentarily."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Thankfully, LilyPond provides a very easy and elegant way to input well-"
+"formatted dynamic markings. Change the eighth-rest to this: <code>r8\\f "
+"<replaceable>and so on</replaceable></code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you preview this, you will see that it now looks exactly like a typical "
+"\"forte\" marking. Not all dynamic markings have these short-forms, but most "
+"do."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"a 2\" marking, meaning \"to be played by two players,\" does need the "
+"text-in-quotes format, however. Put that marking <emphasis>above</emphasis> "
+"the d following the eighth rest."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Those two measures should now look like this:"
+msgstr ""
+
+#. Tag: literallayout
+#, no-c-format
+msgid "r8\\f d-.^\"a 2\" g-. bes-. d-. bes-. |\n"
+"				g8( cis) cis4 r |"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that <code>d-.^\"a 2\"</code> gives the same result as <code>d^\"a 2\"-."
+"</code>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Oboe and Horn Parts"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can complete the oboe parts and the flute part. If you get stuck, read "
+"these tips."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You will need to adjust the range of the flute and oboe, to read <code>flute "
+"= \\relative c'''</code> and <code>oboeI = \\relative c'''</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You may want to use [ and ] to control eighth-note beaming in the Oboe I and "
+"Flauto parts. You may not"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Flauto will need more multi-measure rests with R, <emphasis>after</"
+"emphasis> some of the notes are inputted."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All of the parts will end with the same three-quarter-note-rests-with-"
+"fermata measure."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"And now for the horns part. Transposing instruments pose a small problem for "
+"LilyPond, as with any human or computerized engraving tool. These steps "
+"first ensure that the transposition is set correctly."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"hornF\" section should already have a <code>\\transposition g</code> "
+"segment from earlier. This tells LilyPond that the following notes are not "
+"in concert pitch, but rather are \"in G.\" A transposition statement tells "
+"LilyPond, in absolute pitch, which pitch actually sounds when the player "
+"plays a written c' . In this case, the sound pitch is a perfect fourth below "
+"c' . If we wanted it to be a perfect fifth higher, then we would need to "
+"write <code>\\transposition g'</code>, but that's not accurate for this case."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Our next obstacle is not actually a problem with LilyPond, but with how "
+"Frescobaldi set up the score for us. The score that we wish to notate does "
+"not have a written key signature for the horn, but the \"global\" section "
+"(near the top of the file) includes one: G Major. If this score were "
+"particularly complicated, or if it contained a large number of transposing "
+"instruments, then it would be best to remove the <code>\\key g</code> "
+"declartion from the \"global\" section (and including it in every instrument "
+"as necessary). However, since there is only one transposing instrument, we "
+"might be better off simply removing the global from the horn."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "do the rest of this stuff to get that done right"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "make a note in the global section of which instruments don't use it"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"While you're at it, do the same for the trumpets and timpani parts, which "
+"also do not use a printed key signature."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The other issue with the horn part is that two pitches are to be played at "
+"once, and they are both notated in the same voice. This is solved in the "
+"piano example like this: <code>&lt;g g'&gt;</code>. You can copy-and-paste "
+"this as needed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You can now finish inputting the horn part."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Continue with the Strings"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After correctly finishing all of the wind and timpani parts, you can move on "
+"to the strings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Input all of the pitches and note lengths first, then return to fill in the "
+"other markings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you get stuck, then put in some filler notes, and finish the rest of that "
+"part. Make a note for yourself, as a comment in the source file, so that you "
+"know to return later to finish the part."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If twenty measures at once is too many, then break it into smaller chunks "
+"and input those."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Here are some tips to help you through this passage. Use the LilyPond help "
+"files if you need further assistance."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Tuplets (Triplets):"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To write any tuplet, use the formula <code>\\times x/y { notes in here }</"
+"code>, where x is the number of notes actually space to use, and y is the "
+"number of notes to let you display."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For an eighth-note triplet that takes up one beat, you might use this: "
+"<code>\\times 2/3 { c8 d e }</code>, because in the space of 2 eighth notes "
+"you want to fit three instead."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is much more powerful than it seems at first. You might want to make it "
+"seem as though the measures have stopped being marked, and write something "
+"like <code>\\times 4/40 { ... }</code>, which will allow you to fit forty of "
+"something into the number of beat usually occupied by four of them. This is "
+"especially useful with cadenzas, and cadenza-like passages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Short-term Polyphonic Input (Divisi):"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Anything between <literal>&lt;&lt;</literal> and <literal>&gt;&gt;</literal> "
+"is interpreted by LilyPond as happening together. If you take a look at the "
+"\"score\" section at the bottom of the file, you will see that all of the "
+"parts are listed in that kind of bracket. This ensures that they all happen "
+"simultaneously."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For short-term polyphonic input, use the formula <code>&lt;&lt; { upper-"
+"voice notes } \\\\ { lower-voice notes } &gt;&gt;</code>. Remember that the "
+"\"upper voice\" has upward-pointing stems, and the \"lower voice\" has "
+"downward-pointing stems."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ties: These can be written by adding ~ to the end of the note beginning the "
+"tie: <code>c4~ c8</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Grace Notes: These take up no logical time, and are smaller than ordinary "
+"notes. Any notes appearing <code>\\grace { in here }</code> would be "
+"considered grace notes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Crescendo and Diminuendo Markings:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These are added like other dynamic markings, attached with a backslash to "
+"the note where they begin. A crescendo is triggered with <literal>\\&lt;</"
+"literal> and a diminuendo with <literal>\\&gt;</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The left-most point of the marking (its beginning) is indicated by where you "
+"put <literal>\\&lt;</literal> or <literal>\\&gt;</literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The right-most (or end-)point is indicated by either another dynamic marking "
+"of any sort, or the special cancellation character <literal>\\!</literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Italic \"staccato\" Text: <code>\\markup { \\italic { staccato } }</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Source File Measure Numbers: One of the techniques that can be used when "
+"inputting larger scores is writing measure numbers into the source file as "
+"comments. I usually write measure numbers every five measures, but it "
+"depends on the speed of the music, and what seems like it's useful."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Continue to the Fast Section"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to finish inputting the first movement, as an exercise, then you "
+"will also need to know how to write a tempo-change in an orchestral score:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to continue, we'll need to include a special measure-line (barline) "
+"and a change-of-tempo indicator. This would be easy, and would display "
+"correctly, if we simply inputted the change in one particular voice. "
+"However, if we did that, the change would only appear in one of the "
+"orchestral parts exported from the score."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We're going to define a new whatever-thing, like the \"global\" section "
+"created for us by Frescobaldi, and include it in all of the parts."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The code needed for this is a little bit complicated, but you don't need to "
+"write it yourself: just take it from the \"tempoMark\" section created by "
+"Frescobaldi. All you need to do is change \"Adagio\" to \"Allegro "
+"spiritoso,\" and add the barline indicator. This is also easy because of "
+"Frescobaldi: 'LilyPond &gt; Bar Lines &gt; Repeat start'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You end up with"
+msgstr ""
+
+#. Tag: literallayout
+#, no-c-format
+msgid ""
+"startExposition =\n"
+"				{\n"
+"				  \\once \\override Score.RehearsalMark #'self-alignment-X = #LEFT\n"
+"				  \\once \\override Score.RehearsalMark #'break-align-symbols = #'(time-"
+"signature key-signature)\n"
+"				  \\mark \\markup \\bold \"Allegro spiritoso\"\n"
+"				  \\bar \"|:\"\n"
+"				}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add the reference to this in all of your parts. Because of how I named it, "
+"this also serves as a handy way to find your way through the LilyPond markup "
+"file."
+msgstr ""
+
+#. Tag: literallayout
+#, no-c-format
+msgid "  r4 r r\\fermata |\n"
+"\n"
+"				  \\startExposition\n"
+"\n"
+"				  R2.*4 |"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The barline and tempo-change will not appear unless you write some music "
+"after them, so put in some or all of the rests that follow, just to test it."
+msgstr ""
+

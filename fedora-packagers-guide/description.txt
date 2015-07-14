@@ -1,0 +1,3 @@
+A guide to software packaging for Fedora 
+
+https://git.fedorahosted.org/git/docs/packagers-guide.git

@@ -1,0 +1,4 @@
+Using Fedora with a visual, hearing, or mobility impairment 
+
+https://fedorahosted.org/accessibility-guide/
+https://git.fedorahosted.org/git/docs/accessibility-guide.git

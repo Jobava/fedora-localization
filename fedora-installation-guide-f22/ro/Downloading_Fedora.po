@@ -1,0 +1,192 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-06-04 12:55+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+msgid "Downloading Fedora"
+msgstr ""
+
+msgid "Fedora Flavors"
+msgstr ""
+
+msgid ""
+"Fedora provides three primary flavors tailored for some specific use cases. "
+"<ulink url=\"https://getfedora.org\" /> offers Fedora Cloud for scalable "
+"infrastructure, Fedora Server for organizational infrastructure, and Fedora "
+"Workstation for the developer and desktop user."
+msgstr ""
+
+msgid ""
+"For alternative desktop environments or media built for more niche purposes, "
+"check out <ulink url=\"https://spins.fedoraproject.org\">Fedora Spins</"
+"ulink>."
+msgstr ""
+
+msgid ""
+"Each of these downloads provides a different set of default packages, but "
+"you can add to your system after the initial installation to customize it "
+"for your needs. The installation process is the same for all spins and "
+"flavors, so you can use this guide for any choice you make."
+msgstr ""
+
+msgid "Which Architecture Is My Computer?"
+msgstr ""
+
+msgid ""
+"Most modern systems are 64&nbsp;bit x86 architecture. If your computer was "
+"manufactured after 2007, or you aren't sure, you probably have a "
+"<literal>x86_64</literal> system."
+msgstr ""
+
+msgid ""
+"Changing a Fedora installation from one architecture to another is not "
+"supported. Use the following table to determine the architecture of your "
+"computer according to the type of processor. Consult your manufacturer's "
+"documentation for details on your processor, or resources such as <ulink url="
+"\"http://ark.intel.com/\" /> or <ulink url=\"http://products.amd.com/\" />, "
+"if necessary."
+msgstr ""
+
+msgid "Processor and architecture types"
+msgstr ""
+
+msgid "Processor manufacturer and model"
+msgstr ""
+
+msgid "Architecture type for Fedora"
+msgstr ""
+
+msgid ""
+"some Intel Atom, Core series, Pentium 4, and recent vintage Xeon; AMD "
+"Athlon, Duron, some Semprons; and older; VIA C3, C7"
+msgstr ""
+
+msgid "<systemitem>i386</systemitem>"
+msgstr ""
+
+msgid ""
+"some Intel Atom, Core 2 series, Core i series and Xeon; AMD: Athlon 64, "
+"Athlon II, Sempron64, Phenom series, Fusion series, Bulldozer series and "
+"Opteron; Apple MacBook, MacBook Pro, and MacBook Air"
+msgstr ""
+
+msgid "<systemitem>x86_64</systemitem>"
+msgstr ""
+
+msgid "Media Types"
+msgstr ""
+
+msgid ""
+"Several media types are available. Choose the one that best suits your "
+"requirements."
+msgstr ""
+
+msgid "Live Image"
+msgstr ""
+
+msgid ""
+"Live images allow you to preview Fedora before installing it. Instead of "
+"booting directly into the installer, a live image loads the same environment "
+"you'll get after installation. Fedora Workstation and Fedora Spins are live "
+"images."
+msgstr ""
+
+msgid ""
+"Use a live image to install your favorite system, test Fedora on new "
+"hardware, troubleshoot, or share with friends."
+msgstr ""
+
+msgid "DVD Image"
+msgstr ""
+
+msgid ""
+"DVD images boot directly into the installation enviroment, and allow you to "
+"choose from a variety of packages that are provided with it. In Fedora 21, "
+"the DVD option is only available in the <productname>Fedora Server</"
+"productname> flavor."
+msgstr ""
+
+msgid ""
+"Use the Fedora Server DVD image when you want customized Fedora Server "
+"installations using an offline installation source."
+msgstr ""
+
+msgid "netinstall Image"
+msgstr ""
+
+msgid ""
+"The netinstall image boots directly into the installation environment, and "
+"uses the online Fedora package repositories as the installation source. With "
+"a netinstall image, you can select a wide variety of packages to create a "
+"customized installation of Fedora."
+msgstr ""
+
+msgid ""
+"The Fedora Server netinstall image is a universal one, and can be used to "
+"install any Fedora flavor or your own set of favorite packages."
+msgstr ""
+
+msgid "ARM images"
+msgstr ""
+
+msgid ""
+"For many ARM systems, Fedora provides preconfigured filesystem images. Write "
+"the image to removable media and boot directly into a Fedora installation "
+"that's ready to use."
+msgstr ""
+
+msgid ""
+"ARM devices often require special setup procedures that aren't covered in "
+"this guide. Start learning about Fedora ARM at <ulink url=\"https://"
+"fedoraproject.org/wiki/Architectures/ARM\" />"
+msgstr ""
+
+msgid "Cloud Images"
+msgstr ""
+
+msgid ""
+"Fedora Cloud images are preconfigured filesystem images with very few "
+"packages installed by default. They include special tools for interacting "
+"with cloud platforms, and are not intended to be used outside of cloud "
+"environments."
+msgstr ""
+
+msgid ""
+"Fedora Cloud comes in several varieties. The Fedora Cloud Base image is a "
+"minimal base for cloud deployments. The Fedora Cloud Atomic image is a "
+"Docker container host that uses <ulink url=\"http://www.projectatomic.io/"
+"\">Project Atomic</ulink> technology for updates. A Docker base image for "
+"Fedora is also available."
+msgstr ""
+
+msgid ""
+"Cloud images are preconfigured and do not require installation as described "
+"in this guide. Get started using Fedora Cloud at <ulink url=\"http://"
+"fedoraproject.org/wiki/Cloud\" />"
+msgstr ""
+
+msgid "Boot Images"
+msgstr ""
+
+msgid ""
+"The tiny images at <ulink url=\"https://boot.fedoraproject.org/\" /> are "
+"written to CDs, USB drives, or even floppy disks. The BFO image loads "
+"installation media from Fedora's servers and directly loads an installation "
+"environment, like the netinstall ISO."
+msgstr ""
+
+msgid ""
+"BFO images work like PXE deployments, without having to set up a server."
+msgstr ""
+

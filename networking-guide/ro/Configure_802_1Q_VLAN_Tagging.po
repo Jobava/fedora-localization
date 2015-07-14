@@ -1,0 +1,929 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Configure 802.1Q VLAN tagging"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a VLAN, an interface is created on another interface referred to "
+"as the <firstterm>parent interface</firstterm>. The VLAN interface will tag "
+"packets with the VLAN ID as they pass through the interface, and returning "
+"packets will be untagged. VLAN interface can be configured similarly to any "
+"other interface. The parent interface need not be an Ethernet interface. An "
+"802.1Q VLAN tagging interface can be created on bridge, bond, and team "
+"interfaces, however there are some things to note:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the case of VLANs over bonds, it is important that the bond has slaves "
+"and that they are <quote>up</quote> before bringing up the VLAN interface. "
+"At the time of writing, adding a VLAN interface to a bond without slaves "
+"does not work."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A VLAN slave cannot be configured on a bond with the <option>fail_over_mac="
+"follow</option> option, because the VLAN virtual device cannot change its "
+"MAC address to match the parent's new MAC address. In such a case, traffic "
+"would still be sent with the now incorrect source MAC address."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sending VLAN tagged packets through a network switch requires configuration "
+"of the switch. Refer to the documentation for the switch. For example, for "
+"Cisco switches the port must be assigned to one VLAN or configured to be a "
+"trunk port to accept tagged packets for multiple VLANs. Untagged packets can "
+"also be processed by a trunk port and processed as belonging to the "
+"<firstterm>native VLAN</firstterm>, however this is a security risk and may "
+"have been disabled, or by default not enabled, depending on the make of the "
+"switch."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Some older network interface cards, loopback interfaces, Wimax cards, and "
+"some InfiniBand devices, are said to be <firstterm>VLAN challenged</"
+"firstterm>, meaning they cannot support VLANs. This is usually because the "
+"devices cannot cope with VLAN headers and the larger MTU size associated "
+"with tagged packets."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Selecting VLAN Interface Configuration Methods"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">To configure a network using graphical user "
+"interface tools</emphasis>, proceed to <xref linkend=\"sec-"
+"Configure_802_1Q_VLAN_Tagging_Using_a_GUI\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">To configure a VLAN interface using</emphasis> "
+"<application>NetworkManager</application>'s command-line tool, "
+"<application>nmcli</application>, proceed to <xref linkend=\"sec-"
+"Configure_802_1Q_VLAN_Tagging_Using_the_Command_Line_Tool_nmcli\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<emphasis role=\"bold\">To configure a network interface manually</"
+"emphasis>, see <xref linkend=\"sec-"
+"Configure_802_1Q_VLAN_Tagging_Using_the_Command_Line\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure 802.1Q VLAN Tagging Using a GUI"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Establishing a VLAN Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use the GNOME <application>control-center</application> utility to "
+"direct <application>NetworkManager</application> to create a VLAN using an "
+"existing interface as the parent interface. At time of writing, you can only "
+"make VLANs on Ethernet devices. Note that VLAN devices are only created "
+"automatically if the parent interface is set to connect automatically."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adding a New VLAN Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can configure a VLAN connection by opening the <guilabel>Network</"
+"guilabel> window, clicking the plus symbol, and selecting <guilabel>VLAN</"
+"guilabel> from the list."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Press the <keycap>Super</keycap> key to enter the Activities Overview, type "
+"<command>control network</command> and then press <keycap>Enter</keycap>. "
+"The <guilabel>Network</guilabel> settings tool appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the plus symbol to open the selection list. Select <guilabel>VLAN</"
+"guilabel>. The <guilabel>Editing VLAN Connection <replaceable>1</"
+"replaceable></guilabel> window appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the <guilabel>VLAN</guilabel> tab, select the parent interface from the "
+"drop-down list you want to use for the VLAN connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Enter the VLAN ID"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Enter a VLAN interface name. This is the name of the VLAN interface that "
+"will be created. For example, <literal>eth0.1</literal> or <literal>vlan2</"
+"literal>. (Normally this is either the parent interface name plus "
+"<quote><literal>.</literal></quote> and the VLAN ID, or "
+"<quote><literal>vlan</literal></quote> plus the VLAN ID.)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Review and confirm the settings and then click the <guilabel>Save</guilabel> "
+"button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To edit the VLAN-specific settings see <xref linkend=\"sec-"
+"Configuring_the_VLAN_Tab\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Editing an Existing VLAN Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Follow these steps to edit an existing VLAN connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the connection you want to edit and click the <guilabel>Options</"
+"guilabel> button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the <guilabel>General</guilabel> tab."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Configure the connection name, auto-connect behavior, and availability "
+"settings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These settings in the <guilabel>Editing</guilabel> dialog are common to all "
+"connection types:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Connection name</guilabel> — Enter a descriptive name for your "
+"network connection. This name will be used to list this connection in the "
+"<guilabel>VLAN</guilabel> section of the <guilabel>Network</guilabel> window."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Automatically connect to this network when it is available</"
+"guilabel> — Select this box if you want <application>NetworkManager</"
+"application> to auto-connect to this connection when it is available. Refer "
+"to <xref linkend=\"sec-Connecting_to_a_Network_Automatically\" /> for more "
+"information."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Available to all users</guilabel> — Select this box to create a "
+"connection available to all users on the system. Changing this setting may "
+"require root privileges. Refer to <xref linkend=\"sec-System-"
+"wide_and_Private_Connection_Profiles\" /> for details."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid ""
+"Saving Your New (or Modified) Connection and Making Further Configurations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once you have finished editing your VLAN connection, click the "
+"<guibutton>Save</guibutton> button to save your customized configuration. If "
+"the profile was in use while being edited, power cycle the connection to "
+"make <application>NetworkManager</application> apply the changes. If the "
+"profile is OFF, set it to ON. See <xref linkend=\"sec-"
+"Connecting_to_a_Network_Using_a_GUI\" /> for information on using your new "
+"or altered connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can further configure an existing connection by selecting it in the "
+"<guilabel>Network</guilabel> window and clicking <guilabel>Options</"
+"guilabel> to return to the <guilabel>Editing</guilabel> dialog."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then, to configure:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"IPv4 settings for the connection, click the <guilabel>IPv4 Settings</"
+"guilabel> tab and proceed to <xref linkend=\"sec-Configuring_IPv4_Settings\" "
+"/>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring the VLAN Tab"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have already added a new VLAN connection (refer to <xref linkend="
+"\"procedure-Adding_a_New_VLAN_Connection\" /> for instructions), you can "
+"edit the <guilabel>VLAN</guilabel> tab to set the parent interface and the "
+"VLAN ID."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Parent Interface</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A previously configured interface can be selected in the drop-down list."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>VLAN ID</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The identification number to be used to tag the VLAN network traffic."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>VLAN interface name</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The name of the VLAN interface that will be created. For example, "
+"<literal>eth0.1</literal> or <literal>vlan2</literal>."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Cloned MAC address</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Optionally sets an alternate MAC address to use for identifying the VLAN "
+"interface. This can be used to change the source MAC address for packets "
+"sent on this VLAN."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>MTU</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Optionally sets a Maximum Transmission Unit (MTU) size to be used for "
+"packets to be sent over the VLAN connection."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure 802.1Q VLAN Tagging Using the Command Line"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora, the <systemitem class=\"resource\">8021q</systemitem> module is "
+"loaded by default. If necessary, you can make sure that the module is loaded "
+"by issuing the following command as <systemitem class=\"username\">root</"
+"systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>modprobe --first-time 8021q</command>\n"
+"modprobe: ERROR: could not insert '8021q': Module already in kernel"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To display information about the module, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>modinfo 8021q</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See the <filename>modprobe(8)</filename> man page for more command options."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Setting Up 802.1Q VLAN Tagging Using ifcfg Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Configure the parent interface in <filename>/etc/sysconfig/network-scripts/"
+"ifcfg-eth<replaceable>X</replaceable></filename>, where <replaceable>X</"
+"replaceable> is a unique number corresponding to a specific interface, as "
+"follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "DEVICE=ethX\n"
+"TYPE=Ethernet\n"
+"BOOTPROTO=none\n"
+"ONBOOT=yes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Configure the VLAN interface configuration in the <filename class="
+"\"directory\">/etc/sysconfig/network-scripts/</filename> directory. The "
+"configuration file name should be the parent interface plus a <literal>.</"
+"literal> character plus the VLAN ID number. For example, if the VLAN ID is "
+"192, and the parent interface is <replaceable>eth0</replaceable>, then the "
+"configuration file name should be <filename>ifcfg-eth0.192</filename>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"DEVICE=ethX.192\n"
+"BOOTPROTO=none\n"
+"ONBOOT=yes\n"
+"IPADDR=192.168.1.1\n"
+"PREFIX=24\n"
+"NETWORK=192.168.1.0\n"
+"VLAN=yes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If there is a need to configure a second VLAN, with for example, VLAN ID "
+"193, on the same interface, <replaceable>eth0</replaceable>, add a new file "
+"with the name <filename>eth0.193</filename> with the VLAN configuration "
+"details."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Restart the networking service in order for the changes to take effect. As "
+"<systemitem class=\"username\">root</systemitem> issue the following command:"
+""
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>systemctl restart network</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure 802.1Q VLAN Tagging Using ip Commands"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create an 802.1Q VLAN interface on Ethernet interface <replaceable>eth0</"
+"replaceable>, with name <replaceable>VLAN8</replaceable> and ID <literal>8</"
+"literal>, issue a command as <systemitem class=\"username\">root</"
+"systemitem> as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>ip link add link <replaceable>eth0</replaceable> name "
+"<replaceable>eth0.8</replaceable> type vlan id 8</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To view the VLAN, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>ip -d link show <replaceable>eth0.8</replaceable></"
+"command>\n"
+"4: eth0.8@eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc "
+"noqueue state UP mode DEFAULT\n"
+"     link/ether 52:54:00:ce:5f:6c brd ff:ff:ff:ff:ff:ff promiscuity 0\n"
+"     vlan protocol 802.1Q id 8 &lt;REORDER_HDR&gt;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that the <application>ip</application> utility interprets the VLAN ID "
+"as a hexadecimal value if it is preceded by <literal>0x</literal> and as an "
+"octal value if it has a leading <literal>0</literal>. This means that in "
+"order to assign a VLAN ID with a decimal value of <literal>22</literal>, you "
+"must not add any leading zeros."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To remove the VLAN, issue a command as <systemitem class=\"username\">root</"
+"systemitem> as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>ip link delete <replaceable>eth0.8</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"VLAN interfaces created using <application>ip</application> commands at the "
+"command prompt will be lost if the system is shutdown or restarted. To "
+"configure VLAN interfaces to be persistent after a system restart, use "
+"<filename>ifcfg</filename> files. See <xref linkend=\"sec-Setting_Up_802."
+"1Q_VLAN_Tagging_Using_ifcfg_Files\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure 802.1Q VLAN Tagging Using the Command Line Tool, nmcli"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view the available interfaces on the system, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con show</command>\n"
+"NAME         UUID                                  TYPE            DEVICE\n"
+"System eth1  9c92fad9-6ecb-3e6c-eb4d-8a47c6f50c04  802-3-ethernet  eth1\n"
+"System eth0  5fb06bd0-0bb0-7ffb-45f1-d6edd65f3e03  802-3-ethernet  eth0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that the NAME field in the output always denotes the connection ID. It "
+"is not the interface name even though it might look the same. The ID can be "
+"used in <command>nmcli connection</command> commands to identify a "
+"connection. Use the DEVICE name with other applications such as <systemitem "
+"class=\"daemon\">firewalld</systemitem>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create an 802.1Q VLAN interface on Ethernet interface <replaceable>eth0</"
+"replaceable>, with VLAN interface <replaceable>VLAN10</replaceable> and ID "
+"<literal>10</literal>, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type vlan ifname <replaceable>VLAN10</"
+"replaceable> dev <replaceable>eth0</replaceable> id 10</command>\n"
+"Connection 'vlan-VLAN10' (37750b4a-8ef5-40e6-be9b-4fb21a4b6d17) successfully "
+"added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that as no <option>con-name</option> was given for the VLAN interface, "
+"the name was derived from the interface name by prepending the type. "
+"Alternatively, specify a name with the <option>con-name</option> option as "
+"follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type vlan con-name <replaceable>VLAN12</"
+"replaceable> dev <replaceable>eth0</replaceable> id 12</command>\n"
+"Connection 'VLAN12' (b796c16a-9f5f-441c-835c-f594d40e6533) successfully "
+"added."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid "Assigning Addresses to VLAN Interfaces"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use the same <application>nmcli</application> commands to assign "
+"static and dynamic interface addresses as with any other interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, a command to create a VLAN interface with a static <systemitem "
+"class=\"protocol\">IPv4</systemitem> address and gateway is as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type vlan con-name <replaceable>VLAN20</"
+"replaceable> ifname <replaceable>eth0</replaceable> ip4 10.10.10.10/24 \\</"
+"command>\n"
+"<command>gw4 10.10.10.254</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a VLAN interface with dynamically assigned addressing, issue a "
+"command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type vlan con-name <replaceable>VLAN30</"
+"replaceable> ifname <replaceable>eth0</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See <xref linkend=\"sec-Connecting_to_a_Network_Using_nmcli\" /> for "
+"examples of using <application>nmcli</application> commands to configure "
+"interfaces."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To review the VLAN interfaces created, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con show</command>\n"
+"NAME         UUID                                  TYPE            DEVICE\n"
+"VLAN12       4129a37d-4feb-4be5-ac17-14a193821755  vlan            eth0.12\n"
+"System eth1  9c92fad9-6ecb-3e6c-eb4d-8a47c6f50c04  802-3-ethernet  eth1\n"
+"System eth0  5fb06bd0-0bb0-7ffb-45f1-d6edd65f3e03  802-3-ethernet  eth0\n"
+"vlan-VLAN10  1be91581-11c2-461a-b40d-893d42fed4f4  vlan            VLAN10"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view detailed information about the newly configured connection, issue a "
+"command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli -p con show <replaceable>VLAN12</replaceable></"
+"command>\n"
+"============================================================================="
+"==\n"
+"                      Connection profile details (VLAN12)\n"
+"============================================================================="
+"==\n"
+"connection.id:                          VLAN12\n"
+"connection.uuid:                        4129a37d-4feb-4be5-ac17-14a193821755\n"
+"connection.interface-name:              --\n"
+"connection.type:                        vlan\n"
+"connection.autoconnect:                 yes\n"
+msgstr ""
+
+#. Tag: lineannotation
+#, no-c-format
+msgid "…"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"-----------------------------------------------------------------------------"
+"--\n"
+"802-3-ethernet.port:                    --\n"
+"802-3-ethernet.speed:                   0\n"
+"802-3-ethernet.duplex:                  --\n"
+"802-3-ethernet.auto-negotiate:          yes\n"
+"802-3-ethernet.mac-address:             --\n"
+"802-3-ethernet.cloned-mac-address:      --\n"
+"802-3-ethernet.mac-address-blacklist:   \n"
+"802-3-ethernet.mtu:                     auto\n"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"           \n"
+"vlan.interface-name:                    --\n"
+"vlan.parent:                            eth0\n"
+"vlan.id:                                12\n"
+"vlan.flags:                             0 (NONE)\n"
+"vlan.ingress-priority-map:              \n"
+"vlan.egress-priority-map:               \n"
+"-----------------------------------------------------------------------------"
+"--\n"
+"============================================================================="
+"==\n"
+"      Activate connection details (4129a37d-4feb-4be5-ac17-14a193821755)\n"
+"============================================================================="
+"==\n"
+"GENERAL.NAME:                           VLAN12\n"
+"GENERAL.UUID:                           4129a37d-4feb-4be5-ac17-14a193821755\n"
+"GENERAL.DEVICES:                        eth0.12\n"
+"GENERAL.STATE:                          activating\n"
+msgstr ""
+
+#. Tag: lineannotation
+#, no-c-format
+msgid "[output truncated]"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Further options for the VLAN command are listed in the VLAN section of the "
+"<filename>nmcli(1)</filename> man page. In the man pages the device on which "
+"the VLAN is created is referred to as the parent device. In the example "
+"above the device was specified by its interface name, <literal>eth0</"
+"literal>, it can also be specified by the connection UUID or MAC address."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create an 802.1Q VLAN connection profile with ingress priority mapping on "
+"Ethernet interface <replaceable>eth1</replaceable>, with name "
+"<interface>VLAN1</interface> and ID <literal>13</literal>, issue a command "
+"as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type vlan con-name <replaceable>VLAN1</"
+"replaceable> dev <replaceable>eth2</replaceable> id 13 ingress \"2:3,3:5\"</"
+"command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To view all the parameters associated with the VLAN created above, issue a "
+"command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli connection show <replaceable>vlan-VLAN10</"
+"replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To change the MTU, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli connection modify <replaceable>vlan-VLAN10</"
+"replaceable> 802.mtu 1496</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The MTU setting determines the maximum size of the network layer packet. The "
+"maximum size of the payload the link-layer frame can carry in turn limits "
+"the network layer MTU. For standard Ethernet frames this means an MTU of "
+"1500 bytes. It should not be necessary to change the MTU when setting up a "
+"VLAN as the link-layer header is increased in size by 4 bytes to accommodate "
+"the 802.1Q tag."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At time of writing, <literal>connection.interface-name</literal> and "
+"<literal>vlan.interface-name</literal> have to be the same (if they are set)."
+" They must therefore be changed simultaneously using <application>nmcli</"
+"application>'s interactive mode. To change a VLAN connections name, issue "
+"commands as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con edit <replaceable>vlan-VLAN10</replaceable></"
+"command>\n"
+"nmcli&gt; <command>set vlan.interface-name <replaceable>superVLAN</"
+"replaceable></command>\n"
+"nmcli&gt; <command>set connection.interface-name <replaceable>superVLAN</"
+"replaceable></command>\n"
+"nmcli&gt; <command>save</command>\n"
+"nmcli&gt; <command>quit</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>nmcli</application> utility can be used to set and clear "
+"<literal>ioctl</literal> flags which change the way the 802.1Q code "
+"functions. The following VLAN flags are supported by "
+"<application>NetworkManager</application>:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "0x01 - reordering of output packet headers"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "0x02 - use GVRP protocol"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "0x04 - loose binding of the interface and its master"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The state of the VLAN is synchronized to the state of the parent or master "
+"interface (the interface or device on which the VLAN is created). If the "
+"parent interface is set to the <quote>down</quote> administrative state then "
+"all associated VLANs are set down and all routes are flushed from the "
+"routing table. Flag <literal>0x04</literal> enables a <firstterm>loose "
+"binding</firstterm> mode, in which only the operational state is passed from "
+"the parent to the associated VLANs, but the VLAN device state is not changed."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To set a VLAN flag, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli connection modify vlan-VLAN10 vlan.flags 1</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See <xref linkend=\"sec-Using_the_NetworkManager_Command_Line_Tool_nmcli\" /"
+"> for an introduction to <application>nmcli</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Additional Resources"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following sources of information provide additional resources regarding "
+"Network Teaming."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installed Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>ip-link(8)</filename> man page — Describes the <application>ip</"
+"application> utility's network device configuration commands."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>nmcli(1)</filename> man page — Describes "
+"<application>NetworkManager</application>'s command‐line tool."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>nmcli-examples(5)</filename> man page — Gives examples of "
+"<application>nmcli</application> commands."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>nm-settings(5)</filename> man page — Description of settings and "
+"parameters of <application>NetworkManager</application> connections."
+msgstr ""
+

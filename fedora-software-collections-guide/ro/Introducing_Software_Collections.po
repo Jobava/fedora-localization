@@ -1,0 +1,523 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Software Collections Guide\n"
+"POT-Creation-Date: 2014-03-23 20:52+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Introducing &DSCL;s"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This chapter introduces you to the concept and usage of &DSCL;s or &DSC;s "
+"for short."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Why Package Software with RPM?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The RPM Package Manager (RPM) is a package management system that runs on "
+"&MAJOROS;. RPM makes it easier for you to distribute, manage, and update "
+"software that you create for Fedora or Enterprise Linux. Many software "
+"vendors distribute their software via a conventional archive file (such as a "
+"tarball). However, there are several advantages in packaging software into "
+"RPM packages. These advantages are outlined below."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "With RPM, you can:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Install, reinstall, remove, upgrade and verify packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Users can use standard package management tools (for example "
+"<application>Yum</application> or <application>PackageKit</application>) to "
+"install, reinstall, remove, upgrade and verify your RPM packages."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Use a database of installed packages to query and verify packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Because RPM maintains a database of installed packages and their files, "
+"users can easily query and verify packages on their system."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"Use metadata to describe packages, their installation instructions, and so "
+"on."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each RPM package includes metadata that describes the package's components, "
+"version, release, size, project URL, installation instructions, and so on."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Package pristine software sources into source and binary packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"RPM allows you to take pristine software sources and package them into "
+"source and binary packages for your users. In source packages, you have the "
+"pristine sources along with any patches that were used, plus complete build "
+"instructions. This design eases the maintenance of the packages as new "
+"versions of your software are released."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Add packages to Yum repositories."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can add your package to a <application>Yum</application> repository that "
+"enables clients to easily find and deploy your software."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Digitally sign your packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Using a GPG signing key, you can digitally sign your package so that users "
+"are able to verify the authenticity of the package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For in-depth information on what is RPM and how to use it, refer to the "
+"<ulink url=\"http://docs.fedoraproject.org/en-US/Fedora/18/html/"
+"System_Administrators_Guide/index.html\">Fedora 18 System Administrator's "
+"Guide</ulink>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "What Are &DSCL;s?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With &DSCL;s, you can build and concurrently install multiple versions of "
+"the same software components on your system. &DSCL;s have no impact on the "
+"system versions of the packages installed by any of the conventional RPM "
+"package management utilities."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL;s:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Do not overwrite system files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"&DSCL;s are distributed as a set of several components, which provide their "
+"full functionality without overwriting system files."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Are designed to avoid conflicts with system files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"&DSCL;s make use of a special file system hierarchy to avoid possible "
+"conflicts between a single &DSCL; and the base system installation."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Require no changes to the RPM package manager"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"&DSCL;s require no changes to the RPM package manager present on the host "
+"system."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Need only minor changes to the spec file"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To convert a conventional package to a single &DSCL;, you only need to make "
+"minor changes to the package spec file."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"Allow you to build a conventional package and a &DSCL; package with a single "
+"spec file"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With a single spec file, you can build both the conventional package and the "
+"&DSCL; package."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"Allow you to use a spec file from one &DSCL; to build a different &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use a single spec file from one &DSCL; to build a different &DSCL;."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Uniquely name all included packages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With &DSCL;'s namespace, all packages included in the &DSCL; are uniquely "
+"named."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Do not conflict with updated packages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"&DSCL;'s namespace ensures that updating packages on your system causes no "
+"conflicts."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Can depend on other &DSCL;s"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Because one &DSCL; can depend on another, you can define multiple levels of "
+"dependencies."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Enabling Support for &DSCL;s"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To enable support for &DSCL;s on your system so that you can enable and "
+"build &DSCL;s, you need to have installed the packages <package>scl-utils</"
+"package> and <package>scl-utils-build</package>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the packages <package>scl-utils</package> and <package>scl-utils-build</"
+"package> are not already installed on your system, you can install them by "
+"typing the following at a shell prompt as root:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>yum install scl-utils scl-utils-build</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <package>scl-utils</package> package provides the <application>scl</"
+"application> tool that lets you enable &DSCL;s on your system. For more "
+"information on enabling &DSCL;s, refer to <xref linkend=\"sect-"
+"Enabling_the_Software_Collection\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <package>scl-utils-build</package> package provides macros that are "
+"essential for building &DSCL;s. For more information on building &DSCL;s, "
+"refer to <xref linkend=\"sect-Building_a_Software_Collection_Locally\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installing a &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To ensure that a &DSCL; is on your system, install the so-called metapackage "
+"of the &DSCL;. You can use conventional tools like <application>Yum</"
+"application> or <application>PackageKit</application> for this task because "
+"&DSCL;s are fully compatible with the RPM Package Manager."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, to install a &DSCL; with the metapackage named "
+"<code>software_collection_1</code>, run the following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This command will automatically install all the packages that are part of "
+"the &DSCL;. Also, if you install an application that depends on a &DSCL;, "
+"the &DSCL; will be installed along with the rest of the application's "
+"dependencies."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For detailed information on &DSCL; metapackages, see <xref linkend=\"sect-"
+"Meta_Package\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For detailed information on <application>Yum</application> and "
+"<application>PackageKit</application> usage, see the <ulink url=\"http://"
+"docs.fedoraproject.org/en-US/Fedora/18/html/System_Administrators_Guide/"
+"index.html\">Fedora 18 System Administrator's Guide</ulink>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Listing Installed &DSCL;s"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To get a list of &DSCL;s that are currently installed on the system, run the "
+"following command:"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Enabling a &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>scl</application> tool is used to enable a &DSCL; and to "
+"run applications in the &DSCL; environment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"General usage of the <application>scl</application> tool can be described "
+"using the following syntax:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When executing the command, the <application>scl</application> tool creates "
+"a child process (subshell) of the current shell. Running the command again "
+"then creates a subshell of the subshell."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See <xref linkend=\"sect-Listing_Enabled_Software_Collections\" /> for "
+"information on how to list enabled &DSCL;s for the current subshell."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that you have to disable an enabled &DSCL; first to be able to enable "
+"it again. To disable the &DSCL;, exit the subshell created when enabling the "
+"&DSCL;s."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When using the <application>scl</application> tool to enable a &DSCL;, you "
+"can only perform one action with the enabled &DSCL; at a time. The enabled "
+"&DSCL; must be disabled first before performing another action."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Running an Application Directly"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, to directly run <application>Perl</application> with the "
+"<option>--version</option> option in the &DSCL; named "
+"<application>software_collection_1</application>, execute the following "
+"command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Alternatively, you can create a wrapper script that shortens the commands "
+"for running applications in the &DSCL; environment. For more information on "
+"wrappers, see <xref linkend=\"sect-"
+"Packaging_Wrappers_for_Software_Collections\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Running a Shell with Multiple &DSCL;s Enabled"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To run the <application>Bash</application> shell in the environment with "
+"multiple &DSCL;s enabled, execute the following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The command above enables two &DSCL;s, named "
+"<application>software_collection_1</application> and "
+"<application>software_collection_2</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Running Commands Stored in a File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To execute a number of commands, which are stored in a file, in the &DSCL; "
+"environment, run the following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The command above executes commands, which are stored in the <filename>cmd</"
+"filename> file, in the environment of the &DSCL; named "
+"<application>software_collection_1</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Listing Enabled &DSCL;s"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To get a list of &DSCL;s that are enabled in the current session, print the "
+"<envar>$X_SCLS</envar> environment variable by running the following command:"
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Uninstalling a &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use conventional tools like <application>Yum</application> or "
+"<application>PackageKit</application> when uninstalling a &DSCL; because "
+"&DSCL;s are fully compatible with the RPM Package Manager. For example, to "
+"uninstall all packages and subpackages that are part of a &DSCL; named "
+"<code>software_collection_1</code>, run the following command:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can also use the <command>yum remove</command> command to remove the "
+"<application>scl</application> utility."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For detailed information on <application>Yum</application> and "
+"<application>PackageKit</application> usage, refer to the <ulink url=\"http:/"
+"/docs.fedoraproject.org/en-US/Fedora/18/html/System_Administrators_Guide/"
+"index.html\">Fedora 18 System Administrator's Guide</ulink>."
+msgstr ""
+

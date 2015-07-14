@@ -1,0 +1,1333 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-11-19 10:42-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Audacity"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity is a high-quality sound recording application, designed to be easy "
+"to use. We recommend Audacity to most computer users, because it is simple "
+"but it has many features and capabilities. You do not need to understand "
+"advanced computer audio concepts before using Audacity. If you can connect "
+"your microphone to your computer, you know enough to use Audacity."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Learn When to Use Audacity"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity has a simple user interface, it is easy to use, and it has many "
+"advanced capabilities. Audacity does not require advanced knowledge of "
+"computers, music, or recording. Audacity is the right tool to use for "
+"editing a single audio file, and it can also coordinate multiple audio files "
+"simultaneously. Most users will prefer Audacity over the other applications "
+"in the Musicians' Guide which can record."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you need to record quickly, and you do not have time to learn complicated "
+"software, you should use Audacity."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have professional-quality audio equipment, if you want to do highly "
+"advanced processing, or if you need fine-grained control over the recording, "
+"you should use Ardour, Qtractor, or Rosegarden. If you have not used any of "
+"these applications, we recommend learning Qtractor before Ardour or "
+"Rosegarden. Ardour and Rosegarden are more complicated than Qtractor, and "
+"you may not need their advanced features."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Requirements and Installation"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Software Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity uses several \"libraries.\" Libraries are incomplete programs that "
+"add capabilities to other programs or applications. Libraries can be shared "
+"between programs. The libraries needed by Audacity will be installed "
+"automatically."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity can use the JACK Audio Connection Kit. You should install JACK "
+"before installing <application>Audacity</application>. Follow the "
+"instructions in <xref linkend=\"sect-Musicians_Guide-"
+"Install_and_Configure_JACK\" /> to install JACK. We recommend using Audacity "
+"without JACK, but JACK is installed whether or not you use it."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Hardware Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You need an audio interface to use Audacity. If you will record audio with "
+"Audacity, you must have at least one microphone connected to your audio "
+"interface. You do not need a microphone to edit existing audio files."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Install"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Follow these instructions to install <application>Audacity</application> "
+"from the &O_S; repository. This version of <application>Audacity</"
+"application> does not use an MP3 library, and cannot process MP3 files. "
+"Third-party software repositories offer <application>Audacity</application> "
+"with MP3 support."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>PackageKit</application> or <application>Apper</"
+"application> to install the <package>audacity</package> package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The proposed installation includes <application>Audacity</application> and "
+"all of the libraries that <application>Audacity</application> uses. Review "
+"the packages you must install, then continue to install "
+"<application>Audacity</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity configures itself automatically, but it may not use the "
+"configuration you want. We recommend you test <application>Audacity</"
+"application> before you record, so you know whether <application>Audacity</"
+"application> works. Follow the instructions in <xref linkend=\"sect-"
+"Musicians_Guide-Audacity-Testing_Playback\" /> and <xref linkend=\"sect-"
+"Musicians_Guide-Audacity-Testing_Recording\" /> to test "
+"<application>Audacity</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Post-Install Test: Playback"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Start Audacity."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Set the volume of your audio interface and speakers to a safe level."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></"
+"menuchoice> to open the Open File window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open the <literal>/usr/share/sounds/alsa/Noise.wav</literal> file. This file "
+"is designed for testing audio equipment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Play the file as many times as you need. Adjust the volume of your audio "
+"interface and speakers while the file is playing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you cannot hear sound when the file is played, check that your audio "
+"interface and speakers are correctly connected and powered on."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you still cannot hear sound when the file is played, see <xref linkend="
+"\"sect-Musicians_Guide-Audacity-Configure_to_Use_Your_Hardware\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Post-Install Test: Record"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Connect your microphones to your audio interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Start <application>Audacity</application>. Do not open a file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Locate the volume level meters on the toolbar, to the right of the transport "
+"controls. If you do not see the meters, choose <menuchoice><guimenu>View</"
+"guimenu><guisubmenu>Toolbars</guisubmenu><guimenuitem>Meter Toolbar</"
+"guimenuitem></menuchoice>, which should have a check mark next to it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click on the arrow next to the microphone to open the input meter's pop-up "
+"menu. Choose <menuchoice><guimenuitem>Start Monitoring</guimenuitem></"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sing, talk, or make noise into the microphone. The volume level meter should "
+"show moving red bars."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Adjust the volume of the recording inputs on your audio interface. When "
+"there is no noise, the moving red bars should be very small."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you do not see moving red bars in the volume level meter, check that your "
+"audio interface and microphone are correctly connected and powered on. If "
+"your equipment was not properly connected, adjust the volume of the "
+"recording inputs on your audio interface now."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you still do not see moving red bars, see <xref linkend=\"sect-"
+"Musicians_Guide-Audacity-Configure_to_Use_Your_Hardware\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the <guibutton>Record</guibutton> button to start a test recording. "
+"Sing, talk, or make noise into the microphone."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After a few seconds, click the <guibutton>Stop</guibutton> button to stop "
+"the test recording."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the <guibutton>Play</guibutton> button to hear the recorded audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the recording sounds bad, you configure Audacity manually. See <xref "
+"linkend=\"sect-Musicians_Guide-Audacity-Configure_to_Use_Your_Hardware\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuration"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Run Audacity for the First Time"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you run Audacity for the first time, you will be asked to select a "
+"language to use for the interface. Before you use Audacity, we encourage you "
+"to follow the post-installation test instructions above."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Audacity for Your Sound Card"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity configures itself automatically. If your computer has multiple "
+"sound cards or your sound cards have an unusual setup, Audacity guesses "
+"which input and output you will use. Audacity sometimes guesses incorrectly, "
+"so you can configure it yourself."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity sometimes works, but has poor performance or low-quality audio. If "
+"Audacity runs poorly on your computer, you should configure the sound cards "
+"manually."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Follow these steps to configure Audacity for your sound card:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You need to know the Linux name of your sound card."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open a terminal. In GNOME, choose <menuchoice><guimenu>Applications</"
+"guimenu> <guisubmenu>System</guisubmenu> <guimenuitem>Terminal</"
+"guimenuitem></menuchoice>. In KDE, open the application launcher, then "
+"choose <menuchoice><guimenu>System</guimenu><guimenuitem>Konsole</"
+"guimenuitem></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Run this command: <command>cat /proc/asound/cards</command>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <command>cat</command> program outputs a list of sound cards in your "
+"computer, which looks similar to this list:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<computeroutput>0 [SB             ]: HDA-Intel - HDA ATI SB</computeroutput>\n"
+"<computeroutput>                  HDA ATI SB at 0xf7ff4000 irq 16</"
+"computeroutput>\n"
+"<computeroutput>1 [MobilePre      ]: USB-Audio - MobilePre</computeroutput>\n"
+"<computeroutput>                  M Audio MobilePre at usb-0000:00:13.0-2</"
+"computeroutput>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this example output, the square brackets surround the name of the sound "
+"card. The names of the sound cards in this example output are <literal>SB</"
+"literal> and <literal>MobilePre</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Identify the name of the sound card that you want to use. If you do not see "
+"your sound card in the list outputted by <code>cat</code>, then your Fedora "
+"does not detect it. You should also remember the number of the sound card, "
+"which is printed to the left of the name. You can use two different sound "
+"cards for recording and playback."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open the \"Preferences\" window. Choose <guimenu>File</guimenu> &gt; "
+"<guimenuitem>Preferences</guimenuitem>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Set the \"Host\" to <literal>ALSA</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Set the recording and playback devices to the name of the sound card that "
+"you want to use. If there are many choices for your sound card, choose the "
+"one that ends with <literal>(hw:0)</literal>, where <literal>0</literal> is "
+"replaced by the number of the sound card that you want to use."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Follow the post-installation test procedures to confirm that the "
+"configuration is correct."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You will see many choices in the list of playback and recording devices. "
+"When configured with the <code>default</code> device, Audacity lets ALSA "
+"determine which sound card to use. When configured with the <literal>pulse</"
+"literal> device, Audacity lets PulseAudio determine which sound card to use. "
+"Audacity works most efficiently when configured with a specific sound card, "
+"so you should not use the <literal>default</literal> or <literal>pulse</"
+"literal> devices unless the other choices do not work."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Set the Project's Sample Rate and Format"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can change the sample rate and sample format (see <xref linkend=\"sect-"
+"Musicians_Guide-Sample_Rate_and_Sample_Format\" /> for definitions). You "
+"should set the sample rate and sample format when you begin working on a "
+"project. You should not change the sample rate or sample format after you "
+"record audio. If you will use audio files that already exist, you should use "
+"the sample rate and sample format of the existing files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>File</guimenu> <guimenuitem>Preferences</"
+"guimenuitem></menuchoice> to open the \"Preferences\" window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Quality</guibutton> in the list on the left of the window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Change the settings as you need. We recommend a sample rate of "
+"44&nbsp;100&nbsp;Hz and a sample format of 16&nbsp;bits for most projects."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Learn the Audacity Interface"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Audacity interface"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>transport controls</firstterm> play, stop, or pause playback "
+"of audio. The buttons to record and move quickly through a file are also "
+"located here."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>tool-selection box</firstterm> changes the cursor's function."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The two <firstterm>volume level meters</firstterm> display the volume level "
+"of stereo audio. The left meter displays the volume level of the output "
+"signal. The right meter displays the volume level of the input signal."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>ruler</firstterm> displays the time since the start of the "
+"file, in minutes and seconds."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each <firstterm>track</firstterm> contains two channels of audio signal data."
+" Audacity stacks tracks vertically in the main window. Audacity plays back "
+"all tracks simultaneously."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "A track in Audacity"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each track has a <firstterm>track info area</firstterm>, which holds "
+"settings like the fader, panner, and <guibutton>mute</guibutton> and "
+"<guibutton>solo</guibutton> buttons."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>timeline</firstterm> is the main area of the main window of "
+"Audacity. The leftmost point is the beginning of the audio file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Refer to the image above as you read about the user interface of Audacity."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"transport controls\" play, stop, or pause playback of audio. The "
+"buttons to record and move quickly through a file are also located here."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The \"tool-selection box\" changes the cursor's function."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The two \"volume level meters\" display the volume level of stereo audio. "
+"The left meter displays the volume level of the output signal. The right "
+"meter displays the volume level of the input signal."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"ruler\" displays the time since the start of the file, in minutes and "
+"seconds."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"timeline\" is the main area of the main window of Audacity. The "
+"leftmost point is the beginning of the audio file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each \"track\" contains two channels of audio signal data. Audacity stacks "
+"tracks vertically in the main window. Audacity plays back all tracks "
+"simultaneously."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each track has a \"track info area,\" which holds settings like the fader, "
+"panner, and <guibutton>mute</guibutton> and <guibutton>solo</guibutton> "
+"buttons."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"chap-Musicians_Guide-Digital_Audio_Workstations\" /> "
+"contains more information about the Audacity user interface. That chapter "
+"defines the purpose and use of many user interface components."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Record"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This section explains possible ways to use Audacity to record."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Start to Record"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This procedure can be used whether you want to record from microphones or "
+"from another application on your computer."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Prepare your computer to record. Connect the microphones you want to use, "
+"and test them. See <xref linkend=\"sect-Musicians_Guide-Audacity-"
+"Testing_Playback\" /> and <xref linkend=\"sect-Musicians_Guide-Audacity-"
+"Testing_Recording\" /> for instructions to test your equipment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Check the sample rate and sample format. See <xref linkend=\"sect-"
+"Musicians_Guide-Audacity-Setting_Sample_Rate_and_Format\" /> for "
+"instructions to change the sample rate and sample format."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <guibutton>Record</guibutton> button shows a red circle. When you are "
+"ready to record, click the <guibutton>Record</guibutton> button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <guibutton>Stop</guibutton> button shows an orange square. Click the "
+"<guibutton>Stop</guibutton> button to stop the recorder."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"* Audacity displays the recorded audio in the timeline of a track, as a "
+"blue, sound-wave-like shape that represents the volume level. Audacity "
+"sometimes displays the blue shape immediately, and sometimes only after you "
+"click <guibutton>Stop</guibutton>. When Audacity does not show the blue "
+"shape immediately, it does not have enough processor power, and decides to "
+"process the audio instead of the blue shape."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Continue to Record"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can record more audio after the first recording in one of these ways:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You can continue to record from the end of the already-recorded audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Press <keycombo><keycap>Shift</keycap></keycombo> then click "
+"<guibutton>Record</guibutton>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity starts to record from the end of the already-recorded audio. The "
+"new audio is put in the previously-selected track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can record new audio that will play at the same time as the already-"
+"recorded audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Transport</guimenu> <guimenuitem>Skip to Start</"
+"guimenuitem></menuchoice> or press <keycombo><keycap>Home</keycap></"
+"keycombo> to move the transport head to the start of the file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click <guibutton>Record</guibutton>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity starts to record from the beginning. The new audio is put in a new "
+"track, and does not erase existing audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can record new audio that will play at the same time as the already-"
+"recorded audio, but start after the beginning."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Find the timeline position when you want to record new audio. Click on an "
+"existing track at that time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity starts to record from the position of the transport head. The new "
+"audio is put in a new track, and does not erase existing audio."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Create a New Login Sound (Tutorial)"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Files for the Tutorial"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the <citetitle>Tutorial Start</citetitle> file if you want to do the "
+"tutorial. The <citetitle>Tutorial End</citetitle> file and "
+"<citetitle>Exported FLAC</citetitle> file are completed examples. When you "
+"finish the tutorial, your project will probably not be the same as ours."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Tutorial Start</citetitle> is available at <ulink url=\"http://"
+"docs.fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/files/Audacity/"
+"Audacity-start.tar.lzma\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Tutorial End</citetitle> is available at <ulink url=\"http://docs."
+"fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/files/Audacity/"
+"Audacity-start.tar.lzma\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Exported FLAC</citetitle>is available at <ulink url=\"http://docs."
+"fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/files/Audacity/"
+"Audacity-export.flac\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Scenario"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You tell a friend about some open-source audio applications in Fedora Linux. "
+"Your friend wants you to help them make a new sound that will play when they "
+"log in to their computer. You search your music CD collection, and find a "
+"favourite recording. You and your friend decide to use a few clips from the "
+"CD to start your new log-in sound."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Align Tracks"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You adjust the starting time of the segments."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the <guibutton>Time Shift</guibutton> button in the tool-selection "
+"toolbar."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the track with the segment you want to move. Drag the segment to the "
+"left or right to change the time when it starts to play."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can align the start of one segment with end of another segment. Drag the "
+"segment so that the beginning is near the end of the other segment. Drag the "
+"track back and forth slowly so a yellow line appears. The yellow line means "
+"that there is no silence between the segments, and that the segments do not "
+"overlap."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can move a segment to start at the selection cursor. Click the "
+"<guibutton>Selection Tool</guibutton> button, then click on the track where "
+"you want the segment to start to play. Choose <menuchoice><guimenu>Tracks</"
+"guimenu> <guisubmenu>Align Tracks</guisubmenu> <guimenuitem>Align with "
+"Cursor</guimenuitem></menuchoice> to move the track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can move tracks in other ways by using the <menuchoice><guimenu>Tools</"
+"guimenu> <guisubmenu>Align Tracks</guisubmenu></menuchoice> menu choices."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can select multiple tracks at the same time. Press "
+"<keycombo><keycap>Shift</keycap></keycombo> while you click on each track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You should listen to each adjustment to confirm that it is correct. Click "
+"<guibutton>Selection Tool</guibutton> in the tool-selection toolbar, then "
+"click on a track where you want to begin to listen. Press <guibutton>Play</"
+"guibutton> to hear the audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We aligned the tracks so that they sound nice to us. We tried to make the "
+"sound short, and interesting but not confusing. We changed the positions of "
+"the tracks many times after this step."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Stretching Tracks"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can stretch or compress tracks, so that they take up more or less time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"Change Tempo\" tool adjusts speed but not pitch. Sound quality is "
+"lowered significantly."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"Change Speed\" tool adjusts speed and pitch. Sound quality is less "
+"affected."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click on the track info portion of the track that you want to adjust."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Effect</guimenu> <guimenuitem>Change Tempo</"
+"guimenuitem></menuchoice> or <menuchoice><guimenu>Effect</guimenu> "
+"<guimenuitem>Change Speed</guimenuitem></menuchoice>. If you input a "
+"positive number, the speed increases and the audio takes less time. If you "
+"input a negative number, the speed decreases and the audio takes more time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Preview</guibutton> to hear some of the audio with the "
+"adjusted speed. Audacity does not change the audio when you preview the "
+"change."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>OK</guibutton> to apply the change. Audacity processes the "
+"audio. Your change does not appear immediately."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We changed the speed of one of our tracks. We are not concerned about the "
+"sound quality, because this is a start-up sound for us. When you edit audio "
+"to which other people will listen, you should be careful to preserve the "
+"sound quality."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adjust the Volume Level"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can adjust the volume level of tracks by adjusting the fader in the "
+"track info box. The fader is a horizontal line with a <literal>-</literal> "
+"sign on the left and a <literal>+</literal> sign on the right. The fader "
+"does not change the audio signal itself."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can also adjust the volume level of a portion of audio, which does "
+"modify the audio signal itself. Follow these instructions to adjust the "
+"volume level of a portion of audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The tutorial's lowest track is very quiet. Click the track's "
+"<guibutton>solo</guibutton> button, then listen to the track alone. Most of "
+"the track is quiet humming."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Selection Tool</guibutton>, then hold down the mouse button "
+"to select some audio in one track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Effect</guimenu> <guimenuitem>Amplify</"
+"guimenuitem></menuchoice>. When the \"Amplify\" window opens, it is set for "
+"the greatest volume level increase that will not decrease sound quality. You "
+"can enable \"clipping,\" which allows you to increase the volume level even "
+"more, but will decrease the sound quality."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Use the Amplify tool to adjust the volume level as you wish."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Remove Noise"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Noise\" is part of an audio signal that is not the intended signal. When "
+"you listen to music on the radio, you can hear the music, and usually also "
+"some noise. When computers record or play audio, the electronic components "
+"sometimes create extra noise. The lowest track of the tutorial file has "
+"noise created by electronic components in the old notebook computer used to "
+"play the CD. Follow these steps to use the \"Noise Removal\" tool."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Selection Tool</guibutton>, then select a small portion of "
+"the lowest track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Effect</guimenu> <guimenuitem>Noise Removal</"
+"guimenuitem></menuchoice>. The \"Noise Removal\" window appears. Click "
+"<guibutton>Get Profile</guibutton>. The Noise Removal tool uses the selected "
+"audio as an example of the noise to remove."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the whole track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open the \"Noise Removal\" window. Click <guibutton>OK</guibutton>. The "
+"Noise Removal tool processes the audio. The Noise Removal tool is not "
+"effective in this example because most of the signal is noise."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Fade In or Out"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity has tools to fade in and out. When you \"fade in,\" it means to "
+"gradually increase the volume level from silence to the original level. When "
+"you \"fade out,\" it means to gradually decreased the volume level from the "
+"original level to silence. Professional recordings of concerts often fade "
+"out after a song, while the audience applauds. Fading out avoids an abrupt "
+"stop at the end of the recording, because the volume level is decreased "
+"gradually to silence."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You generally fade in at the beginning of an audio segment, and fade out at "
+"the end of an audio segment. You can use Audacity to create special effects "
+"if you fade in or fade out in the middle of an audio segment. You can make a "
+"surprising effect by setting Audacity to fade in or out over a few second, "
+"then adding the opposite fade inside the first fade."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Selection Tool</guibutton>, then select a portion of audio "
+"to fade in or out."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Effect</guimenu> <guimenuitem>Fade In</"
+"guimenuitem></menuchoice> or <menuchoice><guimenu>Effect</guimenu> "
+"<guimenuitem>Fade Out</guimenuitem></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We created a long fade out in one of our tracks, so that the track is "
+"quieter. We then adjusted the spacing of the other tracks, moving them "
+"closer."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Remove Some Audio"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can remove portions of a track. This procedure removes audio at the end "
+"of a track. You can use a similar method to remove audio in other ways."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Selection Tool</guibutton>, then place the editing cursor "
+"at the point where you want the track to end."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu> <guisubmenu>Select</guisubmenu> "
+"<guimenuitem>Cursor to Track End</guimenuitem></menuchoice>. There are many "
+"other choices in the <menuchoice><guimenu>Edit</guimenu> <guisubmenu>Select</"
+"guisubmenu></menuchoice> menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Press <keycombo><keycap>Delete</keycap></keycombo>. The selected audio is "
+"deleted."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you make a mistake, you can undo the previous action. Choose "
+"<menuchoice><guimenu>Edit</guimenu> <guimenuitem>Undo</guimenuitem></"
+"menuchoice>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "We removed the end of the lowest track."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Repeat an Already-Recorded Segment"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You can repeat a segment of audio that is already recorded."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Selection Tool</guibutton>, then select a portion of audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu> <guimenuitem>Copy</guimenuitem></"
+"menuchoice> or press <keycombo><keycap>Control</keycap> <keycap>c</keycap></"
+"keycombo>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click in a track near where you want the copy to start playing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu> <guimenuitem>Paste</guimenuitem></"
+"menuchoice> or press <keycombo><keycap>Control</keycap> <keycap>v</keycap></"
+"keycombo>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Time Shift Tool</guibutton>, then adjust the timeline "
+"position of the new audio clip."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We repeated the end of a segment twice, to make the end of the startup sound "
+"more interesting."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add a Special Effect (the Phaser)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity has many effect plugins, and you can add more. The Phaser adjusts "
+"reverberation, panning, and frequency to create a spinning-like sound."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select a portion of any track when only one track is playing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Effect</guimenu> <guimenuitem>Phaser</"
+"guimenuitem></menuchoice>, then experiment with the settings. Click "
+"<guibutton>Preview</guibutton> to hear the effect of your settings. Audacity "
+"does not modify the audio file when you preview your settings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The tutorial uses the phaser at the end, with these settings:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Stages: 2"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Dry/Wet: 128"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "LFO Frequency: 0.4"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "LFO Start Phase: 0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Depth: 128"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Feedback: 90"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Conclusion"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Your startup file sounds different than the one that we completed. The "
+"tutorial instructions are intentionally vague. You used your own creativity "
+"to complete the tutorial. You also learned how to use these tools for many "
+"different purposes."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Save and Export"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity saves its data in a format that only Audacity can use. Audacity "
+"saves more information than just the audio files, and this information "
+"cannot be stored in conventional audio files like OGG, FLAC, or AIFF."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you want to share your work, or use it in another application, you must "
+"export it. When you \"export\" audio, Audacity converts the Audacity-only "
+"file into a conventional audio file. Audacity does not delete the original "
+"Audacity-only file, but the exported file cannot be converted into the "
+"Audacity-only format."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Export Part of a File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the portion of audio that you want to export."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>File</guimenu> <guimenuitem>Export Selection</"
+"guimenuitem></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the format, filename, and directory of the audio that will be "
+"exported. Click <guibutton>Save</guibutton> when you are finished."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Depending on which format you choose, the \"Metadata\" window appears. You "
+"can input this information if you wish."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audacity processes the audio to export. This may take some time, depending "
+"on the audio."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Export a Whole File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>File</guimenu> <guimenuitem>Export</"
+"guimenuitem></menuchoice>."
+msgstr ""
+

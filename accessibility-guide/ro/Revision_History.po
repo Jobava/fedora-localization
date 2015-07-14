@@ -1,0 +1,246 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-12-23 12:29+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Revision History"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Eric"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Christensen"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Removed text for software not in Fedora."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated text to remove U.S.-specific text."
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Gerard"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Ryan"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Fixed Revision History"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added information on Indic Onscreen Keyboard."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added information on Florence Virtual Keyboard."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added information on Jovie for KDE."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added information on XFCE and Sugar Desktops."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Grammar updates."
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Joseph"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Allen"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated section 4.3.2 to fix inconsistent instructions."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Commented out Emacspeak sections that still need work."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Changed to be the official version for Fedora 12."
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Susan"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Lauber"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Made some minor readability, grammar, and style edits."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added a number of markup additions for consistency."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Added information on enabling Orca in GNOME to the Screen_Readers section."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added information on GNOME Magnifier to the Screen_Magnifiers section."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Moved On Screen Keyboards to their own section to clean up Other Tools."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added information on gok (GNOME On-Screen Keyboard)."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added Gnome features Dasher and Caribou."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Commented out dated information on how Red Hat and Fedora had or had not "
+"tested some of the FOSS solutions."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Modified the \"screen readers\" section."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Removed link to KMouseTools and it was broken."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Various style edits (tense, spelling, etc.)"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added markup for menuitems"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Created \"Mouse Tools\" section, moved KMouseTools to that section, and "
+"added Mousetweaks."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added GNOME information in the \"Desktops\" section."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added comments to Tools.xml for further editing."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Created \"Other Tools\" section and added BRLTTY, KMouth, and KMouseTool to "
+"that section."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Created \"Screen Magnifiers\" section and added KMagnifier."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Created \"Desktops\" section and added KDE. This section will include "
+"specific Desktop accessibility controls."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Combined Speakup and Emacspeak into the Screen Readers section."
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Rüdiger"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Landmann"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Extra XML markup."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated links and added information on Emacspeak."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Publicanized all information in the Accessibility Guide"
+msgstr ""
+

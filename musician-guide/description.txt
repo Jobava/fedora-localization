@@ -1,0 +1,4 @@
+Audio creation and music software in Fedora Linux 
+
+http://docs.fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/
+https://git.fedorahosted.org/git/docs/musicians-guide.git

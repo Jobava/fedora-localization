@@ -1,0 +1,929 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Network Bridging"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A network bridge is a link-layer device which forwards traffic between "
+"networks based on MAC addresses. It makes forwarding decisions based on a "
+"table of MAC addresses which it builds by listening to network traffic and "
+"thereby learning what hosts are connected to each network. A software bridge "
+"can be used within a Linux host in order to emulate a hardware bridge, for "
+"example in virtualization applications for sharing a NIC with one or more "
+"virtual NICs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that a bridge cannot be established over Wi-Fi networks operating in "
+"<firstterm>Ad-Hoc</firstterm> or <firstterm>Infrastructure</firstterm> modes."
+" This is due to the IEEE 802.11 standard that specifies the use of 3-address "
+"frames in Wi-Fi for the efficient use of airtime. A system configured to be "
+"an <firstterm>access point</firstterm> (<acronym>AP</acronym>) running the "
+"<systemitem class=\"daemon\">hostapd</systemitem> can support the necessary "
+"4-address frames."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Network Bridging Using a GUI"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When starting a bridge interface, <application>NetworkManager</application> "
+"waits for at least one port to enter the <quote>forwarding</quote> state "
+"before beginning any network-dependent <systemitem class=\"protocol\">IP</"
+"systemitem> configuration such as <systemitem class=\"protocol\">DHCP</"
+"systemitem> or <systemitem class=\"protocol\">IPv6</systemitem> "
+"autoconfiguration. Static <systemitem class=\"protocol\">IP</systemitem> "
+"addressing is allowed to proceed before any slaves or ports are connected or "
+"begin forwarding packets."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Establishing a Bridge Connection"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adding a New Bridge Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can configure a new Bridge connection by opening the <guilabel>Network</"
+"guilabel> window and selecting the plus symbol below the menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To use the graphical <application>Network</application> settings tool, press "
+"the <keycap>Super</keycap> key to enter the Activities Overview, type "
+"<command>control network</command> and then press <keycap>Enter</keycap>. "
+"The <application>Network</application> settings tool appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the plus symbol below the menu. The <guilabel>Add Network Connection</"
+"guilabel> window appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the <guilabel>Bridge</guilabel> menu entry. The <guilabel>Editing "
+"Bridge connection <replaceable>1</replaceable></guilabel> window appears."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Editing an Existing Bridge Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can configure an existing bridge connection by opening the "
+"<guilabel>Network</guilabel> window and selecting the name of the connection "
+"from the list. Then click the <guibutton>Edit</guibutton> button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Press the <keycap>Super</keycap> key to enter the Activities Overview, type "
+"<command>control network</command> and then press <keycap>Enter</keycap>. "
+"The <application>Network</application> settings tool appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the <guilabel>Bridge</guilabel> connection you want to edit from the "
+"left hand menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click the <guilabel>Options</guilabel> button."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid ""
+"Configuring the Connection Name, Auto-Connect Behavior, and Availability "
+"Settings"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Five settings in the <guilabel>Editing</guilabel> dialog are common to all "
+"connection types, see the <guilabel>General</guilabel> tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Connection name</guilabel> — Enter a descriptive name for your "
+"network connection. This name will be used to list this connection in the "
+"menu of the <guilabel>Network</guilabel> window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Automatically connect to this network when it is available</"
+"guilabel> — Select this box if you want <application>NetworkManager</"
+"application> to auto-connect to this connection when it is available. See "
+"<xref linkend=\"sec-Connecting_to_a_Network_Automatically\" /> for more "
+"information."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>All users may connect to this network</guilabel> — Select this box "
+"to create a connection available to all users on the system. Changing this "
+"setting may require root privileges. See <xref linkend=\"sec-System-"
+"wide_and_Private_Connection_Profiles\" /> for details."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Automatically connect to VPN when using this connection</guilabel> "
+"— Select this box if you want <application>NetworkManager</application> to "
+"auto-connect to a VPN connection when it is available. Select the VPN from "
+"the dropdown menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Firewall Zone</guilabel> — Select the Firewall Zone from the "
+"dropdown menu."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring the Bridge Tab"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Interface name</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The name of the interface to the bridge."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Bridged connections</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "One or more slave interfaces."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Aging time</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The time, in seconds, a MAC address is kept in the MAC address forwarding "
+"database."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Enable STP (Spanning Tree Protocol)</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If required, select the check box to enable <systemitem class="
+"\"protocol\">STP</systemitem>."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Priority</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The bridge priority; the bridge with the lowest priority will be elected as "
+"the root bridge."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Forward delay</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The time, in seconds, spent in both the Listening and Learning states before "
+"entering the Forwarding state. The default is 15 seconds."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Hello time</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The time interval, in seconds, between sending configuration information in "
+"bridge protocol data units (BPDU)."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Max age</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The maximum time, in seconds, to store the configuration information from "
+"BPDUs. This value should be twice the Hello Time plus 1 but less than twice "
+"the Forwarding delay minus 1."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Editing Bridge Connection 1"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adding a Slave Interface to a Bridge"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add a port to a bridge, select the <guilabel>Bridge</guilabel> tab in the "
+"<guilabel>Editing Bridge connection <replaceable>1</replaceable></guilabel> "
+"window. If necessary, open this window by following the procedure in <xref "
+"linkend=\"procedure-Editing_an_Existing_Bridge_Connection\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Add</guibutton>. The <guilabel>Choose a Connection Type</"
+"guilabel> menu appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the type of connection to be created from the list. Click "
+"<guilabel>Create</guilabel>. A window appropriate to the connection type "
+"selected appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the <guilabel>Bridge Port</guilabel> tab. Configure "
+"<guilabel>Priority</guilabel> and <guilabel>Path cost</guilabel> as required."
+" Note the STP priority for a bridge port is limited by the Linux kernel. "
+"Although the standard allows a range of <literal>0</literal> to "
+"<literal>255</literal>, Linux only allows <literal>0</literal> to "
+"<literal>63</literal>. The default is <literal>32</literal> in this case."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If required, select the <guilabel>Hairpin mode</guilabel> check box to "
+"enable forwarding of frames for external processing. Also known as "
+"<firstterm>virtual Ethernet port aggregator</firstterm> (<acronym>VEPA</"
+"acronym>) mode."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then, to configure:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An Ethernet slave, click the <guilabel>Ethernet</guilabel> tab and proceed "
+"to <xref linkend=\"sec-Configuring_the_Connection_Name_Auto-"
+"Connect_Behavior_and_Availability_Settings-wired\" />, or;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A Bond slave, click the <guilabel>Bond</guilabel> tab and proceed to <xref "
+"linkend=\"sec-Configuring_the_Bond_Tab\" />, or;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A Team slave, click the <guilabel>Team</guilabel> tab and proceed to <xref "
+"linkend=\"sec-Configuring_the_Team_Tab\" />, or;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An VLAN slave, click the <guilabel>VLAN</guilabel> tab and proceed to <xref "
+"linkend=\"sec-Configuring_the_VLAN_Tab\" />, or;"
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid ""
+"Saving Your New (or Modified) Connection and Making Further Configurations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once you have finished editing your new bridge connection, click the "
+"<guibutton>Save</guibutton> button to save your customized configuration. If "
+"the profile was in use while being edited, power cycle the connection to "
+"make <application>NetworkManager</application> apply the changes. If the "
+"profile is OFF, set it to ON. See <xref linkend=\"sec-"
+"Connecting_to_a_Network_Using_a_GUI\" /> for information on using your new "
+"or altered connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can further configure an existing connection by selecting it in the "
+"<guilabel>Network</guilabel> window and clicking <guilabel>Options</"
+"guilabel> to return to the <guilabel>Editing</guilabel> dialog."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"protocol\">IPv4</systemitem> settings for the "
+"connection, click the <guilabel>IPv4 Settings</guilabel> tab and proceed to "
+"<xref linkend=\"sec-Configuring_IPv4_Settings\" />, or;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"protocol\">IPv6</systemitem> settings for the "
+"connection, click the <guilabel>IPv6 Settings</guilabel> tab and proceed to "
+"<xref linkend=\"sec-Configuring_IPv6_Settings\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using the Command Line Interface (CLI)"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Check if Bridging Kernel Module is Installed"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora, the bridging module is loaded by default. If necessary, you can "
+"make sure that the module is loaded by issuing the following command as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>modprobe --first-time bridge</command>\n"
+"modprobe: ERROR: could not insert 'bridge': Module already in kernel"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To display information about the module, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>modinfo bridge</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See the <filename>modprobe(8)</filename> man page for more command options."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Create a Network Bridge"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a network bridge, create a file in the <filename>/etc/sysconfig/"
+"network-scripts/</filename> directory called <filename>ifcfg-"
+"br<replaceable>N</replaceable></filename>, replacing <replaceable>N</"
+"replaceable> with the number for the interface, such as <filename>0</"
+"filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The contents of the file is similar to whatever type of interface is getting "
+"bridged to, such as an Ethernet interface. The differences in this example "
+"are as follows:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>DEVICE</option> directive is given an interface name as its "
+"argument in the format <option>br<replaceable>N</replaceable></option>, "
+"where <replaceable>N</replaceable> is replaced with the number of the "
+"interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>TYPE</option> directive is given an argument <option>Bridge</"
+"option> or <option>Ethernet</option>. This directive determines the device "
+"type and the argument is case sensitive."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The bridge interface configuration file is given an <systemitem class="
+"\"protocol\">IP</systemitem> address whereas the physical interface "
+"configuration file must only have a MAC address (see below)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An extra directive, <option>DELAY=0</option>, is added to prevent the bridge "
+"from waiting while it monitors traffic, learns where hosts are located, and "
+"builds a table of MAC addresses on which to base its filtering decisions. "
+"The default delay of 30 seconds is not needed if no routing loops are "
+"possible."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>NM_CONTROLLED=no</option> should be added to the Ethernet "
+"interface to prevent <application>NetworkManager</application> from altering "
+"the file. It can also be added to the bridge configuration file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following is a sample bridge interface configuration file using a static "
+"<systemitem class=\"protocol\">IP</systemitem> address:"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sample ifcfg-br0 Interface Configuration File"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"DEVICE=br0\n"
+"TYPE=Bridge\n"
+"IPADDR=192.168.1.1\n"
+"PREFIX=24\n"
+"ONBOOT=yes\n"
+"BOOTPROTO=none\n"
+"NM_CONTROLLED=no\n"
+"DELAY=0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To complete the bridge another interface is created, or an existing "
+"interface is modified, and pointed to the bridge interface. The following is "
+"a sample Ethernet interface configuration file pointing to a bridge "
+"interface. Configure your physical interface in <filename>/etc/sysconfig/"
+"network-scripts/ifcfg-eth<replaceable>X</replaceable></filename>, where "
+"<replaceable>X</replaceable> is a unique number corresponding to a specific "
+"interface, as follows:"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sample ifcfg-ethX Interface Configuration File"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"DEVICE=ethX\n"
+"TYPE=Ethernet\n"
+"HWADDR=AA:BB:CC:DD:EE:FF\n"
+"BOOTPROTO=none\n"
+"ONBOOT=yes\n"
+"NM_CONTROLLED=no\n"
+"BRIDGE=br0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For the <option>DEVICE</option> directive, almost any interface name could "
+"be used as it does not determine the device type. <option>TYPE=Ethernet</"
+"option> is not strictly required. If the <option>TYPE</option> directive is "
+"not set, the device is treated as an Ethernet device (unless it's name "
+"explicitly matches a different interface configuration file.)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifying the hardware or MAC address using the <command>HWADDR</command> "
+"directive will influence the device naming procedure as explained in <xref "
+"linkend=\"ch-Consistent_Network_Device_Naming\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are configuring bridging on a remote host, and you are connected to "
+"that host over the physical NIC you are configuring, please consider the "
+"implications of losing connectivity before proceeding. You will lose "
+"connectivity when restarting the service and may not be able to regain "
+"connectivity if any errors have been made. Console, or out-of-band access is "
+"advised."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Restart the networking service in order for the changes to take effect. As "
+"<systemitem class=\"username\">root</systemitem> issue the following command:"
+""
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>systemctl network restart</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An example of a network bridge formed from two or more bonded Ethernet "
+"interfaces will now be given as this is another common application in a "
+"virtualization environment. If you are not very familiar with the "
+"configuration files for bonded interfaces then please refer to <xref linkend="
+"\"sec-Create_a_Channel_Bonding_Interface\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create or edit two or more Ethernet interface configuration files, which are "
+"to be bonded, as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"DEVICE=ethX\n"
+"TYPE=Ethernet\n"
+"SLAVE=yes\n"
+"MASTER=bond0\n"
+"BOOTPROTO=none\n"
+"HWADDR=AA:BB:CC:DD:EE:FF\n"
+"NM_CONTROLLED=no"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Using <systemitem class=\"etheraddress\">eth<replaceable>X</replaceable></"
+"systemitem> as the interface name is common practice but almost any name "
+"could be used."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create or edit one interface configuration file, <filename>/etc/sysconfig/"
+"network-scripts/ifcfg-bond0</filename>, as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"DEVICE=bond0\n"
+"ONBOOT=yes\n"
+"BONDING_OPTS='mode=1 miimon=100'\n"
+"BRIDGE=brbond0\n"
+"NM_CONTROLLED=no"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create or edit one interface configuration file, <filename>/etc/sysconfig/"
+"network-scripts/ifcfg-brbond0</filename>, as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"DEVICE=brbond0\n"
+"ONBOOT=yes\n"
+"TYPE=Bridge\n"
+"IPADDR=192.168.1.1\n"
+"PREFIX=24\n"
+"NM_CONTROLLED=no"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We now have two or more interface configuration files with the "
+"<option>MASTER=bond0</option> directive. These point to the configuration "
+"file named <filename>/etc/sysconfig/network-scripts/ifcfg-bond0</filename>, "
+"which contains the <option>DEVICE=bond0</option> directive. This "
+"<filename>ifcfg-bond0</filename> in turn points to the <filename>/etc/"
+"sysconfig/network-scripts/ifcfg-brbond0</filename> configuration file, which "
+"contains the <systemitem class=\"protocol\">IP</systemitem> address, and "
+"acts as an interface to the virtual networks inside the host."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Restart the networking service, in order for the changes to take effect. As "
+"<systemitem class=\"username\">root</systemitem> issue the following command:"
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using the NetworkManager Command Line Tool, nmcli"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a bridge, with name <interface>bridge-br0</interface>, issue a "
+"command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type bridge ifname br0</command>\n"
+"Connection 'bridge-br0' (79cf6a3e-0310-4a78-b759-bda1cc3eef8d) successfully "
+"added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If no interface name is specified, the name will default to "
+"<interface>bridge</interface>, <interface>bridge-1</interface>, "
+"<interface>bridge-2</interface>, and so on."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To view the connections, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con show conf</command>\n"
+"NAME        UUID                                 TYPE           TIMESTAMP-"
+"REAL\n"
+"eth0        4d5c449a-a6c5-451c-8206-3c9a4ec88bca 802-3-ethernet Mon 21 Oct "
+"2013 16:01:53 BST\n"
+"bridge-br0  79cf6a3e-0310-4a78-b759-bda1cc3eef8d bridge         never"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<firstterm>Spanning tree protocol</firstterm> (<acronym>STP</acronym>) "
+"according to the IEEE 802.1D standard is enabled by default. To disable "
+"<systemitem class=\"protocol\">STP</systemitem> for this bridge, issue a "
+"command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>nmcli con bridge-br0 stp no</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To re-enable <systemitem class=\"protocol\">802.1D STP</systemitem> for this "
+"bridge, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>nmcli con bridge-br0 stp yes</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The default bridge priority for <systemitem class=\"protocol\">802.1D STP</"
+"systemitem> is <literal>32768</literal>. The lower number is preferred in "
+"root bridge selection. For example, a bridge with priority of "
+"<literal>28672</literal> would be selected as the root bridge in preference "
+"to a bridge with priority value of <literal>32768</literal> (the default). "
+"To create a bridge with a non-default value, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type bridge ifname br5 stp yes priority "
+"28672</command>\n"
+"Connection 'bridge-br5' (86b83ad3-b466-4795-aeb6-4a66eb1856c7) successfully "
+"added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The allowed values are in the range <literal>0</literal> to <literal>65535</"
+"literal>, but can only be set in multiples of <literal>4096</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To change the bridge priority of an existing bridge to a non-default value, "
+"issue a command in the following format:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli connection modify bridge-br5 bridge.priority 36864</"
+"command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Further options for <systemitem class=\"protocol\">802.1D STP</systemitem> "
+"are listed in the bridge section of the <filename>nmcli(1)</filename> man "
+"page."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add, or enslave an interface, for example <interface>eth1</interface>, to "
+"the bridge <interface>bridge-br0</interface>, issue a command as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type bridge-slave ifname eth1 master bridge-"
+"br0</command>\n"
+"Connection 'bridge-slave-eth1' (70ffae80-7428-4d9c-8cbd-2e35de72476e) "
+"successfully added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At time of writing, <application>nmcli</application> only supports Ethernet "
+"slaves."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To change a value using interactive mode, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>nmcli connection edit bridge-br0</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You will be placed at the <application>nmcli</application> prompt."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"nmcli&gt; <command>set bridge.priority 4096</command>\n"
+"nmcli&gt; <command>save</command>\n"
+"Connection 'bridge-br0' (79cf6a3e-0310-4a78-b759-bda1cc3eef8d) successfully "
+"saved.\n"
+"nmcli&gt; <command>quit</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See <xref linkend=\"sec-Using_the_NetworkManager_Command_Line_Tool_nmcli\" /"
+"> for an introduction to <application>nmcli</application>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Additional Resources"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following sources of information provide additional resources regarding "
+"network bridging."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installed Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>nmcli(1)</filename> man page — Describes "
+"<application>NetworkManager</application>'s command‐line tool."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>nmcli-examples(5)</filename> man page — Gives examples of "
+"<application>nmcli</application> commands."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>nm-settings(5)</filename> man page — Description of settings and "
+"parameters of <application>NetworkManager</application> connections."
+msgstr ""
+

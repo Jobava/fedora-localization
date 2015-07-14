@@ -1,0 +1,431 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 01:57-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Other Digital Audio Concepts"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These terms are used in many audio contexts. Understanding them is important "
+"to knowing how to operate audio equipment in general, whether computer-based "
+"or not."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "MIDI Sequencer"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A <firstterm>sequencer</firstterm> is a device or software program that "
+"produces signals that a synthesizer turns into sound. You can also use a "
+"sequencer to arrange MIDI signals into music. The Musicians' Guide covers "
+"two digital audio workstations (DAWs) that are primarily MIDI sequencers, "
+"Qtractor and Rosegarden. All three DAWs in this guide use MIDI signals to "
+"control other devices or effects."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Busses, Master Bus, and Sub-Master Bus"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An <firstterm>audio bus</firstterm> sends audio signals from one place to "
+"another. Many different signals can be inputted to a bus simultaneously, and "
+"many different devices or applications can read from a bus simultaneously. "
+"Signals inputted to a bus are mixed together, and cannot be separated after "
+"entering a bus. All devices or applications reading from a bus receive the "
+"same signal."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "How audio busses work"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All audio routed out of a program passes through the master bus. The "
+"<firstterm>master bus</firstterm> combines all audio tracks, allowing for "
+"final level adjustments and simpler mastering. The primary purpose of the "
+"master bus is to mix all the tracks into two channels."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A <firstterm>sub-master bus</firstterm> combines audio signals before they "
+"reach the master bus. Using a sub-master bus is optional. They allow you to "
+"adjust more than one track in the same way, without affecting all the tracks."
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The relationship between the master bus and sub-master busses"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Audio busses are also used to send audio into effects processors."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Level (Volume/Loudness)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The perceived <firstterm>volume</firstterm> or <firstterm>loudness</"
+"firstterm> of sound is a complex phenomenon not entirely understood by "
+"experts. One widely-agreed method of assessing loudness is by measuring the "
+"sound pressure level (SPL), which is measured in decibels (dB) or bels (B, "
+"equal to ten decibels). In audio production communities, this is called "
+"level. The <firstterm>level</firstterm> of an audio signal is one way of "
+"measuring the signal's perceived loudness. The level is part of the "
+"information stored in an audio file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are many different ways to monitor and adjust the level of an audio "
+"signal, and there is no widely-agreed practice. One reason for this "
+"situation is the technical limitations of recorded audio. Most level meters "
+"are designed so that the average level is -6&nbsp;dB on the meter, and the "
+"maximum level is 0&nbsp;dB. This practice was developed for analog audio. We "
+"recommend using an external meter and the \"K-system,\" described in a link "
+"below. The K-system for level metering was developed for digital audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the Musicians' Guide, this term is called \"volume level,\" to avoid "
+"confusion with other levels, or with perceived volume or loudness."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Level Practices</citetitle>, available at <ulink url=\"http://www."
+"digido.com/level-practices-part-2-includes-the-k-system.html\" />. The type "
+"of meter described here is available in the \"jkmeter\" package from Planet "
+"CCRMA at Home."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>K-system (Wikipedia)</citetitle>, available at <ulink url=\"http:/"
+"/en.wikipedia.org/wiki/K-system\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Headroom (Wikipedai)</citetitle>, available at <ulink url=\"http:/"
+"/en.wikipedia.org/wiki/Headroom_%28audio_signal_processing%29\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Equal-Loudness Contour (Wikipedia)</citetitle>, available at "
+"<ulink url=\"http://en.wikipedia.org/wiki/Equal-loudness_contour\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Sound Level Meter (Wikipedia)</citetitle>, available at <ulink "
+"url=\"http://en.wikipedia.org/wiki/Sound_level_meter\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Listener Fatigue (Wikipedia)</citetitle>, available at <ulink url="
+"\"http://en.wikipedia.org/wiki/Listener_fatigue\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Dynamic Range Compression (Wikipedia)</citetitle>, available at "
+"<ulink url=\"http://en.wikipedia.org/wiki/Dynamic_range_compression\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Alignment Level (Wikipedia)</citetitle>, available at <ulink url="
+"\"http://en.wikipedia.org/wiki/Alignment_level\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Panning and Balance"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<firstterm>Panning</firstterm> adjusts the portion of a channel's signal "
+"that is sent to each output channel. In a stereophonic (two-channel) setup, "
+"the two channels represent the \"left\" and the \"right\" speakers. Two "
+"channels of recorded audio are available in the DAW, and the default setup "
+"sends all the \"left\" recorded channel to the \"left\" output channel, and "
+"all the \"right\" recorded channel to the \"right\" output channel. Panning "
+"sends some of the left recorded channel's level to the right output channel, "
+"or some of the right recorded channel's level to the left output channel. "
+"Each recorded channel has a constant total output level, which is divided "
+"between the two output channels."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Panning"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The default setup for a left recorded channel is for \"full left\" panning, "
+"meaning that 100% of the output level is output to the left output channel. "
+"An audio engineer might adjust this so that 80% of the recorded channel's "
+"level is output to the left output channel, and 20% of the level is output "
+"to the right output channel. An audio engineer might make the left recorded "
+"channel sound like it is in front of the listener by setting the panner to "
+"\"center,\" meaning that 50% of the output level is output to both the left "
+"and right output channels."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Balance is sometimes confused with panning, even on commercially-available "
+"audio equipment. Adjusting the <firstterm>balance</firstterm> changes the "
+"volume level of the output channels, without redirecting the recorded signal."
+" The default setting for balance is \"center,\" meaning 0% change to the "
+"volume level. As you adjust the dial from \"center\" toward the \"full "
+"left\" setting, the volume level of the right output channel is decreased, "
+"and the volume level of the left output channel remains constant. As you "
+"adjust the dial from \"center\" toward the \"full right\" setting, the "
+"volume level of the left output channel is decreased, and the volume level "
+"of the right output channel remains constant. If you set the dial to \"20% "
+"left,\" the audio equipment would reduce the volume level of the right "
+"output channel by 20%, increasing the perceived loudness of the left output "
+"channel by approximately 20%."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Balance"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You should adjust the balance so that you perceive both speakers as equally "
+"loud. Balance compensates for poorly set up listening environments where the "
+"speakers are not equal distances from the listener. If the left speaker is "
+"closer to you than the right speaker, you can adjust the balance to the "
+"right, which decreases the volume level of the left speaker. This is not an "
+"ideal solution, but sometimes it is impossible or impractical to set up your "
+"speakers correctly. You should adjust the balance only at final playback."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Time, Timeline, and Time-Shifting"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are many ways to measure musical time. The four most popular time "
+"scales for digital audio are:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Bars and Beats: Usually used for MIDI work, and called \"BBT,\" meaning "
+"\"Bars, Beats, and Ticks.\" A tick is a partial beat."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Minutes and Seconds: Usually used for audio work."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"SMPTE Timecode: Invented for high-precision coordination of audio and video, "
+"but can be used with audio alone."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Samples: Relating directly to the format of the underlying audio file, a "
+"sample is the shortest possible length of time in an audio file. See <xref "
+"linkend=\"sect-Musicians_Guide-Sample_Rate_and_Sample_Format\" /> for more "
+"information."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Most audio software, particularly digital audio workstations (DAWs), allow "
+"the user to choose which scale they prefer. DAWs use a <firstterm>timeline</"
+"firstterm> to display the progression of time in a session, allowing you to "
+"do <firstterm>time-shifting</firstterm>; that is, adjust the time in the "
+"timeline when a region starts to be played."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Time is represented horizontally, where the leftmost point is the beginning "
+"of the session (zero, regardless of the unit of measurement), and the "
+"rightmost point is some distance after the end of the session."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Synchronization"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<firstterm>Synchronization</firstterm> coordinates the operation of multiple "
+"tools, most often the movement of the transport. Synchronization also "
+"controls automation across applications and devices. MIDI signals are "
+"usually used for synchronization."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Routing and Multiplexing"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<firstterm>Routing</firstterm> audio transmits a signal from one place to "
+"another — between applications, between parts of applications, or between "
+"devices. On Linux systems, the <systemitem>JACK Audio Connection Kit</"
+"systemitem> is used for audio routing. <systemitem>JACK</systemitem>-aware "
+"applications (and <systemitem>PulseAudio</systemitem> ones, if so "
+"configured) provide inputs and outputs to the <systemitem>JACK</systemitem> "
+"server, depending on their configuration. The <application>QjackCtl</"
+"application> application can adjust the default connections. You can easily "
+"reroute the output of a program like FluidSynth so that it can be recorded "
+"by <application>Ardour</application>, for example, by using "
+"<application>QjackCtl</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Routing and multiplexing"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Master bus inputs accept multiplexed audio from many sources."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Master bus outputs routed to system playback inputs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<firstterm>Multiplexing</firstterm> allows you to connect multiple devices "
+"and applications to a single input or output. <application>QjackCtl</"
+"application> allows you to easily perform multiplexing. This may not seem "
+"important, but remember that only one connection is possible with a physical "
+"device like an audio interface. Before computers were used for music "
+"production, multiplexing required physical devices to split or combine the "
+"signals."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Multichannel Audio"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An <firstterm>audio channel</firstterm> is a single path of audio data. "
+"<firstterm>Multichannel audio</firstterm> is any audio which uses more than "
+"one channel simultaneously, allowing the transmission of more audio data "
+"than single-channel audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audio was originally recorded with only one channel, producing "
+"\"monophonic,\" or \"mono\" recordings. Beginning in the 1950s, stereophonic "
+"recordings, with two independent channels, began replacing monophonic "
+"recordings. Since humans have two independent ears, it makes sense to record "
+"and reproduce audio with two independent channels, involving two speakers. "
+"Most sound recordings available today are stereophonic, and people have "
+"found this mostly satisfying."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There is a growing trend toward five- and seven-channel audio, driven "
+"primarily by \"surround-sound\" movies, and not widely available for music. "
+"Two \"surround-sound\" formats exist for music: DVD Audio (DVD-A) and Super "
+"Audio CD (SACD). The development of these formats, and the devices to use "
+"them, is held back by the proliferation of headphones with personal MP3 "
+"players, a general lack of desire for improvement in audio quality amongst "
+"consumers, and the copy-protection measures put in place by record labels. "
+"The result is that, while some consumers are willing to pay higher prices "
+"for DVD-A or SACD recordings, only a few recordings are available. Even if "
+"you buy a DVD-A or SACD-capable player, you would need to replace all of "
+"your audio equipment with models that support proprietary copy-protection "
+"software. Without this equipment, the player is often forbidden from "
+"outputting audio with a higher sample rate or sample format than a "
+"conventional audio CD. None of these factors, unfortunately, seem like they "
+"will change in the near future."
+msgstr ""
+

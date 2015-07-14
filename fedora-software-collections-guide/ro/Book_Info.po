@@ -1,0 +1,41 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Software Collections Guide\n"
+"POT-Creation-Date: 2014-03-23 20:52+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Software Collections Guide"
+msgstr ""
+
+#. Tag: subtitle
+#, no-c-format
+msgid "A guide to &DSCL;s for &MAJOROS;"
+msgstr ""
+
+#. Tag: productname
+#, no-c-format
+msgid "Fedora Contributor Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Software Collections Guide provides an explanation of &DSCL;s and "
+"details how to build and package them. Developers and system administrators "
+"who have a basic understanding of software packaging with RPM packages, but "
+"who are new to the concept of &DSCL;s, can use this Guide to get started "
+"with &DSCL;s."
+msgstr ""
+

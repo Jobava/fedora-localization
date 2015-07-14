@@ -1,0 +1,399 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:05-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Revision History"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Christopher"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Antila"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Initial creation of book by publican"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "First publically-available draft in DocBook format."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Revised section headings."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Improved and consistent-ified \"Requirements and Installation\" for DAWs"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Significantly revised Audacity chapter."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated JACK installation slightly."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added all external and internal links."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added all images."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Re-formatted ex-&lt;pre&gt; tags."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Changed images to &lt;inlinemediaobject&gt;, where appropriate."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added tables to SuperCollider chapter."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Reviewed &lt;code&gt; tags, all but Basic Programming in SC."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Reviewed use of &lt;code&gt; tags in \"Basic Programming in SC\" chapter."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Searched code for '' or ''' and replaced them with &lt;emphasis&gt; where "
+"appropriate."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Formatted bibliography/book-list in the Solfege chapter."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Re-wrote the JACK installation instructions, to incorporate the fact that "
+"jack2 will be in F14"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Made other minor revisions to the sound servers section."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added links to tutorial files."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Incorporated some comments from external sources."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Changed numbering of Revision History."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Added list of links that need to be updated with every release, to "
+"Musicians_Guide.xml"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated Audacity to make it publish-able."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Replaced instances of \"Fedora 14\" with \"Fedora $PRODVER;\""
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Changed version numbering to correspond more closely to the intended Fedora "
+"release version."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Removed \"asdf\" part introductions."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated entity (.ent) file for Fedora 15."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated hard-coded links to supplemental files for Fedora 15."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Changed subtitle to remove possessive (\"Fedora Linux's\")."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Fixed Bug 665663 (\"URLs to all Tutorial Files Are Broken\") for Fedora 15."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Re-wrote Section 12.4.7.1 to fix the first error in Bug 654187."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Renamed some section in Chapter 12, making them easier to translate (I hope)."
+""
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Reformatted dates in Revision History."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Re-wrote Section 12.4.8.2 to fix the second error in Bug 654187."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added fix for Bug 670520."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added fixes for Bugs 677362 and 674335."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added fix for Bug 665660."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Published for Fedora 15."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Fixed Bug 710332."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Fixed Bug 670540."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Revised parts of Chapters 9 (Rosegarden) and 10 (FluidSynth)."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Removed period from end of subtitle."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Fixed Bug 670533."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Revised parts of Chapter 9 (Rosegarden configuration)."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Revised parts of Chapter 8 (Qtractor configuration)."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Fixed Bug 673519."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Added \"O_S\" and \"OPERATING_SYSTEM\" entities to aid potential adoption by "
+"other distributions."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Started replacing \"Fedora\" and \"Fedora Linux\" with entities listed above."
+""
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added documentation of the Ardour \"nudge tool.\""
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Integrated useful parts of \"Frescobaldi\" chapter into \"LilyPond\" chapter "
+"and removed \"Frescobaldi.\""
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Added links to Qtractor tutorial recordings and revised opening paragraphs "
+"of tutorial."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Updated copyright holder from \"Red Hat Inc. and others\" to \"Fedora "
+"Project Contributors.\""
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added \"Contributors\" appendix."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Removed index; will replace it when it's useful."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Removed my name from the Author_Group.xml, moved it into Contributors "
+"appendx."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Removed \"pulse-rt\" from the groups required for JACK access."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Updated all files, as appropriate, to replace \"Fedora\" and \"Fedora "
+"Linux\" with XML entities, to aid adoption by other groups."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added R. Landmann to list of contributors."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated \"ooolilypond\" to refer to LibreOffice. Hope it's okay."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Started to proofread LilyPond introductory material."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Branched for Fedora 16."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Fixed Bug 751456 (\"Update Binary Unit Notation for Docs Project "
+"Consistency\")"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Fixed Bug 769137 (\"F16 Planet CCRMA Documentation links to F13 Repo\")"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Changed all \"KPackageKit\" references to \"Apper.\""
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Fixed Bug 710330 (\"Section 11.5.1 Broken Link to Local Help File\")"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Published draft version."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Branched for publication with Fedora 18"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Significant revision to LilyPond introductory materials, in an attempt to be "
+"more professional."
+msgstr ""
+

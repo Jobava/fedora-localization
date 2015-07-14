@@ -1,0 +1,44 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "File Systems"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Autofs learns amd maps"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <package>autofs</package> package has gained support for amd format "
+"automount maps. In the past, amd maps have been handled by the <package>am-"
+"utils</package> package, which has seen declining upstream development. "
+"Those that use amd format automount maps are encouraged to test the autofs "
+"functionality, and report any issues or feature requests at <ulink url="
+"\"https://bugzilla.redhat.com\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For usage information, refer to <filename>/usr/share/doc/autofs/README.amd-"
+"maps</filename>."
+msgstr ""
+

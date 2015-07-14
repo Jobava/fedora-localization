@@ -1,0 +1,195 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Web Development"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "PHP 5.6"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The PHP stack has been updated to version 5.6, the latest upstream version. "
+"The important changes in this new version include:"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Security"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"https://wiki.php.net/rfc/tls-peer-verification\">TLS Peer "
+"Verification</ulink>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"https://wiki.php.net/rfc/improved-tls-defaults\">Improved TLS "
+"Defaults</ulink>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Language improvements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"https://wiki.php.net/rfc/const_scalar_exprs\">Constant Scalar "
+"Expressions</ulink>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"https://wiki.php.net/rfc/argument_unpacking\">Argument "
+"Unpacking</ulink>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"https://wiki.php.net/rfc/variadics\">Syntax for variadic "
+"functions</ulink>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"https://wiki.php.net/rfc/pow-operator\">Power Operator</ulink>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"https://wiki.php.net/rfc/use_function\">Importing namespaced "
+"functions</ulink>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"PHP 5.6 also features a new tool, the <ulink url=\"https://wiki.php.net/rfc/"
+"phpdbg\">PHP debugger</ulink>, provided in the new php-dbg subpackage. Use "
+"the debugger with the <command>phpdbg</command> command."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Information about migrating applications from PHP 5.5 to PHP 5.6 can be "
+"found at <ulink url=\"http://php.net/manual/en/migration56.php\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Ruby on Rails 4.1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora 21 includes <application>Ruby on Rails 4.1</application>, the latest "
+"version of the well-known web application framework written in Ruby. "
+"Highlights in this release include Spring application preloader, config/"
+"secrets.yml, Action Pack variants, and Action Mailer previews. The Release "
+"Notes are at <ulink url=\"http://guides.rubyonrails.org/4_1_release_notes."
+"html\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Information for developers upgrading existing applications to Ruby on Rails "
+"4.1 can be found in the Upgrading Ruby on Rails guide at <ulink url=\"http://"
+"guides.rubyonrails.org/upgrading_ruby_on_rails.html\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Web Application Authentication"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At an operating system level, there are numerous authentication and identity "
+"lookup mechanisms, some of them using <systemitem class=\"daemon\">sssd</"
+"systemitem>. With new <systemitem class=\"daemon\">Apache</systemitem> "
+"modules and new <systemitem class=\"daemon\">sssd</systemitem>, some of "
+"those mechanisms become more easily consumable by web applications. Web "
+"application environments and frameworks can then consume results of the "
+"authentication and information retrieval using environment variables similar "
+"to <varname>REMOTE_USER</varname>. This will allow the better integration of "
+"web applications into enterprise-scale deployments."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With <systemitem class=\"library\">mod_authnz_pam</systemitem>, PAM "
+"authentication and access checks are available to web applications, allowing "
+"wider combination of authentication and access controls. One specific target "
+"is host-based access control rules of FreeIPA for Kerberos SSO via "
+"<systemitem class=\"library\">mod_sss</systemitem> and <systemitem class="
+"\"daemon\">sssd</systemitem>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <systemitem class=\"library\">mod_intercept_form_submit</systemitem> "
+"module makes it possible to enable the PAM authentication of <systemitem "
+"class=\"library\">mod_authnz_pam</systemitem> on normal logon form handling "
+"paths, which can then be consumed by web application with fairly minimal "
+"changes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <systemitem class=\"library\">mod_lookup_identity</systemitem> uses "
+"<systemitem class=\"resource\">sssd-dbus</systemitem> to retrieve additional "
+"attributes like name, email address, or group membership, and populates "
+"environment variables for easy consumption of this information by web "
+"applications."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <systemitem class=\"resource\">sssd-dbus</systemitem> implements new "
+"service <systemitem>ifp</systemitem> which provides access to additional "
+"user-related pieces of information."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"More information can be found at <ulink url=\"http://www.freeipa.org/page/"
+"Web_App_Authentication\" />."
+msgstr ""
+

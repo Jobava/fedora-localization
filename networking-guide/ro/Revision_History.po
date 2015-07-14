@@ -1,0 +1,52 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+# translation auto-copied from project System Administrator's Guide, version master, document Revision_History
+#. Tag: title
+#, no-c-format
+msgid "Revision History"
+msgstr "Istoria reviziilor"
+
+#. Tag: firstname
+#, no-c-format
+msgid "Stephen"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Wadeley"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added \"VLAN over a Bond\" to the bonding chapter."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Update for Fedora 21."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "General update and corrections for Fedora 20."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "First version of the Fedora Networking Guide."
+msgstr ""
+

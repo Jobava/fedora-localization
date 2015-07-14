@@ -1,0 +1,9 @@
+arm.fedoraproject.org
+labs.fedoraproject.org
+getfedora.org
+spins.fedoraproject.org 
+start.fedoraproject.org 
+fedoraproject.org
+fedoracommunity.org
+boot.fedoraproject.org
+fedorahosted.org

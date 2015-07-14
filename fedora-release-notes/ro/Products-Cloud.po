@@ -1,0 +1,88 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Fedora Cloud"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Smaller Cloud images"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora maintainers have worked to reduce dependencies and streamline "
+"packaging to produce effective Cloud images that are 10% smaller than the "
+"previous release. Base <systemitem class=\"filesystem\">qcow2</systemitem> "
+"images are under 200MB, so your Fedora Cloud deployments will use minimal "
+"storage resources."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The reduced size is made possible by these notable changes:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora packages traditionally include upstream-provided documentation for "
+"user or administrator reference, as well as license text. Starting with "
+"Fedora 21, Fedora package maintainers have begun using a special location "
+"for license files, allowing Cloud images to be built with the license while "
+"avoiding the extra space consumed by unneeded documentation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Packages which are included in the official Fedora Docker image, and more, "
+"now use a special location for license files, <filename class=\"directory\">/"
+"usr/share/licenses/</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Kernel packages are smaller due to improved packaging, as described in "
+"<ulink url=\"kernel-packaging\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Converting Cloud instances to Fedora Server"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora Cloud excels for meeting organizational needs at scale with largely "
+"undifferentiated compute resources, but in some cases, an administrator "
+"might want to <ulink url=\"http://www.slideshare.net/randybias/architectures-"
+"for-open-and-scalable-clouds/20\">adopt their cattle</ulink> by converting a "
+"cloud instance to an individually managed Fedora Server installation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To convert Fedora Cloud to Fedora Server, use the script provided in the "
+"<package>cloudtoserver</package> package."
+msgstr ""
+

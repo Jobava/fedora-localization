@@ -1,0 +1,746 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2011-05-21 05:11-0400\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Digital Audio Workstations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The term <firstterm>Digital Audio Workstation</firstterm> (henceforth "
+"<firstterm>DAW</firstterm>) refers to the entire hardware and software setup "
+"used for professional (or professional-quality) audio recording, "
+"manipulation, synthesis, and production. It originally referred to devices "
+"purpose-built for the task, but as personal computers have become more "
+"powerful and wide-spread, certain specially-designed personal computers can "
+"also be thought of as DAWs. The software running on these computers, "
+"especially software capable of multi-track recording, playback, and "
+"synthesis, is simply called \"DAW software,\" which is often shortened to "
+"\"DAW.\" So, the term \"DAW\" and its usage are moderately ambiguous, but "
+"generally refer to one of the things mentioned."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For other terms related to digital audio, see <xref linkend=\"chap-"
+"Musicians_Guide-Sound_Cards\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Knowing Which DAW to Use"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Musicians' Guide covers three widely-used DAWs: <application>Ardour</"
+"application>, <application>Qtractor</application>, and "
+"<application>Rosegarden</application>. All three use <systemitem>JACK</"
+"systemitem> extensively, are highly configurable, share a similar user "
+"interface, and allow users to work with both audio and MIDI signals. Many "
+"other DAWs exist, including a wide selection of commercially-available "
+"solutions. Here is a brief description of the programs documented in the "
+"Musicians' Guide:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Ardour</application> is the open-source standard for audio "
+"manipulation. Flexible and extensible."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Qtractor</application> is a relative new-comer, but easy to "
+"use; a \"lean and mean,\" MIDI-focused DAW. Available from Planet CCRMA at "
+"Home or RPM Fusion."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Rosegarden</application> is a well-tested, feature-packed "
+"workhorse of Linux audio, especially MIDI. Includes a visual score editor "
+"for creating MIDI tracks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are unsure of where to start, then you may not need a DAW at all:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are looking for a high-quality recording application, or a tool for "
+"manipulating one audio file at a time, then you would probably be better off "
+"with <application>Audacity</application>. This will be the choice of most "
+"computer users, especially those new to computer audio, or looking for a "
+"quick solution requiring little specialized knowledge. "
+"<application>Audacity</application> is also a good way to get your first "
+"computer audio experiences, specifically because it is easier to use than "
+"most other audio software."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To take full advantage of the features offered by <application>Ardour</"
+"application>, <application>Qtractor</application>, and "
+"<application>Rosegarden</application>, your computer should be equipped with "
+"professional-quality audio equipment, including an after-market audio "
+"interface and input devices like microphones. If you do not have access to "
+"such equipment, then Audacity may be a better choice for you."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are simply hoping to create a \"MIDI recording\" of some sheet music, "
+"you are probably better off using <application>LilyPond</application>. This "
+"program is designed primarily to create printable sheet music, but it will "
+"produce a MIDI-format version of a score if you include the following "
+"command in the <literal>score</literal> section of your "
+"<application>LilyPond</application> source file: <code>\\midi { }</code>. "
+"There are a selection of options that can be put in the <literal>midi</"
+"literal> section; refer to the <application>LilyPond</application> help "
+"files for a listing."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Stages of Recording"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are three main stages involved in the the process of recording "
+"something and preparing it for listeners: recording, mixing, and mastering. "
+"Each step of the process has distinct characteristics, yet they can "
+"sometimes be mixed together."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Recording"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Recording is the process of capturing audio regions (also called \"clips\" "
+"or \"segments\") into the DAW software, for later processing. Recording is a "
+"complex process, involving a microphone that captures sound energy, "
+"translates it into electrical energy, and transmits it to an audio interface."
+" The audio interface converts the electrical energy into digital signals, "
+"and sends it through the operating system to the DAW software. The DAW "
+"stores regions in memory and on the hard drive as required. Every time the "
+"musicians perform some (or all) of the performance to be recorded, while the "
+"DAW is recording, it is considered to be a <firstterm>take</firstterm>. A "
+"successful recording usually requires several takes, due to the "
+"inconsistencies of musical performance and of the related technological "
+"aspects."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Mixing"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Mixing is the process through which recorded audio regions (also called "
+"\"clips\") are coordinated to produce an aesthetically-appealing musical "
+"output. This usually takes place after recording, but sometimes additional "
+"takes will be needed. Mixing often involves reducing audio from multiple "
+"tracks into two channels, for stereo audio - a process known as \"down-"
+"mixing,\" because it decreases the amount of audio data."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Mixing includes the following procedures, among others:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "automating effects,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "adjusting levels,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "time-shifting,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "filtering,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "panning,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "adding special effects."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When the person performing the mixing decides that they have finished, their "
+"finalized production is called the <firstterm>final mix</firstterm>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Mastering"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Mastering is the process through which a version of the final mix is "
+"prepared for distribution and listening. Mastering can be performed for many "
+"target formats, including CD, tape, SuperAudio CD, or hard drive. Mastering "
+"often involves a reduction in the information available in an audio file: "
+"audio CDs are commonly recorded with 20- or 24-bit samples, for example, and "
+"reduced to 16-bit samples during mastering. While most physical formats "
+"(like CDs) also specify the audio signal's format, audio recordings mastered "
+"to hard drive can take on many formats, including OGG, FLAC, AIFF, MP3, and "
+"many others. This allows the person doing the mastering some flexibility in "
+"choosing the quality and file size of the resulting audio."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Even though they are both distinct activities, mixing and mastering "
+"sometimes use the same techniques. For example, a mastering technician might "
+"apply a specific equalization filter to optimize the audio for a particular "
+"physical medium."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "More Information"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It takes experience and practice to gain the skills involved in successful "
+"recording, mixing, and mastering. Further information about these procedures "
+"is available from many places, including these web pages:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Mastering Your Final Mix (64studio)</citetitle>, available at "
+"<ulink url=\"http://www.64studio.com/howto-mastering\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Audio Mixing (Wikipedia)</citetitle>, available at <ulink url="
+"\"http://en.wikipedia.org/wiki/Audio_mixing_%28recorded_music%29\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Multitrack Recording (Wikipedia)</citetitle>, available at <ulink "
+"url=\"http://en.wikipedia.org/wiki/Multitrack_recording\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Interface Vocabulary"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Understanding these concepts is essential to understanding how to use the "
+"DAW software's interface."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Session"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A <firstterm>session</firstterm> is all of the tracks, regions, automation "
+"settings, and everything else that goes along with one \"file\" saved by the "
+"DAW software. Some software DAWs manage to hide the entire session within "
+"one file, but others instead create a new directory to hold the regions and "
+"other data."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Typically, one session is used to hold an entire recording session; it is "
+"broken up into individual songs or movements after recording. Sometimes, as "
+"in the tutorial examples with the Musicians' Guide, one session holds only "
+"one song or movement. There is no strict rule as to how much music should be "
+"held within one session, so your personal preference can determine what you "
+"do here."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "A session in Ardour"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Track and Multitrack"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A <firstterm>track</firstterm> represents one channel, or a predetermined "
+"collection of simultaneous, inseparable channels (as is often the case with "
+"stereo audio). In the DAW's main window, tracks are usually represented as "
+"rows, whereas time is represented by columns. A track may hold multiple "
+"regions, but usually only one of those regions can be heard at a time. The "
+"<firstterm>multitrack</firstterm> capability of modern software-based DAWs "
+"is one of the reasons for their success. Although each individual track can "
+"play only one region at a time, the use of multiple tracks allows the DAW's "
+"outputted audio to contain a virtually unlimited number of simultaneous "
+"regions. The most powerful aspect of this is that audio does not have to be "
+"recorded simultaneously in order to be played back simultaneously; you could "
+"sing a duet with yourself, for example."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "A track in Ardour"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Region, Clip, or Segment"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Region, clip, and segment are synonyms: different software uses a different "
+"word to refer to the same thing. A <firstterm>region</firstterm> (or "
+"<firstterm>clip</firstterm> or <firstterm>segment</firstterm>) is the "
+"portion of audio recorded into one track during one take. Regions are "
+"represented in the main DAW interface window as a rectangle, usually "
+"coloured, and always contained in only one track. Regions containing audio "
+"signal data usually display a spectrographic representation of that data. "
+"Regions containing MIDI signal data usually displayed as matrix-based "
+"representation of that data."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For the three DAW applications in the Musicians' Guide:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Ardour</application> calls them \"regions,\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Qtractor</application> calls them \"clips,\" and,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Rosegarden</application> calls them \"segments.\""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "A region in Ardour"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Transport and Playhead"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>transport</firstterm> is responsible for managing the current "
+"time in a session, and with it the playhead. The <firstterm>playhead</"
+"firstterm> marks the point on the timeline from where audio would be played, "
+"or to where audio would be recorded. The transport controls the playhead, "
+"and whether it is set for recording or only playback. The transport can move "
+"the playhead forward or backward, in slow motion, fast motion, or real time. "
+"In most computer-based DAWs, the playhead can also be moved with the cursor. "
+"The playhead is represented on the DAW interface as a vertical line through "
+"all tracks. The transport's buttons and displays are usually located in a "
+"toolbar at the top of the DAW window, but some people prefer to have the "
+"transport controls detached from the main interface, and this is how they "
+"appear by default in Rosegarden."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Automation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Automation of the DAW sounds like it might be an advanced topic, or "
+"something used to replace decisions made by a human. This is absolutely not "
+"the case - <firstterm>automation</firstterm> allows the user to "
+"automatically make the same adjustments every time a session is played. This "
+"is superior to manual-only control because it allows very precise, gradual, "
+"and consistent adjustments, because it relieves you of having to remember "
+"the adjustments, and because it allows many more adjustments to be made "
+"simultaneously than you could make manually. The reality is that automation "
+"allows super-human control of a session. Most settings can be adjusted by "
+"means of automation; the most common are the fader and the panner."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The most common method of automating a setting is with a two-dimensional "
+"graph called an <firstterm>envelope</firstterm>, which is drawn on top of an "
+"audio track, or underneath it in an <firstterm>automation track</firstterm>. "
+"The user adds adjustment points by adding and moving points on the graph. "
+"This method allows for complex, gradual changes of the setting, as well as "
+"simple, one-time changes. Automation is often controlled by means of MIDI "
+"signals, for both audio and MIDI tracks. This allows for external devices to "
+"adjust settings in the DAW, and vice-versa - you can actually automate your "
+"own hardware from within a software-based DAW! Of course, not all hardware "
+"supports this, so refer to your device's user manual."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "User Interface"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section describes various components of software-based DAW interfaces. "
+"Although the <application>Qtractor</application> application is visible in "
+"the images, both <application>Ardour</application> and "
+"<application>Rosegarden</application> (along with most other DAW software) "
+"have an interface that differs only in details, such as which buttons are "
+"located where."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Messages Pane"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Qtractor messages pane"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <guilabel>messages</guilabel> pane, shown in <xref linkend="
+"\"qtractor_messages\" />, contains messages produced by the DAW, and "
+"sometimes messages produced by software used by the DAW, such as "
+"<systemitem>JACK</systemitem>. If an error occurs, or if the DAW does not "
+"perform as expected, you should check the <guilabel>messages</guilabel> pane "
+"for information that may help you to get the desired results. The "
+"<guilabel>messages</guilabel> pane can also be used to determine whether "
+"<systemitem>JACK</systemitem> and the DAW were started successfully, with "
+"the options you prefer."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Clock"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Qtractor clock"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The clock shows the current place in the file, as indicated by the transport."
+" In <xref linkend=\"qtractor_clocks\" />, you can see that the transport is "
+"at the beginning of the session, so the clock indicates <literal>0</literal>."
+" This clock is configured to show time in minutes and seconds, so it is a "
+"<firstterm>time clock</firstterm>. Other possible settings for clocks are to "
+"show <firstterm>BBT</firstterm> (bars, beats, and ticks — a <firstterm>MIDI "
+"clock</firstterm>), samples (a <firstterm>sample clock</firstterm>), or an "
+"<firstterm>SMPTE timecode</firstterm> (used for high-precision "
+"synchronization, usually with video — a <firstterm>timecode clock</"
+"firstterm>). Some DAWs allow the use of multiple clocks simultaneously."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that this particular time clock in <application>Qtractor</application> "
+"also offers information about the MIDI tempo and metre (120.0 beats per "
+"minute, and 4/4 metre), along with a quantization setting for MIDI recording."
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Track Info Pane"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Qtractor track info pane"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The track info pane: note a separate track info space for each of the two "
+"tracks that appear in the pane to the right."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>track info</firstterm> pane contains information and settings "
+"for each track and bus in the session. Here, you can usually adjust settings "
+"like the routing of a track's or bus' input and output routing, the "
+"instrument, bank, program, and channel of MIDI tracks, and the three buttons "
+"shown in <xref linkend=\"qtractor_track_info\" />: <guibutton>R</guibutton> "
+"for \"arm to record,\" <guibutton>M</guibutton> for \"mute/silence track's "
+"output,\" and <guibutton>S</guibutton> for \"solo mode,\" where only the "
+"selected tracks and busses are heard."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The information provided, and the layout of buttons, can change dramatically "
+"between DAWs, but they all offer the same basic functionality. Often, right-"
+"clicking on a track info box will give access to extended configuration "
+"options. Left-clicking on a portion of the track info box that is not a "
+"button allows you to select a track without selecting a particular moment in "
+"<firstterm>track pane</firstterm>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The track info pane does not scroll out of view as the track pane is "
+"adjusted, but is independent."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Track Pane"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Qtractor track pane"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>ruler</firstterm>, set here to <firstterm>BBT</firstterm> "
+"(bars, beats, ticks)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Two tracks, presented as graphical representations. The horizontal axis "
+"repesents time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A MIDI <firstterm>clip</firstterm> (known as a <firstterm>region</firstterm> "
+"in other applications)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An audio <firstterm>clip</firstterm> (known as a <firstterm>region</"
+"firstterm> in other applications)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Scrollbar for the track pane; note that this pane scrolls independently."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>track pane</firstterm> is the main workspace in a DAW. It "
+"shows <firstterm>regions</firstterm> (also called <firstterm>clips</"
+"firstterm>) with a rough overview of the audio wave-form or MIDI notes, "
+"allows you to adjust the starting-time and length of regions, and also "
+"allows you to assign or re-assign a region to a track. The track pane shows "
+"the transport as a vertical line; in <xref linkend=\"qtractor_track\" /> it "
+"is the left-most red line in the track pane."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Scrolling the track pane horizontally allows you to view the regions "
+"throughout the session. The left-most point is the start of the session; the "
+"right-most point is after the end of the session. Most DAWs allow you to "
+"scroll well beyond the end of the session. Scrolling vertically in the track "
+"pane allows you to view the regions and tracks in a particular time range."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Transport Controls"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Qtractor transport controls"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Transport skip to beginning"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Transport fast reverse"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Transport fast forward"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Transport skip to end"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Transport forward at real time"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Arm for recording"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The transport controls allow you to manipulate the transport in various ways."
+" The shape of the buttons is somewhat standardized; a similar-looking button "
+"will usually perform the same function in all DAWs, as well as in consumer "
+"electronic devices like CD players and DVD players."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The single, left-pointing arrow with a vertical line will move the transport "
+"to the start of the session, without playing or recording any material. In "
+"<application>Qtractor</application>, if there is a blue place-marker between "
+"the transport and the start of the session, the transport will skip to the "
+"blue place-marker. Press the button again to the next blue place-marker or "
+"the beginning of the session."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The double left-pointing arrows move the transport in fast motion, towards "
+"the start of the session. The double right-pointing arrows move the "
+"transport in fast motion, towards the end of the session."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The single, right-pointing arrow with a vertical line will move the "
+"transport to the end of the last region currently in a session. In "
+"<application>Qtractor</application>, if there is a blue place-marker between "
+"the transport and the end of the last region in the session, the transport "
+"will skip to the blue place-marker. Press the button again to skip to the "
+"next blue place-marker or the end of the last region in the session."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The single, right-pointing arrow is commonly called \"play,\" but it "
+"actually moves the transport forward in real-time. When it does this, if the "
+"transport is armed for recording, any armed tracks will record. Whether or "
+"not the transport is armed, pressing the \"play\" button causes all un-armed "
+"tracks to play all existing regions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The circular button arms the transport for recording. It is conventionally "
+"red in colour. In <application>Qtractor</application>, the transport can "
+"only be armed <emphasis>after</emphasis> at least one track has been armed; "
+"to show this, the transport's arm button only turns red if a track is armed."
+msgstr ""
+

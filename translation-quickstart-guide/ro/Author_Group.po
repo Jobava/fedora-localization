@@ -1,0 +1,86 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Translation Quick Start Guide\n"
+"POT-Creation-Date: 2010-11-02T23:38:14\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: firstname
+#, no-c-format
+msgid "Manuel"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Ospina"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Paul"
+msgstr ""
+
+#. Tag: othername
+#, no-c-format
+msgid "W."
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Frields"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Noriko"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Mizumoto"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Dmitris"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Glezos"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Diego"
+msgstr ""
+
+#. Tag: othername
+#, no-c-format
+msgid "Búrigo"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Zacarão"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Piotr"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Drąg"
+msgstr ""
+

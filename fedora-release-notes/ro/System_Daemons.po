@@ -1,0 +1,151 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Systemd"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Journald"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Journal messages can be forwarded to remote systems, without using a syslog "
+"daemon. The <package>systemd-journal-remote</package> and <package>systemd-"
+"journal-upload</package> packages provide receiver and sender daemons. "
+"Communication is done over <systemitem class=\"protocol\">HTTPS</systemitem>."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <systemitem class=\"service\">cupsd</systemitem> service now logs output "
+"into the journal. See <xref linkend=\"sect-cups-journal-logging\" /> for "
+"details."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "systemd 215"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"daemon\">systemd</systemitem> in Fedora 21 has been "
+"updated to version 215. This release includes substantial enhancements, "
+"including improved resource management, service isolation and other security "
+"improvements, and network management from <systemitem class="
+"\"daemon\">systemd-networkd</systemitem>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Many of these improvements enhance management of services running inside "
+"containers, and management of the containers themselves. <command>systemd-"
+"nspawn</command> creates securely isolated containers, and tools such as "
+"<command>machinectl</command> are available to manage them. <systemitem "
+"class=\"daemon\">systemd-networkd</systemitem> provides network services for "
+"the containers, and <systemitem class=\"daemon\">systemd</systemitem> itself "
+"manages resource allocations."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To learn more about enhancements to <systemitem class=\"daemon\">systemd</"
+"systemitem>, read:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>/usr/share/doc/systemd/NEWS</filename> for the upstream changelog."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Manpages and other documentation provided with the systemd package, listed "
+"with <command>rpm -qd systemd</command>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"http://0pointer.net/blog/projects/stateless.html\" /> for an "
+"overview of many changes and their intent."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"http://www.freedesktop.org/wiki/Software/systemd/\" /> for a "
+"comprehensive overview of systemd."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet\" "
+"/> for users new to Fedora and <systemitem class=\"daemon\">systemd</"
+"systemitem>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Systemd PrivateDevices and PrivateNetwork"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Two new security-related options are now being used by <systemitem>systemd</"
+"systemitem> for long-running services which do not require access to "
+"physical devices or the network:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>PrivateDevices</option> setting, when set to \"yes\", provides a "
+"private, minimal <filename class=\"directory\">/dev</filename> that does not "
+"include physical devices. This allows long-running services to have limited "
+"access, increasing security."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>PrivateNetwork</option> setting, when set to \"yes\", provides a "
+"private network with only a loopback interface. This allows long-running "
+"services that do not require network access to be cut off from the network."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For details about this change, see the <ulink url=\"https://fedoraproject."
+"org/wiki/Changes/PrivateDevicesAndPrivateNetwork\">PrivateDevices and "
+"PrivateNetwork Wiki page</ulink>."
+msgstr ""
+

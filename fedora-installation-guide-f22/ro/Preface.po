@@ -1,0 +1,30 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-06-04 12:55+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+# translation auto-copied from project networking-guide, version f21, document pot/Preface
+msgid "Preface"
+msgstr "Prefață"
+
+msgid "Acknowledgments"
+msgstr ""
+
+msgid ""
+"Certain portions of this text first appeared in the <citetitle>Red Hat "
+"Enterprise Linux Installation Guide</citetitle>, copyright © 2014 Red Hat, "
+"Inc. and others, published by Red Hat at <ulink url=\"https://access.redhat."
+"com/documentation/en-US/Red_Hat_Enterprise_Linux/\" />."
+msgstr ""
+

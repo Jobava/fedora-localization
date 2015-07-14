@@ -1,0 +1,1808 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Composing with SuperCollider"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section is an explanation of the creative thought-process that went "
+"into creating the SuperCollider composition that we've called \"Method "
+"One,\" for which the source and exported audio files are available below."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is our hope that, in illustrating how we developed this composition from "
+"a single SinOsc command, you will learn about SuperCollider and its "
+"abilities, about how to be creative with SuperCollider, and how a simple "
+"idea can turn into something of greater and greater complexity."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As musicians, our goal is to learn enough SuperCollider to make music; we "
+"don't want to have to memorize which parameters do what for which functions, "
+"and in which order to call them. We want to know what they do for us "
+"musically. Explicitly calling parameters, and making comments about what "
+"does what, so that we can return later and change musical things, are going "
+"to help our musical productivity, at the expense of slowing down our typing."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Files for the Tutorial"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following files represent complete versions of the program. You should "
+"try to complete the program yourself before reviewing these versions:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Method One</citetitle> is available at <ulink url=\"http://docs."
+"fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/files/SuperCollider/"
+"Method_One.sc\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Method One (Optimized)</citetitle> is available at <ulink url="
+"\"http://docs.fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/files/"
+"SuperCollider/Method_One-optimized.sc\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A FLAC-format recording of <citetitle>Method One</citetitle> is available at "
+"<ulink url=\"http://docs.fedoraproject.org/en-US/Fedora/15/html/"
+"Musicians_Guide/files/SuperCollider/Method_One.flac\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>Method_One.sc</filename> is an extensively-commented version of "
+"the source code. The comments not only describe the way the code works, but "
+"pose some problems and questions that you may wish to work on, to increase "
+"your knowledge of SuperCollider. The problem with the verbosity of the "
+"comments is that it can be difficult to read the code itself, as it would be "
+"written in a real program."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>Method_One-optimized.sc</filename> is a less-commented version of "
+"the source code. I've also re-written part of the code, to make it more "
+"flexible for use in other programs. The differences between this, and code "
+"that I would have written for myself only, are trivial."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>Method_One.flac</filename> is a recording that I produced of the "
+"program, which I produced in <application>Ardour</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Inspiration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The intention of this program is to represent one way to write a "
+"SuperCollider program. I decided to take one class, SinOsc, and use it for "
+"\"everything.\" Here, \"everything\" means any function that returns a "
+"sound, or any function that directly controls a SinOsc."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to fill up time, I decided to employ a three-part \"rounded "
+"binary\" form: ABA' or \"something, something new, then the first thing "
+"again.\" This is kind of like a sine oscillation, too!"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Designing the First Part"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I started with something simple: a single SinOsc: <code>{ SinOsc.ar(); }."
+"play;</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is not exciting: it just stays the same forever, and it only uses one "
+"channel! So, I added another SinOsc to the right channel, using the [ , ] "
+"array notation. The result is <code>{ [ SinOsc.ar(), SinOsc.ar() ] }.play;</"
+"code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now it sounds balanced, at least, like it's coming from the middle. But it's "
+"still boring, so I added a frequency-changing SinOsc to the right channel, "
+"resulting in <code>{ [ SinOsc.ar(), SinOsc.ar(SinOsc.kr(1,50,300)) ] }."
+"play;</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Since that's difficult to read, and since I know that I'm just going to keep "
+"adding things, I expand the code a little bit to make it more legible. This "
+"gives me"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   var left = SinOsc.ar();\n"
+"   var right = SinOsc.ar( SinOsc.kr( 1, 50, 300 ) );\n"
+"\n"
+"   [ left, right ]\n"
+"\n"
+"}.play;\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I define a variable holding everything I want in the left channel, then the "
+"same for the right. I still use the [ , ] array notation to create a stereo "
+"array. Remember that SuperCollider functions return the last value stated, "
+"so it might look like the stereo array is ignored, but because this array is "
+"what is returned by the function contained between { and }, it is this array "
+"that gets played by the following \".play;\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I also added a frequency controller to the left SinOsc, and realized that "
+"it's getting a bit difficult to read again, especially if I wanted to add "
+"another parameter to the SinOsc.ar objects. So I placed the SinOsc.kr's into "
+"their own variables: frequencyL and frequencyR. This results in"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   var frequencyL = SinOsc.kr( freq:10, mul:200, add:400 );\n"
+"   var frequencyR = SinOsc.kr( freq:1, mul:50, add:150 );\n"
+"\n"
+"   var left = SinOsc.ar( frequencyL );\n"
+"   var right = SinOsc.ar( frequencyR );\n"
+"\n"
+"   [ left, right ]\n"
+"\n"
+"}.play;\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now I can experiment with the frequency-changing SinOsc's, to make sure that "
+"I get things just right. When I realize what the parameters do, I make a "
+"note for myself (see \"FSC-method-1-.sc\"), so that it will be easy to "
+"adjust it later. I also explicitly call the parameters. This isn't "
+"necessary, but it also helps to avoid future confusion. Most programmers "
+"would not explicitly call the parameters, but we're musicians, not "
+"programmers."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The left channel has something like a \"melody,\" so I decided to add a "
+"drone-like SinOsc to it. This is easy, of course, because any SinOsc left "
+"alone is automatically a drone! But, where should it be added? Into the "
+"\"left\" variable, of course. We'll create an array using [ , ] array "
+"notation. There are two things that I would do at this point to help with "
+"future readability:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Align all of the left-channel SinOsc's vertically (using tabs and spaces), "
+"so that each line is one sound-generating UGen."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At the end of each line, write a small comment describing what the UGen on "
+"that line doesn."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now the volume is a problem. For most sound-producing UGen's, the \"mul\" "
+"argument controls the volume. For most of those, the default is \"1.0,\" and "
+"anything greater will create distorted output. The physics and computer "
+"science factors that wind up creating distortion are rather complicated, and "
+"it isn't necessary to understand them. What we need to know is that, if the "
+"output of a UGen (or some UGen's) sounds distorted, then we should probably "
+"adjust the \"mul\" argument. Sometimes, of course, you may prefer that "
+"distorted output."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It seems that, when you're using multiple SinOsc's in one output channel, "
+"the \"mul\" of all of them must not add to more than 1.0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We're using two output channels (left and right). We'll leave the right "
+"channel alone for now, because it has only one output UGen."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"So, I'll change add a \"mul\" argument to each of the left-channel UGen's, "
+"to 0.5"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now we can't hear the left channel, because the right channel is too loud! "
+"Playing with volumes (sometimes called \"adjusting levels\" for computers) "
+"is a constant aesthetic concern for all musicians. Add a \"mul\" argument to "
+"the right channel, and set it to what seems an appropriate volume for the "
+"moment. It will probably change later, but that's okay."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"But let's add another dimension to this: there's no reason to keep the "
+"volume static, because we can use a SinOsc to change it periodically! I "
+"added a SinOsc variable called \"volumeL,\" which I used as the argument to "
+"\"mul\" for the \"frequencyL\" SinOsc in the left channel."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"And now the sheer boredom of the drone in the left channel becomes obvious. "
+"I decide to make it more interesting by adding a series of overtones (an "
+"overtone is...). I decide to add six, then experiment with which frequencies "
+"to add. But, every time I adjust one frequency, I have to re-calculate and "
+"change all the others. So I decide to add a variable for the drone's "
+"frequency: \"frequencyL_drone\". This way, after finding the right "
+"intervals, I can easily adjust all of them just by changing the variable. "
+"I've decided on drone*1, 2, 5, 13, and 28. These are more or less arbitrary, "
+"and I arrived on them through experimentation. Of course, the drone will be "
+"<emphasis>way</emphasis> too loud."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Writing"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"SinOsc.ar( "
+"[frequencyL_drone,2*frequencyL_drone,5*frequencyL_drone,13*frequencyL_drone,28*frequencyL_drone], "
+"mul:0.1 )"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"in your program is not easy to read, and actually it doesn't work out volume-"
+"balance-wise (for me, at least): the high frequencies are too loud, and the "
+"lower ones are not loud enough. In retrospect, I should have created a "
+"variable for the \"mul\" of these drones, so I could adjust them easily in "
+"proportion. But, I didn't."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A constant drone isn't as much fun as one that slowly changes over time. So, "
+"I changed the \"frequencyL_drone\" value to a SinOsc.kr UGen. Because it's "
+"supposed to be a \"drone,\" it should change only very gradually, so I used "
+"a very small freqeuncy argument. It still moves quite quickly, but people "
+"won't want to listen to this too long, anyway!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I did something similar with the right channel, addding a slowly-changing "
+"drone and overtones above it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After some final volume adjustments, I feel that I have completed the first "
+"part. There is no way to know for sure that you've finished until it happens."
+" Even then, you may want to change your program later."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Designing the Second Part"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next thing that I did was to design the second part. This will not join "
+"them together yet, and I'm going to focus on something completely different, "
+"so I decided to do this in a separate file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"My inspiration for this part came from experimenting with the drones of the "
+"first part. There are a virtually unlimited number of combinations of sets "
+"of overtones that could be created, and the combinations of discrete "
+"frequencies into complex sounds is something that has fascinated me for a "
+"long time. Moreover, when thousands of discrete frequencies combine in such "
+"a way as to create what we think of as \"a violin playing one note,\" it "
+"seems like a magical moment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I'm going to build up a set of pseudo-random tones, adding them one at a "
+"time, in set increments. As you will see, this introduces a number of "
+"problems, primarily because of the scheduling involved with the one-by-one "
+"introduction of tones, and keeping track of those tones."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The fact that there are ten tones also poses a problem, because it might "
+"require a lot of typing. We'll see solutions to that, which use "
+"SuperCollider's programming features to greatly increase the efficiency."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Although we've already solved the musical problems (that is, we know what we "
+"want this part to sound like), the computer science (programming) problems "
+"will have to be solved the old-fashioned way: start with something simple, "
+"and build it into a complex solution."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"First I will develop the version used in FSC-method-1.sc, then the version "
+"used in FSC-method-1-short.sc"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating Ten Pseudo-Random Tones"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "We'll start again with something simple, that we know how to do."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"{\n"
+"   SinOsc.ar();\n"
+"}.play;\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We already know that we want this to produce stereo output, and we already "
+"know that we're going to be using enough SinOsc's that we'll need to reduce "
+"\"mul.\" Keeping in mind that there will be ten pitches, and two SinOsc's "
+"for each of them, set both of those things now, keeping just one pitch for "
+"now."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The first challenge is to implement pseudo-randomness. We'll use the number."
+"rand function to generate a pseudo-random number (integer, actually), but if "
+"run as <code>50.rand</code>, we will get a result between 0 and 50. As a "
+"frequency, this is not useful: most audio equipment cannot produce pitches "
+"below 20 Hz, and many people have problems hearing very low frequencies. "
+"This means that we'll need to add a value to .rand's output (like <code>100 "
+"+ 50.rand</code>, which will yield an integer between 100 and 150). I "
+"decided to go with a value between 200 Hz and 800 Hz instead, largely "
+"because I felt like it. Try setting the freq with the .rand call."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I hope you didn't end up with two different frequencies! If you did, you'll "
+"need to use a variable to temporarily store the pseduo-random frequency, so "
+"that both sides can use it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now we need to make ten of these, so copy-and-paste until there are ten "
+"different stereo pitches at once."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   var frequency = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, mul:0."
+"01 ) ]\n"
+"   var frequency = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, mul:0."
+"01 ) ]\n"
+"   var frequency = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, mul:0."
+"01 ) ]\n"
+"   var frequency = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, mul:0."
+"01 ) ]\n"
+"   var frequency = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, mul:0."
+"01 ) ]\n"
+"   var frequency = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, mul:0."
+"01 ) ]\n"
+"   var frequency = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, mul:0."
+"01 ) ]\n"
+"   var frequency = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, mul:0."
+"01 ) ]\n"
+"   var frequency = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, mul:0."
+"01 ) ]\n"
+"   var frequency = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, mul:0."
+"01 ) ]\n"
+"}.play;\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It doesn't work: you'll also have to rename your frequency-setting variable "
+"each time."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   var frequency1 = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency1, mul:0.01 ), SinOsc.ar( freq:frequency1, mul:"
+"0.01 ) ]\n"
+"   var frequency2 = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency2, mul:0.01 ), SinOsc.ar( freq:frequency2, mul:"
+"0.01 ) ]\n"
+"   var frequency3 = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency3, mul:0.01 ), SinOsc.ar( freq:frequency3, mul:"
+"0.01 ) ]\n"
+"   var frequency4 = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency4, mul:0.01 ), SinOsc.ar( freq:frequency4, mul:"
+"0.01 ) ]\n"
+"   var frequency5 = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency5, mul:0.01 ), SinOsc.ar( freq:frequency5, mul:"
+"0.01 ) ]\n"
+"   var frequency6 = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency6, mul:0.01 ), SinOsc.ar( freq:frequency6, mul:"
+"0.01 ) ]\n"
+"   var frequency7 = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency7, mul:0.01 ), SinOsc.ar( freq:frequency7, mul:"
+"0.01 ) ]\n"
+"   var frequency8 = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency8, mul:0.01 ), SinOsc.ar( freq:frequency8, mul:"
+"0.01 ) ]\n"
+"   var frequency9 = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency9, mul:0.01 ), SinOsc.ar( freq:frequency9, mul:"
+"0.01 ) ]\n"
+"   var frequency0 = 200 + 600.rand;\n"
+"   [ SinOsc.ar( freq:frequency0, mul:0.01 ), SinOsc.ar( freq:frequency0, mul:"
+"0.01 ) ]\n"
+"}.play;\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It still doesn't work! The error given in the \"SuperCollider output\" "
+"window is not easy to understand, but it means \"You have to put all of your "
+"variable declarations before everything else.\""
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   var frequency1 = 200 + 600.rand;\n"
+"   var frequency2 = 200 + 600.rand;\n"
+"   var frequency3 = 200 + 600.rand;\n"
+"   var frequency4 = 200 + 600.rand;\n"
+"   var frequency5 = 200 + 600.rand;\n"
+"   var frequency6 = 200 + 600.rand;\n"
+"   var frequency7 = 200 + 600.rand;\n"
+"   var frequency8 = 200 + 600.rand;\n"
+"   var frequency9 = 200 + 600.rand;\n"
+"   var frequency0 = 200 + 600.rand;\n"
+"\n"
+"   [ SinOsc.ar( freq:frequency1, mul:0.01 ), SinOsc.ar( freq:frequency1, mul:"
+"0.01 ) ]\n"
+"   [ SinOsc.ar( freq:frequency2, mul:0.01 ), SinOsc.ar( freq:frequency2, mul:"
+"0.01 ) ]\n"
+"   [ SinOsc.ar( freq:frequency3, mul:0.01 ), SinOsc.ar( freq:frequency3, mul:"
+"0.01 ) ]\n"
+"   [ SinOsc.ar( freq:frequency4, mul:0.01 ), SinOsc.ar( freq:frequency4, mul:"
+"0.01 ) ]\n"
+"   [ SinOsc.ar( freq:frequency5, mul:0.01 ), SinOsc.ar( freq:frequency5, mul:"
+"0.01 ) ]\n"
+"   [ SinOsc.ar( freq:frequency6, mul:0.01 ), SinOsc.ar( freq:frequency6, mul:"
+"0.01 ) ]\n"
+"   [ SinOsc.ar( freq:frequency7, mul:0.01 ), SinOsc.ar( freq:frequency7, mul:"
+"0.01 ) ]\n"
+"   [ SinOsc.ar( freq:frequency8, mul:0.01 ), SinOsc.ar( freq:frequency8, mul:"
+"0.01 ) ]\n"
+"   [ SinOsc.ar( freq:frequency9, mul:0.01 ), SinOsc.ar( freq:frequency9, mul:"
+"0.01 ) ]\n"
+"   [ SinOsc.ar( freq:frequency0, mul:0.01 ), SinOsc.ar( freq:frequency0, mul:"
+"0.01 ) ]\n"
+"}.play;\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It still doesn't work! SuperCollider is confused because I was been lazy and "
+"didn't include enough semicolons. The error we get is, \"Index not an "
+"Integer,\" which is a clue as to what SuperCollider is trying to do (but "
+"it's irrelevant). The real problem is that SuperCollider interprets our ten "
+"stereo arrays as all being part of the same statement. We don't want them to "
+"be the same statement, however, because we want ten <emphasis>different</"
+"emphasis> stereo arrays to be played. Fix this problem by putting a "
+"semicolon at the end of each stereo array. You do not <emphasis>need</"
+"emphasis> to include one at the end of the last statement, because "
+"SuperCollider assumes the end of the statement when it encounters a } (end-"
+"of-function marker) after it. Since we're still building our code, we might "
+"move these around or add something aftwards, so it's better to include a "
+"semicolon at the end of each stereo array."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now the file plays successfully, but with a disappointing result. If you "
+"can't already see the problem, try to think of it before continuing to read."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Only one SinOsc array gets played, and it's the last one. This is because "
+"the last statement is returned by the function that ends at } and it is that "
+"result which gets sent to the following .play"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To fix this, and ensure that all of the stereo arrays are played, you should "
+"remove the .play from the end of the function, and add a .play to each "
+"stereo array statement. You end up with"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   var frequency1 = 200 + 600.rand;\n"
+"   var frequency2 = 200 + 600.rand;\n"
+"   var frequency3 = 200 + 600.rand;\n"
+"   var frequency4 = 200 + 600.rand;\n"
+"   var frequency5 = 200 + 600.rand;\n"
+"   var frequency6 = 200 + 600.rand;\n"
+"   var frequency7 = 200 + 600.rand;\n"
+"   var frequency8 = 200 + 600.rand;\n"
+"   var frequency9 = 200 + 600.rand;\n"
+"   var frequency0 = 200 + 600.rand;\n"
+"\n"
+"   [ SinOsc.ar( freq:frequency1, mul:0.01 ), SinOsc.ar( freq:frequency1, mul:"
+"0.01 ) ].play;\n"
+"   [ SinOsc.ar( freq:frequency2, mul:0.01 ), SinOsc.ar( freq:frequency2, mul:"
+"0.01 ) ].play;\n"
+"   [ SinOsc.ar( freq:frequency3, mul:0.01 ), SinOsc.ar( freq:frequency3, mul:"
+"0.01 ) ].play;\n"
+"   [ SinOsc.ar( freq:frequency4, mul:0.01 ), SinOsc.ar( freq:frequency4, mul:"
+"0.01 ) ].play;\n"
+"   [ SinOsc.ar( freq:frequency5, mul:0.01 ), SinOsc.ar( freq:frequency5, mul:"
+"0.01 ) ].play;\n"
+"   [ SinOsc.ar( freq:frequency6, mul:0.01 ), SinOsc.ar( freq:frequency6, mul:"
+"0.01 ) ].play;\n"
+"   [ SinOsc.ar( freq:frequency7, mul:0.01 ), SinOsc.ar( freq:frequency7, mul:"
+"0.01 ) ].play;\n"
+"   [ SinOsc.ar( freq:frequency8, mul:0.01 ), SinOsc.ar( freq:frequency8, mul:"
+"0.01 ) ].play;\n"
+"   [ SinOsc.ar( freq:frequency9, mul:0.01 ), SinOsc.ar( freq:frequency9, mul:"
+"0.01 ) ].play;\n"
+"   [ SinOsc.ar( freq:frequency0, mul:0.01 ), SinOsc.ar( freq:frequency0, mul:"
+"0.01 ) ].play;\n"
+"}\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you execute this, no sound is produced, but SuperCollider outputs \"a "
+"Function.\" Can you think of why this happens? It's because you wrote a "
+"function, but never told SuperCollider to evaluate it! At the end of "
+"execution, SuperCollider just throws away the function, because it's never "
+"used. This is the same thing that happened to the first nine stereo arrays - "
+"they were created, but you never said to do anything with them, so they were "
+"just thrown out. We need to execute the function. Because it doesn't produce "
+"a UGen, we can't use \"play,\" so we have to use \"value\" instead. You can "
+"choose to do either of these:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "{ ... }.value;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "or"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"var myFunction = { ... };\n"
+"myFunction.value;\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This gives us yet another error, as if we can't play the stereo arrays! In "
+"fact, we can't - and we didn't do it in the first part, either. We play'ed "
+"the result of returning a stereo array from a function. The subtle "
+"difference isn't important yet - we're just trying to make this work! Use { "
+"and } to build a function for .play to .play"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Now make the correction nine more times."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you play execute the resulting code, you probably get something that "
+"sounds quite \"space-age.\" Execute it a few times, to see the kind of "
+"results you get."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Scheduling the Tones"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next step is to get these started consecutively, with 5-second pauses "
+"after each addition. For this we will use a TempoClock, and since this is "
+"the only thing that we're doing, we'll just use the default one called "
+"TempoClock.default. I don't feel like typing that, however, so we're going "
+"to define an alias variable: <code>var t_c = TempoClock.default;</code> You "
+"could put that in the main function, but I suggest putting it before the "
+"main function. This way, if we want to write another function later, then it "
+"can also access <literal>t_c</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The default TempoClock has a default tempo of one beat per second (1 Hz). "
+"This will be good enough for us. If you wanted to change the tempo, remember "
+"that you can enter a metronome setting (which is \"beats per minute\") by "
+"dividing the metronome setting by 60. So a metronome's 120 beats per minute "
+"would be given to a new TempoClock as <code>TempoClock.new( 120/60 )</code>. "
+"Even though you could do that ahead of time and just write \"2,\" inputting "
+"it as \"120/60\" makes it clearer what tempo you intend to set."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can schedule something on a TempoClock by using <code>t_c.sched( "
+"<replaceable>x</replaceable>, <replaceable>f</replaceable> );</code>, where "
+"<literal>f</literal> is a function to execute, and <literal>x</literal> is "
+"when it should be done, measured as the number of beats from now. So we can "
+"schedule our SinOsc like this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"t_c.sched( 1, {{[ SinOsc.ar( freq:frequency1, mul:0.01 ), SinOsc.ar( freq:"
+"frequency1, mul:0.01 ) ]}.play;} );"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Schedule the rest, in intervals of five beats (which is five seconds). They "
+"will all be scheduled virtually instantaneously (that is, the computer will "
+"notice the slight delay between when each one is scheduled, but humans will "
+"not). I started at one beat from now, to insert a slight pause before the "
+"sound begins."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you've done this correctly, then we should get a build-up of ten pitches. "
+"But they never stop! This is going to take some more ingenuity to solve, "
+"because we can't just make a stereo array, play it, then throw it away. We "
+"need to hold onto the stereo array, so that we can stop it. The first step "
+"here is to store the stereo arrays in variables, and subsequently schedule "
+"them. You will end up with something like this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"var sinosc1 = { [ SinOsc.ar( freq:frequency1, mul:0.01 ), SinOsc.ar( freq:"
+"frequency1, mul:0.01 ) ] };\n"
+"// the other nine...\n"
+"\n"
+"   t_c.sched( 1, { sinosc1.play; } );\n"
+"// the other nine...\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It should still work, but we after all that cutting-and-pasting, we still "
+"haven't managed to turn off the SinOsc's. We need to \"free\" the object "
+"that was returned when we used the \"play\" function. We need to declare yet "
+"more variables: <code>var so1, so2, so3, so4, so5, so6, so7, so8, so9, so0;</"
+"code> should appear anywhere before the scheduler."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now adjust all the scheduling commands so they look like this: <code>t_c."
+"sched( 1, { so1 = sinosc1.play; } );</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now you can add ten of these, after the existing scheduling commands: "
+"<code>t_c.sched( 51, { so1.free; } );</code>. Be sure to schedule each one "
+"for 51 beats, so that they all turn off simultaneously, 5 beats after the "
+"last pitch is added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It should work successfully. If it doesn't, then compare what you have to "
+"this, which does work:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"var t_c = TempoClock.default;\n"
+"\n"
+"{\n"
+"   var frequency1 = 200 + 600.rand;\n"
+"   var frequency2 = 200 + 600.rand;\n"
+"   var frequency3 = 200 + 600.rand;\n"
+"   var frequency4 = 200 + 600.rand;\n"
+"   var frequency5 = 200 + 600.rand;\n"
+"   var frequency6 = 200 + 600.rand;\n"
+"   var frequency7 = 200 + 600.rand;\n"
+"   var frequency8 = 200 + 600.rand;\n"
+"   var frequency9 = 200 + 600.rand;\n"
+"   var frequency0 = 200 + 600.rand;\n"
+"\n"
+"   var sinosc1 = { [ SinOsc.ar( freq:frequency1, mul:0.01 ), SinOsc.ar( freq:"
+"frequency1, mul:0.01 ) ] };\n"
+"   var sinosc2 = { [ SinOsc.ar( freq:frequency2, mul:0.01 ), SinOsc.ar( freq:"
+"frequency2, mul:0.01 ) ] };\n"
+"   var sinosc3 = { [ SinOsc.ar( freq:frequency3, mul:0.01 ), SinOsc.ar( freq:"
+"frequency3, mul:0.01 ) ] };\n"
+"   var sinosc4 = { [ SinOsc.ar( freq:frequency4, mul:0.01 ), SinOsc.ar( freq:"
+"frequency4, mul:0.01 ) ] };\n"
+"   var sinosc5 = { [ SinOsc.ar( freq:frequency5, mul:0.01 ), SinOsc.ar( freq:"
+"frequency5, mul:0.01 ) ] };\n"
+"   var sinosc6 = { [ SinOsc.ar( freq:frequency6, mul:0.01 ), SinOsc.ar( freq:"
+"frequency6, mul:0.01 ) ] };\n"
+"   var sinosc7 = { [ SinOsc.ar( freq:frequency7, mul:0.01 ), SinOsc.ar( freq:"
+"frequency7, mul:0.01 ) ] };\n"
+"   var sinosc8 = { [ SinOsc.ar( freq:frequency8, mul:0.01 ), SinOsc.ar( freq:"
+"frequency8, mul:0.01 ) ] };\n"
+"   var sinosc9 = { [ SinOsc.ar( freq:frequency9, mul:0.01 ), SinOsc.ar( freq:"
+"frequency9, mul:0.01 ) ] };\n"
+"   var sinosc0 = { [ SinOsc.ar( freq:frequency0, mul:0.01 ), SinOsc.ar( freq:"
+"frequency0, mul:0.01 ) ] };\n"
+"\n"
+"   var so1, so2, so3, so4, so5, so6, so7, so8, so9, so0;\n"
+"\n"
+"   t_c.sched( 1, { so1 = sinosc1.play; } );\n"
+"   t_c.sched( 6, { so2 = sinosc2.play; } );\n"
+"   t_c.sched( 11, { so3 = sinosc3.play; } );\n"
+"   t_c.sched( 16, { so4 = sinosc4.play; } );\n"
+"   t_c.sched( 21, { so5 = sinosc5.play; } );\n"
+"   t_c.sched( 26, { so6 = sinosc6.play; } );\n"
+"   t_c.sched( 31, { so7 = sinosc7.play; } );\n"
+"   t_c.sched( 36, { so8 = sinosc8.play; } );\n"
+"   t_c.sched( 41, { so9 = sinosc9.play; } );\n"
+"   t_c.sched( 46, { so0 = sinosc0.play; } );\n"
+"\n"
+"   t_c.sched( 51, { so1.free; } );\n"
+"   t_c.sched( 51, { so2.free; } );\n"
+"   t_c.sched( 51, { so3.free; } );\n"
+"   t_c.sched( 51, { so4.free; } );\n"
+"   t_c.sched( 51, { so5.free; } );\n"
+"   t_c.sched( 51, { so6.free; } );\n"
+"   t_c.sched( 51, { so7.free; } );\n"
+"   t_c.sched( 51, { so8.free; } );\n"
+"   t_c.sched( 51, { so9.free; } );\n"
+"   t_c.sched( 51, { so0.free; } );\n"
+"\n"
+"}.value;\n"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Optimizing the Code"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Hopefully, while working through the previous sections, you got an idea of "
+"how tedious, boring, difficult-to-read, and error-prone this sort of copy-"
+"and-paste programming can be. It's ridiculous, and it's poor programming:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We're using a lot of variables and variable names. They're all just used "
+"once or twice, too."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you copy-and-paste code, but change it a little, you might make a "
+"mistake in that little change."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you copy-and-paste code, when you make a mistake, you have to copy-and-"
+"paste to fix it everywhere."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Repetition is the enemy of high-quality code. It is much better to write "
+"something once and re-use that same code."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Thankfully, SuperCollider provides three things that will greatly help to "
+"solve these problems - at least for our current situation:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Arrays can be used to hold multiple instances of the same thing, all "
+"referred to with essentially the same name. We're already doing something "
+"similar, (sinosc1, sinosc2, etc.) but arrays are more flexible."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Functions can be written once, and executed as many times as desired."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Loops also provide a means to write code once, and execute it many times. As "
+"you will see, they are useful in situations different from functions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It should be noted that, while it is good practise to program like this, it "
+"is also optional. You will probably find, though, that writing your programs "
+"well in the first place ends up saving huge headaches in the future."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The first thing we'll do is write a function to deal with generating the "
+"stereo arrays of SinOsc's."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Take the code required to generate one stereo array of SinOsc's with a "
+"pseudo-random frequency. Put it in a function, and declare a variable for it "
+"(I used the name \"func\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now remove the frequency1 (etc.) variables, and change the sinosc1 (etc.) "
+"variables to use the new function. Make sure that the code still works in "
+"the same way. It's much easier to troubleshoot problems when you make only "
+"one change at a time!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At this point, we've eliminated ten lines of code, and made ten more lines "
+"easier to read by eliminating the subtle copy-and-paste changes. If you "
+"can't manage to work it out, refer to the FSC_method_1.sc file for tips."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We can eliminate ten more lines of code by using a loop with an array. Let's "
+"change only one thing at a time, to make it easier to find a problem, if it "
+"should arise. Start by commenting out the lines which declare and initialize "
+"sinosc1, sinosc2, and so on."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Then declare a ten-element array in the same place: <code>var sinosc = Array."
+"new( 10 );</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next part is to write code to get ten func.value's into the array. To "
+"add something to an array in SuperCollider, we use the \"add\" method: "
+"<code>sinosc.add( thing_to_add );</code> There is a small wrinkle to this, "
+"described in the SuperCollider documentation. It's not important to "
+"understand (for musical reasons, that is - it is explained on this help "
+"page), but when you add an element to an array, you <emphasis>should</"
+"emphasis> re-assign the array to the variable-name: <code>sinosc = sinosc."
+"add( thing_to_add )</code> Basically it works out like this: if you don't re-"
+"assign, then there is a chance that the array name only includes the "
+"elements that were in the array before the \"add\" command was run."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With this, we are able to eliminate a further level of redundancy in the "
+"code. Ten exact copies of <code>sinosc = sinosc.add( { func.value; } );</"
+"code> Now, ten lines that look almost identical actually are identical. "
+"Furthermore, we don't have to worry about assigning unique names, or even "
+"about index numbers, as in other programming languages. SuperCollider does "
+"this for us!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This still won't work, because we need to adjust the rest of the function to "
+"work with this array. The scheduling commands be changed to look something "
+"like this: <code>t_c.sched( 1, { so1 = sinosc[0].play; } );</code> Since "
+"arrays are indexed from 0 to 9, those are the index numbers of the first ten "
+"objects in the array."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Remember that you need to put all of your variable declarations "
+"<emphasis>before</emphasis> anything else."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It <emphasis>should</emphasis> still work. Let's use a loop to get rid of "
+"the ten identical lines."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In SuperCollider, <code><replaceable>x</replaceable>.do( <replaceable>f</"
+"replaceable> );</code> will send the <literal>value</literal> message to the "
+"function <literal>f</literal> <literal>x</literal> times. So, to do this ten "
+"times, we should write <code>10.do( { sinosc = sinosc.add( { func.value; } "
+"); } );</code> and get rid of the other ones. This is very powerful for "
+"simple things that must be done multiple times, because you are definitely "
+"not going to make a copy-and-paste error, because it's easy to see what is "
+"being executed, and because it's easy to see how many times it is being "
+"executed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now let's reduce the repetitiveness of the scheduling. First, replace so1, "
+"so2, etc. with a ten-element array. Test it to ensure that the code still "
+"works."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Getting the next two loops working is a little bit more complicated. We know "
+"how to run the exact same code in a loop, but we don't know how to change it "
+"subtly (by supplying different index numbers for the array, for example). "
+"Thankfully, SuperCollider provides a way to keep track of how many times the "
+"function in a loop has already been run. The first argument given to a "
+"function in a loop is the number of times that the function has "
+"<emphasis>already</emphasis> been executed. The first time it is run, the "
+"function receives a 0; if we're using a <code>10.do( <replaceable>something</"
+"replaceable> );</code> loop, then the last time the function is run, it "
+"receives a 9 because the function has already been executed 9 times. Since "
+"our ten-element array is indexed from 0 to 9, this works perfectly for us."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The code to free is shorter: <code>10.do( { arg index; t_c.sched( 51, { "
+"so[index].free; } ); } );</code> This can look confusing, especially written "
+"in one line, like it is. If it helps, you might want to write it like this "
+"instead:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"10.do\n"
+"({ arg index;\n"
+"	t_c.sched( 51, { so[index].free; } );\n"
+"});\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Now it looks more like a typical function."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next step is to simplify the original scheduling calls in a similar way, "
+"but it's slightly more complicated because we have to schedule a different "
+"number of measures for each call. With a little math, this is also not a "
+"problem - it's just a simple linear equation: <literal>number_of_measures = "
+"5 * array_index + 1</literal> Try to write this loop by yourself, before "
+"going to the next step."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If you missed it, my solution is"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"10.do( { arg index; t_c.sched( ((5*index)+1), { so = so.add( sinosc[index]."
+"play; ); } ); } );"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"which includes some extra parentheses to ensure that the math is computed in "
+"the right order."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The code is already much shorter, easier to understand, and easier to expand "
+"or change. There is one further optimzation that we can easily make: get rid "
+"of the sinosc array. This simply involves replacing <code>sinosc[index]</"
+"code> with what all of its elements are: <code>{ func.value; }</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The resulting program is a little different from what ended up in "
+"FSC_method_1.sc, but produces the same output. What I have is this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"var t_c = TempoClock.default;\n"
+"\n"
+"{\n"
+"   var so = Array.new( 10 );\n"
+"\n"
+"   var func =\n"
+"   {\n"
+"      var frequency = 200 + 600.rand;\n"
+"      [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, "
+"mul:0.01 ) ];\n"
+"   };\n"
+"\n"
+"   10.do( { arg index; t_c.sched( ((5*index)+1), { so = so.add( {func."
+"value;}.play; ); } ); } );\n"
+"   10.do( { arg index; t_c.sched( 51, { so[index].free; } ); } );\n"
+"\n"
+"}.value;\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Finally, assign this Function to a variable (called \"secondPart\", "
+"perhaps), and remove the \"value\" Function-call. If we leave that in, the "
+"Function will execute before the rest of the program begins!"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Making a Useful Section out of the Second Part"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section describes the reasons for the differences between the second "
+"part's Function that was just created, and the Function that appears in "
+"\"FSC_method_1-short.sc\". It all comes down to this: the current solution "
+"is tailor-made for this particular program, and would require significant "
+"adaptation to be used anywhere else; I want to re-design the Function so "
+"that it can be used anywhere to begin with, while still defaulting to the "
+"behaviour desired for this program."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can skip this section, and return later. The actions for the rest of the "
+"tutorial remain unchanged whether you do or do not make the modifications in "
+"this section."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Here's what I have from the previous step:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"var t_c = TempoClock.default;\n"
+"\n"
+"var secondPart =\n"
+"{\n"
+"   var so = Array.new( 10 );\n"
+"\n"
+"   var func =\n"
+"   {\n"
+"      var frequency = 200 + 600.rand;\n"
+"      [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, "
+"mul:0.01 ) ];\n"
+"   };\n"
+"\n"
+"   10.do( { arg index; t_c.sched( ((5*index)+1), { so = so.add( {func."
+"value;}.play; ); } ); } );\n"
+"   10.do( { arg index; t_c.sched( 51, { so[index].free; } ); } );\n"
+"\n"
+"};\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This Function is the perfect solution if you want ten pseudo-random pitches "
+"between 200 Hz and 800 Hz, and a five-second pause between each one. If you "
+"want nine or eleven pitches, if you want them to eb between 60 Hz and 80Hz, "
+"if you want a six-second pause between each - you would have to modify the "
+"Function. If you don't remember how it works, or if you give it to a friend, "
+"you're going to have to figure out how it works before you modify it. This "
+"is not an ideal solution."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Let's solve these problems one at a time, starting with allowing a different "
+"number of SinOsc synths to be created. We know that we'll have to create an "
+"argument, and that it will have to be used wherever we need the number of "
+"SinOsc's. Also, to preserve functionality, we'll make a default assignment "
+"of 10. Try to accomplish this yourself, making sure to test your Function so "
+"that you know it works. Here's what I did:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"var t_c = TempoClock.default;\n"
+"\n"
+"var secondPart =\n"
+"{\n"
+"   arg number_of_SinOscs = 10;\n"
+"\n"
+"   var so = Array.new( number_of_SinOscs );\n"
+"\n"
+"   var func =\n"
+"   {\n"
+"      var frequency = 200 + 600.rand;\n"
+"      [ SinOsc.ar( freq:frequency, mul:0.01 ), SinOsc.ar( freq:frequency, "
+"mul:0.01 ) ];\n"
+"   };\n"
+"\n"
+"   number_of_SinOscs.do( { arg index; t_c.sched( ((5*index)+1), { so = so."
+"add( {func.value;}.play; ); } ); } );\n"
+"   number_of_SinOscs.do( { arg index; t_c.sched( 51, { so[index].free; } ); "
+"} );\n"
+"\n"
+"};\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"do\" loop doesn't need a constant number; it's fine with a variable. "
+"What happens when you pass a bad argument, like a string? This would be an "
+"easy way to sabotage your program, and in almost any other programming "
+"context it would concern us, but this is just audio programming. If somebody "
+"is going to try to create \"cheese\" SinOsc's, it's their own fault for mis-"
+"using the Function."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now let's modify the Function so that we can adjust the range of frequencies "
+"that the Function will generate. We know that we'll need two more arguments, "
+"and that they'll have to be used in the equation to calculate the frequency. "
+"But we'll also need to do a bit of arithmetic, because of the way the "
+"\"rand\" Function works (actually we don't - see the \"rand\" Function's "
+"help file). Also, to preserve functionality, we'll make default assignments "
+"of 200 and 800. Try to accomplish this yourself, making sure that you test "
+"the Function so you know it works. Here's what I did:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"var t_c = TempoClock.default;\n"
+"\n"
+"var secondPart =\n"
+"{\n"
+"   arg number_of_SinOscs = 10,\n"
+"       pitch_low = 200,\n"
+"       pitch_high = 800;\n"
+"\n"
+"   var so = Array.new( number_of_SinOscs );\n"
+"\n"
+"   var func =\n"
+"   {\n"
+"      var freq = pitch_low + (pitch_high - pitch_low).rand;\n"
+"      [ SinOsc.ar( freq:freq, mul:0.01),\n"
+"        SinOsc.ar( freq:freq, mul:0.01) ];\n"
+"   };\n"
+"\n"
+"   number_of_SinOscs.do( { arg index; t_c.sched( ((5*index)+1), { so = so."
+"add( {func.value;}.play; ); } ); } );\n"
+"   number_of_SinOscs.do( { arg index; t_c.sched( 51, { so[index].free; } ); "
+"} );\n"
+"\n"
+"};\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Notice that I changed the name of the variables, and the indentation in the "
+"\"func\" sub-Function, to make it easier to read. This isn't a particularly "
+"difficult change."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now let's allow the user to set the length of time between each SinOsc "
+"appears. We will need one more argument, used in the scheduling command. Try "
+"to accomplish this yourself, and if you run into difficulty, the next "
+"paragraph contains some tips."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The change to the \"do\" loop which schedules the SinOsc's to play is almost "
+"trivial. My new argument is called \"pause_length\", (meaning \"the length "
+"of the pause, in seconds, between adding each SinOsc\"), so I get this "
+"modification: number_of_SinOscs.do("
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"{\n"
+"   arg time;\n"
+"   secondPart_clock.sched( (1+(time*5)), { sounds = sounds.add( func.play ); "
+"} );\n"
+"});\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Again, I changed the indentation, and the names of the variables in this sub-"
+"Function. Recall that the \"1+\" portion is designed to add a one-second "
+"pause to the start of the Function's execution. The problem comes in the "
+"next \"do\" loop, where we have to know how the number of beats from now "
+"will be five seconds after the last SinOsc is added. We'll have to calculate "
+"it, so I added a variable to store the value after it's calculated. This "
+"also allows us to return it, as a convenience to the Function that called "
+"this one, so that it knows how long until this Function is finished. Try "
+"adding this yourself, then testing the Function to ensure that it works. I "
+"got this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"var t_c = TempoClock.default;\n"
+"\n"
+"var secondPart =\n"
+"{\n"
+"   arg number_of_SinOscs = 10,\n"
+"       pitch_low = 200,\n"
+"       pitch_high = 800,\n"
+"       pause_length = 5;\n"
+"\n"
+"   var so = Array.new( number_of_SinOscs );\n"
+"\n"
+"   var when_to_stop = ( 1 + ( pause_length * number_of_SinOscs ) );\n"
+"\n"
+"   var func =\n"
+"   {\n"
+"      var freq = pitch_low + (pitch_high - pitch_low).rand;\n"
+"      [ SinOsc.ar( freq:freq, mul:0.01),\n"
+"        SinOsc.ar( freq:freq, mul:0.01) ];\n"
+"   };\n"
+"\n"
+"   number_of_SinOscs.do(\n"
+"   {\n"
+"      arg time;\n"
+"      t_c.sched( (1+(time*5)), { so = so.add( func.play ); } );\n"
+"   });\n"
+"\n"
+"   t_c.sched( when_to_stop,\n"
+"              {\n"
+"                 number_of_SinOscs.do( { arg index; so[index].free; } );\n"
+"                 nil;\n"
+"              });\n"
+"\n"
+"   when_to_stop;\n"
+"};\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I decided to \"invert\" the \"free-ing\" of the SinOsc's. Rather than "
+"scheduling number_of_SinOscs Function-calls at some point in the future, I "
+"decided to schedule one thing: a \"do\" loop that does the work. The "
+"indentation looks strange, but sometimes there's not much you can do about "
+"that. The \"when_to_stop\" variable must be the last thing in the Function, "
+"so that the interpreter returns it to the Function's caller."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to retain the \"bare minimum\" robustness to be used elsewhere, we "
+"can't rely on the \"TempoClock.default\" clock having the tempo we expect, "
+"and we certainly can't rely on it being declared as \"t_c\". The solution is "
+"quite easy: create a new TempoClock within the Function."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "var t_c = TempoClock.new; // default tempo is one beat per second"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We could hypothetically use the \"SystemClock\", since we're measuring time "
+"strictly in seconds. But, using a TempoClock is preferred for two reasons:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It has the word \"tempo\" in its name, and it's designed for scheduling "
+"musical events; the \"SystemClock\" is for system events."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We can easily extend this in the future to use a \"TempoClock\" set to a "
+"different tempo."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are some further ways to improve this Function, making it more robust "
+"(meaning that it will work consistently in a greater range of circumstances)."
+" Here are things that could be done to improve the Function, with an "
+"explanation of why it would make the Function more robust:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Made the clock an argument, allowing this Function to schedule events on a "
+"clock belonging to some other Function. Since all clocks respond to the "
+"\"sched\" message, we could even accept the \"SystemClock\" or \"AppClock\". "
+"The default value would still be <code>TempoClock.new</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use absolute scheduling rather than relative scheduling. Depending on how "
+"long the server and interpreter take to process the commands, it could lead "
+"to significant delays if the Function is asked to create a lot of SinOsc's."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create one SynthDef (with an argument) for all of the synths. Especially "
+"when asked to create a large numbe of SinOsc's, this will lead to faster "
+"processing and lower memory consumption. On the other hand, it increases the "
+"complexity of the code a little bit, requiring more testing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each SinOsc is currently created with the same \"mul\" argument, regardless "
+"of how many SinOsc's are created. Set as it is, when asked to create 51 "
+"SinOsc's, the signal would become distorted. If you're puzzled about why 51, "
+"remember that for each SinOsc the Function is asked to create, it currently "
+"creates two: one for the left and one for the right audio channel."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Allow the SynthDef to be passed in as an argument, with the requirement that "
+"such a SynthDef would need to accept the \"freq\" and \"mul\" arguments. "
+"This is going out on a limb a bit, and requires careful explanation in "
+"comments to ensure that the Function is used correctly. You will also need "
+"to test what happens if the Function is used incorrectly. Crashing the "
+"server application is a bad thing to do, especially without a warning."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use a Bus to cut the number of synths in half, so that one synth will be "
+"sent both to the left and right channels. Alternatively, you could add "
+"special stereo effects."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As you can see, there are a lot of ways to improve this Function even "
+"further; there are almost certainly more ways than listed here. Before you "
+"distribute your Function, you would want to be sure to test it thoroughly, "
+"and add helpful comments so that the Function's users know how to make the "
+"Function do what they want. These are both large topics in themselves, so I "
+"won't give them any more attention here."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Joining the Two Parts"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now it is time to join the two parts, and ensure a clean transition between "
+"them. My reasons for building the first part as a SynthDef, but the second "
+"part as a function are explained in the FSC_part_1.sc file. Additional "
+"reasons include my desire to illustrate the use of both possibilities, and "
+"because the second part stops itself (so it can be a function which is "
+"executed and forgotten), whereas the first part does not stop itself (so "
+"we'll need to hold onto the synth, to stop it ourselves)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I copy-and-pasted both parts into a new file, leaving the other original "
+"code in tact, in case I want to build on them in the future. Be sure to copy "
+"over the <code>var t_c = TempoClock.default;</code> definition from the "
+"second part."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"By default, the two parts would both start playing at the same time (give it "
+"a try!) This isn't what we want, however, so you'll need to erase the "
+"\"play\" command from both parts' functions. We'll also need some way to "
+"refer to them, so declare the second part as a variable (I've used the name, "
+"\"secondPart,\"), but don't worry about the first part yet. Don't forget the "
+"semicolon at the end of the function declaration!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To join the two parts, I'm going to use function that does all the "
+"scheduling. This is similar to a \"main\" function, which are used in most "
+"programming languages. Although they are optional in SuperCollider, it just "
+"makes sense to use one function that does all the scheduling, and nothing "
+"else: that way, when you have problems with the scheduling, or you want to "
+"make an adjustment or addition to the program, you can easily find the place "
+"where the scheduling happens. If your scheduling commands were spread out "
+"through the source file, it would be much more difficult to find and modify "
+"the scheduling commands."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Our first job is to determine which variables we'll need to use: just one, "
+"which will be assigned the currently-running \\FirstPart Synth. Also, if you "
+"didn't previously assign \"TempoClock.default\" to the variable \"t_c\", "
+"then it makes sense to do this now."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next thing our function must do is guarantee that we're going to have "
+"the right tempo. Use the \"tempo_\" Function with an argument in beats-per-"
+"second, to assign \"TempoClock.default\" a tempo of one beat per second."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next and last thing will be to schedule our sounds. First, we need to "
+"determine which events will need to be scheduled, and then at what times."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Since \\FirstPart is a SynthDef, we'll need to start it and stop it "
+"ourselves. Since it happens two times in the intended program, we'll need to "
+"do it twice."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"secondPart is a Function, and it stops itself when it's finished. We'll need "
+"to start it once and let it go."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Just in case something takes a while to process, we'll start the first "
+"\\FirstPart on beat one, rather than beat zero. We'll let it play for 60 "
+"seconds the first time, and 30 seconds the second time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to schedule the second appearance of \\FirstPart, we need to know "
+"how long secondPart will take. Let's inspect the function and calculate how "
+"many beats it will take."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "1 beat of silence at the beginning,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "5 beats between the entrance of each SinOsc,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "10 SinOsc's,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "5 beats after the last SinOsc until the function stops."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This gives us <code>1 + ( 5 * 9 ) + 5 = 51</code>. Why <code>5 * 9</code>? "
+"Because although there are ten SinOsc's, there are only nine spaces between "
+"them; the last five-second space happens <emphasis>after</emphasis> the last "
+"<classname>SinOsc</classname>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This gives us the following schedule:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "1 beat: start \\FirstPart"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "61 beats: stop \\FirstPart"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "61 beats: start secondPart"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "113 beats: start \\FirstPart"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "143 beats: stop \\FirstPart"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Try to schedule the events for yourself, then test your program to make sure "
+"that it works as you intended. Here's what I wrote:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"t_c.sched( 1, { sound = Synth.new( \\FirstPart ); } );\n"
+"t_c.sched( 61, { sound.free; } );\n"
+"t_c.sched( 61, { secondPart.value; nil; } );\n"
+"t_c.sched( 113, { sound = Synth.new( \\FirstPart ); } );\n"
+"t_c.sched( 143, { sound.free; } );\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Why is the \"nil\" required after \"secondPart\"? Because that function "
+"returns a number. As you know, any scheduled function which returns a number "
+"will re-schedule itself to run that many beats after the previous execution "
+"began. Since \"secondPart\" returns the number of seconds it takes to "
+"finish, it will always be re-started as soon as it finishes. Including "
+"\"nil\" disallows this repetition."
+msgstr ""
+

@@ -1,0 +1,365 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:07-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "LilyPond"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<quote>LilyPond is a music engraving program, devoted to producing the "
+"highest-quality sheet music possible. It brings the aesthetics of "
+"traditionally engraved music to computer printouts.</"
+"quote><citation><citetitle>LilyPond&mdash;Music notation for everyone</"
+"citetitle> <ulink url=\"http://www.lilypond.org\" /></citation>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Other proprietary and free engraving (or &ldquo;notation&rdquo;) programs, "
+"like <application>MuseScore</application> and <application>Denemo</"
+"application>, focus on the visual aspects of musical scores, "
+"<application>LilyPond</application> focusses on the semantic aspects. "
+"Because <application>LilyPond</application> is a text-based music engraving "
+"program, the separation between meaning and appearance is similar to HTML "
+"and CSS. Web developers use HTML to tell web browsers what an object means "
+"(a &lt;title&gt; tag tells a browser that some text is a title, for "
+"example), and CSS to tell web browsers how objects with different meaning "
+"should look (that all titles are blue, for example). The LilyPond language "
+"does not look like HTML and CSS, but you may have a similar experience. "
+"<application>LilyPond</application> users use letters and numbers to tell "
+"<application>LilyPond</application> what a note means (a &ldquo;g4&rdquo; is "
+"the pitch G with a quarter-note duration, for example), and can change the "
+"visual appearance if they wish (by using a square notehead, for example)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Advanced <application>LilyPond</application> users can, for example, "
+"incorporate scores into LaTeX and HTML documents; create new musical symbols "
+"and notation styles using the Scheme programming language; and tweak output "
+"quickly and flexibly with SVG-format output."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "How LilyPond Works"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you use <application>LilyPond</application>, think of musical objects "
+"in two ways: what it is or means, and how it looks. You should focus on "
+"which objects to use and what they mean, then adjust how they look as you "
+"need. The <application>LilyPond</application> developers spend a lot of "
+"effort to ensure most musical scores are visually appealling with little "
+"adjustment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After you prepare a specially-formatted text file for <application>LilyPond</"
+"application>, the program uses many different components to decide how the "
+"score will look. For every type of musical object, <application>LilyPond</"
+"application> has a specific rendering component. When a component creates a "
+"musical object in a score, the component considers several alternative "
+"appearances, then chooses only one."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once <application>LilyPond</application> decides how a score will look, the "
+"program uses a &ldquo;back end&rdquo; component to output the score into a "
+"PDF, SVG, or PNG file so you can use the score."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information on how <application>LilyPond</application> works, refer "
+"to <citetitle>Essay</citetitle> at <ulink url=\"http://lilypond.org/essay."
+"html\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Requirements and Installation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>PackageKit</application> or <application>Apper</"
+"application> to install the <package>lilypond</package> package. Review the "
+"dependencies carefully. You will see many packages called <package>lilypond-"
+"*-fonts</package>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use <application>LilyPond</application> from the command line. Run "
+"<command>lilypond <replaceable>input_file.ly</replaceable></command> in a "
+"terminal emulator."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We recommend that you use the <application>Frescobaldi</application> text "
+"editor with <application>LilyPond</application>. <application>Frescobaldi</"
+"application> has many features specifically for <application>LilyPond</"
+"application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Learn about Frescobaldi"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Frescobaldi</application> is an advanced text editor "
+"specifically for <application>LilyPond</application> source files. The "
+"<application>Frescobaldi</application> user interface simplifies the task of "
+"creating and editing musical scores in <application>LilyPond</application>. "
+"Here are some benefits of <application>Frescobaldi</application>:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Frescobaldi</application> text-editing component, PDF-"
+"preview component, and help file viewer are the same as common applications "
+"you may already know (<application>Kate</application>/<application>KWrite</"
+"application>, <application>Okular</application>, and <application>Konqueror</"
+"application>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Frescobaldi</application> user interface allows you to view "
+"the <application>LilyPond</application> source file and the PDF output or a "
+"<application>LilyPond</application> help document at the same time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can setup a new score quickly with the \"Setup new score\" tool. The "
+"\"Setup new score\" tool offers several advanced customization features."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can insert articulation, trill, and other musical symbols with the "
+"\"Quick Insert\" sidebar on the left side of the <application>Frescobaldi</"
+"application> window. You do not need to consult a <application>LilyPond</"
+"application> reference file to remember the correct command because "
+"<application>Frescobaldi</application> remembers for you."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <menuchoice><guimenu>LilyPond</guimenu></menuchoice> menu in "
+"<application>Frescobaldi</application> offers many tools to adjust and "
+"troubleshoot your score files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can input notes with a MIDI keyboard, listen to the MIDI output of a "
+"<application>LilyPond</application> score, and print the PDF file of your "
+"score from within <application>Frescobaldi</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"Requirements and Installation (for <application>Frescobaldi</application>)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>PackageKit</application> or <application>Apper</"
+"application> to install the <package>frescobaldi</package> package. Review "
+"dependencies carefully before you approve the installation. "
+"<application>Frescobaldi</application> depends on many other packages, "
+"including:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>perl-<replaceable>*</replaceable></package> packages,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>kde-<replaceable>*</replaceable></package> packages,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>timidity++</application>, and"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>fluid-soundfont-gm</package> (which is 114&nbsp;MB)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can run <application>Frescobaldi</application> from the "
+"<menuchoice><guisubmenu>Multimedia</guisubmenu></menuchoice> submenu of the "
+"<menuchoice><guimenu>Applications</guimenu></menuchoice> menu."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure <application>Frescobaldi</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use <application>Frescobaldi</application> without further "
+"configuration. We recommend you review the settings listed here, because you "
+"may use the application more easily."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"From the <application>Frescobaldi</application> menu, choose "
+"<menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure Frescobaldi</"
+"guimenuitem></menuchoice>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want <application>Frescobaldi</application> to save your score "
+"automatically before you run <application>LilyPond</application>: check "
+"\"Save document when LilyPond is run\" located in \"General Preferences.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to change the applications that <application>Frescobaldi</"
+"application> uses, choose <guibutton>Paths</guibutton>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You do not need to fill every field."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you use GNOME, we recommend you set the \"PDF Viewer\" to "
+"<command>evince</command>. <application>Frescobaldi</application> will use "
+"<application>Evince</application> when you choose <guibutton>Open PDF</"
+"guibutton>. The <guibutton>Open PDF</guibutton> button is only visible after "
+"you create a score."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to play a <application>LilyPond</application> MIDI file, fill in "
+"the \"MIDI Player\" field. You can use <application>timidity++</application> "
+"to convert the MIDI file into a sound file. You can use <application>pmidi</"
+"application> (from the Planet CCRMA at Home repository--see <xref linkend="
+"\"chap-Musicians_Guide-Planet_CCRMA_at_Home\" /> for information). Use a "
+"terminal emulator to view the <application>man</application> help page for "
+"<application>timidity++</application> or <application>pmidi</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you do not want to download the <application>LilyPond</application> help "
+"files whenever <application>Frescobaldi</application> uses them:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Install the <package>lilypond-doc</package> package. This package takes a "
+"long time to download."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Write <filename>/usr/share/doc/lilypond-doc-<replaceable>&LilyPond-version;</"
+"replaceable>/index.html</filename> in the \"LilyPond documentation\" field."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You must update this path when <application>LilyPond</application> is "
+"updated. By default, <application>PackageKit</application> will only "
+"download the changed documentation with each update, so only the first "
+"installation will have a long download."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The options for the \"Editor Component\" are the same as those for "
+"<application>KWrite</application> or <application>Kate</application>. If you "
+"change settings for <application>Frescboaldi</application>, they do "
+"<emphasis>not</emphasis> also change for <application>KWrite</application> "
+"or <application>Kate</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We recommend that you turn off auto-completion. Select the "
+"<guibutton>Editing</guibutton> component, then the <guibutton>Auto "
+"Completion</guibutton> tab, then ensure that both check-boxes are un-marked"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You may want to change other settings here; highly-flexible, customizable, "
+"powerful; applies only in Frescobaldi"
+msgstr ""
+

@@ -1,0 +1,4 @@
+Automatic bug detection and reporting tool
+
+https://fedorahosted.org/abrt/
+https://github.com/abrt/abrt.git

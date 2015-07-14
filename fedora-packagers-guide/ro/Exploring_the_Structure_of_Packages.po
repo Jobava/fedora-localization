@@ -1,0 +1,382 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Packager's Guide\n"
+"POT-Creation-Date: 2012-08-10T16:17:20\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Exploring the Structure of Packages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This chapter describes the package design, defines the basic content of "
+"every package, and shows how to explore the package structure."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Packaging with RPM"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Red Hat Package Manager (RPM) makes it easier for you to distribute, "
+"manage, and update software that you create for Red Hat Enterprise Linux. "
+"This chapter provides basic information on how to package your software into "
+"an RPM."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Why Package Software with RPM?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Many software vendors distribute their software via a conventional archive "
+"file (such as a tarball). However, there are several advantages in packaging "
+"software into an RPM. These advantages include:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each RPM package includes metadata that describes the package's components, "
+"version, release, size, project URL, installation instructions, and so on."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Users can use a set of standard package management tools (for example "
+"<application>yum</application> or <application>PackageKit</application>) to "
+"install, remove, and manage your software."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With the standard package management tools, you can directly distribute your "
+"software, including any software updates, to your users."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Package Design"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As a part of their design, RPM packages consist of the following three parts:"
+""
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Metadata"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The metadata part defines the package itself, including its name, version, "
+"license, a list of changes, dependencies, and so on."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This part consists of an archive with files that are installed by the "
+"package on the system."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Scripts"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This part contains scripts, which are run when the package is installed, "
+"updated, or uninstalled."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each of these three parts must be defined, provided, or included by the "
+"package in order to successfully build, install, or uninstall the package."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Package File Name"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Every package file is labeled with a highly identifiable name. This name has "
+"four parts, which typically look something like:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>kernel-smp-2.6.32.9-3.i686.rpm</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>kernel-smp-2.6.32.9-3.x86_64.rpm</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>rootfiles-7.2-1.noarch.rpm</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Here, the four parts of each name are separated from each other by dashes or "
+"periods. The structure of the package file name is as follows:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package><replaceable>name</replaceable>-<replaceable>version</replaceable>-"
+"<replaceable>release</replaceable>.<replaceable>architecture</replaceable>."
+"rpm</package>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Package Architecture"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"RPM supports various architectures. The following table presents some of the "
+"architectures available for different platforms that are supported by "
+"&MAJOROSVER;."
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Platform"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Architecture"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Intel x86 or compatible"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "i386, i686"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "AMD64 / Intel 64"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "x86_64"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "Intel Itanium"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "ia64"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "IBM POWER"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "ppc64"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "IBM System z"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "s390x, s390"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "No architecture"
+msgstr ""
+
+#. Tag: entry
+#, no-c-format
+msgid "noarch"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A platform-independent package, which is identified with <filename>noarch</"
+"filename> in the architecture part of the file name, provides programs that "
+"are not dependent on any platform. Programs written in Perl, Python, or "
+"other scripting languages often do not depend on code compiled for a "
+"particular architecture. In addition, compiled Java applications are usually "
+"free of platform dependencies, thus are also distributed in the form of "
+"platform-independent packages."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Source RPM"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A source RPM package (SRPM) contain all the commands, usually in scripts, "
+"necessary to recreate the binary RPM. Having a SRPM means that you can "
+"recreate the binary RPM at any time. A SRPM has a file name ending in "
+"<filename>.src.rpm</filename>, for example:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>mlocate-0.22.2-2.src.rpm</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The SRPM distributes a source code for the corresponding software that is "
+"ready to be installed on the system with the binary RPM. It also includes a "
+"spec file, which describes the software and the package, and contains "
+"instructions on how to perform the installation on the system."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Format of the Archived Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The archive with files, which are installed by the package, is stored in the "
+"<application>cpio</application> format inside the package and is compressed "
+"with the <application>xz</application> program."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To decompress the included archive and extract the archived files, run the "
+"command in the following format:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, to decompress the archive included in the <package>eject-2.1.5-"
+"0.1.&PKGOS;.x86_64.rpm</package> package, run the following command:"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Querying Packages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>rpm</application> allows you to query packages that are "
+"available on the system. This way, you can easily explore the basic "
+"structure of the packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Some of the useful commands for querying the packages include:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<command>rpm -qd <replaceable>package</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <command>rpm -qd <replaceable>package</replaceable></command> command is "
+"used to get a list of included documentation files, which are defined by the "
+"<code>%doc</code> directive."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<command>rpm -qc <replaceable>package</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <command>rpm -qc <replaceable>package</replaceable></command> command is "
+"used to get a list of included configuration files, which are defined by the "
+"<code>%config</code> directive."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<command>rpm -q --scripts <replaceable>package</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <command>rpm -q --scripts <replaceable>package</replaceable></command> "
+"command is used to get a list of scripts, which are defined by the "
+"<code>%pre</code>, <code>%post</code>, <code>%preun</code>, and "
+"<code>%postun</code> directives."
+msgstr ""
+

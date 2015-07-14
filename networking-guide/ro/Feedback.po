@@ -1,0 +1,62 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Feedback"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>feedback</primary> <secondary>contact information for this manual</"
+"secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you find a typographical error in this manual, or if you have thought of "
+"a way to make this manual better, we would love to hear from you! Please "
+"submit a report in <ulink url=\"http://bugzilla.redhat.com/\">Bugzilla</"
+"ulink> against the product <application>&PRODUCT;</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When submitting a bug report, be sure to provide the following information:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Manual's identifier: <literal>&BOOKID;</literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Version number: <literal>&PRODVER;</literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have a suggestion for improving the documentation, try to be as "
+"specific as possible when describing it. If you have found an error, please "
+"include the section number and some of the surrounding text so we can find "
+"it easily."
+msgstr ""
+

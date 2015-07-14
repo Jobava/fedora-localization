@@ -1,0 +1,35 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Printing"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "CUPS Journal Logging"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"CUPS (the <systemitem class=\"service\">cupsd</systemitem> service) now "
+"sends its log output to the <systemitem>systemd</systemitem> journal instead "
+"of the <filename>/var/log/cups/error_log</filename> file. You can use the "
+"<command>journalctl _COMM=cupsd</command> command to view CUPS log."
+msgstr ""
+

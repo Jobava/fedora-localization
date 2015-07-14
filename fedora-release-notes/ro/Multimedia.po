@@ -1,0 +1,94 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Multimedia"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "gPodder"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>gPodder</application> in Fedora 21 has been updated to the 3.x "
+"release branch, with a number of notable features added."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid ""
+"Youtube features are improved, with support for YouTube channels added."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Improved Vimeo integration."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Enhanced support for mobile devices and standalone media players."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Numerous interface advancements."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Support your favorite content creators with Flattr integration."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "A new web UI for remote management."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Important changes for gPodder 2 users"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>gPodder</application> now stores all data and downloads in the "
+"<filename class=\"directory\">~/gPodder</filename> directory, instead of "
+"downloads in <filename class=\"directory\">~/gpodder-downloads</filename> "
+"and configuration data in hidden folders."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>gPodder</application> has changed configuration and date "
+"storage mechanisms. Before launching <application>gPodder</application>, "
+"migrating users should run <command>/usr/bin/gpodder-migrate2tres</command>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have run <application>gPodder</application> before running the "
+"migration utility, remove the new <filename class=\"directory\">~/gPodder</"
+"filename> and run <command>/usr/bin/gpodder-migrate2tres</command> again."
+msgstr ""
+

@@ -1,0 +1,62 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-12-23 12:29+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Available open source tools, utilities and drivers"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Current development is focusing on visual and mobility impairments. There "
+"are both software and hardware based solutions available. There are also "
+"both console and graphical solutions available, however, the graphical "
+"solutions are limited at this time."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Hardware"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The biggest advantage of the hardware speech solutions is that speech is "
+"available before the operating system loads, which even makes it possible "
+"for people with a visual impairment to install the operating system. "
+"Hardware solutions include speech synthesizers, braille terminals, braille "
+"printers, sip and puff systems, and eye gaze pointing devices. These devices "
+"are usually very expensive and it is difficult to find drivers for them. "
+"Drivers are being written (mostly for speech synthesizers) for Linux but "
+"they need to be tested and integrated by the community into \"upstream\" "
+"software projects before becoming part of Fedora."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Software"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This document focuses mostly on software tools and utilities that work with "
+"Linux. Most of these tools have been developed by the Open Source community "
+"and many have not yet been tested by the Fedora Project."
+msgstr ""
+

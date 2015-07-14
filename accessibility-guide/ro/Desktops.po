@@ -1,0 +1,133 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-12-23 12:29+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Help for Linux Desktops"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Certain desktops have their own internal settings that can help with "
+"accessibility."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "KDE"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In KDE, keyboard and mouse settings can be configured in kcontrol. These "
+"settings are available by selecting <menuchoice><guilabel>Personalization "
+"&gt; Accessibility</guilabel></menuchoice>. Additional information on "
+"Accessibility Tools in KDE can be found at <ulink url=\"http://accessibility."
+"kde.org/\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "GNOME"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In GNOME, accessibility controls can be configured in the Universal Access "
+"menu. By selecting <menuchoice><guilabel>Activities</guilabel></menuchoice> "
+"and then typing <menuchoice><guilabel>Universal Access</guilabel></"
+"menuchoice> a menu will display that allows tweaking of all accessibility "
+"options within the GNOME 3 desktop environment. Additional information on "
+"GNOME's accessibility tools can be found at <ulink url=\"http://library."
+"gnome.org/users/gnome-access-guide/\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "XFCE"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In XFCE, accessibility options for the keyboard and mouse can be configured "
+"in the Accessibility Settings dialogue. To access these settings from the "
+"graphical menus, select <menuchoice><guilabel>Preferences &gt; "
+"Accessibility</guilabel></menuchoice>. Alternative keyboard configurations, "
+"such as keyboard shortcuts, can be set by selecting "
+"<menuchoice><guilabel>Preferences &gt; Keyboard</guilabel></menuchoice>. "
+"Similarly, extra mouse related settings are available by selecting "
+"<menuchoice><guilabel>Preferences &gt; Mouse</guilabel></menuchoice>. Some "
+"minor additional accessibility options for XFCE can be found through "
+"<menuchoice><guilabel>Preferences &gt; Window Manager Tweaks</guilabel></"
+"menuchoice>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sugar: Making computing accessible for children."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <package>Sugar Learning Platform</package> is an innovative learning "
+"interface for children, which encourages learning, critical thinking, and "
+"creativity. <package>Sugar</package> was originally created for the OLPC "
+"(One Laptop Per Child) initiative. The traditional \"office-desktop\" style "
+"computer interface can be quite intimidating and is often not very "
+"accessible for children who are learning to read and write. <package>Sugar</"
+"package> offers an alternative, more child-friendly approach to learning and "
+"computing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To install the <package>Sugar</package> platform in fedora, you can either "
+"select <menuchoice><guilabel>System &gt; Administration &gt; Add/Remove "
+"Software</guilabel></menuchoice> on the GNOME panel, and then type "
+"<package>sugar</package> in the screen that pops up; or alternatively type "
+"<command>su -c \"yum install sugar\"</command> in a terminal. There is also "
+"an alternate version of Fedora featuring the Sugar Platform, known as "
+"<package>Sugar on a Stick</package> It is available at <ulink url=\"http://"
+"spins.fedoraproject.org/soas/\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Various <package>Sugar Activities</package> are also available through the "
+"Fedora package repositories. To browse the available sugar activities "
+"through the GNOME package manager, select <menuchoice><guilabel>System &gt; "
+"Administration &gt; Add/Remove Software</guilabel></menuchoice> on the GNOME "
+"panel, and then type <command>sugar-</command> in the screen that pops up; "
+"you will be presented with a list of packages relating to <package>Sugar</"
+"package>. Alternatively, type <command>su -c \"yum install sugar-\"</"
+"command> in a terminal window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"More information on <package>Sugar</package> for learners, parents, "
+"teachers, and contributors can be found at the official website, <ulink url="
+"\"http://sugarlabs.org/\" />"
+msgstr ""
+

@@ -1,0 +1,97 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-12-23 12:29+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Why should people choose Fedora as an accessibility solution?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Linux offers an inexpensive and efficient solution for the disabled "
+"community. Open source software costs far less compared to tools that run on "
+"other operating systems and Linux tools are often freely downloadable."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"While the <firstterm>Graphical User Interface</firstterm> (GUI) is "
+"convenient for sighted users, it is often inhibiting to those with visual "
+"impairments because of the difficulty speech synthesizers have interpreting "
+"graphics. Linux is a great operating system for users with visual "
+"limitations because the GUI is an option, not a requirement. Most modern "
+"tools including email, news, web browsers, calendars, calculators, and much "
+"more can run on Linux without the GUI. The working environment can also be "
+"customized to meet the hardware or software needs of the user."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora is an extremely popular Linux distribution. Most industry "
+"professionals are familiar with Fedora, making it relatively straightforward "
+"to find assistance if necessary."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Fedora Project issues regular and frequent updates and enhancements, and "
+"computers that have Fedora installed can download and install these "
+"automatically and without cost. It is therefore easy and economical to keep "
+"computers secure and up to date."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Section 508 Mandate"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the United States, the Section 508 Mandate is an addendum to the "
+"<citetitle>Rehabilitation Act</citetitle> made in 1998 that requires federal "
+"agencies to use accessible electronic and information technologies so that "
+"people with special needs have the same opportunities as everyone else."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For detailed information about the requirements of the Section 508 Mandate, "
+"visit <ulink url=\"http://www.section508.gov/\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Voluntary Product Accessibility Template (VPAT)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The VPAT template details how a particular product or service conforms to "
+"Section 508 criteria. The VPAT helps federal personnel adhere to Section 508 "
+"by helping them determine whether they are buying the most accessible IT "
+"products and services available. The VPAT template participation by private "
+"vendors is voluntary. These templates are hosted on the individual vendor "
+"websites. The vendors maintain their own information and the government does "
+"not endorse this information in any way."
+msgstr ""
+

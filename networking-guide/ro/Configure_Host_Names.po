@@ -1,0 +1,408 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Host Names"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Understanding Host Names"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are three classes of <systemitem class=\"systemname\">hostname</"
+"systemitem>: static, pretty, and transient."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <quote>static</quote> host name is the traditional <systemitem class="
+"\"systemname\">hostname</systemitem>, which can be chosen by the user, and "
+"is stored in the <filename>/etc/hostname</filename> file. The "
+"<quote>transient</quote> <systemitem class=\"systemname\">hostname</"
+"systemitem> is a dynamic host name maintained by the kernel. It is "
+"initialized to the static host name by default, whose value defaults to "
+"<quote>localhost</quote>. It can be changed by <systemitem class="
+"\"protocol\">DHCP</systemitem> or <systemitem class=\"protocol\">mDNS</"
+"systemitem> at runtime. The <quote>pretty</quote> <systemitem class="
+"\"systemname\">hostname</systemitem> is a free-form UTF8 host name for "
+"presentation to the user."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A host name can be a free-form string up to 64 characters in length. "
+"However, Red&nbsp;Hat recommends that both static and transient names match "
+"the <firstterm>fully-qualified domain name</firstterm> (<acronym>FQDN</"
+"acronym>) used for the machine in <systemitem class=\"protocol\">DNS</"
+"systemitem>, such as <systemitem class=\"domainname\">host.example.com</"
+"systemitem>. It is also recommended that the static and transient names "
+"consists only of 7 bit ASCII lower-case characters, no spaces or dots, and "
+"limits itself to the format allowed for <systemitem class=\"protocol\">DNS</"
+"systemitem> domain name labels, even though this is not a strict requirement."
+" Older specifications do not permit the underscore, and so their use is not "
+"recommended."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>hostnamectl</application> tool will enforce the following: "
+"Static and transient host names to consist of <literal>a-z</literal>, "
+"<literal>A-Z</literal>, <literal>0-9</literal>, <quote><literal>-</literal></"
+"quote>, <quote><literal>_</literal></quote> and <quote><literal>.</literal></"
+"quote> only, to not begin or end in a dot, and to not have two dots "
+"immediately following each other. The size limit of 64 characters is "
+"enforced."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Recommended Naming Practices"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Internet Corporation for Assigned Names and Numbers (ICANN) sometimes "
+"adds previously unregistered Top-Level Domains (such as <systemitem class="
+"\"domainname\">.yourcompany</systemitem>) to the public register. Therefore, "
+"Red&nbsp;Hat strongly recommends that you do not use a domain name that is "
+"not delegated to you, even on a private network, as this can result in a "
+"domain name that resolves differently depending on network configuration. As "
+"a result, network resources can become unavailable. Using domain names that "
+"are not delegated to you also makes DNSSEC more difficult to deploy and "
+"maintain, as domain name collisions require manual configuration to enable "
+"DNSSEC validation. See the <ulink url=\"http://www.icann.org/en/help/name-"
+"collision/faqs\">ICANN FAQ on domain name collision</ulink> for more "
+"information on this issue."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring Host Names Using hostnamectl"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>hostnamectl</application> tool is provided for "
+"administering the three separate classes of host names in use on a given "
+"system."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "View All the Host Names"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To view all the current host names, enter the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>hostnamectl status</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>status</option> option is implied by default if no option is "
+"given."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Set All the Host Names"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To set all the host names on a system, enter the following command as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>hostnamectl set-hostname <replaceable>name</replaceable></"
+"command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This will alter the pretty, static, and transient host names alike. The "
+"static and transient host names will be simplified forms of the pretty host "
+"name. Spaces will be replaced with <quote><literal>-</literal></quote> and "
+"special characters will be removed."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Set a Particular Host Name"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To set a particular host name, enter the following command as <systemitem "
+"class=\"username\">root</systemitem> with the relevant option:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>hostnamectl set-hostname <replaceable>name</replaceable> "
+"<optional><replaceable>option</replaceable>...</optional></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Where <replaceable>option</replaceable> is one or more of: <option>--pretty</"
+"option>, <option>--static</option>, and <option>--transient</option>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the <option>--static</option> or <option>--transient</option> options are "
+"used together with the <option>--pretty</option> option, the static and "
+"transient host names will be simplified forms of the pretty host name. "
+"Spaces will be replaced with <quote><literal>-</literal></quote> and special "
+"characters will be removed. If the <option>--pretty</option> option is not "
+"given, no simplification takes place."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When setting a pretty host name, remember to use the appropriate quotation "
+"marks if the host name contains spaces or a single quotation mark. For "
+"example:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>hostnamectl set-hostname \"Stephen's notebook\" --pretty</"
+"command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Clear a Particular Host Name"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To clear a particular host name and allow it to revert to the default, enter "
+"the following command as <systemitem class=\"username\">root</systemitem> "
+"with the relevant option:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>hostnamectl set-hostname <replaceable>\"\"</replaceable> "
+"<optional><replaceable>option</replaceable>...</optional></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Where <replaceable>\"\"</replaceable> is a quoted empty string and where "
+"<replaceable>option</replaceable> is one or more of: <option>--pretty</"
+"option>, <option>--static</option>, and <option>--transient</option>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Changing Host Names Remotely"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To execute a <command>hostnamectl</command> command on a remote system, use "
+"the <option>-H, --host</option> option as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>hostnamectl set-hostname <option>-H</option> "
+"<optional><replaceable>username</replaceable></"
+"optional>@<replaceable>hostname</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Where <replaceable>hostname</replaceable> is the remote host you want to "
+"configure. The <replaceable>username</replaceable> is optional. The "
+"<application>hostnamectl</application> tool will use <systemitem class="
+"\"protocol\">SSH</systemitem> to connect to the remote system."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring Host Names Using nmcli"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>NetworkManager</application> tool <application>nmcli</"
+"application> can be used to query and set the static host name in the "
+"<filename>/etc/hostname</filename> file. Note that at time of writing, "
+"changing the host name in this way will not be noticed by "
+"<application>hostnamectl</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To query the static host name, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>nmcli general hostname</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To set the static host name to <replaceable>my-server</replaceable>, issue "
+"the following command as <systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>nmcli general hostname <replaceable>my-server</"
+"replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To force <application>hostnamectl</application> to notice the change in the "
+"static host name, restart <systemitem class=\"daemon\">hostnamed</"
+"systemitem> as <systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>systemctl restart systemd-hostnamed</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Additional Resources"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following sources of information provide additional resources regarding "
+"<application>hostnamectl</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installed Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>hostnamectl(1)</filename> man page — Describes "
+"<application>hostnamectl</application> including the commands and command "
+"options."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>hostname(1)</filename> man page — Contains an explanation of the "
+"<command>hostname</command> and <command>domainname</command> commands."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>hostname(5)</filename> man page — Contains an explanation of the "
+"host name file, its contents, and use."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>hostname(7)</filename> man page — Contains an explanation of host "
+"name resolution."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>machine-info(5)</filename> man page — Describes the local machine "
+"information file and the environment variables it contains."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>machine-id(5)</filename> man page — Describes the local machine ID "
+"configuration file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>systemd-hostnamed.service(8)</filename> man page — Describes the "
+"<systemitem class=\"daemon\">systemd-hostnamed</systemitem> system service "
+"used by <application>hostnamectl</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Online Documentation"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<ulink url=\"http://www.freedesktop.org/wiki/Software/systemd/hostnamed\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Information on <systemitem class=\"daemon\">systemd-hostnamed</systemitem>."
+msgstr ""
+

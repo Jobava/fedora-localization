@@ -1,0 +1,1639 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:06-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "GNU Solfege"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Requirements and Installation"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Hardware and Software Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is assumed that, prior to using GNU Solfege, users have already correctly "
+"configured their audio equipment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In addition, the <application>timidity++</application> package is required "
+"by Solfege, which requires the installation of a large (approximately "
+"140&nbsp;MB) SoundFont library. This library is shared with the "
+"<application>FluidSynth</application> application, which has its own section "
+"in this guide, and is used by several other software packages. "
+"<application>timidity++</application> also requires the installation of the "
+"JACK Audio Connection Kit. If you have installed the Planet CCRMA at Home "
+"repository, and have not yet followed the instructions to correctly install "
+"and configure its version of JACK, then it is recommended that you do so "
+"before installing GNU Solfege. Refer to <xref linkend=\"sect-Musicians_Guide-"
+"Install_and_Configure_JACK\" /> for installations to install JACK."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Other Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Solfege requires knowledge of Western musical notation, and basic music "
+"theory terms and concepts."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Required Installation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Please review the \"Requirements\" section above, before installation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use PackageKit, Apper to install the <package>solfege</package> package."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Optional Installation: Csound"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Csound is a sound-synthesis program, similar to SuperCollider. It is older, "
+"quite well-developed, and has a broader range of features."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To install Csound, first close Solfege, then use PackageKit or Apper to "
+"install the <package>csound</package> package. When Solfege is restarted, "
+"you will be able to use the \"Intonation\" exercises."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Optional Installation: MMA"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"MMA stands for \"Musical MIDI Accompaniment,\" and it is not available for "
+"&O_S; in a prepackaged format. The software can be found on the "
+"<citetitle>MMA Homepage</citetitle> at <ulink url=\"http://www.mellowood.ca/"
+"mma/\" />, where you can download the source code and compile it if desired. "
+"MMA is only used by some of the harmonic dictation questions, so its "
+"installation is not required."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is not necessary to configure Solfege. The simple first-time "
+"configuration will help to customize the application for your needs, but it "
+"is not required. The other configuration options are explained for your "
+"reference."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These configuration options are not required, but you may wish to change "
+"them. They are all available from the \"Preferences\" window, accesible "
+"through Solfege's main menu: 'File &gt; Preferences'."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "When You Run Solfege for the First Time"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps allow Solfege to automatically customize some questions for you."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Start Solfege."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "From the menu, select 'File &gt; Preferences'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the \"User\" tab."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Input your vocal range, if you know it. Solfege uses this information to "
+"assign questions in a comfortable pitch range."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Input your biological gender in the \"Sex\" field. Solfege uses this "
+"information to assign questions in the correct octave."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Instruments"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Tempo: Changes the speed at which examples are played."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Default: Applies to everything that isn't an \"Arpeggio.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Arpeggio: Applies to arpeggios, which are, by default, played at three times "
+"the speed of the default tempo. This is standard practice."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Preferred Instrument: This MIDI instrument will be used when playing "
+"examples."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Chord Instruments: For polyphonic voices, these MIDI instruments will be "
+"used for the highest, middle, and lowest voices above the bass voice (which "
+"takes the \"preferred instrument.\")"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Percussion instruments:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Count in: This MIDI instrument will be used to give \"count in\" beats that "
+"precede musical examples involving rhythm."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Rhythm: This MIDI instrument will be used to dictate rhythm-only examples."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "External Programs"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Solfege uses external programs to perform many tasks. On this tab, you can "
+"provide the command to be used, as though being run from a terminal."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Converters:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "MIDI to WAV"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "WAV to MP3"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "WAV to OGG"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you use %(in)s and %(out)s, Solfege will substitute the filename it wants "
+"inputted and outputted."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Audio File Players, each with \"Test\" buttons:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "WAV"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "OGG"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "MP3"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "MIDI"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Solfege will substitute %s with the name of the file to be played."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Miscellaneous:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"CSound: Solfege uses CSound for intonation exercises. It is an optional "
+"component. See the \"Optional Installation\" section above."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"MMA: Solfege uses MMA for certain harmonic dictation exercises. It is an "
+"optional component, and not available in &O_S; through standard means. See "
+"<xref linkend=\"sect-Musicians_Guide-Solfege-Install_MMA\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Lilypond-book: Solfege uses this for generating print-outs of ear training "
+"exercise progress. See the \"Optional Installation\" section above."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Latex: Solfege uses this for generating *.dvi format progress reports, "
+"rather than the default HTML format."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Interface"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Resizeable main window: This allows users to resize the main Solfege window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select language"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Identify tone keyboard accelerators: In exercises requiring the input of "
+"particular pitches, this will allow a conventional keyboard to be used as a "
+"MIDI keyboard - letters on the keyboard will be associated with particular "
+"pitches."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Practise"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "These options apply to exercises done in \"Practise\" mode."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Not allow new question before the old is solved\": Solfege will not "
+"provide a new question until you have solved the current question."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Repeat question if the answer was wrong\": Solfege will repeat a question "
+"if you provide an incorrect answer."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Expert mode\": Solfege will provide advanced configuration options for "
+"individual exercises."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sound Setup"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"No sound\": This mode is used for testing and debugging Solfege."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Use device\": This mode lets you specify which audio interface Solfege "
+"will use."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"User external MIDI player\": This mode lets you choose a MIDI synthesizer."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The button, \"Test\": allows you to ensure that you've correctly configured "
+"Solfege."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Training Yourself"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "There are three kinds of exercises available in Solfege:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Listen-and-identify\" exercises will play some sort of musical structure, "
+"and ask you to identify, classify, or label it according to widely-used "
+"conventions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Identify\" exercises will show you some sort of musical structure (usually "
+"in Western classical notation), and ask you to identify, classify, or label "
+"it according to widely-used conventions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Sing\" exercises will provide a specific musical structure, sometimes "
+"partially-completed, and ask you to sing the completion of the structure."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Unlike many commercially-available aural skills computer applications, "
+"Solfege often relies on the user to know whether they performed the task "
+"correctly - and how correctly. This is especially true of the \"Sing\"-type "
+"exercises, since Solfege lacks the capability to receive sung input from the "
+"user. This requires at least two things to be kept in mind: firstly, that it "
+"is to your own benefit to honestly tell Solfege when you correctly and "
+"incorrectly provide a solution, since this helps Solfege to focus on your "
+"weaknesses, and to more accurately track your progress; secondly, there are "
+"many degrees of correctness when it comes to music, and harmonic and melodic "
+"dictation are particularly prone to these forms of partial correctness."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you encounter a rough spot with your aural skills development, remember "
+"that it takes a significant amount of time and effort to build your musical "
+"sensibility. It is easier for some people than for others, and most people "
+"will have an easier time with some exercises than with others. Although the "
+"prevailing cultural thought about musical sensibility (and aural skillls) "
+"still suggests that an individual either posesses musical ability or cannot "
+"acquire it, recent research has suggested that any hearing person with "
+"enough determination, dedication, and the right instruction can develop "
+"their musical sensibility and aural skills to a very high level."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With that in mind, the following sections aim to help you incorporate "
+"Solfege as part of a complete aural skills development program."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Aural Skills and Musical Sensibility"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When somebody decides to receive musical training, what they are really "
+"doing is developing skills and acquiring stylistic knowledge required for "
+"participation in a particular kind of music. There are many different kinds "
+"of training, and the time spent in a classroom is not as important to "
+"musical development as time spent elsewhere, taking part in real, musical "
+"situations. Many different kinds of skills are useful for musicians, "
+"depending on the kind of music in which they intend to participate. A folk "
+"singer who plays guitar might wish to memorize the chord progressions, "
+"melodies, and words for thousands of different songs. An oboe player in an "
+"orchestra might wish to make their own reeds from cane tree bark. Most "
+"musicians need to be able to listen to music and perceive certain structures "
+"that other musicians use to describe their work. These structures are "
+"explained by \"music theory,\" and the skill set used to hear these things "
+"in music is called \"aural skills.\" Musicians train their aural skills by a "
+"set of procedures known as \"ear training,\" or \"aural skills training.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Musical sensibility is developed when aural skills are used to help a "
+"musician gain an understanding of how and why their music (and other "
+"people's music) works and sounds the way it does. This understanding is key "
+"to having a sense of the procedures and conventions that an audience will "
+"expect of a performer, and therefore to the performer's ability to produce "
+"aesthetically pleasing music."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Having a well-developed musical sensibility and set of aural skills are both "
+"important aspects of being a musician, but they are by no means the only "
+"aspects. More than anything, a musician (or an aspiring musician) should be "
+"talking and listening to other musicians."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Exercise Types"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Solfege's exercises are arranged in six broad categories:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Intervals, which tests your ability to perceive and identify melodic and "
+"harmonic intervals."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Rhythm, which tests your ability to perceive and notate rhythms played with "
+"a single pitch, and to perform such a rhythm by means of tapping on the "
+"keyboard."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Theory, which tests your ability to name written intervals and scales, and "
+"to correctly use solfa syllables."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Chords, which tests your ability to perceive and identify chords built from "
+"various intervals, played at various pitch levels, and to sing such a chord."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Scales, which tests your ability to perceive and identify scales and their "
+"modes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Miscellaneous, which includes a variety of exercises, including:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Intonation, which tests your ability to perceive and identify whether a "
+"second pitch is lower or higher than it should be."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Dictation, which tests your ability to perceive and notate melodies."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Identify Tone, which tests your ability to use relative pitch (see "
+"<citetitle>Relative Pitch (Wikipedia)</citetitle> at <ulink url=\"http://en."
+"wikipedia.org/wiki/Relative_pitch\" /> for more information)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Sing Twelve Random Tones, which tests many skills."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Beats per Minute, which tests your ability to determine a tempo."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Harmonic Progressions, which tests your ability to perceive and apply Roman "
+"numeral chord symbols for a series of chords played together."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Hear Tones, which helps you to train for relative pitch."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Cadences, which tests your ability to perceive and apply Roman numeral chord "
+"symbols for two chords played together."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All of these exercises require the use of your aural skills outside an "
+"actual musical situation. This may seem fruitless, but it has long been "
+"recognized as an important part of the eventual ability to hear them within "
+"a musical context. Neither ability will suddenly appear; it will take "
+"dedicated practice."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Making an Aural Skills Program"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Aural skills training - like eating - requires a regular, daily commitment "
+"of various kinds of input. As far as food is concerned, you should eat at "
+"least three meals a day, with a large portion of fruits and vegetables, and "
+"a good balance of meats and alternatives, grains, and other kinds of foods. "
+"Ear training also requires diverse inputs at various times throughout the "
+"day."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There is no solution that will work for everybody. You will need to choose "
+"and modify the time of day, number and length of sessions, and content to "
+"suit your needs. The following suggestion can be considered a starting point."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Training for 30 minutes daily, in three 10-minute segments."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Segment 1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "When you wake up, before breakfast."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Warm up your voice and body (good activity anyway - <emphasis>not</emphasis> "
+"part of the ten minutes!)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Sing and perfect some excerpts from a book designed for sight-singing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Segment 2"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "After lunch, before getting back to work."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Listen to some music, then try to transcribe it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To make the task more manageable, take a small portion of music, and focus "
+"on one aspect: melody, harmony, or rhythm."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can test correctness either by using a piano (or fixed pitch reference), "
+"or comparing with a published score, if available."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Segment 3"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Some time after supper."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Use GNU Solfege to test your ability to perceive musical rudiments."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Spend only a few minutes on a few different kinds of exercises."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Three ten-minute segments is not a lot of time, and indeed it may take "
+"additional time to plan and to find and set up materials. Even so, the point "
+"is that training your aural skills does not have to take an inordinate "
+"amount of time or effort. What's important is that your effort is consistent "
+"and well-planned."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Supplementary References"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"GNU Solfege offers a relatively wide variety of exercises, but no one source "
+"can possibly offer all of the exercises and training required to develop a "
+"well-rounded set of aural skills. Some of the following books and activities "
+"should be used to supplement the exercises available in \"Solfege.\" Note "
+"that melodic and harmonic dictation are not yet \"Solfege's\" strong points, "
+"mostly due to a lack of different exercises. This may improve in the future, "
+"as the developers improve the software."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Activities:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Taking dictation from real music. Try focussing on one element, rather than "
+"writing a complete score. Verify your solution by checking a published score "
+"if possible. Remember that some orchestral instruments may not be written at "
+"concert pitch."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Using your sight-singing skills to sing a melody or rhythm to a friend, who "
+"can use it as an example for dictation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use Bach chorales as sight-singing examples for a group of four or more "
+"people. It helps to have friends in all vocal ranges, but it isn't necessary."
+" Remember to use solfa syllables, and avoid the chorale's text."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If a mechanical device, like a fan, is emitting a constant pitch, you can "
+"practice singing harmonic intervals with that device."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Perform exercises for your friends - long and short - on different "
+"instruments. This will help to build competence in musical contexts more "
+"realistic than a computer can provide, but still in an isolated situation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Aural Skills Books:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Crowell's <citetitle>Eyes and Ears</citetitle> is an open-source sight-"
+"singing text, available for free from the URL listed above. This book "
+"contains about 400 melodies from the public domain, along with some helpful "
+"instructions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Hall's <citetitle>Studying Rhythm</citetitle> is a small and expensive - but "
+"useful - book, containing a collection of rhythms to be spoken or spoken-and-"
+"clapped. This book also contains some three-part and four-part rhythms. The "
+"exercises increase in difficulty. The book offers some performance tips."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Hindemith's <citetitle>Elementary Training</citetitle> is a classic aural "
+"skills text, but it was originally published in 1949, and a lot of research "
+"has taken place since then about how people learn aural skills. The book "
+"offers a wide variety of exercises, especially to develop coordination when "
+"performing multiple independent musical lines. We recommend that you ignore "
+"Hindemith's instructions, and use <firstterm>tonic solfa</firstterm> "
+"syllables. For more information on tonic solfa, refer to <citetitle>Tonic "
+"sol-fa</citetitle> at <ulink url=\"http://en.wikipedia.org/wiki/Tonic_sol-"
+"fa\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Hoffman's <citetitle>The Rhythm Book</citetitle> was developed specifically "
+"for the takadimi rhythm system. Like Hall's text, <citetitle>The Rhythm "
+"Book</citetitle> progresses fro easy to difficult exercises, and offers "
+"helpful instructions for performance."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Karpinski's two texts are the result of two decades of research about how "
+"musicians acquire aural skills. The <citetitle>Manual</citetitle> contains "
+"instructions, exercises, and tips on training yourself to hear musical "
+"elements <emphasis>and</emphasis> real music, and how to perform and imagine "
+"music. The <citetitle>Anthology</citetitle> is organized in chapters that "
+"coincide with the topics discussed in the <citetitle>Manual</citetitle>, and "
+"contains very few instructions. The <citetitle>Anthology</citetitle> "
+"contains a wide variety of musical excerpts, some from the public domain and "
+"others under copyright, taken from the \"classical music\" canon and from "
+"national repertoires. There are some three-part and four-part exercises, "
+"which should be performed by a group of people leraning aural skills "
+"together."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you practise sight-singing from any book, we recommend hearing the "
+"tonic pitch from a fixed-pitch instrument (like a piano or keyboard "
+"synthesizer) before you sing an excerpt. With the tonic pitch in your mind, "
+"and without singing aloud, find the starting note of the excerpt, and sing "
+"the excerpt <emphasis>in your mind</emphasis> several times, until you are "
+"sure that you are singing the excerpt correctly. When you have the melody in "
+"your mind, sing the excerpt out loud, as many times as you need to be sure "
+"that you are singing it correctly. Only <emphasis>after</emphasis> you sing "
+"the excerpt perfectly should you play it on a fixed-pitch instrument to "
+"confirm that you are correct."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You should build your ear with as little help from external sources (pianos, "
+"and so on) as possible. A significant amount of research shows that this "
+"gives you a more flexible musical mind, and that, while the initial learning "
+"curve is very steep, you will ultimately be able to learn new concepts "
+"faster."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Aural Skills Books"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Crowell"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Ben"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Eyes and Ears: an Anthology of Melodies for Sight-Singing"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Hall"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Anne"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Studying Rhythm"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Hindemith"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Paul"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Elementary Training for Musicains"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Hoffman"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Rhythm Book"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Karpinski"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Gary"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Manual for Ear Training and Sight Singing"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Anthology for Sight Singing"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using the Exercises"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Listening"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open the software"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "It is at the \"Front Page\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Decide which type of exercise to do"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Decide which sub-section to focus on"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"New\" or \"New Interval\" or whatever to get the first question"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "On some exercises, you need to click \"new\" whenever you want a new one"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Some exercises can be configured to automatically provide a new question "
+"when you correctly answer the previous one"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "After hearing each exercise, try to make a correct identification."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If you need to hear the exercise again, do it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "It is good to limit the number of times you listen."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select what you think is the correct choice."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Go to the next question, which may be automatic for some questions. You may "
+"want to pre-select a number of seconds to wait before progressing to the "
+"next question."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Singing"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "These are: \"Sing intervals\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select \"Sing intervals\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Choose which ones you want to focus on"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The exercise will begin, playing the first of the tones you are to sing"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You must sing the first and the second tone, or to make it harder, only the "
+"second tone (tip: use sol-fa syllables!)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Solfege does not know whether you sang the interval correctly, so you must "
+"tell it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Tap generated rhythm\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select \"Tap generated rhythm\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose a subcategory (they correspond to those in the dictation, but there "
+"is no compound metre available). See below."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"New\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It will play you a rhythm; listen carefully, and conduct the beat if you can."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "as with rhythmic dictation, you will be given an intro"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You must repeat the rhythm by click on the \"Tap here\" button"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Best to use the space bar to tap in; here's how."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The \"accuracy\" may be set too high; I like 0.30"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On \"Config,\" change \"Number of beats in question\" to adjust the "
+"difficulty"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Sing chord\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select \"Sing chord\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Choose the type of chords you want to sing"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Solfege will automatically play an \"A\" for you, and you can hear it again "
+"by clicking, \"440hz\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Sing the chord ascending"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Verify that you sang correctly by clicking \"Play answer\" and hearing "
+"whether the pitches are the same."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"New\" for another question"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the \"Config\" tab, it allows you to change how far it will transpose the "
+"built-in models; best to leave this as it is <code>['key', -5, 5]</code>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Sing chord tone\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select \"Sing chord tone\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select which chordal member you want to practise singing"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Solfege will display and play a chord in blocked form, and you must sing the "
+"chord member that it tells you to sing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can repeat the chord in blocked form (\"Repeat\") or in arpeggio form "
+"(\"Repeat arpeggio\"). It is much easier to hear a chord played in arpeggio "
+"form, so we recommend that you practice both ways."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you are sure that you correctly sang the chord member, click \"Play "
+"answer\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For the next question, click \"New\""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Yourself"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These exercises allow you to choose the focus of your training, rather than "
+"using a Solfege preset. When you enter an exercise, you are given a default "
+"setup, which is then customized on the \"Config\" tab in the activity. The "
+"following things are customizeable in \"Configure Yourself\" exercises, but "
+"not in the other counterparts:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Harmonic intervals\" allows you to de/select specific intervals between m2 "
+"and M10"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Melodic intervals\" and \"Sing intervals\" allow you to de/select specific "
+"intervals between m2 and M10, and whether to test them up, down, or both."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Compare intervals\" allows you to select specific intervals between minor "
+"second and major tenth. Also allows you to switch between harmonic or "
+"melodic intervals independently for the first and second interval."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"Id tone\": allows you to choose a \"weighting\" for each pitch, to "
+"conentrate on specific ones. Also allows you to adjust octave displacement "
+"to higher or lower octaves."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For all of the rhythm exercises, \"binary time\" means \"simple metre,\" and "
+"\"ternary time\" means \"compound metre.\" All sections allow you to choose "
+"which single-beat rhythms to use when creating the question."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Rhythm"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is dictation or play-back. The rhythms described in this section use "
+"the \"takadimi\" rhythm system, which is explained in <citetitle>The "
+"Takadimi Article</citetitle>, available at <ulink url=\"http://www.takadimi."
+"net/takadimiArticle.html\" />. Use the rhythm system you prefer."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For Rhythmic Dictation:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"Rhythm\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Choose which subcategory:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Rhythms (easy) is: quarter, 2x eighths, 4x sixteenths"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Rhythms is: those plus ka-di-mi, ta-ka-mi, ta-ka-di, ta-mi, and ta-ka"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Rhythms (difficult) is: those plus rests and triplets"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Rhythms in 3/4 is: compound metre everything"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"New\" to get a new question"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the buttons above the \"Play\" button to input the rhythm-units, in "
+"order from start to finish"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Use paper to work it out"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If you make a mistake inputting, use the \"Backspace\" button"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You can \"Repeat\" to hear it again - not too many times!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can change the difficulty by increasing the number of beats per "
+"question, on \"Config\" tab"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you get a question wrong, you will have a chance to correct it; the "
+"incorrect parts are underlined for you in red"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For Rhythmic Tap-Back, see above section \"Singing Exercises.\""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Dictation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These dictation exercises are for melodic dictation. There is not a great "
+"variety of examples here, and they are either easy or difficult, with no "
+"middle-ground."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"Dictation\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Choose a level:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Volkslieder 1: German folk songs (easy)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Volkslieder 2: German folk songs (easy)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Parts of 2 Bach inventions: only 2; the hardest of the four categories"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Norwegian children songs: only 3 (easy)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The clef, key and time signatures are given for you, along with the starting "
+"note, and title."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The quarter-note buttons allow you to play only part of the melody."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Play the whole music\" plays both parts of the music."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Back\" and \"Forward\" shifts through the excerpts for dictation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It's best to \"Play the whole music\" as many times as needed (5 - 7 or less "
+"maximum, depending on the excerpt)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "It's best to avoid playing only part of the music."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Write down the excerpt on paper, then when you're sure that you've finished "
+"it correctly, click \"Show.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This exercise is self-policing, and does not track progress."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Harmonic Progressions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These dictation exercises are for harmonic dictation. You will be asked to "
+"guess the harmonic progression, but users should also notate at least the "
+"outer voices (lowest and highest). It should be noted that these "
+"progressions do not follow Common Practice Period harmonic procedures."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"Harmonic progressions\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Some harmonic progressions require MMA (as indicated). See below for "
+"instructions on installation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The Non-MMA Categories contain the following chords:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Easy harmonic progressions\": I, II, IV, V, VI"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "with Inverisons: add IV6 and V6"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "\"Three chords, root position\": I, II, III, IV, V, VI"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Choose a category."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"New\" to get a question."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The passage will automatically play once, but you will not get a key "
+"signature. If you are notating the dictation, and you do not know which "
+"pitches are being used, then you may wish to guess the key, using sol-fa "
+"equivalents to know if you're correct."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the chord-buttons to input the series of chords that you hear, in "
+"order from first to last."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To hear the example again, click \"Repeat.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you make a mistake, click the \"Backspace\" button to erase the last-"
+"input chord."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "When you are sure that your answer is correct, click \"Guess answer.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To get another question, click \"New\"."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Intonation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to use the Intonation exercises, you must install the \"Csound\" "
+"application. See <xref linkend=\"sect-Musicians_Guide-Solfege-"
+"Install_Csound\" /> for instructions to install Csound."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click on \"Intonation\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"All of the exercises test an ascending perfect fifth. The closer the number "
+"is to 1.0, the less the difference when it is out-of-tune."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"New\" to get a new question."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The interval will automatically play."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"Repeat\" to repeat the interval."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You must choose whether the second tone is flat (the interval is too small), "
+"in tune (the interval is the right size), or sharp (the interval is too "
+"large)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "When you are sure of your answer, click the corresponding button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To get the next question, click \"New.\""
+msgstr ""
+

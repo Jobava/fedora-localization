@@ -1,0 +1,283 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:05-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Real-Time and Low Latency"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is perhaps a common perception that computers can compute things "
+"instantaneously. Anybody who has ever waited for a web page to load has "
+"first-hand experience that this is not the case: computers take time to do "
+"things, even if the amount of time is often imperceptible to human observers."
+" Moreover, a computer doing one thing can seem like it's acting nearly "
+"instantaneously, but a computer doing fifteen things will have a more "
+"difficult time keeping up appearances."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Why Low Latency Is Desirable"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When computer audio specialists talk about a computer acting in "
+"<firstterm>real-time</firstterm>, they mean that it is acting with only an "
+"imperceptible delay. A computer cannot act on something instantaneously, and "
+"the amount of waiting time between an input and its output is called "
+"<firstterm>latency</firstterm>. In order for the delay between input and "
+"output to be perceived as non-existant (in other words, for a computer to "
+"\"react in real-time,\") the latency must be low."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For periodic tasks, like processing audio (which has a consistently "
+"recurring amount of data per second), low latency is desirable, but "
+"<emphasis>consistent</emphasis> latency is usually more important. Think of "
+"it like this: years ago in North America, milk was delivered to homes by a "
+"dedicated delivery person. Imagine if the milk delivery person had a medium-"
+"latency, but consistent schedule, returning every seven days. You would be "
+"able to plan for how much milk to buy, and to limit your intake so that you "
+"don't run out too soon. Now imagine if the milk delivery person had a low-"
+"latency, but inconsistent schedule, returning every one to four days. You "
+"would never be sure how much milk to buy, and you wouldn't know how to limit "
+"yourself. Sometimes there would be too much milk, and sometimes you would "
+"run out. Audio-processing and synthesis software behaves in a similar way: "
+"if it has a consistent amount of latency, it can plan accordingly. If it has "
+"an inconsistent amount of latency - whether large or small - there will "
+"sometimes be too much data, and sometimes not enough. If your application "
+"runs out of audio data, there will be noise or silence in the audio signal - "
+"both bad things."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Relatively low latency is still important, so that your computer reacts "
+"imperceptibly quickly to what's going on. The point is that the difference "
+"between an 8&nbsp;ms target latency and a 16&nbsp;ms target latency is "
+"almost certainly imperceptible to humans, but the higher latency may help "
+"your computer to be more consistent - and that's more important."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Processor Scheduling"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you use <application>System Monitor</application>, you will see a lot "
+"of simultaneous <firstterm>processes</firstterm>. A process is a list of "
+"instructions from an application (although sometimes a process is the entire "
+"application). In <application>System Monitor</application>, most processes "
+"are <firstterm>idle</firstterm>, which means the process does not use the "
+"processor but waits until it has a task."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Modern computers have processors with more than one <firstterm>processor "
+"core</firstterm>, so modern processors can run more than one process at the "
+"same time. Even high-performance computers have more processes than "
+"processor cores, so operating systems must decide which processes can run, "
+"when processes can run, and which processor cores to use. We call this "
+"<firstterm>processor scheduling</firstterm>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Linux systems like &O_S;, access to memory, hard disks, networks, audio "
+"hardware, and other things is also scheduled. A <firstterm>scheduling "
+"algorithm</firstterm> is instructions for to decide which process can access "
+"which resources at what times. We can use different scheduling algorithms to "
+"optimize our computer for different tasks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For everyday use, the default scheduling algorithm, fair queueing, is a good "
+"choice. <firstterm>Fair queueing</firstterm> ensures all applications have "
+"equal access to your computer's hardware. Fair queueing is not useful for "
+"audio production environments. If you decide to record a live concert, and "
+"the <application>PackageKit</application> update manager starts to check for "
+"software updates, you do not want this to interrupt your concert recording. "
+"Wait the fair queueing scheduling algorithm, <application>PackageKit</"
+"application> has equal priority with your recording software, and may cause "
+"a glitch in the recording."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <firstterm>realtime scheduling algorithm</firstterm> is a better choice "
+"for audio production enivironments. You can use realtime scheduling to "
+"prioritize some processes, like audio recording processes. If you decide to "
+"record a live concet, and the <application>PackageKit</application> update "
+"manager starts to check for software updates, realtime scheduling means "
+"<application>PackageKit</application> would not use the processor if the "
+"audio recording application is."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Remember that realtime scheduling does not prevent applications and "
+"processes from starting. Realtime scheduling means that, if a low-priority "
+"process and a high-priority process both want to use your computer's "
+"hardware, the high-priority process will use the hardware first. Also note "
+"that applications may appear to stop responding (to \"freeze\"), if you "
+"encounter a situation where a high-priority process uses your computer's "
+"hardware and causes the graphics process to wait."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Real-Time Linux Kernel"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There is a \"real-time patch\" for the Linux kernel which enables the "
+"processor to unfairly schedule certain processes that ask for higher "
+"priority. Although the term \"patch\" may make it seem like this is just a "
+"partial solution, it really refers to the fact that the programming code "
+"used to enable this kind of unfair scheduling is not included in standard "
+"kernels; the standard kernel code must have this code \"patched\" into it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The default behaviour of a real-time kernel is still to use the \"fair "
+"queueing\" system by default. This is good, because most processes don't "
+"need to have consistently low latencies. Only specific processes are "
+"designed to request high-priority scheduling. Each process is given (or asks "
+"for) a priority number, and the real-time kernel will always give processing "
+"time to the process with the highest priority number, even if that process "
+"uses up <emphasis>all</emphasis> of the available processing time. This puts "
+"regular applications at a disadvantage: when a high-priority process is "
+"running, the rest of the system may be unable to function properly. In "
+"extreme (and very rare!) cases, a real-time process can encounter an error, "
+"use up all the processing time, and disallow any other process from running -"
+" effectively locking you out of your computer. Security measures have been "
+"taken to help ensure this doesn't happen, but as with anything, there is no "
+"guarantee. If you use a real-time kernel, you are exposing yourself to a "
+"slightly higher risk of system crashes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A real-time kernel should not be used on a computer that acts as a server, "
+"for these reasons."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Hard and Soft Real-Time"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Finally, there are two different kinds of real-time scheduling. The Linux "
+"kernel, even at its most extreme, uses only <firstterm>soft real-time</"
+"firstterm>. This means that, while processor and other scheduling algorithms "
+"may be optimized to give preference to higher-priority processes, no "
+"absolute guarantee of performance can be made. A real-time kernel helps to "
+"greatly reduce the chance of an audio process running out of data, but "
+"sometimes it can still happen."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A <firstterm>hard real-time</firstterm> computer is designed for specialized "
+"purposes, where even the smallest amount of latency can make the difference "
+"between life and death. These systems are implemented in hardware as well as "
+"software. Example uses include triggering airbag deployment in automobile "
+"crashes, and monitoring the heart rate of a patient during an operation. "
+"These computers are not particularly multi-functional, which is part of "
+"their means to accomplishing a guaranteed low latency."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Getting a Real-Time Kernel in &OPERATING_SYSTEM;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In &OPERATING_SYSTEM;, the real-time kernel is provided by the Planet CCRMA "
+"at Home software repositories. Along with the warnings in the Planet CCRMA "
+"at Home chapter (see <xref linkend=\"sect-Musicians_Guide-"
+"CCRMA_Security_and_Stability\" />), here is one more to consider: the real-"
+"time kernel is used by fewer people than the standard kernel, so it is less "
+"well-tested. The chances of something going wrong are relatively low, but be "
+"aware that using a real-time kernel increases the level of risk. Always "
+"leave a non-real-time option available, in case the real-time kernel stops "
+"working."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can install the real-time kernel, along with other system optimizations, "
+"by following these instructions:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Install the Planet CCRMA at Home repositories by following the instructions "
+"in <xref linkend=\"sect-Musicians_Guide-CCRMA_Installing_Repository\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Run the following command in a terminal: <command>su -c 'yum install "
+"planetccrma-core'</command> Note that this is a meta-package, which does not "
+"install anything by itself, but causes a number of other packages to be "
+"installed, which will themselves perform the desired installation and "
+"optimization."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Shut down and reboot your computer, to test the new kernel. If you decided "
+"to modify your GRUB configuration, be sure that you leave a non-real-time "
+"kernel available for use."
+msgstr ""
+

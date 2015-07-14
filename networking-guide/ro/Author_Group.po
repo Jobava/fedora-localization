@@ -1,0 +1,36 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: firstname
+#, no-c-format
+msgid "Stephen"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Wadeley"
+msgstr ""
+
+#. Tag: orgname
+#, no-c-format
+msgid "Red Hat"
+msgstr ""
+
+#. Tag: orgdiv
+#, no-c-format
+msgid "Engineering Content Services"
+msgstr ""
+

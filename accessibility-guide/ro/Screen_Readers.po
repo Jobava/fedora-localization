@@ -1,0 +1,266 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-12-23 12:29+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Screen Readers"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Screen readers are important accessibility tools that allow a person with "
+"limited vision to have the computer read what is on the screen. There are "
+"numerous solutions that provide this service. This section covers some of "
+"the ones available to Fedora users."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Orca for GNOME"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"GNOME supplies its own screen reader, <package>Orca</package>. This package "
+"is installed by default on all Fedora systems. Additional information on "
+"<package>Orca</package> may be found by visiting <ulink url=\"http://live."
+"gnome.org/Orca/\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To enable <package>Orca</package> you may run <command>orca</command> from "
+"the command line. This first time you will be asked a number of preference "
+"questions. After the initial configuration, run <command>orca</command> a "
+"second time to start <application>orca</application>. The graphical "
+"application which starts has options for changing the preferences, quitting "
+"the program, and obtaining help. During the initial setup, the questions are "
+"also said allow as they are displayed in the terminal."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Alternately, from the graphical menus select <menuchoice><guilabel>System "
+"&gt; Preferences &gt; Assistive Technologies</guilabel></menuchoice> and "
+"check the box labeled \"Enable Assistive Technologies\" then click "
+"<guilabel>Preferred Applications</guilabel> to ensure that either "
+"<application>Orca</application> or <application>Orca and Magnifier</"
+"application> is selected."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Jovie for KDE"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>Jovie</package> is the KDE system for Text-to-Speech, previously "
+"known as ktts. <package>Jovie</package> consists of a Text-to-Speech Daemon, "
+"a <application>Konqueror</application> plugin, and an extension for the "
+"<application>Kate</application> text editor. The Daemon provides text-to-"
+"speech functionality to applications, such as <application>KMouth</"
+"application> and <application>KNotify</application>, via D-Bus. It also "
+"provides an icon from the system tray, for additional features. From this "
+"tray icon, <package>Jovie</package> can speak the contents of a text file, "
+"speak the contents of the clipboard, and access the control module for "
+"configuration. Comprehensive information on jovie can be found on the KDE "
+"website: <ulink url=\"http://docs.kde.org/stable/en/kdeaccessibility/jovie/"
+"index.html\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To start <package>Jovie</package> in Fedora, run <command>jovie</command> "
+"from the command line. To start it from the KDE graphical menus, select "
+"<menuchoice><guilabel>Applications &gt; Utilities &gt; Text-to-Speech.</"
+"guilabel></menuchoice>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using Emacspeak with Fedora"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Emacspeak</application> is a speech interface that allows "
+"visually impaired users to interact independently and efficiently with the "
+"computer. <application>Emacspeak</application> has dramatically changed how "
+"hundreds of blind and visually impaired users around the world interact with "
+"the personal computer and the Internet. A rich suite of task-oriented speech-"
+"enabled tools provides efficient speech-enabled access to the evolving "
+"semantic world wide web. When combined with Linux running on low-cost PC "
+"hardware, <application>Emacspeak</application> provides a reliable, stable "
+"speech-friendly solution that opens up the Internet to visually impaired "
+"users around the world."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Before using <application>Emacspeak</application>, you should familiarize "
+"yourself with some documentation. Start with <citetitle>A Gentle "
+"Introduction to Emacspeak</citetitle> by Gary Lawrence Murphy, which is "
+"available online at <ulink url=\"http://tldp.org/LDP/espk-ug/html/index."
+"html\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <citetitle>Emacspeak HOWTO</citetitle> written by Jim Van Zandt is also "
+"a very good resource, although the document is limited to the Slackware "
+"distribution. The Emascspeak HOWTO is available online at: <ulink url=\"http:"
+"//slackware.osuosl.org/slackware-3.3/docs/Emacspeak-HOWTO\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following sections describe how to perform various tasks using "
+"<application>Emacspeak</application> and Fedora."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Meta key"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At various points, the following sections refer to the <keycap>Meta</keycap> "
+"key. This key is fundamental to <application>Emacs</application> (and "
+"therefore <application>Emacspeak</application>) commands, but is very seldom "
+"found on modern keyboards. Most keyboard layouts map the <keycap>Alt</"
+"keycap> key to take the place of <keycap>Meta</keycap>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Reading news using Fedora and Emacspeak"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Gnus</application> is the news reader included with "
+"<application>Emacspeak</application>. <application>Gnus</application> gets "
+"the appropriate data from the <filename>.newsrc</filename> file in the "
+"user's home directory. To post and read news through <application>Emacspeak</"
+"application>, refer to <ulink url=\"http://www.gnus.org/\" /> for manuals, "
+"tutorials, HOWTOs, and more. To start <application>Gnus</application>, press "
+"<keycombo><keycap>Meta</keycap><keycap>X</keycap></keycombo>, then type "
+"<command>gnus</command> and press <keycap>Enter</keycap>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This command displays all the newsgroups you are subscribed to. To select a "
+"newsgroup, highlight your selection and press the space bar. Next, specify "
+"how many articles you would like to open: type a number and press "
+"<keycap>Enter</keycap>. This splits the screen into two buffers. The top "
+"section is the summary buffer, the bottom section is the article buffer. You "
+"should now be able to read your news."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sending and reading email using Fedora and Emacspeak"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are several email clients available in <application>Emacspeak</"
+"application>. The <application>Gnus</application> utility can actually be "
+"used for both email and news. Press <keycombo><keycap>Meta</"
+"keycap><keycap>X</keycap></keycombo> to start <application>Gnus</"
+"application>, then press <keycap>M</keycap> to use the mail client."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The easiest tool to use is <application>RMAIL</application>. To send a "
+"message using <application>RMAIL</application>, press "
+"<keycombo><keycap>Ctrl</keycap><keycap>X</keycap></keycombo>, then type "
+"<command>rmail</command>. When you are in <application>RMAIL</application>, "
+"press <keycap>M</keycap>. Fill in the <literal>To:</literal> and "
+"<literal>Subject:</literal> fields. Put the body of the message below the "
+"line that reads <literal>-text follows this line-</literal>. To send the "
+"message when you are finished, press <keycombo><keycap>Ctrl</"
+"keycap><keycap>C</keycap></keycombo> twice in succession."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To read a message using <application>RMAIL</application>, press "
+"<keycombo><keycap>Meta</keycap><keycap>X</keycap></keycombo>, then type "
+"<command>rmail</command> and press <keycap>Enter</keycap>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information on using RMAIL visit <ulink url=\"http://www.gnu.org/"
+"software/emacs/manual/html_node/emacs/Rmail.html\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"Using <application>Emacspeak</application> to execute Linux shell commands"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is not necessary to leave <application>Emacspeak</application> to execute "
+"a Linux command. To execute a command within <application>Emacspeak</"
+"application>, press <keycap>Esc</keycap>, then type <literal>!</literal> "
+"followed by the name of the command when <application>Emacspeak</"
+"application> prompts you. To exit the command output window, press "
+"<keycombo><keycap>Ctrl</keycap><keycap>X</keycap></keycombo>, followed by "
+"<keycap>1</keycap>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This functionality is extremely useful. You can even print and compile files "
+"you are working on within <application>Emacspeak</application>. For more "
+"information on Linux shell commands refer to <citetitle>Josh's Linux Guide</"
+"citetitle> or any other comparable command resource."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Josh's Linux Guide</citetitle> is available from <ulink url="
+"\"http://linuxguide.sourceforge.net/linux-commands.html\" />"
+msgstr ""
+

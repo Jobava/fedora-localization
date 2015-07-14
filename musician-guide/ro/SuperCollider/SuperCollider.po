@@ -1,0 +1,747 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2011-05-21 05:12-0400\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "<application>SuperCollider</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>SuperCollider</application> is many things, but above all:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "An audio synthesis engine,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "A flexible programming language, and"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An interpreter to transform the programming language into synthesis "
+"instructions."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Requirements and Installation"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Knowledge Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>SuperCollider</application> is by far the most difficult "
+"program described in the Fedora Musicians' Guide. The "
+"<application>SuperCollider</application> applications themselves are easy to "
+"use, and they work very well, but they are merely tools to help you "
+"accomplish something useful. <application>SuperCollider</application> has an "
+"extremely powerful and flexible programming language, with libraries "
+"designed primarily for audio processing. As often happens with computers, "
+"however, this added flexibility and power comes at the cost of requiring "
+"greater understanding and learning on the part of the user. Because "
+"<application>SuperCollider</application> involves actual programming, a "
+"rudimentary understanding of some principles and concepts of computer "
+"science will provide huge benefits to somebody learning the language. The "
+"following articles from Wikipedia are not mandatory reading, but you should "
+"refer to them as necessary while learning the language."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Computer Programming</citetitle> at <ulink url=\"http://en."
+"wikipedia.org/wiki/Computer_programming\" />: You probably know what this "
+"is; it is what you will be doing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Programming Language</citetitle> at <ulink url=\"http://en."
+"wikipedia.org/wiki/Programming_language\" />: <application>SuperCollider</"
+"application> is a programming language."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Interpreter</citetitle> at <ulink url=\"http://en.wikipedia.org/"
+"wiki/Interpreter_%28computing%29\" />: This reads your code, and sends "
+"commands to the server, which causes it to produce sound."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Server</citetitle> at <ulink url=\"http://en.wikipedia.org/wiki/"
+"Server_%28computing%29\" />: <application>SuperCollider</application> has a "
+"'server' component, which is operated by the interpreter."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Functional Programming</citetitle> at <ulink url=\"http://en."
+"wikipedia.org/wiki/Functional_programming\" />: <application>SuperCollider</"
+"application> can be treated as a \"functional\" language."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Imperative Programming</citetitle> at <ulink url=\"http://en."
+"wikipedia.org/wiki/Imperative_programming\" />: <application>SuperCollider</"
+"application> can be treated as an \"imperative\" language."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Object-Oriented Programming</citetitle> at <ulink url=\"http://en."
+"wikipedia.org/wiki/Object-oriented_programming\" />: "
+"<application>SuperCollider</application> can be treated as an \"object-"
+"oriented\" language."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Software Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>SuperCollider</application> uses the JACK Audio Connection Kit. "
+"You should install JACK before installing <application>SuperCollider</"
+"application>. Refer to <xref linkend=\"sect-Musicians_Guide-"
+"Install_and_Configure_JACK\" /> for instructions to install JACK."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>SuperCollider</application> is not available from the Fedora "
+"software repositories. You must enable the \"Planet CCRMA at Home\" "
+"repository to install <application>SuperCollider</application>. See <xref "
+"linkend=\"sect-Musicians_Guide-CCRMA_Installing_Repository\" /> for "
+"instructions ti enable the \"Planet CCRMA at Home\" repository. The \"Planet "
+"CCRMA at Home\" repository contains a wide variety of music and audio "
+"applications."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Hardware Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You need an audio interface to use <application>SuperCollider</application>. "
+"You do not need a microphone to use <application>SuperCollider</application>."
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Available <application>SuperCollider</application> Packages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>SuperCollider</application> packages are all held in the "
+"Planet CCRMA at Home repository, and there are a lot of them. Many of them "
+"have standard Fedora suffixes, but many are other kinds of optional "
+"components. Most of the optional features add libraries to "
+"<application>SuperCollider</application>, allowing you to use them in your "
+"audio programs. The specific features available in each additional package "
+"are not described here."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-ambiem</package> : Optional Library (\"Ambisonics "
+"classes for SC\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-debuginfo</package> : Decodes the debugging "
+"information provided by <application>SuperCollider</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-devel</package> : Contains files needed for "
+"development with <application>SuperCollider</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-dewdrop</package> : Optional Library (\"DewDrop "
+"external collection for SC\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-emacs</package> : Adds <application>SuperCollider</"
+"application> support to the <application>emacs</application> text editor."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-extras</package> : Optional Library (\"Extra plugins "
+"and classes for SC\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-gedit</package> : Adds <application>SuperCollider</"
+"application> support to the <application>GEdit</application> text editor."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-libscsynth</package> : \"<application>SuperCollider</"
+"application> synthesis library.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-quarks</package> : Optional Library (\"Local quarks "
+"repository for <application>SuperCollider</application>\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-sclang</package> : Help files, examples, the class "
+"library, and language interpreter."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-vim</package> : Adds <application>SuperCollider</"
+"application> support to the <application>vim</application> text editor."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider</package> : Installs the \"minimum requirements\" to "
+"run <application>SuperCollider</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider-sclang</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider-libscsynth</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>fftw</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>w3m-el</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>emacs</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-bbcut2</package> : Optional Library (\"Beat tracking "
+"of audio streams\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-bbcut2-debuginfo</package> : Decodes the debugging "
+"information provided by bbcut2."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-mathlib</package> : Optional Library (\"Useful "
+"classes for SC\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-redclasses</package> : Optional Library (\"Frederik "
+"Olofsson Red SC classes\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-redclasses-debuginfo</package> : Decodes the "
+"debugging information provided by redclasses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-world</package> : Installs most "
+"<application>SuperCollider</application> packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>abmiem</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider-redclasses</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider-dewdrop</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider-emacs</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider-mathlib</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider-midifile</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider-extras</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider-bbcut2</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<package>supercollider-reduniverse</package>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-midifile</package> : Optional Library (\"MIDI file "
+"reader for <application>SuperCollider</application>\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<package>supercollider-reduniverse</package> : Optional Library "
+"(\"Sonification and visualization of dynamic systems\")."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Recommended Installation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have never used <application>SuperCollider</application> before, then "
+"we recommend installing the smallest number of packages possible. This will "
+"allow you to start learning with the core classes, available on all "
+"<application>SuperCollider</application> installations. Installing the bare "
+"minimum requirements will not prevent you from installing optional libraries "
+"in the future, of course."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The recommended installation also avoids installing the <application>emacs</"
+"application> or <application>vim</application> components, which - unless "
+"you are already a programmer - you probably do not know how to use. The "
+"<application>emacs</application> and <application>vim</application> text "
+"editors are extremely powerful and extensible, but they can be difficult to "
+"learn. Furthermore, there is no reason to learn them just for "
+"<application>SuperCollider</application>, because the component for "
+"<application>GEdit</application> is more than sufficient."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To install the minimum recommended installation for "
+"<application>SuperCollider</application>:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In a terminal, run <command>su -c 'yum install supercollider supercollider-"
+"gedit'</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Review the proposed installation carefully. The list may be quite long, and "
+"require a large download."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"Using <application>GEdit</application> to Write and Run "
+"<application>SuperCollider</application> Programs"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <package>supercollider-gedit</package> package installs an extension for "
+"<application>GEdit</application> which allows editing and running "
+"<application>SuperCollider</application> code from within "
+"<application>GEdit</application>. There are also <application>SuperCollider</"
+"application> extensions for the <application>emacs</application> and "
+"<application>vim</application> text editors. This tutorial uses the "
+"<application>GEdit</application> extension, because it is easier to learn "
+"how to use <application>GEdit</application> than <application>vim</"
+"application> or \"emacs.\""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Enable and Configure SCEd in <application>GEdit</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps should be followed the first time that you use "
+"<application>GEdit</application>'s <application>SuperCollider</application> "
+"extension."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Start <application>GEdit</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open the Preferences window (from the menu, choose "
+"<menuchoice><guimenu>Edit</guimenu> <guimenuitem>Preferences</guimenuitem></"
+"menuchoice>)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose the 'Plugins' tab, and scroll down to <package>Sced</package>, then "
+"make sure that it is selected."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click on the <guibutton>Configure Plugin</guibutton> button, then select a "
+"runtime folder where the <application>SuperCollider</application> server "
+"will store any synth sent to it during program execution. The safest place "
+"for this folder could be a sub-folder of the location where you will store "
+"your <application>SuperCollider</application> code."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"Enable <application>SuperCollider</application> Mode and Start a Server"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"These steps should be followed every time you open <application>GEdit</"
+"application>, and wish to use the <application>SuperCollider</application> "
+"extension."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>Tools</guimenu><guimenuitem>SuperCollider Mode</"
+"guimenuitem></menuchoice>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A <guimenu>SuperCollider</guimenu> menu should appear, and a window at the "
+"bottom which says, \"<application>SuperCollider</application> output\"."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you cannot see the window at the bottom, then select "
+"<menuchoice><guimenu>View</guimenu><guimenuitem>Bottom Pane</guimenuitem></"
+"menuchoice> from the menu, so that it shows up. It is sometimes important to "
+"see the information that <application>SuperCollider</application> provides "
+"in this window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After enabling <application>SuperCollider</application> mode, the window "
+"should display a series of notices. Near the end should be something like "
+"this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"RESULT = 0\n"
+"Welcome to SuperCollider, for help type ctrl-c ctrl-h (Emacs) or :SChelp "
+"(vim) or ctrl-U (sced/gedit)\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If this window gives a non-zero value for \"RESULT,\" then an error has "
+"probably occurred, and you should scroll up to see what it is, and try to "
+"fix it. If you receive the following warning: \"The GUI scheme 'swing' is "
+"not installed\" then you will not be able to run any "
+"<application>SuperCollider</application> prorams that use a GUI (graphical "
+"user interface). The GUI components are not used anywhere in this Guide, and "
+"they are highly optional."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You will probably also want to start a server at this point, so from the "
+"menu select '<application>SuperCollider</application> &gt; Start Server'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After the server starts, you should see messages from \"JackDriver\". If a "
+"JACK server is not already started, then <application>SuperCollider</"
+"application> will start one automatically."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the <application>SuperCollider</application> server started successfully, "
+"you should see a message similar to this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"SuperCollider 3 server ready..\n"
+"JackDriver: max output latency 46.4 ms\n"
+"notification is on\n"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Executing Code in <application>GEdit</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can execute code directly from <application>GEdit</application>, without "
+"having to use <command>sclang</command> from the command-line."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that <application>SuperCollider</application> mode is enabled, and "
+"that a server has been started."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the code that you wish to execute. A single line of code may be "
+"executed simply by placing the text-input cursor on that line."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Press 'Ctrl+E' on the keyboard, or from the menu select "
+"'<application>SuperCollider</application> &gt; Evaluate'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To stop all sound on the server, press 'Esc' on the keyboard, or from the "
+"menu select '<application>SuperCollider</application> &gt; Stop Sound'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the server successfully executes the code, then it will output something "
+"to the \"<application>SuperCollider</application> output\" pane. The output "
+"will be different, depending on what <application>SuperCollider</"
+"application> asked the server to do, but will usually either look like this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Synth(\"temp_0\": 1000)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "or this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "RESULT = 0"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"Other Tips for Using <application>GEdit</application> with "
+"<application>SuperCollider</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you close <application>GEdit</application> while the "
+"<application>SuperCollider</application> server is running, then "
+"<application>GEdit</application> will automatically shut down the server."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If <systemitem>JACK</systemitem> is started by <application>SuperCollider</"
+"application>, then it will automatically terminate when the "
+"<application>SuperCollider</application> server terminates."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>SuperCollider</application> will automatically attempt to "
+"connect its outputs to the system's outputs. If your audio output does not "
+"work, then you should use <application>QjackCtl</application> to verify that "
+"it is correctly connected."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Other functions available in the <application>SuperCollider</application> "
+"menu include:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Find Help (Opens the <application>SuperCollider</application> help file for "
+"currently-selected object)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Find Definition (Opens the <application>SuperCollider</application> source "
+"file for the currently-selected object)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Restart Interpreter (Restarts the <application>SuperCollider</application> "
+"interpreter; also closes running servers, but does not restart them)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Clear output (Clears all output from the \"<application>SuperCollider</"
+"application> output\" pane)."
+msgstr ""
+

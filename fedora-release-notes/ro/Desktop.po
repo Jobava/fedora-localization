@@ -1,0 +1,225 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Desktop"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "GNOME 3.14"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"GNOME has been updated to the latest upstream release 3.14. This release "
+"comes with a number of feature improvements, some of which are listed below."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>GNOME Weather</application> app has been redesigned for 3."
+"14. It is now integrated with a new geolocation framework so that you don't "
+"have to manually specify your current geographical location."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Evince</application> app has been redesigned for 3.14."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "GNOME 3.14 features improved support for Wi-Fi hotspots."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Photos</application> app now comes with support for Google "
+"services and media servers."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When running GNOME on touchscreen devices, you can now use multitouch "
+"gestures."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Desktop privacy settings have been improved for WebDAV, DLNA, and VNC "
+"services."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "GTK+ in GNOME 3.14 includes a new interactive inspector."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Wayland support has been improved in 3.14."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The 3.14 release includes new and updated Human Interface Guidelines "
+"(<acronym>HIG</acronym>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>gnome-terminal</application> has been improved in 3.14. "
+"Developers and administrators alike use a lot of terminal sessions. A new "
+"search provider for <application>GNOME Shell</application> makes navigating "
+"between multiple terminal windows quick and easy. Just type into the "
+"overview to match running processes, ssh sessions, and more."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Users configuring their own profiles for <application>gnome-terminal</"
+"application> will welcome the return of background transparency."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information about the release, go read the GNOME 3.14 Release Notes "
+"at <ulink url=\"https://help.gnome.org/misc/release-notes/3.14/\">https://"
+"help.gnome.org/misc/release-notes/3.14/</ulink>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Other Changes in GNOME since Fedora 20"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Some of the changes in the GNOME Desktop since Fedora 20 were included in "
+"the previous upstream release 3.12, which has not been officially made "
+"available to Fedora users. The 3.12 release contained, among others, the "
+"following changes:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The release improved support for HiDPI across the GNOME Desktop components."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Totem</application> video player was renamed to "
+"<application>Videos</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Gedit</application> text editor was redesigned to feature a "
+"more compact interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The release also included new applications, such as:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>GNOME Logs</application>: A systemd journal viewer."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>GNOME Sound Recorder</application>: A simple utility for audio "
+"recordings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Polari</application>: An IRC client."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Other feature improvements included support for Google Cloud Print, Windows "
+"Live email, and a new terminal search provider for GNOME Shell."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information about the 3.12 release, go read the GNOME 3.12 Release "
+"Notes at <ulink url=\"https://help.gnome.org/misc/release-notes/3.12/"
+"\">https://help.gnome.org/misc/release-notes/3.12/</ulink>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "KDE 4.14 and SDDM"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The KDE Software Compilation&nbsp;4.14 (including the KDE Plasma "
+"Workspaces&nbsp;4.11), which is the version included in Fedora&nbsp;21, has "
+"already been made available to users of Fedora&nbsp;20 through the Updates "
+"repository. However, the KDE spin of Fedora now uses <application>SDDM</"
+"application> as its new default display manager. <application>KDM</"
+"application>, which was the default display manager on Fedora&nbsp;20 and "
+"earlier, is still available for installation from the Fedora repositories."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To return to using <application>KDM</application>, install the <package>kdm</"
+"package> package using the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]# <command>yum install kdm</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then enable the service using the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]# <command>systemctl enable --force kdm.service</command>"
+msgstr ""
+

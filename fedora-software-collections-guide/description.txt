@@ -1,0 +1,4 @@
+A guide to Software Collections for Fedora 
+
+https://git.fedorahosted.org/cgit/docs/software-collections-guide.git/
+https://git.fedorahosted.org/cgit/docs/software-collections-guide.git/

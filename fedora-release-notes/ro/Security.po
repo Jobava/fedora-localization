@@ -1,0 +1,94 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Security"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "SSSD GPO-Based Access Control"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"SSSD now supports centrally managed, host-based access control in an Active "
+"Directory (AD) environment, using Group Policy Objects (GPOs)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"GPO policy settings are commonly used to manage host-based access control in "
+"an AD environment. SSSD supports local logons, remote logons, service logons "
+"and more. Each of these standard GPO security options can be mapped to any "
+"PAM service, allowing administrators to comprehensively configure their "
+"systems."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This enhancement to SSSD is related only to the retrieval and enforcement of "
+"AD policy settings. Administrators can continue to use the existing AD tool "
+"set to specify policy settings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The new functionality only affects SSSD's AD provider and has no effect on "
+"any other SSSD providers (e.g. IPA provider). By default, SSSD's AD provider "
+"will be installed in \"permissive\" mode, so that it won't break upgrades. "
+"Administrators will need to set \"enforcing\" mode manually (see sssd-ad(5))."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"More information about this change can be found at: <ulink url=\"https://"
+"fedorahosted.org/sssd/wiki/DesignDocs/ActiveDirectoryGPOIntegration\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "MD5 signed certificates are rejected"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"OpenSSL was patched to disallow verification of certificates that are signed "
+"with MD5 algorithm. The use of MD5 hash algorithm for certificate signatures "
+"is now considered as insecure and thus all the main crypto libraries in "
+"Fedora were patched to reject such certificates."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Certificates signed with MD5 algorithm are not present on public https web "
+"sites anymore but they may still be in use on private networks or used for "
+"authentication on openvpn based VPNs. It is highly recommended to replace "
+"such certificates with new ones signed with SHA256 or at least SHA1. As a "
+"temporary measure the <envar>OPENSSL_ENABLE_MD5_VERIFY</envar> environment "
+"variable can be set to allow verification of certificates signed with MD5 "
+"algorithm."
+msgstr ""
+

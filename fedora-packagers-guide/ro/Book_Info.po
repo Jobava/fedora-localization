@@ -1,0 +1,40 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Packager's Guide\n"
+"POT-Creation-Date: 2012-11-20T13:36:31\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Packager's Guide"
+msgstr ""
+
+#. Tag: subtitle
+#, no-c-format
+msgid "A guide to software packaging for &MAJOROSVER;"
+msgstr ""
+
+#. Tag: productname
+#, no-c-format
+msgid "Fedora Draft Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Packager's Guide provides basic information on creating, building, and "
+"testing RPM packages, and spec file writing. It also contains a spec file "
+"reference. The audience are developers and system administrators who have a "
+"basic understanding of software packaging and RPM."
+msgstr ""
+

@@ -1,0 +1,307 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "DNS Servers"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>DNS</primary> <secondary>definition</secondary> <seealso>BIND</"
+"seealso>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>nameserver</primary> <see>DNS</see>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"protocol\">DNS</systemitem> (Domain Name System), is a "
+"distributed database system that is used to associate host names with their "
+"respective <systemitem class=\"protocol\">IP</systemitem> addresses. For "
+"users, this has the advantage that they can refer to machines on the network "
+"by names that are usually easier to remember than the numerical network "
+"addresses. For system administrators, using a <systemitem class="
+"\"protocol\">DNS</systemitem> server, also known as a <firstterm>nameserver</"
+"firstterm>, enables changing the <systemitem class=\"protocol\">IP</"
+"systemitem> address for a host without ever affecting the name-based queries."
+" The use of the <systemitem class=\"protocol\">DNS</systemitem> databases is "
+"not only for resolving <systemitem class=\"protocol\">IP</systemitem> "
+"addresses to domain names and their use is becoming broader and broader as "
+"DNSSEC is deployed."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Introduction to DNS"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>root nameserver</primary> <see>BIND</see>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"protocol\">DNS</systemitem> is usually implemented using "
+"one or more centralized servers that are authoritative for certain domains. "
+"When a client host requests information from a nameserver, it usually "
+"connects to port 53. The nameserver then attempts to resolve the name "
+"requested. If the nameserver is configured to be a recursive name servers "
+"and it does not have an authoritative answer, or does not already have the "
+"answer cached from an earlier query, it queries other nameservers, called "
+"<firstterm>root nameservers</firstterm>, to determine which nameservers are "
+"authoritative for the name in question, and then queries them to get the "
+"requested name. Nameservers configured as purely authoritative, with "
+"recursion disabled, will not do lookups on behalf of clients."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Nameserver Zones"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>BIND</primary> <secondary>resource record</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>resource record</primary> <see>BIND</see>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In a <systemitem class=\"protocol\">DNS</systemitem> server, all information "
+"is stored in basic data elements called <firstterm>resource records</"
+"firstterm> (<acronym>RR</acronym>). Resource records are defined in <ulink "
+"url=\"http://www.rfc-editor.org/rfc/rfc1034.txt\">RFC 1034</ulink>. The "
+"domain names are organized into a tree structure. Each level of the "
+"hierarchy is divided by a period (<literal>.</literal>). For example: The "
+"root domain, denoted by <literal>.</literal>, is the root of the <systemitem "
+"class=\"protocol\">DNS</systemitem> tree, which is at level zero. The domain "
+"name <systemitem class=\"domainname\">com</systemitem>, referred to as the "
+"<firstterm>top-level domain</firstterm> (<acronym>TLD</acronym>) is a child "
+"of the root domain (<literal>.</literal>) so it is the first level of the "
+"hierarchy. The domain name <systemitem class=\"domainname\">example.com</"
+"systemitem> is at the second level of the hierarchy."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "A Simple Resource Record"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"An example of a simple <firstterm>resource record</firstterm> (<acronym>RR</"
+"acronym>):"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "example.com.      86400    IN         A           192.0.2.1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The domain name, <systemitem class=\"domainname\">example.com</systemitem>, "
+"is the <firstterm>owner</firstterm> for the RR. The value <literal>86400</"
+"literal> is the <firstterm>time to live</firstterm> (<acronym>TTL</acronym>)."
+" The letters <literal>IN</literal>, meaning <quote>the Internet system</"
+"quote>, indicate the <firstterm>class</firstterm> of the RR. The letter "
+"<literal>A</literal> indicates the <firstterm>type</firstterm> of RR (in "
+"this example, a host address). The host address <systemitem class="
+"\"ipaddress\">192.0.2.1</systemitem> is the data contained in the final "
+"section of this RR. This one line example is a RR. A set of RRs with the "
+"same type, owner, and class is called a <firstterm>resource record set</"
+"firstterm> (<acronym>RRSet</acronym>)."
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>BIND</primary> <secondary>zones</secondary> <tertiary>description</"
+"tertiary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>BIND</primary> <secondary>types</secondary> <tertiary>primary "
+"(master) nameserver</tertiary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>BIND</primary> <secondary>types</secondary> <tertiary>secondary "
+"(slave) nameserver</tertiary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Zones are defined on authoritative nameservers through the use of "
+"<firstterm>zone files</firstterm>, which contain definitions of the resource "
+"records in each zone. Zone files are stored on <firstterm>primary "
+"nameservers</firstterm> (also called <firstterm>master nameservers</"
+"firstterm>), where changes are made to the files, and <firstterm>secondary "
+"nameservers</firstterm> (also called <firstterm>slave nameservers</"
+"firstterm>), which receive zone definitions from the primary nameservers. "
+"Both primary and secondary nameservers are authoritative for the zone and "
+"look the same to clients. Depending on the configuration, any nameserver can "
+"also serve as a primary or secondary server for multiple zones at the same "
+"time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that administrators of <systemitem class=\"protocol\">DNS</systemitem> "
+"and <systemitem class=\"protocol\">DHCP</systemitem> servers, as well as any "
+"provisioning applications, should agree on the host name format used in an "
+"organization. See <xref linkend=\"sec-Recommended_Naming_Practices\" /> for "
+"more information on the format of host names."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Nameserver Types"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "There are two nameserver configuration types:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<indexterm> <primary>BIND</primary> <secondary>types</secondary> "
+"<tertiary>authoritative nameserver</tertiary> </indexterm> <indexterm> "
+"<primary>authoritative nameserver</primary> <see>BIND</see> </indexterm> "
+"<indexterm> <primary>BIND</primary> <secondary>types</secondary> "
+"<tertiary>primary (master) nameserver</tertiary> </indexterm> <indexterm> "
+"<primary>primary nameserver</primary> <see>BIND</see> </indexterm> "
+"<indexterm> <primary>BIND</primary> <secondary>types</secondary> "
+"<tertiary>secondary (slave) nameserver</tertiary> </indexterm> <indexterm> "
+"<primary>secondary nameserver</primary> <see>BIND</see> </indexterm> "
+"authoritative"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Authoritative nameservers answer to resource records that are part of their "
+"zones only. This category includes both primary (master) and secondary "
+"(slave) nameservers."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<indexterm> <primary>BIND</primary> <secondary>types</secondary> "
+"<tertiary>recursive nameserver</tertiary> </indexterm> <indexterm> "
+"<primary>recursive nameserver</primary> <see>BIND</see> </indexterm> "
+"recursive"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Recursive nameservers offer resolution services, but they are not "
+"authoritative for any zone. Answers for all resolutions are cached in a "
+"memory for a fixed period of time, which is specified by the retrieved "
+"resource record."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Although a nameserver can be both authoritative and recursive at the same "
+"time, it is recommended not to combine the configuration types. To be able "
+"to perform their work, authoritative servers should be available to all "
+"clients all the time. On the other hand, since the recursive lookup takes "
+"far more time than authoritative responses, recursive servers should be "
+"available to a restricted number of clients only, otherwise they are prone "
+"to distributed denial of service (DDoS) attacks."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "BIND as a Nameserver"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>BIND</primary> <secondary>utilities</secondary> "
+"<tertiary><systemitem class=\"service\">named</systemitem></tertiary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>BIND</primary> <secondary>utilities</secondary> "
+"<tertiary><command>rndc</command></tertiary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>BIND</primary> <secondary>utilities</secondary> "
+"<tertiary><command>dig</command></tertiary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary><systemitem class=\"service\">named</systemitem></primary> "
+"<see>BIND</see>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary><command>rndc</command></primary> <see>BIND</see>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary><command>dig</command></primary> <see>BIND</see>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"BIND consists of a set of DNS-related programs. It contains a nameserver "
+"called <systemitem class=\"service\">named</systemitem>, an administration "
+"utility called <command>rndc</command>, and a debugging tool called "
+"<command>dig</command>. See <citetitle pubwork=\"book\">&MAJOROSVER; System "
+"Administrator's Guide</citetitle> for more information on how to run a "
+"service in &MAJOROS;."
+msgstr ""
+

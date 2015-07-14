@@ -1,0 +1,4616 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-06-04 12:55+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+msgid "Kickstart Syntax Reference"
+msgstr ""
+
+msgid ""
+"This appendix describes commands and options available in Kickstart "
+"installations. For general information about Kickstart, see <xref linkend="
+"\"chap-kickstart-installations\" />."
+msgstr ""
+
+msgid ""
+"Device names are not guaranteed to be consistent across reboots, which can "
+"complicate usage in Kickstart scripts. When a Kickstart option calls for a "
+"device node name (such as <literal>sda</literal>), you can instead use any "
+"item from <filename>/dev/disk</filename>. For example, instead of:"
+msgstr ""
+
+msgid "<command>part / --fstype=xfs --onpart=sda1</command>"
+msgstr ""
+
+msgid "You could use an entry similar to one of the following:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>part / --fstype=xfs --onpart=/dev/disk/by-path/pci-0000:00:05.0-"
+"scsi-0:0:0:0-part1</command>\n"
+"<command>part / --fstype=xfs --onpart=/dev/disk/by-id/ata-"
+"ST3160815AS_6RA0C882-part1</command>\n"
+"		"
+msgstr ""
+
+msgid ""
+"This provides a consistent way to refer to disks that is more meaningful "
+"than just <literal>sda</literal>. This is especially useful in large storage "
+"environments."
+msgstr ""
+
+msgid ""
+"While the general principles of Kickstart installations tend to stay the "
+"same, the commands and options can change between major releases. You can "
+"use the <command>ksverdiff</command> command to display the differences "
+"between two versions of the Kickstart syntax. This is useful when updating "
+"an existing Kickstart file to be used with a new release. To display a list "
+"of changes in syntax between Fedora&nbsp;&PREVVER; and &PRODVER;, use the "
+"following command:"
+msgstr ""
+
+msgid ""
+"<prompt>$</prompt> <command>ksverdiff -f F&PREVVER; -t F&PRODVER;</command>"
+msgstr ""
+
+msgid ""
+"The <option>-f</option> option specifies the release to start the comparison "
+"with, and the <option>-t</option> option to specify the release to end with. "
+"For additional information, see the <systemitem>ksverdiff(1)</systemitem> "
+"man page. Also note that you can not use this to display changes in a "
+"release that is newer than your system - the version of "
+"<package>pykickstart</package> on Fedora&nbsp;&PREVVER; can not display "
+"changes in Fedora&nbsp;&PRODVER;."
+msgstr ""
+
+msgid ""
+"Additionally, you can review the <citetitle>Fedora&nbsp;&PRODVER; Release "
+"Notes</citetitle>, available at <ulink url=\"http://docs.fedoraproject.org/"
+"\" />, for a list of changes."
+msgstr ""
+
+msgid ""
+"In the following sections, if an option is followed by an equals mark "
+"(<literal>=</literal>), a value must be specified after it. In the example "
+"commands, options in square brackets (<literal>[ ]</literal>) are optional "
+"arguments for the command."
+msgstr ""
+
+msgid "Installation Methods and Sources"
+msgstr ""
+
+msgid "The following commands control the way Fedora will be installed."
+msgstr ""
+
+msgid "device (optional) - Install Extra Device Drivers"
+msgstr ""
+
+msgid ""
+"On most PCI systems, the installation program will automatically detect "
+"Ethernet and SCSI cards. However, on older systems and some PCI systems, "
+"Kickstart requires a hint to find the proper devices. The <command>device</"
+"command> command, which tells the installation program to install extra "
+"modules, uses the following format:"
+msgstr ""
+
+msgid ""
+"<command>device <replaceable>moduleName</replaceable> [--opts=]</command>"
+msgstr ""
+
+msgid ""
+"Replace <replaceable>moduleName</replaceable> with the name of the kernel "
+"module which should be installed."
+msgstr ""
+
+msgid "<option>--opts=</option>"
+msgstr ""
+
+msgid "Options to pass to the installed kernel module. For example:"
+msgstr ""
+
+msgid "<command>device i2c_piix4 --opts=\"aic152x=0x340 io=11\"</command>"
+msgstr ""
+
+msgid "driverdisk (optional) - Use a Driver Disk"
+msgstr ""
+
+msgid ""
+"Driver disks can be used during Kickstart installations to provide "
+"additional drivers not included by default. You must copy the driver disks's "
+"contents to the root directory of a partition on the system's hard drive. "
+"Then, you must use the <command>driverdisk</command> command to specify that "
+"the installation program should look for a driver disk and its location."
+msgstr ""
+
+msgid ""
+"<command>driverdisk <replaceable>partition</replaceable> | --source= | --"
+"biospart=</command>"
+msgstr ""
+
+msgid "<replaceable>partition</replaceable>"
+msgstr ""
+
+msgid ""
+"Search for the driver disk image on a local partition. Replace "
+"<replaceable>partition</replaceable> with the name of the partition "
+"containing the driver disk. Note that the partition must be specified as a "
+"full path. For example:"
+msgstr ""
+
+msgid "<command>driverdisk /dev/sdb1</command>"
+msgstr ""
+
+msgid "<option>--source=</option>"
+msgstr ""
+
+msgid ""
+"Search for the driver disk in a network location instead of a local "
+"partition. For example:"
+msgstr ""
+
+msgid ""
+"<command>driverdisk --source=ftp://<replaceable>path/to/dd.img</"
+"replaceable></command>"
+msgstr ""
+
+msgid ""
+"<command>driverdisk --source=http://<replaceable>path/to/dd.img</"
+"replaceable></command>"
+msgstr ""
+
+msgid ""
+"<command>driverdisk --source=nfs:<replaceable>hostname</replaceable>:/"
+"<replaceable>path/to/dd.img</replaceable></command>"
+msgstr ""
+
+msgid "<option>--biospart=</option>"
+msgstr ""
+
+msgid ""
+"BIOS partition containing the driver disk (for example, <literal>82p2</"
+"literal>)."
+msgstr ""
+
+msgid "install (required) - Configure Installation Method"
+msgstr ""
+
+msgid ""
+"The default installation mode. You must specify the type of installation "
+"from <literal>cdrom</literal>, <literal>harddrive</literal>, <literal>nfs</"
+"literal>, <literal>liveimg</literal>, or <literal>url</literal>. The "
+"<command>install</command> command and the installation method command must "
+"be on separate lines. For example:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>install</command>\n"
+"<command>liveimg --url=file:///images/install/squashfs.img --noverifyssl</"
+"command>\n"
+"			"
+msgstr ""
+
+msgid "The installation method commands are:"
+msgstr ""
+
+msgid "<command>cdrom</command>"
+msgstr ""
+
+msgid "Install from the first optical (DVD) drive on the system."
+msgstr ""
+
+msgid "<command>harddrive</command>"
+msgstr ""
+
+msgid ""
+"Install from a tree or full installation ISO image on a local hard drive. "
+"The tree or ISO image must be on a file system which is mountable in the "
+"installation environment. Supported file systems are <systemitem>ext2</"
+"systemitem>, <systemitem>ext3</systemitem>, <systemitem>ext4</systemitem>, "
+"<systemitem>vfat</systemitem>, or <systemitem>xfs</systemitem>."
+msgstr ""
+
+msgid ""
+"\n"
+"<command>install</command>\n"
+"<command>harddrive --partition= | --biospart= [--dir=]</command>\n"
+"						"
+msgstr ""
+
+msgid "<option>--partition=</option>"
+msgstr ""
+
+msgid "Partition to install from (such as <literal>sdb2</literal>)."
+msgstr ""
+
+msgid "BIOS partition to install from (such as <literal>82p2</literal>)."
+msgstr ""
+
+msgid "<option>--dir=</option>"
+msgstr ""
+
+msgid "Directory containing the installation tree or ISO image."
+msgstr ""
+
+msgid "<command>liveimg</command>"
+msgstr ""
+
+msgid ""
+"Install from a disk image instead of packages. The image can be the "
+"<filename>squashfs.img</filename> file from a live ISO image, or any file "
+"system that the installation media can mount. Supported file systems are "
+"<systemitem>ext2</systemitem>, <systemitem>ext3</systemitem>, "
+"<systemitem>ext4</systemitem>, <systemitem>vfat</systemitem>, and "
+"<systemitem>xfs</systemitem>."
+msgstr ""
+
+msgid ""
+"This command also supports installation from tar archives of the root file "
+"system. In that case, the file name must end with <literal>.tar</literal>, "
+"<literal>.tbz</literal>, <literal>.tgz</literal>, <literal>.txz</literal>, "
+"<literal>.tar.bz2</literal>, <literal>tar.gz</literal>, or <literal>tar.xz</"
+"literal>."
+msgstr ""
+
+msgid ""
+"\n"
+"<command>install</command>\n"
+"<command>liveimg --url=  [--proxy= | --checksum= | --noverifyssl=]</command>\n"
+"						"
+msgstr ""
+
+msgid "<option>--url=</option>"
+msgstr ""
+
+msgid ""
+"The location to install from. Supported protocols are <systemitem class="
+"\"protocol\">HTTP</systemitem>, <systemitem class=\"protocol\">HTTPS</"
+"systemitem>, <systemitem class=\"protocol\">FTP</systemitem>, and "
+"<systemitem class=\"protocol\">file</systemitem>."
+msgstr ""
+
+msgid "<option>--proxy=</option>"
+msgstr ""
+
+msgid ""
+"Specify an <systemitem class=\"protocol\">HTTP</systemitem>, <systemitem "
+"class=\"protocol\">HTTPS</systemitem> or <systemitem class=\"protocol\">FTP</"
+"systemitem> proxy to use while performing the installation."
+msgstr ""
+
+msgid "<option>--checksum=</option>"
+msgstr ""
+
+msgid ""
+"An optional argument with the <systemitem>SHA256</systemitem> checksum of "
+"the image file, used for integrity verification. If you are using a live "
+"image provided by Fedora Project, you can find a list of checksums at <ulink "
+"url=\"https://fedoraproject.org/en/verify\" />."
+msgstr ""
+
+msgid "<option>--noverifyssl</option>"
+msgstr ""
+
+msgid ""
+"Disable SSL verification when connecting to an <systemitem class="
+"\"protocol\">HTTPS</systemitem> server."
+msgstr ""
+
+msgid "<command>nfs</command>"
+msgstr ""
+
+msgid ""
+"Install from an <systemitem class=\"protocol\">NFS</systemitem> server "
+"specified. The NFS server must be exporting the full installation ISO image "
+"(such as the &PRODUCT; Server DVD) or its extracted contents."
+msgstr ""
+
+msgid ""
+"\n"
+"<command>install</command>\n"
+"<command>nfs --server=  [--dir=] [--opts= ]</command>\n"
+"						"
+msgstr ""
+
+msgid "<option>--server=</option>"
+msgstr ""
+
+msgid "Host name of the server."
+msgstr ""
+
+msgid ""
+"Mount options to use for mounting the <systemitem class=\"protocol\">NFS</"
+"systemitem> export."
+msgstr ""
+
+msgid "<command>url</command>"
+msgstr ""
+
+msgid ""
+"Install from a tree on a remote server via <systemitem class="
+"\"protocol\">HTTP</systemitem>, <systemitem class=\"protocol\">HTTPS</"
+"systemitem>, or <systemitem class=\"protocol\">FTP</systemitem>."
+msgstr ""
+
+msgid ""
+"\n"
+"<command>install</command>\n"
+"<command>url --url= | --mirrorlist= [--proxy= | --noverifyssl]</command>\n"
+"						"
+msgstr ""
+
+msgid ""
+"The location to install from. Supported protocols are <literal>http</"
+"literal>, <literal>https</literal>, <literal>ftp</literal>, and "
+"<literal>file</literal>."
+msgstr ""
+
+msgid "<option>--mirrorlist=</option>"
+msgstr ""
+
+msgid "The mirror URL to install from."
+msgstr ""
+
+msgid ""
+"Disable SSL verification when connecting to an <systemitem>HTTPS</"
+"systemitem> server."
+msgstr ""
+
+msgid "mediacheck (optional) - Verify Installation Media Integrity"
+msgstr ""
+
+msgid ""
+"This command will force the installation program to perform a media check "
+"before starting the installation, similarly to the <option>rd.live.check</"
+"option> boot option (see <xref linkend=\"sect-boot-options-mediacheck\" />. "
+"This command requires that installations be attended, so it is disabled by "
+"default."
+msgstr ""
+
+msgid "ostreesetup (optional) - Install from an OSTree"
+msgstr ""
+
+msgid ""
+"Used for OSTree installations. See <ulink url=\"https://wiki.gnome.org/"
+"action/show/Projects/OSTree\" /> for more information about OSTree. "
+"Available options are:"
+msgstr ""
+
+msgid "<option>--osname=</option>"
+msgstr ""
+
+msgid "Management root for OS installation (required)."
+msgstr ""
+
+msgid "<option>--remote=</option>"
+msgstr ""
+
+msgid "Management root for OS installation (optional)."
+msgstr ""
+
+msgid "Repository URL (required)."
+msgstr ""
+
+msgid "<option>--ref=</option>"
+msgstr ""
+
+msgid "Name of branch inside the repository (required)."
+msgstr ""
+
+msgid "<option>--nogpgcheck</option>"
+msgstr ""
+
+msgid "Disable GPG key verification (optional)."
+msgstr ""
+
+msgid "repo (optional) - Configure Additional Repositories"
+msgstr ""
+
+msgid ""
+"Configures additional <application>DNF</application> repositories that may "
+"be used as sources for package installation. This command can be used "
+"multiple times in a single Kickstart file."
+msgstr ""
+
+msgid ""
+"See the <citetitle>Fedora System Administrator's Guide</citetitle>, "
+"available at <ulink url=\"http://docs.fedoraproject.org/\" />, for "
+"information about the <application>DNF</application> package manager."
+msgstr ""
+
+msgid ""
+"Repositories used for installation must be stable. The installation may fail "
+"if a repository is modified before the installation concludes."
+msgstr ""
+
+msgid "<option>--name=</option>"
+msgstr ""
+
+msgid ""
+"The repository ID. This option is required. If a repository has a name which "
+"conflicts with another previously added repository, it will be ignored. "
+"Because the installation program uses a list of pre-configured repositories, "
+"this means that you cannot add repositories with the same names as the "
+"preconfigured ones."
+msgstr ""
+
+msgid "<option>--baseurl=</option>"
+msgstr ""
+
+msgid ""
+"The repository URL. The variables that may be used in <application>DNF</"
+"application> repo configuration files are <emphasis>not</emphasis> supported."
+" You may use one of either this option or <option>--mirrorlist</option>, not "
+"both."
+msgstr ""
+
+msgid ""
+"The URL pointing at a list of mirrors for the repository. The variables that "
+"may normally be used in dnf repository configuration files are not supported "
+"here. You may use one of either this option or --baseurl, not both."
+msgstr ""
+
+msgid "<option>--install</option>"
+msgstr ""
+
+msgid ""
+"Make the repository configured in the Kickstart file available on the system "
+"after the installation as well. Creates a configuration file for the "
+"repository in <filename class=\"directory\">/etc/yum.repos.d/</filename> on "
+"the installed system."
+msgstr ""
+
+msgid "<option>--cost=</option>"
+msgstr ""
+
+msgid ""
+"An integer value to assign a cost to this repository. If multiple "
+"repositories provide the same packages, this number will be used to "
+"prioritize which repository will be used before another. Repositories with a "
+"lower cost take priority over repositories with higher cost."
+msgstr ""
+
+msgid "<option>--excludepkgs=</option>"
+msgstr ""
+
+msgid ""
+"A comma-separated list of package names that must <emphasis>not</emphasis> "
+"be pulled from this repository. This is useful if multiple repositories "
+"provide the same package and you want to make sure it comes from a "
+"particular repository. Both full package names (such as <literal>publican</"
+"literal>) and globs (such as <literal>gnome-*</literal>) are accepted."
+msgstr ""
+
+msgid "<option>--includepkgs=</option>"
+msgstr ""
+
+msgid ""
+"A comma-separated list of package names and globs that must be pulled from "
+"this repository. This is useful if multiple repositories provide the same "
+"package and you want to make sure it comes from this repository."
+msgstr ""
+
+msgid ""
+"Specify an <systemitem class=\"protocol\">HTTP</systemitem>, <systemitem "
+"class=\"protocol\">HTTPS</systemitem> or <systemitem class=\"protocol\">FTP</"
+"systemitem> proxy server to use when accessing this repository. This setting "
+"does not affect any other repositories or installation sources."
+msgstr ""
+
+msgid "<option>--ignoregroups=true</option>"
+msgstr ""
+
+msgid ""
+"This option is used when composing installation trees and has no effect on "
+"the installation process itself. It tells the compose tools to not look at "
+"the package group information when mirroring trees so as to avoid mirroring "
+"large amounts of unnecessary data."
+msgstr ""
+
+msgid "Storage and Partitioning"
+msgstr ""
+
+msgid ""
+"Commands in this section are used to determine your system's storage options "
+"and partitioning."
+msgstr ""
+
+msgid "autopart (optional) - Automatic Partitioning"
+msgstr ""
+
+msgid ""
+"Automatically creates partitions: a root (<filename class=\"partition\">/</"
+"filename>) partition (1 GB or larger), a <filename class=\"partition\">swap</"
+"filename> partition, and an appropriate <filename class=\"partition\">/boot</"
+"filename> partition for the architecture. On large enough drives (50&nbsp;GB "
+"and larger), this also creates a <filename class=\"partition\">/home</"
+"filename> partition."
+msgstr ""
+
+msgid ""
+"The <command>autopart</command> option cannot be used together with the "
+"<command>part/partition</command>, <command>raid</command>, <command>logvol</"
+"command>, or <command>volgroup</command> options in the same Kickstart file."
+msgstr ""
+
+msgid "<option>--type=</option>"
+msgstr ""
+
+msgid ""
+"Selects one of the predefined automatic partitioning schemes you want to use."
+" Accepts the following values:"
+msgstr ""
+
+msgid "<literal>lvm</literal>: The LVM partitioning scheme."
+msgstr ""
+
+msgid "<literal>btrfs</literal>: The Btrfs partitioning scheme."
+msgstr ""
+
+msgid "<literal>plain</literal>: Regular partitions with no LVM or Btrfs."
+msgstr ""
+
+msgid ""
+"<literal>thinp</literal>: The LVM Thin Provisioning partitioning scheme."
+msgstr ""
+
+msgid ""
+"The created partitioning scheme will follow the recommended scheme described "
+"at <xref linkend=\"sect-installation-gui-manual-partitioning-recommended\" /"
+">."
+msgstr ""
+
+msgid "<option>--fstype=</option>"
+msgstr ""
+
+msgid ""
+"Specify a supported file system (such as <literal>ext4</literal> or "
+"<literal>xfs</literal>) to replace the default when doing automatic "
+"partitioning."
+msgstr ""
+
+msgid "<option>--nolvm</option>"
+msgstr ""
+
+msgid ""
+"Do not use LVM or Btrfs for automatic partitioning. This option is equal to "
+"<option>--type=plain</option>."
+msgstr ""
+
+msgid "<option>--encrypted</option>"
+msgstr ""
+
+msgid ""
+"Encrypts all partitions. This is equivalent to checking the "
+"<guilabel>Encrypt partitions</guilabel> check box on the initial "
+"partitioning screen during a manual graphical installation."
+msgstr ""
+
+msgid "<option>--passphrase=</option>"
+msgstr ""
+
+msgid "Provides a default system-wide passphrase for all encrypted devices."
+msgstr ""
+
+msgid ""
+"<option>--escrowcert=<replaceable>URL_of_X.509_certificate</replaceable></"
+"option>"
+msgstr ""
+
+msgid ""
+"Stores data encryption keys of all encrypted volumes as files in <filename>/"
+"root</filename>, encrypted using the X.509 certificate from the URL "
+"specified with <replaceable>URL_of_X.509_certificate</replaceable>. The keys "
+"are stored as a separate file for each encrypted volume. This option is only "
+"meaningful if <option>--encrypted</option> is specified."
+msgstr ""
+
+msgid "<option>--backuppassphrase</option>"
+msgstr ""
+
+msgid ""
+"Adds a randomly-generated passphrase to each encrypted volume. Store these "
+"passphrases in separate files in <filename>/root</filename>, encrypted using "
+"the X.509 certificate specified with <option>--escrowcert</option>. This "
+"option is only meaningful if <option>--escrowcert</option> is specified."
+msgstr ""
+
+msgid "<option>--cipher=</option>"
+msgstr ""
+
+msgid ""
+"Specifies which type of encryption will be used if the "
+"<application>Anaconda</application> default <systemitem>aes-xts-plain64</"
+"systemitem> is not satisfactory. You must use this option together with the "
+"<option>--encrypted</option> option; by itself it has no effect. Available "
+"types of encryption are listed in the <citetitle>Fedora Security Guide</"
+"citetitle>, available at <ulink url=\"http://docs.fedoraproject.org/\" />. "
+"Using either <systemitem>aes-xts-plain64</systemitem> or <systemitem>aes-cbc-"
+"essiv:sha256</systemitem> is strongly recommended."
+msgstr ""
+
+msgid "bootloader (required) - Configure Boot Loader"
+msgstr ""
+
+msgid "Specifies how the boot loader should be installed."
+msgstr ""
+
+msgid ""
+"You should always use a password to protect your boot loader. An unprotected "
+"boot loader can allow a potential attacker to modify the system's boot "
+"options and gain unauthorized access to the system."
+msgstr ""
+
+msgid ""
+"Some systems require a special partition for installing the boot loader. The "
+"type and size of this partition depends on whether the disk you are "
+"installing the boot loader to uses the <firstterm>Master Boot Record</"
+"firstterm> (MBR) or a <firstterm>GUID Partition Table</firstterm> (GPT) "
+"schema. For more information, see <xref linkend=\"sect-installation-gui-"
+"storage-partitioning-bootloader\" />."
+msgstr ""
+
+msgid "<option>--append=</option>"
+msgstr ""
+
+msgid ""
+"Specifies additional kernel parameters. To specify multiple parameters, "
+"separate them with spaces. For example:"
+msgstr ""
+
+msgid ""
+"<command>bootloader --location=mbr --append=\"hdd=ide-scsi ide=nodma\"</"
+"command>"
+msgstr ""
+
+msgid ""
+"The <option>rhgb</option> and <option>quiet</option> parameters are always "
+"used, even if you do not specify them here or do not use the <option>--"
+"append=</option> command at all."
+msgstr ""
+
+msgid "<option>--boot-drive=</option>"
+msgstr ""
+
+msgid ""
+"Specifies which drive the boot loader should be written to, and therefore "
+"which drive the computer will boot from. If you use a multipath device as "
+"the boot drive, specify only one member of the device."
+msgstr ""
+
+msgid ""
+"The <option>--boot-drive=</option> option is currently being ignored in "
+"&PRODUCT; installations on IBM System&nbsp;z systems using the "
+"<application>zipl</application> boot loader. When <application>zipl</"
+"application> is installed, it determines the boot drive on its own."
+msgstr ""
+
+msgid "<option>--leavebootloader</option>"
+msgstr ""
+
+msgid ""
+"Prevents the installation program from making changes to the existing list "
+"of bootable images on UEFI or ISeries/PSeries systems."
+msgstr ""
+
+msgid "<option>--driveorder=</option>"
+msgstr ""
+
+msgid "Specifies which drive is first in the BIOS boot order. For example:"
+msgstr ""
+
+msgid "<command>bootloader --driveorder=sda,hda</command>"
+msgstr ""
+
+msgid "<option>--location=</option>"
+msgstr ""
+
+msgid ""
+"Specifies where the boot record is written. Valid values are the following:"
+msgstr ""
+
+msgid ""
+"<literal>mbr</literal> - The default option. Depends on whether the drive "
+"uses the Master Boot Record (MBR) or GUID Partition Table (GPT) scheme:"
+msgstr ""
+
+msgid ""
+"On a GPT-formatted disk, this option will install stage 1.5 of the boot "
+"loader into the BIOS boot partition."
+msgstr ""
+
+msgid ""
+"On an MBR-formatted disk, stage 1.5 will be installed into the empty space "
+"between the MBR and the first partition."
+msgstr ""
+
+msgid ""
+"<literal>partition</literal> - Install the boot loader on the first sector "
+"of the partition containing the kernel."
+msgstr ""
+
+msgid "<literal>none</literal> - Do not install the boot loader."
+msgstr ""
+
+msgid "In most cases, this option does not need to be specified."
+msgstr ""
+
+msgid "<option>--password=</option>"
+msgstr ""
+
+msgid ""
+"If using <application>GRUB2</application> as the boot loader, sets the boot "
+"loader password to the one specified with this option. This should be used "
+"to restrict access to the <application>GRUB2</application> shell, where "
+"arbitrary kernel options can be passed."
+msgstr ""
+
+msgid ""
+"If a password is specified, <application>GRUB2</application> will also ask "
+"for a user name. The user name is always <literal>root</literal>."
+msgstr ""
+
+msgid "<option>--iscrypted</option>"
+msgstr ""
+
+msgid ""
+"Normally, when you specify a boot loader password using the <option>--"
+"password=</option> option, it will be stored in the Kickstart file in plain "
+"text. If you want to encrypt the password, use this option and an encrypted "
+"password."
+msgstr ""
+
+msgid ""
+"To generate an encrypted password, use the <command>grub2-mkpasswd-pbkdf2</"
+"command> command, enter the password you want to use, and copy the command's "
+"output (the hash starting with <literal>grub.pbkdf2</literal>) into the "
+"Kickstart file. An example <command>bootloader</command> Kickstart entry "
+"with an encrypted password will look similar to the following:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>bootloader --iscrypted --password=grub.pbkdf2.sha512.10000."
+"5520C6C9832F3AC3D149AC0B24BE69E2D4FB0DBEEDBD29CA1D30A044DE2645C4C7A291E585D4DC43F8A4D82479F8B95CA4BA4381F8550510B75E8E0BB2938990."
+"C688B6F0EF935701FF9BD1A8EC7FE5BD2333799C98F28420C5CC8F1A2A233DE22C83705BB614EA17F3FDFDF4AC2161CEA3384E56EB38A2E39102F5334C47405E</"
+"command>\n"
+"						"
+msgstr ""
+
+msgid "<option>--timeout=</option>"
+msgstr ""
+
+msgid ""
+"Specifies the amount of time the boot loader will wait before booting the "
+"default option (in seconds)."
+msgstr ""
+
+msgid "<option>--default=</option>"
+msgstr ""
+
+msgid "Sets the default boot image in the boot loader configuration."
+msgstr ""
+
+msgid "<option>--extlinux</option>"
+msgstr ""
+
+msgid ""
+"Use the <application>extlinux</application> boot loader instead of "
+"<application>GRUB2</application>. This option only works on systems "
+"supported by <application>extlinux</application>."
+msgstr ""
+
+msgid "<option>--disabled</option>"
+msgstr ""
+
+msgid ""
+"Do not attempt to install a boot loader. This option overrides all other "
+"boot loader configuration; all other boot loader options will be ignored and "
+"no boot loader packages will be installed."
+msgstr ""
+
+msgid "btrfs (optional) - Create Btrfs Volume or Subvolume"
+msgstr ""
+
+msgid "Create a Btrfs volume or subvolume. For a volume, the syntax is:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>btrfs <replaceable>mntpoint</replaceable> --data="
+"<replaceable>level</replaceable> --metadata=<replaceable>level</replaceable> "
+"[--label=] <replaceable>partitions</replaceable></command>\n"
+"			"
+msgstr ""
+
+msgid ""
+"One or more partitions can be specified in <replaceable>partitions</"
+"replaceable>. When specifying more than one partitions, the entries must be "
+"separated by a single space. See <xref linkend=\"exam-kickstart-create-"
+"btrfs\" /> for a demonstration."
+msgstr ""
+
+msgid "For a subvolume, the syntax is:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>btrfs <replaceable>mntpoint</replaceable> --subvol --name="
+"<replaceable>name</replaceable> <replaceable>parent</replaceable></command>\n"
+"			"
+msgstr ""
+
+msgid ""
+"<replaceable>parent</replaceable> should be the identifier of the "
+"subvolume's parent volume, <replaceable>name</replaceable> with a name for "
+"the subvolume, and <replaceable>mntpoint</replaceable> is the location where "
+"the file system is mounted."
+msgstr ""
+
+msgid "<option>--data=</option>"
+msgstr ""
+
+msgid ""
+"RAID level to use for file system <emphasis>data</emphasis> (such as "
+"<literal>0</literal>, <literal>1</literal>, or <literal>10</literal>). This "
+"parameter is optional, has no meaning for subvolumes, and requires more than "
+"one physical disk."
+msgstr ""
+
+msgid "<option>--metadata=</option>"
+msgstr ""
+
+msgid ""
+"RAID level to use for file system/volume <emphasis>metadata</emphasis> (such "
+"as <literal>0</literal>, <literal>1</literal>, or <literal>10</literal>). "
+"This parameter is optional, has no meaning for subvolumes, and requires more "
+"than one physical disk."
+msgstr ""
+
+msgid "<option>--label=</option>"
+msgstr ""
+
+msgid ""
+"Specify a label for the Btrfs file system. If the given label is already in "
+"use by another file system, a new label will be created. This option has no "
+"meaning for subvolumes."
+msgstr ""
+
+msgid "<option>--subvol</option>"
+msgstr ""
+
+msgid "Create a Btrfs subvolume instead of a volume."
+msgstr ""
+
+msgid "Set a name for a Btrfs subvolume."
+msgstr ""
+
+msgid "<option>--noformat</option> or <option>--useexisting</option>"
+msgstr ""
+
+msgid ""
+"Use an existing Btrfs volume (or subvolume) and do not reformat the file "
+"system."
+msgstr ""
+
+msgid ""
+"The following example shows how to create a Btrfs volume from member "
+"partitions on three disks with subvolumes for <filename class=\"directory\">/"
+"</filename> and <filename class=\"directory\">/home</filename>. The main "
+"volume is not mounted or used directly in this example."
+msgstr ""
+
+msgid "Creating Btrfs Volumes and Subvolumes"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>part btrfs.01 --size=6000 --ondisk=sda</command>\n"
+"<command>part btrfs.02 --size=6000 --ondisk=sdb</command>\n"
+"<command>part btrfs.03 --size=6000 --ondisk=sdc</command>\n"
+"\n"
+"<command>btrfs none --data=0 --metadata=1 --label=f&PRODVER; btrfs.01 btrfs."
+"02 btrfs.03</command>\n"
+"<command>btrfs / --subvol --name=root LABEL=f&PRODVER;</command>\n"
+"<command>btrfs /home --subvol --name=home f&PRODVER;</command>\n"
+"				"
+msgstr ""
+
+msgid "clearpart (optional) - Remove All Existing Partitions"
+msgstr ""
+
+msgid ""
+"Removes partitions from the system, prior to creation of new partitions. By "
+"default, no partitions are removed."
+msgstr ""
+
+msgid ""
+"If the <command>clearpart</command> command is used, then the <command>part -"
+"-onpart</command> command cannot be used on a logical partition."
+msgstr ""
+
+msgid ""
+"For a detailed example of partitioning including the <command>clearpart</"
+"command> command, see <xref linkend=\"sect-kickstart-example-advanced-"
+"partitioning\" />."
+msgstr ""
+
+msgid "<option>--all</option>"
+msgstr ""
+
+msgid "Erases all partitions from the system."
+msgstr ""
+
+msgid ""
+"This option will erase all disks which can be reached by the installer, "
+"including any attached network storage. Use this option with caution."
+msgstr ""
+
+msgid "<option>--drives=</option>"
+msgstr ""
+
+msgid ""
+"Specifies which drives to clear partitions from. For example, the following "
+"clears all the partitions on the first two drives on the primary IDE "
+"controller:"
+msgstr ""
+
+msgid "<command>clearpart --drives=hda,hdb --all</command>"
+msgstr ""
+
+msgid ""
+"To clear a multipath device, use the format <literal>disk/by-id/scsi-"
+"<replaceable>WWID</replaceable></literal>, where <replaceable>WWID</"
+"replaceable> is the <firstterm>world-wide identifier</firstterm> for the "
+"device. For example, to clear a disk with WWID "
+"<literal>58095BEC5510947BE8C0360F604351918</literal>, use:"
+msgstr ""
+
+msgid ""
+"<command>clearpart --drives=disk/by-id/scsi-"
+"58095BEC5510947BE8C0360F604351918</command>"
+msgstr ""
+
+msgid ""
+"This format is preferable for all multipath devices, but if errors arise, "
+"multipath devices that do not use <firstterm>logical volume management</"
+"firstterm> (LVM) can also be cleared using the format <literal>disk/by-id/dm-"
+"uuid-mpath-<replaceable>WWID</replaceable></literal>, where "
+"<replaceable>WWID</replaceable> is the <firstterm>world-wide identifier</"
+"firstterm> for the device. For example, to clear a disk with WWID "
+"<literal>2416CD96995134CA5D787F00A5AA11017</literal>, use:"
+msgstr ""
+
+msgid ""
+"<command>clearpart --drives=disk/by-id/dm-uuid-mpath-"
+"2416CD96995134CA5D787F00A5AA11017</command>"
+msgstr ""
+
+msgid ""
+"Never specify multipath devices by device names like <literal>mpatha</"
+"literal>. Device names such as this are not specific to a particular disk. "
+"The disk named <filename>/dev/mpatha</filename> during installation might "
+"not be the one that you expect it to be. Therefore, the <command>clearpart</"
+"command> command could target the wrong disk."
+msgstr ""
+
+msgid "<option>--list=</option>"
+msgstr ""
+
+msgid ""
+"Specifies which partitions to clear. This option overrides the <option>--"
+"all</option> and <option>--linux</option> options if used. Can be used "
+"across different drives. For example:"
+msgstr ""
+
+msgid "<command>clearpart --list=sda2,sda3,sdb1</command>"
+msgstr ""
+
+msgid "<option>--disklabel=</option>"
+msgstr ""
+
+msgid "Create a set disk label when relabeling a disk."
+msgstr ""
+
+msgid "<option>--linux</option>"
+msgstr ""
+
+msgid "Erases all Linux partitions."
+msgstr ""
+
+msgid "<option>--none</option>"
+msgstr ""
+
+msgid ""
+"Do not remove any partitions. This is the default behavior - using this "
+"option is the same as not using the <command>clearpart</command> command at "
+"all."
+msgstr ""
+
+msgid ""
+"Using the <command>clearpart --all</command> command in a Kickstart file to "
+"remove all existing partitions during the installation will cause "
+"<application>Anaconda</application> to pause and prompt you for a "
+"confirmation. If you need to perform the installation automatically with no "
+"interaction, add the <command>zerombr</command> command to your Kickstart "
+"file."
+msgstr ""
+
+msgid "fcoe (optional) - Configure Fibre Channel Over Ethernet Devices"
+msgstr ""
+
+msgid ""
+"Specify which FCoE devices should be activated automatically in addition to "
+"those discovered by <firstterm>Enhanced Disk Drive Services</firstterm> "
+"(EDD)."
+msgstr ""
+
+msgid ""
+"<command>fcoe --nic=<replaceable>name</replaceable> [--dcp= | --autovlan]</"
+"command>"
+msgstr ""
+
+msgid "<option>--nic=</option> (required)"
+msgstr ""
+
+msgid "Name of the device to be activated."
+msgstr ""
+
+msgid "<option>--dcb=</option>"
+msgstr ""
+
+msgid "Establish <firstterm>Data Center Bridging</firstterm> (DCB) settings."
+msgstr ""
+
+msgid "<option>--autovlan</option>"
+msgstr ""
+
+msgid "Discover VLANs automatically."
+msgstr ""
+
+msgid "ignoredisk (optional) - Ignore Specified Disks"
+msgstr ""
+
+msgid ""
+"Causes the installation program to ignore the specified disks. This is "
+"useful if you use autopartition and want to be sure that some disks are "
+"ignored. For example, without <command>ignoredisk</command>, attempting to "
+"deploy on a SAN cluster the Kickstart would fail, as the installation "
+"program detects passive paths to the SAN that return no partition table."
+msgstr ""
+
+msgid "<command>ignoredisk --drives= | --only-use= [--interactive]</command>"
+msgstr ""
+
+msgid ""
+"Specify one or more drives to ignore. Multiple drives can be specified as a "
+"comma-separated list. For example:"
+msgstr ""
+
+msgid "<command>ignoredisk --drives=sda,sdc</command>"
+msgstr ""
+
+msgid ""
+"To ignore a multipath device that does not use <firstterm>logical volume "
+"management</firstterm> (LVM), use the format <literal>disk/by-id/dm-uuid-"
+"mpath-<replaceable>WWID</replaceable></literal>, where <replaceable>WWID</"
+"replaceable> is the <firstterm>world-wide identifier</firstterm> for the "
+"device. For example, to ignore a disk with WWID "
+"<literal>2416CD96995134CA5D787F00A5AA11017</literal>, use:"
+msgstr ""
+
+msgid ""
+"<command>ignoredisk --drives=disk/by-id/dm-uuid-mpath-"
+"2416CD96995134CA5D787F00A5AA11017</command>"
+msgstr ""
+
+msgid ""
+"Multipath devices that use LVM are not assembled until after "
+"<application>Anaconda</application> has parsed the Kickstart file. "
+"Therefore, you cannot specify these devices in the format <literal>dm-uuid-"
+"mpath</literal>. Instead, to ignore a multipath device that uses LVM, use "
+"the format <literal>disk/by-id/scsi-<replaceable>WWID</replaceable></"
+"literal>, where <replaceable>WWID</replaceable> is the <firstterm>world-wide "
+"identifier</firstterm> for the device. For example, to ignore a disk with "
+"WWID <literal>58095BEC5510947BE8C0360F604351918</literal>, use:"
+msgstr ""
+
+msgid ""
+"<command>ignoredisk --drives=disk/by-id/scsi-"
+"58095BEC5510947BE8C0360F604351918</command>"
+msgstr ""
+
+msgid "<option>--only-use=</option>"
+msgstr ""
+
+msgid ""
+"Specifies a list of disks for the installation program to use. All other "
+"disks are ignored. For example, to use disk <literal>sda</literal> during "
+"installation and ignore all other disks:"
+msgstr ""
+
+msgid "<command>ignoredisk --only-use=sda</command>"
+msgstr ""
+
+msgid "To include a multipath device that does not use LVM:"
+msgstr ""
+
+msgid ""
+"<command>ignoredisk --only-use=disk/by-id/dm-uuid-mpath-"
+"2416CD96995134CA5D787F00A5AA11017</command>"
+msgstr ""
+
+msgid "To include a multipath device that uses LVM:"
+msgstr ""
+
+msgid ""
+"<command>ignoredisk --only-use=disk/by-id/scsi-"
+"58095BEC5510947BE8C0360F604351918</command>"
+msgstr ""
+
+msgid "<option>--interactive</option>"
+msgstr ""
+
+msgid "Allows you to manually navigate the advanced storage screen."
+msgstr ""
+
+msgid "iscsi (optional) - Configure iSCSI Devices"
+msgstr ""
+
+msgid ""
+"Specifies additional iSCSI storage to be attached during installation. If "
+"you use the <command>iscsi</command> command, you must also assign a name to "
+"the iSCSI node, using the <command>iscsiname</command> command (see <xref "
+"linkend=\"sect-kickstart-commands-iscsiname\" />. The <command>iscsiname</"
+"command> command must appear before the <command>iscsi</command> command in "
+"the Kickstart file."
+msgstr ""
+
+msgid ""
+"You should configure iSCSI storage in the system BIOS or firmware (iBFT for "
+"Intel systems) rather than use the <command>iscsi</command> command if "
+"possible. If you do so, <application>Anaconda</application> automatically "
+"detects and uses disks configured in BIOS or firmware and no special "
+"configuration is necessary in the Kickstart file."
+msgstr ""
+
+msgid ""
+"If you must use the <command>iscsi</command> command, make sure that "
+"networking is activated at the beginning of the installation, and that the "
+"<command>iscsi</command> command appears in the Kickstart file "
+"<emphasis>before</emphasis> you refer to iSCSI disks with commands such as "
+"<command>clearpart</command> or <command>ignoredisk</command>."
+msgstr ""
+
+msgid ""
+"<command>iscsi --ipaddr=  --port=  [--target= | --iface= | --user= | --"
+"password= | --reverse-user= | --reverse-password=]</command>"
+msgstr ""
+
+msgid "<option>--ipaddr=</option>"
+msgstr ""
+
+msgid "The IP address of the target to connect to."
+msgstr ""
+
+msgid "<option>--port=</option>"
+msgstr ""
+
+msgid "The port number (typically <literal>3260</literal>)."
+msgstr ""
+
+msgid "<option>--target=</option>"
+msgstr ""
+
+msgid "Target <firstterm>IQN</firstterm> (iSCSI Qualified Name)."
+msgstr ""
+
+msgid "<option>--iface=</option>"
+msgstr ""
+
+msgid ""
+"Bind the connection to a specific network interface instead of using the "
+"default one determined by the network layer. Once used, it must be specified "
+"in all instances of the <command>iscsi</command> command in the entire "
+"Kickstart file."
+msgstr ""
+
+msgid "<option>--user=</option>"
+msgstr ""
+
+msgid "User name required to authenticate with the target."
+msgstr ""
+
+msgid "Password that corresponds with the user name specified for the target."
+msgstr ""
+
+msgid "<option>--reverse-user=</option>"
+msgstr ""
+
+msgid ""
+"User name required to authenticate with the initiator from a target using "
+"reverse CHAP authentication."
+msgstr ""
+
+msgid "<option>--reverse-password=</option>"
+msgstr ""
+
+msgid ""
+"Password that corresponds with the user name specified for the initiator."
+msgstr ""
+
+msgid "iscsiname (optional) - Assign Name to iSCSI Device"
+msgstr ""
+
+msgid ""
+"Assigns a name to an iSCSI node specified by the <command>iscsi</command> "
+"command (<xref linkend=\"sect-kickstart-commands-iscsi\" />). This command "
+"is mandatory if you use the <command>iscsi</command> command, and it must be "
+"specified <emphasis>before</emphasis> you use <command>iscsi</command>."
+msgstr ""
+
+msgid "<command>iscsiname <replaceable>iqn</replaceable></command>"
+msgstr ""
+
+msgid "logvol (optional) - Create LVM Logical Volume"
+msgstr ""
+
+msgid ""
+"Create a logical volume for Logical Volume Management (LVM) with the syntax:"
+msgstr ""
+
+msgid ""
+"<command>logvol <replaceable>mntpoint</replaceable> --vgname=  --name= "
+"[<replaceable>options</replaceable>]</command>"
+msgstr ""
+
+msgid ""
+"Do not use the dash (<literal>-</literal>) character in logical volume and "
+"volume group names when installing &PRODUCT; using Kickstart. If this "
+"character is used, the installation will finish normally, but the <filename "
+"class=\"directory\">/dev/mapper/</filename> directory will list these "
+"volumes and volume groups with every dash doubled. For example, a volume "
+"group named <literal>volgrp-01</literal> containing a logical volume named "
+"<literal>logvol-01</literal> will be listed as <filename>/dev/mapper/volgrp--"
+"01-logvol--01</filename>."
+msgstr ""
+
+msgid ""
+"This limitation only applies to newly created logical volume and volume "
+"group names. If you are reusing existing ones using the <option>--noformat</"
+"option> or <option>--useexisting</option> option, their names will not be "
+"changed."
+msgstr ""
+
+msgid ""
+"For a detailed example of <command>logvol</command> in action, see <xref "
+"linkend=\"sect-kickstart-example-advanced-partitioning\" />."
+msgstr ""
+
+msgid "<replaceable>mntpoint</replaceable>"
+msgstr ""
+
+msgid ""
+"Replace with the volume's mount point. This name can take the following "
+"forms:"
+msgstr ""
+
+msgid "<filename>/<replaceable>path</replaceable></filename>"
+msgstr ""
+
+msgid ""
+"A path to the mount point - for example, <literal>/</literal> or <literal>/"
+"home</literal>"
+msgstr ""
+
+msgid "<literal>swap</literal>"
+msgstr ""
+
+msgid "The partition is used as swap space."
+msgstr ""
+
+msgid ""
+"To determine the size of the swap partition automatically, use the <option>--"
+"recommended</option> option:"
+msgstr ""
+
+msgid "<literal>swap --recommended</literal>"
+msgstr ""
+
+msgid ""
+"To determine the size of the swap partition automatically but also allow "
+"extra space for your system to hibernate, use the <option>--hibernation</"
+"option> option:"
+msgstr ""
+
+msgid "<literal>swap --hibernation</literal>"
+msgstr ""
+
+msgid ""
+"The size assigned will be equivalent to the swap space assigned by <option>--"
+"recommended</option> plus the amount of RAM on your system."
+msgstr ""
+
+msgid ""
+"For the swap sizes assigned by these commands, see the section describing "
+"swap in <xref linkend=\"sect-installation-gui-manual-partitioning-"
+"recommended\" />."
+msgstr ""
+
+msgid "<literal>none</literal>"
+msgstr ""
+
+msgid "Used only when creating a thin pool volume."
+msgstr ""
+
+msgid "<option>--noformat</option>"
+msgstr ""
+
+msgid "Use an existing logical volume and do not format it."
+msgstr ""
+
+msgid "<option>--useexisting</option>"
+msgstr ""
+
+msgid "Use an existing logical volume and format it."
+msgstr ""
+
+msgid ""
+"Sets the file system type for the logical volume. Valid values are "
+"<literal>xfs</literal>, <literal>ext2</literal>, <literal>ext3</literal>, "
+"<literal>ext4</literal>, <literal>swap</literal>, and <literal>vfat</"
+"literal>. See <xref linkend=\"sect-installation-gui-manual-partitioning-"
+"filesystems\" /> for information about available file systems."
+msgstr ""
+
+msgid "<option>--fsoptions=</option>"
+msgstr ""
+
+msgid ""
+"Specifies a free form string of options to be used when mounting the "
+"filesystem. This string will be copied into the <filename>/etc/fstab</"
+"filename> file of the installed system and should be enclosed in quotes. For "
+"example:"
+msgstr ""
+
+msgid "<option>--fsoptions=\"ro, x-systemd.device-timeout=0\"</option>"
+msgstr ""
+
+msgid "Sets a label for the logical volume."
+msgstr ""
+
+msgid "<option>--grow</option>"
+msgstr ""
+
+msgid ""
+"Grow the volume to fill available space (if any), or up to the limit set by "
+"the <option>--maxsize=</option> option."
+msgstr ""
+
+msgid "<option>--size=</option>"
+msgstr ""
+
+msgid ""
+"The size of the logical volume in megabytes. This option can not be used "
+"together with the <option>--percent=</option> option."
+msgstr ""
+
+msgid "<option>--percent=</option>"
+msgstr ""
+
+msgid ""
+"Specify the amount by which to grow the logical volume, as a percentage of "
+"the free space in the volume group after any statically-sized logical "
+"volumes are taken into account. This option can not be used together with "
+"the <option>--size=</option> and <option>--grow</option> options."
+msgstr ""
+
+msgid ""
+"When creating a new logical volume, you must either specify its size "
+"statically using the <option>--size=</option> option, or as a percentage of "
+"remaining free space using the <option>--percent=</option> option. You can "
+"not use both of these options on the same logical volume."
+msgstr ""
+
+msgid "<option>--maxsize=</option>"
+msgstr ""
+
+msgid ""
+"The maximum size in megabytes when the logical volume is set to grow. "
+"Specify an integer value here such as <literal>500</literal> (do not include "
+"the unit)."
+msgstr ""
+
+msgid "<option>--recommended</option>"
+msgstr ""
+
+msgid ""
+"Use this option when creating a <systemitem>swap</systemitem> logical volume "
+"to determine the size of this volume automatically, based on your system's "
+"hardware. For details about the recommended scheme, see <xref linkend=\"sect-"
+"installation-gui-manual-partitioning-recommended\" />."
+msgstr ""
+
+msgid "<option>--resize</option>"
+msgstr ""
+
+msgid ""
+"Resize an existing logical volume. If you use this option, you must also "
+"specify <option>--useexisting</option> and <option>--size</option>."
+msgstr ""
+
+msgid ""
+"Specifies that this logical volume should be encrypted, using the passphrase "
+"provided in the <option>--passphrase=</option> option. If you do not specify "
+"a passphrase, the installation program will use the default, system-wide "
+"passphrase set with the <command>autopart --passphrase</command> command, or "
+"stop the installation and prompt you to provide a passphrase if no default "
+"is set."
+msgstr ""
+
+msgid ""
+"Specifies the passphrase to use when encrypting this logical volume. You "
+"must use this option together with the <option>--encrypted</option> option. "
+"This option has no effect by itself."
+msgstr ""
+
+msgid ""
+"Store data encryption keys of all encrypted volumes as files in <filename>/"
+"root</filename>, encrypted using the X.509 certificate from the URL "
+"specified with <replaceable>URL_of_X.509_certificate</replaceable>. The keys "
+"are stored as a separate file for each encrypted volume. This option is only "
+"meaningful if <option>--encrypted</option> is specified."
+msgstr ""
+
+msgid ""
+"Add a randomly-generated passphrase to each encrypted volume. Store these "
+"passphrases in separate files in <filename>/root</filename>, encrypted using "
+"the X.509 certificate specified with <option>--escrowcert</option>. This "
+"option is only meaningful if <option>--escrowcert</option> is specified."
+msgstr ""
+
+msgid "<option>--thinpool</option>"
+msgstr ""
+
+msgid ""
+"Creates a thin pool logical volume. (Use a mount point of <literal>none</"
+"literal>)"
+msgstr ""
+
+msgid "<option>--metadatasize=</option>"
+msgstr ""
+
+msgid "Metadata area size (in MiB) for a new thin pool device."
+msgstr ""
+
+msgid "<option>--chunksize=</option>"
+msgstr ""
+
+msgid "Chunk size (in KiB) for a new thin pool device."
+msgstr ""
+
+msgid "<option>--thin</option>"
+msgstr ""
+
+msgid ""
+"Create a thin logical volume. (Requires use of <option>--poolname</option>)"
+msgstr ""
+
+msgid "<option>--poolname=</option>"
+msgstr ""
+
+msgid ""
+"Specify the name of the thin pool in which to create a thin logical volume. "
+"Requires the <option>--thin</option> option."
+msgstr ""
+
+msgid "<option>--profile=</option>"
+msgstr ""
+
+msgid ""
+"Specify the configuration profile name to use with thin logical volumes. If "
+"used, the name will also be included in the metadata for the given logical "
+"volume. By default, the available profiles are <literal>default</literal> "
+"and <literal>thin-performance</literal> and are defined in the <filename "
+"class=\"directory\">/etc/lvm/profile</filename> directory. See the "
+"<systemitem>lvm(8)</systemitem> man page for additional information."
+msgstr ""
+
+msgid ""
+"Create one or more partitions first using <xref linkend=\"sect-kickstart-"
+"commands-part\" />, create the logical volume group (<xref linkend=\"sect-"
+"kickstart-commands-volgroup\" />), and then create logical volumes. For "
+"example:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>part pv.01 --size 3000</command>\n"
+"<command>volgroup myvg pv.01</command>\n"
+"<command>logvol / --vgname=myvg --size=2000 --name=rootvol</command>\n"
+"			"
+msgstr ""
+
+msgid "part (required) - Create Physical Partition"
+msgstr ""
+
+msgid "Creates a partition on the system."
+msgstr ""
+
+msgid ""
+"For a detailed example of <command>part</command> in action, see <xref "
+"linkend=\"sect-kickstart-example-advanced-partitioning\" />."
+msgstr ""
+
+msgid ""
+"\n"
+"<command>part|partition <replaceable>mntpoint</replaceable> --name="
+"<replaceable>name</replaceable> --device=<replaceable>device</replaceable> --"
+"rule=<replaceable>rule</replaceable> [<replaceable>options</replaceable>]</"
+"command>\n"
+"			"
+msgstr ""
+
+msgid ""
+"All partitions created are formatted as part of the installation process "
+"unless <option>--noformat</option> and <option>--onpart=</option> are used."
+msgstr ""
+
+msgid ""
+"If partitioning fails for any reason, diagnostic messages appear on virtual "
+"console 3."
+msgstr ""
+
+msgid ""
+"Where the partition is mounted. The value must be of one of the following:"
+msgstr ""
+
+msgid ""
+"The size assigned will be effective but not precisely calibrated for your "
+"system."
+msgstr ""
+
+msgid "<literal>swap--hibernation</literal>"
+msgstr ""
+
+msgid "<literal>raid.<replaceable>id</replaceable></literal>"
+msgstr ""
+
+msgid "The partition is used for software RAID (see <command>raid</command>)."
+msgstr ""
+
+msgid "<literal>pv.<replaceable>id</replaceable></literal>"
+msgstr ""
+
+msgid ""
+"The partition is used for LVM (see <xref linkend=\"sect-kickstart-commands-"
+"part\" />)."
+msgstr ""
+
+msgid "<literal>biosboot</literal>"
+msgstr ""
+
+msgid ""
+"The partition will be used for a BIOS Boot partition. A 1 MB BIOS boot "
+"partition is necessary on BIOS-based systems using a <firstterm>GUID "
+"Partition Table</firstterm> (GPT); the boot loader will be installed into it."
+" It is not necessary on UEFI systems. Also see <xref linkend=\"sect-"
+"kickstart-commands-part\" />."
+msgstr ""
+
+msgid "<literal>/boot/efi</literal>"
+msgstr ""
+
+msgid ""
+"An EFI System Partition. An EFI partition at least 50 MB in size is "
+"necessary on UEFI-based systems; the recommended size is 200 MB. It is not "
+"necessary on BIOS systems. Also see <xref linkend=\"sect-kickstart-commands-"
+"part\" />."
+msgstr ""
+
+msgid ""
+"The minimum partition size in megabytes. Specify an integer value here such "
+"as <literal>500</literal> (do not include the unit)."
+msgstr ""
+
+msgid ""
+"If the <option>--size</option> value is too small, the installation will "
+"fail. Set the <option>--size</option> value as the minimum amount of space "
+"you require. For size recommendations, see <xref linkend=\"sect-installation-"
+"gui-manual-partitioning-recommended\" />."
+msgstr ""
+
+msgid ""
+"The maximum partition size in megabytes when the partition is set to grow. "
+"Specify an integer value here such as <literal>500</literal> (do not include "
+"the unit)."
+msgstr ""
+
+msgid ""
+"Resize an existing partition. When using this option, specify the new size "
+"(in megabytes) using the <option>--size=</option> option and the target "
+"partition using the <option>--onpart=</option> option."
+msgstr ""
+
+msgid ""
+"Tells the partition to grow to fill available space (if any), or up to the "
+"maximum size setting."
+msgstr ""
+
+msgid ""
+"If you use <option>--grow=</option> without setting <option>--maxsize=</"
+"option> on a swap partition, <application>Anaconda</application> will limit "
+"the maximum size of the swap partition. For systems that have less than "
+"2&nbsp;GB of physical memory, the imposed limit is twice the amount of "
+"physical memory. For systems with more than 2&nbsp;GB, the imposed limit is "
+"the size of physical memory plus 2&nbsp;GB."
+msgstr ""
+
+msgid ""
+"Specifies that the partition should not be formatted, for use with the "
+"<option>--onpart</option> command."
+msgstr ""
+
+msgid "<option>--onpart=</option> or <option>--usepart=</option>"
+msgstr ""
+
+msgid "Specifies the device on which to place the partition. For example:"
+msgstr ""
+
+msgid "<command>partition /home --onpart=hda1</command>"
+msgstr ""
+
+msgid ""
+"The above puts <filename>/home</filename> on <filename>/dev/hda1</filename>."
+msgstr ""
+
+msgid ""
+"These options can also add a partition to a logical volume. For example:"
+msgstr ""
+
+msgid "<command>partition pv.1 --onpart=hda2</command>"
+msgstr ""
+
+msgid ""
+"The device must already exist on the system; the <option>--onpart</option> "
+"option will not create it."
+msgstr ""
+
+msgid "<option>--ondisk=</option> or <option>--ondrive=</option>"
+msgstr ""
+
+msgid ""
+"Forces the partition to be created on a particular disk. For example, "
+"<option>--ondisk=sdb</option> puts the partition on the second SCSI disk on "
+"the system."
+msgstr ""
+
+msgid ""
+"To specify a multipath device that does not use <firstterm>logical volume "
+"management</firstterm> (LVM), use the format <literal>disk/by-id/dm-uuid-"
+"mpath-<replaceable>WWID</replaceable></literal>, where <replaceable>WWID</"
+"replaceable> is the <firstterm>world-wide identifier</firstterm> for the "
+"device. For example, to specify a disk with WWID "
+"<literal>2416CD96995134CA5D787F00A5AA11017</literal>, use:"
+msgstr ""
+
+msgid ""
+"<command>part / --fstype=xfs --grow --asprimary --size=8192 --ondisk=disk/by-"
+"id/dm-uuid-mpath-2416CD96995134CA5D787F00A5AA11017</command>"
+msgstr ""
+
+msgid ""
+"Multipath devices that use LVM are not assembled until after "
+"<application>Anaconda</application> has parsed the Kickstart file. "
+"Therefore, you cannot specify these devices in the format <literal>dm-uuid-"
+"mpath</literal>. Instead, to specify a multipath device that uses LVM, use "
+"the format <literal>disk/by-id/scsi-<replaceable>WWID</replaceable></"
+"literal>, where <replaceable>WWID</replaceable> is the <firstterm>world-wide "
+"identifier</firstterm> for the device. For example, to specify a disk with "
+"WWID <literal>58095BEC5510947BE8C0360F604351918</literal>, use:"
+msgstr ""
+
+msgid ""
+"<command>part / --fstype=xfs --grow --asprimary --size=8192 --ondisk=disk/by-"
+"id/scsi-58095BEC5510947BE8C0360F604351918</command>"
+msgstr ""
+
+msgid "<option>--asprimary</option>"
+msgstr ""
+
+msgid ""
+"Forces the partition to be allocated as a <emphasis>primary</emphasis> "
+"partition. If the partition cannot be allocated as primary (usually due to "
+"too many primary partitions being already allocated), the partitioning "
+"process will fail. This option only makes sense when the disk uses a Master "
+"Boot Record (MBR); for GUID Partition Table (GPT)-labeled disks this option "
+"has no meaning. For information about primary (and extended) partitions, see "
+"<xref linkend=\"sect-installation-gui-manual-partitioning-recommended\" />."
+msgstr ""
+
+msgid "<option>--fsprofile=</option>"
+msgstr ""
+
+msgid ""
+"Specifies a <firstterm>usage type</firstterm> to be passed to the program "
+"that makes a filesystem on this partition. A usage type defines a variety of "
+"tuning parameters to be used when making a filesystem. For this option to "
+"work, the filesystem must support the concept of usage types and there must "
+"be a configuration file that lists valid types. For <literal>ext2</literal>, "
+"<literal>ext3</literal>, <literal>ext4</literal>, this configuration file is "
+"<filename>/etc/mke2fs.conf</filename>."
+msgstr ""
+
+msgid ""
+"Sets the file system type for the partition. Valid values are <literal>xfs</"
+"literal>, <literal>ext2</literal>, <literal>ext3</literal>, <literal>ext4</"
+"literal>, <literal>swap</literal>, <literal>vfat</literal>, <literal>efi</"
+"literal> and <literal>biosboot</literal>. For information about supported "
+"file systems, see <xref linkend=\"sect-installation-gui-manual-partitioning-"
+"filesystems\" />."
+msgstr ""
+
+msgid "Assign a label to an individual partition."
+msgstr ""
+
+msgid ""
+"Determine the size of the partition automatically. For details about the "
+"recommended scheme, see <xref linkend=\"sect-installation-gui-manual-"
+"partitioning-recommended\" />."
+msgstr ""
+
+msgid "<option>--onbiosdisk</option>"
+msgstr ""
+
+msgid ""
+"Forces the partition to be created on a particular disk as discovered by the "
+"BIOS."
+msgstr ""
+
+msgid ""
+"Specifies that this partition should be encrypted, using the passphrase "
+"provided in the <option>--passphrase</option> option. If you do not specify "
+"a passphrase, <application>Anaconda</application> uses the default, system-"
+"wide passphrase set with the <command>autopart --passphrase</command> "
+"command, or stops the installation and prompts you to provide a passphrase "
+"if no default is set."
+msgstr ""
+
+msgid ""
+"Specifies the passphrase to use when encrypting this partition. You must use "
+"this option together with the <option>--encrypted</option> option; by itself "
+"it has no effect."
+msgstr ""
+
+msgid ""
+"Add a randomly-generated passphrase to each encrypted partition. Store these "
+"passphrases in separate files in <filename>/root</filename>, encrypted using "
+"the X.509 certificate specified with <option>--escrowcert</option>. This "
+"option is only meaningful if <option>--escrowcert</option> is specified."
+msgstr ""
+
+msgid "raid (optional) - Create Software RAID"
+msgstr ""
+
+msgid "Assembles a software RAID device. This command is of the form:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>raid <replaceable>mntpoint</replaceable> --level="
+"<replaceable>level</replaceable> --device=<replaceable>mddevice</"
+"replaceable> <replaceable>partitions*</replaceable></command>\n"
+"			"
+msgstr ""
+
+msgid ""
+"For a detailed example of <command>raid</command> in action, see <xref "
+"linkend=\"sect-kickstart-example-advanced-partitioning\" />."
+msgstr ""
+
+msgid ""
+"Location where the RAID file system is mounted. If it is <filename>/</"
+"filename>, the RAID level must be 1 unless a boot partition (<filename>/"
+"boot</filename>) is present. If a boot partition is present, the <filename>/"
+"boot</filename> partition must be level 1 and the root (<filename>/</"
+"filename>) partition can be any of the available types. The "
+"<replaceable>partitions*</replaceable> (which denotes that multiple "
+"partitions can be listed) lists the RAID identifiers to add to the RAID "
+"array."
+msgstr ""
+
+msgid "<option>--level=</option>"
+msgstr ""
+
+msgid ""
+"RAID level to use (<literal>0</literal>, <literal>1</literal>, <literal>4</"
+"literal>, <literal>5</literal>, <literal>6</literal>, or <literal>10</"
+"literal>). See <xref linkend=\"sect-installation-gui-manual-partitioning-"
+"filesystems\" /> for information about various RAID types and their "
+"requirements."
+msgstr ""
+
+msgid "<option>--device=</option>"
+msgstr ""
+
+msgid ""
+"Name of the RAID device to use. As of &PRODUCT;&nbsp;&PRODVER;, RAID devices "
+"are no longer referred to by names like <literal>md0</literal>. If you have "
+"an old (v0.90 metadata) array that you cannot assign a name to, you can "
+"specify the array by a filesystem label or UUID (for example, <option>--"
+"device=rhel7-root --label=rhel7-root</option>)."
+msgstr ""
+
+msgid "<option>--spares=</option>"
+msgstr ""
+
+msgid ""
+"Specifies the number of spare drives allocated for the RAID array. Spare "
+"drives are used to rebuild the array in case of drive failure."
+msgstr ""
+
+msgid ""
+"Specify the label to give to the filesystem to be made. If the given label "
+"is already in use by another filesystem, a new label will be created."
+msgstr ""
+
+msgid "Use an existing RAID device and do not format it."
+msgstr ""
+
+msgid "Use an existing RAID device and reformat it."
+msgstr ""
+
+msgid ""
+"Specifies that this array should be encrypted, using the passphrase provided "
+"in the <option>--passphrase</option> option. If you do not specify a "
+"passphrase, <application>Anaconda</application> uses the default, system-"
+"wide passphrase set with the <command>autopart --passphrase</command> "
+"command, or stops the installation and prompts you to provide a passphrase "
+"if no default is set."
+msgstr ""
+
+msgid ""
+"The following example shows how to create a RAID level 1 partition for "
+"<filename>/</filename>, and a RAID level 5 for <filename>/home</filename>, "
+"assuming there are three SCSI disks on the system. It also creates three "
+"swap partitions, one on each drive."
+msgstr ""
+
+msgid "Creating a RAID array in Kickstart"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>part raid.01 --size=6000 --ondisk=sda</command>\n"
+"<command>part raid.02 --size=6000 --ondisk=sdb</command>\n"
+"<command>part raid.03 --size=6000 --ondisk=sdc</command>\n"
+"\n"
+"<command>part swap --size=512 --ondisk=sda</command>\n"
+"<command>part swap --size=512 --ondisk=sdb</command>\n"
+"<command>part swap --size=512 --ondisk=sdc</command>\n"
+"\n"
+"<command>part raid.11 --size=1 --grow --ondisk=sda</command>\n"
+"<command>part raid.12 --size=1 --grow --ondisk=sdb</command>\n"
+"<command>part raid.13 --size=1 --grow --ondisk=sdc</command>\n"
+"\n"
+"<command>raid / --level=1 --device=f&PRODVER;-root --label=f&PRODVER;-root "
+"raid.01 raid.02 raid.03</command>\n"
+"<command>raid /home --level=5 --device=f&PRODVER;-home --label=f&PRODVER;-"
+"home raid.11 raid.12 raid.13</command>\n"
+"				"
+msgstr ""
+
+msgid "volgroup (optional) - Create LVM Volume Group"
+msgstr ""
+
+msgid "Creates a Logical Volume Management (LVM) volume group."
+msgstr ""
+
+msgid ""
+"<command>volgroup <replaceable>name</replaceable> <replaceable>partition</"
+"replaceable> [<replaceable>options</replaceable>]</command>"
+msgstr ""
+
+msgid ""
+"This limitation only applies to newly created logical volume and volume "
+"group names. If you are reusing existing ones using the <option>--noformat</"
+"option> or <option>--noformat</option> option, their names will not be "
+"changed."
+msgstr ""
+
+msgid ""
+"For a detailed partitioning example including <command>volgroup</command>, "
+"see <xref linkend=\"sect-kickstart-example-advanced-partitioning\" />."
+msgstr ""
+
+msgid "Use an existing volume group and do not format it."
+msgstr ""
+
+msgid "Use an existing volume group and reformat it."
+msgstr ""
+
+msgid "<option>--pesize=</option>"
+msgstr ""
+
+msgid ""
+"Set the size of the physical extents. The default size for Kickstart "
+"installations is 4 MiB."
+msgstr ""
+
+msgid "<option>--reserved-space=</option>"
+msgstr ""
+
+msgid ""
+"Specify an amount of space to leave unused in a volume group in megabytes. "
+"Applicable only to newly created volume groups."
+msgstr ""
+
+msgid "<option>--reserved-percent=</option>"
+msgstr ""
+
+msgid ""
+"Specify a percentage of total volume group space to leave unused. Applicable "
+"only to newly created volume groups."
+msgstr ""
+
+msgid "zerombr (optional) - Reinitialize Partition Tables"
+msgstr ""
+
+msgid ""
+"If <command>zerombr</command> is specified, any invalid partition tables "
+"found on disks are initialized. This destroys all of the contents of disks "
+"with invalid partition tables. This command is required when performing an "
+"unattended installation on a system with previously initialized disks."
+msgstr ""
+
+msgid ""
+"On IBM System&nbsp;z, if <command>zerombr</command> is specified, any "
+"<firstterm>Direct Access Storage Device</firstterm> (DASD) visible to the "
+"installation program which is not already low-level formatted is "
+"automatically low-level formatted with <application>dasdfmt</application>. "
+"The command also prevents user choice during interactive installations."
+msgstr ""
+
+msgid ""
+"If <command>zerombr</command> is not specified and there is at least one "
+"unformatted DASD visible to the installation program, a non-interactive "
+"Kickstart installation will exit unsuccessfully."
+msgstr ""
+
+msgid ""
+"If <command>zerombr</command> is not specified and there is at least one "
+"unformatted DASD visible to the installation program, an interactive "
+"installation exits if the user does not agree to format all visible and "
+"unformatted DASDs. To circumvent this, only activate those DASDs that you "
+"will use during installation. You can always add more DASDs after "
+"installation is complete."
+msgstr ""
+
+msgid "zfcp (optional) - Configure Fibre Channel Device"
+msgstr ""
+
+msgid ""
+"Define a Fibre channel device. This option only applies on IBM System&nbsp;z."
+" All of the options described below must be specified."
+msgstr ""
+
+msgid ""
+"<command>zfcp --devnum=<replaceable>devnum</replaceable> --wwpn="
+"<replaceable>wwpn</replaceable> --fcplun=<replaceable>lun</replaceable></"
+"command>"
+msgstr ""
+
+msgid "<option>--devnum</option>"
+msgstr ""
+
+msgid "The device number (zFCP adaptor device bus ID)."
+msgstr ""
+
+msgid "<option>--wwpn</option>"
+msgstr ""
+
+msgid ""
+"The device's World Wide Port Name (WWPN). Takes the form of a 16-digit "
+"number, preceded by <literal>0x</literal>."
+msgstr ""
+
+msgid "<option>--fcplun</option>"
+msgstr ""
+
+msgid ""
+"The device's Logical Unit Number (LUN). Takes the form of a 16-digit number, "
+"preceded by <literal>0x</literal>."
+msgstr ""
+
+# translation auto-copied from project System Administrator's Guide, version master, document Yum
+#, fuzzy
+msgid "For example:"
+msgstr "De exemplu:"
+
+msgid ""
+"<command>zfcp --devnum=0.0.4000 --wwpn=0x5005076300C213e9 --fcplun="
+"0x5022000000000000</command>"
+msgstr ""
+
+msgid "Network Configuration"
+msgstr ""
+
+msgid "Commands in this chapter are used for network configuration."
+msgstr ""
+
+msgid "firewall (optional) - Configure Firewall"
+msgstr ""
+
+msgid "Specify the firewall configuration for the installed system."
+msgstr ""
+
+msgid ""
+"<command>firewall --enabled | --disabled <replaceable>device</replaceable> [-"
+"-trust= | --ssh | --smtp | --http | --ftp | --port= | --service=]</command>"
+msgstr ""
+
+msgid "<option>--enabled</option> or <option>--enable</option>"
+msgstr ""
+
+msgid ""
+"Reject incoming connections that are not in response to outbound requests, "
+"such as DNS replies or DHCP requests. If access to services running on this "
+"machine is needed, you can choose to allow specific services through the "
+"firewall."
+msgstr ""
+
+msgid "<option>--disabled</option> or <option>--disable</option>"
+msgstr ""
+
+msgid "Disable the firewall."
+msgstr ""
+
+msgid "<option>--trust=</option>"
+msgstr ""
+
+msgid ""
+"Listing a device here, such as <literal>em1</literal>, allows all traffic "
+"coming to and from that device to go through the firewall. To list more than "
+"one device, use this option again - for example:"
+msgstr ""
+
+msgid "<command>firewall --enable --trust=em1 --trust=em2</command>"
+msgstr ""
+
+msgid ""
+"Do not use a comma-separated format such as <option>--trust em1, em2</"
+"option>."
+msgstr ""
+
+msgid "<replaceable>incoming</replaceable>"
+msgstr ""
+
+msgid ""
+"Replace with one or more of the following to allow the specified services "
+"through the firewall:"
+msgstr ""
+
+msgid "<option>--ssh</option>"
+msgstr ""
+
+msgid "<option>--smtp</option>"
+msgstr ""
+
+msgid "<option>--http</option>"
+msgstr ""
+
+msgid "<option>--ftp</option>"
+msgstr ""
+
+msgid ""
+"You can specify that ports be allowed through the firewall using the port:"
+"protocol format. For example, to allow IMAP access through your firewall, "
+"specify <literal>imap:tcp</literal>. Numeric ports can also be specified "
+"explicitly; for example, to allow UDP packets on port 1234 through, specify "
+"<literal>1234:udp</literal>. To specify multiple ports, separate them by "
+"commas."
+msgstr ""
+
+msgid "<option>--service=</option>"
+msgstr ""
+
+msgid ""
+"This option provides a higher-level way to allow services through the "
+"firewall. Some services (like <systemitem>cups</systemitem>, "
+"<systemitem>avahi</systemitem>, etc.) require multiple ports to be open or "
+"other special configuration in order for the service to work. You can "
+"specify each individual port with the <option>--port</option> option, or "
+"specify <command>--service=</command> and open them all at once."
+msgstr ""
+
+msgid ""
+"Valid options are anything recognized by the <application>firewall-offline-"
+"cmd</application> program in the <package>firewalld</package> package. If "
+"<systemitem>firewalld</systemitem> is running, <command>firewall-cmd --get-"
+"services</command> will provide a list of known service names."
+msgstr ""
+
+msgid "network (optional) - Configure Network Interfaces"
+msgstr ""
+
+msgid ""
+"Configures network information for the target system and activates network "
+"devices in the installation environment. The device specified in the first "
+"<command>network</command> command is activated automatically. Activation of "
+"the device can be also explicitly required by the <option>--activate</"
+"option> option."
+msgstr ""
+
+msgid "<option>--activate</option>"
+msgstr ""
+
+msgid ""
+"If you use the <option>--activate</option> option on a device that has "
+"already been activated (for example, an interface you configured with boot "
+"options so that the system could retrieve the Kickstart file) the device is "
+"reactivated to use the details specified in the Kickstart file."
+msgstr ""
+
+msgid ""
+"Use the <option>--nodefroute</option> option to prevent the device from "
+"using the default route."
+msgstr ""
+
+msgid "<option>--bootproto=</option>"
+msgstr ""
+
+msgid ""
+"One of <literal>dhcp</literal>, <literal>bootp</literal>, <literal>ibft</"
+"literal>, or <literal>static</literal>. The default option is <literal>dhcp</"
+"literal>; the <literal>dhcp</literal> and <literal>bootp</literal> options "
+"are treated the same."
+msgstr ""
+
+msgid ""
+"The DHCP method uses a DHCP server system to obtain its networking "
+"configuration. The BOOTP method is similar, requiring a BOOTP server to "
+"supply the networking configuration. To direct a system to use DHCP:"
+msgstr ""
+
+msgid "<command>network --bootproto=dhcp</command>"
+msgstr ""
+
+msgid ""
+"To direct a machine to use BOOTP to obtain its networking configuration, use "
+"the following line in the Kickstart file:"
+msgstr ""
+
+msgid "<command>network --bootproto=bootp</command>"
+msgstr ""
+
+msgid "To direct a machine to use the configuration specified in iBFT, use:"
+msgstr ""
+
+msgid "<command>network --bootproto=ibft</command>"
+msgstr ""
+
+msgid ""
+"The <literal>static</literal> method requires that you specify the IP "
+"address, netmask, gateway, and nameserver in the Kickstart file. This "
+"information is static and is used during and after the installation."
+msgstr ""
+
+msgid ""
+"All static networking configuration information must be specified on "
+"<emphasis>one</emphasis> line; you cannot wrap lines using a backslash "
+"(<literal>\\</literal>) as you can on a command line."
+msgstr ""
+
+msgid ""
+"<command>network --bootproto=static --ip=10.0.2.15 --netmask=255.255.255.0 --"
+"gateway=10.0.2.254 --nameserver=10.0.2.1</command>"
+msgstr ""
+
+msgid ""
+"You can also configure multiple nameservers at the same time. To do so, use "
+"the <option>--nameserver=</option> options once for each name server you "
+"want to configure:"
+msgstr ""
+
+msgid ""
+"<command>network --bootproto=static --ip=10.0.2.15 --netmask=255.255.255.0 --"
+"gateway=10.0.2.254 --nameserver=192.168.2.1 --nameserver=192.168.3.1</"
+"command>"
+msgstr ""
+
+msgid ""
+"Specifies the device to be configured (and eventually activated in "
+"<application>Anaconda</application>) with the <command>network</command> "
+"command."
+msgstr ""
+
+msgid ""
+"If the <option>--device=</option> option is missing on the <emphasis>first</"
+"emphasis> use of the <command>network</command> command, the value of the "
+"<option>ksdevice=</option> <application>Anaconda</application> boot option "
+"is used, if available. Note that this is considered deprecated behavior; in "
+"most cases, you should always specify a <option>--device=</option> for every "
+"<command>network</command> command."
+msgstr ""
+
+msgid ""
+"The behavior of any subsequent <command>network</command> command in the "
+"same Kickstart file is unspecified if its <option>--device=</option> option "
+"is missing. Make sure you specify this option for any <command>network</"
+"command> command beyond the first."
+msgstr ""
+
+msgid "You can specify a device to be activated in any of the following ways:"
+msgstr ""
+
+msgid ""
+"the device name of the interface, for example, <systemitem>em1</systemitem>"
+msgstr ""
+
+msgid ""
+"the MAC address of the interface, for example, <systemitem>01:23:45:67:89:"
+"ab</systemitem>"
+msgstr ""
+
+msgid ""
+"the keyword <literal>link</literal>, which specifies the first interface "
+"with its link in the <literal>up</literal> state"
+msgstr ""
+
+msgid ""
+"the keyword <literal>bootif</literal>, which uses the MAC address that "
+"<application>pxelinux</application> set in the <parameter>BOOTIF</parameter> "
+"variable. Set <literal>IPAPPEND 2</literal> in your <filename>pxelinux.cfg</"
+"filename> file to have <application>pxelinux</application> set the "
+"<parameter>BOOTIF</parameter> variable."
+msgstr ""
+
+msgid "<command>network --bootproto=dhcp --device=em1</command>"
+msgstr ""
+
+msgid "<option>--ip=</option>"
+msgstr ""
+
+msgid "IP address of the device."
+msgstr ""
+
+msgid "<option>--ipv6=</option>"
+msgstr ""
+
+msgid ""
+"IPv6 address of the device, in the form of <replaceable>address</"
+"replaceable>[/<replaceable>prefix</replaceable> <replaceable>length</"
+"replaceable>] - for example, <literal>3ffe:ffff:0:1::1/128 </literal>. If "
+"<replaceable>prefix</replaceable> is omitted, <literal>64</literal> will be "
+"used. You can also use <literal>auto</literal> for automatic configuration, "
+"or <literal>dhcp</literal> for DHCPv6-only configuration (no router "
+"advertisements)."
+msgstr ""
+
+msgid "<option>--gateway=</option>"
+msgstr ""
+
+msgid "Default gateway as a single IPv4 address."
+msgstr ""
+
+msgid "<option>--ipv6gateway=</option>"
+msgstr ""
+
+msgid "Default gateway as a single IPv6 address."
+msgstr ""
+
+msgid "<option>--nodefroute</option>"
+msgstr ""
+
+msgid ""
+"Prevents the interface being set as the default route. Use this option when "
+"you activate additional devices with the <option>--activate=</option> "
+"option, for example, a NIC on a separate subnet for an iSCSI target."
+msgstr ""
+
+msgid "<option>--nameserver=</option>"
+msgstr ""
+
+msgid ""
+"DNS name server, as an IP address. To specify more than one name server, use "
+"this parameter multiple times. For example:"
+msgstr ""
+
+msgid "<option>--nodns</option>"
+msgstr ""
+
+msgid "Do not configure any DNS server."
+msgstr ""
+
+msgid "<option>--netmask=</option>"
+msgstr ""
+
+msgid "Network mask for the installed system."
+msgstr ""
+
+msgid "<option>--hostname=</option>"
+msgstr ""
+
+msgid ""
+"Host name for the installed system. The host name can be either a "
+"<firstterm>fully-qualified domain name</firstterm> (FQDN) in the format "
+"<replaceable>hostname</replaceable>.<replaceable>domainname</replaceable>, "
+"or a short host name with no domain name. Many networks have a "
+"<firstterm>Dynamic Host Configuration Protocol</firstterm> (<systemitem "
+"class=\"protocol\">DHCP</systemitem>) service that automatically supplies "
+"connected systems with a domain name; to allow the <systemitem class="
+"\"protocol\">DHCP</systemitem> service to assign the domain name to this "
+"machine, only specify the short host name."
+msgstr ""
+
+msgid "<option>--ethtool=</option>"
+msgstr ""
+
+msgid ""
+"Specifies additional low-level settings for the network device which will be "
+"passed to the <application>ethtool</application> program."
+msgstr ""
+
+msgid "<option>--essid=</option>"
+msgstr ""
+
+msgid "The network ID for wireless networks."
+msgstr ""
+
+msgid "<option>--wepkey=</option>"
+msgstr ""
+
+msgid "The WEP encryption key for wireless networks."
+msgstr ""
+
+msgid "<option>--wpakey=</option>"
+msgstr ""
+
+msgid "The WPA encryption key for wireless networks."
+msgstr ""
+
+msgid "<option>--onboot=</option>"
+msgstr ""
+
+msgid "Whether or not to enable the device at boot time."
+msgstr ""
+
+msgid "<option>--dhcpclass=</option>"
+msgstr ""
+
+msgid "The DHCP class."
+msgstr ""
+
+msgid "<option>--mtu=</option>"
+msgstr ""
+
+msgid "The MTU of the device."
+msgstr ""
+
+msgid "<option>--noipv4</option>"
+msgstr ""
+
+msgid "Disable IPv4 on this device."
+msgstr ""
+
+msgid "<option>--noipv6</option>"
+msgstr ""
+
+msgid "Disable IPv6 on this device."
+msgstr ""
+
+msgid "<option>--bondslaves=</option>"
+msgstr ""
+
+msgid ""
+"When this option is used, the network device specified in the <option>--"
+"device=</option> option will be created using slaves defined in the <option>-"
+"-bondslaves=</option> option. For example:"
+msgstr ""
+
+msgid "<command>network --device=mynetwork --bondslaves=em1,em2</command>"
+msgstr ""
+
+msgid ""
+"The above command will create a bond device named <literal>mynetwork</"
+"literal> using the <literal>em1</literal> and <literal>em2</literal> "
+"interfaces as its slaves."
+msgstr ""
+
+msgid "<command>--bondopts=</command>"
+msgstr ""
+
+msgid ""
+"A list of optional parameters for a bonded interface, which is specified "
+"using the <command>--bondslaves=</command> and <command>--device=</command> "
+"options. Options in this list must be separated by commas (\"<literal>,</"
+"literal>\") or semicolons (\"<literal>;</literal>\"). If an option itself "
+"contains a comma, use a semicolon to separate the options. For example:"
+msgstr ""
+
+msgid ""
+"<command>network --bondopts=mode=active-backup,balance-rr;primary=eth1</"
+"command>"
+msgstr ""
+
+msgid ""
+"Available optional parameters are listed in the <citetitle>Working with "
+"Kernel Modules</citetitle> chapter of the <citetitle>Fedora System "
+"Administrator's Guide</citetitle>, available at <ulink url=\"http://docs."
+"fedoraproject.org/\" />."
+msgstr ""
+
+msgid ""
+"The <option>--bondopts=mode=</option> parameter only supports full mode "
+"names such as <literal>balance-rr</literal> or <literal>broadcast</literal>, "
+"not their numerical representations such as <literal>0</literal> or "
+"<literal>3</literal>."
+msgstr ""
+
+msgid "<option>--vlanid=</option>"
+msgstr ""
+
+msgid ""
+"Specifies virtual LAN (VLAN) ID number (802.1q tag) for the device created "
+"using the device specified in <option>--device=</option> as a parent. For "
+"example, <command>network --device=em1 --vlanid=171</command> will create a "
+"virtual LAN device <literal>em1.171</literal>."
+msgstr ""
+
+msgid "<option>--interfacename=</option>"
+msgstr ""
+
+msgid ""
+"Specify a custom interface name for a virtual LAN device. This option should "
+"be used when the default name generated by the <option>--vlanid=</option> "
+"option is not desirable. This option must be used along with <option>--"
+"vlanid=</option>. For example:"
+msgstr ""
+
+msgid ""
+"<command>network --device=em1 --vlanid=171 --interfacename=vlan171</command>"
+msgstr ""
+
+msgid ""
+"The above command will create a virtual LAN interface named "
+"<literal>vlan171</literal> on the <literal>em1</literal> device with an ID "
+"of <literal>171</literal>."
+msgstr ""
+
+msgid ""
+"The interface name can be arbitrary (for example, <literal>my-vlan</"
+"literal>), but in specific cases, the following conventions must be followed:"
+""
+msgstr ""
+
+msgid ""
+"If the name contains a dot (<literal>.</literal>), it must take the form of "
+"<literal><replaceable>NAME</replaceable>.<replaceable>ID</replaceable></"
+"literal>. The <replaceable>NAME</replaceable> is arbitrary, but the "
+"<replaceable>ID</replaceable> must be the VLAN ID. For example: <literal>em1."
+"171</literal> or <literal>my-vlan.171</literal>."
+msgstr ""
+
+msgid ""
+"Names starting with <literal>vlan</literal> must take the form of "
+"<literal>vlan<replaceable>ID</replaceable></literal> - for example, "
+"<literal>vlan171</literal>."
+msgstr ""
+
+msgid "<option>--teamslaves=</option>"
+msgstr ""
+
+msgid ""
+"Team device specified by the <option>--device=</option> option will be "
+"created using slaves specified in this option. Slaves are separated by "
+"commas. A slave can be followed by its configuration, which is a single-"
+"quoted JSON string with double quotes escaped by the <literal>\\</literal> "
+"character. For example:"
+msgstr ""
+
+msgid ""
+"<command>network --teamslaves=\"p3p1'{\\\"prio\\\": -10, \\\"sticky\\\": "
+"true}',p3p2'{\\\"prio\\\": 100}'\"</command>"
+msgstr ""
+
+msgid "See also the <option>--teamconfig=</option> option."
+msgstr ""
+
+msgid "<option>--teamconfig=</option>"
+msgstr ""
+
+msgid ""
+"Double-quoted team device configuration which is a single-quoted JSON string "
+"with double quotes escaped by the <literal>\\</literal> character. The "
+"device name is specified by <option>--device=</option> option and its slaves "
+"and their configuration by <option>--teamslaves=</option> option. For "
+"example:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>network --device team0 --activate --bootproto static --ip=10.34.102."
+"222 --netmask=255.255.255.0 --gateway=10.34.102.254 --nameserver=10.34.39.2 -"
+"-teamslaves=\"p3p1'{\\\"prio\\\": -10, \\\"sticky\\\": "
+"true}',p3p2'{\\\"prio\\\": 100}'\" --teamconfig=\"{\\\"runner\\\": "
+"{\\\"name\\\": \\\"activebackup\\\"}}\"</command>\n"
+"						"
+msgstr ""
+
+msgid "<option>--bridgeslaves=</option>"
+msgstr ""
+
+msgid ""
+"When this option is used, the network bridge with device name specified "
+"using the <option>--device=</option> option will be created and devices "
+"defined in the <option>--bridgeslaves=</option> option will be added to the "
+"bridge. For example:"
+msgstr ""
+
+msgid "<command>network --device=bridge0 --bridgeslaves=em1</command>"
+msgstr ""
+
+msgid "<option>--bridgeopts=</option>"
+msgstr ""
+
+msgid ""
+"An optional comma-separated list of parameters for the bridged interface. "
+"Available values are <literal>stp</literal>, <literal>priority</literal>, "
+"<literal>forward-delay</literal>, <literal>hello-time</literal>, "
+"<literal>max-age</literal>, and <literal>ageing-time</literal>. For "
+"information about these parameters, see the <citetitle>bridge setting</"
+"citetitle> table in the <systemitem>nm-settings(5)</systemitem> man page or "
+"at <ulink url=\"https://developer.gnome.org/NetworkManager/0.9/ref-settings."
+"html\" />. Also see the <citetitle>&PRODUCT; Networking Guide</citetitle>, "
+"available at <ulink url=\"http://docs.fedoraproject.org/\" />, for general "
+"information about network bridging."
+msgstr ""
+
+msgid "Console and Environment"
+msgstr ""
+
+msgid ""
+"The following commands control the environment of the system after the "
+"installation finishes - language, keyboard layouts, or the graphical "
+"interface."
+msgstr ""
+
+msgid "keyboard (optional) - Configure Keyboard Layouts"
+msgstr ""
+
+msgid "Sets one or more available keyboard layouts for the system."
+msgstr ""
+
+msgid "<command>keyboard --vckeymap= | --xlayouts= [--switch=]</command>"
+msgstr ""
+
+msgid "<option>--vckeymap=</option>"
+msgstr ""
+
+msgid ""
+"Specify a <systemitem>VConsole</systemitem> keymap which should be used. "
+"Valid names correspond to the list of files in the <filename class="
+"\"directory\">/usr/lib/kbd/keymaps/*</filename> directory, without the "
+"<literal>.map.gz</literal> extension."
+msgstr ""
+
+msgid "<option>--xlayouts=</option>"
+msgstr ""
+
+msgid ""
+"Specify a list of <application>X</application> layouts that should be used "
+"as a comma-separated list without spaces. Accepts values in the same format "
+"as <systemitem>setxkbmap(1)</systemitem>, either in the "
+"<literal><replaceable>layout</replaceable></literal> format (such as "
+"<literal>cz</literal>), or in the <literal><replaceable>layout</replaceable> "
+"(<replaceable>variant</replaceable>)</literal> format (such as <literal>cz "
+"(qwerty)</literal>)."
+msgstr ""
+
+msgid ""
+"All available layouts can be viewed on the <systemitem>xkeyboard-config(7)</"
+"systemitem> man page under <literal>Layouts</literal>."
+msgstr ""
+
+msgid "<option>--switch=</option>"
+msgstr ""
+
+msgid ""
+"Specify a list of layout-switching options (shortcuts for switching between "
+"multiple keyboard layouts). Multiple options must be separated by commas "
+"without spaces. Accepts values in the same format as "
+"<systemitem>setxkbmap(1)</systemitem>."
+msgstr ""
+
+msgid ""
+"Available switching options can be viewed on the <systemitem>xkeyboard-"
+"config(7)</systemitem> man page under <literal>Options</literal>."
+msgstr ""
+
+msgid ""
+"The following example sets up two keyboard layouts (<literal>English (US)</"
+"literal> and <literal>Czech (qwerty)</literal>) using the <option>--xlayouts="
+"</option> option, and allows to switch between them using "
+"<keycombo><keycap>Alt</keycap><keycap>Shift</keycap></keycombo>:"
+msgstr ""
+
+msgid ""
+"<command>keyboard --xlayouts=us,'cz (qwerty)' --switch=grp:alt_shift_toggle</"
+"command>"
+msgstr ""
+
+msgid "lang (optional) - Configure Language During Installation"
+msgstr ""
+
+msgid ""
+"Sets the language to use during installation and the default language to use "
+"on the installed system."
+msgstr ""
+
+msgid ""
+"<command>lang <replaceable>language</replaceable> [--addsupport=]</command>"
+msgstr ""
+
+msgid ""
+"The file <filename>/usr/share/system-config-language/locale-list</filename> "
+"provides a list of the valid <replaceable>language</replaceable> codes in "
+"the first column of each line and is part of the <package>system-config-"
+"language</package> package."
+msgstr ""
+
+msgid ""
+"Certain languages (for example, Chinese, Japanese, Korean, and Indic "
+"languages) are not supported during text-mode installation. If you specify "
+"one of these languages with the <command>lang</command> command and use text "
+"mode, the installation process will continue in English, but the installed "
+"system will use your selection as its default language."
+msgstr ""
+
+msgid "<option>--addsupport=</option>"
+msgstr ""
+
+msgid ""
+"Add support for additional languages. Takes the form of comma-separated list "
+"without spaces. For example:"
+msgstr ""
+
+msgid "<command>lang en_US --addsupport=cs_CZ,de_DE,en_UK</command>"
+msgstr ""
+
+msgid "services (optional) - Configure Services"
+msgstr ""
+
+msgid ""
+"Modifies the default set of services that will run under the default "
+"<application>systemd</application> target. The list of disabled services is "
+"processed before the list of enabled services - therefore, if a service "
+"appears on both lists, it will be enabled."
+msgstr ""
+
+msgid ""
+"<command>services [--disabled=<replaceable>list</replaceable>] [--enabled="
+"<replaceable>list</replaceable>]</command>"
+msgstr ""
+
+msgid ""
+"Do not include spaces in the list of services. If you do, Kickstart will "
+"enable or disable only the services up to the first space. For example:"
+msgstr ""
+
+msgid "<command>services --disabled=auditd, cups,smartd, nfslock</command>"
+msgstr ""
+
+msgid ""
+"The above will disable only the <systemitem>auditd</systemitem> service. To "
+"disable all four services, the entry should include no spaces:"
+msgstr ""
+
+msgid "<command>services --disabled=auditd,cups,smartd,nfslock</command>"
+msgstr ""
+
+msgid "<option>--disabled=</option>"
+msgstr ""
+
+msgid "Disable the services given in the comma separated list."
+msgstr ""
+
+msgid "<option>--enabled=</option>"
+msgstr ""
+
+msgid "Enable the services given in the comma separated list."
+msgstr ""
+
+msgid "skipx (optional) - Do Not Configure X Window System"
+msgstr ""
+
+msgid ""
+"If present, <application>X</application> will not be configured on the "
+"installed system."
+msgstr ""
+
+msgid ""
+"If you install a display manager among your package selection options, this "
+"package will create an <application>X</application> configuration, and the "
+"installed system will default to <systemitem>graphical.target</systemitem>. "
+"The effect of the <command>skipx</command> option will be overridden."
+msgstr ""
+
+msgid "timezone (optional) - Configure Time Zone"
+msgstr ""
+
+msgid ""
+"Sets the system time zone to <replaceable>timezone</replaceable>. To view a "
+"list of available time zones, use the <command>timedatectl list-timezones</"
+"command> command."
+msgstr ""
+
+msgid ""
+"<command>timezone <replaceable>timezone</replaceable> [<replaceable>options</"
+"replaceable>]</command>"
+msgstr ""
+
+msgid "<option>--utc</option>"
+msgstr ""
+
+msgid ""
+"If present, the system assumes the hardware clock is set to UTC (Greenwich "
+"Mean) time."
+msgstr ""
+
+msgid "<option>--nontp</option>"
+msgstr ""
+
+msgid "Disable the NTP service automatic starting."
+msgstr ""
+
+msgid "<option>--ntpservers=</option>"
+msgstr ""
+
+msgid ""
+"Specify a list of NTP servers to be used as a comma-separated list without "
+"spaces."
+msgstr ""
+
+msgid "xconfig (optional) - Configure X Window System"
+msgstr ""
+
+msgid ""
+"Configures the <application>X Window System</application>. If you install "
+"the <application>X Window System</application> with a Kickstart file that "
+"does not include the <command>xconfig</command> command, you must provide "
+"the <application>X</application> configuration manually during installation."
+msgstr ""
+
+msgid ""
+"Do not use this command in a Kickstart file that does not install the "
+"<application>X Window System</application>."
+msgstr ""
+
+msgid "<option>--defaultdesktop=</option>"
+msgstr ""
+
+msgid ""
+"Specify either <literal>GNOME</literal> or <literal>KDE</literal> to set the "
+"default desktop (assumes that <application>GNOME Desktop Environment</"
+"application> and/or <application>KDE Desktop Environment</application> has "
+"been installed in the <command>%packages</command> section)."
+msgstr ""
+
+msgid "<option>--startxonboot</option>"
+msgstr ""
+
+msgid "Use a graphical login on the installed system."
+msgstr ""
+
+msgid "Users, Groups and Authentication"
+msgstr ""
+
+msgid ""
+"The commands below are used to control user accounts, groups, and related "
+"areas."
+msgstr ""
+
+msgid "auth or authconfig (optional) - Configure Authentication"
+msgstr ""
+
+msgid ""
+"Sets up the authentication options for the system using the "
+"<command>authconfig</command> command, which can also be run on a command "
+"line after the installation finishes. See the <systemitem>authconfig(8)</"
+"systemitem> manual page and the <command>authconfig --help</command> command "
+"for more details. Passwords are shadowed by default."
+msgstr ""
+
+msgid ""
+"\n"
+"<command>auth [--enablenis | --nisdomain= | --nisserver= | --enableshadow | -"
+"-enableldap | --enableldapauth | --ldapserver= | --ldapbasedn= | --"
+"enableldaptls | --disableldaptls | --enablekrb5 | --krb5realm= | --krb5kdc= "
+"| --krb5adminserver= | --enablehesiod | --hesiodlhs= | --hesiodrhs= | --"
+"enablesmbauth | --smbservers= | --smbworkgroup= | --enablecache | --passalgo="
+"]</command>\n"
+"			"
+msgstr ""
+
+msgid "<option>--enablenis</option>"
+msgstr ""
+
+msgid ""
+"Turns on NIS support. By default, <option>--enablenis</option> uses whatever "
+"domain it finds on the network. A domain should almost always be set by hand "
+"with the <option>--nisdomain=</option> option."
+msgstr ""
+
+msgid "<option>--nisdomain=</option>"
+msgstr ""
+
+msgid "NIS domain name to use for NIS services."
+msgstr ""
+
+msgid "<option>--nisserver=</option>"
+msgstr ""
+
+msgid "Server to use for NIS services (broadcasts by default)."
+msgstr ""
+
+msgid "<option>--useshadow</option>or <option>--enableshadow</option>"
+msgstr ""
+
+msgid "Use shadow passwords. Active by default."
+msgstr ""
+
+msgid "<option>--enableldap</option>"
+msgstr ""
+
+msgid ""
+"Turns on LDAP support in <filename>/etc/nsswitch.conf</filename>, allowing "
+"your system to retrieve information about users (for example, their UIDs, "
+"home directories, and shells) from an LDAP directory. To use this option, "
+"you must install the <package>nss-pam-ldapd</package> package. You must also "
+"specify a server and a base <firstterm>DN</firstterm> (distinguished name) "
+"with <option>--ldapserver=</option> and <option>--ldapbasedn=</option>."
+msgstr ""
+
+msgid "<option>--enableldapauth</option>"
+msgstr ""
+
+msgid ""
+"Use LDAP as an authentication method. This enables the <systemitem>pam_ldap</"
+"systemitem> module for authentication and changing passwords, using an LDAP "
+"directory. To use this option, you must have the <package>nss-pam-ldapd</"
+"package> package installed. You must also specify a server and a base DN "
+"with <option>--ldapserver=</option> and <option>--ldapbasedn=</option>. If "
+"your environment does not use <firstterm>TLS</firstterm> (Transport Layer "
+"Security), use the <option>--disableldaptls</option> switch to ensure that "
+"the resulting configuration file works."
+msgstr ""
+
+msgid "<option>--ldapserver=</option>"
+msgstr ""
+
+msgid ""
+"If you specified either <option>--enableldap</option> or <option>--"
+"enableldapauth</option>, use this option to specify the name of the LDAP "
+"server to use. This option is set in the <filename>/etc/ldap.conf</filename> "
+"file."
+msgstr ""
+
+msgid "<option>--ldapbasedn=</option>"
+msgstr ""
+
+msgid ""
+"If you specified either <option>--enableldap</option> or <option>--"
+"enableldapauth</option>, use this option to specify the DN in your LDAP "
+"directory tree under which user information is stored. This option is set in "
+"the <filename>/etc/ldap.conf</filename> file."
+msgstr ""
+
+msgid "<option>--enableldaptls</option>"
+msgstr ""
+
+msgid ""
+"Use TLS (Transport Layer Security) lookups. This option allows LDAP to send "
+"encrypted usernames and passwords to an LDAP server before authentication."
+msgstr ""
+
+msgid "<option>--disableldaptls</option>"
+msgstr ""
+
+msgid ""
+"Do not use TLS (Transport Layer Security) lookups in an environment that "
+"uses LDAP for authentication."
+msgstr ""
+
+msgid "<option>--enablekrb5</option>"
+msgstr ""
+
+msgid ""
+"Use Kerberos 5 for authenticating users. Kerberos itself does not know about "
+"home directories, UIDs, or shells. If you enable Kerberos, you must make "
+"users' accounts known to this workstation by enabling LDAP, NIS, or Hesiod "
+"or by using the <command>useradd</command> command. If you use this option, "
+"you must have the <package>pam_krb5</package> package installed."
+msgstr ""
+
+msgid "<option>--krb5realm=</option>"
+msgstr ""
+
+msgid "The Kerberos 5 realm to which your workstation belongs."
+msgstr ""
+
+msgid "<option>--krb5kdc=</option>"
+msgstr ""
+
+msgid ""
+"The KDC (or KDCs) that serve requests for the realm. If you have multiple "
+"KDCs in your realm, use a comma-separated list without spaces."
+msgstr ""
+
+msgid "<option>--krb5adminserver=</option>"
+msgstr ""
+
+msgid ""
+"The KDC in your realm that is also running kadmind. This server handles "
+"password changing and other administrative requests. This server must be run "
+"on the master KDC if you have more than one KDC."
+msgstr ""
+
+msgid "<option>--enablehesiod</option>"
+msgstr ""
+
+msgid ""
+"Enables Hesiod support for looking up user home directories, UIDs, and "
+"shells. More information on setting up and using Hesiod on your network is "
+"in <filename>/usr/share/doc/glibc-2.x.x/README.hesiod</filename>, which is "
+"included in the <package>glibc</package> package. Hesiod is an extension of "
+"DNS that uses DNS records to store information about users, groups, and "
+"various other items."
+msgstr ""
+
+msgid "<option>--hesiodlhs=</option> and <option>--hesiodrhs=</option>"
+msgstr ""
+
+msgid ""
+"The <systemitem>Hesiod</systemitem> LHS (left-hand side) and RHS (right-hand "
+"side) values, set in <filename>/etc/hesiod.conf</filename>. The "
+"<systemitem>Hesiod</systemitem> library uses these values to search DNS for "
+"a name, similar to the way that <systemitem>LDAP</systemitem> uses a base DN."
+""
+msgstr ""
+
+msgid ""
+"To look up user information for the username <systemitem>jim</systemitem>, "
+"the Hesiod library looks up <literal>jim.passwd<replaceable>LHS</"
+"replaceable><replaceable>RHS</replaceable></literal>, which should resolve "
+"to a TXT record that contains a string identical to an entry for that user "
+"in the <filename>passwd</filename> file: <computeroutput>jim:*:501:501:"
+"Jungle Jim:/home/jim:/bin/bash</computeroutput>. To look up groups, the "
+"Hesiod library looks up <literal>jim.group<replaceable>LHS</"
+"replaceable><replaceable>RHS</replaceable></literal> instead."
+msgstr ""
+
+msgid ""
+"To look up users and groups by number, make <literal>501.uid</literal> a "
+"CNAME for <literal>jim.passwd</literal>, and <literal>501.gid</literal> a "
+"CNAME for <literal>jim.group</literal>. Note that the library does not place "
+"a period (<literal>.</literal>) in front of the LHS and RHS values when "
+"performing a search. Therefore, if the LHS and RHS values need to have a "
+"period placed in front of them, you must include the period in the values "
+"you set for <option>--hesiodlhs=</option> and <option>--hesiodrhs=</option>."
+msgstr ""
+
+msgid "<option>--enablesmbauth</option>"
+msgstr ""
+
+msgid ""
+"Enables authentication of users against an SMB server (typically a Samba or "
+"Windows server). SMB authentication support does not know about home "
+"directories, UIDs, or shells. If you enable SMB, you must make users' "
+"accounts known to the workstation by enabling LDAP, NIS, or Hesiod or by "
+"using the <command>useradd</command> command."
+msgstr ""
+
+msgid "<option>--smbservers=</option>"
+msgstr ""
+
+msgid ""
+"The name of the servers to use for SMB authentication. To specify more than "
+"one server, separate the names with commas (<literal>,</literal>)."
+msgstr ""
+
+msgid "<option>--smbworkgroup=</option>"
+msgstr ""
+
+msgid "The name of the workgroup for the SMB servers."
+msgstr ""
+
+msgid "<option>--enablecache</option>"
+msgstr ""
+
+msgid ""
+"Enables the <systemitem>nscd</systemitem> service. The <systemitem>nscd</"
+"systemitem> service caches information about users, groups, and various "
+"other types of information. Caching is especially helpful if you choose to "
+"distribute information about users and groups over your network using "
+"<systemitem>NIS</systemitem>, <systemitem>LDAP</systemitem>, or "
+"<systemitem>Hesiod</systemitem>."
+msgstr ""
+
+msgid "<option>--passalgo=</option>"
+msgstr ""
+
+msgid ""
+"Specify <option>sha256</option> to set up the SHA-256 hashing algorithm or "
+"<option>sha512</option> to set up the SHA-512 hashing algorithm."
+msgstr ""
+
+msgid "group (optional) - Create User Group"
+msgstr ""
+
+msgid ""
+"Creates a new user group on the system. If a group with the given name or "
+"GID already exists, this command will fail. In addition, the <command>user</"
+"command> command can be used to create a new group for the newly created "
+"user."
+msgstr ""
+
+msgid ""
+"<command>group --name=<replaceable>name</replaceable> [--gid="
+"<replaceable>gid</replaceable>]</command>"
+msgstr ""
+
+msgid "Provides the name of the group."
+msgstr ""
+
+msgid "<option>--gid=</option>"
+msgstr ""
+
+msgid ""
+"The group ID (GID). If not provided, defaults to the next available non-"
+"system GID."
+msgstr ""
+
+msgid "pwpolicy (optional) - Change the Default Password Policy"
+msgstr ""
+
+msgid ""
+"This command can be used to set custom requirements (policy) such as length "
+"and strength for passwords set during the installation - the "
+"<systemitem>root</systemitem> password, user passwords and LUKS (disk "
+"encryption) password."
+msgstr ""
+
+msgid ""
+"\n"
+"<command>pwpolicy <replaceable>name</replaceable> [--minlen="
+"<replaceable>length</replaceable>] [--minquality=<replaceable>quality</"
+"replaceable>] [--strict|nostrict] [--emptyok|noempty] [--"
+"changesok|nochanges]</command>\n"
+"			"
+msgstr ""
+
+msgid ""
+"The <systemitem>libpwquality</systemitem> library is used to check minimum "
+"password requirements (length and quality). You can use the "
+"<command>pwscore</command> and <command>pwmake</command> commands provided "
+"by the <package>libpwquality</package> package to check the quality score of "
+"your chosen password, or to create a random password with a given score. See "
+"the <systemitem>pwscore(1)</systemitem> and <systemitem>pwmake(1)</"
+"systemitem> man pages for details about these commands."
+msgstr ""
+
+msgid ""
+"This command must be used inside the <command>%anaconda</command> section. "
+"See <xref linkend=\"sect-kickstart-commands-anaconda\" /> for details."
+msgstr ""
+
+msgid "<replaceable>name</replaceable>"
+msgstr ""
+
+msgid ""
+"Name of the password entry. Supported values are <literal>root</literal>, "
+"<literal>user</literal> and <literal>luks</literal> for <systemitem>root</"
+"systemitem> password, user passwords and LUKS password, respectively."
+msgstr ""
+
+msgid "<option>--minlen=</option>"
+msgstr ""
+
+msgid ""
+"Sets the minimum allowed password length. The default minimum length is "
+"<literal>8</literal>."
+msgstr ""
+
+msgid "<option>--minquality=</option>"
+msgstr ""
+
+msgid ""
+"Sets the minimum allowed password quality as defined by the "
+"<systemitem>libpwquality</systemitem> library. The default value is "
+"<literal>50</literal>."
+msgstr ""
+
+msgid "<option>--strict</option>"
+msgstr ""
+
+msgid ""
+"Strict password enforcement. Passwords not meeting the quality requirements "
+"specified in <option>--minquality=</option> will not be allowed. Enabled by "
+"default."
+msgstr ""
+
+msgid "<option>--notstrict</option>"
+msgstr ""
+
+msgid ""
+"Passwords <emphasis>not</emphasis> meeting the minimum quality requirements "
+"specified in <option>--minquality=</option> will be allowed after "
+"<guilabel>Done</guilabel> is clicked twice."
+msgstr ""
+
+msgid "<option>--emptyok</option>"
+msgstr ""
+
+msgid "Allow empty passwords. Enabled by default."
+msgstr ""
+
+msgid "<option>--notempty</option>"
+msgstr ""
+
+msgid "Do not allow empty passwords."
+msgstr ""
+
+msgid "<option>--changesok</option>"
+msgstr ""
+
+msgid ""
+"Allow changing the password in the user interface, even if the Kickstart "
+"file already specifies a password."
+msgstr ""
+
+msgid "<option>--nochanges</option>"
+msgstr ""
+
+msgid ""
+"Do not allow changing passwords which are already set in the Kickstart file. "
+"Enabled by default."
+msgstr ""
+
+msgid "An example use of the <command>pwpolicy</command> command is below:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>%anaconda</command>\n"
+"<command>pwpolicy root --minlen=10 --minquality=60 --strict --notempty --"
+"nochanges</command>\n"
+"<command>%end</command>\n"
+"			"
+msgstr ""
+
+msgid "realm (optional) - Join an Active Directory or IPA Domain"
+msgstr ""
+
+msgid ""
+"Join an Active Directory or IPA domain. For more information about this "
+"command, see the <command>join</command> section of the "
+"<systemitem>realm(8)</systemitem> man page."
+msgstr ""
+
+msgid ""
+"<command>realm join <replaceable>domain</replaceable> [<replaceable>options</"
+"replaceable>]</command>"
+msgstr ""
+
+msgid "<option>--computer-ou=OU=</option>"
+msgstr ""
+
+msgid ""
+"Provide the <firstterm>distinguished name</firstterm> of an organizational "
+"unit in order to create the computer account. The exact format of the "
+"distinguished name depends on the client software and membership software. "
+"The root DSE portion of the distinguished name can usually be left out."
+msgstr ""
+
+msgid "<option>--no-password</option>"
+msgstr ""
+
+msgid "Join automatically without a password."
+msgstr ""
+
+msgid "<option>--one-time-password=</option>"
+msgstr ""
+
+msgid ""
+"Join using a one-time password. This is not possible with all types of realm."
+""
+msgstr ""
+
+msgid "<option>--client-software=</option>"
+msgstr ""
+
+msgid ""
+"Only join realms which can run this client software. Valid values include "
+"<literal>sssd</literal> and <literal>winbind</literal>. Not all realms "
+"support all values. By default, the client software is chosen automatically."
+msgstr ""
+
+msgid "<option>--server-software=</option>"
+msgstr ""
+
+msgid ""
+"Only join realms which can run this server software. Possible values include "
+"<literal>active-directory</literal> or <literal>freeipa</literal>."
+msgstr ""
+
+msgid "<option>--membership-software=</option>"
+msgstr ""
+
+msgid ""
+"Use this software when joining the realm. Valid values include "
+"<literal>samba</literal> and <literal>adcli</literal>. Not all realms "
+"support all values. By default, the membership software is chosen "
+"automatically."
+msgstr ""
+
+msgid "rootpw (required) - Set Root Password"
+msgstr ""
+
+msgid ""
+"Sets the system's root password to the <replaceable>password</replaceable> "
+"argument."
+msgstr ""
+
+msgid ""
+"<command>rootpw [--iscrypted|--plaintext] [--lock] <replaceable>password</"
+"replaceable></command>"
+msgstr ""
+
+msgid ""
+"If this option is present, the password argument is assumed to already be "
+"encrypted. This option is mutually exclusive with <option>--plaintext</"
+"option>. To create an encrypted password, you can use Python:"
+msgstr ""
+
+msgid ""
+"<prompt>$</prompt> <command>python -c 'import crypt; print(crypt.crypt(\"My "
+"Password\", \"$6$My Salt\"))'</command>"
+msgstr ""
+
+msgid ""
+"This will generate a SHA512 crypt of your password using your provided salt."
+msgstr ""
+
+msgid "<option>--plaintext</option>"
+msgstr ""
+
+msgid ""
+"If this option is present, the password argument is assumed to be in plain "
+"text. This option is mutually exclusive with <option>--iscrypted</option>."
+msgstr ""
+
+msgid "<option>--lock</option>"
+msgstr ""
+
+msgid ""
+"If this option is present, the root account is locked by default. This means "
+"that the root user will not be able to log in from the console."
+msgstr ""
+
+msgid "selinux (optional) - Configure SELinux"
+msgstr ""
+
+msgid ""
+"Sets the state of SELinux on the installed system. The default policy is "
+"<systemitem>enforcing</systemitem>. For more information regarding SELinux "
+"in &PRODUCT;, see the <citetitle>&PRODUCT; SELinux User's and "
+"Administrator's Guide</citetitle>, available at <ulink url=\"http://docs."
+"fedoraproject.org/\" />."
+msgstr ""
+
+msgid "<command>selinux [--disabled|--enforcing|--permissive]</command>"
+msgstr ""
+
+msgid "<option>--enforcing</option>"
+msgstr ""
+
+msgid ""
+"Enables SELinux with the default targeted policy being "
+"<systemitem>enforcing</systemitem>."
+msgstr ""
+
+msgid "<option>--permissive</option>"
+msgstr ""
+
+msgid ""
+"Enables SELinux with the default targeted policy being "
+"<systemitem>permissive</systemitem>. This policy outputs warnings based on "
+"the SELinux policy, but does not actually enforce the policy."
+msgstr ""
+
+msgid "Disables SELinux completely."
+msgstr ""
+
+msgid "sshkey (optional) - Add an Authorized SSH Key"
+msgstr ""
+
+msgid ""
+"Use this command to add a specified <systemitem>SSH</systemitem> key to an "
+"user's <filename>authorized_keys</filename> file. The specified user must "
+"either be <systemitem>root</systemitem>, or it must be created in the "
+"Kickstart file - either automatically by an installed package, or using "
+"<xref linkend=\"sect-kickstart-commands-user\" />."
+msgstr ""
+
+msgid ""
+"<command>sshkey --username=<replaceable>user</replaceable> "
+"\"<replaceable>ssh_key</replaceable>\"</command>"
+msgstr ""
+
+msgid ""
+"The <replaceable>ssh_key</replaceable> must be a full <systemitem>SSH</"
+"systemitem> key fingerprint, and it must be enclosed in quotes "
+"(<literal>\"\"</literal>) because the key may contain spaces."
+msgstr ""
+
+msgid "<option>--username=</option>"
+msgstr ""
+
+msgid ""
+"The name of the user account to which you want to install the "
+"<systemitem>SSH</systemitem> key."
+msgstr ""
+
+msgid "user (optional) - Create User Account"
+msgstr ""
+
+msgid "Creates a new user on the system."
+msgstr ""
+
+msgid ""
+"<command>user --name=<replaceable>username</replaceable> "
+"[<replaceable>options</replaceable>]</command>"
+msgstr ""
+
+msgid "Provides the name of the user. This option is required."
+msgstr ""
+
+msgid "<option>--gecos=</option>"
+msgstr ""
+
+msgid ""
+"Provides the GECOS information for the user. This is a string of various "
+"system-specific fields separated by a comma. It is frequently used to "
+"specify the user's full name, office number, etc. See the "
+"<systemitem>passwd(5)</systemitem> man page for more details."
+msgstr ""
+
+msgid "<option>--groups=</option>"
+msgstr ""
+
+msgid ""
+"In addition to the default group, a comma separated list of group names the "
+"user should belong to. The groups must exist before the user account is "
+"created. See <xref linkend=\"sect-kickstart-commands-group\" />."
+msgstr ""
+
+msgid "<option>--homedir=</option>"
+msgstr ""
+
+msgid ""
+"The home directory for the user. If not provided, this defaults to "
+"<filename>/home/<replaceable>username</replaceable></filename>."
+msgstr ""
+
+msgid ""
+"If this option is present, this account is locked by default. This means "
+"that the user will not be able to log in from the console."
+msgstr ""
+
+msgid ""
+"The new user's password. If no password is provided, the account will be "
+"locked."
+msgstr ""
+
+msgid ""
+"The new user's password. If not provided, the account will be locked by "
+"default."
+msgstr ""
+
+msgid "<option>--shell=</option>"
+msgstr ""
+
+msgid ""
+"The user's login shell. If not provided, the system default will be used."
+msgstr ""
+
+msgid "<option>--uid=</option>"
+msgstr ""
+
+msgid ""
+"The <firstterm>UID</firstterm> (User ID). If not provided, this defaults to "
+"the next available non-system UID."
+msgstr ""
+
+msgid ""
+"The <firstterm>GID</firstterm> (Group ID) to be used for the user's default "
+"group. If not provided, this defaults to the next available non-system group "
+"ID."
+msgstr ""
+
+msgid "Installation Environment"
+msgstr ""
+
+msgid ""
+"The following commands control how the system will behave during the "
+"installation."
+msgstr ""
+
+msgid "autostep (optional) - Go Through Every Screen"
+msgstr ""
+
+msgid ""
+"Normally, Kickstart installations skip unnecessary screens. This option "
+"makes the installation program step through every screen, displaying each "
+"briefly. This option should not be used when deploying a system because it "
+"may disrupt package installation."
+msgstr ""
+
+msgid "<command>autostep [--autoscreenshot]</command>"
+msgstr ""
+
+msgid "<option>--autoscreenshot</option>"
+msgstr ""
+
+msgid ""
+"Take a screenshot at every step during installation. These screenshots are "
+"stored in <filename class=\"directory\">/tmp/anaconda-screenshots</filename> "
+"during the installation, and after the installation finishes you can find "
+"them in <filename class=\"directory\">/root/anaconda-screenshots</filename>."
+msgstr ""
+
+msgid ""
+"Each screen is only captured right before the installer switches to the next "
+"one. This is important, because if you do not use all required Kickstart "
+"options and the installation therefore does not begin automatically, you can "
+"go to the screens which were not automatically configured, perform any "
+"configuration you want. Then, when you press <guilabel>Done</guilabel> to "
+"continue, the screen will be captured including the configuration you just "
+"provided."
+msgstr ""
+
+msgid "cmdline (optional) - Perform Installation in Command Line Mode"
+msgstr ""
+
+msgid ""
+"Perform the installation in a completely non-interactive command line mode. "
+"Any prompts for interaction halts the install. This mode is useful on IBM "
+"System&nbsp;z systems with the x3270 terminal."
+msgstr ""
+
+msgid "graphical (optional) - Perform Installation in Graphical Mode"
+msgstr ""
+
+msgid ""
+"Perform the installation in graphical mode. This is the default. This "
+"command takes no options."
+msgstr ""
+
+msgid "logging (optional) - Configure Error Logging During Installation"
+msgstr ""
+
+msgid ""
+"Controls the error logging of <application>Anaconda</application> during "
+"installation. It has no effect on the installed system."
+msgstr ""
+
+msgid "<command>logging [--host= | --port= | --level=]</command>"
+msgstr ""
+
+msgid "<option>--host=</option>"
+msgstr ""
+
+msgid ""
+"Send logging information to the given remote host, which must be running a "
+"<systemitem class=\"service\">syslogd</systemitem> process configured to "
+"accept remote logging."
+msgstr ""
+
+msgid ""
+"If the remote syslogd process uses a port other than the default, it may be "
+"specified with this option."
+msgstr ""
+
+msgid ""
+"Specify the minimum level of messages that appear on virtual console 3 "
+"(<systemitem>tty3</systemitem>). This only affects messages printed to the "
+"console; log files will contain messages of all levels. Possible values are "
+"<literal>debug</literal>, <literal>info</literal>, <literal>warning</"
+"literal>, <literal>error</literal>, or <literal>critical</literal>."
+msgstr ""
+
+msgid "rescue (optional) - Rescue Mode"
+msgstr ""
+
+msgid ""
+"Automatically enters the installation program's rescue mode. This gives you "
+"a chance to repair the system in case of any problems."
+msgstr ""
+
+msgid "<command>rescue [--nomount|--romount]</command>"
+msgstr ""
+
+msgid "<option>--nomount</option> or <option>--romount</option>"
+msgstr ""
+
+msgid ""
+"Controls how the installed system is mounted in the rescue environment. By "
+"default, the installation program will find your system and mount it in read-"
+"write mode, telling you where it has performed this mount. You may "
+"optionally choose to not mount anything (the <option>--nomount</option> "
+"option) or mount in read-only mode (the <option>--romount</option> option). "
+"Only one of these two options may be used."
+msgstr ""
+
+msgid "sshpw (optional) - Restrict ssh Access During Installation"
+msgstr ""
+
+msgid ""
+"During the installation, you can interact with the installation program and "
+"monitor its progress over an <systemitem>SSH</systemitem> connection. Use "
+"the <command>sshpw</command> command to create temporary accounts through "
+"which to log on. Each instance of the command creates a separate account "
+"that exists only in the installation environment. These accounts are not "
+"transferred to the installed system."
+msgstr ""
+
+msgid ""
+"<command>sshpw --username=<replaceable>name</replaceable> "
+"<replaceable>password</replaceable> [--iscrypted|--plaintext] [--lock]</"
+"command>"
+msgstr ""
+
+msgid ""
+"By default, the <systemitem>ssh</systemitem> server is not started during "
+"the installation. To make <systemitem>ssh</systemitem> available during the "
+"installation, boot the system with the kernel boot option <option>inst.sshd</"
+"option>. See <xref linkend=\"sect-boot-options-display\" /> for details."
+msgstr ""
+
+msgid ""
+"If you want to disable root <systemitem class=\"protocol\">ssh</systemitem> "
+"access to your hardware during installation, use the following:"
+msgstr ""
+
+msgid "<command>sshpw --username=root --lock</command>"
+msgstr ""
+
+msgid "<option>--username</option>"
+msgstr ""
+
+msgid ""
+"If this option is present, the password argument is assumed to be in plain "
+"text. This option is mutually exclusive with <option>--iscrypted</option>"
+msgstr ""
+
+msgid "text (optional) - Perform Installation in Text Mode"
+msgstr ""
+
+msgid ""
+"Perform the Kickstart installation in text mode. Kickstart installations are "
+"performed in graphical mode by default."
+msgstr ""
+
+msgid "unsupported_hardware (optional) - Suppress Unsupported Hardware Alerts"
+msgstr ""
+
+msgid ""
+"Suppress the <guilabel>Unsupported Hardware Detected</guilabel> alert. If "
+"this command is not included and unsupported hardware is detected, the "
+"installation will stall at this alert."
+msgstr ""
+
+msgid "vnc (optional) - Configure VNC Access"
+msgstr ""
+
+msgid ""
+"Allows the graphical installation to be viewed remotely via VNC. This method "
+"is usually preferred over text mode, as there are some size and language "
+"limitations in text installations. With no additional options, this command "
+"will start a VNC server on the installation system with no password and will "
+"display the details required to connect to it."
+msgstr ""
+
+msgid ""
+"<command>vnc [--host=<replaceable>hostname</replaceable>] [--port="
+"<replaceable>port</replaceable>] [--password=<replaceable>password</"
+"replaceable>]</command>"
+msgstr ""
+
+msgid ""
+"For more information about VNC installations, including instructions on how "
+"to connect to the installation system, see <xref linkend=\"chap-vnc-"
+"installations\" />."
+msgstr ""
+
+msgid "Connect to a VNC viewer listening on the given hostname."
+msgstr ""
+
+msgid ""
+"Provide a port that the remote VNC viewer process is listening on. If not "
+"provided, the VNC default (<literal>5900</literal>) will be used."
+msgstr ""
+
+msgid ""
+"Set a password which must be provided to connect to the VNC session. This is "
+"optional, but recommended."
+msgstr ""
+
+msgid "After the Installation"
+msgstr ""
+
+msgid ""
+"This section contains commands which control the system's behavior "
+"immediately after the installation finishes."
+msgstr ""
+
+msgid "%addon com_redhat_kdump (optional) - Configure kdump"
+msgstr ""
+
+msgid ""
+"This command configures the <application>kdump</application> kernel crash "
+"dumping mechanism."
+msgstr ""
+
+msgid ""
+"The syntax for this command is unusual because it is an add-on rather than a "
+"built-in Kickstart command. For more information about add-ons, see <xref "
+"linkend=\"sect-kickstart-commands-addon\" />."
+msgstr ""
+
+msgid ""
+"<application>Kdump</application> is a kernel crash dumping mechanism that "
+"allows you to save the contents of the system's memory for later analysis. "
+"It relies on <application>kexec</application>, which can be used to start a "
+"Linux kernel from the context of another kernel without rebooting the system "
+"and preserve the contents of the first kernel memory that would otherwise be "
+"lost."
+msgstr ""
+
+msgid ""
+"In case of a system crash, <application>kexec</application> starts a second "
+"kernel (a <firstterm>capture kernel</firstterm>). This capture kernel "
+"resides in a reserved part of the system memory that is inaccessible to the "
+"main kernel. <application>Kdump</application> then captures the contents of "
+"the crashed kernel's memory (a <firstterm>crash dump</firstterm>) and saves "
+"it to a specified location. This location can not be configured using "
+"Kickstart; it must be specified after the installation by editing the "
+"<filename>/etc/kdump.conf</filename> configuration file."
+msgstr ""
+
+msgid "Available options are:"
+msgstr ""
+
+msgid "<option>--enable</option>"
+msgstr ""
+
+msgid "Enable <application>Kdump</application> on the installed system."
+msgstr ""
+
+msgid "<option>--disable</option>"
+msgstr ""
+
+msgid ""
+"Do not enable <application>Kdump</application> on the installed system."
+msgstr ""
+
+msgid "<option>--reserve-mb=</option>"
+msgstr ""
+
+msgid ""
+"The amount of memory you want to reserve for <application>Kdump</"
+"application> in megabytes. For example:"
+msgstr ""
+
+msgid "\n"
+"%addon com_redhat_kdump --enable --reserve-mb=128\n"
+"%end\n"
+"						"
+msgstr ""
+
+msgid ""
+"You can also specify <literal>auto</literal> instead of a numeric value. In "
+"that case the installer will determine the amount of RAM to reserve for "
+"kdump automatically, based on your system architecture and the total amount "
+"of memory on the system."
+msgstr ""
+
+msgid ""
+"If you enable <application>Kdump</application> and do not specify the "
+"<option>--reserve-mb=</option> option, the <literal>auto</literal> value "
+"will be used."
+msgstr ""
+
+msgid "<option>--enablefadump</option>"
+msgstr ""
+
+msgid ""
+"Enable firmware-assisted dumping on systems which allow it (notably IBM "
+"Power&nbsp;Systems servers)."
+msgstr ""
+
+msgid "firstboot (optional) - Enable or Disable Initial Setup"
+msgstr ""
+
+msgid ""
+"Determine whether the <application>Initial Setup</application> application "
+"starts the first time the system is booted. If enabled, the <package>initial-"
+"setup</package> package must be installed. If not specified, this option is "
+"disabled by default. For more information about <application>Initial Setup</"
+"application>, see <xref linkend=\"sect-initial-setup\" />."
+msgstr ""
+
+msgid "<command>firstboot --enable|--disable [--reconfig]</command>"
+msgstr ""
+
+msgid "<option>--enable</option> or <option>--enabled</option>"
+msgstr ""
+
+msgid ""
+"<application>Initial Setup</application> will be started the first time the "
+"installed system boots."
+msgstr ""
+
+msgid "<option>--disable</option> or <option>--disabled</option>"
+msgstr ""
+
+msgid "<application>Initial Setup</application> will be disabled."
+msgstr ""
+
+msgid "<option>--reconfig</option>"
+msgstr ""
+
+msgid ""
+"<application>Initial Setup</application> will start after the reboot in "
+"reconfiguration mode. This mode enables the language, mouse, keyboard, root "
+"password, security level, time zone and networking configuration options in "
+"addition to the default ones."
+msgstr ""
+
+msgid "halt (optional) - Halt System After Installation"
+msgstr ""
+
+msgid ""
+"Halt the system after the installation has successfully completed. This is "
+"similar to a manual installation, where after the installation finishes, the "
+"installer displays a message and waits for the user to press a key before "
+"rebooting. During a Kickstart installation, if no completion method is "
+"specified, this option is used as the default."
+msgstr ""
+
+msgid ""
+"For other completion methods, see the <command>poweroff</command>, "
+"<command>reboot</command>, and <command>shutdown</command> commands."
+msgstr ""
+
+msgid "poweroff (optional) - Power Off After Installation"
+msgstr ""
+
+msgid ""
+"Shut down and power off the system after the installation has successfully "
+"completed."
+msgstr ""
+
+msgid ""
+"The <command>poweroff</command> command is highly dependent on the system "
+"hardware in use. Specifically, certain hardware components such as the BIOS, "
+"APM (advanced power management), and ACPI (advanced configuration and power "
+"interface) must be able to interact with the system kernel. Consult your "
+"hardware documentation for more information on you system's APM/ACPI "
+"abilities."
+msgstr ""
+
+msgid ""
+"For other completion methods, see the <command>halt</command>, "
+"<command>reboot</command>, and <command>shutdown</command> Kickstart "
+"commands."
+msgstr ""
+
+msgid "reboot (optional) - Reboot After Installation"
+msgstr ""
+
+msgid ""
+"Reboot after the installation is successfully completed. If you are "
+"installing &PRODUCT; on IBM System&nbsp;z in command line mode (using <xref "
+"linkend=\"sect-kickstart-commands-cmdline\" />), this command is necessary "
+"for a fully automated installation."
+msgstr ""
+
+msgid ""
+"For other completion methods, see the <command>halt</command>, "
+"<command>poweroff</command>, and <command>shutdown</command> Kickstart "
+"options."
+msgstr ""
+
+msgid ""
+"Use of the <command>reboot</command> command <emphasis>may</emphasis> result "
+"in an endless installation loop, depending on the installation media and "
+"method."
+msgstr ""
+
+msgid "<option>--eject</option>"
+msgstr ""
+
+msgid ""
+"Attempt to eject the installation media (if installing from a DVD) before "
+"rebooting."
+msgstr ""
+
+msgid "shutdown (optional) - Shut Down After Installation"
+msgstr ""
+
+msgid ""
+"Shut down the system after the installation has successfully completed."
+msgstr ""
+
+msgid ""
+"For other completion methods, see the <command>halt</command>, "
+"<command>poweroff</command>, and <command>reboot</command> Kickstart options."
+""
+msgstr ""
+
+msgid "%addon (optional) - Include an Anaconda Add-on"
+msgstr ""
+
+msgid ""
+"You can expand the basic <application>Anaconda</application> and Kickstart "
+"functionality by using custom add-ons specified using the <command>%addon</"
+"command> section."
+msgstr ""
+
+msgid ""
+"To use an add-on in your Kickstart file, add the <command>%addon "
+"<replaceable>addon_name</replaceable> <replaceable>options</replaceable></"
+"command> command. The section must be closed with an <command>%end</command> "
+"statement. For example, to use the <application>Kdump</application> add-on, "
+"which is included by default on some installations, use the following block:"
+msgstr ""
+
+msgid ""
+"<command>%addon com_redhat_kdump --enable --reserve-mb=128</"
+"command><command>%end</command>\n"
+"		"
+msgstr ""
+
+msgid ""
+"The <command>%addon</command> section does not have any options of its own; "
+"all options depend on the add-on being used."
+msgstr ""
+
+msgid ""
+"For more information about <application>Anaconda</application> add-ons, see "
+"the <ulink url=\"https://vpodzime.fedorapeople.org/anaconda-addon-"
+"development-guide/\">Fedora Anaconda Addon Development Guide</ulink>."
+msgstr ""
+
+msgid "%anaconda (optional) - Additional Anaconda Configuration"
+msgstr ""
+
+msgid ""
+"This section, introduced in &PRODUCT; 22, is used to specify additional "
+"configuration options for the installer. Commands inside this section only "
+"control the behavior during installation, not on the installed system. The "
+"only command currently available inside this section is <xref linkend=\"sect-"
+"kickstart-commands-pwpolicy\" />. The <command>%anaconda</command> section "
+"must end with <literal>%end</literal>."
+msgstr ""
+
+msgid ""
+"In interactive installations (using the graphical or text interface), the "
+"<filename>/usr/share/anaconda/interactive-defaults.ks</filename> file "
+"contains the default <command>%anaconda</command> section. To change the "
+"defaults, you must create a <filename>product.img</filename> file with a "
+"Kickstart file replacing the default one, and pass this file to "
+"<application>Anaconda</application> using a boot option."
+msgstr ""
+
+msgid ""
+"When using a Kickstart file, you can override the default "
+"<command>%anaconda</command> section by using the section again in your "
+"custom Kickstart."
+msgstr ""
+
+msgid "%include (optional) - Include Contents of Another File"
+msgstr ""
+
+msgid ""
+"Use the <command>%include <replaceable>/path/to/file</replaceable></command> "
+"command to include the contents of another file in the Kickstart file as "
+"though the contents were at the location of the <command>%include</command> "
+"command in the Kickstart file."
+msgstr ""
+
+msgid "%ksappend (optional) - Append Contents of Another File"
+msgstr ""
+
+msgid ""
+"The <command>%ksappend <replaceable>url</replaceable></command> directive is "
+"very similar to <xref linkend=\"sect-kickstart-commands-include\" /> in that "
+"it is used to include the contents of additional files as though they were "
+"at the location of the <command>%ksappend</command> command. The difference "
+"is in when the two directives are processed."
+msgstr ""
+
+msgid ""
+"<command>%ksappend</command> is processed in an initial pass, before any "
+"other part of the Kickstart file. Then, this expanded Kickstart file is "
+"passed to the rest of <application>Anaconda</application> where all "
+"<command>%pre</command> scripts are handled, and then finally the rest of "
+"the Kickstart file is processed in order, which includes <command>%include</"
+"command> directives."
+msgstr ""
+
+msgid ""
+"Therefore, <command>%ksappend</command> provides a way to include a file "
+"containing <command>%pre</command> scripts, while <command>%include</"
+"command> does not."
+msgstr ""
+
+msgid "%packages (required) - Package Selection"
+msgstr ""
+
+msgid ""
+"Use the <command>%packages</command> command to begin a Kickstart section "
+"which describes the software packages to be installed. This section must end "
+"with an <command>%end</command> statement."
+msgstr ""
+
+msgid ""
+"You can specify packages by <firstterm>environment</firstterm>, "
+"<firstterm>group</firstterm>, or by their package names. Several "
+"environments and groups that contain related packages are defined. See the "
+"<filename>repodata/comps.xml</filename> file in your installation source for "
+"environment and group definitions."
+msgstr ""
+
+msgid ""
+"The <filename>comps.xml</filename> file contains a structure describing "
+"available environments (marked by the <literal>&lt;environment&gt;</literal> "
+"tag) and groups (the <literal>&lt;group&gt;</literal> tag). Each entry has "
+"an ID, user visibility value, name, description, and package list. If the "
+"group is selected for installation, the packages marked <literal>mandatory</"
+"literal> in the package list are always installed, the packages marked "
+"<literal>default</literal> are installed if they are not specifically "
+"excluded, and the packages marked <literal>optional</literal> must be "
+"specifically included even when the group is selected."
+msgstr ""
+
+msgid ""
+"You can specify a package group or environment using either its ID (the "
+"<literal>&lt;id&gt;</literal> tag) or name (the <literal>&lt;name&gt;</"
+"literal> tag)."
+msgstr ""
+
+msgid ""
+"To install a 32-bit package on a 64-bit system, you will need to append the "
+"package name with the 32-bit architecture for which the package was built - "
+"for example, <package>glibc.i686</package>. The <option>--multilib</option> "
+"option also must be specified in the Kickstart file; see the available "
+"options below."
+msgstr ""
+
+msgid ""
+"<application>Initial Setup</application> does not run after a system is "
+"installed from a Kickstart file unless a desktop environment and the "
+"<application>X Window System</application> were included in the installation "
+"and graphical login was enabled. This means that by default, no users except "
+"for <systemitem class=\"username\">root</systemitem> will be created. You "
+"can either create a user with the <option>user</option> option in the "
+"Kickstart file before installing additional systems from it (see <xref "
+"linkend=\"sect-kickstart-commands-user\" /> for details) or log into the "
+"installed system with a virtual console as <systemitem class="
+"\"username\">root</systemitem> and add users with the <command>useradd</"
+"command> command."
+msgstr ""
+
+msgid "Specifying Environments, Groups and Packages"
+msgstr ""
+
+msgid "Specifying an Environment"
+msgstr ""
+
+msgid ""
+"In addition to groups, you specify an entire environment to be installed:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>%packages</command>\n"
+"@^Infrastructure Server\n"
+"<command>%end</command>\n"
+"					"
+msgstr ""
+
+msgid ""
+"This command will install all packages which are part of the "
+"<guilabel>Infrastracture Server</guilabel> environment. All available "
+"environments are described in the <filename>comps.xml</filename> file."
+msgstr ""
+
+msgid "Specifying Groups"
+msgstr ""
+
+msgid ""
+"Specify groups, one entry to a line, starting with an <literal>@</literal> "
+"symbol, and then the full group name or group id as given in the "
+"<filename>comps.xml</filename> file. For example:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>%packages</command> \n"
+"@X Window System\n"
+"@Desktop\n"
+"@Sound and Video\n"
+"<command>%end</command>\n"
+"					"
+msgstr ""
+
+msgid ""
+"The <literal>Core</literal> and <literal>Base</literal> groups are always "
+"selected - it is not necessary to specify them in the <command>%packages</"
+"command> section."
+msgstr ""
+
+msgid ""
+"The <filename>comps.xml</filename> file also defines groups called "
+"<literal>Conflicts (<replaceable>variant</replaceable>)</literal> for each "
+"variant of &PRODUCT;. This group contains all packages which are known to "
+"cause file conflicts, and is intended to be excluded."
+msgstr ""
+
+msgid "Specifying Individual Packages"
+msgstr ""
+
+msgid ""
+"Specify individual packages by name, one entry to a line. You can use the "
+"asterisk character (<literal>*</literal>) as a <firstterm>wildcard</"
+"firstterm> in package names. For example:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>%packages</command> \n"
+"sqlite\n"
+"curl\n"
+"aspell\n"
+"docbook*\n"
+"<command>%end</command>\n"
+"					"
+msgstr ""
+
+msgid ""
+"The <literal>docbook*</literal> entry includes the packages <package>docbook-"
+"dtds</package>, <package>docbook-simple</package>, <package>docbook-slides</"
+"package> and others that match the pattern represented with the wildcard."
+msgstr ""
+
+msgid "Excluding Environments, Groups, or Packages"
+msgstr ""
+
+msgid ""
+"Use a leading dash (<literal>-</literal>) to specify packages or groups to "
+"exclude from the installation. For example:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>%packages</command> \n"
+"-@Graphical Internet \n"
+"-autofs\n"
+"-ipa*fonts\n"
+"<command>%end</command>\n"
+"					"
+msgstr ""
+
+msgid ""
+"Installing all available packages using only <literal>*</literal> in a "
+"Kickstart file is not supported, even if you exclude the <literal>@Conflicts "
+"(<replaceable>variant</replaceable>)</literal> group."
+msgstr ""
+
+msgid ""
+"You can change the default behavior of the <command>%packages</command> "
+"section by using several options. Some options work for the entire package "
+"selection, others are used with only specific groups."
+msgstr ""
+
+msgid "Common Package Selection Options"
+msgstr ""
+
+msgid ""
+"The following options are available for the <command>%packages</command>. To "
+"use an option, append it to the start of the package selection section. For "
+"example:"
+msgstr ""
+
+msgid "<command>%packages --multilib --ignoremissing</command>"
+msgstr ""
+
+msgid "<option>--nocore</option>"
+msgstr ""
+
+msgid "Do not install the <literal>@Core</literal> group."
+msgstr ""
+
+msgid "<option>--ignoremissing</option>"
+msgstr ""
+
+msgid ""
+"Ignore any packages, groups and environments missing in the installation "
+"source, instead of halting the installation to ask if the installation "
+"should be aborted or continued."
+msgstr ""
+
+msgid "<option>--excludedocs</option>"
+msgstr ""
+
+msgid ""
+"Do not install any documentation contained within packages. In most cases, "
+"this will exclude any files normally installed in the <filename class="
+"\"directory\">/usr/share/doc*</filename> directory, but the specific files "
+"to be excluded depend on individual packages."
+msgstr ""
+
+msgid "<option>--multilib</option>"
+msgstr ""
+
+msgid ""
+"Configure the installed system for multilib packages (that is, to allow "
+"installing 32-bit packages on a 64-bit system) and install packages "
+"specified in this section as such."
+msgstr ""
+
+msgid ""
+"Normally, on a 64-bit system, only packages for this architecture (marked as "
+"<literal>x86_64</literal>) and packages for all architectures (marked as "
+"<literal>noarch</literal>) would be installed. When you use this option, "
+"packages for 32-bit systems (marked as <literal>i686</literal>) will be "
+"automatically installed as well, if available."
+msgstr ""
+
+msgid ""
+"This only applies to packages explicitly specified in the "
+"<command>%packages</command> section. Packages which are only being "
+"installed as dependencies without being specified in the Kickstart file will "
+"only be installed in architecture versions in which they are needed, even if "
+"they are available for more architectures."
+msgstr ""
+
+msgid "Options for Specific Package Groups"
+msgstr ""
+
+msgid ""
+"The options in this list only apply to a single package group. Instead of "
+"using them at the <command>%packages</command> command in the Kickstart "
+"file, append them to the group name. For example:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>%packages</command>\n"
+"@Graphical Internet --optional\n"
+"<command>%end</command>\n"
+"			"
+msgstr ""
+
+msgid "<option>--nodefaults</option>"
+msgstr ""
+
+msgid ""
+"Only install the group's mandatory packages, not the default selections."
+msgstr ""
+
+msgid "<option>--optional</option>"
+msgstr ""
+
+msgid ""
+"Install packages marked as optional in the group definition in the "
+"<filename>comps.xml</filename> file, in addition to installing the default "
+"selections."
+msgstr ""
+
+msgid ""
+"Note that some package groups, such as <literal>Scientific Support</"
+"literal>, do not have any mandatory or default packages specified - only "
+"optional packages. In this case the <option>--optional</option> option must "
+"always be used, otherwise no packages from this group will be installed."
+msgstr ""
+
+msgid "%pre (optional) - Pre-installation Script"
+msgstr ""
+
+msgid ""
+"You can add commands to run on the system immediately after the Kickstart "
+"file has been parsed, but before the installation begins. This section must "
+"be placed towards the end of the Kickstart file, after the actual Kickstart "
+"commands, and must start with <command>%pre</command> and end with "
+"<command>%end</command>. If your Kickstart file also includes a "
+"<command>%post</command> section, the order in which the <command>%pre</"
+"command> and <command>%post</command> sections are included does not matter."
+msgstr ""
+
+msgid ""
+"You can access the network in the <command>%pre</command> section. However, "
+"the <firstterm>name service</firstterm> has not been configured at this "
+"point, so only IP addresses work, not URLs."
+msgstr ""
+
+msgid ""
+"The pre-installation script section of Kickstart <emphasis>cannot</emphasis> "
+"manage multiple install trees or source media. This information must be "
+"included for each created Kickstart file, as the pre-installation script "
+"occurs during the second stage of the installation process."
+msgstr ""
+
+msgid ""
+"Unlike the post-installation script, the pre-installation script is not run "
+"in the <systemitem>chroot</systemitem> environment."
+msgstr ""
+
+msgid ""
+"The following options can be used to change the behavior of pre-installation "
+"scripts. To use an option, append it to the <command>%pre</command> line at "
+"the beginning of the script. For example:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>%pre --interpreter=/usr/bin/python</command>\n"
+"--- Python script omitted --\n"
+"<command>%end</command>\n"
+"		"
+msgstr ""
+
+msgid "<option>--interpreter=</option>"
+msgstr ""
+
+msgid ""
+"Allows you to specify a different scripting language, such as Python. Any "
+"scripting language available on the system can be used; in most cases, these "
+"will be <systemitem>/usr/bin/sh</systemitem>, <systemitem>/usr/bin/bash</"
+"systemitem>, and <systemitem>/usr/bin/python</systemitem>."
+msgstr ""
+
+msgid "<option>--erroronfail</option>"
+msgstr ""
+
+msgid ""
+"Display an error and halt the installation if the script fails. The error "
+"message will direct you to where the cause of the failure is logged."
+msgstr ""
+
+msgid "<option>--log=</option>"
+msgstr ""
+
+msgid "Logs the script's output into the specified log file. For example:"
+msgstr ""
+
+msgid "<command>%pre --log=/mnt/sysimage/root/ks-pre.log</command>"
+msgstr ""
+
+msgid ""
+"For an example of a pre-installation script, see <xref linkend=\"sect-"
+"kickstart-example-pre-script\" />."
+msgstr ""
+
+msgid "%post (optional) - Post-installation Script"
+msgstr ""
+
+msgid ""
+"You have the option of adding commands to run on the system once the "
+"installation is complete, but before the system is rebooted for the first "
+"time. This section must be placed towards the end of the Kickstart file, "
+"after the actual Kickstart commands, and must start with <command>%post</"
+"command> and end with <command>%end</command>. If your Kickstart file also "
+"includes a <command>%pre</command> section, the order of the <command>%pre</"
+"command> and <command>%post</command> sections does not matter."
+msgstr ""
+
+msgid ""
+"This section is useful for functions such as installing additional software "
+"or configuring an additional name server. The post-install script is run in "
+"a chroot environment, therefore, performing tasks such as copying scripts or "
+"RPM packages from the installation media do not work by default. You can "
+"change this behavior using the <option>--nochroot</option> option as "
+"described below."
+msgstr ""
+
+msgid ""
+"If you configured the network with static IP information, including a name "
+"server, you can access the network and resolve IP addresses in the "
+"<command>%post</command> section. If you configured the network for "
+"<systemitem>DHCP</systemitem>, the <filename>/etc/resolv.conf</filename> "
+"file has not been completed when the installation executes the "
+"<command>%post</command> section. You can access the network, but you cannot "
+"resolve IP addresses. Thus, if you are using <systemitem>DHCP</systemitem>, "
+"you must specify IP addresses in the <command>%post</command> section."
+msgstr ""
+
+msgid ""
+"The following options can be used to change the behavior of post-"
+"installation scripts. To use an option, append it to the <command>%post</"
+"command> line at the beginning of the script. For example:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>%post --interpreter=/usr/bin/python</command>\n"
+"--- Python script omitted --\n"
+"<command>%end</command>\n"
+"		"
+msgstr ""
+
+msgid ""
+"Allows you to specify a different scripting language, such as Python. For "
+"example:"
+msgstr ""
+
+msgid "<command>%post --interpreter=/usr/bin/python</command>"
+msgstr ""
+
+msgid ""
+"Any scripting language available on the system can be used; in most cases, "
+"these will be <systemitem>/usr/bin/sh</systemitem>, <systemitem>/usr/bin/"
+"bash</systemitem>, and <systemitem>/usr/bin/python</systemitem>."
+msgstr ""
+
+msgid "<option>--nochroot</option>"
+msgstr ""
+
+msgid ""
+"Allows you to specify commands that you would like to run outside of the "
+"chroot environment."
+msgstr ""
+
+msgid ""
+"The following example copies the file <filename>/etc/resolv.conf</filename> "
+"to the file system that was just installed."
+msgstr ""
+
+msgid ""
+"\n"
+"<command>%post --nochroot</command>\n"
+"cp /etc/resolv.conf /mnt/sysimage/etc/resolv.conf\n"
+"<command>%end</command>\n"
+"					"
+msgstr ""
+
+msgid ""
+"Logs the script's output into the specified log file. Note that the path of "
+"the log file must take into account whether or not you use the <option>--"
+"nochroot</option> option. For example, without <option>--nochroot</option>:"
+msgstr ""
+
+msgid "<command>%post --log=/root/ks-post.log</command>"
+msgstr ""
+
+msgid "with <option>--nochroot</option>:"
+msgstr ""
+
+msgid ""
+"<command>%post --nochroot --log=/mnt/sysimage/root/ks-post.log</command>"
+msgstr ""
+
+msgid ""
+"For an example of a post-installation script, see <xref linkend=\"sect-"
+"kickstart-example-post-script\" />."
+msgstr ""
+
+msgid "Example Kickstart Configurations"
+msgstr ""
+
+msgid "Advanced Partitioning Example"
+msgstr ""
+
+msgid ""
+"The following is an integrated example showing the <command>clearpart</"
+"command>, <command>zerombr</command>, <command>part</command>, "
+"<command>raid</command>, <command>volgroup</command>, and <command>logvol</"
+"command> Kickstart options in action:"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>clearpart  --drives=hda,hdc</command>\n"
+"<command>zerombr</command>\n"
+"# Raid 1 IDE config \n"
+"<command>part raid.11 --size 1000  --asprimary --ondrive=hda</command> \n"
+"<command>part raid.12 --size 1000  --asprimary --ondrive=hda</command>\n"
+"<command>part raid.13 --size 2000  --asprimary --ondrive=hda</command>\n"
+"<command>part raid.14 --size 8000              --ondrive=hda</command>\n"
+"<command>part raid.15 --size 16384 --grow      --ondrive=hda</command>   \n"
+"<command>part raid.21 --size 1000  --asprimary --ondrive=hdc</command>\n"
+"<command>part raid.22 --size 1000  --asprimary --ondrive=hdc</command>\n"
+"<command>part raid.23 --size 2000  --asprimary --ondrive=hdc</command>\n"
+"<command>part raid.24 --size 8000              --ondrive=hdc</command>\n"
+"<command>part raid.25 --size 16384 --grow      --ondrive=hdc</command>\n"
+"\n"
+"# You can add --spares=x  \n"
+"<command>raid /     --fstype xfs  --device root  --level=RAID1 raid.11 raid."
+"21</command>\n"
+"<command>raid /safe --fstype xfs  --device safe  --level=RAID1 raid.12 raid."
+"22</command>\n"
+"<command>raid swap  --fstype swap --device swap  --level=RAID1 raid.13 raid."
+"23</command>\n"
+"<command>raid /usr  --fstype xfs  --device usr   --level=RAID1 raid.14 raid."
+"24</command>\n"
+"<command>raid pv.01 --fstype xfs  --device pv.01 --level=RAID1 raid.15 raid."
+"25</command>\n"
+"\n"
+"# LVM configuration so that we can resize /var and /usr/local later\n"
+"<command>volgroup sysvg pv.01</command>\n"
+"<command>logvol /var           --vgname=sysvg --size=8000     --name=var</"
+"command> \n"
+"<command>logvol /var/freespace --vgname=sysvg --size=8000     --name="
+"freespacetouse</command>\n"
+"<command>logvol /usr/local     --vgname=sysvg --size=1 --grow --name="
+"usrlocal</command>\n"
+"				"
+msgstr ""
+
+msgid ""
+"This advanced example implements LVM over RAID, as well as the ability to "
+"resize various directories for future growth."
+msgstr ""
+
+msgid ""
+"First, the <command>clearpart</command> command is used on drives "
+"<systemitem>hda</systemitem> and <systemitem>hdc</systemitem> to wipe them. "
+"The <command>zerombr</command> command initializes unused partition tables."
+msgstr ""
+
+msgid ""
+"Then, the two drives are partitioned to prepare them for RAID configuration. "
+"Each drive is divided into five partitions, and each drive is partitioned "
+"into an identical layout."
+msgstr ""
+
+msgid ""
+"The next part uses these pairs of physical partitions to create a software "
+"RAID device with RAID1 level (mirroring). The first four RAID devices are "
+"used for <filename>/</filename> (root), <filename>/safe</filename>, "
+"<systemitem>swap</systemitem> and <filename>/usr</filename>. The fifth, "
+"largest pair of partitions is named <literal>pv.01</literal> and will be "
+"used in the following part as a physical volume for LVM."
+msgstr ""
+
+msgid ""
+"Finally, the last set of commands first creates a volume group named "
+"<literal>sysvg</literal> on the <literal>pv.01</literal> physical volume. "
+"Then, three logical volumes (<literal>/var</literal>, <literal>/var/"
+"freespace</literal> and <literal>/usr/local</literal>) are created and added "
+"to the <literal>sysvg</literal> volume group. The <literal>/var</literal> "
+"and <literal>/var/freespace</literal> volumes have a set size of 8 GB, and "
+"the <literal>/usr/local</literal> volume uses the <option>--grow</option> "
+"option to fill all remaining available space."
+msgstr ""
+
+msgid ""
+"The above example uses identifiers <systemitem>hda</systemitem> and "
+"<systemitem>hdc</systemitem> to identify disk drives. You should use unique "
+"identifiers, such as a disk labels or an UUIDs, to identify disk drives. See "
+"the note in introduction to this appendix."
+msgstr ""
+
+msgid "Example Pre-installation Script"
+msgstr ""
+
+msgid "The following is an example <command>%pre</command> section:"
+msgstr ""
+
+msgid "Sample %pre Script"
+msgstr ""
+
+msgid ""
+"\n"
+"<command>%pre</command>\n"
+"#!/bin/sh\n"
+"hds=\"\"\n"
+"mymedia=\"\"\n"
+"for file in /proc/ide/h* do\n"
+"mymedia=`cat $file/media`\n"
+"if [ $mymedia == \"disk\" ] ; then\n"
+"hds=\"$hds `basename $file`\"\n"
+"fi\n"
+"done \n"
+"set $hds\n"
+"numhd=`echo $#`\n"
+"drive1=`echo $hds | cut -d' ' -f1`\n"
+"drive2=`echo $hds | cut -d' ' -f2`\n"
+"\n"
+"#Write out partition scheme based on whether there are 1 or 2 hard drives  \n"
+"if [ $numhd == \"2\" ] ; then\n"
+"#2 drives\n"
+"echo \"#partitioning scheme generated in %pre for 2 drives\" &gt; /tmp/part-"
+"include\n"
+"echo \"clearpart --all\" &gt;&gt; /tmp/part-include\n"
+"echo \"part /boot --fstype xfs --size 75 --ondisk hda\" &gt;&gt; /tmp/part-"
+"include\n"
+"echo \"part / --fstype xfs --size 1 --grow --ondisk hda\" &gt;&gt; /tmp/part-"
+"include\n"
+"echo \"part swap --recommended --ondisk $drive1\" &gt;&gt; /tmp/part-include\n"
+"echo \"part /home --fstype xfs --size 1 --grow --ondisk hdb\" &gt;&gt; /tmp/"
+"part-include\n"
+"else\n"
+"#1 drive\n"
+"echo \"#partitioning scheme generated in %pre for 1 drive\" &gt; /tmp/part-"
+"include\n"
+"echo \"clearpart --all\" &gt;&gt; /tmp/part-include\n"
+"echo \"part /boot --fstype xfs --size 75\" &gt;&gt; /tmp/part-include\n"
+"echo \"part swap --recommended\" &gt;&gt; /tmp/part-include\n"
+"echo \"part / --fstype xfs --size 2048\" &gt;&gt; /tmp/part-include\n"
+"echo \"part /home --fstype xfs --size 2048 --grow\" &gt;&gt; /tmp/part-"
+"include\n"
+"fi\n"
+"<command>%end</command>\n"
+"				"
+msgstr ""
+
+msgid ""
+"This script determines the number of hard drives in the system and writes a "
+"text file with a different partitioning scheme depending on whether it has "
+"one or two drives. Instead of having a set of partitioning commands in the "
+"Kickstart file, include the following line:"
+msgstr ""
+
+msgid "<command>%include /tmp/part-include</command>"
+msgstr ""
+
+msgid "The partitioning commands selected in the script will be used."
+msgstr ""
+
+msgid "Example Post-installation Script"
+msgstr ""
+
+msgid "The following is an example <command>%post</command> section:"
+msgstr ""
+
+msgid "Sample %post Script"
+msgstr ""
+
+msgid ""
+"\n"
+"# Start of the %post section with logging into /root/ks-post.log\n"
+"<command>%post --log=/root/ks-post.log</command>\n"
+"\n"
+"# Mount an NFS share\n"
+"mkdir /mnt/temp\n"
+"mount -o nolock 10.10.0.2:/usr/new-machines /mnt/temp\n"
+"openvt -s -w -- /mnt/temp/runme\n"
+"umount /mnt/temp\n"
+"\n"
+"# End of the %post section\n"
+"<command>%end</command>"
+msgstr ""
+
+msgid ""
+"The above example mounts an NFS share and executes a script named "
+"<filename>runme</filename> located at <filename>/usr/new-machines/</"
+"filename> on the share. Note that NFS file locking is <emphasis>not</"
+"emphasis> supported while in Kickstart mode, therefore the <option>-o "
+"nolock</option> option is required."
+msgstr ""
+

@@ -1,0 +1,931 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-06-04 12:55+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+msgid "An Introduction to Disk Partitions"
+msgstr ""
+
+msgid ""
+"This appendix is not necessarily applicable to architectures other than "
+"AMD64 and Intel&nbsp;64. However, the general concepts mentioned here may "
+"apply."
+msgstr ""
+
+msgid ""
+"This section discusses basic disk concepts, disk repartitioning strategies, "
+"the partition naming scheme used by Linux systems, and related topics."
+msgstr ""
+
+msgid ""
+"If you are comfortable with disk partitions, you can skip ahead to <xref "
+"linkend=\"sect-disk-partitions-making-room\" /> for more information on the "
+"process of freeing up disk space to prepare for a &PRODUCT; installation."
+msgstr ""
+
+msgid "Hard Disk Basic Concepts"
+msgstr ""
+
+msgid ""
+"Hard disks perform a very simple function - they store data and reliably "
+"retrieve it on command."
+msgstr ""
+
+msgid ""
+"When discussing issues such as disk partitioning, it is important to have a "
+"understanding of the underlying hardware; however, since the theory is very "
+"complicated and expansive, only the basic concepts will be explained here. "
+"This appendix uses a set of simplified diagrams of a disk drive to help "
+"explain what is the process and theory behind partitions."
+msgstr ""
+
+msgid ""
+"<xref linkend=\"figu-partitions-unused-drive\" />, shows a brand-new, unused "
+"disk drive."
+msgstr ""
+
+msgid "An Unused Disk Drive"
+msgstr ""
+
+msgid "File Systems"
+msgstr ""
+
+msgid ""
+"To store data on a disk drive, it is necessary to <firstterm>format</"
+"firstterm> the disk drive first. Formatting (usually known as \"making a "
+"<firstterm>file system</firstterm>\") writes information to the drive, "
+"creating order out of the empty space in an unformatted drive."
+msgstr ""
+
+msgid "Disk Drive with a File System"
+msgstr ""
+
+msgid ""
+"As <xref linkend=\"figu-partitions-formatted-drive\" />, implies, the order "
+"imposed by a file system involves some trade-offs:"
+msgstr ""
+
+msgid ""
+"A small percentage of the driver's available space is used to store file "
+"system-related data and can be considered as overhead."
+msgstr ""
+
+msgid ""
+"A file system splits the remaining space into small, consistently-sized "
+"segments. For Linux, these segments are known as <firstterm>blocks</"
+"firstterm>. <footnote> <para> Blocks really <emphasis>are</emphasis> "
+"consistently sized, unlike our illustrations. Keep in mind, also, that an "
+"average disk drive contains thousands of blocks. The picture is simplified "
+"for the purposes of this discussion. </para> </footnote>"
+msgstr ""
+
+msgid ""
+"Note that there is no single, universal file system. As <xref linkend=\"figu-"
+"partitions-different-file-system\" />, shows, a disk drive may have one of "
+"many different file systems written on it. Different file systems tend to be "
+"incompatible; that is, an operating system that supports one file system (or "
+"a handful of related file system types) may not support another. However, "
+"&PRODUCT; supports a wide variety of file systems (including many commonly "
+"used by other operating systems such as Microsoft Windows), making data "
+"interchange between different file systems easy."
+msgstr ""
+
+msgid "Disk Drive with a Different File System"
+msgstr ""
+
+msgid ""
+"Writing a file system to disk is only the first step. The goal of this "
+"process is to actually <emphasis>store</emphasis> and <emphasis>retrieve</"
+"emphasis> data. The figure below shows a drive disk after some data have "
+"been written to it:"
+msgstr ""
+
+msgid "Disk Drive with Data Written to It"
+msgstr ""
+
+msgid ""
+"As <xref linkend=\"figu-partitions-drive-with-data\" />, shows, some of the "
+"previously-empty blocks are now holding data. However, by just looking at "
+"this picture, we cannot determine exactly how many files reside on this "
+"drive. There may only be one file or many, as all files use at least one "
+"block and some files use multiple blocks. Another important point to note is "
+"that the used blocks do not have to form a contiguous region; used and "
+"unused blocks may be interspersed. This is known as "
+"<firstterm>fragmentation</firstterm>. Fragmentation can play a part when "
+"attempting to resize an existing partition."
+msgstr ""
+
+msgid ""
+"As with most computer-related technologies, disk drives changed over time "
+"after their introduction. In particular, they got bigger. Not larger in "
+"physical size, but bigger in their capacity to store information. And, this "
+"additional capacity drove a fundamental change in the way disk drives were "
+"used."
+msgstr ""
+
+msgid "Partitions: Turning One Drive Into Many"
+msgstr ""
+
+msgid ""
+"Disk drives can be divided into <firstterm>partitions</firstterm>. Each "
+"partition can be accessed as if it was a separate disk. This is done through "
+"the addition of a <firstterm>partition table</firstterm>."
+msgstr ""
+
+msgid ""
+"There are several reasons for allocating disk space into separate disk "
+"partitions, for example:"
+msgstr ""
+
+msgid "Logical separation of the operating system data from the user data"
+msgstr ""
+
+msgid "Ability to use different file systems"
+msgstr ""
+
+msgid "Ability to run multiple operating systems on one machine"
+msgstr ""
+
+msgid ""
+"There are currently two partitioning layout standards for physical hard "
+"disks: Master Boot Record (<acronym>MBR</acronym>) and GUID Partition Table "
+"(<acronym>GPT</acronym>). <acronym>MBR</acronym> is an older method of disk "
+"partitioning used with BIOS-based computers. <acronym>GPT</acronym> is a "
+"newer partitioning layout that is a part of the Unified Extensible Firmware "
+"Interface (<acronym>UEFI</acronym>). This section and <xref linkend=\"sect-"
+"disk-partitions-extended\" /> mainly describe the <firstterm>Master Boot "
+"Record</firstterm> (<acronym>MBR</acronym>) disk partitioning scheme. For "
+"information about the <firstterm>GUID Partition Table</firstterm> "
+"(<acronym>GPT</acronym>) partitioning layout, see <xref linkend=\"sect-disk-"
+"partitioning-guid-partition-table\" />."
+msgstr ""
+
+msgid ""
+"While the diagrams in this chapter show the partition table as being "
+"separate from the actual disk drive, this is not entirely accurate. In "
+"reality, the partition table is stored at the very start of the disk, before "
+"any file system or user data. But for clarity, they are separate in our "
+"diagrams."
+msgstr ""
+
+msgid "Disk Drive with Partition Table"
+msgstr ""
+
+msgid ""
+"As <xref linkend=\"figu-partitions-partition-table\" /> shows, the partition "
+"table is divided into four sections or four <firstterm>primary</firstterm> "
+"partitions. A primary partition is a partition on a hard drive that can "
+"contain only one logical drive (or section). Each section can hold the "
+"information necessary to define a single partition, meaning that the "
+"partition table can define no more than four partitions."
+msgstr ""
+
+msgid ""
+"Each partition table entry contains several important characteristics of the "
+"partition:"
+msgstr ""
+
+msgid "The points on the disk where the partition starts and ends"
+msgstr ""
+
+msgid "Whether the partition is \"active\""
+msgstr ""
+
+msgid "The partition's type"
+msgstr ""
+
+msgid ""
+"The starting and ending points define the partition's size and location on "
+"the disk. The \"active\" flag is used by some operating systems' boot "
+"loaders. In other words, the operating system in the partition that is "
+"marked \"active\" is booted."
+msgstr ""
+
+msgid ""
+"The type is a number that identifies the partition's anticipated usage. Some "
+"operating systems use the partition type to denote a specific file system "
+"type, to flag the partition as being associated with a particular operating "
+"system, to indicate that the partition contains a bootable operating system, "
+"or some combination of the three."
+msgstr ""
+
+msgid ""
+"See <xref linkend=\"figu-partitions-single-part\" /> for an example of a "
+"disk drive with single partition."
+msgstr ""
+
+msgid "Disk Drive With Single Partition"
+msgstr ""
+
+msgid ""
+"The single partition in this example is labeled as <literal>DOS</literal>. "
+"This label shows the <emphasis>partition type</emphasis>, with <literal>DOS</"
+"literal> being one of the most common ones. The table below shows a list of "
+"some of the commonly used partition types and hexadecimal numbers used to "
+"represent them."
+msgstr ""
+
+msgid "Partition Types"
+msgstr ""
+
+msgid "Partition Type"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+# translation auto-copied from project system-config-printer, version master, document system-config-printer
+#, fuzzy
+msgid "Empty"
+msgstr "Gol"
+
+msgid "00"
+msgstr ""
+
+msgid "Novell Netware 386"
+msgstr ""
+
+msgid "65"
+msgstr ""
+
+msgid "DOS 12-bit FAT"
+msgstr ""
+
+msgid "01"
+msgstr ""
+
+msgid "PIC/IX"
+msgstr ""
+
+msgid "75"
+msgstr ""
+
+msgid "XENIX root"
+msgstr ""
+
+msgid "02"
+msgstr ""
+
+msgid "Old MINIX"
+msgstr ""
+
+msgid "80"
+msgstr ""
+
+msgid "XENIX usr"
+msgstr ""
+
+msgid "03"
+msgstr ""
+
+msgid "Linux/MINUX"
+msgstr ""
+
+msgid "81"
+msgstr ""
+
+msgid "DOS 16-bit &lt;=32M"
+msgstr ""
+
+msgid "04"
+msgstr ""
+
+msgid "Linux swap"
+msgstr ""
+
+msgid "82"
+msgstr ""
+
+# translation auto-copied from project anaconda, version rhel6-branch, document anaconda
+#, fuzzy
+msgid "Extended"
+msgstr "Extins"
+
+msgid "05"
+msgstr ""
+
+msgid "Linux native"
+msgstr ""
+
+msgid "83"
+msgstr ""
+
+msgid "DOS 16-bit &gt;=32"
+msgstr ""
+
+msgid "06"
+msgstr ""
+
+msgid "Linux extended"
+msgstr ""
+
+msgid "85"
+msgstr ""
+
+msgid "OS/2 HPFS"
+msgstr ""
+
+msgid "07"
+msgstr ""
+
+msgid "Amoeba"
+msgstr ""
+
+msgid "93"
+msgstr ""
+
+msgid "AIX"
+msgstr ""
+
+msgid "08"
+msgstr ""
+
+msgid "Amoeba BBT"
+msgstr ""
+
+msgid "94"
+msgstr ""
+
+msgid "AIX bootable"
+msgstr ""
+
+msgid "09"
+msgstr ""
+
+msgid "BSD/386"
+msgstr ""
+
+msgid "a5"
+msgstr ""
+
+msgid "OS/2 Boot Manager"
+msgstr ""
+
+msgid "0a"
+msgstr ""
+
+msgid "OpenBSD"
+msgstr ""
+
+msgid "a6"
+msgstr ""
+
+msgid "Win95 FAT32"
+msgstr ""
+
+msgid "0b"
+msgstr ""
+
+msgid "NEXTSTEP"
+msgstr ""
+
+msgid "a7"
+msgstr ""
+
+msgid "Win95 FAT32 (LBA)"
+msgstr ""
+
+msgid "0c"
+msgstr ""
+
+msgid "BSDI fs"
+msgstr ""
+
+msgid "b7"
+msgstr ""
+
+msgid "Win95 FAT16 (LBA)"
+msgstr ""
+
+msgid "0e"
+msgstr ""
+
+msgid "BSDI swap"
+msgstr ""
+
+msgid "b8"
+msgstr ""
+
+msgid "Win95 Extended (LBA)"
+msgstr ""
+
+msgid "0f"
+msgstr ""
+
+msgid "Syrinx"
+msgstr ""
+
+msgid "c7"
+msgstr ""
+
+msgid "Venix 80286"
+msgstr ""
+
+msgid "40"
+msgstr ""
+
+msgid "CP/M"
+msgstr ""
+
+msgid "db"
+msgstr ""
+
+msgid "Novell"
+msgstr ""
+
+msgid "51"
+msgstr ""
+
+msgid "DOS access"
+msgstr ""
+
+msgid "e1"
+msgstr ""
+
+msgid "PReP Boot"
+msgstr ""
+
+msgid "41"
+msgstr ""
+
+msgid "DOS R/O"
+msgstr ""
+
+msgid "e3"
+msgstr ""
+
+msgid "GNU HURD"
+msgstr ""
+
+msgid "63"
+msgstr ""
+
+msgid "DOS secondary"
+msgstr ""
+
+msgid "f2"
+msgstr ""
+
+msgid "Novell Netware 286"
+msgstr ""
+
+msgid "64"
+msgstr ""
+
+msgid "BBT"
+msgstr ""
+
+msgid "ff"
+msgstr ""
+
+msgid "Partitions Within Partitions - An Overview of Extended Partitions"
+msgstr ""
+
+msgid ""
+"In case four partitions are insufficient for your needs, you can use "
+"<firstterm>extended partitions</firstterm> to create up additional "
+"partitions. You do this by setting the type of a partition to \"Extended\"."
+msgstr ""
+
+msgid ""
+"An extended partition is like a disk drive in its own right - it has its own "
+"partition table which points to one or more partitions (now called "
+"<firstterm>logical partitions</firstterm>, as opposed to the four "
+"<firstterm>primary partitions</firstterm>) contained entirely within the "
+"extended partition itself. <xref linkend=\"figu-partitions-extended\" />, "
+"shows a disk drive with one primary partition and one extended partition "
+"containing two logical partitions (along with some unpartitioned free space)."
+""
+msgstr ""
+
+msgid "Disk Drive With Extended Partition"
+msgstr ""
+
+msgid ""
+"As this figure implies, there is a difference between primary and logical "
+"partitions - there can only be four primary partitions, but there is no "
+"fixed limit to the number of logical partitions that can exist. However, due "
+"to the way in which partitions are accessed in Linux, no more than 12 "
+"logical partitions should be defined on a single disk drive."
+msgstr ""
+
+msgid "GUID Partition Table (GPT)"
+msgstr ""
+
+msgid ""
+"GUID Partition Table (<acronym>GPT</acronym>) is a newer partitioning scheme "
+"based on using Globally Unique Identifiers (<acronym>GUID</acronym>). "
+"<acronym>GPT</acronym> was developed to cope with limitations of the "
+"<acronym>MBR</acronym> partition table, especially with the limited maximum "
+"addressable storage space of a disk. Unlike <acronym>MBR</acronym>, which is "
+"unable to address storage space larger than 2.2 terabytes, <acronym>GPT</"
+"acronym> can be used with hard disks larger than this; the maximum "
+"addressable disk size is 2.2 zettabytes. In addition, <acronym>GPT</acronym> "
+"by default supports creating up to 128 primary partitions. This number could "
+"be extended by allocating more space to the partition table."
+msgstr ""
+
+msgid ""
+"<acronym>GPT</acronym> disks use logical block addressing (LBA) and the "
+"partition layout is as follows:"
+msgstr ""
+
+msgid ""
+"To preserve backward compatibility with MBR disks, the first sector "
+"(<acronym>LBA</acronym> 0) of <acronym>GPT</acronym> is reserved for "
+"<acronym>MBR</acronym> data and it is called <quote>protective MBR</quote>."
+msgstr ""
+
+msgid ""
+"The <firstterm>primary <acronym>GPT</acronym> header</firstterm> begins on "
+"the second logical block (<acronym>LBA</acronym> 1) of the device. The "
+"header contains the disk GUID, the location of the primary partition table, "
+"the location of the secondary GPT header, and CRC32 checksums of itself and "
+"the primary partition table. It also specifies the number of partition "
+"entries of the table."
+msgstr ""
+
+msgid ""
+"The <firstterm>primary <acronym>GPT</acronym> table</firstterm> includes, by "
+"default, 128 partition entries, each with an entry size 128 bytes, its "
+"partition type GUID and unique partition GUID."
+msgstr ""
+
+msgid ""
+"The <firstterm>secondary <acronym>GPT</acronym> table</firstterm> is "
+"identical to the primary <acronym>GPT</acronym> table. It is used mainly as "
+"a backup table for recovery in case the primary partition table is corrupted."
+""
+msgstr ""
+
+msgid ""
+"The <firstterm>secondary <acronym>GPT</acronym> header</firstterm> is "
+"located on the last logical sector of the disk and it can be used to recover "
+"<acronym>GPT</acronym> information in case the primary header is corrupted. "
+"It contains the disk GUID, the location of the secondary partition table and "
+"the primary <acronym>GPT</acronym> header, CRC32 checksums of itself and the "
+"secondary partition table, and the number of possible partition entries."
+msgstr ""
+
+msgid ""
+"There must be a BIOS boot partition for the boot loader to be installed "
+"successfully onto a disk that contains a GPT (GUID Partition Table). This "
+"includes disks initialized by <application>Anaconda</application>. If the "
+"disk already contains a BIOS boot partition, it can be reused."
+msgstr ""
+
+msgid "Strategies for Disk Repartitioning"
+msgstr ""
+
+msgid ""
+"There are several different ways that a disk can be repartitioned. This "
+"section discusses the following possible approaches:"
+msgstr ""
+
+msgid "Unpartitioned free space is available"
+msgstr ""
+
+msgid "An unused partition is available"
+msgstr ""
+
+msgid "Free space in an actively used partition is available"
+msgstr ""
+
+msgid ""
+"Note that this section discusses the aforementioned concepts only "
+"theoretically and it does not include any procedures showing how to perform "
+"disk repartitioning step-by-step. Such detailed information are beyond the "
+"scope of this document."
+msgstr ""
+
+msgid ""
+"Keep in mind that the following illustrations are simplified in the interest "
+"of clarity and do not reflect the exact partition layout that you encounter "
+"when actually installing &PRODUCT;."
+msgstr ""
+
+msgid "Using Unpartitioned Free Space"
+msgstr ""
+
+msgid ""
+"In this situation, the partitions already defined do not span the entire "
+"hard disk, leaving unallocated space that is not part of any defined "
+"partition. <xref linkend=\"figu-partitions-unused-space\" />, shows what "
+"this might look like."
+msgstr ""
+
+msgid "Disk Drive with Unpartitioned Free Space"
+msgstr ""
+
+msgid ""
+"In the above example, <wordasword>1</wordasword> represents an undefined "
+"partition with unallocated space and <wordasword>2</wordasword> represents a "
+"defined partition with allocated space."
+msgstr ""
+
+msgid ""
+"An unused hard disk also falls into this category. The only difference is "
+"that <emphasis>all</emphasis> the space is not part of any defined partition."
+""
+msgstr ""
+
+msgid ""
+"In any case, you can create the necessary partitions from the unused space. "
+"Unfortunately, this scenario, although very simple, is not very likely "
+"(unless you have just purchased a new disk just for &PRODUCT;). Most pre-"
+"installed operating systems are configured to take up all available space on "
+"a disk drive (see <xref linkend=\"sect-disk-partitions-active-partition\" /"
+">)."
+msgstr ""
+
+msgid "Using Space from an Unused Partition"
+msgstr ""
+
+msgid ""
+"In this case, maybe you have one or more partitions that you do not use any "
+"longer. <xref linkend=\"figu-partitions-unused-partition\" />, illustrates "
+"such a situation."
+msgstr ""
+
+msgid "Disk Drive with an Unused Partition"
+msgstr ""
+
+msgid ""
+"In the above example, <wordasword>1</wordasword> represents an unused "
+"partition and <wordasword>2</wordasword> represents reallocating an unused "
+"partition for Linux."
+msgstr ""
+
+msgid ""
+"In this situation, you can use the space allocated to the unused partition. "
+"You first must delete the partition and then create the appropriate Linux "
+"partition(s) in its place. You can delete the unused partition and manually "
+"create new partitions during the installation process."
+msgstr ""
+
+msgid "Using Free Space from an Active Partition"
+msgstr ""
+
+msgid ""
+"This is the most common situation. It is also, unfortunately, the hardest to "
+"handle. The main problem is that, even if you have enough free space, it is "
+"presently allocated to a partition that is already in use. If you purchased "
+"a computer with pre-installed software, the hard disk most likely has one "
+"massive partition holding the operating system and data."
+msgstr ""
+
+msgid ""
+"Aside from adding a new hard drive to your system, you have two choices:"
+msgstr ""
+
+msgid "<emphasis>Destructive Repartitioning</emphasis>"
+msgstr ""
+
+msgid ""
+"In this case, the single large partition is deleted and several smaller ones "
+"are created instead. Any data held in the original partition is destroyed. "
+"This means that making a complete backup is necessary. It is highly "
+"recommended to make two backups, use verification (if available in your "
+"backup software), and try to read data from the backup <emphasis>before</"
+"emphasis> deleting the partition."
+msgstr ""
+
+msgid ""
+"If an operating system was installed on that partition, it must be "
+"reinstalled if you want to use that system as well. Be aware that some "
+"computers sold with pre-installed operating systems may not include the "
+"installation media to reinstall the original operating system. You should "
+"check whether this applies to your system is <emphasis>before</emphasis> you "
+"destroy your original partition and its operating system installation."
+msgstr ""
+
+msgid ""
+"After creating a smaller partition for your existing operating system, you "
+"can reinstall software, restore your data, and start the installation. <xref "
+"linkend=\"figu-partitions-destructive-repartitioning\" /> shows this being "
+"done."
+msgstr ""
+
+msgid "Disk Drive Being Destructively Repartitioned"
+msgstr ""
+
+msgid ""
+"In the above example, <wordasword>1</wordasword> represents before and "
+"<wordasword>2</wordasword> represents after."
+msgstr ""
+
+msgid "Any data previously present in the original partition is lost."
+msgstr ""
+
+msgid "<emphasis>Non-Destructive Repartitioning</emphasis>"
+msgstr ""
+
+msgid ""
+"With non-destructive repartitioning you execute a program that makes a big "
+"partition smaller without losing any of the files stored in that partition. "
+"This method is usually reliable, but can be very time-consuming on large "
+"drives."
+msgstr ""
+
+msgid ""
+"While the process of non-destructive repartitioning is rather "
+"straightforward, there are three steps involved:"
+msgstr ""
+
+msgid "Compress and backup existing data"
+msgstr ""
+
+msgid "Resize the existing partition"
+msgstr ""
+
+msgid "Create new partition(s)"
+msgstr ""
+
+msgid "Each step is described further in more detail."
+msgstr ""
+
+msgid "Compress Existing Data"
+msgstr ""
+
+msgid ""
+"As the following figure shows, the first step is to compress the data in "
+"your existing partition. The reason for doing this is to rearrange the data "
+"such that it maximizes the available free space at the \"end\" of the "
+"partition."
+msgstr ""
+
+msgid "Disk Drive Being Compressed"
+msgstr ""
+
+msgid ""
+"This step is crucial. Without it, the location of the data could prevent the "
+"partition from being resized to the extent desired. Note also that, for one "
+"reason or another, some data cannot be moved. If this is the case (and it "
+"severely restricts the size of your new partition(s)), you may be forced to "
+"destructively repartition your disk."
+msgstr ""
+
+msgid "Resize the Existing Partition"
+msgstr ""
+
+msgid ""
+"<xref linkend=\"figu-partitions-resize-existing\" /> shows the actual "
+"resizing process. While the actual result of the resizing operation varies "
+"depending on the software used, in most cases the newly freed space is used "
+"to create an unformatted partition of the same type as the original "
+"partition."
+msgstr ""
+
+msgid "Disk Drive with Partition Resized"
+msgstr ""
+
+msgid ""
+"It is important to understand what the resizing software you use does with "
+"the newly freed space, so that you can take the appropriate steps. In the "
+"case illustrated here, it would be best to delete the new DOS partition and "
+"create the appropriate Linux partition(s)."
+msgstr ""
+
+msgid ""
+"As the previous step implied, it may or may not be necessary to create new "
+"partitions. However, unless your resizing software is Linux-aware, it is "
+"likely that you must delete the partition that was created during the "
+"resizing process. <xref linkend=\"figu-partitions-final-configuration\" />, "
+"shows this being done."
+msgstr ""
+
+msgid "Disk Drive with Final Partition Configuration"
+msgstr ""
+
+msgid "Partition Naming Schemes and Mount Points"
+msgstr ""
+
+msgid ""
+"A common source of confusion for users unfamiliar with Linux is the matter "
+"of how partitions are used and accessed by the Linux operating system. In "
+"DOS/Windows, it is relatively simple: Each partition gets a \"drive letter."
+"\" You then use the correct drive letter to refer to files and directories "
+"on its corresponding partition. This is entirely different from how Linux "
+"deals with partitions and, for that matter, with disk storage in general. "
+"This section describes the main principles of partition naming scheme and "
+"the way how partitions are accessed in &PRODUCT;."
+msgstr ""
+
+msgid "Partition Naming Scheme"
+msgstr ""
+
+msgid ""
+"Linux uses a naming scheme that is file-based, with file names in the form "
+"of <filename>/dev/<replaceable>xxyN</replaceable></filename>."
+msgstr ""
+
+msgid "Device and partition names consist of the following:"
+msgstr ""
+
+msgid "<filename>/dev/</filename>"
+msgstr ""
+
+msgid ""
+"This is the name of the directory in which all device files reside. Because "
+"partitions reside on hard disks, and hard disks are devices, the files "
+"representing all possible partitions reside in <filename>/dev/</filename>."
+msgstr ""
+
+msgid "<filename><replaceable>xx</replaceable></filename>"
+msgstr ""
+
+msgid ""
+"The first two letters of the partition name indicate the type of device on "
+"which the partition resides, usually <filename>sd</filename>."
+msgstr ""
+
+msgid "<filename><replaceable>y</replaceable></filename>"
+msgstr ""
+
+msgid ""
+"This letter indicates which device the partition is on. For example, "
+"<filename>/dev/sda</filename> for the first hard disk, <filename>/dev/sdb</"
+"filename> for the second, and so on."
+msgstr ""
+
+msgid "<filename><replaceable>N</replaceable></filename>"
+msgstr ""
+
+msgid ""
+"The final number denotes the partition. The first four (primary or extended) "
+"partitions are numbered <filename>1</filename> through <filename>4</"
+"filename>. Logical partitions start at <filename>5</filename>. So, for "
+"example, <filename>/dev/sda3</filename> is the third primary or extended "
+"partition on the first hard disk, and <filename>/dev/sdb6</filename> is the "
+"second logical partition on the second hard disk."
+msgstr ""
+
+msgid ""
+"Even if your system can identify and refer to all types of disk partitions, "
+"it might not be able to <emphasis>read</emphasis> the file system and "
+"therefore access stored data on every partition type. However, in many "
+"cases, it is possible to successfully access data on a partition dedicated "
+"to another operating system."
+msgstr ""
+
+msgid "Disk Partitions and Mount Points"
+msgstr ""
+
+msgid ""
+"Each partition is used to form part of the storage necessary to support a "
+"single set of files and directories. This is done by associating a partition "
+"with a directory through a process known as <firstterm>mounting</firstterm>. "
+"Mounting a partition makes its storage available starting at the specified "
+"directory (known as a <firstterm>mount point</firstterm>)."
+msgstr ""
+
+msgid ""
+"For example, if partition <filename>/dev/sda5</filename> is mounted on "
+"<filename>/usr/</filename>, that would mean that all files and directories "
+"under <filename>/usr/</filename> physically reside on <filename>/dev/sda5</"
+"filename>. So the file <filename>/usr/share/doc/FAQ/txt/Linux-FAQ</filename> "
+"would be stored on <filename>/dev/sda5</filename>, while the file <filename>/"
+"etc/gdm/custom.conf</filename> would not."
+msgstr ""
+
+msgid ""
+"Continuing the example, it is also possible that one or more directories "
+"below <filename>/usr/</filename> would be mount points for other partitions. "
+"For instance, a partition (say, <filename>/dev/sda7</filename>) could be "
+"mounted on <filename>/usr/local/</filename>, meaning that <filename>/usr/"
+"local/man/whatis</filename> would then reside on <filename>/dev/sda7</"
+"filename> rather than <filename>/dev/sda5</filename>."
+msgstr ""
+
+msgid "How Many Partitions?"
+msgstr ""
+
+msgid ""
+"At this point in the process of preparing to install &PRODUCT;, you should "
+"give some consideration to the number and size of the partitions to be used "
+"by your new operating system. However, there is no one right answer to this "
+"question. It depends on your needs and requirements."
+msgstr ""
+
+msgid ""
+"Unless you have a reason for doing otherwise, you should <emphasis>at least</"
+"emphasis> create the following partitions: <filename>swap</filename>, "
+"<filename>/boot/</filename>, and <filename>/</filename> (root)."
+msgstr ""
+
+msgid ""
+"See <xref linkend=\"sect-installation-gui-manual-partitioning-recommended\" /"
+"> for more information about the recommended partitioning scheme."
+msgstr ""
+

@@ -1,0 +1,395 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Installation"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Built-in Help in the Graphical Installer"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Each screen in the installer's graphical interface and in the "
+"<application>Initial Setup</application> utility now has a <guilabel>Help</"
+"guilabel> button in the top right corner. Clicking this button opens the "
+"section of the <citetitle>Fedora Installation Guide</citetitle> relevant to "
+"the current screen using the <application>Yelp</application> help browser."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The help is only available in the English language."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "zRAM Swap Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Anaconda</application> installer now supports "
+"<systemitem>swap</systemitem> on zRAM during the installation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"zRAM is a standard block device with compressed contents. Placing "
+"<systemitem>swap</systemitem> into such a device during the installation "
+"allows the installer to store more data in RAM instead of in the hard drive. "
+"This is especially helpful on low-memory systems; on these systems, the "
+"installation can be performed much faster with this feature enabled."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This feature is automatically enabled if <application>Anaconda</application> "
+"detects 2 GB or less memory, and disabled on systems with more memory. To "
+"force zRAM swap on or off, use the <option>inst.zram=on</option> or "
+"<option>inst.zram=off</option> boot option within the boot menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specific limits, numbers and way of implementation may be changed in the "
+"future."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Changes in Boot Options"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A <firstterm>boot option</firstterm> is used to modify the installer's "
+"behavior using the boot command line. The following boot options have been "
+"added in Fedora 21:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>inst.zram=</option>: Use this option to force zRAM swap on "
+"(<option>inst.zram=on</option>) or off (<option>inst.zram=off</option>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>inst.dnf</option>: Use the experimental <application>DNF</"
+"application> backend for package installation instead of <application>YUM</"
+"application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>inst.memcheck</option>: Perform a check at the beginning of the "
+"installation to determine if there is enough available RAM. If there is not "
+"enough memory detected, the installation will stop with an error message. "
+"This option is enabled by default; use <option>inst.memcheck=0</option> to "
+"disable it."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Changes in Anaconda Command Line Options"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Anaconda</application> command line options are used when "
+"running the installer from a terminal within an already installed system, as "
+"for example, when installing into a disk image."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The built-in help available through the <command>anaconda -h</command> "
+"command now provides descriptions for all available commands."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>--memcheck</option>: Check if the system has sufficient RAM to "
+"complete the installation and abort the installation if it does not. This "
+"check is approximate. Memory usage during installation depends on the "
+"package selection, user interface (graphical/text) and other parameters."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>--nomemcheck</option>: Do not check if the system has enough memory "
+"to complete the installation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>--leavebootorder</option>: Boot drives in their existing order - "
+"used to override the default of booting into the newly installed drive on "
+"IBM Power Systems servers and EFI systems. This is useful for systems that, "
+"for example, should network boot first before falling back to a local boot."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>--extlinux</option>: Use <application>extlinux</application> as the "
+"boot loader. Note that there is no attempt to check whether this will work "
+"for your platform, which means your system may be unable to boot after "
+"completing the installation if you use this option."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>--dnf</option>: Use the experimental <application>DNF</application> "
+"package management backend to replace the default <application>YUM</"
+"application> package manager. See <ulink url=\"http://dnf.baseurl.org\" /> "
+"for more information about the DNF project."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Changes in Kickstart Syntax"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section provides a list of changes to <firstterm>Kickstart</firstterm> "
+"commands and options. A list of these changes can also be viewed using the "
+"following command on a Fedora system:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<prompt>$</prompt><command>ksverdiff -f F&PREVVER; -t F&PRODVER;</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This command will only work on Fedora &PRODVER; with the "
+"<package>pykickstart</package> package installed."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "New Commands and Options"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>fcoe --autovlan</command>: Enable automatic discovery of VLANs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>bootloader --disabled</command>: Do not attempt to install a boot "
+"loader. This option overrides all other boot loader configuration; all other "
+"boot loader options will be ignored and no boot loader packages will be "
+"installed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>network --interfacename=</command>: Specify a custom interface name "
+"for a VLAN device. This option should be used when the default name "
+"generated by the <option>--vlanid=</option> option is not desired, and it "
+"must always be used together with <option>--vlanid=</option>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>ostreesetup</command>: New optional command. Used for OSTree "
+"installations. Available options are:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>--osname=</option> (required): Management root for OS installation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<option>--remote=</option> (optional): Name of the remote repository."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<option>--url=</option> (required): Repository URL."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>--ref=</option> (required): Name of branch inside the repository."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<option>--nogpgcheck</option> (optional): Disable GPG key verification."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See <ulink url=\"https://wiki.gnome.org/action/show/Projects/OSTree\" /> for "
+"more information about OSTree."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>clearpart --disklabel=</command>: Create a custom disk label when "
+"relabeling disks."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>autopart --fstype=</command>: Specify a file system type (such as "
+"<systemitem>ext4</systemitem> or <systemitem>xfs</systemitem>) to replace "
+"the default when doing automatic partitioning."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>repo --install</command>: Writes the repository information into "
+"the <filename class=\"directory\">/etc/yum.repos.d/</filename> directory. "
+"This makes the repository configured in Kickstart available on the installed "
+"system as well."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Changes in the <command>%packages</command> section:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can now specify an <firstterm>environment</firstterm> to be installed in "
+"the <command>%packages</command> section by adding an environment name "
+"prefixed by <literal>@^</literal>. For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"%packages\n"
+"@core\n"
+"<emphasis>@^Infrastructure Server</emphasis>\n"
+"%end\n"
+"              "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <command>%packages --nocore</command> option can now be used to disable "
+"installing of the <literal>Core</literal> package group."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can now exclude the kernel from installing. This is done the same way as "
+"excluding any other package - by prefixing the package name with <literal>-</"
+"literal>:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"%packages\n"
+"@core\n"
+"<emphasis>-kernel</emphasis>\n"
+"%end\n"
+"              "
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Changes in Existing Commands and Options"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<command>volgroup --pesize=</command>: This option now does not have a "
+"default value in Kickstart. The default size of a new volume group's "
+"physical extents is now determined by the installer during both manual and "
+"Kickstart installation. This means that the behavior of Kickstart and manual "
+"installations is now the same. The previous default value for Kickstart "
+"installations was <literal>32768</literal>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Additional Changes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Software RAID configuration in the graphical user interface has been tweaked."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can now use the <keycap>+</keycap> and <keycap>-</keycap> keys as "
+"shortcuts in the manual partitioning screen in the graphical user interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <command>ksverdiff</command> utility (part of the <package>pykickstart</"
+"package> package) has a new option: <option>--listversions</option>. Use "
+"this option to list all available operating system versions which can be "
+"used as arguments for the <option>--from=</option> and <option>--to=</"
+"option> options."
+msgstr ""
+

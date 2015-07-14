@@ -1,0 +1,436 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-03-23 20:52+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Extending Red Hat Software Collections 1.1 Beta"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Extending the python27 and python33 &DSCL;s"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Red Hat Software Collections 1.1 Beta, the <application>scl</application> "
+"tool has been extended to support a macro "
+"<systemitem>%scl_package_override()</systemitem>, which allows for easier "
+"packaging of your own dependent &DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that even though the approach described below generally applies to "
+"every &DSCL; shipped with Red Hat Software Collections 1.1 Beta, there are "
+"specifics that depend on the &DSCL; you are extending."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The vt191 &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Below is a commented example of building a dependent &DSCL;. The &DSCL; is "
+"named <literal>vt191</literal> and contains the <package>versiontools</"
+"package> Python package version 1.9.1."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Note the following in the vt191 &DSCL; spec file:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The vt191 &DSCL; spec file has the following build dependency set:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "BuildRequires: %{scl_prefix_python}scldevel"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This expands to, for example, <package>python27-scldevel</package>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <package>python27-scldevel</package> package ships two important macros, "
+"<code>%scl_python</code> and <code>%scl_prefix_python</code>. Note that "
+"these macros are defined at the top of the spec file. The definitions are "
+"not required, they only provide a hint that the vt191 &DSCL; has been "
+"designed to be built on top of the python27 &DSCL;. They also serve as a "
+"fallback value."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To have a <filename>site-packages</filename> directory set up properly, use "
+"the value of the <code>%python27python_sitelib</code> macro and replace "
+"<code>python27</code> with <code>vt191</code>. Note that if you are building "
+"the &DSCL; with a different provider (for example, <filename>/opt/"
+"myorganization/</filename> instead of <filename>/opt/rh/</filename>), you "
+"will need to change these, too."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Because the <filename>/opt/rh/</filename> provider is used to install "
+"&DSCL;s provided by Red Hat, it is strongly recommended to use a different "
+"provider to avoid possible conflicts. See <xref linkend=\"sect-"
+"The_Software_Collection_Root_Directory\" /> for more information."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <package>vt191-build</package> subpackage has the following dependency "
+"set:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Requires: %{scl_prefix_python}scldevel"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This expands to, for example, <package>python27-scldevel</package>. The "
+"purpose of this dependency is to ensure that the macros are always present "
+"when building packages for the vt191 &DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <filename>enable</filename> scriptlet for the vt191 &DSCL; uses the "
+"following line:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ". scl_source enable %{scl_python}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This makes the Python &DSCL; start implicitly when the vt191 &DSCL; is "
+"started so that the user can only type <command>scl enable vt191 "
+"<replaceable>command</replaceable></command> instead of <command>scl enable "
+"python27 vt191 <replaceable>command</replaceable></command> to run "
+"<replaceable>command</replaceable> in the &DSCL; environment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The macro file <filename>macros.vt191-config</filename> calls the "
+"<code>%scl_package_override</code> function to properly override "
+"<code>%__os_install_post</code>, Python dependency generators, and certain "
+"Python-specific macros used in other packages' spec files."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"# define name of the scl\n"
+"%global scl vt191\n"
+"%scl_package %scl\n"
+"\n"
+"# Defaults for the values for the python27/python33 Software Collection. "
+"These\n"
+"# will be used when python27-scldevel (or python33-scldevel) is not in the\n"
+"# buildroot\n"
+"%{!?scl_python:%global scl_python python27}\n"
+"%{!?scl_prefix_python:%global scl_prefix_python %{scl_python}-}\n"
+"\n"
+"# Only for this build, you need to override default __os_install_post,\n"
+"# because the default one would find /opt/.../lib/python2.7/ and try\n"
+"# to bytecompile with the system /usr/bin/python2.7\n"
+"%global __os_install_post %{%{scl_python}_os_install_post}\n"
+"# Similarly, override __python_requires for automatic dependency generator\n"
+"%global __python_requires %{%{scl_python}_python_requires}\n"
+"\n"
+"# The directory for site packages for this Software Collection\n"
+"%global vt191_sitelib %(echo %{python27python_sitelib} | sed "
+"'s|%{scl_python}|%{scl}|')\n"
+"\n"
+"Summary: Package that installs %scl\n"
+"Name: %scl_name\n"
+"Version: 1\n"
+"Release: 1%{?dist}\n"
+"License: GPLv2+\n"
+"BuildRequires: scl-utils-build\n"
+"# Always make sure that there is the python27-sclbuild (or python33-"
+"sclbuild)\n"
+"# package in the buildroot\n"
+"BuildRequires: %{scl_prefix_python}scldevel\n"
+"# Require python27-python-devel, you will need macros from that package\n"
+"BuildRequires: %{scl_prefix_python}python-devel\n"
+"Requires: %{scl_prefix}python-versiontools\n"
+"\n"
+"%description\n"
+"This is the main package for %scl Software Collection.\n"
+"\n"
+"%package runtime\n"
+"Summary: Package that handles %scl Software Collection.\n"
+"Requires: scl-utils\n"
+"Requires: %{scl_prefix_python}runtime\n"
+"\n"
+"%description runtime\n"
+"Package shipping essential scripts to work with %scl Software Collection.\n"
+"\n"
+"%package build\n"
+"Summary: Package shipping basic build configuration\n"
+"Requires: scl-utils-build\n"
+"# Require python27-scldevel (or python33-scldevel) so that there is always "
+"access\n"
+"# to the %%scl_python and %%scl_prefix_python macros in builds for this "
+"Software\n"
+"# Collection\n"
+"Requires: %{scl_prefix_python}scldevel\n"
+"\n"
+"%description build\n"
+"Package shipping essential configuration macros to build %scl Software "
+"Collection.\n"
+"\n"
+"%install\n"
+"%scl_install\n"
+"\n"
+"# Create the enable scriptlet that:\n"
+"# - Adds an additional load path for the Python interpreter.\n"
+"# - Runs scl_source so that you can run:\n"
+"#     scl enable vt191 \"bash\"\n"
+"#   instead of:\n"
+"#     scl enable python27 vt191 \"bash\"\n"
+"\n"
+"cat &gt;&gt; %{buildroot}%{_scl_scripts}/enable &lt;&lt; EOF\n"
+". scl_source enable %{scl_python}\n"
+"export PYTHONPATH=%{vt191_sitelib}\\${PYTHONPATH:+:\\${PYTHONPATH}}\n"
+"EOF\n"
+"\n"
+"mkdir -p %{buildroot}%{vt191_sitelib}\n"
+"\n"
+"# - Enable Software Collection-specific bytecompilation macros from\n"
+"#   the python27-python-devel package.\n"
+"# - Also override the %%python_sitelib macro to point to the vt191 Software\n"
+"#   Collection.\n"
+"# - If you have architecture-dependent packages, you will also need to "
+"override\n"
+"#   the %%python_sitearch macro.\n"
+"\n"
+"cat &gt;&gt; %{buildroot}%{_root_sysconfdir}/rpm/macros.%{scl}-config "
+"&lt;&lt; EOF\n"
+"%%scl_package_override() %%{expand:%{?python27_os_install_post:%%global "
+"__os_install_post %%python27_os_install_post}\n"
+"%%global __python_requires %%python27_python_requires\n"
+"%%global __python_provides %%python27_python_provides\n"
+"%%global __python %python27__python\n"
+"%%global python_sitelib %vt191_sitelib\n"
+"%%global python2_sitelib %vt191_sitelib\n"
+"}\n"
+"EOF\n"
+"\n"
+"%files\n"
+"\n"
+"%files runtime\n"
+"%scl_files\n"
+"%vt191_sitelib\n"
+"\n"
+"%files build\n"
+"%{_root_sysconfdir}/rpm/macros.%{scl}-config\n"
+"\n"
+"%changelog\n"
+"* Wed Jan 22 2014 John Doe &lt;jdoe@example.com&gt; - 1-1\n"
+"- Initial package."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The python-versiontools Package"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Below is a commented example of the <package>python-versiontools</package> "
+"package spec file. Note the following in the spec file:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <code>BuildRequires</code> tags are prefixed with "
+"<code>%{?scl_prefix_python}</code> instead of <code>%{scl_prefix}</code>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <code>%install</code> section explictly specifies <code>--install-"
+"purelib</code>."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%{?scl:%scl_package python-versiontools}\n"
+"%{!?scl:%global pkg_name %{name}}\n"
+"\n"
+"%global pypi_name versiontools\n"
+"\n"
+"Name:           %{?scl_prefix}python-versiontools\n"
+"Version:        1.9.1\n"
+"Release:        1%{?dist}\n"
+"Summary:        Smart replacement for plain tuple used in __version__\n"
+"\n"
+"License:        LGPLv3\n"
+"URL:            https://launchpad.net/versiontools\n"
+"Source0:        http://pypi.python.org/packages/source/v/versiontools/"
+"versiontools-1.9.1.tar.gz\n"
+"\n"
+"BuildArch:      noarch\n"
+"BuildRequires:  %{?scl_prefix_python}python-devel\n"
+"BuildRequires:  %{?scl_prefix_python}python-setuptools\n"
+"%{?scl:BuildRequires: %{scl}-build %{scl}-runtime}\n"
+"%{?scl:Requires: %{scl}-runtime}\n"
+"\n"
+"%description\n"
+"Smart replacement for plain tuple used in __version__\n"
+"\n"
+"%prep\n"
+"%setup -q -n %{pypi_name}-%{version}\n"
+"\n"
+"%build\n"
+"%{?scl:scl enable %{scl} \"}\n"
+"%{__python} setup.py build\n"
+"%{?scl:\"}\n"
+"\n"
+"%install\n"
+"# Explicitly specify --install-purelib %{python_sitelib}, which is now "
+"overriden\n"
+"# to point to vt191, otherwise Python will try to install into the python27\n"
+"# Software Collection site-packages directory\n"
+"%{?scl:scl enable %{scl} \"}\n"
+"%{__python} setup.py install -O1 --skip-build --root %{buildroot} --install-"
+"purelib %{python_sitelib}\n"
+"%{?scl:\"}\n"
+"\n"
+"%files\n"
+"%{python_sitelib}/%{pypi_name}*\n"
+"\n"
+"%changelog\n"
+"* Wed Jan 22 2014 John Doe &lt;jdoe@example.com&gt; - 1.9.1-1\n"
+"- Built for vt191 SCL."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Building the vt191 &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To build the vt191 &DSCL;:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Install the <package>python27-scldevel</package> and <package>python27-"
+"python-devel</package> packages that are part of Red Hat Software "
+"Collections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Build <filename>vt191.spec</filename> and install the <package>vt191-"
+"runtime</package> and <package>vt191-build</package> packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Install the <package>python27-python-setuptools</package> package, which is "
+"a build requirement for <package>versiontools</package>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Build <filename>python-versiontools.spec</filename>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Testing the vt191 &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To test the vt191 &DSCL;:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Install the <package>vt191-python-versiontools</package> package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Run the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<computeroutput>$ </computeroutput><userinput>scl enable vt191 \"python -c "
+"'import versiontools; print(versiontools.__file__)'\"</userinput>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The output should contain the following line:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"/opt/rh/vt191/root/usr/lib/python2.7/site-packages/versiontools/__init__.pyc"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that the provider <filename>rh</filename> in the path may vary "
+"depending on your redefinition of the <code>%_scl_prefix</code> macro. See "
+"<xref linkend=\"sect-The_Software_Collection_Root_Directory\" /> for more "
+"information."
+msgstr ""
+

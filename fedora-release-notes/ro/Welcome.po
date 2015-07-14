@@ -1,0 +1,122 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Welcome to Fedora"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Wiki</primary> <secondary>Fedora</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>FAQ</primary> <secondary>Fedora</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Bug Reporting</primary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Help</primary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>Reporting</primary> <secondary>Bug and Feature Request</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can help the Fedora Project community continue to improve Fedora if you "
+"file bug reports and enhancement requests. Refer to <ulink url=\"http://"
+"fedoraproject.org/wiki/BugsAndFeatureRequests\">Bugs And Feature Requests</"
+"ulink>, on the Fedora wiki, for more information about bug and feature "
+"reporting. Thank you for your participation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To find out more general information about Fedora, refer to the following "
+"pages, on the Fedora wiki (<ulink url=\"http://fedoraproject.org/wiki/\" />):"
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"http://fedoraproject.org/wiki/Overview\">Fedora Overview</"
+"ulink>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<ulink url=\"http://fedoraproject.org/wiki/FAQ\">Fedora FAQ</ulink>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"http://fedoraproject.org/wiki/Communicate\">Help and "
+"Discussions</ulink>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<ulink url=\"http://fedoraproject.org/wiki/Join\">Participate in the Fedora "
+"Project</ulink>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Need Help?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are a number of places you can get assistance should you run into "
+"problems."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you run into a problem and would like some assistance, go to <ulink type="
+"\"http\" url=\"http://ask.fedoraproject.org\" />. Many answers are already "
+"there, but if you don't find yours, you can simply post a new question. This "
+"has the advantage that anyone else with the same problem can find the "
+"answer, too."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You may also find assistance on the <filename>#fedora</filename> channel on "
+"the IRC net <filename>irc.freenode.net</filename>. Keep in mind that the "
+"channel is populated by volunteers wanting to help, but folks knowledgeable "
+"about a specific topic might not always be available."
+msgstr ""
+

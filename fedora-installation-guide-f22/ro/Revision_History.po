@@ -1,0 +1,90 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-06-04 12:55+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+# translation auto-copied from project networking-guide, version f21, document pot/Revision_History
+msgid "Revision History"
+msgstr "Istoria reviziilor"
+
+msgid ""
+"Note that revision numbers relate to the edition of this manual, not to "
+"version numbers of Fedora."
+msgstr ""
+
+msgid "Petr"
+msgstr ""
+
+msgid "Bokoč"
+msgstr ""
+
+msgid "Fedora 22 Final release"
+msgstr ""
+
+msgid ""
+"References to <application>Yum</application> replaced with <application>DNF</"
+"application> (the new default package manager)"
+msgstr ""
+
+msgid ""
+"Updates in boot options: <option>inst.dnf</option> replaced with "
+"<option>inst.nodnf</option>, added <option>inst.kdump_addon=</option>"
+msgstr ""
+
+msgid ""
+"Updates in Kickstart: <command>%anaconda</command>, <command>%addon</"
+"command>, <command>sshkey</command>, <command>pwpolicy</command>"
+msgstr ""
+
+msgid "Added the <guilabel>Kdump</guilabel> screen to the GUI docs"
+msgstr ""
+
+msgid "Zach"
+msgstr ""
+
+msgid "Oglesby"
+msgstr ""
+
+msgid "Fixed Windows checksum steps, BZ#1175759"
+msgstr ""
+
+msgid ""
+"Fixes in Boot Options: inst.headless is deprecated, inst.askmethod moved "
+"from removed to Installation Source"
+msgstr ""
+
+msgid ""
+"Parts of the network boot setup chapter have been updated with correct URLs"
+msgstr ""
+
+msgid ""
+"Updates in Recommended Partitioning Scheme and Advice on Partitions in the "
+"Manual Partitioning section of the installation chapter"
+msgstr ""
+
+msgid "Publishing for Fedora 21"
+msgstr ""
+
+msgid "Pete"
+msgstr ""
+
+msgid "Travis"
+msgstr ""
+
+msgid "added info on media types"
+msgstr ""
+
+msgid "Publishing for Fedora 20"
+msgstr ""
+

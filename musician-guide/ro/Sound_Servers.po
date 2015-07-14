@@ -1,0 +1,457 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:06-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Software for Sound Cards"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"One of the techniques consistently used in computer science is abstraction. "
+"Abstraction is the process of creating a generic model for something (or "
+"some things) that are actually unique. The \"driver\" for a hardware device "
+"in a computer is one form of dealing with abstraction: the computer's "
+"software interacts with all sound cards in a similar way, and it is the "
+"driver which translates the universal instructions given by the software "
+"into specific instructions for operating that hardware device. Consider this "
+"real-world comparison: you know how to operate doors because of abstracted "
+"instructions. You don't know how to open and close every door that exists, "
+"but from the ones that you do know how to operate, your brain automatically "
+"creates abstracted instructions, like \"turn the handle,\" and \"push the "
+"door,\" which apply with all or most doors. When you see a new door, you "
+"have certain expectations about how it works, based on the abstract behavior "
+"of doors, and you quickly figure out how to operate that specific door with "
+"a simple visual inspection. The principle is the same with computer hardware "
+"drivers: since the computer already knows how to operate \"sound cards,\" it "
+"just needs a few simple instructions (the driver) in order to know how to "
+"operate any particular sound card."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "How Linux Deals with Audio Hardware"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Linux, the core of the operating system provides hardware drivers for "
+"most audio hardware. The hardware drivers, and the instructions that other "
+"software can use to connect to those drivers, are collectively called "
+"\"ALSA,\" which stands for \"Advanced Linux Sound Architecture.\" ALSA is "
+"the most direct way that software applications can interact with audio and "
+"MIDI hardware, and it used to be the most common way. However, in order to "
+"include all the features that a software application might want to use, ALSA "
+"is quite complex, and can be error-prone. For this and many other reasons, "
+"another level of abstraction is normally used, and this makes it easier for "
+"software applications to take advantage of the features they need."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sound Servers"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sound servers are programs that run \"in the background,\" meaning that they "
+"do not have a user interface. Sound servers provide a level of abstraction "
+"to automate some aspects of using ALSA, and to allow multiple applications "
+"to simultaneously access your audio hardware. The three sound servers "
+"discussed in this chapter have different goals and different features. The "
+"sound server you should use depends on what you are doing."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "PulseAudio"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem>PulseAudio</systemitem> is an advanced sound server, intended to "
+"make audio programming in Linux operating systems as easy as possible. The "
+"idea behind its design is that an audio application needs only to output "
+"audio to <systemitem>PulseAudio</systemitem>. <systemitem>PulseAudio</"
+"systemitem> will take care of the rest: choosing and controlling a "
+"particular device, adjusting the volume, working with other applications, "
+"and so on. <systemitem>PulseAudio</systemitem> even has the ability to use "
+"\"networked sound,\" which allows two computers using "
+"<systemitem>PulseAudio</systemitem> to communicate as though they were one "
+"computer - either computer can input from or output to either computer's "
+"audio hardware just as easily as its own audio hardware. This is all "
+"controlled within <systemitem>PulseAudio</systemitem>, so no further "
+"complication is added to the software."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Fedora Project's integration of <systemitem>PulseAudio</systemitem> as a "
+"vital part of the operating system has helped to ensure that audio "
+"applications can \"just work\" for most people under most circumstances. "
+"This has made it much easier for users to carry out basic audio tasks."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "<systemitem>JACK</systemitem> Audio Connection Kit"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <systemitem>JACK</systemitem> sound server offers fewer features than "
+"other sound servers but it is tailor-made to allow the functionality "
+"required by audio creation applications. <systemitem>JACK</systemitem> also "
+"makes it easier for users to configure the options that are most important "
+"for such situations. The server supports only one sample rate and format at "
+"a time, and allows applications and hardware to easily connect and multiplex "
+"in ways that other sound servers do not (see <xref linkend=\"sect-"
+"Musicians_Guide-Vocabulary-Routing_and_Multiplexing\" /> for information "
+"about routing and multiplexing). It is also optimized to run with "
+"consistently low latencies. Although using <systemitem>JACK</systemitem> "
+"requires a better understanding of the underlying hardware, the "
+"<application>QjackCtl</application> application provides a graphical user "
+"interface to ease the process."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Phonon"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Phonon is a sound server built into the KDE Software Compilation and is one "
+"of the core components of KDE. By default on &OPERATING_SYSTEM;, Phonon "
+"feeds output to <systemitem>PulseAudio</systemitem>, but on other platforms "
+"(like Mac OS X, Windows, other versions of Linux, FreeBSD, and any other "
+"system that supports KDE), Phonon can be configured to feed its output "
+"anywhere. This is its greatest strength - that KDE applications like Amarok "
+"and Dragon Player need only be programmed to use Phonon, and they can rely "
+"on Phonon to take care of everything else. As KDE applications increasingly "
+"find their place in Windows and especially Mac OS X, this cross-platform "
+"capability is turning out to be very useful."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Use the <systemitem>JACK</systemitem> Audio Connection Kit"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Install and Configure <systemitem>JACK</systemitem>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>PackageKit</application> or <application>Apper</"
+"application> to install the <package>jack-audio-connection-kit</package> and "
+"<package>qjackctl</package> packages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Review and approve the installation, making sure that it completes correctly."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Run <application>QjackCtl</application> from the KMenu or the Applications "
+"menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To start the <systemitem>JACK</systemitem> server click <guibutton>Start</"
+"guibutton>. To stop the <systemitem>JACK</systemitem> server click "
+"<guibutton>Stop</guibutton>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Messages</guibutton> to see messages, which are usually "
+"errors or warnings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Status</guibutton> to see various statistics about the "
+"currently-running server."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click <guibutton>Connections</guibutton> button to see and adjust the "
+"connections between applications and audio hardware."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem>JACK</systemitem> operates with special real-time privileges. "
+"You must add all JACK users to the <systemitem>jackuser</systemitem> group. "
+"Learn how to add users to groups in Chapter 22, <citetitle>Users and Groups</"
+"citetitle> of the <citetitle>Fedora Deployment Guide</citetitle>, available "
+"at <ulink url=\"http://docs.fedoraproject.org\" />. Do not add a user to the "
+"<systemitem>jackuser</systemitem> group if they will not use "
+"<systemitem>JACK</systemitem>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"By default, <application>QjackCtl</application> configures <systemitem>JACK</"
+"systemitem> to use the 'default' sound card. The 'default' sound card uses "
+"all features of the <systemitem>ALSA</systemitem> driver even though "
+"<systemitem>JACK</systemitem> provides the same features. To save memory and "
+"processor time, you should configure <application>QjackCtl</application> "
+"with a specific sound card."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open a terminal. In GNOME, choose <menuchoice><guimenu>Applications</"
+"guimenu> <guisubmenu>System</guisubmenu> <guimenuitem>Terminal</"
+"guimenuitem></menuchoice>. In KDE, click on the application launcher, then "
+"choose <menuchoice><guimenu>System</guimenu> <guimenuitem>Konsole</"
+"guimenuitem></menuchoice>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Execute this command: <command>cat /proc/asound/cards</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>cat</application> program outputs a list of sound cards in "
+"your computer that looks similarly to this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"0 [SB             ]: HDA-Intel - HDA ATI SB\n"
+"                  HDA ATI SB at 0xf7ff4000 irq 16\n"
+"1 [MobilePre      ]: USB-Audio - MobilePre\n"
+"                  M Audio MobilePre at usb-0000:00:13.0-2\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this example output, the square brackets surround the name of the sound "
+"card. The names of the sound cards in this example output are <literal>SB</"
+"literal> and <literal>MobilePre</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Identify the name of the sound card that you want to use. If you do not see "
+"your sound card in the list outputted by <application>cat</application>, "
+"then your computer does not detect it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Start <application>QjackCtl</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click <guibutton>Setup</guibutton> to open the \"Setup\" window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the 'Interface' text box, type the name of your preferred sound card with "
+"\"hw:\" in front. With the sound cards listed above, you might write "
+"<literal>hw:MobilePre</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Save your settings by exiting <application>QjackCtl</application>. If you "
+"want to use <systemitem>JACK</systemitem>, restart <application>QjackCtl</"
+"application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using <application>QjackCtl</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>QjackCtl</application> application offers many more "
+"features and configuration options. The patch bay is a notable feature, "
+"which lets users save configurations of the \"Connections\" window, and "
+"restore them later, to help avoid the lengthy setup time that might be "
+"required in complicated routing and multiplexing situations."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information on <application>QjackCtl</application>, refer to "
+"<citetitle>Jack Audio Connection Kit (64studio)</citetitle> at <ulink url="
+"\"http://www.64studio.com/manual/audio/jack\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"Integrate <systemitem>PulseAudio</systemitem> with <systemitem>JACK</"
+"systemitem>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"By default, <systemitem>PulseAudio</systemitem> yields control of your "
+"computer's audio and MIDI interfaces to <systemitem>JACK</systemitem> when "
+"the <systemitem>JACK</systemitem> server starts. <systemitem>PulseAudio</"
+"systemitem> will not receive input or send output on an audio interface that "
+"<systemitem>JACK</systemitem> is using. You may want to use "
+"<systemitem>JACK</systemitem> and <systemitem>PulseAudio</systemitem> at the "
+"same time, or switch between them frequently. Follow these instructions to "
+"configure <systemitem>PulseAudio</systemitem> so its input and output is "
+"routed through <systemitem>JACK</systemitem>, so you can use both sound "
+"servers at the same time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>PackageKit</application> or <application>Apper</"
+"application> to install the <package>pulseaudio-module-jack</package> "
+"package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the <systemitem>PulseAudio</systemitem> configuration file to use the "
+"<systemitem>JACK</systemitem> module."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Use Your Text Editor with Caution"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Follow these steps carefully. We recommend you make a back-up copy of this "
+"file, since a mistake may prevent your computer's audio interface from "
+"working properly."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use a text editor to open <filename>/etc/pulse/default.pa</filename> with "
+"superuser privileges. For example, run this command in a terminal window: "
+"<command>su -c 'nano /etc/pulse/default.pa'</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add this text, under the line with <code>#load-module module-alsa-sink</"
+"code>:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"load-module module-jack-sink\n"
+"load-module module-jack-source\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Run this command in a terminal to restart <systemitem>PulseAudio</"
+"systemitem>: <command>killall pulseaudio</command> <systemitem>PulseAudio</"
+"systemitem> restarts automatically."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open <application>QjackCtl</application>. The display should state that "
+"<systemitem>JACK</systemitem> is \"Active.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open the \"Connect\" window. On the \"Audio\" tab, there are "
+"<systemitem>PulseAudio</systemitem> devices on each side. Ensure the "
+"<systemitem>PulseAudio</systemitem> devices are connected to \"system\" "
+"devices on opposite sides."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open the <application>QjackCtl</application> \"Setup\" window, then choose "
+"the \"Options\" tab. Uncheck this option: \"Execute script after Shutdown: "
+"killall jackd.\" If you do not make this change, <application>QjackCtl</"
+"application> wwill stop the <systemitem>JACK</systemitem> server every time "
+"the program quits, even though <systemitem>PulseAudio</systemitem> is still "
+"using it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When <systemitem>PulseAudio</systemitem> starts <systemitem>JACK</"
+"systemitem>, it uses the command found in the <filename>~/.jackdrc</"
+"filename> file. <application>QjackCtl</application> automatically updates "
+"this file when you change settings, but you may have to restart both "
+"<systemitem>PulseAudio</systemitem> and <systemitem>JACK</systemitem> for "
+"new changes to take effect. You may also edit that file yourself."
+msgstr ""
+

@@ -1,0 +1,1225 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Software Collections Guide\n"
+"POT-Creation-Date: 2014-03-23 20:52+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Advanced Topics"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This chapter discusses advanced topics on packaging &DSCL;s."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Automatic Provides and Requires and Filtering Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The functionality described in this section is not available in Enterprise "
+"Linux 5 and 6."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"RPM in Fedora and Enterprise Linux 7 features support for automatic "
+"<code>Provides</code> and <code>Requires</code> and filtering. For example, "
+"for all Python libraries, RPM automatically adds the following "
+"<code>Requires</code>:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Requires: python(abi) = (version)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As explained in <xref linkend=\"sect-Converting_a_Conventional_Spec_File\" /"
+">, you should prefix this <code>Requires</code> with <code language=\"RPM "
+"Spec\">%{?scl_prefix}</code> when converting your conventional RPM package:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Requires: %{?scl_prefix}python(abi) = (version))"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Keep in mind that the scripts searching for these dependencies must "
+"sometimes be rewritten for your &DSCL;, as the original RPM scripts are not "
+"extensible enough, and, in some cases, filtering is not usable. For example, "
+"to rewrite automatic Python <code>Provides</code> and <code>Requires</code>, "
+"add the following lines in the <filename>macros.%{scl}-config</filename> "
+"macro file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%__python_provides /usr/lib/rpm/pythondeps-scl.sh --provides %{_scl_root} "
+"%{scl_prefix}\n"
+"%__python_requires /usr/lib/rpm/pythondeps-scl.sh --requires %{_scl_root} "
+"%{scl_prefix}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <filename>/usr/lib/rpm/pythondeps-scl.sh</filename> file is based on a "
+"<filename>pythondeps.sh</filename> file from the conventional package and "
+"adjusts search paths."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If there are <code>Provides</code> or <code>Requires</code> that you need to "
+"adjust, for example, a <systemitem>pkg_config</systemitem> <code>Provides</"
+"code>, there are two ways to do it:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add the following lines in the <filename>macros.%{scl}-config</filename> "
+"macro file so that it applies to all packages in the &DSCL;:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%_use_internal_dependency_generator 0\n"
+"%__deploop() while read FILE; do /usr/lib/rpm/rpmdeps -%{1} ${FILE}; done | /"
+"bin/sort -u\n"
+"%__find_provides /bin/sh -c \"%{?__filter_prov_cmd} %{__deploop P} "
+"%{?__filter_from_prov}\"\n"
+"%__find_requires /bin/sh -c \"%{?__filter_req_cmd}  %{__deploop R} "
+"%{?__filter_from_req}\"\n"
+"\n"
+"# Handle pkgconfig's virtual Provides and Requires\n"
+"%__filter_from_req | %{__sed} -e 's|pkgconfig|%{?scl_prefix}pkgconfig|g'\n"
+"%__filter_from_prov | %{__sed} -e 's|pkgconfig|%{?scl_prefix}pkgconfig|g'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Or, alternatively, add the following lines after tag definitions in every "
+"spec file for which you want to filter <code>Provides</code> or "
+"<code>Requires</code>:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%{?scl:%filter_from_provides s|pkgconfig|%{?scl_prefix}pkgconfig|g}\n"
+"%{?scl:%filter_from_requires s|pkgconfig|%{?scl_prefix}pkgconfig|g}\n"
+"%{?scl:%filter_setup}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When using filters, you need to pay attention to the automatic dependencies "
+"you change. For example, if the conventional package contains <code language="
+"\"RPM Spec\">Requires: pkgconfig(package_1)</code> and <code language=\"RPM "
+"Spec\">Requires: pkgconfig(package_2)</code>, and only <package>package_2</"
+"package> is included in the &DSCL;, ensure that you do not filter the "
+"<code>Requires</code> tag for <package>package_1</package>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Macro Files Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In some cases, you may need to ship macro files with your &DSCL; packages. "
+"They are located in the <code language=\"RPM Spec\">%{?scl:"
+"%{_root_sysconfdir}}%{!?scl:%{_sysconfdir}}/rpm/</code> directory, which "
+"corresponds to the <filename>/etc/rpm/</filename> directory for conventional "
+"packages. When shipping macro files, ensure that:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You rename the macro files by appending <filename>.%{scl}</filename> to "
+"their names so that they do not conflict with the files from the base system "
+"installation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The macros in the macro files are either not expanded, or they are using "
+"conditionals, as in the following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%__python2 %{_bindir}/python\n"
+"%python2_sitelib %(%{?scl:scl enable %scl '}%{__python2} -c \"from distutils."
+"sysconfig import get_python_lib; print(get_python_lib())\"%{?scl:'})"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As another example, there may be a situation where you need to create a "
+"&DSCL; <package>mypython</package> that depends on a &DSCL; "
+"<package>python26</package>. The <package>python26</package> &DSCL; defines "
+"the <code language=\"RPM Spec\">%{__python2}</code> macro as in the above "
+"sample. This macro will evaluate to <filename>/&OPT;/&RH;/mypython/root/usr/"
+"bin/python2</filename>, but the <filename>python2</filename> binary is only "
+"available in the <package>python26</package> &DSCL; (<filename>/&OPT;/&RH;/"
+"python26/root/usr/bin/python2</filename>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To be able to build software in the <package>mypython</package> &DSCL; "
+"environment, ensure that:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <filename>macros.python.python26</filename> macro file, which is a part "
+"of the <package>python26-python-devel</package> package, contains the "
+"following line:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%__python26_python2 /&OPT;/&RH;/python26/root/usr/bin/python2"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"And the macro file in the python26-build subpackage, and also the "
+"<package>build</package> subpackage in any depending &DSCL;, contains the "
+"following line:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%scl_package_override() {%global __python2 %__python26_python2}\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This will redefine the <code language=\"RPM Spec\">%{__python2}</code> macro "
+"only if the build subpackage from a corresponding &DSCL; is present, which "
+"usually means that you want to build software for that &DSCL;."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Packaging Wrappers for &DSCL;s"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Using wrappers is an easy way to shorten commands that the user runs in the "
+"&DSCL; environment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following is an example of a wrapper from the <package>ruby193</package> "
+"&DSCL; that is installed as <filename>/usr/bin/ruby193-ruby</filename> and "
+"allows the user to run <command>ruby193-ruby <replaceable>command</"
+"replaceable></command> instead of <command>scl enable ruby193 'ruby "
+"<replaceable>command</replaceable>'</command>:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "#!/bin/bash\n"
+"\n"
+"COMMAND=\"ruby $@\"\n"
+"scl enable ruby193 \"$COMMAND\"\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is important to package these wrappers as subpackages of the &DSCL; "
+"package that will use them. That way, you can make installation of these "
+"wrappers optional, allowing the user not to install them, for example, on "
+"systems with read-only access to the <filename>/usr/bin/</filename> "
+"directory where the wrappers would otherwise be installed."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Initscript Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that users can directly manage any services provided by the &DSCL; or "
+"one of the associated applications with the system default tools, like "
+"<application>service</application> or <application>chkconfig</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To avoid possible name conflicts with the system versions of the services "
+"that are part of the &DSCL;, make sure to adjust the <code>%install</code> "
+"section of the spec file as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"%install\n"
+"install -p -c -m 644 %{SOURCE2} $RPM_BUILD_ROOT%{?scl:"
+"%_root_sysconfdir}%{!?scl:%_sysconfdir}/rc.d/init.d/"
+"%{?scl_prefix}<replaceable>service_name</replaceable>\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With this configuration in place, you can then refer to the version of the "
+"service included in the &DSCL; as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "%{?scl_prefix}<replaceable>service_name</replaceable>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Library Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In case you distribute libraries that you intend to use only in the &DSCL; "
+"environment or in addition to the libraries available on the system, update "
+"the <envar>LD_LIBRARY_PATH</envar> environment variable in the "
+"<filename>enable</filename> scriptlet as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"export LD_LIBRARY_PATH=%{_libdir}${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The configuration ensures that the version of the library in the &DSCL; is "
+"preferred over the version of the library available on the system if the "
+"&DSCL; is enabled."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In case you distribute a private shared library in the &DSCL;, consider "
+"using the <envar>DT_RUNPATH</envar> attribute instead of the "
+"<envar>LD_LIBRARY_PATH</envar> environment variable to make the private "
+"shared library accessible in the &DSCL; environment."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using a Library Outside of the &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you distribute libraries that you intend to use outside of the &DSCL; "
+"environment, you can use the directory <filename>/etc/ld.so.conf.d/</"
+"filename> for this purpose."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Do not use <filename>/etc/ld.so.conf.d/</filename> for libraries already "
+"available on the system. Using <filename>/etc/ld.so.conf.d/</filename> is "
+"only recommended for a library that is not available on the system, as "
+"otherwise the version of the library in the &DSCL; might get preference over "
+"the system version of the library. That could lead to undesired behavior of "
+"the system versions of the applications, including unexpected termination "
+"and data loss."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using /etc/ld.so.conf.d/ for libraries in the &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create a file named <filename>%{?scl_prefix}libs.conf</filename> and adjust "
+"the spec file configuration accordingly:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "SOURCE2: %{?scl_prefix}libs.conf\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the <filename>%{?scl_prefix}libs.conf</filename> file, include a list of "
+"directories where the versions of the libraries associated with the &DSCL; "
+"are located. For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "/&OPT;/&RH;/software_collection_1/root/usr/lib64/\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the example above, the <filename>/usr/lib64/</filename> directory that is "
+"part of the &DSCL; <application>software_collection_1</application> is "
+"included in the list."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the <code>%install</code> section of the spec file, so the "
+"<filename>%{?scl_prefix}libs.conf</filename> file is installed as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%install\n"
+"install -p -c -m 644 %{SOURCE2} $RPM_BUILD_ROOT%{?scl:"
+"%_root_sysconfdir}%{!?scl:%_sysconfdir}/ld.so.conf.d/\n"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Prefixing the Library Major soname with the &DSCL; Name"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When using libraries included in the &DSCL;, always remember that a library "
+"with the same major soname can already be available on the system as a part "
+"of the base system installation. It is thus important not to forget to use "
+"the <command>scl enable</command> command when building an application "
+"against a library included in the &DSCL;. Failing to do so may result in the "
+"application being executed in an incorrect environment, linked against the "
+"incorrect system version of the library."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Keep in mind that executing your application in an incorrect environment "
+"(for example in the system environment instead of the &DSCL; environment) as "
+"well as linking your application against an incorrect library can lead to "
+"undesired behavior of your application, including unexpected termination and "
+"data loss."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To ensure that your application is not linked against an incorrect library "
+"even if the <envar>LD_LIBRARY_PATH</envar> environment variable has not been "
+"set properly, change the major soname of the library included in the &DSCL;. "
+"The recommended way to change the major soname is to prefix the major soname "
+"version number with the &DSCL; name."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Below is an example of the MySQL client library with the <literal>mysql55-</"
+"literal> prefix:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<computeroutput>$ </computeroutput><userinput>rpm -ql mysql55-mysql-libs | "
+"grep 'lib.*so'</userinput>\n"
+"/&OPT;/&RH;/mysql55/root/usr/lib64/mysql/libmysqlclient.so.mysql55-18\n"
+"/&OPT;/&RH;/mysql55/root/usr/lib64/mysql/libmysqlclient.so.mysql55-18.0.0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the same system, the system version of the MySQL client library is listed "
+"below:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"$ <command>rpm -ql mysql-libs | grep 'lib.*so'</command>\n"
+"/usr/lib64/mysql/libmysqlclient.so.18\n"
+"/usr/lib64/mysql/libmysqlclient.so.18.0.0\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <command>rpmbuild</command> utility generates an automatic "
+"<code>Provides</code> tag for packages that include a versioned shared "
+"library. If you do not prefix the soname as described above, then an example "
+"of the <code>Provides</code> in case of the <package>mysql</package> package "
+"is <code>libmysqlclient.so.18()(64bit)</code>. With this <code>Provides</"
+"code>, RPM can choose the incorrect RPM package, resulting in the "
+"application missing the requirement."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you prefix the soname as described above, then an example of the "
+"generated <code>Provides</code> in case of <package>mysql</package> is "
+"<code>libmysqlclient.so.mysql55-18()(64bit)</code>. With this "
+"<code>Provides</code>, RPM chooses the correct RPM dependencies and the "
+"application's requirements are satisfied."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In general, unless absolutely necessary, &DSCL; packages should not provide "
+"any symbols that are already provided by packages from the base system "
+"installation. One exception to that rule is when you want to use the symbols "
+"in the packages from the base system installation."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Library Support in Fedora and Enterprise Linux 7"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When building your &DSCL; for Fedora or Enterprise Linux 7, use the "
+"<systemitem>%__provides_exclude_from</systemitem> macro to prevent scanning "
+"certain files for automatically generated RPM symbols."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, to prevent scanning <filename>.so</filename> files in the "
+"<systemitem>%{_libdir}</systemitem> directory, add the following lines "
+"before the <code>BuildRequires</code> or <code>Requires</code> tags in your "
+"&DSCL; spec file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%if %{?scl:1}%{!?scl:0}\n"
+"  # Do not scan .so files in %{_libdir}\n"
+"  %global __provides_exclude_from ^%{_libdir}/.*.so.*$\n"
+"%endif"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The functionality is part of RPM support for automatic <code>Provides</code> "
+"and <code>Requires</code>, see <xref linkend=\"sect-"
+"Software_Collection_Automatic_Provides_Requires_Filtering_Support\" /> for "
+"more information."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; .pc Files Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The .pc files are special metadata files used by the <application>pkg-"
+"config</application> program to store information about libraries available "
+"on the system."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In case you distribute .pc files that you intend to use only in the &DSCL; "
+"environment or in addition to the .pc files installed on the system, update "
+"the <envar>PKG_CONFIG_PATH</envar> environment variable. Depending on what "
+"is defined in your .pc files, update the <envar>PKG_CONFIG_PATH</envar> "
+"environment variable for the <varname>%{_libdir}</varname> macro (which "
+"expands to the library directory, typically <filename>/usr/lib/</filename> "
+"or <filename>/usr/lib64/</filename>), or for the <varname>%{_datadir}</"
+"varname> macro (which expands to the share directory, typically <filename>/"
+"usr/share/</filename>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the library directory is defined in your .pc files, update the "
+"<envar>PKG_CONFIG_PATH</envar> environment variable by adjusting the "
+"<code>%install</code> section of the &DSCL; spec file as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%install\n"
+"cat &gt;&gt; %{buildroot}%{_scl_scripts}/enable &lt;&lt; EOF\n"
+"export PKG_CONFIG_PATH=%{_libdir}/pkgconfig:\\$PKG_CONFIG_PATH\n"
+"EOF"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the share directory is defined in your .pc files, update the "
+"<envar>PKG_CONFIG_PATH</envar> environment variable by adjusting the "
+"<code>%install</code> section of the &DSCL; spec file as follows:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%install\n"
+"cat &gt;&gt; %{buildroot}%{_scl_scripts}/enable &lt;&lt; EOF\n"
+"export PKG_CONFIG_PATH=%{_datadir}/pkgconfig:\\$PKG_CONFIG_PATH\n"
+"EOF"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The two examples above both configure the <filename>enable</filename> "
+"scriptlet so that it ensures that the .pc files in the &DSCL; are preferred "
+"over the .pc files available on the system if the &DSCL; is enabled."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The &DSCL; can provide a wrapper script that is visible to the system to "
+"enable the &DSCL;, for example in the <filename>/usr/bin/</filename> "
+"directory. In this case, ensure that the .pc files are visible to the system "
+"even if the &DSCL; is disabled."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To allow your system to use .pc files from the disabled &DSCL;, update the "
+"<envar>PKG_CONFIG_PATH</envar> environment variable with the paths to the ."
+"pc files associated with the &DSCL;. Depending on what is defined in your ."
+"pc files, update the <envar>PKG_CONFIG_PATH</envar> environment variable for "
+"the <varname>%{_libdir}</varname> macro (which expands to the library "
+"directory), or for the <varname>%{_datadir}</varname> macro (which expands "
+"to the share directory)."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Updating the PKG_CONFIG_PATH environment variable for %{_libdir}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To update the <envar>PKG_CONFIG_PATH</envar> environment variable for the "
+"<varname>%{_libdir}</varname> macro, create a custom script <filename>/etc/"
+"profile.d/<replaceable>name.sh</replaceable></filename>. The script is "
+"preloaded when a shell is started on the system."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For example, create the following file:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "%{?scl_prefix}pc-libdir.sh"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the <filename>pc-libdir.sh</filename> short script that modifies the "
+"<envar>PKG_CONFIG_PATH</envar> variable to refer to your .pc files:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"export PKG_CONFIG_PATH=%{_libdir}/pkgconfig:/&OPT;/<replaceable>&RH;</"
+"replaceable>/<replaceable>software_collection/path/to/your/pc_files</"
+"replaceable>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Add the file to your &DSCL; package's spec file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "SOURCE2: %{?scl_prefix}pc-libdir.sh"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Install this file into the system <filename>/etc/profile.d/</filename> "
+"directory by adjusting the <code>%install</code> section of the &DSCL; "
+"package's spec file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%install\n"
+"install -p -c -m 644 %{SOURCE2} $RPM_BUILD_ROOT%{?scl:"
+"%_root_sysconfdir}%{!?scl:%_sysconfdir}/profile.d/"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Updating the PKG_CONFIG_PATH environment variable for %{_datadir}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To update the <envar>PKG_CONFIG_PATH</envar> environment variable for the "
+"<varname>%{_datadir}</varname> macro, create a custom script <filename>/etc/"
+"profile.d/<replaceable>name.sh</replaceable></filename>. The script is "
+"preloaded when a shell is started on the system."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "%{?scl_prefix}pc-datadir.sh"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the <filename>pc-datadir.sh</filename> short script that modifies the "
+"<envar>PKG_CONFIG_PATH</envar> variable to refer to your .pc files:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"export PKG_CONFIG_PATH=%{_datadir}/pkgconfig:/&OPT;/<replaceable>&RH;</"
+"replaceable>/<replaceable>software_collection/path/to/your/pc_files</"
+"replaceable>"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "SOURCE2: %{?scl_prefix}pc-datadir.sh"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; MANPATH Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To allow the <command>man</command> command on the system to display manual "
+"pages from the enabled &DSCL;, update the <envar>MANPATH</envar> environment "
+"variable with the paths to the manual pages that are associated with the "
+"&DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To update the <envar>MANPATH</envar> environment variable, add the following "
+"to the <code>%install</code> section of the &DSCL; spec file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%install\n"
+"cat &gt;&gt; %{buildroot}%{_scl_scripts}/enable &lt;&lt; EOF\n"
+"export MANPATH=%{_mandir}:\\${MANPATH}\n"
+"EOF"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This configures the <filename>enable</filename> scriptlet to update the "
+"<envar>MANPATH</envar> environment variable. The manual pages associated "
+"with the &DSCL; are then not visible as long as the &DSCL; is not enabled."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The &DSCL; can provide a wrapper script that is visible to the system to "
+"enable the &DSCL;, for example in the <filename>/usr/bin/</filename> "
+"directory. In this case, ensure that the manual pages are visible to the "
+"system even if the &DSCL; is disabled."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To allow the <command>man</command> command on the system to display manual "
+"pages from the disabled &DSCL;, update the <envar>MANPATH</envar> "
+"environment variable with the paths to the manual pages associated with the "
+"&DSCL;."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Updating the MANPATH environment variable for the disabled &DSCL;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To update the <envar>MANPATH</envar> environment variable, create a custom "
+"script <filename>/etc/profile.d/<replaceable>name.sh</replaceable></"
+"filename>. The script is preloaded when a shell is started on the system."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "%{?scl_prefix}manpage.sh"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the <filename>manpage.sh</filename> short script that modifies the "
+"<envar>MANPATH</envar> variable to refer to your man path directory:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"export MANPATH=/&OPT;/<replaceable>&RH;</replaceable>/"
+"<replaceable>software_collection/path/to/your/man_pages</replaceable>:"
+"${MANPATH}"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "SOURCE2: %{?scl_prefix}manpage.sh"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; cronjob Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With your &DSCL;, you can run periodic tasks on the system either with a "
+"dedicated service or with cronjobs. If you intend to use a dedicated "
+"service, refer to <xref linkend=\"sect-"
+"Software_Collection_Initscript_Support\" /> on how to work with initscripts "
+"in the &DSCL; environment."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Running periodic tasks with cronjobs"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To use cronjobs for running periodic tasks, place a <filename>crontab</"
+"filename> file for your &DSCL; in the <filename>/etc/cron.d/</filename> "
+"directory with the &DSCL;'s name."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "%{?scl_prefix}crontab"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that the contents of the <filename>crontab</filename> file follow the "
+"standard <filename>crontab</filename> file format, as in the following "
+"example:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"0 1 * * Sun root scl enable <replaceable>software_collection</replaceable> "
+"'<filename>/&OPT;/<replaceable>&RH;</replaceable>/"
+"<replaceable>software_collection</replaceable>/root/usr/bin/"
+"<replaceable>cron_job_name</replaceable></filename>'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"where <replaceable>software_collection</replaceable> is the name of your "
+"&DSCL;, and <filename>/&OPT;/<replaceable>&RH;</replaceable>/"
+"<replaceable>software_collection</replaceable>/root/usr/bin/"
+"<replaceable>cron_job_name</replaceable></filename> is the command you want "
+"to periodically run."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Add the file to your spec file of the &DSCL; package:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "SOURCE2: %{?scl_prefix}crontab"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Install the file into the system directory <filename>/etc/cron.d/</filename> "
+"by adjusting the <code>%install</code> section of the &DSCL; package's spec "
+"file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%install\n"
+"install -p -c -m 644 %{SOURCE2} $RPM_BUILD_ROOT%{?scl:"
+"%_root_sysconfdir}%{!?scl:%_sysconfdir}/cron.d/\n"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Log File Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"By default, programs packaged in a &DSCL; create log files in the <filename>/"
+"&OPT;/<replaceable>&RH;</replaceable>/<replaceable>software_collection</"
+"replaceable>/root/var/log/</filename> directory. Consider creating the log "
+"files outside of the &DSCL; file system hierarchy, that is in the <filename>/"
+"var/log/</filename> system directory. When using the system directory, all "
+"log files are stored in the same location, which makes it easier for users "
+"to locate and manage them."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; logrotate Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"With your &DSCL; or an application associated with your &DSCL;, you can "
+"manage log files with the <application>logrotate</application> program."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Managing log files with logrotate"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To manage your log files with <application>logrotate</application>, place a "
+"custom <application>logrotate</application> file for your &DSCL; in the "
+"system directory for the <application>logrotate</application> jobs "
+"<filename>/etc/logrotate.d/</filename>."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "%{?scl_prefix}logrotate"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that the contents of the <filename>logrotate</filename> file follow "
+"the standard <filename>logrotate</filename> file format as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"/&OPT;/<replaceable>&RH;</replaceable>/<replaceable>software_collection</"
+"replaceable>/var/log/<replaceable>your_application_name</replaceable>.log {\n"
+"      missingok\n"
+"      notifempty\n"
+"      size 30k\n"
+"      yearly\n"
+"      create 0600 root root\n"
+"  }"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "SOURCE2: %{?scl_prefix}logrotate"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Install the file into the system directory <filename>/etc/logrotate.d/</"
+"filename> by adjusting the <code>%install</code> section of the &DSCL; "
+"package's spec file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%install\n"
+"install -p -c -m 644 %{SOURCE2} $RPM_BUILD_ROOT%{?scl:"
+"%_root_sysconfdir}%{!?scl:%_sysconfdir}/logrotate.d/"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Lock File Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you store your &DSCL;'s lock files within the <filename>/&OPT;/"
+"<replaceable>&RH;</replaceable>/<replaceable>software_collection</"
+"replaceable>/</filename> file system hierarchy, you can avoid any possible "
+"conflicts with the system versions of the applications or services that can "
+"be on the system."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to prevent &DSCL;'s applications or services from running while "
+"the system version of the respective application or service is running, make "
+"sure that your applications or services, which require a lock, write the "
+"lock to the system directory <filename>/var/lock/</filename> instead of the "
+"&DSCL;'s directory <filename>/&OPT;/<replaceable>&RH;</replaceable>/"
+"<replaceable>software_collection</replaceable>/var/lock/</filename>. In this "
+"way, your applications or services' lock file will not be overwritten. The "
+"lock file will not be renamed and the name stays the same as the system "
+"version."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want your &DSCL;'s version of the application or service to run "
+"concurrently with the system version (when the &DSCL; version's resources "
+"will not conflict with the system version's resources), ensure that the "
+"applications or services write the lock to the &DSCL;'s directory <filename>/"
+"&OPT;/<replaceable>&RH;</replaceable>/<replaceable>software_collection</"
+"replaceable>/var/lock/</filename>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Configuration Files Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you store your &DSCL;'s configuration files within the <filename>/&OPT;/"
+"<replaceable>&RH;</replaceable>/<replaceable>software_collection</"
+"replaceable>/</filename> file system hierarchy, you can avoid any possible "
+"conflicts with the system versions of the configuration files that can be "
+"present on the system."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you cannot store the configuration files within <filename>/&OPT;/"
+"<replaceable>&RH;</replaceable>/<replaceable>software_collection</"
+"replaceable>/</filename>, then ensure that you properly configure an "
+"alternative location for the configuration files. For many programs, this "
+"can be usually done at build or installation time."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; Kernel Module Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Because Linux kernel modules are normally tied to a particular version of "
+"the Linux kernel, you must be careful when you package kernel modules into a "
+"&DSCL;. This is because the package management system on &MAJOROS; does not "
+"automatically update or install an updated version of the kernel module if "
+"an updated version of the Linux kernel is installed. To make packaging the "
+"kernel modules into the &DSCL; easier, see the following recommendations. "
+"Ensure that:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "the name of your kernel module package includes the kernel version,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"the tag <code>Requires</code>, which can be found in your kernel module spec "
+"file, includes the kernel version and revision (in the format <code>kernel-"
+"<replaceable>version</replaceable>-<replaceable>revision</replaceable></"
+"code>)."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "&DSCL; SELinux Support"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Because &DSCL;s are designed to install the &DSCL; packages in an alternate "
+"directory, set up the necessary SELinux labels so that SELinux is aware of "
+"the alternate directory."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the file system hierarchy of your &DSCL; package imitates the file system "
+"hierarchy of the corresponding conventional package, you can run the "
+"<command>semanage fcontext</command> and <command>restorecon</command> "
+"commands to set up the SELinux labels."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, if the <filename>/&OPT;/&RH;/software_collection_1/root/usr/</"
+"filename> directory in your &DSCL; package imitates the <filename>/usr/</"
+"filename> directory of your conventional package, set up the SELinux labels "
+"as follows:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The commands above ensure that all directories and files in the <filename>/"
+"&OPT;/&RH;/software_collection_1/root/usr/</filename> directory are labeled "
+"by SELinux as if they were located in the <filename>/usr/</filename> "
+"directory."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "SELinux Support in Fedora and Enterprise Linux 7"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When packaging a &DSCL; for Fedora or Enterprise Linux 7, add the following "
+"commands to the <code>%post</code> section in the &DSCL; metapackage to set "
+"up the SELinux labels:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The last command ensures that the newly created SELinux policy is properly "
+"loaded, and that the files installed by a package in the &DSCL; are created "
+"with the correct SELinux context. By using this command in the metapackage, "
+"you do not need to include the <command>restorecon</command> command in all "
+"packages in the &DSCL;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that the <command>semanage fcontext</command> command is provided by "
+"the <package>policycoreutils-python</package> package, therefore it is "
+"important that you include <code>policycoreutils-python</code> in "
+"<code>Requires</code> for the &DSCL; metapackage."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "SELinux Support in Enterprise Linux 5"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Keep in mind that the <command>semanage -e</command> command, which "
+"substitutes the source path for the destination path during labeling, is not "
+"supported in Enterprise Linux 5."
+msgstr ""
+

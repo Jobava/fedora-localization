@@ -1,0 +1,176 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Translation Quick Start Guide\n"
+"POT-Creation-Date: 2010-11-02T23:38:14\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Translating Wiki Pages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <ulink url=\"http://fedoraproject.org/wiki\">Fedora Wiki</ulink> is the "
+"repository for project-related information. Some of these pages may need to "
+"be translated in order to better serve the Fedora community. This chapter "
+"will explain, step-by-step, the proper method of translating a wiki page."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Find the English Version of the Page"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"English is the base language for the Fedora Project wiki, so there needs to "
+"be an English version of the page you are working on. (If there isn't an "
+"English version of the page you are working on, see <xref linkend=\"sect-"
+"Translation_Quick_Start_Guide-Translating_Wiki-"
+"Find_the_English_Version_of_the_Page-"
+"Handling_Translations_Without_an_English_Version\" /> below.)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If there is already a language template at the top of that page, click "
+"<guibutton>edit</guibutton> link on the right side of the language box and "
+"move to step 4; otherwise, continue to step 2."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Handling Translations Without an English Version"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the page you create doesn't have an English version, create a new page "
+"for the English version, add the <code>{{template|autolang}}</code> template "
+"as noted above, and then add the <code>{{template|needs english}}</code> "
+"template. This will flag the page for needing an English translation as well "
+"as create a base page."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add the Language Template to the English Page"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the English page, and at the top of it, add the "
+"<code>{{template|autolang}}</code> template:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>{{autolang|base=yes}}</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <code>base=yes</code> part is <emphasis>required</emphasis> for the "
+"English page. Save the page."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Create the Language Template"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <code>{{template|autolang}}</code> autolang template should provide a "
+"link for you to set up the language box. Click it, and an edit page will "
+"come up. <emphasis>Don't change any of the content</emphasis> and save the "
+"page. Then click the <guibutton>edit</guibutton> link on the right side of "
+"the language box."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Add Your Language to the Template"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At this point you should have an edit box open with template syntax that "
+"looks similar to this:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>{{lang|en|page=''Base page name''}}</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The text between <code>lang</code> and <code>page=</code> is the list of "
+"language codes. Add the language code that you are translating to this list. "
+"Use <ulink url=\"http://svn.wikimedia.org/viewvc/mediawiki/trunk/phase3/"
+"languages/Names.php?view=markup\">this list</ulink> to determine the proper "
+"MediaWiki language code."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Please Keep the List Alphabetical"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Keep the list of language codes alphabetical by code. This means German (de) "
+"should come before English (en), for example."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Start the New Page"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click on the red link for your language to start the new page. Insert the "
+"template <code>{{autolang}}</code> at the top of your page, so that the list "
+"of languages is there. <emphasis>Be certain to not include <code>base=yes</"
+"code> in the template for non-English subpages.</emphasis>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Moving Pages From the Old Translation Setup"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For translated pages that aren't in the proper place, follow steps 1-4 above."
+" Then, copy the title of the new page (e.g. <literal>Fedora Project Wiki/de</"
+"literal>). Click the <guibutton>move</guibutton> link at the top of the old "
+"page and paste the new page name in the <literal>to new title</literal> "
+"field. Edit the new page and add <code>{{autolang}}</code> to the top."
+msgstr ""
+

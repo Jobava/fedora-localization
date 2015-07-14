@@ -1,0 +1,4 @@
+Quick start guide to providing translations on the Fedora Project 
+
+http://docs.fedoraproject.org/en-US/Fedora_Contributor_Documentation/1/html/Translation_Quick_Start_Guide/
+http://git.fedorahosted.org/git/docs/translation-quick-start-guide.git

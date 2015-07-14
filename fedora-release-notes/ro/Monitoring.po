@@ -1,0 +1,78 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Monitoring and Management Solutions"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Monitorix"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The lightweight <package>Monitorix</package> system monitoring tool has been "
+"updated to version 3.6, adding improved support for many things, including "
+"<systemitem class=\"ipaddress\">libvirt</systemitem>, <systemitem class="
+"\"daemon\">apcupsd</systemitem>, process statistics, and more."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Review the project's changelog at <ulink url=\"http://www.monitorix.org/"
+"changelog.html\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "SystemTap"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Version 2.6 of <package>systemtap</package> data collection suite in Fedora "
+"&PRODVER; has many new features, described in <filename>/usr/share/doc/"
+"systemtap-runtime/NEWS</filename>. Documentation for <package>systemtap</"
+"package> can be found at <ulink url=\"https://sourceware.org/systemtap/"
+"documentation.html\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Zabbix"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <package>Zabbix</package> network and infrastructure monitoring utility "
+"has been updated to version 2.2.x in Fedora &PRODVER;. With each release, "
+"the Zabbix team improves and expands this powerful tool."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For a complete overview of changes in <package>Zabbix</package>, visit "
+"<ulink url=\"https://www.zabbix.com/documentation/2.2/manual/introduction\" /"
+">"
+msgstr ""
+

@@ -1,0 +1,4 @@
+A utility for viewing problems that have occured with the system
+
+https://github.com/abrt/gnome-abrt
+https://github.com/abrt/gnome-abrt.git

@@ -1,0 +1,261 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+# translation auto-copied from project System Administrator's Guide, version master, document Preface
+#. Tag: title
+#, no-c-format
+msgid "Preface"
+msgstr "Prefață"
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <citetitle pubwork=\"book\">Networking Guide</citetitle> contains "
+"information on how to use the networking related features of &MAJOROSVER;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This manual discusses many intermediate topics such as the following:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Setting up a network (from establishing an Ethernet connection using "
+"<application>NetworkManager</application> to configuring channel bonding "
+"interfaces)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Configuring <systemitem class=\"protocol\">DHCP</systemitem>, "
+"<application>BIND</application>, and <systemitem class=\"protocol\">DNS</"
+"systemitem>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Target Audience"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <citetitle pubwork=\"book\">Networking Guide</citetitle> assumes you "
+"have a basic understanding of the &MAJOROS; operating system. If you need "
+"help with the installation of this system, see the <citetitle pubwork="
+"\"book\">&MAJOROSVER; Installation Guide</citetitle>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This guide is not aimed exclusively at experienced Linux system "
+"administrators. The authors of this book have attempted to cater for a wider "
+"audience as more and more organizations and users become subscribers to "
+"Red&nbsp;Hat, Inc. At the same time we are aware of the need not to allow "
+"seemingly trivial information to get in the way of the tasks. Your feedback "
+"on how well we have met this goal is welcome."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "About This Book"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <citetitle pubwork=\"book\">Networking Guide</citetitle> is based on the "
+"networking material in the <ulink url=\"https://access.redhat.com/site/"
+"documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/index."
+"html\"><citetitle pubwork=\"book\">Red&nbsp;Hat Enterprise&nbsp;Linux&nbsp;6 "
+"Deployment Guide</citetitle></ulink>. It also retains the information on "
+"<systemitem class=\"protocol\">DHCP</systemitem> and <systemitem class="
+"\"protocol\">DNS</systemitem> servers from the <xref linkend=\"part-"
+"Servers\" /> section. Most of the non-networking related material from the "
+"<citetitle pubwork=\"book\">Red&nbsp;Hat Enterprise&nbsp;Linux&nbsp;6 "
+"Deployment Guide</citetitle> guide can now be found in the <citetitle "
+"pubwork=\"book\">&MAJOROSVER; System Administrator's Guide</citetitle> "
+"except for reference material, such as that found in the appendices of the "
+"Deployment Guide."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "How to Read this Book"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This manual is divided into the following main categories:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<xref linkend=\"part-Networking\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This part describes how to configure the network on &MAJOROS;."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ch-Introduction_to_Fedora_Networking\" /> explains the "
+"default networking service, <application>NetworkManager</application>, and "
+"the various graphical and command-line tools that can be used to interact "
+"with <application>NetworkManager</application>. These include, an associated "
+"command-line configuration tool, <application>nmcli</application>, and two "
+"graphical user interface tools, <application>control-center</application> "
+"and <application>nm-connection-editor</application>. Read this chapter to "
+"learn more about the many ways the <application>NetworkManager</application> "
+"daemon can be used."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ch-Configure_Networking\" /> covers static and dynamic "
+"interface settings, selecting network configuration methods, using "
+"<application>NetworkManager</application> with graphical and command-line "
+"user interfaces. Read this chapter to learn about configuring network "
+"connections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ch-Configure_Host_Names\" /> covers static, pretty, and "
+"transient host names and their configuration using <application>hostnamectl</"
+"application>. Read this chapter to learn more about configuring host names "
+"on local and remote systems."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ch-Configure_Network_Bonding\" /> covers the configuring and "
+"use of bonded network connections. Read this chapter to learn about the "
+"configuring of network bonds using graphical and command-line user "
+"interfaces."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ch-Configure_Network_Teaming\" /> covers the configuring and "
+"use of teamed network connections. Read this chapter to learn about the "
+"configuring of network teams using graphical and command-line user "
+"interfaces."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ch-Configure_Network_Bridging\" /> covers the configuring "
+"and use of network bridges. Read this chapter to learn about the configuring "
+"of network bridges using graphical and command-line user interfaces."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ch-Configure_802_1Q_VLAN_Tagging\" /> covers the configuring "
+"and use of virtual private networks, VLANs, according to the 802.1Q standard."
+" Read this chapter to learn about the configuring of VLANs using graphical "
+"and command-line user interfaces."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ch-Consistent_Network_Device_Naming\" /> covers consistent "
+"network device naming for network interfaces, a feature that changes the "
+"name of network interfaces on a system in order to make locating and "
+"differentiating the interfaces easier. Read this chapter to learn about this "
+"feature and how to enable or disable it."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<xref linkend=\"part-Servers\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This part discusses how to set up servers normally required for networking."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ch-DHCP_Servers\" /> covers the installation of a Dynamic "
+"Host Configuration Protocol (<systemitem class=\"protocol\">DHCP</"
+"systemitem>) server and client. Read this chapter if you need to configure "
+"<systemitem class=\"protocol\">DHCP</systemitem> on your system."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<xref linkend=\"ch-DNS_Servers\" /> covers the Domain Name System "
+"(<systemitem class=\"protocol\">DNS</systemitem>), explains how to install, "
+"configure, run, and administer the <application>BIND</application> "
+"<systemitem class=\"protocol\">DNS</systemitem> server. Read this chapter if "
+"you need to configure a <systemitem class=\"protocol\">DNS</systemitem> "
+"server on your system."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For topics related to network configuration but not listed above, such as "
+"configuring GRUB to enable serial links and the use of virtual console "
+"terminals, see the <citetitle pubwork=\"book\">&MAJOROSVER; System "
+"Administrator's Guide</citetitle>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For topics related to servers but not listed above, such as configuring "
+"Network Time Protocol (<systemitem class=\"protocol\">NTP</systemitem>) and "
+"Precision Time Protocol (<systemitem class=\"protocol\">PTP</systemitem>), "
+"see the <citetitle pubwork=\"book\">&MAJOROSVER; System Administrator's "
+"Guide</citetitle>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Acknowledgments"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Certain portions of this text first appeared in the <citetitle>Red&nbsp;Hat "
+"Enterprise&nbsp;Linux&nbsp;6 Deployment Guide</citetitle>, copyright &copy; "
+"2014 Red&nbsp;Hat, Inc., available at <ulink url=\"https://access.redhat.com/"
+"site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/"
+"index.html\" />."
+msgstr ""
+

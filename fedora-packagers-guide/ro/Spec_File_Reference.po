@@ -1,0 +1,1011 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Packager's Guide\n"
+"POT-Creation-Date: 2012-08-10T16:17:20\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Spec File Reference"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Spec files are text files that contain RPM directives and macro definitions, "
+"which are used to build an RPM package. The RPM directives and macros are "
+"divided into a number of sections. Each of these sections is delimited with "
+"a <code>%</code> marker. For example, the build section starts with "
+"<code>%build</code>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "A typical spec file consists of approximately five sections:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Preamble"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The preamble describes the basic information on the package, for example "
+"name, version, license, and so on."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Build section"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The build section includes instructions, which are used to build and prepare "
+"the package for installation."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Scriptlets"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The scriptlets define commands used to install, upgrade, or uninstall the "
+"package."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Manifest"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The manifest section includes a list of packaged files and their permissions."
+""
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "Changelog"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The changelog section consists of a list of changes made to the package."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Spec File Directives"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Directives in a spec file are defined using a simple syntax of a tag name, a "
+"colon, and a value:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"<replaceable>TagName</replaceable>: <replaceable>value</replaceable> \n"
+"  "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For example, the following directive sets the package version to 1.15:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Version: 1.15 \n"
+"  "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The name of the item is not case sensitive, so tag names of <option>version</"
+"option>, <option>Version</option>, or <option>VERSION</option> all set the "
+"same value. This syntax works for most settings, including <option>Name</"
+"option>, <option>Release</option>, and so on."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Spec File Macros"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In addition to the spec file directive syntax, you can define macros using "
+"the RPM <code>%global</code> syntax. For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%global major 2 \n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The example above defines a macro named <code>major</code> with a value of "
+"<code>2</code>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once defined, you can access macros using the syntax <code>%{macro_name}</"
+"code> or just <code>%macro_name</code>. For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "source: %{name}-%{version}.tar.gz \n"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Spec File Comments"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To include comments in the spec file, use a <code>#</code> character at the "
+"start of the line. That way, the line will be ignored by RPM."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Because macros are expanded first, do not insert any multiline macros in a "
+"comment. If you want to comment out a line with a macro, double the percent "
+"signs (<code>%%</code>) as in the following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "# %%configure\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Also, do not use inline comments (\"#\") on the same line after a script "
+"command. <remark> '''Warning:''' In spec files, don't use in-line comments "
+"(a \"#\" comment on the same line after a command), and don't put macros "
+"(words beginning with \"%\") in a comment unless you quote the \"%\" as "
+"\"%%\". Macros can cause failures if they are in a comment, because they are "
+"always expanded (even when in a comment) and they can expand to multiple "
+"lines. This is true for %prep, %build, and so on. </remark>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Spec File Example"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Below is an example of a spec file from the <package>eject</package> package "
+"in &MAJOROSVER;."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"Summary: A program that ejects removable media using software control\n"
+"Name: eject\n"
+"Version: 2.1.5\n"
+"Release: 11%{dist}\n"
+"License: GPL\n"
+"Source: http://metalab.unc.edu/pub/Linux/utils/disk-management/%{name}-"
+"%{version}.tar.gz\n"
+"Source1: eject.pam\n"
+"Patch1: eject-2.1.1-verbose.patch\n"
+"Patch2: eject-timeout.patch\n"
+"Patch3: eject-2.1.5-opendevice.patch\n"
+"Patch4: eject-2.1.5-spaces.patch\n"
+"Patch5: eject-2.1.5-lock.patch\n"
+"Patch6: eject-2.1.5-umount.patch\n"
+"URL: http://www.pobox.com/~tranter\n"
+"ExcludeArch: s390 s390x\n"
+"BuildRequires: gettext\n"
+"BuildRequires: automake\n"
+"BuildRequires: autoconf\n"
+"BuildRequires: libtool\n"
+" \n"
+"%description\n"
+"The eject program allows the user to eject removable media (typically\n"
+"CD-ROMs, floppy disks or Iomega Jaz or Zip disks) using software\n"
+"control. Eject can also control some multi-disk CD changers and even\n"
+"some devices' auto-eject features.\n"
+" \n"
+"Install eject if you'd like to eject removable media using software\n"
+"control.\n"
+" \n"
+"%prep\n"
+"%setup -q -n %{name}\n"
+"%patch1 -p1 -b .verbose\n"
+"%patch2 -p1 -b .timeout\n"
+"%patch3 -p0 -b .opendevice\n"
+"%patch4 -p0 -b .spaces\n"
+"%patch5 -p0 -b .lock\n"
+"%patch6 -p1 -b .umount\n"
+" \n"
+"%build\n"
+"%configure\n"
+"make\n"
+" \n"
+"%install\n"
+"rm -rf %{buildroot}\n"
+" \n"
+"make DESTDIR=%{buildroot} install\n"
+" \n"
+"# pam stuff\n"
+"install -m 755 -d %{buildroot}/%{_sysconfdir}/pam.d\n"
+"install -m 644 %{SOURCE1} %{buildroot}/%{_sysconfdir}/pam.d/%{name}\n"
+"install -m 755 -d %{buildroot}/%{_sysconfdir}/security/console.apps/\n"
+"echo \"FALLBACK=true\" &gt; %{buildroot}/%{_sysconfdir}/security/console."
+"apps/%{name}\n"
+" \n"
+"install -m 755 -d %{buildroot}/%{_sbindir}\n"
+"pushd %{buildroot}/%{_bindir}\n"
+"mv eject ../sbin\n"
+"ln -s consolehelper eject\n"
+"popd\n"
+" \n"
+"%find_lang %{name}\n"
+" \n"
+"%files -f %{name}.lang\n"
+"%doc README TODO COPYING ChangeLog\n"
+"%attr(644,root,root) %{_sysconfdir}/security/console.apps/*\n"
+"%attr(644,root,root) %{_sysconfdir}/pam.d/*\n"
+"%{_bindir}/*\n"
+"%{_sbindir}/*\n"
+"%{_mandir}/man1/*\n"
+" \n"
+"%changelog\n"
+"* Wed Apr 02 2008 Zdenek Prikryl &lt;zprikryl at, redhat.com&gt; 2.1.5-11\n"
+"- Added check if device is hotpluggable\n"
+"- Resolves #438610"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The example above shows the usage of some of the directives and macros in a "
+"spec file. Refer to <xref linkend=\"chap-Packagers_Guide-Spec_File_Reference-"
+"Preamble\" /> for a detailed description of the directives and macros."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Spec File Preamble"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section include a list with descriptions of some of the more frequently "
+"used directives in spec files."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>Name: <replaceable>name</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>Name:</option> tag defines the (base) name of the package. This "
+"name must follow the <ulink url=\"http://fedoraproject.org/wiki/Packaging/"
+"NamingGuidelines\">Fedora Package Naming Guidelines</ulink>. Also, this name "
+"should match the spec file name. In many cases, the name will be in all "
+"lower case. For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Name: eject"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Elsewhere in the spec file, you can refer to the name using the macro "
+"<option>%{name}</option>. That way, if the name changes, the new name will "
+"be used by those other locations."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>Version: <replaceable>version</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>Version</option> tag defines the upstream version number. If the "
+"version is non-numeric (that is it contains tags that are not numbers or "
+"digits), you may need to include the additional non-numeric characters in "
+"the <option>Release</option> tag. If upstream uses full dates to distinguish "
+"versions, consider using version numbers of the form <code>yy.mm[.dd]</code> "
+"(so a <code>2008-05-01</code> release becomes <code>8.05</code>). See <ulink "
+"url=\"http://fedoraproject.org/wiki/Packaging/"
+"NamingGuidelines#Package_Versioning\">Fedora Package Naming Guidelines</"
+"ulink> for more information. An example of the <option>Version</option> tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Version: 2.1.5"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Elsewhere in the spec file, refer to the tag value as %{version}. That way, "
+"if the tag value changes, the new value will be used by those other "
+"locations."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>Release: <replaceable>release</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>Release</option> tag defines the value of the package's version. "
+"The initial release will typically be defined as <option>1%{?dist}</option>. "
+"After the initial release, increment the number every time a new package is "
+"released for the same version of software. If a new version of the packaged "
+"software is released, the <option>Version</option> tag should be changed to "
+"reflect the new software version, and the <option>Release</option> tag "
+"should be reset to <option>1</option>. See <ulink url=\"http://fedoraproject."
+"org/wiki/Packaging/NamingGuidelines#Package_Versioning\">Fedora Package "
+"Naming Guidelines</ulink> for more information. Refer to the <ulink url="
+"\"http://fedoraproject.org/wiki/Packaging/DistTag\">Fedora Dist Tag "
+"Guidelines</ulink> for a description of the <code>dist</code> tag, which is "
+"not required but can be useful. An example of the <option>Release</option> "
+"tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Release: 11%{dist}"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Elsewhere in the spec file, refer to the tag value as %{release}. That way, "
+"if the tag value changes, the new value will be used by those other "
+"locations."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>Summary: <replaceable>summary</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>Summary</option> tag defines a brief, one-line summary of the "
+"package. Do not use a period at the end of the summary. For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Summary: A program that ejects removable media using software control"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>Group: <replaceable>group</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>Group</option> tag defines a package group, which the package is "
+"a part of. The tag must define a previously existing group, for example "
+"<option>Applications/Engineering</option>. To display a complete list of "
+"existing groups, run the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<command>less /usr/share/doc/rpm-*/GROUPS</command>\n"
+"              "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you create a <package><replaceable>package</replaceable>-doc</package> "
+"sub-package with documentation, use the group <option>Documentation</option>."
+" An example of the <option>Group</option> tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Group: System Environment/Base"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The Group tag is deprecated"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>RPM</application> in &MAJOROSVER; does not require the presence "
+"of the <code>Group</code> tag in the spec file. If the tag is defined, it "
+"will be ignored. The package groups of the <application>yum</application> "
+"application are used on a &MAJOROSVER; system as the relevant source of "
+"information on which group is the package a part of."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>License: <replaceable>license</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>License</option> tag defines the license of the packaged "
+"software. Use a standard abbreviation, for example <option>GPLv2+</option>. "
+"The definition of the license should be specific; for example do not use "
+"<option>GPL</option> or <option>GPLv2</option> when the license is in fact "
+"GPL version 2 or greater, that is <option>GPLv2+</option>. You can list "
+"multiple licenses in the tag by combining them with words <code>and</code> "
+"and <code>or</code>, for example <option>GPLv2 and BSD</option>. Refer to "
+"the <ulink url=\"http://fedoraproject.org/wiki/Licensing\">Fedora Licensing "
+"Document</ulink> and the <ulink url=\"http://fedoraproject.org/wiki/"
+"Packaging/LicensingGuidelines\">Licensing Guidelines</ulink> for more "
+"information on this topic."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Do not use the tag <option>Copyright</option> in place of the "
+"<option>License</option> tag. An example of the <option>License</option> tag:"
+""
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "License: GPL"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>URL: <replaceable>URL</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>URL</option> tag defines the URL with more information about the "
+"program, for example the project website. This tag does not define where the "
+"original source code came from, use the the tag <option>Source</option> for "
+"that purpose. An example of the <option>URL</option> tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "URL: http://www.pobox.com/~tranter"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<option>Source<replaceable>0</replaceable>: <replaceable>URL</replaceable> </"
+"option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>Source</option> tag defines a URL for the compressed archive "
+"containing the (original) unmodified source code, as upstream released it. "
+"The tag <option>Source</option> is the same as the tag <option>Source0</"
+"option>. Because a full URL should be provided with this tag, its basename "
+"can be then used when looking in the <filename class=\"directory\">SOURCES/</"
+"filename> directory. If possible, add <option>%{name}</option> and "
+"<option>%{version}</option> to the URL."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The tag <option>Source</option> and the tag <option>URL</option> are used "
+"for different purposes. Typically, they are both URLs, but the <option>URL</"
+"option> tag points to the project website, while the <option>Source</option> "
+"tag points to the actual file containing the source code."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When downloading the source code, consider using a client that preserves the "
+"upstream timestamps, such as <application>wget</application>. For example:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<command>wget -N <replaceable>URL</replaceable></command>\n"
+"              "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are using <application>curl</application>, run the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<command>curl -R <replaceable>URL</replaceable></command>\n"
+"              "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If there is more than one source, name them <option>Source1</option>, "
+"<option>Source2</option>, and so on. If you are adding whole new files in "
+"addition to the unmodified sources, you can list each of them as sources as "
+"well, but list them <emphasis>after</emphasis> the unmodified sources. "
+"Remember to include a copy of each of these sources in any source package "
+"you create. For information on exceptions to this rule, such as when using "
+"revision control system, upstream using prohibited code, and so on, refer to "
+"the <ulink url=\"http://fedoraproject.org/wiki/Packaging/SourceURL\">Fedora "
+"Source URL Guidelines</ulink>. An example of the <option>Source</option> tag:"
+""
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Source1: eject.pam"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<option>Patch<replaceable>0</replaceable>: <replaceable>file_name</"
+"replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>Patch<replaceable>0</replaceable>:</option> tag defines the name "
+"of the first patch that you will apply to the source code. If you need to "
+"patch the files after they have been uncompressed, edit the files, save "
+"their differences as a <emphasis>patch</emphasis> file in the <filename "
+"class=\"directory\">~/rpmbuild/SOURCES/</filename> directory. Patches should "
+"make only one logical change, so it is likely to have multiple patch files. "
+"If there is more than one source, name them <option>Patch1</option>, "
+"<option>Patch2</option>, and so on. An example of the <option>Patch1</"
+"option> tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Patch1: eject-2.1.1-verbose.patch"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>BuildArch: <replaceable>architecture</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>BuildArch</option> tag is used to define the build architecture "
+"of the package. If you are packaging files that are architecture-"
+"independent, for example shell scripts, data files, and so on, use "
+"<option>BuildArch: noarch</option>. In this case, the architecture for the "
+"binary RPM will be <code>noarch</code>. An example of the <option>BuildArch</"
+"option> tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "BuildArch: noarch"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>ExcludeArch: <replaceable>architecture</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>ExcludeArch</option> tag defines any excluded build architecture."
+" If the package does not successfully compile, build or work on an "
+"architecture, then the architecture should be defined in the "
+"<option>ExcludeArch</option> tag. An example of the <option>ExcludeArch</"
+"option> tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "ExcludeArch: i386"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>BuildRoot: <replaceable>build root</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>BuildRoot</option> defines the location of the files "
+"<emphasis>installed</emphasis> during the <code>%install</code> process, "
+"which happens after the <code>%build</code> compilation process. In a "
+"typical situation, leave this line alone: under the usual &MAJOROSVER; "
+"setup, a macro that will create a new special subdirectory in the <filename "
+"class=\"directory\">/var/tmp/</filename> directory will be used. Newer "
+"versions of RPM ignore this value, and instead place the build root in "
+"<code>%{_topdir}/BUILDROOT/</code>. An example of the <option>BuildRoot</"
+"option> tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The BuildRoot tag is deprecated"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>RPM</application> in &MAJOROSVER; does not require the presence "
+"of the <code>BuildRoot</code> tag in the spec file. If the tag is defined, "
+"it will be ignored. The provided buildroot will automatically be cleaned "
+"before commands in <code>%install</code> are called."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<option>BuildRequires: <replaceable>requirements</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>BuildRequires</option> tag defines a comma-separated list of "
+"packages required for building (or compiling) the software. These are "
+"<emphasis>not</emphasis> automatically determined, so you must include every "
+"package needed to build the software."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are a few packages that are so common in builds that you do not need "
+"to mention them, such as <package>gcc</package>. Refer to the <ulink url="
+"\"http://fedoraproject.org/wiki/Packaging/Guidelines\">Fedora Packaging "
+"Guidelines</ulink> for a complete list of the packages you may omit."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use more than one BuildRequires tag, in which case all BuildRequires "
+"tags they are all required for building. If necessary, you can also specify "
+"a minimum version of the package, for example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "ocaml &gt;= 3.08\n"
+"              "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<remark>If you need file /EGGS, you can get its package by running \"rpm -qf "
+"/EGGS\"; if EGGS is a program, you determine its package quickly by running "
+"\"rpm -qf `which EGGS`\". </remark>Try to specify only the minimal set of "
+"packages necessary to properly build the package, since each one will slow "
+"down a <emphasis>mock</emphasis>-based build. <remark>Watch out: Some "
+"applications permanently disable functions if their package isn't detected "
+"during the build; in those cases you may need to include those additional "
+"packages. If you have trouble figuring out this list, the \"auto-br-"
+"rpmbuild\" command (from the auto-buildrequires package) may be helpful.</"
+"remark> An example of the <option>BuildRequires</option> tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "BuildRequires: gettext"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>Requires: <replaceable>requirements</replaceable> </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>Requires</option> tag defines a comma-separate list of packages "
+"that are required when the software is installed. Remember that the list of "
+"packages for the <option>Requires</option> tag and the "
+"<option>BuildRequires</option> tag are independent: a package may be in one "
+"list but not the other, or it can be in both. The dependencies of binary "
+"packages are in many cases automatically detected by <application>pmbuild</"
+"application>, so it is often the case that you do not need to specify the "
+"<option>Requires</option> tag at all. But if you want to highlight some "
+"specific packages as being required, or require a package that RPM cannot "
+"detect should be required, then add it to the <option>Requires</option> tag. "
+"An example of the <option>Requires</option> tag:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "Requires: gettext"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<option>%description <replaceable>description text</replaceable></option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>%description</option> directive defines a longer, multiline "
+"description of the package. All lines must be 80 characters long or less. "
+"Blank lines are assumed to separate paragraphs. Remember that some graphical "
+"user interface installation programs will reformat paragraphs. Lines that "
+"start with whitespace, such as a space or tab, will be treated as "
+"preformatted text and displayed as is, normally with a fixed-width font. An "
+"example of the <option>%description</option> directive:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%description\n"
+"The eject program allows the user to eject removable media (typically\n"
+"CD-ROMs, floppy disks or Iomega Jaz or Zip disks) using software\n"
+"control. Eject can also control some multi-disk CD changers and even\n"
+"some devices' auto-eject features.\n"
+"\n"
+"Install eject if you'd like to eject removable media using software\n"
+"control."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>%prep </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>%prep</option> directive defines script commands to "
+"<emphasis>prepare</emphasis> the software before the start of the building "
+"process. In a typical situation, the definition is similar to <code>%setup -"
+"q</code>. For example, if the source file unpacks into <filename>name</"
+"filename>, the definition is <code>%setup -q -n name</code>. <remark>See the "
+"\"%prep\" section below for more.</remark> An example of the <option>%prep</"
+"option> directive:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%prep\n"
+"%setup -q -n %{name}\n"
+"%patch1 -p1 -b .verbose"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>%build </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>%build</option> directive defines script commands to build "
+"(compile) the software, that is, to get it ready for installing. "
+"<remark>Typically, software includes instructions on how to build it. See "
+"the \"%build\" section below for more.</remark> An example of the %build "
+"directive:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%build\n"
+"%configure\n"
+"make"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>%check </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>%check</option> directive defines script commands to self-test "
+"the program. The self-tests are run after <option>%build</option> and before "
+"<option>%install</option>, so the <option>%check</option> directive should "
+"be placed accordingly between the directives mentioned above. Usually, the "
+"<option>%check</option> directive contains the <command>make test</command> "
+"or <command>make check</command> commands. These commands are separated from "
+"the <option>%build</option> directive so that users can skip the self-test "
+"process, if they desire."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%check\n"
+"make check\n"
+"            "
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>%install </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>%install</option> directive defines script commands to "
+"<emphasis>install</emphasis> the software. The script commands copy the "
+"build files from the build directory <option>%{_builddir}</option> (usually "
+"a subdirectory of the directory <filename class=\"directory\">~/rpmbuild/"
+"BUILD/</filename>) into the build root directory <option>%{buildroot}</"
+"option> (usually a subdirectory of the directory <filename class="
+"\"directory\">/var/tmp/</filename>). <remark>See the \"%install\" section "
+"below for more.</remark> An example of the<option>%install</option> "
+"directive:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%install\n"
+"rm -rf %{buildroot}\n"
+"\n"
+"make DESTDIR=%{buildroot} install\n"
+"\n"
+"install -m 755 -d %{buildroot}/%{_sysconfdir}/pam.d\n"
+"install -m 644 %{SOURCE1} %{buildroot}/%{_sysconfdir}/pam.d/%{name}\n"
+"install -m 755 -d %{buildroot}/%{_sysconfdir}/security/console.apps/\n"
+"echo \"FALLBACK=true\" &gt; %{buildroot}/%{_sysconfdir}/security/console."
+"apps/%{name}\n"
+"\n"
+"install -m 755 -d %{buildroot}/%{_sbindir}\n"
+"pushd %{buildroot}/%{_bindir}\n"
+"mv eject ../sbin\n"
+"ln -s consolehelper eject\n"
+"popd\n"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>%clean </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>%clean</option> directive defines instructions on how to clean "
+"out the build root. For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%clean\n"
+"rm -rf %{buildroot}"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "The %clean directive is deprecated"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>RPM</application> in &MAJOROSVER; does not require the presence "
+"of the <code>%clean</code> directive in the spec file. If the tag is "
+"defined, it will be ignored."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>%files </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>%files</option> directive contains a list of files in the "
+"package to be installed.<remark> See the \"%files\" section below for more</"
+"remark> For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "%files -f %{name}.lang\n"
+"            "
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<option>%changelog </option>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>%changelog</option> directive defines changes in the package. "
+"<remark>Use the format example above.</remark> For example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"%changelog\n"
+"* Wed Apr 02 2008 John Due &lt;jdoe at example.com&gt; 2.1.5-11\n"
+"- Added check if device is hotpluggable\n"
+"- Resolves #438610\n"
+msgstr ""
+

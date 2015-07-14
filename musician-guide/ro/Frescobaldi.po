@@ -1,0 +1,298 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Frescobaldi"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Frescobaldi is an advanced text editor, designed specifically for use with "
+"LilyPond source files. Its interface has been crafted in such a way that it "
+"aids the average workflow of creating and editing musical scores in LilyPond."
+" Frescobaldi's tight integration with various system tools is similar to the "
+"way LilyPond itself is tightly integrated with various other software "
+"programs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Frescobaldi is designed to take advantage of several features of the KDE 4 "
+"desktop system. Regular KDE users will immediately recognize Frescobaldi's "
+"components as being identical to several other key KDE applications - "
+"specifically Kate, Okular, and Konqueror. The key advantage to this approach "
+"is that KDE users will already know how to use most of the features of "
+"Frescobaldi, because those other applications are not just replicated, but "
+"actually used by Frescobaldi. There are many other advantages to this "
+"development approach."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For non-KDE users - especially those with older computers, this KDE-based "
+"approach may be more of a hassle than a help. An unfortunate side-effect of "
+"this development choice is that Frescobaldi has many \"dependencies\" in KDE "
+"packages, meaning that some KDE software will need to be installed in order "
+"to use Frescobaldi. This is a significant disadvantage for some users, but "
+"the benefits of using Frescobaldi far outweigh the extra hard drive space "
+"that will be required."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Frescobaldi Makes LilyPond Easier"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Using LilyPond with Frescobaldi is the recommended method for this User "
+"Guide. All three case studies in the \"LilyPond\" chapter (link? maybe?) use "
+"Frescobaldi. This is because the writers feel that Frescobaldi truly makes "
+"using LilyPond an easier thing to do."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Here are some of the benefits:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The text-editing component (from Kate), PDF-preview component (from Okular), "
+"and help file component (from Konqueror) are from applications that you may "
+"already know how to use."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The one-window setup of the application allows you to view either the source "
+"file and its output, or the source file and a help document, side-by-side. "
+"This is perfect for today's widescreen monitors."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"Setup new score\" tool greatly increases the speed of creating a new "
+"score, and offers some advanced configuration options that might otherwise "
+"take hours to discover."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"Quick Insert\" sidebar on the left-hand side of the window makes it "
+"easy to insert articulation, trill, and other marks. These would often "
+"otherwise require checking a reference document."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The 'LilyPond' menu provides several further tools to help adjust and "
+"troubleshoot your scores."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Careful integration with system tools allows you to input notes with a MIDI "
+"keyboard, listen to the MIDI output of your LilyPond score, and print the "
+"PDF file of your score, all from within Frescobaldi. These features are not "
+"covered in this Guide."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For more information refer to the <citetitle>Frescobaldi Website</citetitle> "
+"<ulink url=\"at http://www.frescobaldi.org/\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Requirements and Installation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Install the <package>frescobaldi</package> package with "
+"<application>PackageKit</application> or <application>Apper</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are a lot of dependencies, including <package>perl-<replaceable>*</"
+"replaceable></package> packages, <package>kde-<replaceable>*</replaceable></"
+"package> packages, and <application>timidity++</application> including "
+"<package>fluid-soundfont-gm</package> (which is 114&nbsp;MB)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Review and approve the list of dependencies."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The application can be found in the K Menu under 'Multimedia' or somewhere "
+"in the GNOME 'Applications' menu (probably under 'Multimedia'... for some "
+"reason)"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Changing these default settings is not necessary, but it may result in a "
+"more productive experience."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Chose <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure "
+"Frescobaldi</guimenuitem></menuchoice>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In 'General Preferences' check 'Save document when LilyPond is run', or else "
+"you will have to save it manually"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Review the other options on this page"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "In 'Paths', only some of the fields will be filled; this is okay."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"GNOME users might want to set \"PDF Viewer\" to 'evince'; this will not "
+"change the embedded PDF viewer, but it will change what opens when you click "
+"\"Open PDF\" in the bottom pane's 'LilyPond Log'. If left blank, this will "
+"open KDE's \"Okular\"."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can fill in the \"MIDI Player\" path, so that the \"Play MIDI\" button "
+"will work"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The program \"pmidi\" is available from the Planet CCRMA at Home "
+"repositories, and is a command-line MIDI player; install it with yum; run "
+"'pmidi -l' to see which ports are available; then put \"pmidi -p 14:0\" in "
+"the \"MIDI Player\" field where \"14:0\" is instead whatever port you want "
+"to use; you'll need a MIDI synthesizer (like FluidSynth) listening"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "or you can use timidity++"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can change the \"Default Directory\" to the place where you store your "
+"LilyPond files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can change \"LilyPond documentation\" if you don't want the right-side-"
+"bar \"LilyPond Documentation\" thing to internet it every time"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "install the 'lilypond-doc' package (it's 44 MB)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"put \"/usr/share/doc/lilypond-doc-2.12.2/index.html\" in the field (or in "
+"another language if that's what you want)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"this will need to be updated when LilyPond is updated; if you don't update "
+"it, then the built-in \"LilyPond Documentation\" tab will simply show up "
+"blank, instead of with the user guide - so it's harmless if you forget to "
+"update"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "options for the \"Editor Component\" are the same as those for KWrite"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I recommend going to the Editing tab, then \"Auto Completion\" and ensuring "
+"that both boxes are un-checked"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You may want to change other settings here; highly-flexible, customizable, "
+"powerful; applies only in Frescobaldi"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using Frescobaldi"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The practical use of Frescobaldi for editing LilyPond source files is "
+"described in <xref linkend=\"chap-Musicians_Guide-LilyPond\" />."
+msgstr ""
+

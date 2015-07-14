@@ -1,0 +1,53 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-12-23 12:29+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Introduction"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are approximately 500 million people worldwide with some kind of "
+"visual, hearing, or mobility impairment. People with disabilities often find "
+"it extremely difficult to effectively use existing and emerging technologies "
+"which are often designed without regard to their needs. Websites with "
+"inaccessible content can also be problematic for screen readers and other "
+"specialized devices used by the disabled community."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Accessible features have been voluntarily integrated into operating systems, "
+"web interfaces, and other technologies because of marketing potential or "
+"because it has been \"the right thing to do.\" Equal access to educational, "
+"professional, and recreational technologies is rapidly becoming a legal "
+"requirement. Federal agencies in numerous countries are formulating "
+"accessibility standards."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specialized hardware devices, applications, and utilities are available "
+"which considerably increase the usability of Linux for individuals with "
+"special needs. Screen readers and magnifiers, on-screen keyboards, mouse "
+"tools, and other tools are available for Fedora users to help make their "
+"computer usable."
+msgstr ""
+

@@ -1,0 +1,1886 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:05-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Qtractor"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Qtractor</application> is a relatively new application, created "
+"and maintained by the same developers who are responsible for "
+"<application>QjackCtl</application> and <application>Qsynth</application> "
+"(both covered in other chapters of this Guide). It offers much more "
+"flexibility than <application>Audacity</application>, but is still easier to "
+"use than <application>Ardour</application> or <application>Rosegarden</"
+"application>. We therefore recommend <application>Qtractor</application> for "
+"users who are new to software-based DAWs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Qtractor</application> is easy to use, but also very powerful. "
+"Simplicity is what makes <application>Qtractor</application> useful. After "
+"the initial learning curve, you will be able to complete almost every audio "
+"or MIDI project with <application>Qtractor</application>. The "
+"<application>Qtractor</application> interface offers simple, intuitive, "
+"point-and-click interaction with clips, integrated control of JACK "
+"connections, MIDI control integration with external devices and other MIDI-"
+"aware software, and support for LADSPA, DSSI, native VSTi, and LV2 plug-ins."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Beginners and advanced users alike will enjoy <application>Qtractor</"
+"application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "View Requirements and Install"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Knowledge Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Qtractor</application> is easy to use, and has a similar user "
+"interface to other DAWs. We recommend you read <xref linkend=\"sect-"
+"Musicians_Guide-DAW_User_Interface\" /> if you have not used a DAW before."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Software Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Qtractor uses the JACK Audio Connection Kit. You should install JACK before "
+"installing Qtractor. See <xref linkend=\"sect-Musicians_Guide-"
+"Install_and_Configure_JACK\" /> for instructions to install JACK."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Hardware Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You need an audio interface to use Qtractor. If you will record audio with "
+"Qtractor, you must have at least one microphone connected to your audio "
+"interface. You do not need a microphone to record audio signals from other "
+"JACK-aware programs like <application>FluidSynth</application> and "
+"<application>SuperCollider</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Other Requirements"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You need a MIDI synthesizer to use <application>Qtractor</application> as a "
+"MIDI sequencer. You can use hardware-based and software-based synthesizers "
+"with Qtractor. We recommend using the software-based "
+"<application>FluidSynth</application> MIDI synthesizer. See <xref linkend="
+"\"chap-Musicians_Guide-FluidSynth\" /> for information about "
+"<application>FluidSynth</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Install"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Follow these instructions to install <application>Qtractor</application> "
+"from the &O_S; repository. This version of <application>Qtractor</"
+"application> does not use an MP3 library, and cannot process MP3 files. "
+"Third-party software repositories offer <application>Qtractor</application> "
+"with MP3 support."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>PackageKit</application> or <application>Apper</"
+"application> to install the <package>qtractor</package> package."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The proposed installation includes <application>Qtractor</application> and "
+"all of the libraries that <application>Qtractor</application> uses. Review "
+"the packages you must install, then continue to install "
+"<application>Qtractor</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Qtractor</application> configures itself automatically, but it "
+"may not use the configuration you want. We recommend you test "
+"<application>Qtractor</application> before you record, so you know whether "
+"<application>Qtractor</application> works."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Qtractor"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Qtractor works without further configuration. This section describes "
+"settings that you may want to change. Choose <menuchoice><guimenu>View</"
+"guimenu><guimenuitem>Options</guimenuitem></menuchoice> to open the "
+"\"Options\" window."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid ""
+"Use <application>Qtractor</application> with <systemitem>JACK</systemitem> "
+"(<application>QjackCtl</application>)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The same developer (Rui Nuno Capela) maintains <application>QjackCtl</"
+"application>, <application>Qsynth</application>, and <application>Qtractor</"
+"application>. Therefore, we recommend you use <application>Qtractor</"
+"application> with <application>QjackCtl</application> and "
+"<application>Qsynth</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Qtractor</application> does some of the same things as "
+"<application>QjackCtl</application>. For example, <application>Qtractor</"
+"application> automatically starts JACK with the same settings as the last "
+"time you used <application>QjackCtl</application>. Also, "
+"<application>Qtractor</application> remembers the JACK connections that you "
+"use with every <application>Qtractor</application> file. If you want to "
+"change the JACK settings, you must use <application>QjackCtl</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Qtractor</application> \"Connections\" window looks like "
+"the <application>QjackCtl</application> \"Connections\" window, but they are "
+"not the same. Connections on the \"MIDI\" tab in <application>Qtractor</"
+"application> appear on the \"ALSA\" tab in <application>QjackCtl</"
+"application>. Connections on the \"MIDI\" tab in <application>QjackCtl</"
+"application> are not available in <application>Qtractor</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Qtractor</application> does not automatically control "
+"<application>Qsynth</application> or <application>FluidSynth</application>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Change Audio Options"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"Capture/Export\" setting allows you to choose the format in which "
+"<application>Qtractor</application> stores its audio clips when recorded or "
+"exported. You will be able to choose a file type, such as \"WAV Microsoft\" "
+"for standard \".wav\" files, \"AIFF Apple-SGI\" for standard \".aiff\" "
+"files, or the preferable \"FLAC Lossless Audio Codec,\" format. FLAC is an "
+"open-source, lossless, compressed format for storing audio signals and "
+"metadata. See the <citetitle>FLAC Website</citetitle> <ulink url=\"http://"
+"flac.sourceforge.net/\" /> for more information. You will also be asked to "
+"select a quality setting for lossy compressed formats, or a sample format "
+"for all lossless formats. If you do not know which sample format to choose, "
+"then \"Signed 16-Bit\" is a good choice for almost all uses, and will "
+"provide you with CD-quality audio. Most non-speciality hardware is incapable "
+"of making good use of higher sample formats. See <xref linkend=\"sect-"
+"Musicians_Guide-Sample_Rate_and_Sample_Format\" /> for more information "
+"about sample formats."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Setting the \"Transport mode\" will allow you to adjust the behaviour of the "
+"transport."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "None : allows Qtractor's transport to operate independently"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Slave : allows Qtractor's transport to accept instructions sent by JACK's "
+"transport, which can be controlled by QjackCtl or another application."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Master : allows Qtractor's transport to send instructions to JACK's "
+"transport, which can be viewed by QjackCtl, or used by another application."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Full : is equivalent to \"Master\" and \"Slave\" modes simultaneously; "
+"Qtractor's transport will both send and accept instructions."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are using <application>Qtractor</application> alone, or if you don't "
+"know which to choose, then \"None\" is a good choice. This setting can be "
+"adjusted at any time, if you later decide to link the transport in multiple "
+"applications."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"Metronome\" section allows you to use a (short) audio file as the "
+"metronome sound, rather than the standard, MIDI-based metronome. You can "
+"choose the same file for \"beat,\" and \"bar,\" if you prefer. The "
+"\"Dedicated audio metronome outputs\" option outputs the audio metronome's "
+"signal through separate outputs in JACK. This is Ardour's default behaviour."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Change MIDI Options"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Adjusting the \"File format\" allows you to change how MIDI clips are stored."
+" You will not need to adjust this unless required by an external application."
+" Refer to <citetitle>Musical Instrument Digital Interface: Standard MIDI (."
+"mid or .smf) (Wikipedia)</citetitle> at <ulink url=\"http://en.wikipedia.org/"
+"wiki/Musical_Instrument_Digital_Interface#Standard_MIDI_.28.mid_or_.smf.29\" "
+"/> for more information about file types."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"\"MMC\" stands for \"MIDI Machine Control,\" and it allows multiple MIDI-"
+"connected devices to interact and control each other. Setting the "
+"\"Transport mode\" to a setting other than \"None\" allows it be controlled "
+"by MMC messages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"None : will have <application>Qtractor</application> ignore incoming MMC "
+"messages, and not provide outgoing MMC messages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Input : will have <application>Qtractor</application> follow incoming MMC "
+"instructions, but not provide outgoing MMC messages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Output : will have <application>Qtractor</application> ignore incoming MMS "
+"messages, but provide outgoing MMC messages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Duplex : will have <application>Qtractor</application> follow incoming MMC "
+"instructions, and provide outgoing MMC messages"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can also select a particular MIDI device number with which "
+"<application>Qtractor</application> will interact; if you do this, it will "
+"ignore MMC messages from other devices, and not send MMC messages to other "
+"devices. Enabled the \"Dedicated MIDI control input/output\" will provide "
+"JACK with MIDI inputs and outputs that will be used by "
+"<application>Qtractor</application> only for MMC messages. "
+"<application>Qtractor</application> will not send or receive MMC messages "
+"sent on other inputs or outputs if this option is enabled. \"SPP\" stands "
+"for \"Song Position Pointer,\" and helps MIDI-connected applications to keep "
+"track of the current location in a session (in other words, where the "
+"transport is). This should probably be set to the same setting as \"MMC.\" "
+"If you don't know which of these settings to use, then setting \"MMC\" to "
+"\"None\" is a good choice. This setting can be adjusted at any time, if you "
+"later decide to link applications with MMC messages."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The default metronome sound is provided by the \"MIDI Metronome,\" and you "
+"can adjust its settings here. In particular, you may wish to provide a "
+"\"Dedicated MIDI metronome output,\" to help you separate the metronome's "
+"signal."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configure MIDI Channel Names"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you're using \"<application>FluidSynth</application>\" with QSynth, you "
+"should tell <application>Qtractor</application> about the SoundFont that "
+"you're using. When you do this, you enable <application>Qtractor</"
+"application> to help you choose instruments (\"patches\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click on 'View &gt; Instruments'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "In the \"Instruments\" window, click \"Import.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Navigate to <filename>/usr/share/soundfonts</filename>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the SoundFonts that you would like to use. The default is the FluidR3 "
+"GM SoundFont, but you can choose multiple SoundFonts to use simultaneously."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Close the \"Instruments\" window to return to the main "
+"<application>Qtractor</application> window."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Use Qtractor"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The \"Tutorial\" section teaches you how to use <application>Qtractor</"
+"application> by example. This section is designed to serve as a reference "
+"while you complete the tutorial, and for refreshing your memory afterwards."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Use the Blue Place-Markers"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In addition to the transport, <application>Qtractor</application> provides "
+"two other place-markers. They are blue. Here are some things you can do with "
+"the blue place-markers:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "* Mark a range:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Move the cursor to the place where you want the left-most marker."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Left-click and hold."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Drag the cursor to the location where you want the right-most marker."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Release the button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The blue markers should mark the particular range."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "* Mark one particular place:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Move the cursor to the place you want to mark."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Left-click and hold on the location."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Drag the cursor to the right just a little bit."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Two blue markers will appear."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Instead of leaving them separate, move the second blue marker over top the "
+"first one."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Release the mouse button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The arrows should be converged."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "* Move one of the markers:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Place the cursor over the triangular top of the marker, located in ruler at "
+"the top of the track pane."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The cursor should change to show a double-ended, horizontal arrow."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Left-click and drag the mouse."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The blue place-marker should follow the mouse. If it doesn't, then try again."
+" It is sometimes difficult to select the place-marker."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Use the MIDI Matrix Editor's Tools"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Qtractor's matrix editor for MIDI clips offers a collection of useful tools, "
+"available from the \"Tools\" menu in the matrix editor window. These tools "
+"only operate on MIDI notes selected in the matrix editor window before the "
+"tool window is opened. Regardless of which tool you select from the menu, "
+"the same options are available to you each time the window is opened. It is "
+"possible to use multiple tools at a time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Be careful: the names of the tools may be misleading."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Here is an explanation of what the tools do:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Quantize: This tool can be used to regulate how often MIDI notes are allowed "
+"to begin, and how long they are allowed to last. They are marked in "
+"divisions of a beat."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Time: The default setting, \"Beat/4\" will allow notes to begin only on "
+"every sixteenth note subdivision. If a note begins somewhere else, it will "
+"be moved to the nearest sixteenth note subdivision. For example, a note that "
+"begins on the first 32nd note of a measure would be moved to begin on the "
+"first beat instead."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Duration: The default setting, \"Beat/2\" will allow notes to last only in "
+"multiples of eighth notes. If a note lasts for shorter or longer than an "
+"eighth note multiple, it will be adjusted to the closest duration that is an "
+"eighth note multiple. For example, a sixteenth note would be adjusted to an "
+"eighth note."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Swing: This regularizes a \"swing\" effect on the rhythm. You will have to "
+"experiment with the settings to find one that works for you."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Common settings, described in simple meter where a quarter note gets the "
+"beat:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Beat : quarter-note duration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Beat/2 : eighth-note duration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Beat/3 : eighth-note triplet duration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Beat/4 : sixteenth-note duration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Beat/6 : sixteenth-note sextuplet duration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Beat/8 : thirty-second note duration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Transpose: This tool adjusts either the pitch (vertical axis) or the time "
+"(horizontal axis) of the selected MIDI notes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Pitch: Transposes the notes by this many semitones. Positive values "
+"transpose to a higher pitch-level, while negative values transpose to a "
+"lower pitch-level."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Time: Adjusts the starting time of MIDI notes, without affecting duration or "
+"pitch. This is most usefully measured as \"BBT\" (meaning \"Bars, Beats, and "
+"Ticks\" - each is separated by a decimal point), but can also be measured as "
+"time or frames."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Normalize: This adjusts the loudness of the selected MIDI notes, called "
+"\"velocity.\" There are three ways to use the tool. The value specified in "
+"the \"MIDI Tools\" window is used as the highest allowable velocity; all "
+"other velocity values are adjusted proportionally."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Adjust \"Percent\" only: This allows you to set the velocity to a percentage "
+"of the maximum velocity."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Adjust \"Value\" only: This allows you to supply a specific value for the "
+"velocity. Possible values range from 0 to 127."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Adjust \"Percent\" and \"Value\" together: This allows you to specify a "
+"percentage of the indicated value. If you set \"50%\" and \"32,\" for "
+"example, the resulting velocity will be \"16,\" which is 50% of 32."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Randomize: This tool adjusts the selected parameters to pseudo-random values."
+" The values are only pseudo-random for two reasons: computers cannot produce "
+"truly random numbers, only numbers that seem random to humans; the "
+"percentage value allows you to specify how widely-varied the results will be."
+" A lower percentage setting will result in MIDI notes that are more similar "
+"to the pre-randomized state than if the MIDI notes were randomized with a "
+"higher percentage setting. The following parameters can be randomized:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Note, which means pitch."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Time, which means the time of the beginning of the note."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Duration, which means duration."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Value, which means loudness (velocity)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Resize: This tool allows you to explicitly specify the duration or velocity "
+"of some MIDI notes. Setting the \"Value\" field will set the velocity "
+"(loudness) of all selected notes to that setting. Valid settings are from 0 "
+"(quietest) to 127 (loudest). Setting the \"Duration\" field will set the "
+"duration (length) of all selected notes to that setting. Duration is most "
+"usefully measured as \"BBT\" (meaning \"Bars, Beats, and Ticks\" - each is "
+"separated by a decimal point), but can also be measured as time or frames."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Export a Whole File (Audio and MIDI Together)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Qtractor can export all of a session's audio clips as one audio file, but it "
+"cannot export the MIDI clips directly into that audio file. This is because "
+"<application>Qtractor</application> does not synthesize audio from MIDI "
+"signals, but uses an external MIDI synthesizer to do this. Thankfully, there "
+"is a relatively simple way to overcome this, allowing both audio and MIDI to "
+"be exported in the same audio file: use <application>Qtractor</application> "
+"to record the audio signal produced by the MIDI synthesizer. This procedure "
+"only works if you use a MIDI synthesizer (like <application>FluidSynth</"
+"application>) which outputs its audio signal to JACK."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create a new audio track in <application>Qtractor</application> by clicking "
+"on 'Track &gt; Add Track'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Ensure that your MIDI synthesizer is set up correctly to produce output in "
+"the usual method (through your speakers)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use Qtractor's \"Connections\" window (press F8 on the keyboard) to ensure "
+"that the output from your MIDI synthesizer is routed to the input for the "
+"newly-created audio track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Move Qtractor's transport to the start of the session."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Ensure that only the newly-created audio track is armed for recording."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Arm Qtractor's transport for recording."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Press \"Play\" on the transport, and wait as the session plays through."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you have reached the end of the session, stop the transport. "
+"<application>Qtractor</application> will not automatically stop the "
+"transport."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Export the file as you normally would by clicking 'Track &gt; Export Tracks "
+"&gt; Audio'."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After the audio version of the MIDI signal is recorded, and you have "
+"exported the session, you may wish to delete the new audio track."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Miscellaneous Tips"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you wish to scroll horizontally in Qtractor's tracks pane or the matrix "
+"editor, hold down the Control (Ctrl) key as you adjust your mouse's "
+"scrollwheel."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Qtractor files should be saved in an otherwise-empty folder. Unlike Ardour, "
+"Audacity, and Rosegarden, <application>Qtractor</application> will not "
+"create a new sub-folder automatically, but will instead store all of a "
+"session's clips in the same folder as the the <application>Qtractor</"
+"application> file itself."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Transport"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can move Qtractor's transport to a particular point in a session by "
+"holding Shift as you use the mouse to click on that point."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can choose whether or not you want the track pane to automatically "
+"scroll as the transport moves by clicking 'Transport &gt; Follow Playhead'."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "MIDI"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When creating a MIDI track, you can use the \"omni\" check-box to allow the "
+"track to respond to input from any MIDI channel. If the check-box is "
+"unselected, the track will respond only to signals on its assigned MIDI "
+"channel."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the matrix editor window, you can adjust the \"velocity\" (loudness) of a "
+"note by using the \"Resize\" MIDI Tool (see <xref linkend=\"sect-"
+"Musicians_Guide-Qtractor-Using-MIDI_Tools\" /> above)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you find it difficult to work with Qtractor's matrix editor, but you find "
+"it easy to work with LilyPond, you can use this to your advantage. LilyPond "
+"will output a MIDI-format representation of your score if you include a "
+"\"midi\" section in the \"score\" section. It should look something like "
+"this:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "\n"
+"\\score\n"
+"{\n"
+"   ...\n"
+"   \\midi { }\n"
+"}\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can import <application>LilyPond</application> MIDI output in "
+"<application>Qtractor</application>. Choose <menuchoice><guimenu>Track</"
+"guimenu><guisubmenu>Import Tracks</guisubmenu><guimenuitem>MIDI</"
+"guimenuitem></menuchoice>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Create a MIDI Composition (Tutorial)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We created a demonstration of a project that a first-time user might try in "
+"<application>Qtractor</application>. The tutorial sequence explain our "
+"decisions and various application features that we used. We do not attempt "
+"to give you a generic way to create music, but rather a specific way that we "
+"used our inspiration to help use create a new musical work."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Inspiration"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This tutorial demonstrates a particular strength of <application>Qtractor</"
+"application>: combine audio and MIDI tracks in one project. We started this "
+"tutorial with a part of one of our favourite musical works. Then we created "
+"a MIDI-based \"alter-ego\" to accompany the favourite work."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The audio recording contains a \"theme and variations\" movement, so the "
+"recording begins with a theme, then continues with modified versions of the "
+"theme. The theme has two parts, both repeated once. The original composer "
+"used several standard compositional techniques of their time period, so the "
+"music sounds similarly throughout, but constantly changes in subtle ways."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We are not required to follow the aesthetic rules that Beethoven followed. "
+"Some people think we cannot possibly follows the aesthetic rules that "
+"Beethoven followed. If we create new music for solo piano, we are already "
+"aware of 150 years' worth of music that stretched Beethoven's aesthetic "
+"rules. In this tutorial, we use the matrix editor in <application>Qtractor</"
+"application>, which does not resemble conventional Western musical "
+"notation&mdash;we cannot hope to achieve a similar result. This tutorial "
+"explores the artistic possibilities of a combination of early 19th century "
+"chamber music and early 21st century electronic music."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Finally, we encountered problems when we prepared this tutorial because we "
+"cannot distribute the audio recording that we used to create the MIDI "
+"component. Therefore, you will probably use a different audio recording than "
+"we used. Even when you follow our directions precisely, your result will be "
+"quite different from our result."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Get Files for the Tutorial"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A recording of the second movement from Beethoven's Piano Sonata No.23, "
+"\"Appassionata,\" either:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>Mutopia</citetitle> at <ulink url=\"http://www.mutopiaproject.org/"
+"cgibin/make-table.cgi?searchingfor=appassionata\" /> (MIDI synthesizer "
+"recording with LilyPond sheet music),"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>SoundCloud</citetitle> at <ulink url=\"http://soundcloud.com/"
+"waltereegho/beethoven-sonata-no-23-in-f-minor-op-57-appassionata-ii-andante-"
+"con-moto-09\" /> (live recording), or"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "A commercial recording."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You must use <application>FluidSynth</application>, covered in <xref linkend="
+"\"chap-Musicians_Guide-FluidSynth\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Download a recording of the MIDI portion of this tutorial from <ulink url="
+"\"http://docs.fedoraproject.org/en-US/Fedora/16/html/Musicians_Guide/files/"
+"Qtractor/FMG-Qtractor-MIDI-Recording.flac\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to a recording of the MIDI portion combined with the audio portion of "
+"this tutorial at <ulink url=\"http://soundcloud.com/fedoraproject/fmg-"
+"qtractor-export\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to a similar project that uses a different section of this musical "
+"work, at <ulink url=\"http://soundcloud.com/bradbreeck/beethoven-piano-"
+"sonata-no-23\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Prepare <application>Qtractor</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open <application>QjackCtl</application>, and start JACK."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open <application>Qsynth</application>, and configure it with one instance, "
+"using the default FluidR3 SoundFont."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open <application>Qtractor</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Configure the MIDI tracks to cooperate with the default FluidR3 SoundFont."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Switch to <application>QjackCtl</application> and ensure the proper "
+"connections:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Qtractor</application> MIDI out (on \"ALSA\" page) is "
+"connected to the <application>Qsynth</application> MIDI in"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Qsynth</application> audio out is connected to system in "
+"(the speakers)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <application>Qtractor</application> audio out is conencted to system in "
+"(the speakers)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "No other connections are necessary."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Import the Audio File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Create a new audio track."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Right-click on the audio track, and go to \"Clip\" then \"Import\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Locate the audio file that you want to import (in this case, I imported a "
+"recording of the second movement of Beethoven's Op.57 piano sonata, "
+"\"Appassionata.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the clip doesn't start at the beginning of the track, then click and drag "
+"it to the beginning."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Mark the First Formal Area"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In addition to the transport, <application>Qtractor</application> has two "
+"blue place-markers, which sometimes merge into one. The best way to learn "
+"the behaviour of the blue place-markers is by using them. They are intended "
+"to mark a range in the work area (\"main screen\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We're keeping the standard tempo of 120 beats per minute, and the metre is 4/"
+"4"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Start from the beginning, and listen until the end of the first formal "
+"section, which I've decided is about the fourth beat of measure 12 (use the "
+"ruler to see)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Mark that point with the blue arrow."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Mark the beginning of the formal area by left-clicking at the beginning of "
+"the session. If the transport is at the beginning, then it will hide a blue "
+"marker placed at the beginning."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Create a new clip by clicking on \"Edit &gt; Clip &gt; New\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The clip editor will appear."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Create a Theme"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I want something simple, to match the simple-sounding chorale at the "
+"beginning that is the theme of this movement. What could be simpler than a "
+"moment of sound, followed by some moments of silence?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In the MIDI matrix editor window, click on the \"Edit mode\" tool, which "
+"looks like a pencil with no other markings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I decided to place a note every three beats (one beat is marked by one "
+"vertical line), on the beat, lasting for one sixteenth note."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the pencil where you want the note to appear. A box will appear. If "
+"you drag the box to the right, then the note will sound for longer."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I put all of the notes on the same pitch, but it doesn't matter whether you "
+"put them on the same pitches or not - they will be changed later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I also made a mistake when I was inputting the notes, so there's one place "
+"where they are only two beats apart instead of three. This didn't matter to "
+"me, but it might matter to you."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Continue inputting notes until you have filled the whole pre-selected region "
+"(between the blue markers). <application>Qtractor</application> will let you "
+"continue beyond that point, so you need to keep an eye on the marker "
+"yourself."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To scroll sideways, you can hold down either Shift or Ctrl and use your "
+"mouse's scroll wheel."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Move to transport just before the end of the segment you added: use Shift-"
+"click."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the end to ensure that your segment ends with or before the end of "
+"the first formal area."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Close the matrix editor window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use the main window to view the MIDI segment which you just inputted. The "
+"vertical lines represent barlines, and the darker rectangles represent notes."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the MIDI segment extends beyond the last note that you inputted, click-"
+"and-drag the end so that there isn't much over-hang. If you accidentally "
+"adjust it too far and remove notes, then simply drag the segment back out - "
+"the notes should still be there."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Return to the matrix editor by double-clicking on the MIDI segment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select all of the notes that you have inputted so far:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Press Control-a"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click-and-drag to select, or"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click on 'Edit &gt; Select &gt; Select All'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Randomize the pitches:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click on 'Tools &gt; Randomize'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Ensure that \"Randomize\" is checked"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Ensure that \"Note\" is checked (this means \"pitch\")"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Choose a percentage."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Click \"OK\" to apply."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You may need to experiment with the percent of randomization that you allow. "
+"Greater randomization means a lower chance of repetition, but it also means "
+"that the pitches will be spread within a smaller range."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you want to re-try the randomization, click on 'Edit &gt; Undo "
+"Randomization', then use the \"Randomize\" tool again."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you like what happens to most of the pitches, you can select and move a "
+"few of them either individually or together. To adjust pitches as a group, "
+"select the ones that you want to move (either by click-and-drag select or by "
+"Control-click select), and Control-drag them to the desired new location."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now you need to adjust the volume of the pitches. There are two ways to do "
+"this:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can select all of the pitches, then use the \"Resize MIDI\" tool, "
+"adjusting the \"Value\" property."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can select all of the pitches, then use the value editor portion of the "
+"matrix editor window. This is at the bottom of the matrix editor window, and "
+"the height of each pitch shown here tells you the volume at which it will "
+"play. To adjust all of the pitches at once, Control-drag to adjust the "
+"height as desired. Be careful when doing this that you don't change the "
+"horizontal position, which will change the time that the notes sound."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I would suggest at volume of approximately \"32,\" but this depends on your "
+"taste. Also, I adjust the volume of some pitches to be louder when the audio "
+"file is louder."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you are satisfied with your pitches and volumes, start the transport "
+"from the beginning, and listen to the entire segment that you just created. "
+"You can change the section again or move on to the next step."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Repeat the Theme"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The beginning of this composition opens with a thirteen-measure (in this "
+"<application>Qtractor</application> session) segment that is immediately "
+"repeated. If you chose to create a thirteen-measure theme, like we did, you "
+"will either need to create a second MIDI segment to cover Beethoven's "
+"repeat, or you can do what I did, and copy-and-paste to get an exact "
+"repetition of your theme."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To repeat your theme exactly:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click on the first MIDI segment to select it, then copy it by clicking on "
+"'Edit &gt; Copy' or Control-c"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Paste it by clicking on 'Edit &gt; Paste' or Control-v"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The cursor will turn into a clipboard icon, and a rectangle will appear to "
+"its right. This rectangle represents the clip that is going to be pasted, "
+"but first you must select a place to put it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Move the cursor so that the rectangle appears just after the end (right-most "
+"edge) of the first MIDI clip."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use the scrollbar arrows to scroll the main window, but it can be "
+"difficult, because the cursor has changed."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can also scroll the main window by pressing Control and using your "
+"mouse's scroll wheel."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can also scroll by carefully moving the mouse cursor to the edge of the "
+"main-part-thing."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is not important to get the rectangle exactly where it will stay, but "
+"just near where it needs to go."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Left-click when you have placed the rectangle where you want it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Position the transport so that you can listen to the transition from the end "
+"of the first clip into the beginning of the second clip. Press "
+"<guibutton>Play</guibutton> on the transport control to listen, then stop it "
+"when you are done."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you need to adjust the position of the second clip, then click-and-drag "
+"it into the desired position. Re-listen to verify that you placed the clip "
+"where you want it to stay."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Compose the Next Part"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It's difficult to explain, but this part feels more chord-focussed to me, "
+"even though it's very similar to the first part. I decided to show this by "
+"using the same generative idea as the first part, but with two simultaneous "
+"pitches instead of one. At the end of the segment, I included a brief "
+"gathering of \"randomized\" pitches, with longer durations than before. "
+"There is no particular reason that I included this chord-like incident, but "
+"it felt like the right thing to do."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the next portion of the audio file, and mark off the next formal "
+"section that you want to use (mine is from Qtractor's measure 25 to beat to "
+"of measure 38). The portion that I chose is also repeated, like the first "
+"part."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Place the blue markers at the beginning and end of the segment that you "
+"chose."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Create a new MIDI clip."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create the notes separated by three beats, as in the last segment. This "
+"time, be sure to add two notes at the same time, by ensure that they are "
+"aligned vertically. Again, it doesn't matter which pitches you choose, "
+"because they will be randomized."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select all of the pitches, and randomize them by using the \"Randomize "
+"MIDI\" tool."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Depending on how the pitches are randomized, each pair of notes will "
+"probably end up in one of the following situations:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"They are too close or share a particular intervallic relationship that makes "
+"them sound like one note."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"They are too far or share a particular intervallic relationship that makes "
+"them sound like two notes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"They share a particular intervallic relationship that makes them sound like "
+"one chord built of two equal chords."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Depending on your aesthetic preferences, you may wish to change some of the "
+"notes so that one or some of these situations are avoided."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I created the tone cluster at the end by clicking arbitrarily across bar 37. "
+"It happened to create six notes with the pitches G, E, C-sharp, F-sharp, G-"
+"sharp, and B. I could have used the \"Randomize MIDI\" tool, but chose not "
+"to."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Then I carefully click-and-dragged the right-most end-point of each pitch, "
+"so that they all ended at the same time: the first beat of measure 38."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "When you're done, you may need to copy-and-paste the segment."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Qtractor's Measures 52 to 75"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You already know everything that you need to create this segment, so I will "
+"simply explain the artistic reasoning."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This corresponds to the \"first variation\" in the audio file. Since "
+"variations are based on the theme, the rest of my sections are all somehow "
+"based on my theme section. Here, I derived inspiration from the music again: "
+"there is a note (generally) every three beats like the theme, but I extended "
+"it to take up two beats, at the end of which another note briefly sounds. "
+"This is like Beethoven's technique in the first variation. Although I "
+"ignored them in the theme, there are small transitions between the inner-"
+"sections of Beethoven's theme, and I chose to add them into my first "
+"variation (you can see it in Qtractor's measure 69)."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Qtractor's Measures 75 to 97"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section corresponds to the part that we created in the \"Compose the "
+"Next Part\" section above. I decided to combine the idea of this first "
+"variation with the idea of that \"Next Part.\" As you see, the result here "
+"is much like measures 52 to 75, but with more simultaneous pitches, as in "
+"the \"Next Part.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At this point, my MIDI accompaniment really begins to take on its own rhythm "
+"and personality, competing with the audio file representing Beethoven's idea."
+" Compared to the Beethoven, the randomized pitches of the MIDI part sound "
+"child-like and trivial. This might send listeners the message that MIDI is "
+"simply trivial and child-like, when compared to \"real classical music,\" "
+"and this is a perfectly valid interpretation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"However, what I intended to communicate was this: Beethoven wrote a lot of "
+"piano music, much of which is still enjoyed by people today. Nobody will "
+"ever be able to re-create the magic of Beethoven, and I feel that it would "
+"be silly to try; this is why I let the music sound silly, rather than "
+"attempting to make it sound serious. I also feel that taking inspiration "
+"from composers such as Beethoven is an excellent way to create new art for "
+"ourselves, which is why I am deriving certain cues directly from the music "
+"(mostly vague stylistic ones), but ignoring others (like the idea that "
+"pitches should be somehow organized)."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Qtractor's Measure 97"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This is a three-beat transitional passage, which I added for no particular "
+"reason but to fill a pause in the audio track."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Qtractor's Measures 98 to 119"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I used one new technique while composing this section: copy-and-paste within "
+"the matrix editor. You can see this around the beginning of measure 103, "
+"where the same pitch-classes are heard simultaneously in a high and low "
+"octave. I created the upper register first, then selected the notes that I "
+"wanted to copy. I used Control-c and Control-v to create the copy. Like when "
+"copy-and-pasting clips in the main window, the cursor icon changes to a "
+"clipboard, and an outline of the to-be-pasted material is shown so that you "
+"can position it as desired. As you will see, you can paste the copy onto any "
+"pitch level, and at any point in the measure. What is kept the same is the "
+"pitch intervals between notes and the rhythms between notes."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I also used the copy-and-paste technique with the three stepwise-descending-"
+"notes figure in this passage. After building the initial note of each set of "
+"four, I randomized those, and copy-and-pasted the three descending notes "
+"after. This way, I was able to randomize part of the melody, but avoid "
+"randomizing another part."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this passage, I kept the \"a note followed by three beats of rest\" idea, "
+"then added onto the melody by taking two cues from the audio file. The first "
+"was the increasing surface rhythm of the upper part, which gave rise to the "
+"\"three-descending-notes\" figures. The second was the fact that the chords "
+"are still going on underneath that melody, so I added a second randomized "
+"set of notes underneath my upper part. At the end of the passage I continued "
+"the trend that I started with a finishing flourish that picks up sustained "
+"notes."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Qtractor's Measures 119 to 139"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This passage does not introduce new techniques, but uses some trick "
+"manipulation of volume that are explained at the end of the section."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This passage sounds much busier because I increased the space between "
+"primary notes from three beats to two. I divided the octaves into four "
+"approximate ranges. The lowest has randomized pitches lasting one beat, "
+"which begin on beats that don't have a \"primary note.\" There is no "
+"parallel in Beethoven's music at this point."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next higher range is meant to mirror the melody in this part of the "
+"audio file, which is slightly lower than it was before. The highest range is "
+"connected to this, because Beethoven wrote some parts of the melody much "
+"higher than the other parts."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The second-highest range reflects the quickly-moving accompaniment part in "
+"the upper register of the piano."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sorting out the volumes for this passage posed a small challenge, because of "
+"the much greater number of notes than in previous passages. Thankfully, the "
+"parts are mostly well-separated from each other in the matrix editor. I was "
+"able to use click-and-drag selection to select each range separately, and "
+"adjust its volume using both the \"Resize MIDI\" tool and Control-drag in "
+"the volume adjustment space at the bottom of the matrix editor window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"My sustained-note flourish at the end of this passage was a feeble attempt "
+"to establish A Major tonality in the highest register that I used."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Qtractor's Measures 139 to 158"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "There are no new techniques used in this section."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We maintained two-beat spacing of primary notes, and began with only two/"
+"three registers. The lowest register is just an occasional reinforcement of "
+"the uppermost, as in the audio file at this point. We used copy-and-pasting "
+"to create the quickly-moving middle line."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As the section progresses, the middle line gains a simultaneous addition. "
+"This eventually becomes more adventurous, at first jumping into a very high "
+"register, then leading downwards towards its place in the next section, in "
+"the lowest register."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Qtractor's Measures 158 to 176"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"There are no new techniques in this section. I made extensive use of copy-"
+"and-pasting, and especially of partial randomization: adding the first note "
+"of a flourish, randomizing it, then copy-and-pasting the rest of the "
+"flourish into place at the appropriate pitch-level."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"At this point, I had basically dropped any obvious reference to my theme, as "
+"happens in the Beethoven score. Of course, its influence is still there: "
+"every four beats, my middle voice repeats the same pitches, and sustains "
+"them for the next four beats. Also, the upper voice in my part shares the "
+"same sort of \"single repeated pitch\" idea that makes up Beethoven's upper "
+"voice. There is also a weak rhythmic similarity between the two."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Near the end of the first sub-section (measures 164-166 inclusive), I "
+"included a long, downward 12-tone scale, which was inspired by the much "
+"smaller downward scale in Beethoven's piece."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The next sub-section is an exact repeat of ideas, but with different "
+"pitches, a smaller pitch range, and a slightly different ending."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Qtractor's Measures 177 to the End"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This part of piece was intended to mirror Beethoven's score quite obviously. "
+"The only real bit of trickery that I played was looking at Beethoven's "
+"score, and incorporating particular notes: the chord in measure 212 is "
+"composed of the same pitches that are used in the chord in the audio file in "
+"measure 210. It sounds very different because of the \"real piano vs. MIDI "
+"piano\" issue, and because the tuning of the piano in the recording is "
+"different than the tuning of the MIDI piano. Also, the chord in the second "
+"beat of measure 213 is the first chord of the movement following the one "
+"recorded in the audio file. By including this (then \"resolving\" it, then "
+"re-introducing it), I intend to play with the expectations of a listener "
+"that may already be familiar with Beethoven's sonata."
+msgstr ""
+

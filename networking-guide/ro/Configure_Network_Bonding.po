@@ -1,0 +1,2636 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-02-16 08:20-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Configure Network Bonding"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Fedora allows administrators to bind multiple network interfaces together "
+"into a single, bonded, channel. Channel bonding enables two or more network "
+"interfaces to act as one, simultaneously increasing the bandwidth and "
+"providing redundancy."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The use of direct cable connections without network switches is not "
+"supported for bonding. The failover mechanisms described here will not work "
+"as expected without the presence of network switches."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The active-backup, balance-tlb and balance-alb modes do not require any "
+"specific configuration of the switch. Other bonding modes require "
+"configuring the switch to aggregate the links. For example, a Cisco switch "
+"requires EtherChannel for Modes 0, 2, and 3, but for Mode 4 LACP and "
+"EtherChannel are required. See the documentation supplied with your switch "
+"and see <ulink url=\"https://www.kernel.org/doc/Documentation/networking/"
+"bonding.txt\">https://www.kernel.org/doc/Documentation/networking/bonding."
+"txt</ulink>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Understanding the Default Behavior of Master and Slave Interfaces"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When controlling bonded slave interfaces using the <systemitem class="
+"\"daemon\">NetworkManager</systemitem> daemon, and especially when fault "
+"finding, keep the following in mind:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Starting the master interface does not automatically start the slave "
+"interfaces."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Starting a slave interface always starts the master interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Stopping the master interface also stops the slave interfaces."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A master without slaves can start static <systemitem class=\"protocol\">IP</"
+"systemitem> connections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A master without slaves waits for slaves when starting <systemitem class="
+"\"protocol\">DHCP</systemitem> connections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A master with a <systemitem class=\"protocol\">DHCP</systemitem> connection "
+"waiting for slaves completes when a slave with a carrier is added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A master with a <systemitem class=\"protocol\">DHCP</systemitem> connection "
+"waiting for slaves continues waiting when a slave without a carrier is added."
+""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a Bond Connection Using a GUI"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use the GNOME <application>control-center</application> utility to "
+"direct <application>NetworkManager</application> to create a Bond from two "
+"or more Wired or InfiniBand connections. It is not necessary to create the "
+"connections to be bonded first. They can be configured as part of the "
+"process to configure the bond. You must have the MAC addresses of the "
+"interfaces available in order to complete the configuration process."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Establishing a Bond Connection"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adding a New Bond Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can configure a Bond connection by opening the <guilabel>Network</"
+"guilabel> window, clicking the plus symbol, and selecting <guilabel>Bond</"
+"guilabel> from the list."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Press the <keycap>Super</keycap> key to enter the Activities Overview, type "
+"<command>control network</command> and then press <keycap>Enter</keycap>. "
+"The <application>Network</application> settings tool appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Click the plus symbol to open the selection list. Select <guilabel>Bond</"
+"guilabel>. The <guilabel>Editing Bond connection <replaceable>1</"
+"replaceable></guilabel> window appears."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"On the <guilabel>Bond</guilabel> tab, click <guibutton>Add</guibutton> and "
+"select the type of interface you want to use with the bond connection. Click "
+"the <guibutton>Create</guibutton> button. Note that the dialog to select the "
+"slave type only comes up when you create the first slave; after that, it "
+"will automatically use that same type for all further slaves."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <guilabel>Editing bond0 slave 1</guilabel> window appears. Use the "
+"<guilabel>Device MAC address</guilabel> drop-down menu to select the MAC "
+"address of the interface to be bonded. The first slave's MAC address will be "
+"used as the MAC address for the bond interface. If required, enter a clone "
+"MAC address to be used as the bond's MAC address. Click the <guibutton>Save</"
+"guibutton> button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The name of the bonded slave appears in the <guilabel>Bonded connections</"
+"guilabel> window. Click the <guibutton>Add</guibutton> button to add further "
+"slave connections."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Review and confirm the settings and then click the <guilabel>Save</guilabel> "
+"button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Edit the bond-specific settings by referring to <xref linkend=\"sec-"
+"Configuring_the_Bond_Tab\" /> below."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Editing an Existing Bond Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Follow these steps to edit an existing bond connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Select the connection you want to edit and click the <guilabel>Options</"
+"guilabel> button."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Select the <guilabel>General</guilabel> tab."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Configure the connection name, auto-connect behavior, and availability "
+"settings."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Five settings in the <guilabel>Editing</guilabel> dialog are common to all "
+"connection types, see the <guilabel>General</guilabel> tab:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Connection name</guilabel> — Enter a descriptive name for your "
+"network connection. This name will be used to list this connection in the "
+"menu of the <guilabel>Network</guilabel> window."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Automatically connect to this network when it is available</"
+"guilabel> — Select this box if you want <application>NetworkManager</"
+"application> to auto-connect to this connection when it is available. See "
+"<xref linkend=\"sec-Connecting_to_a_Network_Automatically\" /> for more "
+"information."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>All users may connect to this network</guilabel> — Select this box "
+"to create a connection available to all users on the system. Changing this "
+"setting may require root privileges. See <xref linkend=\"sec-System-"
+"wide_and_Private_Connection_Profiles\" /> for details."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Automatically connect to VPN when using this connection</guilabel> "
+"— Select this box if you want <application>NetworkManager</application> to "
+"auto-connect to a VPN connection when it is available. Select the VPN from "
+"the drop-down menu."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<guilabel>Firewall Zone</guilabel> — Select the firewall zone from the drop-"
+"down menu."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid ""
+"Saving Your New (or Modified) Connection and Making Further Configurations"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once you have finished editing your bond connection, click the "
+"<guibutton>Save</guibutton> button to save your customized configuration. If "
+"the profile was in use while being edited, power cycle the connection to "
+"make <application>NetworkManager</application> apply the changes. If the "
+"profile is OFF, set it to ON. See <xref linkend=\"sec-"
+"Connecting_to_a_Network_Using_a_GUI\" /> for information on using your new "
+"or altered connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can further configure an existing connection by selecting it in the "
+"<guilabel>Network</guilabel> window and clicking <guilabel>Options</"
+"guilabel> to return to the <guilabel>Editing</guilabel> dialog."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then, to configure:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"protocol\">IPv4</systemitem> settings for the "
+"connection, click the <guilabel>IPv4 Settings</guilabel> tab and proceed to "
+"<xref linkend=\"sec-Configuring_IPv4_Settings\" />; or,"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"protocol\">IPv6</systemitem> settings for the "
+"connection, click the <guilabel>IPv6 Settings</guilabel> tab and proceed to "
+"<xref linkend=\"sec-Configuring_IPv6_Settings\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring the Bond Tab"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have already added a new bond connection (refer to <xref linkend="
+"\"procedure-Adding_a_New_Bond_Connection\" /> for instructions), you can "
+"edit the <guilabel>Bond</guilabel> tab to set the load sharing mode and the "
+"type of link monitoring to use to detect failures of a slave connection."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Mode</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The mode that is used to share traffic over the slave connections which make "
+"up the bond. The default is <guilabel>Round-robin</guilabel>. Other load "
+"sharing modes, such as <systemitem class=\"protocol\">802.3ad</systemitem>, "
+"can be selected by means of the drop-down list."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Link Monitoring</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The method of monitoring the slaves ability to carry network traffic."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following modes of load sharing are selectable from the <guilabel>Mode</"
+"guilabel> drop-down list:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Round-robin</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sets a round-robin policy for fault tolerance and load balancing. "
+"Transmissions are received and sent out sequentially on each bonded slave "
+"interface beginning with the first one available. This mode might not work "
+"behind a bridge with virtual machines without additional switch "
+"configuration."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Active backup</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sets an active-backup policy for fault tolerance. Transmissions are received "
+"and sent out via the first available bonded slave interface. Another bonded "
+"slave interface is only used if the active bonded slave interface fails. "
+"Note that this is the only mode available for bonds of InfiniBand devices."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>XOR</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sets an XOR (exclusive-or) policy. Transmissions are based on the selected "
+"hash policy. The default is to derive a hash by XOR of the source and "
+"destination MAC addresses multiplied by the modulo of the number of slave "
+"interfaces. In this mode traffic destined for specific peers will always be "
+"sent over the same interface. As the destination is determined by the MAC "
+"addresses this method works best for traffic to peers on the same link or "
+"local network. If traffic has to pass through a single router then this mode "
+"of traffic balancing will be suboptimal."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Broadcast</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sets a broadcast policy for fault tolerance. All transmissions are sent on "
+"all slave interfaces. This mode might not work behind a bridge with virtual "
+"machines without additional switch configuration."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>802.3ad</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sets an IEEE <systemitem class=\"protocol\">802.3ad</systemitem> dynamic "
+"link aggregation policy. Creates aggregation groups that share the same "
+"speed and duplex settings. Transmits and receives on all slaves in the "
+"active aggregator. Requires a network switch that is <systemitem class="
+"\"protocol\">802.3ad</systemitem> compliant."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Adaptive transmit load balancing</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sets an adaptive Transmit Load Balancing (TLB) policy for fault tolerance "
+"and load balancing. The outgoing traffic is distributed according to the "
+"current load on each slave interface. Incoming traffic is received by the "
+"current slave. If the receiving slave fails, another slave takes over the "
+"MAC address of the failed slave. This mode is only suitable for local "
+"addresses known to the kernel bonding module and therefore cannot be used "
+"behind a bridge with virtual machines."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Adaptive load balancing</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sets an Adaptive Load Balancing (ALB) policy for fault tolerance and load "
+"balancing. Includes transmit and receive load balancing for <systemitem "
+"class=\"protocol\">IPv4</systemitem> traffic. Receive load balancing is "
+"achieved through <systemitem class=\"protocol\">ARP</systemitem> negotiation."
+" This mode is only suitable for local addresses known to the kernel bonding "
+"module and therefore cannot be used behind a bridge with virtual machines."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following types of link monitoring can be selected from the "
+"<guilabel>Link Monitoring</guilabel> drop-down list. It is a good idea to "
+"test which channel bonding module parameters work best for your bonded "
+"interfaces."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>MII (Media Independent Interface)</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The state of the carrier wave of the interface is monitored. This can be "
+"done by querying the driver, by querying MII registers directly, or by using "
+"<application>ethtool</application> to query the device. Three options are "
+"available:"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Monitoring Frequency</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The time interval, in milliseconds, between querying the driver or MII "
+"registers."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Link up delay</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The time in milliseconds to wait before attempting to use a link that has "
+"been reported as up. This delay can be used if some gratuitous <systemitem "
+"class=\"protocol\">ARP</systemitem> requests are lost in the period "
+"immediately following the link being reported as <quote>up</quote>. This can "
+"happen during switch initialization for example."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>Link down delay</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The time in milliseconds to wait before changing to another link when a "
+"previously active link has been reported as <quote>down</quote>. This delay "
+"can be used if an attached switch takes a relatively long time to change to "
+"backup mode."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>ARP</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The address resolution protocol (<systemitem class=\"protocol\">ARP</"
+"systemitem>) is used to probe one or more peers to determine how well the "
+"link-layer connections are working. It is dependent on the device driver "
+"providing the transmit start time and the last receive time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Two options are available:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The time interval, in milliseconds, between sending <systemitem class="
+"\"protocol\">ARP</systemitem> requests."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<guilabel>ARP targets</guilabel>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A comma separated list of <systemitem class=\"protocol\">IP</systemitem> "
+"addresses to send <systemitem class=\"protocol\">ARP</systemitem> requests "
+"to."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using the Command Line Interface (CLI)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A bond is created using the <filename>bonding</filename> kernel module and a "
+"special network interface called a <firstterm>channel bonding interface</"
+"firstterm>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Check if Bonding Kernel Module is Installed"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora, the bonding module is not loaded by default. You can load the "
+"module by issuing the following command as <systemitem class="
+"\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>modprobe --first-time bonding</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This activation will not persist across system restarts. See the <citetitle "
+"pubwork=\"book\">&MAJOROSVER; System Administrator's Guide</citetitle> for "
+"an explanation of persistent module loading. Note that given a correct "
+"configuration file using the <command>BONDING_OPTS</command> directive, the "
+"bonding module will be loaded as required and therefore does not need to be "
+"loaded separately."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To display information about the module, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>modinfo bonding</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See the <filename>modprobe(8)</filename> man page for more command options."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Create a Channel Bonding Interface"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a channel bonding interface, create a file in the <filename class="
+"\"directory\">/etc/sysconfig/network-scripts/</filename> directory called "
+"<filename>ifcfg-bond<replaceable>N</replaceable></filename>, replacing "
+"<replaceable>N</replaceable> with the number for the interface, such as "
+"<filename>0</filename>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The contents of the file can be based on a configuration file for whatever "
+"type of interface is getting bonded, such as an Ethernet interface. The "
+"essential differences are that the <option>DEVICE</option> directive is "
+"<option>bond<replaceable>N</replaceable></option>, replacing <replaceable>N</"
+"replaceable> with the number for the interface, and <command>TYPE=Bond</"
+"command>. In addition, set <command>BONDING_MASTER=yes</command>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Example ifcfg-bond0 Interface Configuration File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "An example of a channel bonding interface."
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"DEVICE=bond0\n"
+"NAME=bond0\n"
+"TYPE=Bond\n"
+"BONDING_MASTER=yes\n"
+"IPADDR=192.168.1.1\n"
+"PREFIX=24\n"
+"ONBOOT=yes\n"
+"BOOTPROTO=none\n"
+"BONDING_OPTS=\"<replaceable>bonding parameters separated by spaces</"
+"replaceable>\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The NAME directive is useful for naming the connection profile in "
+"<application>NetworkManager</application>. ONBOOT says whether the profile "
+"should be started when booting (or more generally, when auto-connecting a "
+"device)."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Put all Bonding Module Parameters in ifcfg-bondN Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Parameters for the bonding kernel module must be specified as a space-"
+"separated list in the <option>BONDING_OPTS=\"<replaceable>bonding "
+"parameters</replaceable>\"</option> directive in the <filename>ifcfg-"
+"bond<replaceable>N</replaceable></filename> interface file. Do "
+"<emphasis>not</emphasis> specify options for the bonding device in "
+"<filename>/etc/modprobe.d/<replaceable>bonding</replaceable>.conf</"
+"filename>, or in the deprecated <filename>/etc/modprobe.conf</filename> file."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>max_bonds</option> parameter is not interface specific and "
+"should not be set when using <filename>ifcfg-bond<replaceable>N</"
+"replaceable></filename> files with the <command>BONDING_OPTS</command> "
+"directive as this directive will cause the network scripts to create the "
+"bond interfaces as required."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For further instructions and advice on configuring the bonding module and to "
+"view the list of bonding parameters, see <xref linkend=\"sec-"
+"Using_Channel_Bonding\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating SLAVE Interfaces"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The channel bonding interface is the <quote>master</quote> and the "
+"interfaces to be bonded are referred to as the <quote>slaves</quote>. After "
+"the channel bonding interface is created, the network interfaces to be bound "
+"together must be configured by adding the <option>MASTER</option> and "
+"<option>SLAVE</option> directives to the configuration files of the slaves. "
+"The configuration files for each of the slave interfaces can be nearly "
+"identical."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Example Slave Interface Configuration File"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For example, if two Ethernet interfaces are being channel bonded, "
+"<literal>eth0</literal> and <literal>eth1</literal>, they can both look like "
+"the following example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"DEVICE=eth<replaceable>N</replaceable>\n"
+"NAME=bond0-slave\n"
+"TYPE=Ethernet\n"
+"BOOTPROTO=none\n"
+"ONBOOT=yes\n"
+"MASTER=bond0\n"
+"SLAVE=yes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this example, replace <replaceable>N</replaceable> with the numerical "
+"value for the interface. Note that if more than one profile or configuration "
+"file exists with ONBOOT=yes for an interface, they may race with each other "
+"and a plain TYPE=Ethernet profile may be activated instead of a bond slave."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Activating a Channel Bond"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To activate a bond, bring up all the slaves. As <systemitem class="
+"\"username\">root</systemitem>, issue the following commands:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>ifup ifcfg-eth0</command>\n"
+"Connection successfully activated (D-Bus active path: /org/freedesktop/"
+"NetworkManager/ActiveConnection/7)"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>ifup ifcfg-eth1</command>\n"
+"Connection successfully activated (D-Bus active path: /org/freedesktop/"
+"NetworkManager/ActiveConnection/8)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that if editing interface files for interfaces which are currently "
+"<quote>up</quote>, set them down first as follows: <synopsis>ifdown "
+"eth<replaceable>N</replaceable></synopsis> Then when complete, bring up all "
+"the slaves, which will bring up the bond (provided it was not set "
+"<quote>down</quote>)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To make <application>NetworkManager</application> aware of the changes, "
+"issue a command for every changed interface as <systemitem class="
+"\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>nmcli con load /etc/sysconfig/network-scripts/ifcfg-"
+"<replaceable>device</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Alternatively, to reload all interfaces:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>nmcli con reload</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The default behavior is for <application>NetworkManager</application> not to "
+"be aware of the changes and to continue using the old configuration data. "
+"The is set by the <option>monitor-connection-files</option> option in the "
+"<filename>NetworkManager.conf</filename> file. See the "
+"<filename>NetworkManager.conf(5)</filename> manual page for more information."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To view the status of the bond interface, issue the following command:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>ip link show</command>\n"
+"1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN "
+"mode DEFAULT\n"
+"    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n"
+"2: eth0: &lt;BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP&gt; mtu 1500 qdisc "
+"pfifo_fast master bond0 state UP mode DEFAULT qlen 1000\n"
+"    link/ether 52:54:00:e9:ce:d2 brd ff:ff:ff:ff:ff:ff\n"
+"3: eth1: &lt;BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP&gt; mtu 1500 qdisc "
+"pfifo_fast master bond0 state UP mode DEFAULT qlen 1000\n"
+"    link/ether 52:54:00:38:a6:4c brd ff:ff:ff:ff:ff:ff\n"
+"4: bond0: &lt;BROADCAST,MULTICAST,MASTER,UP,LOWER_UP&gt; mtu 1500 qdisc "
+"noqueue state UP mode DEFAULT\n"
+"    link/ether 52:54:00:38:a6:4c brd ff:ff:ff:ff:ff:ff"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Creating Multiple Bonds"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In &MAJOROSVER;, for each bond a channel bonding interface is created "
+"including the <command>BONDING_OPTS</command> directive. This configuration "
+"method is used so that multiple bonding devices can have different "
+"configurations. To create multiple channel bonding interfaces, proceed as "
+"follows:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create multiple <filename>ifcfg-bond<replaceable>N</replaceable></filename> "
+"files with the <command>BONDING_OPTS</command> directive; this directive "
+"will cause the network scripts to create the bond interfaces as required."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create, or edit existing, interface configuration files to be bonded and "
+"include the <command>SLAVE</command> directive."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Assign the interfaces to be bonded, the slave interfaces, to the channel "
+"bonding interfaces by means of the <command>MASTER</command> directive."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Example multiple ifcfg-bondN interface configuration files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following is an example of a channel bonding interface configuration "
+"file:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"DEVICE=bondN\n"
+"NAME=bondN\n"
+"TYPE=Bond\n"
+"BONDING_MASTER=yes\n"
+"IPADDR=192.168.1.1\n"
+"PREFIX=24\n"
+"ONBOOT=yes\n"
+"BOOTPROTO=none\n"
+"BONDING_OPTS=\"<replaceable>bonding parameters separated by spaces</"
+"replaceable>\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this example, replace <replaceable>N</replaceable> with the number for "
+"the bond interface. For example, to create two bonds create two "
+"configuration files, <filename>ifcfg-bond0</filename> and <filename>ifcfg-"
+"bond1</filename>, with appropriate <systemitem class=\"protocol\">IP</"
+"systemitem> addresses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Create the interfaces to be bonded as per <xref linkend=\"ex-"
+"Example_Slave_Interface_Configuration_File\" /> and assign them to the bond "
+"interfaces as required using the <command>MASTER=bond<replaceable>N</"
+"replaceable></command> directive. For example, continuing on from the "
+"example above, if two interfaces per bond are required, then for two bonds "
+"create four interface configuration files and assign the first two using "
+"<command>MASTER=bond<replaceable>0</replaceable></command> and the next two "
+"using <command>MASTER=bond<replaceable>1</replaceable></command>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring a VLAN over a Bond"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section will show configuring a VLAN over a bond consisting of two "
+"Ethernet links between a server and an Ethernet switch. The switch has a "
+"second bond to another server. Only the configuration for the first server "
+"will be shown as the other is essentially the same apart from the "
+"<systemitem class=\"protocol\">IP</systemitem> addresses."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Check the available interfaces on the server:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$ <command>ip addr</command>\n"
+"1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN \n"
+"    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n"
+"    inet 127.0.0.1/8 scope host lo\n"
+"    inet6 ::1/128 scope host \n"
+"       valid_lft forever preferred_lft forever\n"
+"2: eth0: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc pfifo_fast state DOWN "
+"qlen 1000\n"
+"    link/ether 52:54:00:19:28:fe brd ff:ff:ff:ff:ff:ff\n"
+"3: eth1: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc pfifo_fast state DOWN "
+"qlen 1000\n"
+"    link/ether 52:54:00:f6:63:9a brd ff:ff:ff:ff:ff:ff"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring the Interfaces on the Server"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Configure a slave interface using <literal>eth0</literal>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]# <command>vi /etc/sysconfig/network-scripts/ifcfg-eth0</command>\n"
+"NAME=bond0-slave0\n"
+"DEVICE=eth0 \n"
+"TYPE=Ethernet\n"
+"BOOTPROTO=none\n"
+"ONBOOT=yes\n"
+"MASTER=bond0\n"
+"SLAVE=yes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The use of the NAME directive is optional. It is for display by a GUI "
+"interface, such as <application>nm-connection-editor</application>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Configure a slave interface using <literal>eth1</literal>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]# <command>vi /etc/sysconfig/network-scripts/ifcfg-eth1</command>\n"
+"NAME=bond0-slave1\n"
+"DEVICE=eth1\n"
+"TYPE=Ethernet\n"
+"BOOTPROTO=none\n"
+"ONBOOT=yes\n"
+"MASTER=bond0\n"
+"SLAVE=yes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Configure a channel bonding interface <literal>ifcfg-bond0</literal>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]# <command>vi /etc/sysconfig/network-scripts/ifcfg-bond0</command>\n"
+"NAME=bond0\n"
+"DEVICE=bond0\n"
+"BONDING_MASTER=yes\n"
+"TYPE=Bond\n"
+"IPADDR=192.168.100.100\n"
+"NETMASK=255.255.255.0\n"
+"ONBOOT=yes\n"
+"BOOTPROTO=none\n"
+"BONDING_OPTS=\"mode=active-backup miimon=100\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The use of the NAME directive is optional. It is for display by a GUI "
+"interface, such as <application>nm-connection-editor</application>. In this "
+"example MII is used for link monitoring, see the <xref linkend=\"s3-modules-"
+"bonding-directives\" /> section for more information on link monitoring."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Check the status of the interfaces on the server:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$ <command>ip addr</command>\n"
+"1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN \n"
+"    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n"
+"    inet 127.0.0.1/8 scope host lo\n"
+"    inet6 ::1/128 scope host \n"
+"       valid_lft forever preferred_lft forever\n"
+"2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast "
+"state UP qlen 1000\n"
+"    link/ether 52:54:00:19:28:fe brd ff:ff:ff:ff:ff:ff\n"
+"    inet6 fe80::5054:ff:fe19:28fe/64 scope link \n"
+"       valid_lft forever preferred_lft forever\n"
+"3: eth1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast "
+"state UP qlen 1000\n"
+"    link/ether 52:54:00:f6:63:9a brd ff:ff:ff:ff:ff:ff\n"
+"    inet6 fe80::5054:ff:fef6:639a/64 scope link \n"
+"       valid_lft forever preferred_lft forever"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Resolving Conflicts with Interfaces"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The interfaces configured as slaves should not have <systemitem class="
+"\"protocol\">IP</systemitem> addresses assigned to them apart from the "
+"<systemitem class=\"protocol\">IPv6</systemitem> link-local addresses "
+"(starting <literal>fe80</literal>). If you have an unexpected <systemitem "
+"class=\"protocol\">IP</systemitem> address, then there may be another "
+"configuration file with ONBOOT set to <literal>yes</literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If this occurs, issue the following command to list all <filename>ifcfg</"
+"filename> files that may be causing a conflict:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$ <command>grep -r \"ONBOOT=yes\" /etc/sysconfig/network-scripts/ | cut -"
+"f1 -d\":\" | xargs grep -E \"IPADDR|SLAVE\"</command>\n"
+"/etc/sysconfig/network-scripts/ifcfg-lo:IPADDR=127.0.0.1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The above shows the expected result on a new installation. Any file having "
+"both the ONBOOT directive as well as the IPADDR or SLAVE directive will be "
+"displayed. For example, if the <literal>ifcfg-eth1</literal> file was "
+"incorrectly configured, the display might look similar to the following:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]# <command>grep -r \"ONBOOT=yes\" /etc/sysconfig/network-scripts/ | cut -"
+"f1 -d\":\" | xargs grep -E \"IPADDR|SLAVE\"</command>\n"
+"/etc/sysconfig/network-scripts/ifcfg-lo:IPADDR=127.0.0.1\n"
+"/etc/sysconfig/network-scripts/ifcfg-eth1:SLAVE=yes\n"
+"/etc/sysconfig/network-scripts/ifcfg-eth1:IPADDR=192.168.55.55"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Any other configuration files found should be moved to a different directory "
+"for backup, or assigned to a different interface by means of the HWADDR "
+"directive. After resolving any conflict set the interfaces <quote>down</"
+"quote> and <quote>up</quote> again or restart the network service as "
+"<systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]# <command>systemctl restart network</command>\n"
+"Shutting down interface bond0:                             [  OK  ]\n"
+"Shutting down loopback interface:                          [  OK  ]\n"
+"Bringing up loopback interface:                            [  OK  ]\n"
+"Bringing up interface bond0:  Determining if ip address 192.168.100.100 is "
+"already in use for device bond0...\n"
+"                                                           [  OK  ]"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you are using <application>NetworkManager</application>, you might need "
+"to restart it at this point to make it forget the unwanted <systemitem class="
+"\"protocol\">IP</systemitem> address. As <systemitem class="
+"\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]# <command>systemctl restart NetworkManager</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Checking the bond on the Server"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Bring up the bond on the server as <systemitem class=\"username\">root</"
+"systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]# <command>ifup /etc/sysconfig/network-scripts/ifcfg-bond0</command>\n"
+"Determining if ip address 192.168.100.101 is already in use for device bond0."
+".."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$ <command>ip addr</command>\n"
+"1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN \n"
+"    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n"
+"    inet 127.0.0.1/8 scope host lo\n"
+"    inet6 ::1/128 scope host \n"
+"       valid_lft forever preferred_lft forever\n"
+"2: eth0: &lt;BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP&gt; mtu 1500 qdisc "
+"pfifo_fast <computeroutput>master bond0 state UP</computeroutput> qlen 1000\n"
+"    link/ether 52:54:00:19:28:fe brd ff:ff:ff:ff:ff:ff\n"
+"3: eth1: &lt;BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP&gt; mtu 1500 qdisc "
+"pfifo_fast <computeroutput>master bond0 state UP</computeroutput> qlen 1000\n"
+"    link/ether 52:54:00:f6:63:9a brd ff:ff:ff:ff:ff:ff\n"
+"4: bond0: &lt;BROADCAST,MULTICAST,<computeroutput>MASTER,UP</"
+"computeroutput>,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP \n"
+"    link/ether 52:54:00:19:28:fe brd ff:ff:ff:ff:ff:ff\n"
+"    inet 192.168.100.100/24 brd 192.168.100.255 scope global bond0\n"
+"    inet6 fe80::5054:ff:fe19:28fe/64 scope link \n"
+"       valid_lft forever preferred_lft forever"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Notice that <literal>eth0</literal> and <literal>eth1</literal> have "
+"<computeroutput>master bond0 state UP</computeroutput> and <literal>bond0</"
+"literal> has status of <computeroutput>MASTER,UP</computeroutput>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "View the bond configuration details:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$ <command>cat /proc/net/bonding/bond0</command>\n"
+"Ethernet Channel Bonding Driver: v3.6.0 (September 26, 2009)\n"
+"\n"
+"Bonding Mode: transmit load balancing\n"
+"Primary Slave: None\n"
+"Currently Active Slave: eth0\n"
+"MII Status: up\n"
+"MII Polling Interval (ms): 100\n"
+"Up Delay (ms): 0\n"
+"Down Delay (ms): 0\n"
+"\n"
+"Slave Interface: eth0\n"
+"MII Status: up\n"
+"Speed: 100 Mbps\n"
+"Duplex: full\n"
+"Link Failure Count: 0\n"
+"Permanent HW addr: 52:54:00:19:28:fe\n"
+"Slave queue ID: 0\n"
+"\n"
+"Slave Interface: eth1\n"
+"MII Status: up\n"
+"Speed: 100 Mbps\n"
+"Duplex: full\n"
+"Link Failure Count: 0\n"
+"Permanent HW addr: 52:54:00:f6:63:9a\n"
+"Slave queue ID: 0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Check the routes on the server:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$ <command>ip route</command>\n"
+"192.168.100.0/24 dev bond0  proto kernel  scope link  src 192.168.100.100 \n"
+"169.254.0.0/16 dev bond0  scope link  metric 1004"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Configuring the VLAN on the Server"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A VLAN slave cannot be configured on a bond with the <option>fail_over_mac="
+"follow</option> option, because the VLAN virtual device cannot change its "
+"MAC address to match the parent's new MAC address. In such a case, traffic "
+"would still be sent with the now incorrect source MAC address."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Some older network interface cards, loopback interfaces, Wimax cards, and "
+"some Infiniband devices, are said to be <firstterm>VLAN challenged</"
+"firstterm>, meaning they cannot support VLANs. This is usually because the "
+"devices cannot cope with VLAN headers and the larger MTU size associated "
+"with VLANs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Create a VLAN interface file <literal>bond0.192</literal>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]# <command>vi /etc/sysconfig/network-scripts/ifcfg-bond0.192</command>\n"
+"DEVICE=bond0.192\n"
+"NAME=bond0.192\n"
+"BOOTPROTO=none\n"
+"ONPARENT=yes\n"
+"IPADDR=192.168.10.1\n"
+"NETMASK=255.255.255.0\n"
+"VLAN=yes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Bring up the VLAN interface as <systemitem class=\"username\">root</"
+"systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]# <command>ifup /etc/sysconfig/network-scripts/ifcfg-bond0.192</command>\n"
+"Determining if ip address 192.168.10.1 is already in use for device bond0."
+"192..."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Enabling VLAN tagging on the network switch. Consult the documentation for "
+"the switch to see what configuration is required."
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]# <command>ip addr</command>\n"
+"1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN \n"
+"    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n"
+"    inet 127.0.0.1/8 scope host lo\n"
+"    inet6 ::1/128 scope host \n"
+"       valid_lft forever preferred_lft forever\n"
+"2: eth0: &lt;BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP&gt; mtu 1500 qdisc "
+"pfifo_fast master bond0 state UP qlen 1000\n"
+"    link/ether 52:54:00:19:28:fe brd ff:ff:ff:ff:ff:ff\n"
+"3: eth1: &lt;BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP&gt; mtu 1500 qdisc "
+"pfifo_fast master bond0 state UP qlen 1000\n"
+"    link/ether 52:54:00:f6:63:9a brd ff:ff:ff:ff:ff:ff\n"
+"4: bond0: &lt;BROADCAST,MULTICAST,MASTER,UP,LOWER_UP&gt; mtu 1500 qdisc "
+"noqueue state UP \n"
+"    link/ether 52:54:00:19:28:fe brd ff:ff:ff:ff:ff:ff\n"
+"    inet 192.168.100.100/24 brd 192.168.100.255 scope global bond0\n"
+"    inet6 fe80::5054:ff:fe19:28fe/64 scope link \n"
+"       valid_lft forever preferred_lft forever\n"
+"5: <computeroutput>bond0.192@bond0</computeroutput>: "
+"&lt;BROADCAST,MULTICAST,<computeroutput>MASTER,UP</"
+"computeroutput>,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP \n"
+"    link/ether 52:54:00:19:28:fe brd ff:ff:ff:ff:ff:ff\n"
+"    inet 192.168.10.1/24 brd 192.168.10.255 scope global bond0.192\n"
+"    inet6 fe80::5054:ff:fe19:28fe/64 scope link \n"
+"       valid_lft forever preferred_lft forever"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Notice there is now <literal>bond0.192@bond0</literal> in the list of "
+"interfaces and the status is <computeroutput>MASTER,UP</computeroutput>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Check the route on the server:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$ <command>ip route</command>\n"
+"192.168.100.0/24 dev bond0  proto kernel  scope link  src 192.168.100.100 \n"
+"192.168.10.0/24 dev <computeroutput>bond0.192</computeroutput>  proto kernel "
+" scope link  src 192.168.10.1 \n"
+"169.254.0.0/16 dev bond0  scope link  metric 1004 \n"
+"169.254.0.0/16 dev bond0.192  scope link  metric 1005"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Notice there is now a route for the <systemitem class=\"ipaddress\">192.168."
+"10.0/24</systemitem> network pointing to the VLAN interface <literal>bond0."
+"192</literal>."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid "Configuring the Second Server"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Repeat the configuration steps for the second server, using different "
+"<systemitem class=\"protocol\">IP</systemitem> addresses but from the same "
+"subnets respectively."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Test the bond is up and the network switch is working as expected:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$ <command>ping -c4 192.168.100.100</command>\n"
+"PING 192.168.100.100 (192.168.100.100) 56(84) bytes of data.\n"
+"64 bytes from 192.168.100.100: icmp_seq=1 ttl=64 time=1.35 ms\n"
+"64 bytes from 192.168.100.100: icmp_seq=2 ttl=64 time=0.214 ms\n"
+"64 bytes from 192.168.100.100: icmp_seq=3 ttl=64 time=0.383 ms\n"
+"64 bytes from 192.168.100.100: icmp_seq=4 ttl=64 time=0.396 ms\n"
+"\n"
+"--- 192.168.100.100 ping statistics ---\n"
+"4 packets transmitted, 4 received, 0% packet loss, time 3002ms\n"
+"rtt min/avg/max/mdev = 0.214/0.586/1.353/0.448 ms"
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid "Testing the VLAN"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To test that the network switch is configured for the VLAN, try to ping the "
+"first servers' VLAN interface:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]# <command>ping -c2 192.168.10.1</command>\n"
+"PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.\n"
+"64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=0.781 ms\n"
+"64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=0.977 ms\n"
+"--- 192.168.10.1 ping statistics ---\n"
+"2 packets transmitted, 2 received, <literal>0% packet loss</literal>, time "
+"1001ms\n"
+"rtt min/avg/max/mdev = 0.781/0.879/0.977/0.098 ms"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"No packet loss suggests everything is configured correctly and that the VLAN "
+"and underlying interfaces are <quote>up</quote>."
+msgstr ""
+
+#. Tag: bridgehead
+#, no-c-format
+msgid "Optional Steps"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If required, perform further tests by removing and replacing network cables "
+"one at a time to verify that failover works as expected. Make use the of "
+"<application>ethtool</application> to verify which interface is connected to "
+"which cable. For example: <synopsis>ethtool <option>--identify</option> "
+"<replaceable>ifname</replaceable> <replaceable>integer</replaceable></"
+"synopsis> Where <replaceable>integer</replaceable> is the number of times to "
+"flash the LED on the network interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The bonding module does not support <systemitem class=\"protocol\">STP</"
+"systemitem>, therefore consider disabling the sending of BPDU packets from "
+"the network switch."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the system is not linked to the network except over the connection just "
+"configured, consider enabling the switch port to transition directly to "
+"sending and receiving. For example on a Cisco switch, by means of the "
+"<literal>portfast</literal> command."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using Channel Bonding"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>kernel module</primary> <secondary>bonding module</secondary> "
+"<tertiary>description</tertiary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>channel bonding</primary> <secondary>description</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>bonding</primary> <see>channel bonding</see>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>NIC</primary> <secondary>binding into single channel</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>channel bonding interface</primary> <see>kernel module</see>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>kernel module</primary> <secondary>bonding module</secondary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>channel bonding</primary> <secondary>configuration</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To enhance performance, adjust available module options to ascertain what "
+"combination works best. Pay particular attention to the <command>miimon</"
+"command> or <command>arp_interval</command> and the <command>arp_ip_target</"
+"command> parameters. See <xref linkend=\"s3-modules-bonding-directives\" /> "
+"for a list of available options and how to quickly determine the best ones "
+"for your bonded interface."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Bonding Module Directives"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>kernel module</primary> <secondary>bonding module</secondary> "
+"<tertiary>parameters to bonded interfaces</tertiary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>kernel module</primary> <secondary>module parameters</secondary> "
+"<tertiary>bonding module parameters</tertiary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid ""
+"<primary>channel bonding</primary> <secondary>parameters to bonded "
+"interfaces</secondary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is a good idea to test which channel bonding module parameters work best "
+"for your bonded interfaces before adding them to the <option>BONDING_OPTS="
+"\"<replaceable>bonding parameters</replaceable>\"</option> directive in your "
+"bonding interface configuration file (<filename>ifcfg-bond0</filename> for "
+"example). Parameters to bonded interfaces can be configured without "
+"unloading (and reloading) the bonding module by manipulating files in the "
+"<systemitem class=\"filesystem\">sysfs</systemitem> file system."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<systemitem class=\"filesystem\">sysfs</systemitem> is a virtual file system "
+"that represents kernel objects as directories, files and symbolic links. "
+"<systemitem class=\"filesystem\">sysfs</systemitem> can be used to query for "
+"information about kernel objects, and can also manipulate those objects "
+"through the use of normal file system commands. The <systemitem class="
+"\"filesystem\">sysfs</systemitem> virtual file system is mounted under the "
+"<filename>/sys/</filename> directory. All bonding interfaces can be "
+"configured dynamically by interacting with and manipulating files under the "
+"<filename>/sys/class/net/</filename> directory."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to determine the best parameters for your bonding interface, create "
+"a channel bonding interface file such as <filename>ifcfg-bond0</filename> by "
+"following the instructions in <xref linkend=\"sec-"
+"Create_a_Channel_Bonding_Interface\" />. Insert the <option>SLAVE=yes</"
+"option> and <option>MASTER=bond0</option> directives in the configuration "
+"files for each interface bonded to <literal>bond0</literal>. Once this is "
+"completed, you can proceed to testing the parameters."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"First, bring up the bond you created by running <command>ifup "
+"<option>bond<replaceable>N</replaceable></option></command> as <systemitem "
+"class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>ifup bond0</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If you have correctly created the <filename>ifcfg-bond0</filename> bonding "
+"interface file, you will be able to see <computeroutput>bond0</"
+"computeroutput> listed in the output of running <command> ip link show</"
+"command> as <systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To view all existing bonds, even if they are not up, run:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]$&nbsp;<command>cat /sys/class/net/bonding_masters</command>\n"
+"bond0"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can configure each bond individually by manipulating the files located "
+"in the <filename>/sys/class/net/bond<replaceable>N</replaceable>/bonding/</"
+"filename> directory. First, the bond you are configuring must be taken down:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "~]#&nbsp;<command>ifdown bond0</command>\n"
+"        "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"As an example, to enable MII monitoring on bond0 with a 1 second interval, "
+"run as <systemitem class=\"username\">root</systemitem>:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>echo 1000 &gt; /sys/class/net/bond0/bonding/miimon</"
+"command>\n"
+"        "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To configure bond0 for <parameter class=\"option\">balance-alb</parameter> "
+"mode, run either:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>echo 6 &gt; /sys/class/net/bond0/bonding/mode</command>\n"
+"        "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "...or, using the name of the mode:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>echo balance-alb &gt; /sys/class/net/bond0/bonding/mode</"
+"command>\n"
+"        "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"After configuring options for the bond in question, you can bring it up and "
+"test it by running <command>ifup bond<replaceable>N</replaceable></command>. "
+"If you decide to change the options, take the interface down, modify its "
+"parameters using <systemitem class=\"filesystem\">sysfs</systemitem>, bring "
+"it back up, and re-test."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once you have determined the best set of parameters for your bond, add those "
+"parameters as a space-separated list to the <parameter class="
+"\"option\">BONDING_OPTS=</parameter> directive of the <filename>/etc/"
+"sysconfig/network-scripts/ifcfg-bond<replaceable>N</replaceable> </filename> "
+"file for the bonding interface you are configuring. Whenever that bond is "
+"brought up (for example, by the system during the boot sequence if the "
+"<parameter class=\"option\">ONBOOT=yes</parameter> directive is set), the "
+"bonding options specified in the <parameter class=\"option\">BONDING_OPTS</"
+"parameter> will take effect for that bond."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following list provides the names of many of the more common channel "
+"bonding parameters, along with a description of what they do. For more "
+"information, see the brief descriptions for each <computeroutput>parm</"
+"computeroutput> in <command>modinfo bonding</command> output, or for more "
+"detailed information, see <ulink url=\"https://www.kernel.org/doc/"
+"Documentation/networking/bonding.txt\">https://www.kernel.org/doc/"
+"Documentation/networking/bonding.txt</ulink>."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Bonding Interface Parameters"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<literal>ad_select=<replaceable>value</replaceable> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies the 802.3ad aggregation selection logic to use. Possible values "
+"are:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>stable</userinput> or <userinput>0</userinput> — Default setting. "
+"The active aggregator is chosen by largest aggregate bandwidth. Reselection "
+"of the active aggregator occurs only when all slaves of the active "
+"aggregator are down or if the active aggregator has no slaves."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>bandwidth</userinput> or <userinput>1</userinput> — The active "
+"aggregator is chosen by largest aggregate bandwidth. Reselection occurs if:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "A slave is added to or removed from the bond;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Any slave's link state changes;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Any slave's 802.3ad association state changes;"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The bond's administrative state changes to up."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>count</userinput> or <userinput>2</userinput> — The active "
+"aggregator is chosen by the largest number of slaves. Reselection occurs as "
+"described for the <option>bandwidth</option> setting above."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <option>bandwidth</option> and <option>count</option> selection policies "
+"permit failover of 802.3ad aggregations when partial failure of the active "
+"aggregator occurs. This keeps the aggregator with the highest availability, "
+"either in bandwidth or in number of slaves, active at all times."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<literal>arp_interval=<replaceable>time_in_milliseconds</replaceable> </"
+"literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies, in milliseconds, how often <systemitem class=\"protocol\">ARP</"
+"systemitem> monitoring occurs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It is essential that both <literal>arp_interval</literal> and "
+"<literal>arp_ip_target</literal> parameters are specified, or, "
+"alternatively, the <literal>miimon</literal> parameter is specified. Failure "
+"to do so can cause degradation of network performance in the event that a "
+"link fails."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If using this setting while in <literal>mode=0</literal> or <literal>mode=2</"
+"literal> (the two load-balancing modes), the network switch must be "
+"configured to distribute packets evenly across the NICs. For more "
+"information on how to accomplish this, see <ulink url=\"https://www.kernel."
+"org/doc/Documentation/networking/bonding.txt\">https://www.kernel.org/doc/"
+"Documentation/networking/bonding.txt</ulink>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The value is set to <userinput>0</userinput> by default, which disables it."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<literal>arp_ip_target=<replaceable>ip_address</"
+"replaceable><optional>,<replaceable>ip_address_2</"
+"replaceable>,…<replaceable>ip_address_16</replaceable></optional> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies the target <systemitem class=\"protocol\">IP</systemitem> address "
+"of <systemitem class=\"protocol\">ARP</systemitem> requests when the "
+"<literal>arp_interval</literal> parameter is enabled. Up to 16 <systemitem "
+"class=\"protocol\">IP</systemitem> addresses can be specified in a comma "
+"separated list."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<literal>arp_validate=<replaceable>value</replaceable> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Validate source/distribution of <systemitem class=\"protocol\">ARP</"
+"systemitem> probes; default is <userinput>none</userinput>. Other valid "
+"values are <userinput>active</userinput>, <userinput>backup</userinput>, and "
+"<userinput>all</userinput>."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<literal>downdelay=<replaceable>time_in_milliseconds</replaceable> </"
+"literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies (in milliseconds) how long to wait after link failure before "
+"disabling the link. The value must be a multiple of the value specified in "
+"the <literal>miimon</literal> parameter. The value is set to <userinput>0</"
+"userinput> by default, which disables it."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<literal>fail_over_mac=<replaceable>value</replaceable> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies whether active-backup mode should set all slaves to the same MAC "
+"address at enslavement (the traditional behavior), or, when enabled, perform "
+"special handling of the bond's MAC address in accordance with the selected "
+"policy. Possible values are:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>none</userinput> or <userinput>0</userinput> — Default setting. "
+"This setting disables <literal>fail_over_mac</literal>, and causes bonding "
+"to set all slaves of an active-backup bond to the same MAC address at "
+"enslavement time."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>active</userinput> or <userinput>1</userinput> — The "
+"<quote>active</quote> <literal>fail_over_mac</literal> policy indicates that "
+"the MAC address of the bond should always be the MAC address of the "
+"currently active slave. The MAC address of the slaves is not changed; "
+"instead, the MAC address of the bond changes during a failover."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This policy is useful for devices that cannot ever alter their MAC address, "
+"or for devices that refuse incoming broadcasts with their own source MAC "
+"(which interferes with the ARP monitor). The disadvantage of this policy is "
+"that every device on the network must be updated via gratuitous ARP, as "
+"opposed to the normal method of switches snooping incoming traffic to update "
+"their ARP tables. If the gratuitous ARP is lost, communication may be "
+"disrupted."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When this policy is used in conjunction with the MII monitor, devices which "
+"assert link up prior to being able to actually transmit and receive are "
+"particularly susceptible to loss of the gratuitous ARP, and an appropriate "
+"updelay setting may be required."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>follow</userinput> or <userinput>2</userinput> — The "
+"<quote>follow</quote> <literal>fail_over_mac</literal> policy causes the MAC "
+"address of the bond to be selected normally (normally the MAC address of the "
+"first slave added to the bond). However, the second and subsequent slaves "
+"are not set to this MAC address while they are in a backup role; a slave is "
+"programmed with the bond's MAC address at failover time (and the formerly "
+"active slave receives the newly active slave's MAC address)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This policy is useful for multiport devices that either become confused or "
+"incur a performance penalty when multiple ports are programmed with the same "
+"MAC address."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "lacp_rate=<replaceable>value</replaceable>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies the rate at which link partners should transmit LACPDU packets in "
+"802.3ad mode. Possible values are:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>slow</userinput> or <userinput>0</userinput> — Default setting. "
+"This specifies that partners should transmit LACPDUs every 30 seconds."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>fast</userinput> or <userinput>1</userinput> — Specifies that "
+"partners should transmit LACPDUs every 1 second."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<literal>miimon=<replaceable>time_in_milliseconds</replaceable> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies (in milliseconds) how often MII link monitoring occurs. This is "
+"useful if high availability is required because MII is used to verify that "
+"the NIC is active. To verify that the driver for a particular NIC supports "
+"the MII tool, type the following command as root:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]#&nbsp;<command>ethtool <replaceable>interface_name</replaceable> | grep "
+"\"Link detected:\"</command>\n"
+"              "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In this command, replace <replaceable>interface_name</replaceable>&gt; with "
+"the name of the device interface, such as <userinput>eth0</userinput>, not "
+"the bond interface. If MII is supported, the command returns:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "Link detected: yes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If using a bonded interface for high availability, the module for each NIC "
+"must support MII. Setting the value to <userinput>0</userinput> (the "
+"default), turns this feature off. When configuring this setting, a good "
+"starting point for this parameter is <userinput>100</userinput>."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<literal>mode=<replaceable>value</replaceable> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Allows you to specify the bonding policy. The <replaceable>value</"
+"replaceable> can be one of:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>balance-rr</userinput> or <userinput>0</userinput> — Sets a round-"
+"robin policy for fault tolerance and load balancing. Transmissions are "
+"received and sent out sequentially on each bonded slave interface beginning "
+"with the first one available."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>active-backup</userinput> or <userinput>1</userinput> — Sets an "
+"active-backup policy for fault tolerance. Transmissions are received and "
+"sent out via the first available bonded slave interface. Another bonded "
+"slave interface is only used if the active bonded slave interface fails."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>balance-xor</userinput> or <userinput>2</userinput> — "
+"Transmissions are based on the selected hash policy. The default is to "
+"derive a hash by XOR of the source and destination MAC addresses multiplied "
+"by the modulo of the number of slave interfaces. In this mode traffic "
+"destined for specific peers will always be sent over the same interface. As "
+"the destination is determined by the MAC addresses this method works best "
+"for traffic to peers on the same link or local network. If traffic has to "
+"pass through a single router then this mode of traffic balancing will be "
+"suboptimal."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>broadcast</userinput> or <userinput>3</userinput> — Sets a "
+"broadcast policy for fault tolerance. All transmissions are sent on all "
+"slave interfaces."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>802.3ad</userinput> or <userinput>4</userinput> — Sets an IEEE "
+"802.3ad dynamic link aggregation policy. Creates aggregation groups that "
+"share the same speed and duplex settings. Transmits and receives on all "
+"slaves in the active aggregator. Requires a switch that is 802.3ad compliant."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>balance-tlb</userinput> or <userinput>5</userinput> — Sets a "
+"Transmit Load Balancing (TLB) policy for fault tolerance and load balancing. "
+"The outgoing traffic is distributed according to the current load on each "
+"slave interface. Incoming traffic is received by the current slave. If the "
+"receiving slave fails, another slave takes over the MAC address of the "
+"failed slave. This mode is only suitable for local addresses known to the "
+"kernel bonding module and therefore cannot be used behind a bridge with "
+"virtual machines."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>balance-alb</userinput> or <userinput>6</userinput> — Sets an "
+"Adaptive Load Balancing (ALB) policy for fault tolerance and load balancing. "
+"Includes transmit and receive load balancing for <systemitem class="
+"\"protocol\">IPv4</systemitem> traffic. Receive load balancing is achieved "
+"through <systemitem class=\"protocol\">ARP</systemitem> negotiation. This "
+"mode is only suitable for local addresses known to the kernel bonding module "
+"and therefore cannot be used behind a bridge with virtual machines."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<literal>primary=<replaceable>interface_name</replaceable> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies the interface name, such as <userinput>eth0</userinput>, of the "
+"primary device. The <literal>primary</literal> device is the first of the "
+"bonding interfaces to be used and is not abandoned unless it fails. This "
+"setting is particularly useful when one NIC in the bonding interface is "
+"faster and, therefore, able to handle a bigger load."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This setting is only valid when the bonding interface is in "
+"<userinput>active-backup</userinput> mode. See <ulink url=\"https://www."
+"kernel.org/doc/Documentation/networking/bonding.txt\">https://www.kernel.org/"
+"doc/Documentation/networking/bonding.txt</ulink> for more information."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<literal>primary_reselect=<replaceable>value</replaceable> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies the reselection policy for the primary slave. This affects how the "
+"primary slave is chosen to become the active slave when failure of the "
+"active slave or recovery of the primary slave occurs. This parameter is "
+"designed to prevent flip-flopping between the primary slave and other slaves."
+" Possible values are:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>always</userinput> or <userinput>0</userinput> (default) — The "
+"primary slave becomes the active slave whenever it comes back up."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>better</userinput> or <userinput>1</userinput> — The primary "
+"slave becomes the active slave when it comes back up, if the speed and "
+"duplex of the primary slave is better than the speed and duplex of the "
+"current active slave."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>failure</userinput> or <userinput>2</userinput> — The primary "
+"slave becomes the active slave only if the current active slave fails and "
+"the primary slave is up."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The <literal>primary_reselect</literal> setting is ignored in two cases:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If no slaves are active, the first slave to recover is made the active slave."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When initially enslaved, the primary slave is always made the active slave."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Changing the <literal>primary_reselect</literal> policy via <systemitem "
+"class=\"filesystem\">sysfs</systemitem> will cause an immediate selection of "
+"the best active slave according to the new policy. This may or may not "
+"result in a change of the active slave, depending upon the circumstances"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<literal>resend_igmp=<replaceable>range</replaceable></literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies the number of IGMP membership reports to be issued after a "
+"failover event. One membership report is issued immediately after the "
+"failover, subsequent packets are sent in each 200ms interval."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The valid range is <literal>0</literal> to <literal>255</literal>; the "
+"default value is <literal>1</literal>. A value of <literal>0</literal> "
+"prevents the IGMP membership report from being issued in response to the "
+"failover event."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This option is useful for bonding modes <command>balance-rr</command> (mode "
+"0), <command>active-backup</command> (mode 1), <command>balance-tlb</"
+"command> (mode 5) and <command>balance-alb</command> (mode 6), in which a "
+"failover can switch the IGMP traffic from one slave to another. Therefore a "
+"fresh IGMP report must be issued to cause the switch to forward the incoming "
+"IGMP traffic over the newly selected slave."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<literal>updelay=<replaceable>time_in_milliseconds</replaceable> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies (in milliseconds) how long to wait before enabling a link. The "
+"value must be a multiple of the value specified in the <literal>miimon</"
+"literal> parameter. The value is set to <userinput>0</userinput> by default, "
+"which disables it."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<literal>use_carrier=<replaceable>number</replaceable> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Specifies whether or not <literal>miimon</literal> should use MII/ETHTOOL "
+"ioctls or <function>netif_carrier_ok()</function> to determine the link "
+"state. The <function>netif_carrier_ok()</function> function relies on the "
+"device driver to maintains its state with "
+"<literal>netif_carrier_<replaceable>on/off</replaceable></literal>; most "
+"device drivers support this function."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The MII/ETHTOOL ioctls tools utilize a deprecated calling sequence within "
+"the kernel. However, this is still configurable in case your device driver "
+"does not support <literal>netif_carrier_<replaceable>on/off</replaceable></"
+"literal>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Valid values are:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>1</userinput> — Default setting. Enables the use of "
+"<function>netif_carrier_ok()</function>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<userinput>0</userinput> — Enables the use of MII/ETHTOOL ioctls."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the bonding interface insists that the link is up when it should not be, "
+"it is possible that your network device driver does not support "
+"<literal>netif_carrier_<replaceable>on/off</replaceable></literal>."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<literal>xmit_hash_policy=<replaceable>value</replaceable> </literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Selects the transmit hash policy used for slave selection in "
+"<userinput>balance-xor</userinput> and <userinput>802.3ad</userinput> modes. "
+"Possible values are:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>0</userinput> or <userinput>layer2</userinput> — Default setting. "
+"This parameter uses the XOR of hardware MAC addresses to generate the hash. "
+"The formula used is:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"(<replaceable>source_MAC_address</replaceable> XOR "
+"<replaceable>destination_MAC</replaceable>) MODULO <replaceable>slave_count</"
+"replaceable>\n"
+"                  "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This algorithm will place all traffic to a particular network peer on the "
+"same slave, and is 802.3ad compliant."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>1</userinput> or <userinput>layer3+4</userinput> — Uses upper "
+"layer protocol information (when available) to generate the hash. This "
+"allows for traffic to a particular network peer to span multiple slaves, "
+"although a single connection will not span multiple slaves."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The formula for unfragmented TCP and UDP packets used is:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"((<replaceable>source_port</replaceable> XOR <replaceable>dest_port</"
+"replaceable>) XOR\n"
+"  ((<replaceable>source_IP</replaceable> XOR <replaceable>dest_IP</"
+"replaceable>) AND <constant>0xffff</constant>)\n"
+"    MODULO <replaceable>slave_count</replaceable>\n"
+"                  "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"For fragmented TCP or UDP packets and all other <systemitem class="
+"\"protocol\">IP</systemitem> protocol traffic, the source and destination "
+"port information is omitted. For non-<systemitem class=\"protocol\">IP</"
+"systemitem> traffic, the formula is the same as the <command>layer2</"
+"command> transmit hash policy."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This policy intends to mimic the behavior of certain switches; particularly, "
+"Cisco switches with PFC2 as well as some Foundry and IBM products."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The algorithm used by this policy is not 802.3ad compliant."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<userinput>2</userinput> or <userinput>layer2+3</userinput> — Uses a "
+"combination of layer2 and layer3 protocol information to generate the hash."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Uses XOR of hardware MAC addresses and <systemitem class=\"protocol\">IP</"
+"systemitem> addresses to generate the hash. The formula is:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"(((<replaceable>source_IP</replaceable> XOR <replaceable>dest_IP</"
+"replaceable>) AND <constant>0xffff</constant>) XOR\n"
+"  ( <replaceable>source_MAC</replaceable> XOR <replaceable>destination_MAC</"
+"replaceable> ))\n"
+"    MODULO <replaceable>slave_count</replaceable>\n"
+"                  "
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This algorithm will place all traffic to a particular network peer on the "
+"same slave. For non-<systemitem class=\"protocol\">IP</systemitem> traffic, "
+"the formula is the same as for the layer2 transmit hash policy."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This policy is intended to provide a more balanced distribution of traffic "
+"than layer2 alone, especially in environments where a layer3 gateway device "
+"is required to reach most destinations."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This algorithm is 802.3ad compliant."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Using the NetworkManager Command Line Tool, nmcli"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To create a bond, named <replaceable>mybond0</replaceable>, issue a command "
+"as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type bond con-name <replaceable>mybond0</"
+"replaceable> ifname <replaceable>mybond0</replaceable> mode active-backup</"
+"command>\n"
+"Connection 'mybond0' (9301ff97-abbc-4432-aad1-246d7faea7fb) successfully "
+"added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To add a slave interface, issue a command in the following form:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type bond-slave ifname <replaceable>ens7</"
+"replaceable> master <replaceable>mybond0</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To add additional slaves, repeat the previous command with a new interface, "
+"for example:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con add type bond-slave ifname <replaceable>ens3</"
+"replaceable> master <replaceable>mybond0</replaceable></command>\n"
+"Connection 'bond-slave-ens3-1' (50c59350-1531-45f4-ba04-33431c16e386) "
+"successfully added."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note that as no <command>con-name</command> was given for the slaves, the "
+"name was derived from the interface name by prepending the type. At time of "
+"writing, <application>nmcli</application> only supports Ethernet slaves."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to bring up a bond, the slaves must be brought up first as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con up bond-slave-<replaceable>ens7</replaceable></"
+"command>\n"
+"Connection successfully activated (D-Bus active path: /org/freedesktop/"
+"NetworkManager/ActiveConnection/14)"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con up bond-slave-<replaceable>ens3</replaceable></"
+"command>\n"
+"Connection successfully activated (D-Bus active path: /org/freedesktop/"
+"NetworkManager/ActiveConnection/15)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Now bring up the bond as follows:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"~]$&nbsp;<command>nmcli con up bond-<replaceable>mybond0</replaceable></"
+"command>\n"
+"Connection successfully activated (D-Bus active path: /org/freedesktop/"
+"NetworkManager/ActiveConnection/16)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"See <xref linkend=\"sec-Using_the_NetworkManager_Command_Line_Tool_nmcli\" /"
+"> for an introduction to <application>nmcli</application>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Additional Resources"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The following sources of information provide additional resources regarding "
+"network bonding."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installed Documentation"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>nmcli(1)</filename> man page — Describes "
+"<application>NetworkManager</application>'s command‐line tool."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>nmcli-examples(5)</filename> man page — Gives examples of "
+"<application>nmcli</application> commands."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<filename>nm-settings(5)</filename> man page — Description of settings and "
+"parameters of <application>NetworkManager</application> connections."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Online Documentation"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid ""
+"<citetitle pubwork=\"book\">&MAJOROSVER; System Administrator's Guide</"
+"citetitle>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Explains the use of kernel module capabilities."
+msgstr ""
+

@@ -1,0 +1,151 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-12-23 12:29+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "On_Screen_Keyboards"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Many on screen keyboards have been created for environments with no "
+"keyboards such as wearable computers or palm devices. They are also very "
+"useful for accessibility enhancement when used with a mouse or no-hand tools "
+"such as a head-mouse or an eye-tracker. Some of tools included in Fedora are "
+"described in this section."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Indic Onscreen Keyboard"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>iok</application> is Indic Onscreen Keyboard. It provides "
+"virtual keyboard functionality. It currently works with Inscript and xkb "
+"keymaps for Indian languages. The following keymaps are currently available: "
+"Assamese, Bengali, Gujarati, Hindi, Kannada, Marathi, Malayalam, Punjabi, "
+"Oriya, Tamil, Telugu. <application>iok</application> can even try to parse "
+"and display non-inscript keymaps. Visit <ulink url=\"http://sourceforge.net/"
+"projects/iok/\" /> for more information on iok."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installing <application>iok</application>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To install <package>iok</package> in fedora, you can either select "
+"<menuchoice><guilabel>System &gt; Administration &gt; Add/Remove Software</"
+"guilabel></menuchoice> on the GNOME panel, and then type iok in the screen "
+"that pops up; or alternatively type <command>su -c \"yum install iok\"</"
+"command> in a terminal window."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Florence"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Florence</application> is an extensible, scalable, virtual "
+"keyboard, whose sole requirement is a pointing device."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Once enabled, <application>Florence</application> displays an icon in the "
+"notification area on the GNOME Panel. <application>Florence</application> "
+"can be sent to the background when it is not needed, making it a practical "
+"solution for screens of all sizes. To toggle whether <application>Florence</"
+"application> is displayed or hidden, just click the icon. Alternatively, "
+"<application>Florence</application> can be set to autohide until an editable "
+"area is selected. <application>Florence</application> can also be configured "
+"easily to be transparent, through the <guilabel>Preferences</guilabel> "
+"dialogue. To edit all available <guilabel>Preferences</guilabel>, right-"
+"click on the icon on the GNOME Panel, and choose <guilabel>Preferences</"
+"guilabel> from the dropdown list."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Additional information on <package>Florence Virtual Keyboard</package> can "
+"be found at the project's homepage, <ulink url=\"http://florence.sourceforge."
+"net\" />. Once <application>Florence</application> is installed, to view "
+"full documentation right-click on the icon on the GNOME Panel, and choose "
+"<guilabel>Help</guilabel> from the dropdown menu."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installing Florence"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Florence is available in the fedora package repositories; to install either "
+"select <menuchoice><guilabel>System &gt; Administration &gt; Add/Remove "
+"Software</guilabel></menuchoice> on the GNOME Desktop and then type "
+"<package>florence</package> in the window that pops up, or type <command>su -"
+"c \"yum install florence\"</command> in a terminal window."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Dasher"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>Dasher</application> is an information-efficient text-entry "
+"interface, driven by natural continuous pointing gestures. "
+"<application>Dasher</application> is not really a \"keyboard\" but instead "
+"uses a zooming interface and a predictive language model with word "
+"completion. <application>Dasher</application> makes data entry easy by "
+"people utilizing a joystick, touchscreen, trackball, or mouse for one-handed "
+"operations. It can also be utilized by people using no-hand tools such as a "
+"head-mouse or an eye-tracker. Additional information on <application>Dasher</"
+"application> can be found at <ulink url=\"http://library.gnome.org/users/"
+"dasher/\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installing Dasher"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora, <package>Dasher</package> can be easily installed by either "
+"selecting <menuchoice><guilabel>System &gt; Administration &gt; Add/Remove "
+"Software</guilabel></menuchoice> and then type in dasher in the screen that "
+"pops up or in a terminal window type <command>su -c \"yum install dasher\"</"
+"command>."
+msgstr ""
+

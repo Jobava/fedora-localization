@@ -1,0 +1,2 @@
+https://fedorahosted.org/release-notes/
+https://git.fedorahosted.org/git/docs/release-notes.git

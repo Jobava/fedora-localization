@@ -1,0 +1,133 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Cluster"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Apache Ambari"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The Apache Ambari project is aimed at making Hadoop management simpler by "
+"developing software for provisioning, managing, and monitoring Apache Hadoop "
+"clusters. Ambari provides an intuitive, easy-to-use Hadoop management web UI "
+"backed by its RESTful APIs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For more information see <ulink url=\"http://ambari.apache.org/\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Apache Mesos"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Apache Mesos is a cluster manager that provides efficient resource isolation "
+"and sharing across distributed applications, or frameworks. It abstracts "
+"CPU, memory, storage, and other compute resources away from machines "
+"(physical or virtual), enabling fault-tolerant and elastic distributed "
+"systems to easily be built and run effectively. Apache Mesos is built using "
+"the same principles as the Linux kernel, only at a different level of "
+"abstraction. The Mesos kernel runs on every machine and provides "
+"applications (e.g., Hadoop, Spark, Kafka, Elastic Search) with APIs for "
+"resource management and scheduling across entire data center and cloud "
+"environments."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For more information see <ulink url=\"http://mesos.apache.org/\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Apache Oozie"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Apache Oozie is a workflow scheduler to manage Hadoop jobs. It is integrated "
+"with the rest of the Hadoop stack and supports several types of Hadoop jobs "
+"out of the box (such as Java map-reduce, Streaming map-reduce, Pig, Hive, "
+"Sqoop and Distcp) as well as system specific jobs (such as Java programs and "
+"shell scripts)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For more information see <ulink url=\"http://oozie.apache.org/\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Apache Pig"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Apache Pig is a platform for analyzing large data sets that consists of a "
+"high-level language for expressing data analysis programs, coupled with "
+"infrastructure for evaluating these programs. The salient property of Pig "
+"programs is that their structure is amenable to substantial parallelization, "
+"which, in turn, enables them to handle very large data sets. At the present "
+"time, Pig's infrastructure layer consists of a compiler that produces "
+"sequences of Map-Reduce programs, for which large-scale parallel "
+"implementations already exist (e.g., the Hadoop sub-project)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For more information see: <ulink url=\"http://pig.apache.org/\" />."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Apache Spark"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Apache Spark is a fast and general engine for large-scale data processing. "
+"It supports developing custom analytic processing applications over large "
+"data sets or streaming data. Because it has the capability to cache "
+"intermediate results in cluster memory and schedule DAGs of computations, "
+"Spark programs can run up to 100x faster than equivalent Hadoop MapReduce "
+"jobs. Spark applications are easy to develop, parallel, fast, and resilient "
+"to failure, and they can operate on data from in-memory collections, local "
+"files, a Hadoop-compatible filesystem, or from a variety of streaming "
+"sources. Spark also includes libraries for distributed machine learning and "
+"graph algorithms."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For more information see: <ulink url=\"http://spark.apache.org/\" />."
+msgstr ""
+

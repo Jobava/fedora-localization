@@ -1,0 +1,91 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-12-23 12:29+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Mouse Tools"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Mouse tools allow the mouse to be used in different ways, and provide an "
+"alternate solution to people with limited mobility."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "KMouseTool"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A program for KDE, <application>KMouseTool,</application> provides an "
+"alternate method for clicking the mouse by clicking the mouse whenever the "
+"cursor pauses and even provides a dragging capability. "
+"<application>KMouseTool</application> works with any mouse or pointing "
+"device."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installing KMouseTool"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora, <application>KMouseTool</application> is packaged in the "
+"<package>kdeaccessibility</package> package. This package also contains "
+"kmagnifier, kmouth, and ktts, all of which are discussed in other areas of "
+"this guide. To install <package>kdeaccessibility</package> you can either "
+"select <menuchoice><guilabel>System &gt; Administration &gt; Add/Remove "
+"Software</guilabel></menuchoice> and then type in <package>kdeaccessibility</"
+"package> in the screen that pops up, or in a terminal window type su -c "
+"\"yum install kdeaccessibility\"."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Mousetweaks"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Similar to KDE's <application>KMouseTool</application>, GNOME's "
+"<application>Mousetweaks</application> provides functions for simulated "
+"secondary clicks, dwell clicks, and pointer capture. Additional information "
+"on <application>Mousetweaks</application> can be found at <ulink url=\"http:/"
+"/library.gnome.org/users/mousetweaks/\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Installing Mousetweaks"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In Fedora, <application>Mousetweaks</application> is packaged and can be "
+"installed by selecting <menuchoice><guilabel>System &gt; Administration &gt; "
+"Add/Remove Software</guilabel></menuchoice> and then typing "
+"<package>Mousetweaks</package>; or in a terminal window, type su -c \"yum "
+"install mousetweaks\"."
+msgstr ""
+

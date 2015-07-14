@@ -1,0 +1,54 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Elections Guide\n"
+"POT-Creation-Date: 2011-02-22T01:12:36\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2011-02-21 08:13-0500\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"elections-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: firstname
+#, no-c-format
+msgid "Eric"
+msgstr "Eric"
+
+#. Tag: surname
+#, no-c-format
+msgid "Christensen"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated to latest publican version."
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Changed product for publishing to docs.fp.o."
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Nigel"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Jones"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Initial Version"
+msgstr ""
+

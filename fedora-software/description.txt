@@ -1,0 +1,3 @@
+Fedora software is web software center build in django. 
+
+https://github.com/misli/fedora-software.git

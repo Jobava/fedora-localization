@@ -1,0 +1,180 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Exporting Sound Files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This section explains one way to record your <application>SuperCollider</"
+"application> programs, so that you can share them with friends who don't "
+"have <application>SuperCollider</application> on their computer."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Non-Real-Time Synthesis"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<application>SuperCollider</application> allows you to synthesze audio "
+"output to an audio file. Doing this requires using OSC commands on the "
+"server, the <classname>DiskOut</classname> UGen, the <classname>Buffer</"
+"classname> UGen, and other relatively advanced concepts. The built-in "
+"<citetitle>DiskOut</citetitle> help file, available at <ulink url=\"http://"
+"supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/"
+"Help/UGens/Playback%20and%20Recording/DiskOut.html\" />, contains some help "
+"with the <classname>DiskOut</classname> UGen, and links to other useful help "
+"files. This method is not further discussed here."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Recording SuperCollider's Output (Tutorial)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Since <systemitem>SuperCollider</systemitem> outputs its audio signals to "
+"the JACK sound server, any other <systemitem>JACK</systemitem>-aware program "
+"has the opportunity to record, process, and use them. This portion of the "
+"tutorial will help you to record SuperCollider's output in Ardour. Due to "
+"the advanced nature of SuperCollider, the text assumes that you have a basic "
+"knowledge of how to work with Ardour. If not, you may find it helpful to "
+"refer to <xref linkend=\"chap-Musicians_Guide-Ardour\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This procedure will help you to use <application>Ardour</application> to "
+"record the <application>SuperCollider</application> output."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Close unnecessary applications and stop unnecessary processes, which will "
+"help to reduce the risk of a buffer overrun or underrun, which cause an "
+"audible break in audio. If you are viewing this document in a web browser, "
+"you may want to copy-and-paste it into a simple text editor, or "
+"<application>GEdit</application>, if you are already using that."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use <application>QjackCtl</application> to set up <systemitem>JACK</"
+"systemitem> with the right audio interface and configuration options."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to get a clean start, restart the <application>SuperCollider</"
+"application> interpreter in <application>GEdit</application>, then start the "
+"server."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Open <application>Ardour</application> with a new session, and set up the "
+"rulers and timeline as desired. Seconds is usually the most appropriate unit "
+"with which to measure a <application>SuperCollider</application> recording."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Add a stereo track (or however many channels desired), and rename it it "
+"\"SuperCollider.\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Use Ardour (the \"Track/Bus Inspector\" window) or <application>QjackCtl</"
+"application> to connect the \"SuperCollider\" track to SuperCollider's "
+"outputs."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You'll want to make sure that the <application>SuperCollider</application> "
+"output is also connected to your audio interface, so that you can hear the "
+"program as you progress. This is an example of multi-plexing. Changes to "
+"your audio interface's volume control will not affect the recording in "
+"Ardour."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Arm the track and transport in <application>Ardour</application>. When you "
+"are ready, start the transport. It is not important to start SuperCollider "
+"as quickly as possible, since you can cut out the silence after the "
+"recording is made."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Switch to <application>GEdit</application> and play the program that you "
+"want to record. If you make a mistake while starting the program, that's "
+"okay. We can always edit the recording after it's recorded."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Listen to the recording as it goes along. Use <application>QjackCtl</"
+"application> to make sure that you don't encounter a buffer underrun, and "
+"<application>Ardour</application> to make sure that you do not record a "
+"distorted signal."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When <application>SuperCollider</application> has finished playing your "
+"program, switch to <application>Ardour</application>, and stop the transport."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"When you are ready to export, use the <application>Ardour</application> menu."
+" <menuchoice><guimenu>Choose Session</guimenu><guisubmenu>Export</"
+"guisubmenu><guimenuitem>Export session to audio file</guimenuitem></"
+"menuchoice>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The audio file will be created in the \"export\" sub-directory of the "
+"session's directory."
+msgstr ""
+

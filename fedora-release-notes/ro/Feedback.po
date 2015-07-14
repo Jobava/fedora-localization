@@ -1,0 +1,45 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Release Notes\n"
+"POT-Creation-Date: 2014-12-06 12:53-0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Feedback"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Thank you for taking the time to provide your comments, suggestions, and bug "
+"reports to the Fedora community; this helps improve the state of Fedora, "
+"Linux, and free software worldwide."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To provide feedback on Fedora software or other system elements, please "
+"refer to <ulink url=\"http://fedoraproject.org/wiki/"
+"BugsAndFeatureRequests\"> Bugs And Feature Requests</ulink>. A list of "
+"commonly reported bugs and known issues for this release is available from "
+"<ulink url=\"http://fedoraproject.org/wiki/Common_F19_bugs\"> Common "
+"F&PRODVER; bugs</ulink>, on the wiki."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To provide feedback on the Release Notes, use &BZURL;."
+msgstr ""
+

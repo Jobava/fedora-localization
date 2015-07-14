@@ -1,0 +1,442 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2011-05-21 05:11-0400\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Work on a Counterpoint Exercise (Tutorial)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Imagine you're in Counterpoint class, and you've been asked to submit a very "
+"clean copy of your next assignment. Since you don't want to pay $450,000 for "
+"a commercially-available engraving solution and a fruity computer to use it, "
+"you decide that LilyPond is the solution for you."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Files for the Tutorial"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You do not need these files to do the tutorial. They are example completions."
+""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>LilyPond Input File</citetitle> at <ulink url=\"http://docs."
+"fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/files/LilyPond/"
+"Counterpoint-source.ly\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"<citetitle>PDF Output File</citetitle> at <ulink url=\"http://docs."
+"fedoraproject.org/en-US/Fedora/15/html/Musicians_Guide/files/LilyPond/"
+"Counterpoint-result.pdf\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Start the Score"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open Frescobaldi into a blank document"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Use the 'LilyPond &gt; Setup New Score' dialogue"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Set the title and composer (and any other field) on the 'Titles and Headers' "
+"tab"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You need a two staves, so you go to 'Parts' then 'Keyboard' then 'Piano'"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You need to label the intervals between the notes, so you choose 'Special' "
+"then 'Figured Bass' (we'll put it in the right spot later"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You go to the 'Score settings' tab"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"since you've already played through this example, uncheck \"Create MIDI "
+"output\" and save processing time"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "your example is in F Major"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You want only whole notes, with no barlines; choose a 4/4 time signature, "
+"since we'll change this later."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Press 'Try' to get a preview of the score setup - the notes are "
+"demonstrative and will not be there"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"If the setup looks like you want it, then press 'OK' to generate the "
+"template"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Adjust Frescobaldi's Output"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "For this tutorial, Frescobaldi's default output is good enough."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Input Notes"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Look over the template. It's not important to understand what any of this "
+"means, but it's good if you can figure it out."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The piano's upper staff will contain the notes between the <literal>{</"
+"literal> and <literal>}</literal> following the <code>right = \\relative "
+"c''</code> portion"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The piano's lower ... left"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The figured bass will say what you put in figBass"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"start with the piano's upper part. Input \"f1 g a f d e f c a f g f\" "
+"(explain)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Check that it's right. Preview by press the \"LilyPond\" button on the "
+"toolbar"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The exercise starts too high, and it ends too low. Change the starting pitch "
+"by \" right = \\relative c' \""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Preview again; of course, it still ends too low (these simple exercises "
+"usually start and end on the same pitch)."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Put a ' right after the c so that it goes to the upper C"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Preview again, and this time it's right."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now, enter the notes that you've written for the piano's lower staff: \"f1 e "
+"d c bes c bes f d bes e f\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Preview the output again, and see that it starts too high, but ends on the "
+"right pitch."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Fix the start-too-high by changing to \" left = \\relative c { \""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Preview again, and decide where to fix the other change (NB: I end up with "
+"\"f1 e d c bes c bes f' d bes e f\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Enter the interval number between the top and bottom between the { and } "
+"preceded by \" figBass = \\figuremode \""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You have to put each interval between &lt; &gt; brackets. The note-length of "
+"the figure's duration goes after the &gt;, so I end up with \"&lt;1&gt;1 "
+"&lt;3&gt; &lt;5&gt; &lt;4&gt; &lt;3&gt; &lt;3&gt; &lt;5&gt; &lt;5&gt; "
+"&lt;5&gt; &lt;5&gt; &lt;3&gt; &lt;1&gt;\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Now you realize that there are some signficant errors in your work. The top "
+"staff is the cantus, and cannot change. You have to correct the lower staff."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"I've ended up with a lower part that is \"f1 e d a bes c d e f d c f\", "
+"which gives figures that are \"&lt;1&gt;1 &lt;3&gt; &lt;5&gt; &lt;6&gt; "
+"&lt;3&gt; &lt;3&gt; &lt;3&gt; &lt;6&gt; &lt;3&gt; &lt;3&gt; &lt;5&gt; "
+"&lt;1&gt;\""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Format the Score"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"We recommend formatting the score after the notes have been inputting. "
+"Formatting after inputting helps you avoid making formatting errors. "
+"LilyPond works effectively with this approach."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Move the Figured Bass"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Normally, figured bass parts are below the staves. This example is using the "
+"figured-bass feature of LilyPond to do something else, so we're going to "
+"move the figured bass so that it's where it needs to be."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"the \\score{ } section contains everything in the score; notice that the "
+"figured bass has the identifier \\bassFiguresPart; remove this"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"scroll up to where it says \"bassFiguresPart = ... \" and comment it with %"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"scroll up to where it says \"pianoPart = ... \" and enter the \"\\new "
+"FiguredBass \\figBass\" line that you just commented out, on a line between "
+"the \"right\" and \"left\" staves"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "now erase the part that you commented in (2) (or leave it there)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Preview the file, and see that the figures now appear between the piano "
+"staves"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Remove the Word \"Piano\" at the Start"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Find the part that begins \"pianoPart = ... \" and erase the "
+"\"instrumentName ... \" line (or comment it)"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Preview the file, and see that it no longer says, \"Piano\""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Make some Elements Transparent"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This involves some more advanced tweaking. Explain this sort of command."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Every layout object has a \"stencil\" property. By default, this is set to "
+"whatever function draws the object. If you set that property to #f, which "
+"means \"false\", then the drawing function is not called, and the object "
+"will not appear on the score."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Every layout object also has a \"transparent\" property. By default, this is "
+"set to #f (\"false\"). Setting it to #t (\"true\") will make the object "
+"transparent."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You can use \"\\once \\override ...\" or \\revert ...\" too"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Find the \"global\" section"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "After \\key and \\time, put \" \\override Score.BarLine #'stencil = ##f \""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Preview the file, and see that this doesn't work quite as intended."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"It so happens that, while measure lines within a staff are handled by Staff."
+"BarLine, measure lines between staves are handled by Staff.SpanBar; so "
+"you'll need to set its 'transparent symbol to #t also"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"But there's still no measure-line at the end! You want a barline at the end, "
+"so pick one of the staves (right, left, figBass - it doesn't matter in this "
+"case) and use the \\revert command (don't know if I should put this in, but: "
+"\"\\revert Score.BarLine #'transparent and \\revert Score.SpanBar "
+"#'transparent\")"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"But even this isn't quite right. You want a double-barline at the end. So, "
+"put the cursor after the \\revert lines, and then from the menu, 'LilyPond "
+"&gt; Bar Lines &gt; Ending Bar Line' . It knows what you want, remembers the "
+"symbol for you, so you don't have to!"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "explain in there the difference between a Staff.* and Score.* override"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Unlike with some other elements, if you simply remove the \"\\time 4/4\" "
+"indicator, it will still print the default 4/4 time signature."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This example is musically simple, but it includes some advanced concepts, "
+"and importantly helps to get over a couple of common (and understandable) "
+"fears, especially for beginners, and especially for musically-simple things "
+"like this"
+msgstr ""
+

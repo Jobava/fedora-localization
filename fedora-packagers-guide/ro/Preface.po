@@ -1,0 +1,62 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Fedora Packager's Guide\n"
+"POT-Creation-Date: 2012-08-10T16:17:20\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Preface"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Acknowledgments"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Certain portions of this text first appeared in the <citetitle>Fedora "
+"Packaging Documentation</citetitle>, copyright &copy; 2012 Red Hat, Inc. and "
+"others, published by the Fedora Project at <ulink url=\"http://fedoraproject."
+"org/wiki/Category:Package_Maintainers\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Certain portions of this text first appeared in the <citetitle>Fedora "
+"Packaging Guidelines</citetitle>, copyright &copy; 2012 Red Hat, Inc. and "
+"others, published by the Fedora Project at <ulink url=\"https://"
+"fedoraproject.org/wiki/Special:PrefixIndex/Packaging\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Certain portions of this text first appeared in the <citetitle>Fedora RPM "
+"Guide</citetitle>, copyright &copy; 2010 Red Hat, Inc. and others, published "
+"by the Fedora Project at <ulink url=\"http://docs.fedoraproject.org/en-US/"
+"Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html\" />."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The author of this book would like to thank the following people for their "
+"valuable contributions: Jindřich Nový, Vít Ondruch, Chris Negus, Richard "
+"Fontana, Abdel Gadiel Martínez Lassonde, Jaromír Hradílek, Douglas Silas, "
+"and Florian Nadge, among many others."
+msgstr ""
+

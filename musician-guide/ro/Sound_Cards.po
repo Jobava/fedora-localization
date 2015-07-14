@@ -1,0 +1,423 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-01-06 16:13+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-12-18 02:06-0500\n"
+"Last-Translator: Christopher Antila <crantila@fedoraproject.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora-"
+"musicians-guide/language/ro/)\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
+"0)))?2:1));\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Sound Cards and Digital Audio"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"This chapter introduces the technical vocabulary used for computer audio "
+"hardware."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Types of Sound Cards"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sound cards are hardware devices that allow computers to process sound. Most "
+"sound cards are either audio interfaces or MIDI interfaces. This section "
+"describes the two types of audio interfaces."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Audio Interfaces"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audio interfaces are hardware devices that connect your computer and audio "
+"equipment (like microphones and speakers). Audio interfaces convert signals "
+"between analog and digital formats: signals enter the computer and pass "
+"through an analog-to-digital converter; signals leave the computer and pass "
+"through a digital-to-analog converter. Some audio interfaces have digital "
+"input and output ports, so other devices perform the conversion between "
+"analog and digital signal formats."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The conversion between analog and digital audio signal formats is the "
+"primary function of audio interfaces. Sound has an infinite range of pitch, "
+"volume, and durational possibilities. Computers cannot process infinite "
+"information, so sound is converted to a digital format. Digital sound "
+"signals have a limited range of pitch, volume, and durational possibilities. "
+"High-quality analog-to-digital and digital-to-analog converters change the "
+"signal format in a way that keeps the original, analog signal as closely as "
+"possible. The quality of the convertors is what determines the quality of an "
+"audio interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audio interfaces also provide connectors for external audio equipment, like "
+"microphones, speakers, headphones, and electric instruments like electric "
+"guitars."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "MIDI Interfaces"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Musical Instrument Digital Interface (MIDI) is a standard used to control "
+"digital musical devices. Many people associate the term with low-quality "
+"imitations of acoustic instruments. This is unfortunate, because MIDI "
+"signals themselves do not have a sound. MIDI signals are instructions to "
+"control devices: they tell a synthesizer when to start and stop a note, how "
+"long the note should be, and what pitch it should have. The synthesizer "
+"follows these instructions and creates an audio signal. Many MIDI-controlled "
+"synthesizers are low-quality imitations of acoustic instruments, but many "
+"are high-quality imitations. MIDI-powered devices are used in many "
+"mainstream and non-mainstream musical situations, and can be nearly "
+"indistinguishable from actual acoustic instruments. MIDI interfaces only "
+"transmit MIDI signals, not audio signals. Some audio interfaces have built-"
+"in MIDI interfaces, allowing both interfaces to share the same physical "
+"device."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"In order to create sound from MIDI signals, you need a \"MIDI synthesizer.\" "
+"Some MIDI synthesizers have dedicated hardware, and some use only software. "
+"A software-only MIDI synthesizer, based on SoundFont technology, is "
+"discussed in <xref linkend=\"chap-Musicians_Guide-FluidSynth\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"You can use MIDI signals, synthesizers, and applications without a hardware-"
+"based MIDI interface. All the MIDI-capable applications in the Musicians' "
+"Guide work well with software-based MIDI solutions, and are also compatible "
+"with hardware-based MIDI devices."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sound Card Connections"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Audio interfaces and MIDI interfaces can both use the following connection "
+"methods. In this section, \"sound card\" means \"audio interface or MIDI "
+"interface.\""
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Integrated into the Motherboard"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Integrated sound cards are built into a computer's motherboard. The quality "
+"of audio produced by these sound cards has been increasing, and they are "
+"sufficient for most non-professional computer audio work. If you want a "
+"professional-sounding audio interface, or if you want to connect high-"
+"quality devices, then we recommend an additional audio interface."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "MIDI interfaces are rarely integrated into a motherboard."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Internal PCI Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sound cards connected to a motherboard by PCI or PCI-Express offer better "
+"performance and lower latency than USB or FireWire-connected sound cards. "
+"Professional-quality sound cards often include an external device, connected "
+"to the sound card, to which the audio equipment is connected. You cannot use "
+"these sound cards with a notebook or netbook computer."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "External FireWire Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"FireWire-connected sound cards are not as popular as USB-connected sound "
+"cards, but they are generally higher quality. This is partly because "
+"FireWire-connected sound cards use FireWire's \"guaranteed bandwidth\" and "
+"\"bus-mastering\" capabilities, which both reduce latency. High-speed "
+"FireWire connections are also available on older computers without a high-"
+"speed USB connection."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"FireWire devices are sometimes incompatible with the standard "
+"&OPERATING_SYSTEM; kernel. If you have a FireWire-connected sound card, you "
+"should use the kernel from Planet CCRMA at Home. Refer to <xref linkend="
+"\"sect-Musicians_Guide-Getting_Real_Time_Kernel_in_Fedora\" /> for "
+"instructions to install the Planet CCRMA at Home kernel."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "External USB Connection"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sound cards connected by USB are becoming more popular, especially because "
+"notebook and netbook computer are becoming more popular. The quality can be "
+"as good as an internally-connected sound card, but the USB connection may "
+"add additional latency. USB-connected sound cards are generally the most "
+"affordable sound card for amateur musicians who want a high-quality sound "
+"card."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Choosing a Connection Type"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The connection type is only one of the considerations when choosing a sound "
+"card. If you have a desktop computer, and you will not be using a notebook "
+"or netbook computer for audio, you should consider an internal PCI or PCI-"
+"Express connection. If you want an external sound card, you should consider "
+"a FireWire connection. If FireWire-connected sound cards are more too "
+"expensive, you should consider a USB connection. The connection type is not "
+"the most important consideration when choosing a sound card. The subjective "
+"quality of the analog-to-digital and digital-to-analog converters is the "
+"most important consideration."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sample, Sample Rate, Sample Format, and Bit Rate"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The primary function of audio interfaces is to convert signals between "
+"analog and digital formats. As mentioned earlier, real sound has an infinite "
+"possibility of pitches, volumes, and durations. Computers cannot process "
+"infinite information, so the audio signal must be converted before they can "
+"use it."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "A waveform approximated by computer"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"source: <filename>pcm.svg</filename>, available from <ulink url=\"http://"
+"commons.wikimedia.org/wiki/File:Pcm.svg\" />"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The diagram in <xref linkend=\"waveform\" /> illustrates the situation. The "
+"red wave shape represents a sound wave that could be produced by a singer or "
+"an acoustic instrument. The gradual change of the red wave cannot be "
+"processed by a computer, which must use an approximation, represented by the "
+"gray, shaded area of the diagram. This diagram is an exaggerated example, "
+"and it does not represent a real recording."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The conversion between analog and digital signals distinguishes low-quality "
+"and high-quality audio interfaces. The sample rate and sample format control "
+"the amount of audio information that is stored by the computer. The greater "
+"the amount of information stored, the better the audio interface can "
+"approximate the original signal from the microphone. The possible sample "
+"rates and sample formats only partially determine the quality of the sound "
+"captured or produced by an audio interface. For example, an audio interface "
+"integrated into a motherboard may be capable of a 24-bit sample format and "
+"192&nbsp;kHz sample rate, but a professional-level, FireWire-connected audio "
+"interface capable of a 16-bit sample format and 44.1&nbsp;kHz sample rate "
+"may sound better."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sample"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"A sample is a unit of audio data. Computers store video data as a series of "
+"still images (each called a \"frame\"), and displays them one after the "
+"other, changing at a pre-determined rate (called the \"frame rate\"). "
+"Computers store audio data as a series of still sound images (each called a "
+"\"sample\"), and plays them one after the other, changing at a pre-"
+"determined rated (called the \"sample rate\")."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The frame format and frame rate used to store video data do not vary much. "
+"The sample format and sample rate used to store audio data vary widely."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sample Format"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The sample format is the number of bits used to describe each sample. The "
+"greater the number of bits, the more data will be stored in each sample. "
+"Common sample formats are 16&nbsp;bits and 24&nbsp;bits. 8-bit samples are "
+"low-quality, and not used often. 20-bit samples are not commonly used on "
+"computers. 32-bit samples are possible, but not supported by most audio "
+"interfaces."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Sample Rate"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"The sample rate is the number of samples played in each second. Sample rates "
+"are measured in \"Hertz\" (abbreviated \"Hz\"), which means \"per second,\" "
+"or in \"kilohertz\" (abbreviated \"kHz\"), which means \"per second, times "
+"one thousand.\" The sample rate used on audio CDs can be written as "
+"44&nbsp;100&nbsp;Hz, or 44.1&nbsp;kHz, which both have the same meaning. "
+"Common sample rates are 44.1&nbsp;kHz, 48&nbsp;kHz, and 96&nbsp;kHz. Other "
+"possible sample rates include 22&nbsp;kHz, 88.2&nbsp;kHz, and 192&nbsp;kHz."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Bit Rate"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Bit rate is the number of bits in a time period. Bit rate is usually "
+"measured in kilobits per second (abbreviated \"kbps\" or \"kbit/s\"). This "
+"measurement is generally used to refer to amount of information stored in a "
+"lossy, compressed audio format."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To calculate the bit rate, multiply the sample rate and the sample format. "
+"For example, the bit rate of an audio CD (705.6&nbsp;kbps) is the sample "
+"rate (44.1&nbsp;kHz) multiplied by the sample format (16&nbsp;bits). MP3-"
+"format files are commonly encoded with a 128&nbsp;kbps bit rate."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Conclusions"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Both sample rate and sample format have an impact on potential sound quality."
+" The capabilities of your audio equipment and your intended use of the audio "
+"signal will determine the settings you should use."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Here are some widely-used sample rates and sample formats. You can use these "
+"to help you decide which sample rate and sample format to use."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"16-bit samples, 44.1&nbsp;kHz sample rate. Used for audio CDs. Widely "
+"compatible. Bit rate of 705.6&nbsp;kbps."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"24-bit samples, and 96&nbsp;kHz sample rate. Audio CDs are recorded with "
+"these settings and \"down-mixed\" later. Bit rate of 2304&nbsp;kbps."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"24-bit samples, and 192&nbsp;kHz sample rate. Maximum settings for DVD "
+"Audio, but not widely compatible. Bit rate of 4608&nbsp;kbps."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"1-bit samples, and 2822.4&nbsp;kHz sample rate. Used for SuperAudio CDs. "
+"Very rare elsewhere. Bit rate of 2822.4&nbsp;kbps."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Sample rate and sample format are only part of what determines overall sound "
+"quality. Sound quality is subjective, so you must experiment to find the "
+"audio interface and settings that work best for what you do."
+msgstr ""
+

@@ -1,3 +1,6 @@
+## Offline translation
+* https://fedoraproject.org/wiki/L10N/Translate_on_Zanata#Translating_offline
+
 ### Tools
 
 * Zanata -- https://fedora.zanata.org/

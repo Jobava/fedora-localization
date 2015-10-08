@@ -9,5 +9,12 @@
 ## Fedora Meetings
 * https://apps.fedoraproject.org/calendar/location/fedora-meeting%40irc.freenode.net/
 
+## Mailing lists
+* g11n at lists . fedoraproject . org
+
+# Release schedules
+* Fedora 23: https://fedoraproject.org/wiki/Releases/23/Schedule
+* Fedora 24: https://fedoraproject.org/wiki/Releases/24/Schedule
+
 ### News
 * http://fedoramagazine.org/internationalization-improvements-in-fedora-22/
